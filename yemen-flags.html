@@ -1,0 +1,433 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#f2e8d5;color:#241a12}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Yemen</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Yemen, from the ancient Sabaean kingdom and the Queen of Sheba legend through Ottoman and British-era division into North and South, reunification in 1990, and the civil war since 2014-15.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #241a12; --paper: #f2e8d5; --card: #faf3e3; --card-border: #dcc99a;
+    --brick: #a4302a; --brick-2: #7c2e1f; --brass: #a9762f; --sea: #1f6b6b; --sea-2: #164f4f;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #a4302a;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --sea: #4fa3a3; --sea-2: #6fbcbc;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --sea: #4fa3a3; --sea-2: #6fbcbc;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--sea); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-box.dual .dual-row { display: flex; gap: 8px; }
+  .flag-box.dual .flag-half { flex: 1 1 0; min-width: 0; }
+  .flag-box.dual .flag-half svg { width: 100%; }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--sea); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--sea); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="arabian-peninsula-hub.html">Arabian Peninsula hub</a></p>
+  <p class="kicker">Family research &middot; Phase 7 of the world atlas</p>
+  <h1>Flags of Yemen</h1>
+  <p class="lede">From the ancient Sabaean kingdom of legendary wealth, home to the Queen of Sheba story, through a millennium of Islamic-era rule and the centuries-old Zaidi Imamate of the northern highlands, Ottoman and British colonial-era division into a northern kingdom-turned-republic and a southern Marxist state, reunification in 1990, to the civil war that has fractured the country's actual governance since 2014&ndash;15.</p>
+  <p class="lede">Yemen's modern flag &mdash; plain red, white, and black, no emblem &mdash; has flown over a unified state only since 1990, a shorter run than the north-south split that came before it; the two halves' pan-Arab tricolors, one crowned with a green star, the other with a red star in a blue triangle, are the direct ancestors of the flag that still flies today.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Yemen, ancient South Arabia to present, nine political entries including a genuine north/south split from 1918/1839 to 1990. No interactive map &mdash; this is a flag-only timeline. The 2014&ndash;15 civil war is noted factually and neutrally; Yemen's flag has not changed in law since 1990 even though on-the-ground control is currently contested among several factions. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="9">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#a4302a"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#241f14"/>
+            </svg>
+            <div class="flag-caption">plain red-white-black tricolor, unchanged in law since 1990</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1990 &ndash; present</div>
+            <h3 class="card-title">Republic of Yemen (reunified)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> North and South Yemen formally unite on 22 May 1990, ending 72 years of separate northern and southern statehood, under President Ali Abdullah Saleh. A brief 1994 civil war fails to break the union apart. Since 2014&ndash;15, however, a civil war between the Houthi movement, the internationally recognized government, and a Southern Transitional Council seeking southern autonomy has left the country's actual governance fractured among multiple authorities, even as the 1990 flag remains the country's sole legal one throughout.</p>
+            <p><span class="label">What it represents:</span> a plain pan-Arab red-white-black tricolor, deliberately stripped of either predecessor state's own emblem (North Yemen's green star, South Yemen's star-in-triangle) as a neutral symbol for the newly unified republic.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal horizontal bands.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Plain red-white-black tricolor, no emblem.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#241f14"></span><span class="meta"><span class="name">Black</span><span class="hex">#241F14</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="8">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box dual">
+            <div class="dual-row">
+              <div class="flag-half">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="300" height="66.7" fill="#a4302a"/>
+                  <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+                  <rect y="133.3" width="300" height="66.7" fill="#241f14"/>
+                  <path d="M150,86 l6,15 16,1 -13,11 4,16 -13,-8 -13,8 4,-16 -13,-11 16,-1 Z" fill="#0b7a3d"/>
+                </svg>
+              </div>
+              <div class="flag-half">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="300" height="66.7" fill="#a4302a"/>
+                  <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+                  <rect y="133.3" width="300" height="66.7" fill="#241f14"/>
+                  <path d="M0,0 L90,100 L0,200 Z" fill="#1e5fae"/>
+                  <path d="M40,90 l4,11 12,1 -9,8 3,12 -10,-6 -10,6 3,-12 -9,-8 12,-1 Z" fill="#a4302a"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flag-caption">North (green star) &amp; South (blue triangle, red star)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1967/1962 &ndash; 1990</div>
+            <h3 class="card-title">North Yemen (Arab Republic) / South Yemen (People's Democratic Republic)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>North: Republic</span><span class="tag"><span class="dot" style="background:#8c2f2f"></span>South: Marxist state</span></div>
+            <p><span class="label">Who &amp; why:</span> a 1962 republican coup ends the northern Zaidi Imamate and founds the Yemen Arab Republic; in the south, the National Liberation Front drives out the British in November 1967, and by 1970 the People's Democratic Republic of Yemen declares itself the only Marxist state ever to govern in the Arab world. The two Yemens fight several border wars and briefly attempt unification talks before finally merging in 1990.</p>
+            <p><span class="label">What it represents:</span> both states adopt the pan-Arab red-white-black tricolor, but North Yemen centers a plain green star in the white stripe while South Yemen adds a pale-blue triangle at the hoist bearing a red star &mdash; the Marxist south's own distinctive mark.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, both flags.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">North: red-white-black tricolor, green five-pointed star centered. South (from 1970): red-white-black tricolor, pale-blue triangle at hoist with a red star.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0b7a3d"></span><span class="meta"><span class="name">North star, green</span><span class="hex">#0B7A3D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1e5fae"></span><span class="meta"><span class="name">South triangle, blue</span><span class="hex">#1E5FAE</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <g stroke="#f4efe1" stroke-width="5" stroke-linecap="round" fill="none">
+                <line x1="90" y1="100" x2="210" y2="100"/>
+                <line x1="205" y1="93" x2="216" y2="100"/>
+                <line x1="205" y1="107" x2="216" y2="100"/>
+              </g>
+              <g fill="#f4efe1">
+                <circle cx="105" cy="60" r="4"/><circle cx="130" cy="52" r="4"/><circle cx="155" cy="48" r="4"/><circle cx="180" cy="52" r="4"/><circle cx="205" cy="60" r="4"/>
+              </g>
+            </svg>
+            <div class="flag-caption">Zaidi Imamate's plain red banner, sword and stars (reconstructed)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1918 &ndash; 1962/1967</div>
+            <h3 class="card-title">Mutawakkilite Kingdom of Yemen (North) &amp; British Aden (South)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Imamate / Colony</span></div>
+            <p><span class="label">Who &amp; why:</span> the Ottoman collapse at the end of World War I lets Imam Yahya's Zaidi Imamate assert full independence in the north in 1918, ruling as the Mutawakkilite Kingdom until a 1962 republican revolution. The south stays under separate British rule throughout this span &mdash; Aden itself a Crown Colony from 1937, the surrounding sheikhdoms a loose protectorate &mdash; the two halves developing along entirely separate tracks decades before either used the word "Yemen" for a unified state.</p>
+            <p><span class="label">What it represents:</span> the northern kingdom's flag is a plain red field, sometimes bearing a white sword and stars, continuing the Zaidi Imamate's own older banner tradition; the south flies British colonial ensigns throughout, not shown here as it belongs to Britain's own flag lineage rather than Yemen's.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Plain red field, white sword and five stars (variants existed).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+            </svg>
+            <div class="flag-caption">plain red field &mdash; Aden's colonial-era trading ensign (reconstructed)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1839 &ndash; 1918</div>
+            <h3 class="card-title">Aden under British control / Ottoman northern Yemen</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Colonial / Ottoman suzerainty</span></div>
+            <p><span class="label">Who &amp; why:</span> the British East India Company seizes Aden in 1839 to secure a coaling station on the route to India, beginning well over a century of British presence in the south. The north, by contrast, comes back under direct Ottoman control from 1849, administered as the Yemen Vilayet, though the Zaidi Imamate in the highlands never fully submits and periodically revolts &mdash; a genuinely split, contested span rather than one Yemen under one flag.</p>
+            <p><span class="label">What it represents:</span> Aden flies British colonial ensigns; the Ottoman-controlled north flies Ottoman provincial banners. Neither is a distinctly "Yemeni" flag in this period, so this entry is an honest bridging placeholder rather than an invented national banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no distinct Yemeni national flag in this period.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#0f5c33"/>
+            </svg>
+            <div class="flag-caption">plain green field &mdash; Zaidi Imamate's traditional color (reconstructed)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">897 &ndash; 1839</div>
+            <h3 class="card-title">Zaidi Imamate of the highlands (with Ottoman and Ayyubid-era interludes)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Imamate</span></div>
+            <p><span class="label">Who &amp; why:</span> the Zaidi Imamate is founded in the northern highlands in 897, one of the longest-running continuous political institutions in the Islamic world, though it never controls all of Yemen at once. The Ayyubid dynasty conquers much of the country in 1173 as part of Saladin's wider campaigns, followed by the independent Rasulid Sultanate (1229&ndash;1454), and the Ottomans occupy the coastal lowlands twice &mdash; the 16th century and again from 1849 &mdash; without ever fully subduing the highland Imamate.</p>
+            <p><span class="label">What it represents:</span> no single flag can be attributed across this near-millennium span; green, tied to the Zaidi Imamate's own religious and dynastic identity, is the best-attested traditional color, shown here as an informed reconstruction.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no fixed flag; shown as a reconstruction.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; early Islamic conquest era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">630 &ndash; 897</div>
+            <h3 class="card-title">Early Islamic Yemen (Rashidun through Abbasid-era rule)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Caliphal suzerainty</span></div>
+            <p><span class="label">Who &amp; why:</span> Yemen converts to Islam and comes under Rashidun, then Umayyad, then Abbasid caliphal authority from the 630s, ending centuries of independent South Arabian kingship. Direct caliphal control loosens well before the Zaidi Imamate's own 897 founding, leaving a patchwork of local governors and rival claimants across the intervening decades.</p>
+            <p><span class="label">What it represents:</span> no flag in the modern territorial sense survives from this era; various caliphates used banners rather than fixed national flags, and none can be attributed to Yemen specifically. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; Himyarite Kingdom, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 110 BCE &ndash; 630 CE</div>
+            <h3 class="card-title">Himyarite Kingdom</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> the Himyarite Kingdom rises around 110 BCE and eventually absorbs the older Sabaean and Qatabanian kingdoms, unifying most of South Arabia under one crown by the 3rd century CE &mdash; a prosperous incense- and spice-trade power with its own writing system and monumental architecture, later touched by both Christian and Jewish royal conversions before Aksumite and then Sasanian Persian intervention ends its independence around 570&ndash;575.</p>
+            <p><span class="label">What it represents:</span> no flag survives or is securely attested from this pre-Islamic kingdom; ancient South Arabian polities used royal insignia and inscriptions rather than fixed territorial banners. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; Sabaean Kingdom, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 1200 &ndash; 110 BCE</div>
+            <h3 class="card-title">Sabaean Kingdom</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> the Sabaean Kingdom, centered on the great Marib Dam and its irrigation-fed agriculture, grows wealthy controlling the overland incense trade from around 1200 BCE, and is the kingdom traditionally identified with the biblical and Quranic Queen of Sheba, who is said to have visited King Solomon. It remains the dominant South Arabian power for the better part of a millennium before Himyarite rivals eventually eclipse it.</p>
+            <p><span class="label">What it represents:</span> no flag survives or is securely attested from this Bronze and Iron Age kingdom; its own royal inscriptions and dedications at Marib and elsewhere serve as its historical record instead. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Colonial / caliphal suzerainty</b> &mdash; no independent Yemeni flag</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom / Imamate</b> &mdash; sovereign under its own ruler</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#2f6b4a"></span><b>Republic</b> &mdash; elected or revolutionary government</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#8c2f2f"></span><b>Marxist state</b> &mdash; one-party socialist government</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="arabian-peninsula-hub.html"><b>Arabian Peninsula hub</b><span>Seven countries of the Gulf and Red Sea coast</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-20th-century swatches are informed reconstructions, not official specifications. The 2014&ndash;15 civil war and its factions are described factually and without taking a side.
+  </footer>
+
+</div>
+
+</body></html>
