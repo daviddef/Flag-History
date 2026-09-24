@@ -64,6 +64,25 @@
 
   .viz-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 22px; }
 
+  .map-flanked { display: flex; align-items: flex-start; gap: 16px; }
+  .side-panel { flex: none; width: 128px; padding-top: 6px; }
+  .side-panel h3 {
+    font-family: "IBM Plex Mono", monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--muted); margin: 0 0 10px; text-align: center;
+  }
+  .side-panel .flag-chip { width: 100%; margin-bottom: 12px; }
+  .side-panel .fc-context { font-size: 9px; color: var(--muted); line-height: 1.35; margin-top: 3px; }
+  .side-panel .side-empty {
+    font-size: 10.5px; color: var(--muted); text-align: center; font-style: italic;
+    padding: 10px 6px; border: 1px dashed var(--card-border); border-radius: 4px;
+  }
+  .map-flanked .map-center { flex: 1; min-width: 0; }
+  @media (max-width: 760px) {
+    .map-flanked { flex-direction: column; }
+    .side-panel { width: 100%; }
+    .side-panel .flag-chip { display: inline-block; width: 92px; margin-right: 10px; }
+  }
+
   .controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
   .play-btn {
     flex: none; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--card-border);
@@ -177,12 +196,22 @@
       <b>Borders here are data, not decoration.</b> Western and eastern Germany only show a solid line between them when they were actually governed apart &mdash; which is most of this map's own history, not the exception. Austria's border with Germany does the same: solid almost throughout, then completely gone for the seven years of the Anschluss.
     </div>
 
+    <div class="rule-box">
+      <b>Two new panels, piloted here first:</b> the column on the left shows real, documented waves of immigration <i>into</i> Germany for that era (not every era has one &mdash; some eras were dominated by emigration <i>out</i> instead, and 1938&ndash;45 is left honestly blank, since that era is defined by forced deportation, not migration). The column on the right shows any outside power actually conquering or occupying part of the map that era, distinct from the self-governing German states shown on the map itself.
+    </div>
+
     <div class="viz-frame">
       <div class="controls">
         <button class="play-btn" id="playBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="era-tag" id="yearTag">1815</span>
         <input type="range" id="slider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
+      <div class="map-flanked">
+        <div class="side-panel" id="migrationPanel">
+          <h3>Migration in</h3>
+          <div id="migrationBody"></div>
+        </div>
+        <div class="map-center">
       <svg id="map-svg" viewBox="0 0 600 495" xmlns="http://www.w3.org/2000/svg">
         <path fill="var(--tile-sea)" d="M25.2,225.3 L20.0,173.8 L38.7,173.8 L46.6,155.3 L54.3,110.3 L48.5,93.7 L54.6,83.3 L80.6,80.6 L86.3,91.5 L107.5,67.3 L25.2,225.3 Z"/>
         <path fill="var(--tile-sea)" d="M142.3,20.0 L142.9,39.0 L174.3,50.4 L174.0,67.9 L205.6,58.6 L223.1,45.2 L258.2,64.6 L272.9,80.2 L280.2,105.2 L142.3,20.0 Z"/>
@@ -213,6 +242,12 @@
       </div>
       <div class="flags-row" id="flagsRow"></div>
       <p class="era-story" id="eraStory"></p>
+        </div>
+        <div class="side-panel" id="conquerorPanel">
+          <h3>Conquerors</h3>
+          <div id="conquerorBody"></div>
+        </div>
+      </div>
 
       <p class="map-note">Real traced borders (simplified). Poland, Czechia, and Switzerland shown faint for context only &mdash; Poland and Czechia are tracked in full in the <a href="yugoslavia-hub.html">Former Yugoslavia hub</a>'s Balkan map and the <a href="habsburg-hub.html">Habsburg Lands hub</a> respectively.</p>
       <div class="map-key" id="legend"></div>
@@ -272,8 +307,35 @@
     austria_plain: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
     reich: '<rect width="300" height="200" fill="#a4302a"/><circle cx="150" cy="100" r="45" fill="#f4efe1"/><path d="M150,58 v18 M150,124 v18 M108,100 h18 M174,100 h18 M150,76 l12,-12 M150,76 l-12,-12 M150,124 l12,12 M150,124 l-12,12" stroke="#241f14" stroke-width="7"/>',
     gdr_flag: '<rect width="300" height="66.7" fill="#241f14"/><rect y="66.7" width="300" height="66.6" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#f9d616"/><circle cx="150" cy="100" r="22" fill="#f9d616" stroke="#241f14" stroke-width="2"/><path d="M150,88 l4,10 -8,0 Z M150,112 l-4,-10 8,0 Z" fill="#241f14"/>',
-    austria_occupied_flag: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><rect width="300" height="200" fill="none" stroke="#241f14" stroke-width="5" stroke-dasharray="9 7"/>'
+    austria_occupied_flag: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><rect width="300" height="200" fill="none" stroke="#241f14" stroke-width="5" stroke-dasharray="9 7"/>',
+    poland_flag: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#dc143c"/>',
+    turkey_flag: '<rect width="300" height="200" fill="#e30a17"/><circle cx="120" cy="100" r="42" fill="#f4efe1"/><circle cx="132" cy="100" r="34" fill="#e30a17"/><path d="M165,100 l14,-4.5 -8.7,12 8.7,12 -14,-4.5 Z" fill="#f4efe1"/>',
+    italy_flag: '<rect width="100" height="200" fill="#009246"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#ce2b37"/>',
+    syria_flag: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#000000"/><polygon points="112,88 118,100 112,112 124,105 136,112 130,100 136,88 124,95" fill="#007a3d"/><polygon points="164,88 170,100 164,112 176,105 188,112 182,100 188,88 176,95" fill="#007a3d"/>',
+    ussr_flag: '<rect width="300" height="200" fill="#cc0000"/><rect x="20" y="20" width="55" height="40" fill="none" stroke="#f9d616" stroke-width="2"/><circle cx="47" cy="30" r="7" fill="#f9d616"/>',
+    western_allies_flag: '<rect y="0.00" width="300" height="15.38" fill="#b31942"/><rect y="15.38" width="300" height="15.38" fill="#f4efe1"/><rect y="30.77" width="300" height="15.38" fill="#b31942"/><rect y="46.15" width="300" height="15.38" fill="#f4efe1"/><rect y="61.54" width="300" height="15.38" fill="#b31942"/><rect y="76.92" width="300" height="15.38" fill="#f4efe1"/><rect y="92.31" width="300" height="15.38" fill="#b31942"/><rect y="107.69" width="300" height="15.38" fill="#f4efe1"/><rect y="123.08" width="300" height="15.38" fill="#b31942"/><rect y="138.46" width="300" height="15.38" fill="#f4efe1"/><rect y="153.85" width="300" height="15.38" fill="#b31942"/><rect y="169.23" width="300" height="15.38" fill="#f4efe1"/><rect y="184.62" width="300" height="15.38" fill="#b31942"/><rect width="120" height="107.7" fill="#0a3161"/>'
   };
+
+  var MIGRATION_SETS = {
+    "1871": [["poland_flag","Polish \u201cRuhr Poles\u201d","From the 1870s\u20131890s, hundreds of thousands of ethnic Poles from Prussia's own eastern provinces (and Russian/Austrian Poland) moved west to work the coal mines and steel mills of the industrializing Ruhr valley \u2014 one of the largest internal migrations in the new Empire."]],
+    "1949": [["turkey_flag","Turkish \u201cGastarbeiter\u201d","West Germany's 1961 labor recruitment treaty with Turkey (following earlier 1955\u201360 treaties with Italy, Spain, Greece) brought in millions of \u201cguest workers\u201d for its postwar industrial boom \u2014 many settled permanently, founding today's large Turkish-German community."],["italy_flag","Italian \u201cGastarbeiter\u201d","West Germany's first labor-recruitment treaty, signed with Italy in 1955, brought the earliest large wave of postwar \u201cguest workers\u201d into West German factories and mines."]],
+    "1990\u2013present": [["syria_flag","Syrian refugees (2015)","Around 890,000 people sought asylum in Germany in 2015 alone, most fleeing the Syrian civil war \u2014 the largest single-year refugee intake of any EU country in the modern era, under Chancellor Angela Merkel's \u201cWir schaffen das\u201d policy."]]
+  };
+  var CONQUEROR_SETS = {
+    "1938": [["reich","Nazi Germany conquers Austria","The March 1938 Anschluss was an armed annexation, not a merger of equals \u2014 German troops crossed the border and absorbed Austria's own government by force, backed by a rigged referendum weeks later."]],
+    "1949": [["ussr_flag","Soviet Union occupies the East","The Soviet occupation zone became the German Democratic Republic in October 1949, installed and backed by Moscow rather than freely self-governing."],["western_allies_flag","Western Allies occupy the West","The American, British, and French occupation zones merged into the Federal Republic in May 1949 \u2014 sovereign in practice quickly, but still under Allied oversight in its earliest years."]]
+  };
+  var MIGRATION_EMPTY = {
+    "1938": "No migration shown \u2014 this era is defined by forced deportation and the Holocaust, not immigration"
+  };
+  function sidePanelHtml(entries, emptyMsg) {
+    if (!entries || !entries.length) {
+      return '<div class="side-empty">' + emptyMsg + '</div>';
+    }
+    return entries.map(function (f) {
+      return '<div class="flag-chip">' + flagSvg(f[0]) + '<div class="fc-label">' + f[1] + '</div><div class="fc-context">' + f[2] + '</div></div>';
+    }).join("");
+  }
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
   }
@@ -346,6 +408,13 @@
     flagsRow.innerHTML = (FLAG_SETS[era.year] || []).map(function (f) {
       return '<div class="flag-chip">' + flagSvg(f[0]) + '<div class="fc-label">' + f[1] + '</div></div>';
     }).join("");
+
+    document.getElementById("migrationBody").innerHTML = sidePanelHtml(
+      MIGRATION_SETS[era.year], MIGRATION_EMPTY[era.year] || "No major inbound wave documented this era (net emigration, if anything)"
+    );
+    document.getElementById("conquerorBody").innerHTML = sidePanelHtml(
+      CONQUEROR_SETS[era.year], "Self-governed \u2014 no outside power occupying/conquering this era"
+    );
 
     REGIONS.forEach(function (id) {
       document.getElementById("f-" + id).setAttribute("fill", era.t[id]);
