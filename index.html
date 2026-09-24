@@ -362,7 +362,13 @@
     moldova: '<rect width="100" height="200" fill="#003da5"/><rect x="100" width="100" height="200" fill="#f9d616"/><rect x="200" width="100" height="200" fill="#a4302a"/>',
     saudiarabia: '<rect width="300" height="200" fill="#0f5c33"/><text x="150" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#f4efe1">شهادة</text><line x1="90" y1="130" x2="210" y2="130" stroke="#f4efe1" stroke-width="6"/>',
     yemen: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#241f14"/>',
-    oman: '<rect width="300" height="200" fill="#a4302a"/><rect width="90" height="200" fill="#f4efe1"/><rect width="90" height="66.7" fill="#0f5c33"/>'
+    oman: '<rect width="300" height="200" fill="#a4302a"/><rect width="90" height="200" fill="#f4efe1"/><rect width="90" height="66.7" fill="#0f5c33"/>',
+    nigeria: '<rect width="100" height="200" fill="#008751"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#008751"/>',
+    ghana: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#fcd116"/><rect y="133.3" width="300" height="66.7" fill="#006b3f"/><path fill="#141413" d="M150,80 l9,25 26,0 -21,17 8,25 -22,-16 -22,16 8,-25 -21,-17 26,0 Z"/>',
+    senegal: '<rect width="100" height="200" fill="#00853f"/><rect x="100" width="100" height="200" fill="#fdef42"/><rect x="200" width="100" height="200" fill="#e31b23"/><path fill="#00853f" d="M150,80 l7,20 21,2 -17,14 6,20 -17,-13 -17,13 6,-20 -17,-14 21,-2 Z"/>',
+    mali: '<rect width="100" height="200" fill="#14b53a"/><rect x="100" width="100" height="200" fill="#fcd116"/><rect x="200" width="100" height="200" fill="#ce1126"/>',
+    cotedivoire: '<rect width="100" height="200" fill="#f77f00"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#009e60"/>',
+    guinea: '<rect width="100" height="200" fill="#ce1126"/><rect x="100" width="100" height="200" fill="#fcd116"/><rect x="200" width="100" height="200" fill="#009460"/>'
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -462,7 +468,21 @@
       crowns:["Sabaean Kingdom","Himyarite Kingdom","Zaidi Imamate","British Aden (South)","Mutawakkilite Kingdom (North)","Yemen Arab Republic (North)","People's Democratic Republic of Yemen (South)","Modern republic"],
       alts:["North Yemen","South Yemen","Aden"] },
     { name:"Oman", flag:"oman", ownPage:true, url:"oman-flags.html", hub:"Arabian Peninsula", region:"Arabian Peninsula", color:"#8a2f1f",
-      crowns:["Ibadi Imamate of Oman","Nabhani dynasty","Portuguese-held ports","Ya'ariba Imamate","Al Said dynasty / Omani Empire","Sultanate of Muscat and Oman","Modern sultanate"] }
+      crowns:["Ibadi Imamate of Oman","Nabhani dynasty","Portuguese-held ports","Ya'ariba Imamate","Al Said dynasty / Omani Empire","Sultanate of Muscat and Oman","Modern sultanate"] },
+    { name:"Nigeria", flag:"nigeria", ownPage:true, url:"nigeria-flags.html", hub:"West Africa", region:"West Africa", color:"#008751",
+      crowns:["Sokoto Caliphate","Oyo Empire","Kingdom of Benin","Colony/Protectorate of Nigeria","Dominion","Federal republic"] },
+    { name:"Ghana", flag:"ghana", ownPage:true, url:"ghana-flags.html", hub:"West Africa", region:"West Africa", color:"#006b3f",
+      crowns:["Ashanti Empire","British Gold Coast","Independent state","One-party republic","Modern republic"],
+      alts:["Gold Coast"] },
+    { name:"Senegal", flag:"senegal", ownPage:true, url:"senegal-flags.html", hub:"West Africa", region:"West Africa", color:"#00853f",
+      crowns:["Jolof Empire","Fragmented Wolof/Serer kingdoms","French colonial territory","Mali Federation","Modern republic"] },
+    { name:"Mali", flag:"mali", ownPage:true, url:"mali-flags.html", hub:"West Africa", region:"West Africa", color:"#14b53a",
+      crowns:["Mali Empire","Songhai Empire","French Sudan","Mali Federation","Modern republic"] },
+    { name:"C&ocirc;te d'Ivoire", flag:"cotedivoire", ownPage:true, url:"cote-divoire-flags.html", hub:"West Africa", region:"West Africa", color:"#f77f00",
+      crowns:["Fragmented Akan/Mande kingdoms","French Ivory Coast","Autonomous republic","Modern republic"],
+      alts:["Ivory Coast"] },
+    { name:"Guinea", flag:"guinea", ownPage:true, url:"guinea-flags.html", hub:"West Africa", region:"West Africa", color:"#ce1126",
+      crowns:["Imamate of Fouta Djallon","French Guinea","Modern republic"] }
   ];
 
   var grid = document.getElementById("countryGrid");
