@@ -1,0 +1,377 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Kazakhstan</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Kazakhstan, from nomadic Turkic steppe confederations and the Kazakh Khanate through Russian and Soviet rule to the modern, mineral-wealthy republic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="central-asia-hub.html">Central Asia hub</a></p>
+  <p class="kicker">Family research &middot; Phase 22 of the world atlas &middot; Central Asia</p>
+  <h1>Flags of Kazakhstan</h1>
+  <p class="lede">From nomadic Turkic tribal confederations on the open steppe, through the Kazakh Khanate's founding in 1465 and its division into three great zhuzes, a staged Russian imperial conquest, decades as a Soviet republic, to independence in 1991 and the sky-blue flag of the world's largest landlocked country.</p>
+  <p class="lede">Six flags across a vast span of steppe history, ending with the region's mineral-wealthiest, most multi-vector-diplomatic state &mdash; balancing relationships with Russia, China, and the West since 1991.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Kazakhstan, antiquity&ndash;present, six political entities. No interactive map or internal-region view is included here &mdash; that layer is deferred project-wide to a later phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#00afca"/>
+              <circle cx="150" cy="80" r="26" fill="#ffce00"/>
+              <g stroke="#ffce00" stroke-width="4">
+                <line x1="150" y1="30" x2="150" y2="10"/>
+                <line x1="150" y1="130" x2="150" y2="150"/>
+                <line x1="100" y1="80" x2="80" y2="80"/>
+                <line x1="200" y1="80" x2="220" y2="80"/>
+                <line x1="115" y1="45" x2="100" y2="30"/>
+                <line x1="185" y1="45" x2="200" y2="30"/>
+                <line x1="115" y1="115" x2="100" y2="130"/>
+                <line x1="185" y1="115" x2="200" y2="130"/>
+              </g>
+              <path d="M150,105 q-20,15 -18,45 q10,-10 18,-6 q8,-4 18,6 q2,-30 -18,-45 Z" fill="#ffce00"/>
+              <rect x="0" y="0" width="16" height="200" fill="#ffce00"/>
+            </svg>
+            <div class="flag-caption">sky blue, golden sun and steppe eagle, hoist ornament</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1991 &ndash; present</div>
+            <h3 class="card-title">Republic of Kazakhstan</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#00afca"></span>Republic, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Kazakhstan declared independence on 16 December 1991, the last Soviet republic to do so before the USSR's formal dissolution. Since independence it has become the region's mineral-wealthiest state &mdash; oil, gas, uranium, and metals &mdash; and has pursued a deliberately multi-vector foreign policy, balancing relationships with Russia, China, and the West rather than aligning firmly with any one power.</p>
+            <p><span class="label">What it represents:</span> a sky-blue field bearing a golden sun of 32 rays with a soaring steppe eagle (berkut) beneath it, and a vertical strip of traditional Kazakh ornament (the koshkar-muyiz, or "ram's-horn," pattern) at the hoist, adopted in June 1992.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Sky-blue field; gold sun and eagle centered; gold ornamental strip at the hoist.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00afca"></span><span class="meta"><span class="name">Sky blue</span><span class="hex">#00AFCA</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffce00"></span><span class="meta"><span class="name">Gold</span><span class="hex">#FFCE00</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <rect y="170" width="300" height="12" fill="#00afca"/>
+              <g fill="#ffce00">
+                <rect x="30" y="20" width="34" height="8"/>
+                <rect x="30" y="20" width="8" height="34"/>
+                <circle cx="34" cy="24" r="10" fill="none" stroke="#ffce00" stroke-width="3"/>
+              </g>
+            </svg>
+            <div class="flag-caption">Soviet red with hammer &amp; sickle, light-blue stripe near the base</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1936 &ndash; 1991</div>
+            <h3 class="card-title">Kazakh SSR</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a4302a"></span>Soviet republic</span></div>
+            <p><span class="label">Who &amp; why:</span> Kazakhstan was elevated to a full Union Republic of the USSR in 1936, separated out from the Russian SFSR where it had existed as an autonomous republic. It remained a Soviet republic until the USSR's collapse in 1991.</p>
+            <p><span class="label">What it represents:</span> the standard Soviet red flag with a gold hammer and sickle and star in the canton, distinguished from the plain Soviet flag and other republics' variants by a light-blue horizontal stripe near the bottom edge &mdash; a common pattern among the Central Asian SSR flags.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, gold hammer-and-sickle-and-star canton, light-blue stripe near the base.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#00afca"></span><span class="meta"><span class="name">Light blue</span><span class="hex">#00AFCA</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <g fill="#ffce00">
+                <rect x="30" y="20" width="34" height="8"/>
+                <rect x="30" y="20" width="8" height="34"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the RSFSR's flag, flown over the autonomous republic</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1920 &ndash; 1936</div>
+            <h3 class="card-title">Kirghiz ASSR / Kazak ASSR</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#7a5a2e"></span>Autonomous republic</span></div>
+            <p><span class="label">Who &amp; why:</span> an autonomous republic within the Russian SFSR was established in 1920. It was initially named the "Kirghiz ASSR" &mdash; Russian officials of the time confusingly applied the name "Kirghiz" to the Kazakhs, to distinguish them from Cossacks, a naming quirk corrected in 1925 when the republic was renamed the Kazak ASSR. It was elevated to full Union Republic status in 1936. The short-lived Alash Autonomy (Alash Orda), a Kazakh national government that arose amid the 1917 Russian Revolution and civil war and used its own light-blue flag, was suppressed by Bolshevik forces before this republic's formal establishment.</p>
+            <p><span class="label">What it represents:</span> the Russian SFSR's own red flag with gold hammer-and-sickle canton, flown as the governing flag of the autonomous republic before it gained its own distinct Kazakh SSR flag in 1936.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, gold hammer-and-sickle canton (RSFSR pattern).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#f4efe1"/>
+              <rect y="66.7" width="300" height="66.6" fill="#0039a6"/>
+              <rect y="133.3" width="300" height="66.7" fill="#d52b1e"/>
+            </svg>
+            <div class="flag-caption">Russian imperial tricolor</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1731 &ndash; 1920</div>
+            <h3 class="card-title">Russian imperial conquest and rule</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#0039a6"></span>Empire province</span></div>
+            <p><span class="label">Who &amp; why:</span> the Junior Zhuz accepted Russian protection in 1731, seeking help against Zhungar (Oirat Mongol) incursions; Russian conquest and administrative absorption of the Middle and Senior Zhuzes proceeded in stages over the following century and a half, with the steppe fully incorporated into Russian imperial administration (the Steppe Krai and Turkestan Governorate-General) by the 1860s&ndash;80s. This long, staged conquest is treated here as one honest bridging entry rather than invented precise sub-dates. In its final years, the short-lived Alash Autonomy (1917&ndash;1920), a Kazakh national government formed amid the Russian Revolution, briefly asserted self-rule before Bolshevik forces suppressed it.</p>
+            <p><span class="label">What it represents:</span> the Russian imperial tricolor, flown across all territory under Russian imperial administration including the Kazakh steppe.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal horizontal bands.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White, blue, red horizontal bands.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0039a6"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0039A6</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d52b1e"></span><span class="meta"><span class="name">Red</span><span class="hex">#D52B1E</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#201d18"/>
+              <path d="M150,60 L170,90 L150,120 L130,90 Z" fill="none" stroke="#c9a13c" stroke-width="4"/>
+            </svg>
+            <div class="flag-caption">no fixed national flag documented; reconstructed tamga (clan emblem) motif</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1465 &ndash; 1731</div>
+            <h3 class="card-title">Kazakh Khanate</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#5c4a2e"></span>Khanate</span></div>
+            <p><span class="label">Who &amp; why:</span> Kerei Khan and Janibek Khan broke away from the Uzbek Khanate around 1465, founding the Kazakh Khanate and consolidating the steppe's nomadic Turkic tribes into three great zhuzes &mdash; the Senior, Middle, and Junior hordes &mdash; each with its own territory and leadership structure. The khanate's authority began to fray under pressure from Zhungar incursions in the early 18th century, leading the Junior Zhuz to seek Russian protection in 1731.</p>
+            <p><span class="label">What it represents:</span> no fixed national flag is documented for a nomadic khanate organized around tribal zhuzes rather than a single centralized state; individual clans used their own tamga (brand-like clan emblems). The design shown is an informed reconstruction of that tamga tradition, not a documented banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no fixed flag documented.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; pre-khanate steppe confederations</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">antiquity &ndash; 1465</div>
+            <h3 class="card-title">Nomadic Turkic tribal confederations</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6e6047"></span>No flag documented</span></div>
+            <p><span class="label">Who &amp; why:</span> long before the Kazakh Khanate's founding, the steppe now called Kazakhstan was home to successive nomadic Turkic powers &mdash; early Turkic khaganates, the Kimek and Kipchak tribal confederations, and, following the 13th-century Mongol conquest, the successor khanates of the fragmenting Golden Horde. No single unified state governed the whole territory through most of this span.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag survives from this long span of shifting tribal and khanate power; national flags as a concept postdate it. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6e6047"></span><b>No flag documented</b> &mdash; pre-khanate antiquity</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#5c4a2e"></span><b>Khanate</b> &mdash; Kazakh Khanate</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#0039a6"></span><b>Empire province</b> &mdash; Russian imperial rule</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#7a5a2e"></span><b>Autonomous republic</b> &mdash; Kirghiz/Kazak ASSR</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a4302a"></span><b>Soviet republic</b> &mdash; Kazakh SSR</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#00afca"></span><b>Republic, independent</b> &mdash; modern Kazakhstan</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="central-asia-hub.html"><b>Central Asia hub</b><span>Five countries at the heart of Eurasia</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications.
+  </footer>
+
+</div>
+
+</body></html>
