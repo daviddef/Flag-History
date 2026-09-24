@@ -361,7 +361,8 @@
     belarus: '<rect width="300" height="133.3" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/><rect width="30" height="200" fill="#f4efe1"/>',
     moldova: '<rect width="100" height="200" fill="#003da5"/><rect x="100" width="100" height="200" fill="#f9d616"/><rect x="200" width="100" height="200" fill="#a4302a"/>',
     saudiarabia: '<rect width="300" height="200" fill="#0f5c33"/><text x="150" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#f4efe1">شهادة</text><line x1="90" y1="130" x2="210" y2="130" stroke="#f4efe1" stroke-width="6"/>',
-    yemen: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#241f14"/>'
+    yemen: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#241f14"/>',
+    oman: '<rect width="300" height="200" fill="#a4302a"/><rect width="90" height="200" fill="#f4efe1"/><rect width="90" height="66.7" fill="#0f5c33"/>'
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -369,7 +370,8 @@
 
   var COUNTRIES = [
     { name:"Croatia", flag:"croatia", ownPage:true, url:"croatia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#a4302a",
-      crowns:["Habsburg","Ottoman","Venice","Napoleonic France","Kingdom of Italy (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
+      crowns:["Habsburg","Ottoman","Venice","Napoleonic France","Kingdom of Italy (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"],
+      alts:["Ragusa","Dubrovnik","Dalmatia"] },
     { name:"Slovenia", flag:"slovenia", ownPage:true, url:"slovenia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#1e2f96",
       crowns:["Habsburg","Napoleonic France","Nazi Germany","Kingdom of Italy (WWII)","Hungary (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
     { name:"Serbia", flag:"serbia", ownPage:true, url:"serbia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#6a3f8f",
@@ -379,7 +381,8 @@
     { name:"Montenegro", flag:"montenegro", ownPage:true, url:"montenegro-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#7c2e1f",
       crowns:["Zeta / Crnojević","Venice","Habsburg","Ottoman","Italy (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
     { name:"North Macedonia", flag:"macedonia", ownPage:true, url:"macedonia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#c9a13c",
-      crowns:["Byzantine","First Bulgarian Empire","Serbian Empire (Dušan)","Ottoman","Bulgaria (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
+      crowns:["Byzantine","First Bulgarian Empire","Serbian Empire (Dušan)","Ottoman","Bulgaria (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"],
+      alts:["Macedonia","FYROM","Former Yugoslav Republic of Macedonia","Vardar Macedonia"] },
     { name:"Bulgaria", flag:"bulgaria", ownPage:true, url:"bulgaria-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#9a5a3a",
       crowns:["First Bulgarian Empire","Byzantine","Second Bulgarian Empire","Ottoman","Autonomous principality","Kingdom of Bulgaria","Axis ally (WWII)","Communist bloc","Modern republic"] },
     { name:"Albania", flag:"albania", ownPage:true, url:"albania-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#c9603c",
@@ -391,9 +394,11 @@
     { name:"Hungary", flag:"hungary", ownPage:true, url:"hungary-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#b8863f",
       crowns:["Árpád dynasty","Ottoman","Habsburg","Austria-Hungary","Communist bloc","Fascist puppet state","Modern republic"] },
     { name:"Czechia", flag:"czechia", ownPage:true, url:"czechia-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#1e2f96",
-      crowns:["Přemyslid duchy","Kingdom of Bohemia","Habsburg","Czechoslovakia","Nazi Germany (Protectorate)","Communist bloc","Modern republic"] },
+      crowns:["Přemyslid duchy","Kingdom of Bohemia","Habsburg","Czechoslovakia","Nazi Germany (Protectorate)","Communist bloc","Modern republic"],
+      alts:["Czech Republic","Czechoslovakia","Bohemia"] },
     { name:"Slovakia", flag:"slovakia", ownPage:true, url:"slovakia-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#d4924a",
-      crowns:["Great Moravia","Kingdom of Hungary","Habsburg","Czechoslovakia","Slovak Republic (WWII puppet state)","Communist bloc","Modern republic"] },
+      crowns:["Great Moravia","Kingdom of Hungary","Habsburg","Czechoslovakia","Slovak Republic (WWII puppet state)","Communist bloc","Modern republic"],
+      alts:["Czechoslovakia"] },
     { name:"Italy", flag:"italy", ownPage:true, url:"italy-flags.html", hub:"Habsburg Lands", region:"Southern Europe", color:"#0b7a3d",
       crowns:["County/Duchy of Savoy","Kingdom of Sardinia","Napoleonic France","Kingdom of Italy","Italian Social Republic (RSI)","Modern republic"] },
     { name:"Romania", flag:"romania", ownPage:true, url:"romania-flags.html", hub:"Habsburg Lands", region:"Southeastern Europe", color:"#8c2f6b",
@@ -401,11 +406,14 @@
     { name:"Poland", flag:"poland", ownPage:true, url:"poland-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#1f8a8a",
       crowns:["Piast duchy","Kingdom of Poland","Polish-Lithuanian Commonwealth","Partitioned (Prussia/Russia/Austria)","Second Polish Republic","Nazi/Soviet occupation","Communist bloc","Modern republic"] },
     { name:"Germany", flag:"germany", ownPage:true, url:"germany-flags.html", hub:"German Lands", region:"Central Europe", color:"#2f6b4a",
-      crowns:["Holy Roman Empire","Confederation of the Rhine","German Confederation","North German Confederation","German Empire","Weimar Republic","Nazi Germany","Allied occupation","Cold War West (FRG) / East (GDR)","Modern republic"] },
+      crowns:["Holy Roman Empire","Confederation of the Rhine","German Confederation","North German Confederation","German Empire","Weimar Republic","Nazi Germany","Allied occupation","Cold War West (FRG) / East (GDR)","Modern republic"],
+      alts:["West Germany","East Germany","FRG","GDR","Prussia","Third Reich"] },
     { name:"United Kingdom", flag:"unitedkingdom", ownPage:true, url:"uk-flags.html", hub:"British Isles", region:"British Isles", color:"#00247d",
-      crowns:["Kingdom of England","Kingdom of Scotland","Union of the Crowns","Kingdom of Great Britain","United Kingdom of Great Britain and Ireland","Modern United Kingdom"] },
+      crowns:["Kingdom of England","Kingdom of Scotland","Union of the Crowns","Kingdom of Great Britain","United Kingdom of Great Britain and Ireland","Modern United Kingdom"],
+      alts:["Great Britain","Britain","England","UK"] },
     { name:"Ireland", flag:"ireland", ownPage:true, url:"ireland-flags.html", hub:"British Isles", region:"British Isles", color:"#1f7a52",
-      crowns:["Gaelic kingdoms","Anglo-Norman Lordship of Ireland","Kingdom of Ireland","United Kingdom of Great Britain and Ireland","Irish Free State / Éire (dominion)","Modern republic"] },
+      crowns:["Gaelic kingdoms","Anglo-Norman Lordship of Ireland","Kingdom of Ireland","United Kingdom of Great Britain and Ireland","Irish Free State / Éire (dominion)","Modern republic"],
+      alts:["Éire","Eire","Irish Free State"] },
     { name:"Scotland", flag:"scotland", ownPage:true, url:"scotland-flags.html", hub:"British Isles", region:"British Isles", color:"#204b5c",
       crowns:["Fragmented Picts/Scots/Britons","Kingdom of Alba / Scotland","Union of the Crowns","Kingdom of Great Britain","United Kingdom","Devolved Scotland"] },
     { name:"Wales", flag:"wales", ownPage:true, url:"wales-flags.html", hub:"British Isles", region:"British Isles", color:"#5c8f3f",
@@ -443,13 +451,18 @@
     { name:"Belarus", flag:"belarus", ownPage:true, url:"belarus-flags.html", hub:"Eastern Europe", region:"Eastern Europe", color:"#a4302a",
       crowns:["Principality of Polotsk","Grand Duchy of Lithuania","Polish-Lithuanian Commonwealth","Russian Empire","Belarusian People's Republic","Soviet Union (BSSR)","Modern republic"] },
     { name:"Moldova", flag:"moldova", ownPage:true, url:"moldova-flags.html", hub:"Eastern Europe", region:"Eastern Europe", color:"#003da5",
-      crowns:["Principality of Moldavia (Ottoman vassal)","Russian Empire (Bessarabia)","Kingdom of Romania","Soviet Union (Moldavian SSR)","Modern republic"] },
+      crowns:["Principality of Moldavia (Ottoman vassal)","Russian Empire (Bessarabia)","Kingdom of Romania","Soviet Union (Moldavian SSR)","Modern republic"],
+      alts:["Bessarabia","Moldavia"] },
     { name:"Russia", flag:"russia", ownPage:true, url:"russia-flags.html", hub:"Phase 7", region:"Eurasia", color:"#0039a6",
-      crowns:["Kievan Rus'","Mongol/Tatar suzerainty","Grand Duchy of Moscow","Tsardom of Russia","Russian Empire","Soviet Union (RSFSR)","Modern federation"] },
+      crowns:["Kievan Rus'","Mongol/Tatar suzerainty","Grand Duchy of Moscow","Tsardom of Russia","Russian Empire","Soviet Union (RSFSR)","Modern federation"],
+      alts:["Soviet Union","USSR","Muscovy"] },
     { name:"Saudi Arabia", flag:"saudiarabia", ownPage:true, url:"saudi-arabia-flags.html", hub:"Arabian Peninsula", region:"Arabian Peninsula", color:"#0f5c33",
       crowns:["Caliphal / Ottoman-era Hejaz and Najd","First Saudi State (Diriyah)","Second Saudi State / Rashidi Ha'il","Emirate / Sultanate of Nejd","Kingdom of Hejaz and Nejd","Modern kingdom"] },
     { name:"Yemen", flag:"yemen", ownPage:true, url:"yemen-flags.html", hub:"Arabian Peninsula", region:"Arabian Peninsula", color:"#a4302a",
-      crowns:["Sabaean Kingdom","Himyarite Kingdom","Zaidi Imamate","British Aden (South)","Mutawakkilite Kingdom (North)","Yemen Arab Republic (North)","People's Democratic Republic of Yemen (South)","Modern republic"] }
+      crowns:["Sabaean Kingdom","Himyarite Kingdom","Zaidi Imamate","British Aden (South)","Mutawakkilite Kingdom (North)","Yemen Arab Republic (North)","People's Democratic Republic of Yemen (South)","Modern republic"],
+      alts:["North Yemen","South Yemen","Aden"] },
+    { name:"Oman", flag:"oman", ownPage:true, url:"oman-flags.html", hub:"Arabian Peninsula", region:"Arabian Peninsula", color:"#8a2f1f",
+      crowns:["Ibadi Imamate of Oman","Nabhani dynasty","Portuguese-held ports","Ya'ariba Imamate","Al Said dynasty / Omani Empire","Sultanate of Muscat and Oman","Modern sultanate"] }
   ];
 
   var grid = document.getElementById("countryGrid");
@@ -472,7 +485,7 @@
     var q = searchBox.value.trim().toLowerCase();
     var matched = COUNTRIES.filter(function (c) {
       if (!q) return true;
-      var hay = (c.name + " " + c.region + " " + c.hub + " " + c.crowns.join(" ")).toLowerCase();
+      var hay = (c.name + " " + c.region + " " + c.hub + " " + c.crowns.join(" ") + " " + (c.alts || []).join(" ")).toLowerCase();
       return hay.indexOf(q) !== -1;
     });
 
