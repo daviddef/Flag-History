@@ -1,0 +1,342 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Ethiopia</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Ethiopia, from the ancient Kingdom of Aksum through the Solomonic empire, the brief Italian occupation, the Derg, and the modern federal republic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="east-africa-hub.html">East Africa hub</a></p>
+  <p class="kicker">Family research &middot; Phase 12 of the world atlas</p>
+  <h1>Flags of Ethiopia</h1>
+  <p class="lede">Ethiopia stands apart from every other country in this hub: it is Africa's oldest continuously independent state, tracing an unbroken thread of statehood back through the medieval Solomonic empire to the ancient Kingdom of Aksum, interrupted by real foreign rule only once, briefly, when Mussolini's Italy occupied the country from 1936 to 1941. Its history since is no less consequential &mdash; a modernizing but autocratic emperor, a Marxist military junta whose years in power included a well-documented famine, and a federal republic still finding its shape since 1991.</p>
+  <p class="lede">Ethiopia's green-yellow-red tricolor, in use in some form since the 1890s, is one of the oldest national color schemes in Africa and the direct inspiration for the "pan-African colors" adopted by many other African flags after independence &mdash; not the other way around.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the Ethiopian highlands and their successive states, c. 100&ndash;present, five political entries. Aksum's own flag is not documented in the modern sense; its entry represents the kingdom's real historical footprint honestly, without inventing a banner. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#1e7a4a"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f9d616"/>
+              <rect y="133.3" width="300" height="66.7" fill="#a4302a"/>
+              <circle cx="150" cy="100" r="30" fill="#1a3a6b"/>
+              <path d="M150,78 l5,14 15,2 -11,10 3,15 -12,-8 -12,8 3,-15 -11,-10 15,-2 Z" fill="#f9d616"/>
+            </svg>
+            <div class="flag-caption">green-yellow-red tricolor, blue disc with the gold Star of Unity at center</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1991 &ndash; present</div>
+            <h3 class="card-title">Federal Democratic Republic of Ethiopia</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#1e7a4a"></span>Republic, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> the Derg falls in 1991 as EPRDF-led rebel forces (a coalition dominated by the Tigrayan People's Liberation Front) take Addis Ababa, ending Mengistu's rule. A transitional government gives way to a new federal constitution in 1995, organizing Ethiopia into ethnically based regional states, with Eritrea's own independence formally recognized separately in 1993 after its decades-long war. Ethiopia has continued as a federal republic since, including a change of ruling coalition in 2018 under Abiy Ahmed and a devastating internal Tigray war from 2020-2022, though the flag and constitutional structure have remained the same throughout.</p>
+            <p><span class="label">What it represents:</span> the same green-yellow-red tricolor carried since the 1890s, now centered on a new emblem adopted in 1996 &mdash; a blue disc (representing peace) bearing a gold five-pointed star with rays (the "Star of Unity," standing for the equality and unity of Ethiopia's nations and peoples) &mdash; replacing the Lion of Judah of the imperial era and the Derg's own socialist emblem.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green-yellow-red horizontal bands; centered blue disc with a gold five-pointed star and radiating rays.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#1e7a4a"></span><span class="meta"><span class="name">Green</span><span class="hex">#1E7A4A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f9d616"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#F9D616</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1a3a6b"></span><span class="meta"><span class="name">Emblem blue</span><span class="hex">#1A3A6B</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#1e7a4a"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f9d616"/>
+              <rect y="133.3" width="300" height="66.7" fill="#a4302a"/>
+              <path d="M150,72 l14,16 20,4 -14,15 3,20 -23,-9 -23,9 3,-20 -14,-15 20,-4 Z" fill="#a4302a" stroke="#f9d616" stroke-width="2"/>
+              <path d="M138,92 l6,16 4,2 4,-2 6,-16" fill="#1a3a6b"/>
+            </svg>
+            <div class="flag-caption">green-yellow-red tricolor with the Derg's socialist emblem (gold star and plough, simplified)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1974 &ndash; 1991</div>
+            <h3 class="card-title">Provisional Military Government (the Derg)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#7c2e1f"></span>Military / one-party rule</span></div>
+            <p><span class="label">Who &amp; why:</span> a committee of junior military officers, the Derg, deposes the aging Haile Selassie in a 1974 coup amid famine, inflation, and unrest, and by 1975 abolishes the monarchy outright, later executing the former emperor. Mengistu Haile Mariam consolidates control by the late 1970s and declares a Marxist-Leninist state (the People's Democratic Republic of Ethiopia from 1987), fighting a long civil war against regional insurgencies including Eritrean and Tigrayan rebels. The period includes the Red Terror political purges of the late 1970s and the well-documented 1983-1985 famine, worsened by drought, war, and government policy, in which hundreds of thousands of Ethiopians die &mdash; a defining and tragic chapter of this era, stated here factually. The regime collapses in 1991 as rebel forces take the capital.</p>
+            <p><span class="label">What it represents:</span> the same green-yellow-red tricolor is kept, but the imperial Lion of Judah is replaced with a socialist state emblem (a gold star over a stylized plough and gear, representing workers, peasants, and the revolution) centered on the flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green-yellow-red horizontal bands; centered socialist emblem (star, plough, gear), simplified here.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#1e7a4a"></span><span class="meta"><span class="name">Green</span><span class="hex">#1E7A4A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f9d616"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#F9D616</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#1e7a4a"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f9d616"/>
+              <rect y="133.3" width="300" height="66.7" fill="#a4302a"/>
+              <rect x="128" y="76" width="44" height="48" fill="#f9d616" stroke="#a4302a" stroke-width="2"/>
+              <path d="M136,120 q14,-30 28,0" fill="none" stroke="#a4302a" stroke-width="3"/>
+            </svg>
+            <div class="flag-caption">green-yellow-red tricolor with the Lion of Judah bearing a cross-tipped staff (simplified)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 1270 &ndash; 1974</div>
+            <h3 class="card-title">Ethiopian Empire (Solomonic dynasty)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom / Sultanate, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> the Solomonic dynasty, claiming descent from King Solomon and the Queen of Sheba (the Kebra Nagast legend), takes the imperial throne in 1270 and rules the Ethiopian Empire, with interruptions, for seven centuries. Ethiopia's independence is broken only once in this whole span: Mussolini's Italy invades in 1935-36 and occupies the country from 1936 to 1941, with Emperor Haile Selassie in exile and appealing personally to the League of Nations, before British-assisted Ethiopian forces liberate the country in 1941 and restore him to the throne. Haile Selassie (reigning 1930-1974) modernizes the state's institutions and becomes internationally influential as a founding figure of the Organisation of African Unity, while also being revered as a messianic figure by the Rastafari movement that emerges in Jamaica during his reign. Growing unrest over famine, inequality, and slow reform brings his rule to an end in the 1974 coup.</p>
+            <p><span class="label">What it represents:</span> the green-yellow-red tricolor is adopted in this form around 1897 (building on earlier plain colored pennants used from the mid-19th century) and formalized under Haile Selassie with the imperial coat of arms &mdash; the Lion of Judah, a Solomonic dynastic symbol, bearing a cross-tipped staff and flag &mdash; centered on the field.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio before the 20th century; roughly 1:2 under Haile Selassie.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green-yellow-red horizontal bands; centered Lion of Judah emblem bearing a cross-tipped staff, simplified here.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#1e7a4a"></span><span class="meta"><span class="name">Green</span><span class="hex">#1E7A4A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f9d616"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#F9D616</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#7a4a1f"/>
+              <rect x="130" y="30" width="14" height="140" fill="#c9a13c"/>
+              <rect x="80" y="60" width="14" height="80" fill="#c9a13c"/>
+              <rect x="180" y="45" width="14" height="110" fill="#c9a13c"/>
+              <rect x="230" y="70" width="14" height="70" fill="#c9a13c"/>
+            </svg>
+            <div class="flag-caption">no national flag &mdash; shown here as the carved obelisks (stelae) of Aksum, its real historical signature</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 100 &ndash; 940</div>
+            <h3 class="card-title">Kingdom of Aksum</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom / Sultanate, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> the Kingdom of Aksum, centered in what is now northern Ethiopia and Eritrea, grows into one of the major trading powers of the ancient world by the early centuries AD, linking the Roman Mediterranean and Persia to India across the Red Sea. Under King Ezana, around 330 AD, Aksum becomes one of the first states anywhere to adopt Christianity as an official religion, a mark of its early sophistication and a faith Ethiopia has kept continuously since. Aksum's power fades gradually from the 7th century as trade routes shift and regional rivals rise, with successor dynasties eventually giving way to the Solomonic line by 1270.</p>
+            <p><span class="label">What it represents:</span> no flag survives from Aksum in the modern sense; its best-documented visual legacy is the massive carved granite stelae (obelisks) that marked royal burial sites at the capital, shown here as an honest stand-in rather than an invented banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag; shown as the kingdom's carved stelae.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#7a4a1f"></span><span class="meta"><span class="name">Stone brown</span><span class="hex">#7A4A1F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Carved gold</span><span class="hex">#C9A13C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; pre-Aksumite highland peoples, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">before c. 100</div>
+            <h3 class="card-title">Pre-Aksumite highland peoples</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Fragmented / pre-state</span></div>
+            <p><span class="label">Who &amp; why:</span> before Aksum's rise, the Ethiopian highlands hold earlier states and cultures, including the D'mt kingdom of the early first millennium BC, whose own political organization and territorial extent remain only partly understood. This is the deepest, least documented layer of Ethiopia's own timeline, included here for completeness rather than as a claim of any single governing flag.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag survives from this era. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Fragmented / pre-state</b> &mdash; no single ruling authority</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom / Sultanate, independent</b> &mdash; sovereign under its own crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#7c2e1f"></span><b>Military / one-party rule</b> &mdash; an authoritarian military or single-party regime</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#1e7a4a"></span><b>Republic, independent</b> &mdash; modern sovereign republic</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="east-africa-hub.html"><b>East Africa hub</b><span>Eleven countries, one region</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>
