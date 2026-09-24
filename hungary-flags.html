@@ -82,8 +82,53 @@
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
     padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
     display: inline-flex; align-items: center; gap: 5px;
+    position: relative; cursor: help;
   }
   .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .tag:hover, .tag:focus-visible { border-color: var(--brick); color: var(--ink); }
+  .tag:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  /* Custom hover/tap tooltip for tags */
+  .tag::after {
+    content: attr(data-tip);
+    position: absolute; left: 50%; bottom: calc(100% + 9px); transform: translateX(-50%) translateY(4px);
+    width: max-content; max-width: 260px; text-align: left;
+    font-family: "Source Sans 3", system-ui, sans-serif; font-size: 12.5px; font-weight: 400; line-height: 1.45;
+    text-transform: none; letter-spacing: normal; color: var(--ink);
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 4px;
+    padding: 9px 11px; box-shadow: 0 4px 14px rgba(0,0,0,.14);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity .14s ease, transform .14s ease;
+    z-index: 20;
+  }
+  .tag::before {
+    content: ""; position: absolute; left: 50%; bottom: calc(100% + 4px); transform: translateX(-50%);
+    border: 6px solid transparent; border-top-color: var(--card-border);
+    opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .14s ease; z-index: 21;
+  }
+  .tag:hover::after, .tag:hover::before,
+  .tag:focus-visible::after, .tag:focus-visible::before,
+  .tag.tip-open::after, .tag.tip-open::before {
+    opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+  }
+  /* Flip tooltip below tags near the top of the viewport so it isn't clipped */
+  .entry:first-child .tag::after,
+  .entry:nth-child(2) .tag::after {
+    bottom: auto; top: calc(100% + 9px);
+  }
+  .entry:first-child .tag::before,
+  .entry:nth-child(2) .tag::before {
+    bottom: auto; top: calc(100% + 4px);
+    border-top-color: transparent; border-bottom-color: var(--card-border);
+  }
+  /* Keep tooltips from overflowing the left/right edges on narrow screens */
+  .tag:first-of-type::after { left: 0; transform: translateX(0) translateY(4px); }
+  .tag:first-of-type:hover::after, .tag:first-of-type:focus-visible::after, .tag:first-of-type.tip-open::after { transform: translateX(0) translateY(0); }
+  .tag:first-of-type::before { left: 14px; transform: none; }
+  .tag:last-of-type::after { left: auto; right: 0; transform: translateY(4px); }
+  .tag:last-of-type:hover::after, .tag:last-of-type:focus-visible::after, .tag:last-of-type.tip-open::after { transform: translateY(0); }
+  .tag:last-of-type::before { left: auto; right: 14px; transform: none; }
+  @media (max-width: 480px) { .tag::after { max-width: 78vw; } }
   .card-body p { margin: 0 0 10px; font-size: .96rem; }
   .card-body p:last-child { margin-bottom: 0; }
   .card-body .label { color: var(--brick); font-weight: 600; }
@@ -182,6 +227,7 @@
       <div class="legend-item"><span class="legend-dot" style="background:#4a3b78"></span><b>Leader</b> &mdash; the named ruler most associated with the era's start</div>
       <div class="legend-item"><span class="legend-dot" style="background:#8e3b62"></span><b>State religion</b> &mdash; the official/established faith, not the population's</div>
     </div>
+    <p class="map-note">Hover (or tap, on touch devices) any tag above for a short definition.</p>
   </div>
 
   <div class="imap-section">
@@ -250,7 +296,7 @@
           <div class="card-body">
             <div class="card-dates">1989 &ndash; present</div>
             <h3 class="card-title">Republic of Hungary</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Sovereign state</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>József Antall</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Secular (no state religion)</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="An internationally recognized, self-governing state with full control over its own territory, laws, and foreign policy — the status Hungary regained after the peaceful 1989 transition from one-party rule."><span class="dot" style="background:#2f6b4a"></span>Sovereign state</span><span class="tag" tabindex="0" data-tip="Historian and politician who became Hungary&#x27;s first freely elected prime minister after 1989, leading the first post-Communist government through the early, difficult transition to democracy and a market economy."><span class="dot" style="background:#4a3b78"></span>József Antall</span><span class="tag" tabindex="0" data-tip="No established church — the modern republic&#x27;s constitution keeps religion formally separate from state authority, in keeping with its democratic character."><span class="dot" style="background:#8e3b62"></span>Secular (no state religion)</span></div>
             <p><span class="label">Who &amp; why:</span> the Communist party's own reformers negotiate a peaceful transition through 1989, symbolically completed when the republic is re-proclaimed on 23 October 1989 &mdash; the anniversary of the crushed 1956 uprising. Hungary joins NATO in 1999 and the EU in 2004.</p>
             <p><span class="label">What it represents:</span> the coat-of-arms-bearing star of the communist era is simply removed, leaving the plain red-white-green tricolor &mdash; the same design first fixed in the 1848 revolution, restored now for the third time in a century.</p>
           </div>
@@ -286,7 +332,7 @@
           <div class="card-body">
             <div class="card-dates">1949 &ndash; 1989</div>
             <h3 class="card-title">Hungarian People's Republic</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#8c2f2f"></span>Communist state</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Mátyás Rákosi</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>State atheism</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="A one-party state governed by a Communist party under Soviet influence, with a centrally planned economy and the party controlling every lever of government — the template imposed across Warsaw Pact Eastern Europe after WWII."><span class="dot" style="background:#8c2f2f"></span>Communist state</span><span class="tag" tabindex="0" data-tip="Hardline Stalinist who led the Hungarian Communist Party through the late 1940s and early 1950s, building one of the most repressive Soviet-satellite regimes in Eastern Europe before Moscow forced him out in 1956."><span class="dot" style="background:#4a3b78"></span>Mátyás Rákosi</span><span class="tag" tabindex="0" data-tip="The Communist government&#x27;s active discouragement and suppression of religious practice and institutions, in line with official Marxist-Leninist doctrine."><span class="dot" style="background:#8e3b62"></span>State atheism</span></div>
             <p><span class="label">Who &amp; why:</span> Mátyás Rákosi's Communist Party consolidates one-party rule by 1949 through show trials and rigged elections. The 1956 Revolution &mdash; briefly successful, crushed within days by Soviet tanks after Imre Nagy announces withdrawal from the Warsaw Pact &mdash; is the era's defining trauma; János Kádár's subsequent decades of "goulash communism" trade political loyalty for modest consumer comfort.</p>
             <p><span class="label">What it represents:</span> the historic tricolor is kept, but topped with a Soviet-style coat of arms (wheat sheaf, red star, hammer and sickle) replacing the old Holy Crown emblem &mdash; a 1957 redesign following the 1956 uprising, when revolutionaries had cut the coat of arms out of the flag entirely, leaving a hole that became the revolution's own visual symbol.</p>
           </div>
@@ -321,7 +367,7 @@
           <div class="card-body">
             <div class="card-dates">1946 &ndash; 1949</div>
             <h3 class="card-title">Second Republic of Hungary</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Republic</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Zoltán Tildy</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Secular (no state religion)</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="A state without a hereditary monarch — here, a short-lived, genuinely multi-party parliamentary republic that lasted only until Communist &quot;salami tactics&quot; dismantled the governing coalition."><span class="dot" style="background:#2f6b4a"></span>Republic</span><span class="tag" tabindex="0" data-tip="Smallholders&#x27; Party politician who became the Second Republic&#x27;s first president, representing the brief postwar period of real multi-party politics before Communist consolidation ended it."><span class="dot" style="background:#4a3b78"></span>Zoltán Tildy</span><span class="tag" tabindex="0" data-tip="No official church — the postwar republic&#x27;s brief democratic order did not establish a state religion, part of a broader European move away from confessional states after 1945."><span class="dot" style="background:#8e3b62"></span>Secular (no state religion)</span></div>
             <p><span class="label">Who &amp; why:</span> declared 1 February 1946 after the war's devastation and Soviet occupation, briefly genuinely multi-party &mdash; the Smallholders' Party wins the free 1945 election outright &mdash; before Communist "salami tactics" dismantle the coalition piece by piece, ending in the 1949 single-list election that installs the People's Republic.</p>
             <p><span class="label">What it represents:</span> the plain tricolor, without a crown or any imperial emblem, asserting a clean break from both the wartime Arrow Cross regime and the prewar Kingdom &mdash; the shortest-lived of Hungary's several attempts at post-imperial, non-Communist statehood.</p>
           </div>
@@ -355,7 +401,7 @@
           <div class="card-body">
             <div class="card-dates">1944 &ndash; 1945</div>
             <h3 class="card-title">Government of National Unity (Arrow Cross)</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#3f3f3f"></span>Fascist / puppet state</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Ferenc Szálasi</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>No official state religion</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="A far-right, ultranationalist one-party regime installed and sustained by Nazi Germany after it deposed the previous government in a coup — sovereign in name only during its final months."><span class="dot" style="background:#3f3f3f"></span>Fascist / puppet state</span><span class="tag" tabindex="0" data-tip="Founder and leader of the fascist Arrow Cross Party, installed as head of state by Nazi Germany after the October 1944 coup against Horthy; later tried and executed for war crimes."><span class="dot" style="background:#4a3b78"></span>Ferenc Szálasi</span><span class="tag" tabindex="0" data-tip="The Arrow Cross regime established no official church; its ideology centered on ultranationalism and antisemitism rather than confessional religious identity, even while ruling a largely Catholic country."><span class="dot" style="background:#8e3b62"></span>No official state religion</span></div>
             <p><span class="label">Who &amp; why:</span> as Horthy attempts to negotiate an armistice with the Soviets in October 1944, German forces depose him and install Ferenc Szálasi's fascist Arrow Cross Party in a coup. The following months see the deportation of most of Budapest's remaining Jewish population and the Soviet siege that finally takes the capital in February 1945.</p>
             <p><span class="label">What it represents:</span> the Arrow Cross Party's own emblem, a geometric cross-like symbol distinct from both the Hungarian tricolor and Nazi Germany's own symbols, reflecting the party's specifically Hungarian brand of fascism even while operating as Berlin's client in its final months.</p>
           </div>
@@ -389,7 +435,7 @@
           <div class="card-body">
             <div class="card-dates">1920 &ndash; 1944</div>
             <h3 class="card-title">Kingdom of Hungary (Horthy Regency)</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom (no monarch)</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Miklós Horthy</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Roman Catholic (traditional)</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="A monarchy in constitutional form with no reigning king — Hungary kept the title and trappings of a kingdom while Admiral Horthy ruled as Regent, the throne formally vacant throughout."><span class="dot" style="background:#a9762f"></span>Kingdom (no monarch)</span><span class="tag" tabindex="0" data-tip="Former Austro-Hungarian admiral who ruled Hungary as Regent from 1920 to 1944, heading a conservative, nominally monarchist government in a kingdom with no king on its throne."><span class="dot" style="background:#4a3b78"></span>Miklós Horthy</span><span class="tag" tabindex="0" data-tip="Catholicism remained the historically dominant and most politically favored faith under the Horthy regency, though not a formally exclusive state establishment in the interwar constitution."><span class="dot" style="background:#8e3b62"></span>Roman Catholic (traditional)</span></div>
             <p><span class="label">Who &amp; why:</span> the June 1920 Treaty of Trianon strips Hungary of roughly two-thirds of its historic territory and three-fifths of its population, a national trauma that dominates the whole interwar period. Admiral Miklós Horthy governs as Regent of a kingdom with no king &mdash; two restoration attempts by the last Habsburg claimant, Charles IV, are blocked by force in 1921.</p>
             <p><span class="label">What it represents:</span> the tricolor restored with the traditional coat of arms &mdash; the Holy Crown of St. Stephen atop a shield combining the Árpád stripes and the double cross &mdash; asserting continuity with the pre-1918 kingdom even as most of that kingdom's actual territory is now Romanian, Czechoslovak, or Yugoslav.</p>
           </div>
@@ -422,7 +468,7 @@
           <div class="card-body">
             <div class="card-dates">March &ndash; August 1919</div>
             <h3 class="card-title">Hungarian Soviet Republic</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#8c2f2f"></span>Communist state</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Béla Kun</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>State atheism</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="A short-lived one-party Communist regime modeled directly on Soviet Russia, seizing power amid the chaos that followed Austria-Hungary&#x27;s collapse at the end of World War I."><span class="dot" style="background:#8c2f2f"></span>Communist state</span><span class="tag" tabindex="0" data-tip="Hungarian Communist leader who seized power in March 1919 and headed the short-lived Hungarian Soviet Republic before fleeing into Soviet exile after its collapse that August."><span class="dot" style="background:#4a3b78"></span>Béla Kun</span><span class="tag" tabindex="0" data-tip="The Hungarian Soviet Republic, following Bolshevik doctrine, treated organized religion as an obstacle to be suppressed rather than an institution to be established."><span class="dot" style="background:#8e3b62"></span>State atheism</span></div>
             <p><span class="label">Who &amp; why:</span> Béla Kun's Communists seize power in March 1919 amid the chaos following Hungary's WWI collapse, briefly allying with the fragile Democratic Republic before pushing it aside. Romanian intervention and internal collapse end the experiment by August; Kun flees to Vienna and eventually Moscow.</p>
             <p><span class="label">What it represents:</span> a plain red field, the standard international Communist banner of the moment, with no Hungarian national symbol at all &mdash; explicitly rejecting the tricolor as a bourgeois-national relic rather than reinterpreting it, unlike the later 1949 People's Republic.</p>
           </div>
@@ -455,7 +501,7 @@
           <div class="card-body">
             <div class="card-dates">1918 &ndash; 1919</div>
             <h3 class="card-title">Hungarian Democratic Republic</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Republic</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Mihály Károlyi</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Secular (no state religion)</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="The first Hungarian state to formally break with monarchy, proclaimed as Austria-Hungary dissolved at the end of World War I — a liberal, pacifist-minded experiment that lasted barely a year."><span class="dot" style="background:#2f6b4a"></span>Republic</span><span class="tag" tabindex="0" data-tip="Liberal aristocrat and pacifist count who proclaimed Hungary&#x27;s first republic in November 1918, hoping a clean break with the old imperial order would secure better peace terms from the Allies."><span class="dot" style="background:#4a3b78"></span>Mihály Károlyi</span><span class="tag" tabindex="0" data-tip="No official church — the short-lived 1918 republic established no state religion, part of its broader liberal break with the institutions of the old monarchy."><span class="dot" style="background:#8e3b62"></span>Secular (no state religion)</span></div>
             <p><span class="label">Who &amp; why:</span> Count Mihály Károlyi proclaims the republic on 16 November 1918 as Austria-Hungary disintegrates, hoping liberal, pacifist credentials might secure better peace terms from the Allies. The strategy fails; territorial losses mount regardless, and the government's own weakness opens the door to Béla Kun's Communists within months.</p>
             <p><span class="label">What it represents:</span> the tricolor stripped of any royal or imperial emblem for the first time in Hungary's history &mdash; a deliberate, if short-lived, assertion that the nation's colors belong to the republic, not the crown.</p>
           </div>
@@ -494,7 +540,7 @@
           <div class="card-body">
             <div class="card-dates">1867 &ndash; 1918</div>
             <h3 class="card-title">Austria-Hungary (Kingdom of Hungary)</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom (Transleithania)</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Franz Joseph I</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Roman Catholic (traditional)</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="The Hungarian half of the Austro-Hungarian Dual Monarchy after the 1867 Compromise — self-governing with its own parliament and prime minister, sharing only the monarch, military, and foreign policy with Austria."><span class="dot" style="background:#a9762f"></span>Kingdom (Transleithania)</span><span class="tag" tabindex="0" data-tip="Habsburg emperor of Austria and, after the 1867 Compromise, separately crowned King of Hungary — the shared monarch whose six-decade reign spanned the entire Dual Monarchy period."><span class="dot" style="background:#4a3b78"></span>Franz Joseph I</span><span class="tag" tabindex="0" data-tip="Catholicism was the traditionally favored faith of the Hungarian crown and the Habsburg dynasty, though the Dual Monarchy&#x27;s constitutional order granted legal toleration to other recognized denominations."><span class="dot" style="background:#8e3b62"></span>Roman Catholic (traditional)</span></div>
             <p><span class="label">Who &amp; why:</span> the 1867 Ausgleich gives Hungary its own government, parliament, and prime minister in Budapest, equal in status to Austria's own Vienna-based half, sharing only the monarch, foreign policy, and military with Franz Joseph's Cisleithania. Budapest itself unifies from Buda, Pest, and Óbuda in 1873, growing into a genuine European capital in its own right.</p>
             <p><span class="label">What it represents:</span> Hungary's own red-white-green, distinct from Austria's black-and-gold imperial colors &mdash; a visible, everyday reminder that the Dual Monarchy was two kingdoms under one crown, not one empire with two names.</p>
           </div>
@@ -533,7 +579,7 @@
           <div class="card-body">
             <div class="card-dates">1699 &ndash; 1867</div>
             <h3 class="card-title">Kingdom of Hungary (Habsburg-ruled, reunited)</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom (Habsburg crown)</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Leopold I</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Catholic (Habsburg)</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="Hungary as a kingdom in personal union with the Austrian Habsburg monarchy — legally its own crown and constitution, but sharing a monarch and increasingly directed from Vienna."><span class="dot" style="background:#a9762f"></span>Kingdom (Habsburg crown)</span><span class="tag" tabindex="0" data-tip="Habsburg emperor who oversaw the reconquest of Ottoman Hungary and the 1699 Treaty of Karlowitz, which reunited the kingdom under his crown after a century and a half of division."><span class="dot" style="background:#4a3b78"></span>Leopold I</span><span class="tag" tabindex="0" data-tip="The Habsburg monarchs were committed Counter-Reformation Catholics who actively promoted Catholicism as the kingdom&#x27;s dominant faith, including pressure on Hungary&#x27;s substantial Protestant population."><span class="dot" style="background:#8e3b62"></span>Catholic (Habsburg)</span></div>
             <p><span class="label">Who &amp; why:</span> the 1699 Treaty of Karlowitz confirms Habsburg control over the whole reunited kingdom; Maria Theresa and Joseph II's later 18th-century reforms centralize power in Vienna over increasingly vocal Hungarian objections. The failed 1848&ndash;49 Revolution, led by Lajos Kossuth and crushed only with Russian military help, becomes the defining grievance that eventually forces the 1867 Compromise.</p>
             <p><span class="label">What it represents:</span> the historic Hungarian colors and coat of arms continue under a dynasty based in Vienna &mdash; a kingdom in personal union with, but never legally absorbed into, the Austrian crownlands, a distinction Hungarians insisted on throughout.</p>
           </div>
@@ -570,7 +616,7 @@
           <div class="card-body">
             <div class="card-dates">1541 &ndash; 1699</div>
             <h3 class="card-title">Ottoman Hungary (Budin Eyalet)</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Occupied territory</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Suleiman the Magnificent</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Sunni Islam (Ottoman)</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="Territory administered directly from a foreign imperial capital rather than by any indigenous government — here, the former kingdom&#x27;s core run as an Ottoman provincial eyalet from Istanbul."><span class="dot" style="background:#204b5c"></span>Occupied territory</span><span class="tag" tabindex="0" data-tip="Ottoman sultan at the height of the empire&#x27;s power, who personally led the 1541 capture of Buda and organized central Hungary as the Eyalet of Budin."><span class="dot" style="background:#4a3b78"></span>Suleiman the Magnificent</span><span class="tag" tabindex="0" data-tip="The Ottoman Empire&#x27;s official faith, administered through Islamic law and religious institutions in the territories it directly governed, including the Eyalet of Budin."><span class="dot" style="background:#8e3b62"></span>Sunni Islam (Ottoman)</span></div>
             <p><span class="label">Who &amp; why:</span> Sultan Suleiman the Magnificent takes Buda in 1541, organizing central Hungary as the Eyalet of Budin administered from the captured royal palace. The rest of the historic kingdom splits three ways: this Ottoman core, Habsburg "Royal Hungary" in the north and west (see the map above), and the semi-autonomous Principality of Transylvania to the east, outside modern Hungary's own borders.</p>
             <p><span class="label">What it represents:</span> the standard Ottoman red field with crescent and star, flown over what had been the kingdom's own capital &mdash; a century and a half during which no Hungarian state of any kind exists in Buda itself.</p>
           </div>
@@ -609,7 +655,7 @@
           <div class="card-body">
             <div class="card-dates">1526 &ndash; 1541</div>
             <h3 class="card-title">Kingdom of Hungary (Disputed Succession)</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Contested kingdom</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Ferdinand I of Habsburg</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Catholic</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="A kingdom simultaneously claimed by two rival crowned kings after the 1526 Battle of Mohács, each controlling only part of the country and neither able to make full sovereignty stick."><span class="dot" style="background:#a9762f"></span>Contested kingdom</span><span class="tag" tabindex="0" data-tip="Brother-in-law of the dead King Louis II, elected by one faction of Hungarian nobles as king after Mohács, ruling the western and northern portion of a kingdom split by rival claimants until the Ottomans took Buda outright in 1541."><span class="dot" style="background:#4a3b78"></span>Ferdinand I of Habsburg</span><span class="tag" tabindex="0" data-tip="Catholicism remained the kingdom&#x27;s dominant faith through this period of rival kingship, with no significant change in religious establishment despite the political schism."><span class="dot" style="background:#8e3b62"></span>Catholic</span></div>
             <p><span class="label">Who &amp; why:</span> King Louis II drowns fleeing the catastrophic defeat at Mohács in August 1526, dying without an heir. The nobility splits: one faction elects the Transylvanian magnate John Zápolya, who leans on Ottoman backing; another elects Ferdinand of Habsburg, brother-in-law of the dead king, who controls the west and north. Both crown themselves King of Hungary in the same year, and neither fully controls the country &mdash; a civil war between the two claimants runs alongside continued Ottoman raiding until Suleiman simply takes Buda outright in 1541, ending the argument by force.</p>
             <p><span class="label">What it represents:</span> no new flag emerges in these fifteen years of dual kingship &mdash; both Zápolya and Ferdinand fly the same inherited Árpád-stripe royal banner, each claiming to be its rightful bearer, shown here with a broken border to mark a kingdom whole in symbol only.</p>
           </div>
@@ -647,7 +693,7 @@
           <div class="card-body">
             <div class="card-dates">1000 &ndash; 1526</div>
             <h3 class="card-title">Kingdom of Hungary (Medieval)</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Stephen I (St. Stephen)</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Roman Catholic</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="A hereditary Christian monarchy under a crowned king, the standard state form of medieval Latin Europe that Hungary adopted with Stephen I&#x27;s coronation in the year 1000."><span class="dot" style="background:#a9762f"></span>Kingdom</span><span class="tag" tabindex="0" data-tip="Hungary&#x27;s first Christian king, crowned in the year 1000, who completed the country&#x27;s conversion begun by his father Géza and built its early state institutions; later canonized as Hungary&#x27;s patron saint."><span class="dot" style="background:#4a3b78"></span>Stephen I (St. Stephen)</span><span class="tag" tabindex="0" data-tip="The faith Stephen I established as Hungary&#x27;s official religion at his coronation, binding the new kingdom to Rome and Western Christendom rather than Constantinople&#x27;s Orthodox sphere."><span class="dot" style="background:#8e3b62"></span>Roman Catholic</span></div>
             <p><span class="label">Who &amp; why:</span> Stephen I, crowned on Christmas Day 1000 (or 1 January 1001) with a crown sent by Pope Sylvester II, completes the conversion to Christianity his father Géza began and is later canonized as Hungary's patron saint. The kingdom becomes a major medieval power under rulers like Matthias Corvinus (r. 1458&ndash;90), ending catastrophically at the 1526 Battle of Mohács, where King Louis II dies and the Ottoman advance becomes unstoppable.</p>
             <p><span class="label">What it represents:</span> the Árpád stripes &mdash; four red and four white horizontal bands &mdash; attested in seals from the 13th century onward, among the oldest heraldic devices associated with the Hungarian crown, still part of the national coat of arms today.</p>
           </div>
@@ -682,7 +728,7 @@
           <div class="card-body">
             <div class="card-dates">c. 895 &ndash; 1000</div>
             <h3 class="card-title">Principality of Hungary</h3>
-            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Tribal principality</span><span class="tag"><span class="dot" style="background:#4a3b78"></span>Árpád</span><span class="tag"><span class="dot" style="background:#8e3b62"></span>Tengrism (Magyar paganism)</span></div>
+            <div class="tag-row"><span class="tag" tabindex="0" data-tip="A pre-state polity organized around clan and tribal leadership rather than a centralized crown or formal bureaucracy — common across early medieval Europe and the Eurasian steppe before Christianization brought Western-style kingship."><span class="dot" style="background:#a9762f"></span>Tribal principality</span><span class="tag" tabindex="0" data-tip="Semi-legendary chieftain who led the confederation of Magyar tribes across the Carpathians into the Pannonian Basin around 895 CE, founding the dynasty that would rule Hungary for over 400 years."><span class="dot" style="background:#4a3b78"></span>Árpád</span><span class="tag" tabindex="0" data-tip="A pre-Christian steppe religious tradition centered on the sky-god Tengri, practiced by the early Magyars and many other Central Asian peoples before Stephen I&#x27;s Christianization campaign around 1000 CE."><span class="dot" style="background:#8e3b62"></span>Tengrism (Magyar paganism)</span></div>
             <p><span class="label">Who &amp; why:</span> Árpád leads the Magyar tribal federation across the Carpathians in the "Honfoglalás" (Land-Taking) of c. 895, settling the Carpathian Basin after decades as feared raiders across Europe &mdash; the 955 Battle of Lechfeld, a crushing defeat by Otto I, finally ends the raiding era and pushes the Magyars toward settled statehood and, within two generations, Christianity.</p>
             <p><span class="label">What it represents:</span> no securely documented flag survives from this pre-heraldic, pre-Christian era; the Magyar tribes used totemic standards (a turul, a mythical falcon, features heavily in later national symbolism) rather than a fixed territorial banner. Shown here honestly blank rather than invented.</p>
           </div>
@@ -842,6 +888,19 @@
     clearInterval(iPlayTimer);
   }
   iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+
+  // Tap-to-toggle for the pill tag tooltips (hover doesn't work on touch devices).
+  document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
+    tag.addEventListener("click", function (e) {
+      var wasOpen = tag.classList.contains("tip-open");
+      document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
+      if (!wasOpen) tag.classList.add("tip-open");
+      e.stopPropagation();
+    });
+  });
+  document.addEventListener("click", function () {
+    document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
+  });
 })();
 </script>
 
