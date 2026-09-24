@@ -1,0 +1,413 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Vietnam</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Vietnam, from a thousand years of Chinese imperial rule through French Indochina, partition, war, and 1975 reunification.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-box.dual .dual-row { display: flex; gap: 8px; }
+  .flag-box.dual .flag-half { flex: 1 1 0; min-width: 0; }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="southeast-asia-hub.html">Southeast Asia hub</a></p>
+  <p class="kicker">Family research &middot; Southeast Asia atlas</p>
+  <h1>Flags of Vietnam</h1>
+  <p class="lede">From over a thousand years under Chinese imperial administration, through independent Vietnamese dynasties, French colonization as part of Indochina, a war-torn decade of contested independence, a formal 1954 partition into two rival states, and a devastating war that ends in 1975&ndash;76 reunification &mdash; seven entries across one of Southeast Asia's longest and most contested national histories.</p>
+  <p class="lede">Vietnam's modern flag &mdash; a gold star on red &mdash; was first raised by Ho Chi Minh's independence movement in 1945 and became the flag of the entire reunified country in 1976, after three decades in which it represented only the northern half.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Vietnam, before 111 BCE&ndash;present, seven political entries. The 1954&ndash;1975 partition into North and South Vietnam, and the 1945&ndash;1954 period of contested sovereignty against reasserted French colonial rule, are each shown as single dual-flag entries rather than invented sub-periods, since no clean date split exists for either genuinely contested span. This page carries no internal-partition map; that phase is deferred project-wide. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#da251d"/>
+              <path d="M150,58 l14,42 44,0 -36,26 14,42 -36,-26 -36,26 14,-42 -36,-26 44,0 Z" fill="#ffcd00"/>
+            </svg>
+            <div class="flag-caption">gold star on red, now flown over a reunified country</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1976 &ndash; present</div>
+            <h3 class="card-title">Socialist Republic of Vietnam</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Republic, socialist</span></div>
+            <p><span class="label">Who &amp; why:</span> North Vietnamese forces take Saigon on 30 April 1975, ending the Vietnam War; a National Assembly formally reunifies the country as the Socialist Republic of Vietnam on 2 July 1976, under Communist Party rule. Vietnam later normalizes relations with the United States (1995) and undertakes sweeping market reforms (đổi mới) while remaining a one-party state.</p>
+            <p><span class="label">What it represents:</span> the same gold-star-on-red flag flown by the Democratic Republic of Vietnam since 1945, now extended over the entire reunified country.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, centered five-pointed gold star.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#da251d"></span><span class="meta"><span class="name">Red</span><span class="hex">#DA251D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffcd00"></span><span class="meta"><span class="name">Gold</span><span class="hex">#FFCD00</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box dual">
+            <div class="dual-row">
+              <div class="flag-half">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="300" height="200" fill="#da251d"/>
+                  <path d="M150,58 l14,42 44,0 -36,26 14,42 -36,-26 -36,26 14,-42 -36,-26 44,0 Z" fill="#ffcd00"/>
+                </svg>
+              </div>
+              <div class="flag-half">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="300" height="200" fill="#fcd116"/>
+                  <rect y="66.7" width="300" height="22.2" fill="#da251d"/>
+                  <rect y="88.9" width="300" height="22.2" fill="#da251d"/>
+                  <rect y="111.1" width="300" height="22.2" fill="#da251d"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flag-caption">North (gold star, red) &amp; South (three red stripes, yellow)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1954 &ndash; 1975/76</div>
+            <h3 class="card-title">Democratic Republic of Vietnam (North) / Republic of Vietnam (South)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>North: Republic, socialist</span><span class="tag"><span class="dot" style="background:#fcd116"></span>South: Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1954 Geneva Accords, ending the First Indochina War, partition the country at the 17th parallel pending elections that are never held. Ho Chi Minh's communist-led Democratic Republic governs the North from Hanoi; the anti-communist, US-backed Republic of Vietnam governs the South from Saigon under Ng&ocirc; &Ntilde;&igrave;nh Di&#7879;m and later a succession of military governments. Escalating insurgency and direct US military involvement from 1965 turn the standoff into the Vietnam War, which kills an estimated two million or more Vietnamese before the North's final 1975 offensive takes Saigon.</p>
+            <p><span class="label">What it represents:</span> the North's gold-star-on-red flag, flown since 1945 and later extended nationwide; the South's yellow field with three red stripes ("cờ vàng ba sọc đỏ"), inherited from the earlier French-aligned State of Vietnam and still used today by overseas Vietnamese communities opposed to the current government.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, both flags.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">North: red field, gold star. South: yellow field, three horizontal red stripes.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#da251d"></span><span class="meta"><span class="name">North red</span><span class="hex">#DA251D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#fcd116"></span><span class="meta"><span class="name">South yellow</span><span class="hex">#FCD116</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box dual">
+            <div class="dual-row">
+              <div class="flag-half">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="300" height="200" fill="#da251d"/>
+                  <path d="M150,58 l14,42 44,0 -36,26 14,42 -36,-26 -36,26 14,-42 -36,-26 44,0 Z" fill="#ffcd00"/>
+                </svg>
+              </div>
+              <div class="flag-half">
+                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="300" height="200" fill="#fcd116"/>
+                  <rect y="66.7" width="300" height="22.2" fill="#da251d"/>
+                  <rect y="88.9" width="300" height="22.2" fill="#da251d"/>
+                  <rect y="111.1" width="300" height="22.2" fill="#da251d"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flag-caption">Ho Chi Minh's proclaimed republic &amp; the French-aligned State of Vietnam</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1945 &ndash; 1954</div>
+            <h3 class="card-title">Democratic Republic of Vietnam (declared) / French Indochina War</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Republic, contested</span><span class="tag"><span class="dot" style="background:#fcd116"></span>French-aligned state</span></div>
+            <p><span class="label">Who &amp; why:</span> Ho Chi Minh proclaims Vietnamese independence in Hanoi on 2 September 1945, days after Japan's surrender. France refuses to accept the loss of its colony and, after a brief standoff, the First Indochina War breaks out in December 1946. France sets up a rival, nominally independent State of Vietnam under former emperor B&#7843;o &#272;&#7841;i in 1949 to compete for legitimacy. France's decisive defeat at &#272;i&#7879;n Bi&ecirc;n Ph&#7911; in May 1954 forces it to withdraw, and the July 1954 Geneva Accords partition the country at the 17th parallel.</p>
+            <p><span class="label">What it represents:</span> Ho Chi Minh's Vi&#7879;t Minh raise the gold-star-on-red flag at independence; the French-backed State of Vietnam answers with a yellow field and three red stripes, a design that outlives it as the later South's flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, both flags.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#da251d"></span><span class="meta"><span class="name">Red</span><span class="hex">#DA251D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#fcd116"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FCD116</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#ae1c28"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#21468b"/>
+            </svg>
+            <div class="flag-caption">French tricolor, flown over the colonial federation</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1887 &ndash; 1945</div>
+            <h3 class="card-title">French Indochina</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#21468b"></span>Colonial (France)</span></div>
+            <p><span class="label">Who &amp; why:</span> France formally unites its Vietnamese possessions (Tonkin, Annam, Cochinchina) with Cambodia into the Indochinese Union in October 1887, adding Laos in 1893; colonial rule spans a formal protectorate over most of Vietnam and direct control of the Cochinchina colony in the south. After France's 1940 defeat by Germany, Japan occupies Indochina while leaving Vichy French administration nominally in place, before seizing direct control in a March 1945 coup that briefly restores Vietnamese emperor B&#7843;o &#272;&#7841;i as a Japanese client just months before Japan's own surrender.</p>
+            <p><span class="label">What it represents:</span> the plain French tricolor, the colonial power's own national flag, with no distinct Indochinese symbol.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal vertical or horizontal bands as shown.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#ae1c28"></span><span class="meta"><span class="name">Red</span><span class="hex">#AE1C28</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#21468b"></span><span class="meta"><span class="name">Blue</span><span class="hex">#21468B</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#fcd116"/>
+              <rect x="120" y="40" width="60" height="120" fill="#a4302a"/>
+            </svg>
+            <div class="flag-caption">the Nguy&#7877;n dynasty's imperial yellow, with a red dynastic bar</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1802 &ndash; 1887</div>
+            <h3 class="card-title">Nguy&#7877;n dynasty (independent empire)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Nguy&#7877;n &Aacute;nh unifies the country after decades of civil war, founding the Nguy&#7877;n dynasty and taking the name Gia Long in 1802 &mdash; the last Vietnamese imperial dynasty and the first to rule the full length of the country from Hu&#7871;. French military pressure builds through the mid-1800s, and a series of forced treaties from the 1860s onward progressively strip the empire of sovereignty, culminating in the 1884 Treaty of Hu&#7871; that establishes the French protectorate completed by 1887.</p>
+            <p><span class="label">What it represents:</span> imperial yellow, the color reserved for the emperor in Vietnamese and wider East Asian tradition, forms the field for the dynasty's later banners.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded; shown at 3:2.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#fcd116"></span><span class="meta"><span class="name">Imperial yellow</span><span class="hex">#FCD116</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder &mdash; pre-heraldic dynastic banners, none securely attested</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">938 &ndash; 1802</div>
+            <h3 class="card-title">Independent Vietnamese dynasties</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Ng&ocirc; Quy&#7873;n's 938 victory over a Southern Han fleet at the B&#7841;ch &#272;&#7857;ng River ends over a thousand years of intermittent Chinese imperial administration and opens nearly nine centuries of independent Vietnamese dynastic rule &mdash; the L&yacute;, Tr&#7847;n, later L&ecirc;, and others &mdash; interrupted only briefly by renewed Chinese occupation (1407&ndash;1427) and periods of civil war between rival lords, before the Nguy&#7877;n finally reunify the country in 1802.</p>
+            <p><span class="label">What it represents:</span> no single flag is securely documented across this long dynastic span; imperial banners and dragon standards changed with each ruling house, so this entry is shown honestly blank rather than inventing one continuous symbol.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no single attested flag across this span.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#fcd116"/>
+              <text x="150" y="100" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="46" fill="#a4302a">&#40857;</text>
+            </svg>
+            <div class="flag-caption">Chinese imperial dragon standard, over the administered commanderies</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">before 938</div>
+            <h3 class="card-title">Chinese imperial rule (B&#7855;c thu&#7897;c)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a4302a"></span>Chinese imperial rule</span></div>
+            <p><span class="label">Who &amp; why:</span> successive Chinese dynasties &mdash; beginning with Han conquest in 111 BCE and continuing, with a notable interruption during the Tr&#432;ng sisters' rebellion (40&ndash;43 CE), through the Tang &mdash; administer the Red River Delta as a directly ruled set of commanderies for over a thousand years, a period Vietnamese history remembers as B&#7855;c thu&#7897;c ("Northern domination"). Repeated rebellions gradually weaken central control, and the Tang dynasty's own collapse creates the opening Ng&ocirc; Quy&#7873;n exploits in 938.</p>
+            <p><span class="label">What it represents:</span> the imperial Chinese dragon standard, representing the ruling dynasty of the day rather than any distinct Vietnamese symbol, since none existed under direct imperial administration.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no distinct Vietnamese flag under direct imperial rule.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#a4302a"></span><b>Chinese imperial rule</b> &mdash; direct administration from China</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom / Empire, independent</b> &mdash; sovereign under its own crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#21468b"></span><b>Colonial (France)</b> &mdash; direct French rule</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Republic, contested / socialist</b> &mdash; sovereignty declared or established</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#fcd116"></span><b>French-aligned / Republic</b> &mdash; rival southern state</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="southeast-asia-hub.html"><b>Southeast Asia hub</b><span>Eleven countries, thirteen centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>

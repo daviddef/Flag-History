@@ -1,0 +1,296 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Thailand</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Thailand, from the Sukhothai and Ayutthaya kingdoms through the Chakri dynasty to the modern constitutional monarchy — the only Southeast Asian nation never colonized.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="southeast-asia-hub.html">Southeast Asia hub</a></p>
+  <p class="kicker">Family research &middot; Southeast Asia atlas</p>
+  <h1>Flags of Thailand</h1>
+  <p class="lede">From the Sukhothai and Ayutthaya kingdoms, through the founding of the still-reigning Chakri dynasty in 1782, to a 1932 transition from absolute to constitutional monarchy &mdash; four entries covering the one country in Southeast Asia, and indeed all of South and Southeast Asia, that no European power ever colonized.</p>
+  <p class="lede">That fact is not an accident of geography: nineteenth-century Siam survived as a buffer state between British Burma and French Indochina largely through deliberate, skillful diplomacy, playing the two colonial powers against each other while modernizing its own state institutions.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Thailand, c. 1238&ndash;present, four political entries. The Sukhothai and Ayutthaya kingdoms are combined into one bridging entry since no single flag is attested for either, and Ayutthaya's own plain red ship ensign is the earliest reasonably documented banner. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a51931"/>
+              <rect y="33.3" width="300" height="26.7" fill="#f4efe1"/>
+              <rect y="60" width="300" height="80" fill="#241f5c"/>
+              <rect y="140" width="300" height="26.7" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">Trirang &mdash; red, white, blue, white, red, adopted 1917</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1932 &ndash; present</div>
+            <h3 class="card-title">Kingdom of Thailand (constitutional monarchy)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Kingdom, constitutional</span></div>
+            <p><span class="label">Who &amp; why:</span> a bloodless coup by the People's Party on 24 June 1932 forces King Prajadhipok to accept a constitution, ending absolute monarchy and installing a constitutional system under which the Chakri dynasty continues to reign, now as head of state rather than sole ruler. The country renames itself from Siam to Thailand in 1939, and remains, into the twenty-first century, the region's only country that never fell under direct European colonial rule.</p>
+            <p><span class="label">What it represents:</span> the same trirang flag adopted under the old absolute monarchy in 1917 continues unchanged, its blue center band read as representing the monarchy itself.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, five horizontal bands (2:1:2:1:2 ratio).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a51931"></span><span class="meta"><span class="name">Red</span><span class="hex">#A51931</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#241f5c"></span><span class="meta"><span class="name">Blue</span><span class="hex">#241F5C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="33.3" fill="#a51931"/>
+              <rect y="33.3" width="300" height="26.7" fill="#f4efe1"/>
+              <rect y="60" width="300" height="80" fill="#241f5c"/>
+              <rect y="140" width="300" height="26.7" fill="#f4efe1"/>
+              <rect y="166.7" width="300" height="33.3" fill="#a51931"/>
+            </svg>
+            <div class="flag-caption">the same trirang, newly adopted in 1917 under the absolute monarchy</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1917 &ndash; 1932</div>
+            <h3 class="card-title">Kingdom of Siam (late absolute monarchy)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, absolute</span></div>
+            <p><span class="label">Who &amp; why:</span> King Vajiravudh (Rama VI) adopts the red-white-blue trirang in 1917, adding blue in solidarity with the Allied powers of World War I, into which Siam enters that same year &mdash; a modernizing, internationally minded gesture from a monarchy still ruling by decree.</p>
+            <p><span class="label">What it represents:</span> five horizontal bands, the new blue center band standing for the monarchy alongside the older red (nation) and white (Buddhism).</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, five horizontal bands.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a51931"></span><span class="meta"><span class="name">Red</span><span class="hex">#A51931</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#241f5c"></span><span class="meta"><span class="name">Blue</span><span class="hex">#241F5C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <ellipse cx="150" cy="100" rx="42" ry="34" fill="#f4efe1"/>
+              <ellipse cx="150" cy="98" rx="28" ry="22" fill="#a4302a"/>
+            </svg>
+            <div class="flag-caption">plain red field with the white elephant, Chakri-era Siam</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1782 &ndash; 1917</div>
+            <h3 class="card-title">Kingdom of Siam (Chakri dynasty, absolute monarchy)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, absolute</span></div>
+            <p><span class="label">Who &amp; why:</span> General Chakri founds the still-reigning Chakri dynasty in 1782, crowned Rama I, and moves the capital across the river to Bangkok. Across the nineteenth century, Kings Mongkut (Rama IV) and Chulalongkorn (Rama V) pursue deliberate modernization and adept diplomacy between British and French colonial ambitions, ceding some peripheral territory to each but preserving the kingdom's core independence &mdash; the singular achievement that sets Siam apart from every neighboring state.</p>
+            <p><span class="label">What it represents:</span> a plain red field long used as Siam's ship ensign gains a white elephant, a royal and sacred symbol, added under Rama II in the early 1800s to distinguish Siamese vessels from other red-flagged ships in the region.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded; shown at 3:2.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White (elephant)</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+            </svg>
+            <div class="flag-caption">plain red field, the Ayutthaya-era ship ensign</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 1238 &ndash; 1782</div>
+            <h3 class="card-title">Sukhothai and Ayutthaya kingdoms</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> the Sukhothai kingdom, traditionally dated from around 1238, is often regarded as the first unified Thai state and the origin of the Thai script under King Ramkhamhaeng; it is absorbed by the rising Ayutthaya kingdom, founded in 1351, which dominates the region as a major trading power for over four centuries. Ayutthaya falls to a Burmese invasion in 1767, and a brief Thonburi kingdom under Taksin bridges the gap until General Chakri founds the modern dynasty in 1782.</p>
+            <p><span class="label">What it represents:</span> no fixed national flag existed in the modern sense this early; Ayutthaya's ships are attested flying a plain red ensign by the seventeenth century, shown here as the closest documented approximation for the era, honestly without invented detail.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no fixed national flag; shown as the attested plain red ship ensign.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom, independent / absolute</b> &mdash; sovereign under the crown's full authority</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Kingdom, constitutional</b> &mdash; sovereign, monarch bound by constitution</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="southeast-asia-hub.html"><b>Southeast Asia hub</b><span>Eleven countries, thirteen centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>
