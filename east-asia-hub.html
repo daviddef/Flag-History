@@ -1,0 +1,143 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of East Asia</title>
+<meta name="description" content="A hub for the family flag atlas: China, Japan, Mongolia, North Korea, South Korea, and Taiwan, from ancient dynasties and empires to today's states.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: 66ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: 66ch; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 18 of the world atlas</p>
+  <h1>Flags of East Asia</h1>
+  <p class="lede">Six countries, and some of the longest continuously documented state traditions anywhere in the atlas. Chinese dynastic history stretches back millennia, through the Qin unification of 221 BCE, the Han, Tang, Song, Ming, and Qing dynasties, and the fall of imperial rule in 1911&ndash;12; the Chinese Civil War between the Nationalist Kuomintang and the Communist Party, fought from 1927 to 1949 with a wartime pause to resist Japan's 1937&ndash;45 invasion, ended with the Communist Party proclaiming the People's Republic of China on the mainland in October 1949 while the Republic of China's government relocated to the island of Taiwan. Taiwan's political status remains a live, disputed question today, with different governments and international actors holding different positions on it.</p>
+  <p class="lede">Korea's history as a single nation and government tradition goes back over a millennium, through the kingdoms of Goguryeo, Silla, and Goryeo and the five-century Joseon Dynasty, before Japan annexed the peninsula as a colony from 1910 to 1945. Japan's own history runs from an imperial line traditionally dated to 660 BCE (the world's oldest continuous hereditary monarchy by that traditional count) through centuries of shogunate rule, the Meiji Restoration's rapid modernization from 1868, and the Pacific War, which ended with the 1945 atomic bombings of Hiroshima and Nagasaki and a postwar American occupation that produced Japan's 1947 constitution. Mongolia's Genghis Khan built history's largest contiguous land empire in the thirteenth century, before centuries of Qing Chinese rule gave way to independence in 1921&ndash;24 as the world's second Communist state and, from 1990, a multi-party democracy.</p>
+  <p class="lede">At the close of World War II, Korea was divided along the 38th parallel into Soviet and American occupation zones; the 1950&ndash;53 Korean War that followed left two separate states on the peninsula, North Korea and South Korea, both of which endure today. Each country below is a placeholder for now; a deep dive with its own flag lineage is coming.</p>
+
+  <div class="countries">
+    <h2>The 6 countries</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#de2910"></span>
+        <span class="era">publishing next</span>
+        <b>China</b>
+        <span>Millennia of dynastic rule from the Qin unification through the Qing, the 1911&ndash;12 fall of imperial China, and the People's Republic proclaimed in 1949 after the Chinese Civil War.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#bc002d"></span>
+        <span class="era">publishing next</span>
+        <b>Japan</b>
+        <span>An imperial line traditionally dated to 660 BCE, centuries of shogunate rule, the 1868 Meiji Restoration, the Pacific War, and a new constitution under postwar American occupation.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#0066b3"></span>
+        <span class="era">publishing next</span>
+        <b>Mongolia</b>
+        <span>Genghis Khan's thirteenth-century empire, the largest contiguous land empire in history, centuries under Qing Chinese rule, and independence in 1921&ndash;24 as the world's second Communist state.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#024fa2"></span>
+        <span class="era">publishing next</span>
+        <b>North Korea</b>
+        <span>Heir to a millennium-plus Korean statehood tradition through Goguryeo, Silla, Goryeo, and Joseon, Japanese colonial rule until 1945, and a separate state since the peninsula's postwar division.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#003478"></span>
+        <span class="era">publishing next</span>
+        <b>South Korea</b>
+        <span>The same Korean statehood tradition and 1910&ndash;45 Japanese colonial rule, followed by the 1950&ndash;53 Korean War and a separate state on the peninsula's southern half ever since.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#fe0000"></span>
+        <span class="era">publishing next</span>
+        <b>Taiwan</b>
+        <span>Home to the Republic of China government since its 1949 relocation after the Chinese Civil War, and today a self-governing island whose political status remains disputed.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this hub</h2>
+    <p>This hub currently shows all six East Asian countries without the atlas's usual interactive map &mdash; the real-coastline, era-slider visualization that the Former Yugoslavia and other hubs use to show territory changing hands across centuries. Building that map for this region is a larger job than the rest of this phase allows, so this page ships as a lighter placeholder: real historical context above, one card per country, and full deep-dive flag pages and an interactive regional map planned for a later phase.</p>
+    <p>Colors above are drawn from each country's current national flag, not a historical palette, since no per-country flag lineage exists yet. Once a country's own page publishes, its card here will link out. This page describes real historical facts about ongoing disputes &mdash; Taiwan's status and the division of Korea among them &mdash; without taking a position on their current or future resolution.</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This hub is one region in a larger set. See the other phases here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="southeast-asia-hub.html"><b>Southeast Asia hub</b><span>Eleven countries, empires to independence</span></a>
+      <a class="link-card" href="south-asia-hub.html"><b>South Asia hub</b><span>Eight countries, Indus Valley to Partition</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica.
+  </footer>
+
+</div>
+
+</body></html>
