@@ -1,0 +1,202 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of West Africa</title>
+<meta name="description" content="A hub for the family flag atlas: sixteen West African countries, from the Mali and Songhai empires through European colonization to independence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: 66ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: 66ch; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 11 of the world atlas</p>
+  <h1>Flags of West Africa</h1>
+  <p class="lede">Sixteen countries, and some of the deepest pre-colonial history in the whole atlas. This stretch of coast and savanna held major, well-documented empires centuries before Europeans arrived in force: the Mali Empire under Mansa Musa (whose 1324 pilgrimage to Mecca, with a gold-laden caravan, is still the standard by which historians measure medieval wealth), the Songhai Empire that succeeded it and briefly controlled the Niger Bend's trade routes and scholarly centers like Timbuktu, the Asante Empire in the forest zone, the bronze-casting Benin Empire on the Guinea coast, the Oyo Empire's Yoruba cavalry state, and the Kanem-Bornu sultanate that endured for close to a thousand years around Lake Chad.</p>
+  <p class="lede">European contact began with Portuguese traders in the 1400s and hardened into full colonial rule after the 1884&ndash;85 Berlin Conference: France took the largest share (the federation of French West Africa), Britain held Nigeria, Ghana (the Gold Coast), Sierra Leone, and the Gambia, and Portugal held Guinea-Bissau and Cape Verde. Nearly all sixteen reached independence in the same tight window, 1957 to 1975 &mdash; Ghana first among them, Guinea-Bissau and Cape Verde last, after armed independence struggles. Each country below is a placeholder for now; a deep dive with its own flag lineage is coming.</p>
+
+  <div class="countries">
+    <h2>The 16 countries</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#008751"></span>
+        <span class="era">publishing next</span>
+        <b>Nigeria</b>
+        <span>The Sokoto Caliphate, the Benin Empire's bronzes, Britain's 1914 amalgamation of north and south, and Africa's most populous nation since 1960.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#006b3f"></span>
+        <span class="era">publishing next</span>
+        <b>Ghana</b>
+        <span>The Asante Empire's Golden Stool, British Gold Coast, and the first sub-Saharan colony to win independence, in 1957 under Kwame Nkrumah.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#00853f"></span>
+        <span class="era">publishing next</span>
+        <b>Senegal</b>
+        <span>The Jolof Empire, France's oldest African foothold at Saint-Louis and Dakar, and the short-lived 1959&ndash;60 Mali Federation with its western neighbor.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#14b53a"></span>
+        <span class="era">publishing next</span>
+        <b>Mali</b>
+        <span>Mansa Musa's fourteenth-century Mali Empire, the Songhai Empire and Timbuktu's scholarly renown, French Sudan, and independence in 1960.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#f77f00"></span>
+        <span class="era">publishing next</span>
+        <b>C&ocirc;te d'Ivoire</b>
+        <span>A coast of small Akan and Mande kingdoms, a French colony built around cocoa, and independence in 1960 under Félix Houphouët-Boigny's long rule.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ce1126"></span>
+        <span class="era">publishing next</span>
+        <b>Guinea</b>
+        <span>The nineteenth-century Fouta Djallon Islamic state, and the only French colony to vote "no" in 1958 &mdash; costing it French aid but winning instant independence.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ef2b2d"></span>
+        <span class="era">publishing next</span>
+        <b>Burkina Faso</b>
+        <span>The centuries-old Mossi kingdoms of Ouagadougou and Yatenga, French Upper Volta, and a 1984 renaming under revolutionary leader Thomas Sankara.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#e05206"></span>
+        <span class="era">publishing next</span>
+        <b>Niger</b>
+        <span>Hausa city-states, the eastern edge of the Songhai and Kanem-Bornu empires, Tuareg trans-Saharan trade routes, French colonization, and 1960 independence.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#fcd116"></span>
+        <span class="era">publishing next</span>
+        <b>Benin</b>
+        <span>The Kingdom of Dahomey and its famed Agojie women warriors, French Dahomey, and a 1975 renaming to Benin after a Marxist-Leninist turn.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#006a4e"></span>
+        <span class="era">publishing next</span>
+        <b>Togo</b>
+        <span>Ewe and Mina communities, a German protectorate split between Britain and France after World War I, and independence as French Togoland in 1960.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#1eb53a"></span>
+        <span class="era">publishing next</span>
+        <b>Sierra Leone</b>
+        <span>Founded at Freetown in 1787 as a British settlement for freed and formerly enslaved people, a Crown colony and protectorate, independent since 1961.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#002868"></span>
+        <span class="era">publishing next</span>
+        <b>Liberia</b>
+        <span>Settled from 1822 by the American Colonization Society for freed African Americans, and declared Africa's first republic in 1847.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#cf142b"></span>
+        <span class="era">publishing next</span>
+        <b>Guinea-Bissau</b>
+        <span>The Mandinka Kaabu kingdom's western reach, Portuguese Guinea, and independence declared in 1973 after Amílcar Cabral's PAIGC guerrilla war.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#0c1c8c"></span>
+        <span class="era">publishing next</span>
+        <b>The Gambia</b>
+        <span>The Mali Empire's western fringe along the Gambia River, a slender British colony wrapped inside French Senegal, independent since 1965.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#00a95c"></span>
+        <span class="era">publishing next</span>
+        <b>Mauritania</b>
+        <span>Sanhaja Berber confederations and the eleventh-century Almoravid dynasty's desert homeland, French colonization, and independence in 1960.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#003893"></span>
+        <span class="era">publishing next</span>
+        <b>Cape Verde</b>
+        <span>Uninhabited until Portuguese settlement in 1462, a key Atlantic slave-trade waypoint, and independence in 1975 alongside Guinea-Bissau's PAIGC struggle.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this hub</h2>
+    <p>This hub currently shows all sixteen West African countries without the atlas's usual interactive map &mdash; the real-coastline, era-slider visualization that the Former Yugoslavia and other hubs use to show territory changing hands across centuries. Building that map for sixteen countries at once is a larger job than the rest of this phase allows, so this page ships as a lighter placeholder: real historical context above, one card per country, and full deep-dive flag pages and an interactive regional map planned for a later phase.</p>
+    <p>Colors above are drawn from each country's current national flag, not a historical palette, since no per-country flag lineage exists yet. Once a country's own page publishes, its card here will link out.</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This hub is one region in a larger set. See the other phases here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="central-america-hub.html"><b>Central America hub</b><span>Seven countries, one federal union</span></a>
+      <a class="link-card" href="arabian-peninsula-hub.html"><b>Arabian Peninsula hub</b><span>Seven countries, tribal to modern states</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica.
+  </footer>
+
+</div>
+
+</body></html>
