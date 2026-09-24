@@ -1,0 +1,394 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Cambodia</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Cambodia, from the Khmer Empire of Angkor through French colonization, the Khmer Rouge genocide, and the restored modern kingdom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="southeast-asia-hub.html">Southeast Asia hub</a></p>
+  <p class="kicker">Family research &middot; Southeast Asia atlas</p>
+  <h1>Flags of Cambodia</h1>
+  <p class="lede">From the Khmer Empire, whose temple-city of Angkor was once the largest pre-industrial urban complex on Earth, through centuries of decline, French colonization, independence, a brief republic, the Khmer Rouge genocide, and a long transition back to constitutional monarchy &mdash; seven entries across one of Southeast Asia's most dramatic national histories.</p>
+  <p class="lede">Angkor Wat itself has appeared on nearly every Cambodian flag since independence, through governments as different as the royalist kingdom, the Khmer Republic, the Khmer Rouge, and the Vietnamese-backed People's Republic &mdash; the one constant symbol across a turbulent century.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Cambodia, c. 802&ndash;present, seven political entries. The 1975&ndash;1979 Khmer Rouge period is stated plainly and factually, weighted appropriately to its documented scale, consistent with this atlas's established standard for this exact topic. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="50" fill="#032ea1"/>
+              <rect y="50" width="300" height="100" fill="#e00025"/>
+              <rect y="150" width="300" height="50" fill="#032ea1"/>
+              <g fill="#f4efe1"><rect x="115" y="70" width="10" height="60"/><rect x="145" y="60" width="10" height="70"/><rect x="175" y="70" width="10" height="60"/><path d="M110,70 h80 l-10,-14 h-60 Z"/></g>
+            </svg>
+            <div class="flag-caption">blue-red-blue with the white silhouette of Angkor Wat</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1993 &ndash; present</div>
+            <h3 class="card-title">Kingdom of Cambodia (restored)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Kingdom, constitutional</span></div>
+            <p><span class="label">Who &amp; why:</span> UN-supervised elections in 1993, following the 1991 Paris Peace Accords that ended over a decade of civil war, restore the monarchy under King Norodom Sihanouk as a constitutional figurehead within a multiparty parliamentary system, though real political power has since remained concentrated under long-serving Prime Minister Hun Sen and, from 2023, his son Hun Manet.</p>
+            <p><span class="label">What it represents:</span> the same essential design used under the earlier 1953&ndash;1970 kingdom &mdash; blue and red bands with a white three-towered silhouette of Angkor Wat centered on red &mdash; readopted as the restored kingdom's flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, blue-red-blue horizontal bands (1:2:1).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#032ea1"></span><span class="meta"><span class="name">Blue</span><span class="hex">#032EA1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#e00025"></span><span class="meta"><span class="name">Red</span><span class="hex">#E00025</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#e00025"/>
+              <g fill="#fcd116"><rect x="115" y="90" width="10" height="60"/><rect x="145" y="80" width="10" height="70"/><rect x="175" y="90" width="10" height="60"/><path d="M110,90 h80 l-10,-14 h-60 Z"/></g>
+            </svg>
+            <div class="flag-caption">People's Republic of Kampuchea flag, gold Angkor emblem on red</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1979 &ndash; 1993</div>
+            <h3 class="card-title">People's Republic of Kampuchea / State of Cambodia</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#7c2e1f"></span>Republic, socialist</span></div>
+            <p><span class="label">Who &amp; why:</span> Vietnam invades in December 1978 and topples the Khmer Rouge in January 1979, installing a Vietnamese-backed government under former Khmer Rouge officers who had defected; the ousted Khmer Rouge continue a guerrilla insurgency from border areas, still recognized by the UN as Cambodia's legitimate government for years afterward. The state renames itself Cambodia in 1989, and the Paris Peace Accords finally end the civil war in 1991, opening the way to the 1993 UN-supervised elections.</p>
+            <p><span class="label">What it represents:</span> a gold five-tower silhouette of Angkor Wat on plain red, a socialist-era design keeping the temple motif that outlasts every regime around it.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#e00025"></span><span class="meta"><span class="name">Red</span><span class="hex">#E00025</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#fcd116"></span><span class="meta"><span class="name">Gold</span><span class="hex">#FCD116</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#e00025"/>
+              <g fill="#fcd116"><rect x="120" y="95" width="9" height="45"/><rect x="145" y="88" width="9" height="52"/><rect x="171" y="95" width="9" height="45"/></g>
+            </svg>
+            <div class="flag-caption">plain red field, yellow silhouette of Angkor's three towers</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1975 &ndash; 1979</div>
+            <h3 class="card-title">Democratic Kampuchea (Khmer Rouge)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#5c2a24"></span>Totalitarian regime</span></div>
+            <p><span class="label">Who &amp; why:</span> the Khmer Rouge, led by Pol Pot, take the capital Phnom Penh on 17 April 1975 and immediately begin a radical, brutal restructuring of society, forcibly evacuating cities and abolishing money, religion, and private property in pursuit of an agrarian utopia. Over the next three years and nine months, an estimated 1.5 to 2 million people &mdash; roughly a quarter of the population &mdash; die from execution, forced labor, and starvation, until Vietnam's December 1978 invasion topples the regime in January 1979.</p>
+            <p><span class="label">What it represents:</span> a plain red field with a yellow silhouette of Angkor Wat's three central towers, the temple imagery retained even by a regime that otherwise sought to erase Cambodia's existing institutions and culture.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#e00025"></span><span class="meta"><span class="name">Red</span><span class="hex">#E00025</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#fcd116"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FCD116</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#032ea1"/>
+              <rect width="300" height="200" fill="none" stroke="#e00025" stroke-width="12"/>
+              <g fill="#f4efe1"><rect x="115" y="90" width="10" height="60"/><rect x="145" y="80" width="10" height="70"/><rect x="175" y="90" width="10" height="60"/><path d="M110,90 h80 l-10,-14 h-60 Z"/></g>
+            </svg>
+            <div class="flag-caption">Khmer Republic flag, blue field with a red border and white Angkor emblem</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1970 &ndash; 1975</div>
+            <h3 class="card-title">Khmer Republic (Lon Nol)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#7c2e1f"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> General Lon Nol overthrows Prince Norodom Sihanouk in a March 1970 coup, abolishing the monarchy and proclaiming the Khmer Republic amid escalating spillover from the neighboring Vietnam War, including heavy US bombing of Cambodian territory used by North Vietnamese forces. The republic proves unable to contain the growing Khmer Rouge insurgency, and Phnom Penh falls to them on 17 April 1975.</p>
+            <p><span class="label">What it represents:</span> a blue field bordered in red with the white silhouette of Angkor Wat centered, the new republic's chosen break from the earlier kingdom's flag while still keeping the temple emblem.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#032ea1"></span><span class="meta"><span class="name">Blue</span><span class="hex">#032EA1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#e00025"></span><span class="meta"><span class="name">Red</span><span class="hex">#E00025</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="50" fill="#032ea1"/>
+              <rect y="50" width="300" height="100" fill="#e00025"/>
+              <rect y="150" width="300" height="50" fill="#032ea1"/>
+              <g fill="#f4efe1"><rect x="115" y="70" width="10" height="60"/><rect x="145" y="60" width="10" height="70"/><rect x="175" y="70" width="10" height="60"/><path d="M110,70 h80 l-10,-14 h-60 Z"/></g>
+            </svg>
+            <div class="flag-caption">the royal kingdom's flag under King, later Prince, Norodom Sihanouk</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1953 &ndash; 1970</div>
+            <h3 class="card-title">Kingdom of Cambodia (independence, Sihanouk era)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> King Norodom Sihanouk secures full independence from France on 9 November 1953, through a mix of diplomacy and his own "royal crusade for independence" campaign, then abdicates in 1955 to lead the country as an elected, still-dominant political figure through the following decade and a half of Cold War neutrality.</p>
+            <p><span class="label">What it represents:</span> blue and red bands with a white silhouette of Angkor Wat's three towers centered on red, adopted at independence and the direct ancestor of the flag Cambodia still flies today.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, blue-red-blue horizontal bands (1:2:1).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#032ea1"></span><span class="meta"><span class="name">Blue</span><span class="hex">#032EA1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#e00025"></span><span class="meta"><span class="name">Red</span><span class="hex">#E00025</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#ae1c28"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#21468b"/>
+            </svg>
+            <div class="flag-caption">French tricolor, flown over the protectorate</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1863 &ndash; 1953</div>
+            <h3 class="card-title">French Protectorate of Cambodia</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#21468b"></span>Colonial (France)</span></div>
+            <p><span class="label">Who &amp; why:</span> King Norodom I accepts French protection in 1863, chiefly to check encroachment by neighboring Siam and Vietnam, and France formally folds Cambodia into French Indochina in 1887. Japan occupies the protectorate alongside the rest of Indochina from 1941, briefly installing a Japanese-backed independent government under King Norodom Sihanouk in March 1945 before French administration is restored after the war, holding on until full independence in 1953.</p>
+            <p><span class="label">What it represents:</span> the plain French tricolor, the colonial power's own national flag, with the Cambodian monarchy retained as a French-supervised figurehead throughout.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal bands.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#ae1c28"></span><span class="meta"><span class="name">Red</span><span class="hex">#AE1C28</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#21468b"></span><span class="meta"><span class="name">Blue</span><span class="hex">#21468B</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder &mdash; no attested Khmer Empire banner survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 802 &ndash; 1863</div>
+            <h3 class="card-title">Khmer Empire (Angkor) and later decline</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Jayavarman II's self-proclamation as a universal monarch around 802 traditionally marks the founding of the Khmer Empire, which by the 12th and 13th centuries, under rulers like Suryavarman II and Jayavarman VII, builds Angkor Wat and the wider Angkor complex &mdash; then the largest pre-industrial urban settlement on Earth. Repeated wars with neighboring Ayutthaya from the 1400s onward, and the abandonment of Angkor itself in 1431, mark a long decline during which Cambodia becomes a shrinking, embattled kingdom squeezed between more powerful Siamese and Vietnamese neighbors, eventually seeking French protection in 1863.</p>
+            <p><span class="label">What it represents:</span> no securely attested flag survives from the Khmer Empire or its long post-Angkor decline; the empire expressed authority through temple inscriptions and royal iconography rather than a fixed territorial banner. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom / Empire, independent</b> &mdash; sovereign under its own crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#21468b"></span><b>Colonial (France)</b> &mdash; French protectorate rule</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#7c2e1f"></span><b>Republic</b> &mdash; non-royal government</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#5c2a24"></span><b>Totalitarian regime</b> &mdash; Khmer Rouge rule</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Kingdom, constitutional</b> &mdash; restored constitutional monarchy</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="southeast-asia-hub.html"><b>Southeast Asia hub</b><span>Eleven countries, thirteen centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>

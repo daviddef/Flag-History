@@ -530,6 +530,8 @@
     mongolia: '<rect width="90" height="200" fill="#da2032"/><rect x="90" width="120" height="200" fill="#0066b3"/><rect x="210" width="90" height="200" fill="#da2032"/><g fill="#f9d616"><rect x="30" y="20" width="30" height="90"/><circle cx="45" cy="130" r="14"/><circle cx="45" cy="160" r="10"/></g>',
     northkorea: '<rect width="300" height="30" fill="#0047a0"/><rect y="30" width="300" height="10" fill="#f4efe1"/><rect y="40" width="300" height="120" fill="#cd2e3a"/><rect y="160" width="300" height="10" fill="#f4efe1"/><rect y="170" width="300" height="30" fill="#0047a0"/><circle cx="90" cy="100" r="34" fill="#f4efe1"/><path d="M90,72 l8,22 24,1 -19,16 7,23 -20,-14 -20,14 7,-23 -19,-16 24,-1 Z" fill="#cd2e3a"/>',
     southkorea: '<rect width="300" height="200" fill="#f4efe1"/><circle cx="150" cy="100" r="42" fill="#cd2e3a"/><path d="M150,58 A21,21 0 0 1 150,100 A21,21 0 0 0 150,142 A42,42 0 0 0 150,58 Z" fill="#0047a0"/><g stroke="#241f14" stroke-width="6"><line x1="55" y1="45" x2="95" y2="45"/><line x1="55" y1="58" x2="95" y2="58"/><line x1="55" y1="71" x2="95" y2="71"/></g><g stroke="#241f14" stroke-width="6"><line x1="205" y1="129" x2="223" y2="129"/><line x1="227" y1="129" x2="245" y2="129"/><line x1="205" y1="142" x2="223" y2="142"/><line x1="227" y1="142" x2="245" y2="142"/><line x1="205" y1="155" x2="245" y2="155"/></g>',
+    singapore: '<rect width="300" height="100" fill="#ee2536"/><rect y="100" width="300" height="100" fill="#f4efe1"/><path d="M60,60 a30,30 0 1 0 4,0 a24,24 0 1 1 -4,0 Z" fill="#f4efe1"/>',
+    cambodia: '<rect width="300" height="50" fill="#032ea1"/><rect y="50" width="300" height="100" fill="#e00025"/><rect y="150" width="300" height="50" fill="#032ea1"/><g fill="#f4efe1"><rect x="115" y="70" width="10" height="60"/><rect x="145" y="60" width="10" height="70"/><rect x="175" y="70" width="10" height="60"/><path d="M110,70 h80 l-10,-14 h-60 Z"/></g>',
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -1267,6 +1269,10 @@
     { name:"South Korea", flag:"southkorea", ownPage:true, url:"south-korea-flags.html", hub:"East Asia", region:"East Asia", color:"#003478",
       crowns:["Three Kingdoms of Korea","Unified Silla","Goryeo dynasty","Joseon dynasty","Korean Empire","Japanese colonial rule","US military government","Republic of Korea"],
       alts:["ROK"] },
+    { name:"Singapore", flag:"singapore", ownPage:true, url:"singapore-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#ee2536",
+      crowns:["British trading post / Straits Settlements","Japanese occupation","British Crown Colony","State within Malaysia","Republic of Singapore"] },
+    { name:"Cambodia", flag:"cambodia", ownPage:true, url:"cambodia-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#032ea1",
+      crowns:["Khmer Empire (Angkor) and decline","French Protectorate of Cambodia","Kingdom of Cambodia (independence)","Khmer Republic","Democratic Kampuchea (Khmer Rouge)","People's Republic of Kampuchea","Kingdom of Cambodia (restored)"] },
   ];
 
   var grid = document.getElementById("countryGrid");
