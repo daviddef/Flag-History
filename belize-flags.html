@@ -1,0 +1,348 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Belize</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag associated with Belize, from undocumented Maya polities through British logwood-cutter settlement, the colony of British Honduras, and on to the modern independent flag.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="central-america-hub.html">Central America hub</a></p>
+  <p class="kicker">Family research &middot; Phase 9 of the world atlas</p>
+  <h1>Flags of Belize</h1>
+  <p class="lede">Belize's story runs on an entirely different track from its Spanish-speaking neighbors: Maya polities that Spain never fully subdued, English and Scottish logwood-cutters and buccaneers who settled the coast from the 17th century on, more than two hundred years of disputed sovereignty with Spain and then independent Guatemala, a formal British colony from 1862, and independence only in 1981 &mdash; the last of the Central American states to leave European rule, by exactly a century and a half.</p>
+  <p class="lede">Guatemala has long claimed historical rights to Belizean territory, tracing the dispute back to 18th-century treaties with Spain and 19th-century boundary agreements with Britain; the claim remains unresolved as of this writing, and the two countries have referred the underlying territorial, insular, and maritime dispute to the International Court of Justice, with proceedings ongoing.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Belize, from the pre-conquest era to the present, five political entities. Unlike Guatemala and Honduras, Belize was never part of the Spanish Captaincy General or the Central American federation &mdash; it follows a separate British colonial lineage, which is why its flag colors and history share nothing with its neighbors' blue-white-blue tradition. No map accompanies this page. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#003f87"/>
+              <rect width="300" height="40" fill="#ce1126"/>
+              <rect y="160" width="300" height="40" fill="#ce1126"/>
+              <rect width="300" height="40" fill="none" stroke="#f4efe1" stroke-width="4"/>
+              <rect y="156" width="300" height="44" fill="none" stroke="#f4efe1" stroke-width="4"/>
+              <circle cx="150" cy="100" r="44" fill="#f4efe1"/>
+              <circle cx="150" cy="100" r="34" fill="none" stroke="#a9762f" stroke-width="3"/>
+              <rect x="140" y="80" width="20" height="40" fill="#204b5c"/>
+            </svg>
+            <div class="flag-caption">blue field, red stripes top and bottom, white disc with coat of arms</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1981 &ndash; present</div>
+            <h3 class="card-title">Belize, independent</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Sovereign state</span></div>
+            <p><span class="label">Who &amp; why:</span> Belize becomes fully independent of the United Kingdom on 21 September 1981, the last Central American nation to leave European rule &mdash; its independence delayed for decades in large part by Guatemala's territorial claim and Britain's need to guarantee Belizean security against it. The official flag is adopted the same day, adding two red stripes to the existing blue-and-white design as a bipartisan gesture (the ruling PUP's blue and white paired with the opposition UDP's red).</p>
+            <p><span class="label">What it represents:</span> a blue field bordered top and bottom by red stripes, with a white disc at center holding Belize's coat of arms &mdash; mahogany tree, tools of the logging trade, and the motto "Sub Umbra Floreo" ("Under the Shade I Flourish"), simplified here as a laurel ring and shield.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, narrow red stripes at top and bottom edges, white-ringed white disc at center bearing the national coat of arms (simplified here).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#003f87"></span><span class="meta"><span class="name">Belize blue</span><span class="hex">#003F87</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ce1126"></span><span class="meta"><span class="name">Red</span><span class="hex">#CE1126</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#003f87"/>
+              <circle cx="150" cy="100" r="52" fill="#f4efe1"/>
+              <circle cx="150" cy="100" r="42" fill="none" stroke="#a9762f" stroke-width="3"/>
+              <rect x="140" y="80" width="20" height="40" fill="#204b5c"/>
+            </svg>
+            <div class="flag-caption">the PUP's blue-and-white flag, flown as an unofficial national symbol</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1950 &ndash; 1981</div>
+            <h3 class="card-title">British Honduras, then Belize (self-government era)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Colony, self-governing</span></div>
+            <p><span class="label">Who &amp; why:</span> the People's United Party, founded in 1950 to campaign for self-rule, adopts a blue flag with the colony's coat of arms in a white disc as its party banner; it is flown so widely that it becomes the de facto national flag long before independence, even though the territory's official flag under British administration remains the Blue Ensign. Britain grants internal self-government in 1964, and the colony is formally renamed Belize on 1 June 1973, still years before full independence.</p>
+            <p><span class="label">What it represents:</span> blue for the PUP, white for the coat of arms disc at center &mdash; the same colors and arrangement that carry directly into the 1981 independence flag, with red stripes the only addition still to come.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for the unofficial party flag; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, white disc at center bearing the colonial coat of arms (simplified here).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#003f87"></span><span class="meta"><span class="name">Belize blue</span><span class="hex">#003F87</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#204b5c"/>
+              <rect width="140" height="100" fill="#163846"/>
+              <rect width="140" height="100" fill="none" stroke="#f4efe1" stroke-width="2"/>
+              <line x1="0" y1="0" x2="140" y2="100" stroke="#f4efe1" stroke-width="8"/>
+              <line x1="140" y1="0" x2="0" y2="100" stroke="#f4efe1" stroke-width="8"/>
+              <line x1="70" y1="0" x2="70" y2="100" stroke="#a4302a" stroke-width="10"/>
+              <line x1="0" y1="50" x2="140" y2="50" stroke="#a4302a" stroke-width="10"/>
+              <circle cx="215" cy="140" r="26" fill="#c9a13c" stroke="#f4efe1" stroke-width="3"/>
+            </svg>
+            <div class="flag-caption">the Blue Ensign with the Union Jack canton and colonial badge</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1862 &ndash; 1950</div>
+            <h3 class="card-title">Colony of British Honduras</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#7c2e1f"></span>Colony</span></div>
+            <p><span class="label">Who &amp; why:</span> Britain formally establishes the Crown Colony of British Honduras in 1862, converting more than two centuries of informal, contested logwood- and mahogany-cutting settlement into a proper colonial administration. Guatemala, independent since 1821, disputes British sovereignty over the territory throughout this period, tracing its claim to Spanish-era treaties; an 1859 Anglo-Guatemalan boundary treaty is later disowned by Guatemala as void, and the dispute is never resolved during the colonial era.</p>
+            <p><span class="label">What it represents:</span> the standard colonial Blue Ensign &mdash; a Union Jack canton on a blue field, with the colony's own badge (the mahogany-cutting scene later used in the coat of arms) in the fly.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2, standard British colonial ensign ratio.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, Union Jack in the canton, colonial badge disc in the fly (simplified here as a plain gold circle).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#204b5c"></span><span class="meta"><span class="name">Ensign blue</span><span class="hex">#204B5C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Union Jack red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">Union Jack white</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#7c2e1f"/>
+              <line x1="0" y1="0" x2="300" y2="200" stroke="#f4efe1" stroke-width="14"/>
+              <line x1="300" y1="0" x2="0" y2="200" stroke="#f4efe1" stroke-width="14"/>
+              <line x1="150" y1="0" x2="150" y2="200" stroke="#a4302a" stroke-width="18"/>
+              <line x1="0" y1="100" x2="300" y2="100" stroke="#a4302a" stroke-width="18"/>
+            </svg>
+            <div class="flag-caption">the British ensign, flown informally by settlers and privateers</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 1638 &ndash; 1862</div>
+            <h3 class="card-title">English/British settlement, disputed sovereignty</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#7c2e1f"></span>Colony</span></div>
+            <p><span class="label">Who &amp; why:</span> English and Scottish shipwrecked sailors, buccaneers, and logwood-cutters ("Baymen") begin settling the coast around the Belize River from about 1638, cutting logwood (and later mahogany) for the European dye and furniture trades, entirely outside any formal Spanish or English administration. Spain repeatedly attacks and expels the settlers without ever managing to hold the territory permanently; Britain never claims formal sovereignty during this period, but the settlers organize their own local government (Public Meeting) and successfully defend the settlement against a final major Spanish attack at the Battle of St. George's Caye in 1798.</p>
+            <p><span class="label">What it represents:</span> no distinct local flag exists yet; settlers and their ships fly the British ensign of the day, asserting an English identity without any accompanying claim of British sovereignty, which Spain (and, after 1821, Guatemala) contests throughout.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No local flag existed; shown at 3:2 as a simplified British ensign of the period.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field with a white-and-red cross-and-saltire pattern, simplified here (the actual Union Flag design evolved through this period, gaining the Irish saltire only in 1801).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#7c2e1f"></span><span class="meta"><span class="name">Field red</span><span class="hex">#7C2E1F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Cross red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#3f4a2e"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder field &mdash; Maya era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">to c. 1638</div>
+            <h3 class="card-title">Maya polities, never fully subdued by Spain</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>No flag documented</span></div>
+            <p><span class="label">Who &amp; why:</span> the territory of present-day Belize is home to Maya settlement for millennia, including major Classic-era sites such as Caracol and Lamanai, the latter still occupied and resisting Spanish missionary control well into the 17th century. Unlike Guatemala and Honduras, this area is never effectively conquered or administered by Spain; its rugged coastline, barrier reef, and determined Maya and later Baymen resistance keep it outside firm colonial control until the English settlement that follows.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag or banner survives for any Maya polity in this territory. Shown here honestly blank rather than invented, consistent with the same treatment given to this region's other pre-conquest chapters across this atlas.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>No flag documented</b> &mdash; no securely attested banner survives</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#7c2e1f"></span><b>Colony</b> &mdash; governed or settled as British territory, sovereignty contested</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Colony, self-governing</b> &mdash; internal self-rule under continuing British sovereignty</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Sovereign state</b> &mdash; fully independent</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="central-america-hub.html"><b>Central America hub</b><span>Five countries, one shared isthmus</span></a>
+      <a class="link-card" href="guatemala-flags.html"><b>Flags of Guatemala</b><span>The neighbor with the territorial claim</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications.
+  </footer>
+
+</div>
+
+</body></html>
