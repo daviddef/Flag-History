@@ -79,8 +79,53 @@
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
     padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
     display: inline-flex; align-items: center; gap: 5px;
+    position: relative; cursor: help;
   }
   .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .tag:hover, .tag:focus-visible { border-color: var(--brick); color: var(--ink); }
+  .tag:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  /* Custom hover/tap tooltip for tags */
+  .tag::after {
+    content: attr(data-tip);
+    position: absolute; left: 50%; bottom: calc(100% + 9px); transform: translateX(-50%) translateY(4px);
+    width: max-content; max-width: 260px; text-align: left;
+    font-family: "Source Sans 3", system-ui, sans-serif; font-size: 12.5px; font-weight: 400; line-height: 1.45;
+    text-transform: none; letter-spacing: normal; color: var(--ink);
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 4px;
+    padding: 9px 11px; box-shadow: 0 4px 14px rgba(0,0,0,.14);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity .14s ease, transform .14s ease;
+    z-index: 20;
+  }
+  .tag::before {
+    content: ""; position: absolute; left: 50%; bottom: calc(100% + 4px); transform: translateX(-50%);
+    border: 6px solid transparent; border-top-color: var(--card-border);
+    opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .14s ease; z-index: 21;
+  }
+  .tag:hover::after, .tag:hover::before,
+  .tag:focus-visible::after, .tag:focus-visible::before,
+  .tag.tip-open::after, .tag.tip-open::before {
+    opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+  }
+  /* Flip tooltip below tags near the top of the viewport so it isn't clipped */
+  .entry:first-child .tag::after,
+  .entry:nth-child(2) .tag::after {
+    bottom: auto; top: calc(100% + 9px);
+  }
+  .entry:first-child .tag::before,
+  .entry:nth-child(2) .tag::before {
+    bottom: auto; top: calc(100% + 4px);
+    border-top-color: transparent; border-bottom-color: var(--card-border);
+  }
+  /* Keep tooltips from overflowing the left/right edges on narrow screens */
+  .tag:first-of-type::after { left: 0; transform: translateX(0) translateY(4px); }
+  .tag:first-of-type:hover::after, .tag:first-of-type:focus-visible::after, .tag:first-of-type.tip-open::after { transform: translateX(0) translateY(0); }
+  .tag:first-of-type::before { left: 14px; transform: none; }
+  .tag:last-of-type::after { left: auto; right: 0; transform: translateY(4px); }
+  .tag:last-of-type:hover::after, .tag:last-of-type:focus-visible::after, .tag:last-of-type.tip-open::after { transform: translateY(0); }
+  .tag:last-of-type::before { left: auto; right: 14px; transform: none; }
+  @media (max-width: 480px) { .tag::after { max-width: 78vw; } }
   .card-body p { margin: 0 0 10px; font-size: .96rem; }
   .card-body p:last-child { margin-bottom: 0; }
   .card-body .label { color: var(--brick); font-weight: 600; }
@@ -345,4 +390,17 @@
 
 </div>
 
+<script>
+  document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
+    tag.addEventListener("click", function (e) {
+      var wasOpen = tag.classList.contains("tip-open");
+      document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
+      if (!wasOpen) tag.classList.add("tip-open");
+      e.stopPropagation();
+    });
+  });
+  document.addEventListener("click", function () {
+    document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
+  });
+</script>
 </body></html>
