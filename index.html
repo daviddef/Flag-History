@@ -522,6 +522,8 @@
     philippines: '<polygon points="0,0 0,200 130,100" fill="#f4efe1"/><rect x="130" width="170" height="100" fill="#0038a8"/><rect x="130" y="100" width="170" height="100" fill="#ce1126"/><circle cx="65" cy="100" r="26" fill="#fcd116"/>',
     vietnam: '<rect width="300" height="200" fill="#da251d"/><path d="M150,58 l14,42 44,0 -36,26 14,42 -36,-26 -36,26 14,-42 -36,-26 44,0 Z" fill="#ffcd00"/>',
     thailand: '<rect width="300" height="33.3" fill="#a51931"/><rect y="33.3" width="300" height="26.7" fill="#f4efe1"/><rect y="60" width="300" height="80" fill="#241f5c"/><rect y="140" width="300" height="26.7" fill="#f4efe1"/><rect y="166.7" width="300" height="33.3" fill="#a51931"/>',
+    myanmar: '<rect width="300" height="66.7" fill="#fecb00"/><rect y="66.7" width="300" height="66.6" fill="#34b233"/><rect y="133.3" width="300" height="66.7" fill="#ea2839"/><path d="M150,80 l10,22 24,3 -17,17 4,24 -21,-11 -21,11 4,-24 -17,-17 24,-3 Z" fill="#f4efe1"/>',
+    malaysia: '<rect width="300" height="200" fill="#cc0001"/><rect y="14.3" width="300" height="14.3" fill="#f4efe1"/><rect y="42.9" width="300" height="14.3" fill="#f4efe1"/><rect y="71.4" width="300" height="14.3" fill="#f4efe1"/><rect y="100" width="300" height="14.3" fill="#f4efe1"/><rect y="128.6" width="300" height="14.3" fill="#f4efe1"/><rect y="157.1" width="300" height="14.3" fill="#f4efe1"/><rect y="185.7" width="300" height="14.3" fill="#f4efe1"/><rect width="130" height="107" fill="#010066"/><path d="M65,54 l8,18 20,2 -15,12 5,19 -18,-10 -18,10 5,-19 -15,-12 20,-2 Z" fill="#fecb00"/>',
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -1239,6 +1241,10 @@
       crowns:["Chinese imperial rule","Independent Vietnamese dynasties","Nguyễn dynasty (empire)","French Indochina","Democratic Republic of Vietnam / French-aligned state","North / South Vietnam","Socialist Republic of Vietnam"] },
     { name:"Thailand", flag:"thailand", ownPage:true, url:"thailand-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#a51931",
       crowns:["Sukhothai and Ayutthaya kingdoms","Kingdom of Siam (Chakri, absolute)","Kingdom of Siam (late absolute)","Kingdom of Thailand (constitutional)"] },
+    { name:"Myanmar", flag:"myanmar", ownPage:true, url:"myanmar-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#fecb00",
+      crowns:["Bagan, Toungoo & Konbaung dynasties","British Burma","Japanese occupation","Union of Burma","Military rule (1974–2010)","Democratic transition","Military rule (2021 coup)"] },
+    { name:"Malaysia", flag:"malaysia", ownPage:true, url:"malaysia-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#010066",
+      crowns:["Malacca Sultanate","British Malaya (colonial)","Japanese occupation","British Malaya (post-war)","Federation of Malaya","Malaysia"] },
   ];
 
   var grid = document.getElementById("countryGrid");
