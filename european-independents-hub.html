@@ -1,0 +1,125 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Europe's Independents</title>
+<meta name="description" content="A hub for the family flag atlas: Switzerland, Cyprus, and Malta &mdash; three European states that don't share a clean regional identity, from medieval confederacies and crusader kingdoms to modern independence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: none; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 21 of the world atlas</p>
+  <h1>Flags of Europe's Independents</h1>
+  <p class="lede">Switzerland, Cyprus, and Malta don't share a clean regional identity &mdash; one is a landlocked Alpine confederation at the heart of Central Europe, the other two are Mediterranean islands hundreds of miles apart. What groups them here is simpler: each built a distinctive, self-contained national story that doesn't fit neatly into any of this atlas's other regional hubs, and each has gone unrepresented in the atlas so far except as faint background territory on other hubs' maps.</p>
+  <p class="lede">Switzerland's path runs from a 1291 defensive pact among three forest cantons to a permanently neutral federal state guaranteed by the Great Powers of Europe. Cyprus and Malta share a different pattern: both are small Mediterranean islands whose strategic position made them prizes fought over and passed between an unusually long chain of outside powers &mdash; Phoenician, Roman, Byzantine, Arab, Norman, crusader, and Ottoman or British rule in various sequence &mdash; before each reached independence in the twentieth century.</p>
+
+  <div class="countries">
+    <h2>The 3 countries</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ff0000"></span>
+        <span class="era">publishing next</span>
+        <b>Switzerland</b>
+        <span>The 1291 R&uuml;tli Oath among three forest cantons, gradual medieval expansion of the Old Swiss Confederacy, full independence recognized at the 1648 Peace of Westphalia, the Napoleonic Helvetic Republic, and permanent neutrality guaranteed at the 1815 Congress of Vienna.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#d57800"></span>
+        <span class="era">publishing next</span>
+        <b>Cyprus</b>
+        <span>Byzantine rule, the Frankish Lusignan kingdom (1192&ndash;1489), Venetian control, Ottoman conquest in 1571, British rule from 1878, independence in 1960, and the island's ongoing de facto division following the events of 1974.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#cf142b"></span>
+        <span class="era">publishing next</span>
+        <b>Malta</b>
+        <span>Phoenician, Roman, and Arab rule from 870, the Norman conquest of 1091, the Knights Hospitaller's sovereign rule from 1530 until Napoleon's 1798 capture, British rule from 1800, a WWII siege that earned the island the George Cross, and independence in 1964.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this hub</h2>
+    <p>Switzerland's origins sit as much in myth as in record. The 1291 Federal Charter among the cantons of Uri, Schwyz, and Unterwalden &mdash; traditionally tied to the legendary R&uuml;tli Oath and the tale of William Tell &mdash; is the founding document of the Old Swiss Confederacy, a loose defensive league that expanded over the following centuries as more cantons joined or were conquered. The Confederacy's independence from the Holy Roman Empire was formalized only in 1648, at the Peace of Westphalia, after Swiss forces had already secured de facto autonomy through military victories over Habsburg and Burgundian armies. Napoleon's invasion imposed the centralized Helvetic Republic from 1798 to 1803, an unpopular interruption of the old confederal structure; after Napoleon's fall, the 1815 Congress of Vienna restored Switzerland's cantonal borders and, crucially, guaranteed its permanent neutrality &mdash; a status the country has maintained through both World Wars. The modern federal state dates to the 1848 constitution, drafted after a brief civil war (the Sonderbund War), which created a unified nation while preserving an unusual degree of direct democracy and cantonal autonomy. Switzerland has no single ethnic or linguistic identity: it recognizes four national languages (German, French, Italian, and Romansh) and is held together by shared institutions and history rather than a common ethnicity.</p>
+    <p>Cyprus has passed through one of the longest chains of outside rule of any Mediterranean island. After antiquity and a long Byzantine period, the Frankish Lusignan dynasty ruled Cyprus as a crusader-era kingdom from 1192 to 1489, followed by nearly a century of Venetian control. The Ottoman Empire conquered the island in 1571 and held it for three centuries, until Britain assumed administration in 1878 and formally annexed it in 1914. Cyprus became independent in 1960, with a constitution designed to balance its Greek Cypriot majority and Turkish Cypriot minority. That balance broke down, and in 1974 a coup aiming at union with Greece was followed by a Turkish military intervention; the island has remained de facto divided since, with a Greek Cypriot-administered south recognized internationally as the Republic of Cyprus and a Turkish Cypriot-administered north that declared itself the Turkish Republic of Northern Cyprus in 1983, recognized only by Turkey. This dispute remains unresolved and is treated here only as a documented historical and political fact, without taking a position on its outcome.</p>
+    <p>Malta's small size belied its outsized strategic value at the center of the Mediterranean. Phoenician and later Carthaginian and Roman rule gave way to Byzantine control, then Arab rule beginning in 870, which left a lasting linguistic imprint still audible in Maltese today. The Normans conquered the island in 1091, after which it passed through a succession of crowns, including Aragon and Habsburg Spain. In 1530, Emperor Charles V granted Malta to the Knights Hospitaller (the Knights of Malta), a crusading military order driven from Rhodes by the Ottomans; the Knights ruled the island as a sovereign state, famously withstanding the Great Siege of 1565, until Napoleon seized it in 1798. Britain took control in 1800, formalized in 1814, and Malta became a critical naval base &mdash; a role that made it a relentless target during World War II, when the entire population was collectively awarded the George Cross for its endurance under siege. Malta gained independence in 1964 and became a republic in 1974.</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This hub is one region in a larger set. See the other phases here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="microstates-hub.html"><b>Europe's Microstates hub</b><span>Vatican City, San Marino, Monaco, Liechtenstein, Andorra</span></a>
+      <a class="link-card" href="levant-hub.html"><b>Levant hub</b><span>Four countries, another contested-borders region</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica.
+  </footer>
+
+</div>
+
+</body></html>
