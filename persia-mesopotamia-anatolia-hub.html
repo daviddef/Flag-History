@@ -1,0 +1,126 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Persia, Mesopotamia &amp; Anatolia</title>
+<meta name="description" content="A hub for the family flag atlas: Iran, Iraq, and Turkey, from the Achaemenid, Mesopotamian, and Byzantine worlds through Islamic empires to their modern republics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: none; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 21 of the world atlas</p>
+  <h1>Persia, Mesopotamia &amp; Anatolia</h1>
+  <p class="lede">Three countries, three of the oldest continuous seats of civilization on Earth. Iran carries an unbroken imperial memory stretching back to Cyrus the Great's Achaemenid Empire in the 6th century BCE, through the Parthian and Sasanian empires that stood for centuries as Rome's great eastern rival. Iraq occupies Mesopotamia itself &mdash; the land between the Tigris and Euphrates where Sumer, Babylon, and Assyria built some of the first cities, writing systems, and law codes in human history. Turkey's Anatolian peninsula held Constantinople, capital of the eastern Roman (Byzantine) Empire for over a thousand years, before it fell to the Ottomans in 1453 and became the seat of an empire that would span three continents.</p>
+  <p class="lede">The 7th-century Arab-Islamic conquests reshaped both Iran and Iraq, and Baghdad, founded by the Abbasid Caliphate in 762, became the center of a genuine golden age of science, mathematics, and philosophy until the Mongols sacked it in 1258. Iran diverged sharply from its Sunni-majority neighbors in the 16th century, when the Safavid dynasty made Twelver Shi'ism the state religion &mdash; a defining feature of Iranian identity ever since. All three lands eventually fell under Ottoman rule or influence, and all three built their modern states in the 20th century: Turkey as Atat&uuml;rk's secular republic in 1923, Iraq carved from three Ottoman provinces under British mandate after World War I, and Iran under the Pahlavi dynasty until the 1979 Islamic Revolution.</p>
+
+  <div class="countries">
+    <h2>The 3 countries</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#239f40"></span>
+        <span class="era">publishing next</span>
+        <b>Iran</b>
+        <span>Cyrus the Great's Achaemenid Empire, Parthian and Sasanian successors, the 7th-century Arab-Islamic conquest, and the pivotal 1501 Safavid dynasty that made Twelver Shi'ism the state religion &mdash; through Qajar, Pahlavi, and the 1979 Islamic Revolution.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ce1126"></span>
+        <span class="era">publishing next</span>
+        <b>Iraq</b>
+        <span>Sumer, Babylon, and Assyria in the land between two rivers; Abbasid Baghdad's golden age until the Mongols sacked it in 1258; Ottoman rule, British mandate, monarchy, and the republic that followed the 1958 coup.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#e30a17"></span>
+        <span class="era">publishing next</span>
+        <b>Turkey</b>
+        <span>Byzantine Constantinople, eastern Rome's capital for over a thousand years, fell to the Ottomans in 1453; a multi-continental empire's long 19th&ndash;20th century decline ended with Atat&uuml;rk's secular republic in 1923.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this hub</h2>
+    <p><b>Iran.</b> Cyrus the Great founded the Achaemenid Empire in the 6th century BCE, the first Persian empire and, at its height, the largest the ancient world had seen, running from the Balkans to the Indus Valley. It was followed by the Parthian Empire and then the Sasanian Empire, which for four centuries stood as Rome's and later Byzantium's great rival power to the east. The Arab-Islamic conquest of the 7th century brought Islam to the Iranian plateau, but Persian language, literature, and administrative tradition survived and shaped the wider Islamic world. The turning point for modern Iranian identity came in 1501, when the Safavid dynasty imposed Twelver Shi'ism as the state religion, setting Iran apart religiously from its Sunni-majority Ottoman and Arab neighbors ever since. The Qajar dynasty ruled from 1789 to 1925, followed by the Pahlavi dynasty from 1925 to 1979. The 1979 Islamic Revolution overthrew the monarchy and established the modern Islamic Republic of Iran, the political system that governs the country today.</p>
+    <p><b>Iraq.</b> Iraq is Mesopotamia, the "land between the rivers," and one of the true cradles of civilization. Sumerian city-states developed the world's earliest writing system in the fourth millennium BCE; Babylon rose to prominence under rulers like Hammurabi, whose law code is among the oldest surviving legal texts; and the Assyrian Empire built one of the ancient world's most formidable military states centered on Nineveh. The Arab-Islamic conquest of the 7th century brought Iraq into the Islamic world, and in 762 the Abbasid Caliphate founded Baghdad, which grew into the intellectual capital of a genuine golden age &mdash; a center of science, mathematics, medicine, and philosophy that lasted until the Mongols sacked the city in 1258, a catastrophic rupture in the region's history. Ottoman rule followed from the 16th century. After World War I, the British Mandate (1920&ndash;1932) assembled the modern state of Iraq from three former Ottoman provinces. A monarchy governed from 1932 until the 1958 coup established a republic. The following decades, including the Ba'athist period from 1968, the rule of Saddam Hussein, the Iran-Iraq War (1980&ndash;1988), the Gulf War (1990&ndash;1991), and the 2003 invasion and its aftermath, are extensively documented and among the most consequential events in the country's modern history.</p>
+    <p><b>Turkey.</b> For over a thousand years, Constantinople was the capital of the Byzantine Empire, the Greek-speaking continuation of the eastern Roman Empire and a center of Christian civilization, learning, and trade. That era ended in 1453, when Ottoman forces under Mehmed II conquered the city, extinguishing Byzantium and making Constantinople the seat of a new imperial power. At its height in the 16th and 17th centuries, the Ottoman Empire spanned three continents, reaching from the gates of Vienna to North Africa and the Persian Gulf. A long decline followed across the 19th and early 20th centuries, earning the empire the label "the sick man of Europe," and it collapsed entirely after defeat in World War I. From that collapse, Mustafa Kemal Atat&uuml;rk founded the Republic of Turkey in 1923 and pushed through sweeping modernizing reforms &mdash; a new Latin alphabet, the separation of religion from the state, and women's suffrage &mdash; that reshaped Turkish society within a generation.</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This hub is one region in a larger set. See the other phases here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="caucasus-hub.html"><b>Caucasus hub</b><span>Georgia, Armenia, Azerbaijan</span></a>
+      <a class="link-card" href="levant-hub.html"><b>Levant hub</b><span>Syria, Lebanon, Jordan, Israel</span></a>
+      <a class="link-card" href="arabian-peninsula-hub.html"><b>Arabian Peninsula hub</b><span>Saudi Arabia and the Gulf states</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica.
+  </footer>
+
+</div>
+
+</body></html>
