@@ -1,0 +1,454 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Malta</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag associated with Malta, from Phoenician antiquity through the sovereign Knights Hospitaller, French and British rule, a WWII George Cross, and independence in 1964.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="european-independents-hub.html">Europe's Independents hub</a></p>
+  <p class="kicker">Family research &middot; Phase 26 of the world atlas</p>
+  <h1>Flags of Malta</h1>
+  <p class="lede">A small archipelago at the center of the Mediterranean, Malta's strategic value made it worth holding for a remarkable chain of outside powers over roughly 2,500 years &mdash; Phoenician, Carthaginian, Roman, Byzantine, Arab, Norman, and Spanish rule, before the sovereign crusading Knights Hospitaller made it their own state for nearly three centuries, famously surviving the Great Siege of 1565. A brief French seizure by Napoleon, then a century and a half of British rule &mdash; a rule so tested by relentless WWII bombardment that the entire population was collectively awarded Britain's highest civilian honor &mdash; carries Malta to independence in 1964 and a republic a decade later.</p>
+  <p class="lede">Malta's modern flag traces a direct, documented line from that 1942 George Cross: the medal itself, awarded for the population's wartime endurance, was incorporated into the island's colonial badge the following year and then carried, unchanged, into the white-and-red national flag adopted at independence &mdash; one of the few national flags anywhere that commemorates a specific act of collective wartime civilian courage rather than a dynasty, a battle victory, or a revolution.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the Maltese archipelago, c. 700 BCE&ndash;present, eight political phases. Malta's ancient and early medieval history &mdash; Phoenician, Carthaginian, and Roman antiquity, Byzantine control, Arab rule from 870, the 1091 Norman conquest, and subsequent passage through Aragonese and Habsburg Spanish crowns &mdash; is bridged into a single pre-1530 entry rather than subdivided, since no securely attributable flag survives from any of those phases and most left no independent Maltese state to speak of. Malta has no internal governing split at any point covered here, so this page carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="8">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="150" height="200" fill="#f4efe1"/>
+              <rect x="150" width="150" height="200" fill="#a4302a"/>
+              <rect x="10" y="10" width="46" height="46" fill="#f4efe1" stroke="#a4302a" stroke-width="5"/>
+            </svg>
+            <div class="flag-caption">white/red bicolor with the George Cross in the canton &mdash; unchanged since 1964</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1974 &ndash; present</div>
+            <h3 class="card-title">Republic of Malta</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> Malta becomes a republic on 13 December 1974, replacing the British monarch as head of state with a Maltese president while remaining a Commonwealth member. Malta joins the European Union in 2004 and adopts the euro in 2008, having built a services- and tourism-based economy on its small size and central Mediterranean position.</p>
+            <p><span class="label">What it represents:</span> the national flag is carried over unchanged from independence &mdash; white and red vertical bands with the George Cross, red-edged, in the upper hoist canton &mdash; the transition to a republic changed the constitution, not the flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Vertical bicolor, white (hoist) and red (fly); George Cross, red-edged, in the upper hoist canton.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="150" height="200" fill="#f4efe1"/>
+              <rect x="150" width="150" height="200" fill="#a4302a"/>
+              <rect x="10" y="10" width="46" height="46" fill="#f4efe1" stroke="#a4302a" stroke-width="5"/>
+            </svg>
+            <div class="flag-caption">the newly independent state's flag, identical in design to today's</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1964 &ndash; 1974</div>
+            <h3 class="card-title">State of Malta (independence)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b4f9c"></span>Commonwealth realm</span></div>
+            <p><span class="label">Who &amp; why:</span> Malta becomes independent from Britain on 21 September 1964, initially as a constitutional monarchy with Queen Elizabeth II as head of state, represented locally by a Governor-General &mdash; the same arrangement Canada and Australia used. This lasts a decade before Malta becomes a republic in 1974.</p>
+            <p><span class="label">What it represents:</span> the new national flag adopted at independence &mdash; white and red vertical bands, inherited from the colonial badge's own coloring, with the George Cross moved into the canton as the flag's central distinguishing feature, honoring the 1942 award directly on the new state's own symbol.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Vertical bicolor, white (hoist) and red (fly); George Cross, red-edged, in the upper hoist canton.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#00247d"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/>
+              <rect x="125" width="50" height="200" fill="#f4efe1"/>
+              <rect y="75" width="300" height="50" fill="#f4efe1"/>
+              <rect x="137" width="26" height="200" fill="#cf142b"/>
+              <rect y="87" width="300" height="26" fill="#cf142b"/>
+              <rect x="205" y="115" width="34" height="34" fill="#204b5c"/>
+              <rect x="218" y="120" width="8" height="24" fill="#f4efe1"/>
+              <rect x="210" y="128" width="24" height="8" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">Blue Ensign with the 1943 Malta badge &mdash; a blue shield bearing the George Cross</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1943 &ndash; 1964</div>
+            <h3 class="card-title">Crown Colony of Malta (post-George Cross)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Colonial rule</span></div>
+            <p><span class="label">Who &amp; why:</span> Malta endures one of the most intense sustained bombing campaigns of World War II, as Axis forces try to knock out the island's naval and air bases guarding Mediterranean supply routes. In recognition, King George VI awards the George Cross to the island and its people collectively on 15 April 1942, an honor normally given to individuals; the colonial badge is redesigned the following year to carry the cross itself, and Malta remains a Crown Colony under this updated symbol until independence.</p>
+            <p><span class="label">What it represents:</span> the standard colonial Blue Ensign carries an updated badge &mdash; a blue shield bearing the silver George Cross &mdash; replacing the earlier Malta badge and directly foreshadowing the George Cross's later, more prominent place on the independence flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, Union Flag canton, blue shield bearing the George Cross (simplified here) in the fly.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Ensign blue</span><span class="hex">#00247D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">Cross, white/silver</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#00247d"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/>
+              <rect x="125" width="50" height="200" fill="#f4efe1"/>
+              <rect y="75" width="300" height="50" fill="#f4efe1"/>
+              <rect x="137" width="26" height="200" fill="#cf142b"/>
+              <rect y="87" width="300" height="26" fill="#cf142b"/>
+              <circle cx="222" cy="132" r="26" fill="#f4efe1" stroke="#204b5c" stroke-width="2"/>
+            </svg>
+            <div class="flag-caption">Blue Ensign with the pre-war Malta colonial badge</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1814 &ndash; 1943</div>
+            <h3 class="card-title">Crown Colony of Malta</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Colonial rule</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1814 Treaty of Paris formally cedes Malta to Britain as a Crown Colony, ending the ambiguous protectorate status that had followed the 1800 uprising. Malta becomes one of Britain's most important Mediterranean naval bases, home to the Royal Navy's Mediterranean Fleet for well over a century, a role that shapes the island's economy and strategic importance right through to World War II.</p>
+            <p><span class="label">What it represents:</span> the standard British colonial Blue Ensign with the Union Flag in the canton and Malta's own colonial badge (a plain white disc bearing the island's arms) in the fly &mdash; the ordinary pattern used across most British Crown Colonies before the 1943 George Cross redesign.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, Union Flag canton, colonial badge (white disc, simplified here) in the fly.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Ensign blue</span><span class="hex">#00247D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">Badge white</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#00247d"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/>
+              <rect x="125" width="50" height="200" fill="#f4efe1"/>
+              <rect y="75" width="300" height="50" fill="#f4efe1"/>
+              <rect x="137" width="26" height="200" fill="#cf142b"/>
+              <rect y="87" width="300" height="26" fill="#cf142b"/>
+            </svg>
+            <div class="flag-caption">the Union Flag, flown while Malta's status remained a protectorate</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1800 &ndash; 1814</div>
+            <h3 class="card-title">British protection</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#5b7a8c"></span>Protectorate</span></div>
+            <p><span class="label">Who &amp; why:</span> Maltese militia, aided by a British naval blockade, force the surrender of the French garrison in September 1800 after a two-year Maltese uprising against French rule. The Maltese had invited British protection rather than a restoration of the Knights' rule, but Malta's formal legal status remains unsettled &mdash; short of a colony &mdash; until the 1814 Treaty of Paris.</p>
+            <p><span class="label">What it represents:</span> the Union Flag is flown by the British garrison and administration through this transitional period, with no distinct Maltese colonial symbol yet created.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2, standard Union Flag.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Union Flag; no distinct Malta badge existed yet in this period.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00247D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#cf142b"></span><span class="meta"><span class="name">Red</span><span class="hex">#CF142B</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="200" fill="#00267f"/>
+              <rect x="100" width="100" height="200" fill="#f4efe1"/>
+              <rect x="200" width="100" height="200" fill="#a4302a"/>
+            </svg>
+            <div class="flag-caption">French Revolutionary tricolor, flown during Napoleon's brief occupation</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1798 &ndash; 1800</div>
+            <h3 class="card-title">French occupation</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#9c3b28"></span>Occupation</span></div>
+            <p><span class="label">Who &amp; why:</span> Napoleon seizes Malta in June 1798 en route to his Egyptian campaign, exploiting the Knights' weakened state and expelling the Order almost without resistance. French rule proves short-lived and deeply unpopular, provoking a Maltese uprising within months; a British naval blockade isolates the French garrison, which finally surrenders in September 1800.</p>
+            <p><span class="label">What it represents:</span> the French Revolutionary and Napoleonic tricolor, flown as the flag of an occupying French garrison rather than any distinct Maltese administration.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, standard French tricolor of the period.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Vertical tricolor, blue/white/red.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00267f"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00267F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <rect x="127" y="35" width="46" height="130" fill="#f4efe1"/>
+              <rect x="85" y="77" width="130" height="46" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the Order of Malta's flag &mdash; white cross on red, still used by the Order today</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1530 &ndash; 1798</div>
+            <h3 class="card-title">Knights Hospitaller (sovereign Order of Malta)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Sovereign order</span></div>
+            <p><span class="label">Who &amp; why:</span> Holy Roman Emperor Charles V grants Malta to the Knights Hospitaller in 1530, after the Ottomans drove the crusading order from Rhodes in 1522 &mdash; rent set, famously, at one Maltese falcon per year. The Knights rule Malta as a sovereign state and fortify it heavily, most famously withstanding the Great Siege of 1565, an Ottoman assault that fails to take the island and cements Malta's reputation as a bulwark of Christian Europe in the Mediterranean; the Order's rule ends abruptly with Napoleon's 1798 seizure.</p>
+            <p><span class="label">What it represents:</span> the Order's own flag, a white cross on a red field, used throughout its rule of Malta and still flown by the sovereign Order of Malta today (in its modern eight-pointed form on some variants); shown here in its plain-cross form as commonly used on the island itself.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for the period; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, centered white cross.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; antiquity through medieval rule, no fixed flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 700 BCE &ndash; 1530 CE</div>
+            <h3 class="card-title">Antiquity and medieval rule (various powers)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Various outside rule</span></div>
+            <p><span class="label">Who &amp; why:</span> this single bridging entry stands in for roughly 2,200 years and a long succession of outside rulers: Phoenician colonization from around the 8th century BCE, later Carthaginian and then Roman control after 218 BCE, Byzantine rule following the Roman Empire's east&ndash;west split, Arab conquest and settlement from 870 CE (which left a lasting imprint on the Maltese language, still audible today), the Norman conquest of 1091 that brought Malta into the broader Kingdom of Sicily's orbit, and subsequent passage through Aragonese and then Habsburg Spanish hands, ending when Emperor Charles V grants the island to the Knights Hospitaller in 1530.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag can be attributed specifically to Malta for any part of this long span; the island was governed throughout as a dependency or minor province of much larger antique and medieval states, none of which used a fixed territorial flag for Malta itself. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Various outside rule</b> &mdash; a succession of larger states, no fixed local flag</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Sovereign order</b> &mdash; ruled by the crusading Knights Hospitaller</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#9c3b28"></span><b>Occupation</b> &mdash; held by a foreign military garrison</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#5b7a8c"></span><b>Protectorate</b> &mdash; under British protection, status unsettled</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Colonial rule</b> &mdash; formal British Crown Colony</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#6b4f9c"></span><b>Commonwealth realm</b> &mdash; independent, shared British monarch</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#2f6b4a"></span><b>Republic</b> &mdash; sovereign republic</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="european-independents-hub.html"><b>Europe's Independents hub</b><span>Switzerland, Cyprus, Malta</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>
