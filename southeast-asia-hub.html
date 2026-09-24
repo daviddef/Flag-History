@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Southeast Asia</title>
+<meta name="description" content="A hub for the family flag atlas: eleven Southeast Asian countries, from the Khmer and Majapahit empires through colonization to independence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: 66ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: 66ch; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 17 of the world atlas</p>
+  <h1>Flags of Southeast Asia</h1>
+  <p class="lede">Eleven countries bound together by monsoon trade winds, and shaped long before Europe arrived by their own major civilizations: the Khmer Empire, whose temple-city of Angkor Wat was the largest pre-industrial urban complex on Earth; the Majapahit Empire, which at its height in the 1300s&ndash;1400s held sway over much of the Indonesian archipelago; the Sukhothai and later Ayutthaya kingdoms in what is now Thailand; and the Champa and &Ntilde;i Vi&#7879;t kingdoms contesting the Vietnamese coast. For over a thousand years, Indian Ocean and South China Sea trade routes carried Hinduism and Buddhism deep into the region &mdash; visible today in Angkor's Hindu-turned-Buddhist temples, Bali's Hindu culture, and Theravada Buddhism's hold across the mainland &mdash; alongside centuries of Chinese trade, tribute relationships, and migration.</p>
+  <p class="lede">European colonization arrived in stages and stuck to different powers: the Dutch built a spice-trade empire across the Indonesian archipelago, Spain colonized the Philippines and then ceded it to the United States in 1898, France assembled Vietnam, Cambodia, and Laos into "French Indochina," and Britain took Myanmar, Malaya, Singapore, and Brunei. Thailand stands alone in the region, and among all of Southeast and South Asia, as the one country never colonized by a European power &mdash; a fact its own history credits to skillful diplomacy playing British and French interests off each other. Japan occupied the entire region during World War II, and that occupation's collapse in 1945 opened the door to independence movements that mostly succeeded between the late 1940s and the 1960s. Timor-Leste is the exception: it was colonized by Portugal, invaded and annexed by Indonesia in 1975, and did not win full independence until 2002, after a UN-administered transition.</p>
+
+  <div class="countries">
+    <h2>The 11 countries</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ce1126"></span>
+        <span class="era">publishing next</span>
+        <b>Indonesia</b>
+        <span>The Majapahit Empire's archipelago-wide reach, over three centuries of Dutch rule as the East Indies, and independence proclaimed by Sukarno in 1945.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#0038a8"></span>
+        <span class="era">publishing next</span>
+        <b>Philippines</b>
+        <span>Over 300 years of Spanish rule from 1565, ceded to the United States in 1898, and independence in 1946 after brutal Japanese occupation.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#da251d"></span>
+        <span class="era">publishing next</span>
+        <b>Vietnam</b>
+        <span>The historic Champa and &Ntilde;i Vi&#7879;t kingdoms, French Indochina, division at the 17th parallel in 1954, and a devastating war that ended in reunification in 1975.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#a51931"></span>
+        <span class="era">publishing next</span>
+        <b>Thailand</b>
+        <span>The Sukhothai and Ayutthaya kingdoms, and the sole Southeast Asian nation never colonized by a European power, kept independent as Siam through deft diplomacy.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#fecb00"></span>
+        <span class="era">publishing next</span>
+        <b>Myanmar</b>
+        <span>The Bagan, Toungoo, and Konbaung dynasties, British colonization following three Anglo-Burmese wars, and independence in 1948 as Burma.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#010066"></span>
+        <span class="era">publishing next</span>
+        <b>Malaysia</b>
+        <span>The Malacca Sultanate's trading empire, British Malaya, Japanese occupation, and independence in 1957, with Sabah and Sarawak joining in 1963.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ee2536"></span>
+        <span class="era">publishing next</span>
+        <b>Singapore</b>
+        <span>Founded as a British trading post by Stamford Raffles in 1819, occupied by Japan in World War II, and independent since a 1965 split from Malaysia.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#032ea1"></span>
+        <span class="era">publishing next</span>
+        <b>Cambodia</b>
+        <span>The Khmer Empire's Angkor Wat, French colonization, and the Khmer Rouge genocide of 1975&ndash;79, which killed an estimated 1.5&ndash;2 million people, roughly a quarter of the population.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ce1126"></span>
+        <span class="era">publishing next</span>
+        <b>Laos</b>
+        <span>The Lan Xang kingdom ("Land of a Million Elephants"), incorporation into French Indochina, and independence in 1953 following a monarchy restored after Japanese occupation.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#fecb00"></span>
+        <span class="era">publishing next</span>
+        <b>Brunei</b>
+        <span>A once-powerful Bruneian sultanate that ruled much of Borneo, reduced by later decline to a British protectorate, and full independence in 1984.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#dc241f"></span>
+        <span class="era">publishing next</span>
+        <b>Timor-Leste</b>
+        <span>Portuguese colonization, Indonesian invasion and annexation in 1975, and full independence in 2002 after a UN-administered transition &mdash; Southeast Asia's youngest nation.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this hub</h2>
+    <p>This hub currently shows all eleven Southeast Asian countries without the atlas's usual interactive map &mdash; the real-coastline, era-slider visualization that the Former Yugoslavia and other hubs use to show territory changing hands across centuries. Building that map for a region this large and maritime is a larger job than the rest of this phase allows, so this page ships as a lighter placeholder: real historical context above, one card per country, and full deep-dive flag pages and an interactive regional map planned for a later phase.</p>
+    <p>Colors above are drawn from each country's current national flag, not a historical palette, since no per-country flag lineage exists yet. Once a country's own page publishes, its card here will link out.</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This hub is one region in a larger set. See the other phases here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="west-africa-hub.html"><b>West Africa hub</b><span>Sixteen countries, deep pre-colonial history</span></a>
+      <a class="link-card" href="arabian-peninsula-hub.html"><b>Arabian Peninsula hub</b><span>Seven countries, tribal to modern states</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica.
+  </footer>
+
+</div>
+
+</body></html>
