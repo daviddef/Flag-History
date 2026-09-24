@@ -1,0 +1,391 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of the British Empire</title>
+<meta name="description" content="A chronological, paint-ready atlas of the British Empire, the largest empire in history by land area, from Elizabethan exploration and the East India Company through two distinct waves of colonial expansion to post-war decolonization and the modern Commonwealth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="empires-hub.html">Empires hub</a></p>
+  <p class="kicker">Family research &middot; Historical empires</p>
+  <h1>Flags of the British Empire</h1>
+  <p class="lede">The largest empire in history by land area, at its post-WWI peak governing roughly a quarter of the world's population and territory across every inhabited continent. It grows in two distinct waves separated by the shock of losing the Thirteen Colonies, and it unwinds not in one collapse but across four decades of negotiated and fought decolonization, leaving the modern Commonwealth of Nations as its loose successor association.</p>
+  <p class="lede">This empire's reach into this atlas's own country pages is enormous &mdash; far too broad to cross-link exhaustively here. Dozens of this atlas's individual country pages, across every continent, carry their own "British colony/protectorate" era descending directly from the empire told on this page.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the British Empire as a whole transnational entity, late 16th century&ndash;present (via the Commonwealth), six phases. Rather than attempting to cross-link every one of this atlas's country pages with a British colonial past, this page links a representative handful and states plainly that most of the rest carry the same lineage on their own pages. See <a href="south-asia-hub.html">South Asia hub</a>, <a href="ireland-flags.html">Ireland</a>, and <a href="australia-flags.html">Australia</a> as starting points. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#00247d"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/>
+              <rect x="125" width="50" height="200" fill="#f4efe1"/>
+              <rect y="75" width="300" height="50" fill="#f4efe1"/>
+              <rect x="137" width="26" height="200" fill="#cf142b"/>
+              <rect y="87" width="300" height="26" fill="#cf142b"/>
+            </svg>
+            <div class="flag-caption">the Union Flag, now flying only over the remaining Overseas Territories and via the Commonwealth</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1949/1997 &ndash; present</div>
+            <h3 class="card-title">Commonwealth of Nations (loose successor)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Voluntary association</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1949 London Declaration allows India to remain in the Commonwealth as a republic without the British monarch as head of state, transforming the organization from an empire's residue into a voluntary association of formally equal, independent states. The 1997 handover of Hong Kong to China is widely treated as the symbolic close of the empire proper. Today the Commonwealth comprises 56 member states (most, though not all, former British territories) cooperating on trade, development, and shared institutions, alongside a small number of remaining British Overseas Territories (Bermuda, the Falklands, Gibraltar, and others) that never became independent states.</p>
+            <p><span class="label">What it represents:</span> the Union Flag continues to fly over the UK itself and its remaining Overseas Territories; the Commonwealth itself uses its own separate emblem rather than the historical empire's flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">3:5 (UK civil use); shown here at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Combined crosses of St George, St Andrew, and St Patrick &mdash; the Union Flag, unchanged in this form since 1801.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00247D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#cf142b"></span><span class="meta"><span class="name">Red</span><span class="hex">#CF142B</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#00247d"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/>
+              <rect x="125" width="50" height="200" fill="#f4efe1"/>
+              <rect y="75" width="300" height="50" fill="#f4efe1"/>
+              <rect x="137" width="26" height="200" fill="#cf142b"/>
+              <rect y="87" width="300" height="26" fill="#cf142b"/>
+              <rect x="0" y="0" width="130" height="90" fill="#00247d"/>
+              <circle cx="65" cy="45" r="26" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">Union Flag with colonial badge in canton &mdash; the pattern used across dozens of territories</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1947 &ndash; 1980s</div>
+            <h3 class="card-title">Post-WWII decolonization wave</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#9c3b28"></span>Empire, dissolving</span></div>
+            <p><span class="label">Who &amp; why:</span> India's independence and simultaneous partition in August 1947, ending nearly two centuries of British rule on the subcontinent, is the pivotal turning point after which decolonization accelerates sharply. Wartime exhaustion, the moral force of the 1941 Atlantic Charter's self-determination principles, and rising nationalist movements across the colonies combine to make continued direct rule untenable. Independence follows across Africa through the late 1950s and 1960s (Ghana 1957, Nigeria 1960, and many others), across the Caribbean through the 1960s&ndash;70s, and across the remaining Pacific territories into the 1970s&ndash;80s.</p>
+            <p><span class="label">What it represents:</span> the standard colonial-flag convention &mdash; a Blue or Red Ensign, or the plain Union Flag, defaced with a local badge in the canton &mdash; used across the empire's territories in their final colonial decades; this same visual convention underlies the colonial-era flags shown on dozens of this atlas's own individual country pages.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2, standard British ensign proportions.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Union Flag canton with a local colonial badge on the fly (badge shown schematically here as a plain disc).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00247D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#cf142b"></span><span class="meta"><span class="name">Red</span><span class="hex">#CF142B</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#cf142b"/>
+              <rect x="0" y="0" width="130" height="90" fill="#00247d"/>
+              <path d="M0,0 L130,90 M130,0 L0,90" stroke="#f4efe1" stroke-width="14"/>
+              <path d="M0,0 L130,90 M130,0 L0,90" stroke="#cf142b" stroke-width="6"/>
+              <rect x="54" width="22" height="90" fill="#f4efe1"/>
+              <rect y="33" width="130" height="22" fill="#f4efe1"/>
+              <rect x="60" width="10" height="90" fill="#cf142b"/>
+              <rect y="39" width="130" height="10" fill="#cf142b"/>
+            </svg>
+            <div class="flag-caption">Red Ensign, the everyday colonial merchant/territorial flag, at the empire's greatest extent</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1919 &ndash; 1947</div>
+            <h3 class="card-title">Territorial peak (post-WWI mandates)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire, at territorial peak</span></div>
+            <p><span class="label">Who &amp; why:</span> the empire reaches its largest-ever extent immediately after WWI, when former German and Ottoman territories are redistributed as League of Nations mandates &mdash; among them Palestine, Iraq, and Tanganyika &mdash; adding to holdings already covering India, huge swaths of Africa from the 19th-century Scramble for Africa, Australia and New Zealand, and Caribbean and Pacific territories. By the early 1920s the empire governs roughly a quarter of the globe's land area and population, the largest empire in recorded history by territory.</p>
+            <p><span class="label">What it represents:</span> the Red Ensign (a red field with the Union Flag in the canton) serves as the everyday flag for British merchant shipping and, informally, many colonial territories at this peak, distinct from the Blue Ensign used for government vessels.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, Union Flag canton.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#cf142b"></span><span class="meta"><span class="name">Red</span><span class="hex">#CF142B</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00247D</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#00247d"/>
+              <rect x="0" y="0" width="130" height="90" fill="#00247d"/>
+              <path d="M0,0 L130,90 M130,0 L0,90" stroke="#f4efe1" stroke-width="14"/>
+              <path d="M0,0 L130,90 M130,0 L0,90" stroke="#cf142b" stroke-width="6"/>
+              <rect x="54" width="22" height="90" fill="#f4efe1"/>
+              <rect y="33" width="130" height="22" fill="#f4efe1"/>
+              <rect x="60" width="10" height="90" fill="#cf142b"/>
+              <rect y="39" width="130" height="10" fill="#cf142b"/>
+            </svg>
+            <div class="flag-caption">Blue Ensign, the standard government/colonial-administration flag of the second empire's expansion</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1783 &ndash; 1919</div>
+            <h3 class="card-title">"Second" British Empire (19th-century expansion)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire, expanding</span></div>
+            <p><span class="label">Who &amp; why:</span> the shock of losing the Thirteen Colonies redirects British imperial ambition eastward and southward. The East India Company's growing territorial control over India (formalized as Crown rule, the British Raj, after the 1857 rebellion), the Scramble for Africa following the 1884&ndash;85 Berlin Conference, and the settlement of Australia (from 1788) and New Zealand (from 1840) together build what historians call the "Second" British Empire &mdash; larger, more formally administered, and more explicitly racialized in its governance than the first.</p>
+            <p><span class="label">What it represents:</span> the Blue Ensign (Union Flag canton on a blue field) becomes the standard flag for colonial governments and British government vessels throughout this era of expansion, distinguishing official from merchant (Red Ensign) use.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, Union Flag canton.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00247D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#cf142b"></span><span class="meta"><span class="name">Red</span><span class="hex">#CF142B</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="18"/>
+              <rect x="130" width="40" height="200" fill="#cf142b"/>
+              <rect y="80" width="300" height="40" fill="#cf142b"/>
+            </svg>
+            <div class="flag-caption">the King's Colours / Grand Union pattern flown over the Thirteen Colonies before 1776</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 1583 &ndash; 1783</div>
+            <h3 class="card-title">"First" British Empire (early exploration and Atlantic colonies)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire, expanding</span></div>
+            <p><span class="label">Who &amp; why:</span> Elizabethan-era exploration and privateering (Drake, Raleigh) opens the Atlantic to English ambition, and the East India Company's founding by royal charter in 1600 begins a commercial foothold in Asia that will later become the core of colonial India. The 17th and 18th centuries build a chain of North American and Caribbean colonies and a lucrative, morally catastrophic plantation and slave-trade economy in the Caribbean and American South. This first phase of empire ends abruptly with the loss of the Thirteen Colonies, confirmed by the 1783 Treaty of Paris after the American Revolutionary War.</p>
+            <p><span class="label">What it represents:</span> the pre-Union Jack English/British royal colors &mdash; St George's cross, later combined with St Andrew's cross after the 1707 Union with Scotland &mdash; flown over the Atlantic colonies of this era; shown here schematically for the pre-1801 form (without St Patrick's cross, added only in 1801).</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for most of this period; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">St George's cross (red on white) combined with St Andrew's cross (white diagonal on blue field, simplified here) after 1707; the pre-1801 form, without St Patrick's cross.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#cf142b"></span><span class="meta"><span class="name">Red</span><span class="hex">#CF142B</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">PRE-IMPERIAL</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">ENGLAND</text>
+            </svg>
+            <div class="flag-caption">placeholder &mdash; kingdom era, before overseas expansion begins</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">before c. 1583</div>
+            <h3 class="card-title">Pre-imperial England</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Kingdom, pre-imperial</span></div>
+            <p><span class="label">Who &amp; why:</span> before Elizabethan-era exploration begins in earnest, England (and, separately, Scotland) exists as an ordinary medieval and early-modern kingdom with no overseas colonial holdings of consequence. This entry marks the baseline against which the empire's subsequent, extraordinarily rapid global expansion is measured.</p>
+            <p><span class="label">What it represents:</span> England's own flag of this era (St George's cross) is well documented but is covered in detail on this atlas's own United Kingdom, England, and Scotland pages rather than repeated here; shown as a placeholder marking pre-imperial England specifically.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; see this atlas's United Kingdom page for the domestic flag history of this era.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Kingdom, pre-imperial</b> &mdash; no overseas holdings yet</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Empire, expanding</b> &mdash; actively acquiring territory</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#9c3b28"></span><b>Empire, dissolving</b> &mdash; decolonization underway</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Voluntary association</b> &mdash; the post-imperial Commonwealth</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. This empire's reach touches dozens of this atlas's own country pages &mdash; nearly every one carrying a "British colony/protectorate" era in its own timeline descends from the history told here. A representative few:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="empires-hub.html"><b>Empires hub</b><span>Eight transnational empires</span></a>
+      <a class="link-card" href="south-asia-hub.html"><b>South Asia hub</b><span>India and the subcontinent's own pages</span></a>
+      <a class="link-card" href="ireland-flags.html"><b>Ireland</b><span>The empire's oldest and closest colonial relationship</span></a>
+      <a class="link-card" href="australia-flags.html"><b>Australia</b><span>Settler-colonial expansion, "Second" empire</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>
