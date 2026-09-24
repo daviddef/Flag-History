@@ -1,0 +1,190 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of the Pacific</title>
+<meta name="description" content="A hub for the family flag atlas: fourteen Pacific and Oceania nations, from millennia of Austronesian and Polynesian seafaring migration through European contact and colonization to independence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: 66ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: 66ch; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 14 of the world atlas</p>
+  <h1>Flags of the Pacific</h1>
+  <p class="lede">No region in this atlas is more geographically dispersed. Long before any European ship entered the Pacific, Austronesian-speaking peoples had already settled it &mdash; a millennia-long expansion out of island Southeast Asia that carried Melanesian, Micronesian, and finally Polynesian voyagers across open ocean using wayfinding: reading stars, swells, currents, and bird flight without instruments. Polynesian navigators reached New Zealand, Hawai'i, and Rapa Nui (Easter Island), the three points of the "Polynesian Triangle," centuries before Columbus crossed the Atlantic &mdash; one of the great, underrecognized feats of human exploration.</p>
+  <p class="lede">European contact came late and slowly: Magellan crossed the Pacific in 1521, Abel Tasman charted parts of Australia, Tasmania, and New Zealand in the 1640s, and James Cook's three voyages (1768&ndash;1779) mapped much of the region in detail. Britain founded a penal colony at Sydney in 1788 that became Australia, and in 1840 signed the Treaty of Waitangi with Māori chiefs, still New Zealand's founding constitutional document. Germany, France, and the United States carved up most of the remaining islands as coaling stations, plantations, and strategic outposts. The great wave of independence came late too, mostly the 1960s&ndash;1980s, and several islands remain constitutionally tied to the powers that once colonized them.</p>
+
+  <div class="countries">
+    <h2>The 14 countries</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#00008B"></span>
+        <span class="era">publishing next</span>
+        <b>Australia</b>
+        <span>Home to Aboriginal peoples and the world's oldest continuous living culture, 60,000-plus years old, then a British penal colony from 1788 and a federated nation since 1901.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#00247D"></span>
+        <span class="era">publishing next</span>
+        <b>New Zealand</b>
+        <span>Settled by Polynesian voyagers who became Māori, bound to Britain by the 1840 Treaty of Waitangi, and self-governing within the Commonwealth since 1907.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#CE1126"></span>
+        <span class="era">publishing next</span>
+        <b>Papua New Guinea</b>
+        <span>The world's most linguistically diverse country, with over 800 languages among its highland and coastal peoples, split between German and British/Australian rule before 1975 independence.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#68BFE5"></span>
+        <span class="era">publishing next</span>
+        <b>Fiji</b>
+        <span>A British colony from 1874 built on indentured Indian labor brought to work sugar plantations, leaving a lasting Indo-Fijian community, independent since 1970.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#002B7F"></span>
+        <span class="era">publishing next</span>
+        <b>Samoa</b>
+        <span>A Polynesian seat of the ancient Tui Manu'a and Malietoa chiefly lines, divided between Germany and the United States in 1899, independent (Western Samoa) since 1962.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#C10000"></span>
+        <span class="era">publishing next</span>
+        <b>Tonga</b>
+        <span>The only Pacific nation never formally colonized, ruled by an unbroken line of monarchs and ranked among the last Polynesian maritime empires before its 1875 constitution.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#000000"></span>
+        <span class="era">publishing next</span>
+        <b>Vanuatu</b>
+        <span>Melanesian island group first called the New Hebrides, uniquely ruled as an Anglo-French Condominium from 1906, independent under its current name since 1980.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#215B33"></span>
+        <span class="era">publishing next</span>
+        <b>Solomon Islands</b>
+        <span>Melanesian islands named by a Spanish explorer in 1568 for a rumored biblical gold, a British protectorate from 1893, and a fierce WWII Pacific battleground, independent since 1978.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#CE1126"></span>
+        <span class="era">publishing next</span>
+        <b>Kiribati</b>
+        <span>Micronesian atolls once the Gilbert Islands under British rule, straddling the equator and every line of longitude, and among the countries most threatened by rising seas.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#009EDB"></span>
+        <span class="era">publishing next</span>
+        <b>Tuvalu</b>
+        <span>A tiny Polynesian nation, formerly the Ellice Islands under Britain, that split from Kiribati's Gilbert Islands in 1975 and became independent in 1978.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#002B7F"></span>
+        <span class="era">publishing next</span>
+        <b>Nauru</b>
+        <span>The world's smallest island nation, whose phosphate deposits (fossilized seabird guano) made it briefly one of the richest countries per capita before the reserves ran out.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#4AADD6"></span>
+        <span class="era">publishing next</span>
+        <b>Palau</b>
+        <span>Micronesian islands passed from Spain to Germany to Japan and then a U.S.-administered UN Trust Territory, independent since 1994 under a Compact of Free Association.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#003893"></span>
+        <span class="era">publishing next</span>
+        <b>Marshall Islands</b>
+        <span>Micronesian atolls, a former U.S. nuclear test site at Bikini and Enewetak, independent since 1986 under a Compact of Free Association with the United States.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#75B2DD"></span>
+        <span class="era">publishing next</span>
+        <b>Micronesia</b>
+        <span>A federation of four island states (Yap, Chuuk, Pohnpei, Kosrae) with a shared colonial path through Spain, Germany, and Japan, independent since 1986.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this hub</h2>
+    <p>This hub currently shows all fourteen Pacific and Oceania countries without the atlas's usual interactive map &mdash; the real-coastline, era-slider visualization that the Former Yugoslavia and other hubs use to show territory changing hands across centuries. Building that map for a region this spread across the ocean is a larger job than the rest of this phase allows, so this page ships as a lighter placeholder: real historical context above, one card per country, and full deep-dive flag pages and an interactive regional map planned for a later phase.</p>
+    <p>Colors above are drawn from each country's current national flag, not a historical palette, since no per-country flag lineage exists yet. Once a country's own page publishes, its card here will link out.</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This hub is one region in a larger set. See the other phases here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="southern-africa-hub.html"><b>Southern Africa hub</b><span>Ten countries, colonial to post-apartheid</span></a>
+      <a class="link-card" href="south-america-hub.html"><b>South America hub</b><span>Twelve countries, independence to today</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica.
+  </footer>
+
+</div>
+
+</body></html>
