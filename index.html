@@ -103,13 +103,13 @@
   </div>
 
   <div class="countries-section">
-    <h2>All countries</h2>
+    <h2 id="countriesHeading">All countries</h2>
     <div class="country-grid" id="countryGrid"></div>
     <div class="empty-state" id="emptyState" style="display:none;">No countries match that search. Try a broader term, or clear the filters.</div>
   </div>
 
   <div class="hubs-section">
-    <h2>The hubs</h2>
+    <h2 id="hubsHeadingEl">The hubs</h2>
     <div class="hub-grid">
       <a class="hub-card" href="yugoslavia-hub.html">
         <span class="swatch-strip" style="background:#a4302a"></span>
@@ -437,9 +437,15 @@
   var emptyStateEl = document.getElementById("emptyState");
   var hubCards = Array.prototype.slice.call(document.querySelectorAll(".hub-card"));
   var hubsSection = document.querySelector(".hubs-section");
-  var hubsHeading = hubsSection ? hubsSection.querySelector("h2") : null;
+  var hubsHeading = document.getElementById("hubsHeadingEl");
   var hubsHeadingBase = hubsHeading ? hubsHeading.textContent : "";
   var hubsEmptyStateEl = null;
+  var countriesHeading = document.getElementById("countriesHeading");
+  var countriesHeadingBase = countriesHeading ? countriesHeading.textContent : "";
+  // Manually maintained: distinct countries covered across all regional/geographic hubs
+  // (excludes the EU and Schengen hubs, which are institutional overlays on countries
+  // already counted elsewhere, not new territory). Update when a hub's roster changes.
+  var HUB_COUNTRIES_COVERED = 196;
 
   function renderGrid() {
     var q = searchBox.value.trim().toLowerCase();
@@ -451,6 +457,12 @@
 
     resultCountEl.textContent = matched.length + " of " + COUNTRIES.length + " countries";
     emptyStateEl.style.display = matched.length ? "none" : "block";
+
+    if (countriesHeading) {
+      countriesHeading.textContent = q
+        ? (countriesHeadingBase + " (" + matched.length + " of " + COUNTRIES.length + ")")
+        : (countriesHeadingBase + " (" + COUNTRIES.length + ")");
+    }
 
     grid.innerHTML = matched.map(function (c) {
       var statusHtml = c.ownPage
@@ -484,7 +496,9 @@
     });
 
     if (hubsHeading) {
-      hubsHeading.textContent = q ? (hubsHeadingBase + " (" + visibleCount + " of " + hubCards.length + ")") : hubsHeadingBase;
+      hubsHeading.textContent = q
+        ? (hubsHeadingBase + " (" + visibleCount + " of " + hubCards.length + " hubs)")
+        : (hubsHeadingBase + " (" + hubCards.length + " hubs · " + HUB_COUNTRIES_COVERED + " countries covered)");
     }
 
     if (hubsSection) {
