@@ -534,6 +534,7 @@
     cambodia: '<rect width="300" height="50" fill="#032ea1"/><rect y="50" width="300" height="100" fill="#e00025"/><rect y="150" width="300" height="50" fill="#032ea1"/><g fill="#f4efe1"><rect x="115" y="70" width="10" height="60"/><rect x="145" y="60" width="10" height="70"/><rect x="175" y="70" width="10" height="60"/><path d="M110,70 h80 l-10,-14 h-60 Z"/></g>',
     laos: '<rect width="300" height="50" fill="#c8102e"/><rect y="50" width="300" height="100" fill="#00247d"/><rect y="150" width="300" height="50" fill="#c8102e"/><circle cx="150" cy="100" r="40" fill="#f4efe1"/>',
     brunei: '<rect width="300" height="200" fill="#fecb00"/><polygon points="0,0 300,0 300,60 0,140" fill="#f4efe1"/><polygon points="0,60 300,140 300,200 0,200" fill="#000000"/><ellipse cx="150" cy="100" rx="30" ry="24" fill="#c8102e"/>',
+    timorleste: '<rect width="300" height="200" fill="#dc241f"/><polygon points="0,0 0,200 150,100" fill="#ffc726"/><polygon points="0,0 0,200 100,100" fill="#000000"/><path d="M40,90 l6,16 17,1 -13,11 5,17 -15,-9 -15,9 5,-17 -13,-11 17,-1 Z" fill="#f4efe1"/>',
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -1279,6 +1280,8 @@
       crowns:["Lan Xang Kingdom","Fragmented Lao kingdoms","French Protectorate of Laos","Kingdom of Laos (independent)","Lao People's Democratic Republic"] },
     { name:"Brunei", flag:"brunei", ownPage:true, url:"brunei-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#fecb00",
       crowns:["Bruneian Empire and decline","British protectorate (established)","Japanese occupation","British protectorate (post-war)","British protectorate (self-governing)","Sultanate of Brunei (independent)"] },
+    { name:"Timor-Leste", flag:"timorleste", ownPage:true, url:"timor-leste-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#dc241f",
+      crowns:["Portuguese Timor","Proclaimed independence / Indonesian occupation","UN Transitional Administration (UNTAET)","Democratic Republic of Timor-Leste"] },
   ];
 
   var grid = document.getElementById("countryGrid");
