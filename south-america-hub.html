@@ -1,0 +1,160 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of South America</title>
+<meta name="description" content="A hub for the family flag atlas: twelve South American countries, from the Inca Empire and the Spanish and Portuguese conquests to the independence wars of Bolívar and San Martín.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: 66ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: 66ch; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 15 of the world atlas</p>
+  <h1>Flags of South America</h1>
+  <p class="lede">Twelve countries built on one real fault line: the Inca Empire &mdash; the largest pre-Columbian state in the Americas, centered on Peru &mdash; and other indigenous civilizations like the Muisca of Colombia and the Guaraní spread across Paraguay, conquered by Spain in the 1500s (Pizarro toppled the Inca in 1533) and organized into the Viceroyalties of Peru and New Granada / Río de la Plata. Portuguese Brazil ran on its own separate colonial track the entire time &mdash; still the only Portuguese-speaking country in the Americas.</p>
+  <p class="lede">Independence came as real war, not paperwork: Simón Bolívar and José de San Martín fought north and south through the 1810s&ndash;20s, and Bolívar's Gran Colombia briefly unified Venezuela, Colombia, Ecuador, and Panama before splitting apart within a decade. Brazil's own transition was comparatively peaceful &mdash; an 1822 declaration, then an Empire until 1889 before it became a republic. Guyana and Suriname sat outside the Iberian story entirely, held by Britain and the Netherlands and not independent until 1966 and 1975.</p>
+
+  <div class="countries">
+    <h2>The twelve lineages</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#009c3b"></span>
+        <span class="era">publishing next</span>
+        <b>Brazil</b>
+        <span>Portuguese America, a 1822&ndash;1889 Empire under Pedro I and II, then a republic &mdash; the hemisphere's one Portuguese-speaking giant.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#74acdf"></span>
+        <span class="era">publishing next</span>
+        <b>Argentina</b>
+        <span>Viceroyalty of the Río de la Plata, San Martín's 1816 independence declaration at Tucumán, decades of federalist-unitarist civil war.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#0033a0"></span>
+        <span class="era">publishing next</span>
+        <b>Chile</b>
+        <span>The Mapuche frontier Spain never fully subdued, San Martín and O'Higgins's 1817&ndash;18 liberation, a long, stable republican run.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#d91023"></span>
+        <span class="era">publishing next</span>
+        <b>Peru</b>
+        <span>The Inca heartland and Cusco itself, seat of the Viceroyalty of Peru, the last Spanish stronghold before Ayacucho ended the wars in 1824.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#fcd116"></span>
+        <span class="era">publishing next</span>
+        <b>Colombia</b>
+        <span>Muisca confederation, seat of the Viceroyalty of New Granada, the core of Bolívar's Gran Colombia before its 1830 breakup.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#8a1538"></span>
+        <span class="era">publishing next</span>
+        <b>Venezuela</b>
+        <span>Bolívar's own birthplace and the first Spanish colony to declare independence, in 1811, then a founding piece of Gran Colombia.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ffd100"></span>
+        <span class="era">publishing next</span>
+        <b>Ecuador</b>
+        <span>Quito's own audiencia under Spain, briefly the third pillar of Gran Colombia, independent on its own account by 1830.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#d52b1e"></span>
+        <span class="era">publishing next</span>
+        <b>Bolivia</b>
+        <span>Named for Bolívar himself, carved from Upper Peru's silver-mining highlands, independent in 1825 as the wars' last new state.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#d52b1e"></span>
+        <span class="era">publishing next</span>
+        <b>Paraguay</b>
+        <span>Guaraní heartland and Jesuit mission country, an early and unusually self-isolated 1811 independence under Dr. Francia.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#0038a8"></span>
+        <span class="era">publishing next</span>
+        <b>Uruguay</b>
+        <span>The contested Banda Oriental fought over by Spain, Portugal, Argentina, and Brazil, independent as a buffer state in 1828.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#009e49"></span>
+        <span class="era">publishing next</span>
+        <b>Guyana</b>
+        <span>British Guiana, not Iberian at all &mdash; a Dutch and then British sugar colony, independent from the UK in 1966.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#377e3f"></span>
+        <span class="era">publishing next</span>
+        <b>Suriname</b>
+        <span>Dutch Guiana, traded to the Netherlands by the English in 1667, independent from the Dutch crown only in 1975.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this hub</h2>
+    <p>This is a placeholder hub, built lighter and faster than the atlas's map-driven hubs (compare the <a href="yugoslavia-hub.html">Former Yugoslavia hub</a>) so all twelve South American lineages can be scoped and named in one pass. A later phase will add a real traced map with an era slider, showing the Inca Empire, the Viceroyalties, Gran Colombia's rise and split, and Brazil's separate track across the same centuries &mdash; matching the template already built for Europe and Central America.</p>
+    <p>Dedicated country pages for Brazil, Argentina, Chile, Peru, Colombia, Venezuela, Ecuador, Bolivia, Paraguay, Uruguay, Guyana, and Suriname will follow in a subsequent phase.</p>
+    <p><a href="index.html">&larr; Back to the Flags Atlas index</a></p>
+  </div>
+
+  <footer>
+    Part of a family-research project. See each hub or country page for full sourcing (Wikipedia, Flags of the World, Britannica).
+  </footer>
+
+</div>
+</body></html>
