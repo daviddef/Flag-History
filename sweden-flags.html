@@ -1,0 +1,377 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Sweden</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Sweden, from fragmented Svear and Götar chieftaincies to the modern kingdom — with the real dates of union, split, and territorial loss.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: 62ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="scandinavia-hub.html">Scandinavia hub</a></p>
+  <p class="kicker">Family research &middot; Phase 6 of the world atlas</p>
+  <h1>Flags of Sweden</h1>
+  <p class="lede">From loosely federated Svear and Götar chieftaincies around Lake Mälaren, through a medieval kingdom that lasted four centuries, a union that briefly bound all of Scandinavia under one crown, a break that Swedes still celebrate as their national day, the loss of an eastern half held for six and a half centuries, a second union with Norway, and finally a century and a quarter of unbroken, fully sovereign statehood &mdash; six flags for a country whose own blue-and-gold cross has flown, in some form, since before its neighbors' unions even existed.</p>
+  <p class="lede">Sweden's blue and gold are the oldest continuously used national colors in this hub: the Tre Kronor (Three Crowns) golden-on-blue emblem is attested in seals from the 1330s&ndash;40s, and the Scandinavian cross format it eventually took on has never once been abandoned since, through union, war, and territorial loss alike.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Sweden, c. 900&ndash;present, six political entities. Sweden and Finland shared one crown for roughly 650 years (from medieval conquest of Finland until its 1809 cession to Russia), but because this page is scoped to Sweden's own modern territory, that period is treated as a single continuous Swedish entry rather than an internal split &mdash; Finland's own page in this atlas covers that shared history from its side. No genuine internal governing split exists within Sweden's own modern borders at any point in its history, so unlike some other pages in this atlas, this one carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Fragmented chieftaincies</b> &mdash; no single crown yet</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom, independent</b> &mdash; sovereign under its own crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c9a13c"></span><b>Union</b> &mdash; crown shared with one or more other kingdoms</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1e2f96"/>
+              <rect x="90" width="34" height="200" fill="#c9a13c"/>
+              <rect y="83" width="300" height="34" fill="#c9a13c"/>
+            </svg>
+            <div class="flag-caption">blue field, gold Scandinavian cross &mdash; unchanged since 1905</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1905 &ndash; present</div>
+            <h3 class="card-title">Kingdom of Sweden (independent, modern)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> the union with Norway dissolves peacefully on 7 June 1905 after the Norwegian Storting's unilateral declaration and a near-unanimous Norwegian referendum; King Oscar II accepts the outcome at negotiations in Karlstad rather than risk war. Sweden stays formally neutral through both World Wars, joins the EU in 1995, and &mdash; after two centuries of careful non-alignment &mdash; joins NATO in 2024 in direct response to Russia's invasion of Ukraine.</p>
+            <p><span class="label">What it represents:</span> the plain blue-and-gold Scandinavian cross flag, stripped of the union mark carried since 1844, formally fixed in law in 1906 with its current proportions &mdash; the longest unbroken run of any flag in this lineage.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">5:8 (civil), swallow-tailed 1:2 for the state/war ensign; shown here as a plain rectangle.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, off-center gold Scandinavian cross (arms extend to the edges, vertical bar shifted toward the hoist).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Gold</span><span class="hex">#C9A13C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1e2f96"/>
+              <rect x="90" width="34" height="200" fill="#c9a13c"/>
+              <rect y="83" width="300" height="34" fill="#c9a13c"/>
+              <rect x="18" y="28" width="54" height="36" fill="#a4302a"/>
+              <rect x="18" y="28" width="54" height="12" fill="#f4efe1"/>
+              <rect x="18" y="52" width="54" height="12" fill="#1e2f96"/>
+            </svg>
+            <div class="flag-caption">Sweden's cross with the Norwegian union mark in the canton</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1814 &ndash; 1905</div>
+            <h3 class="card-title">Sweden&ndash;Norway (personal union)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c9a13c"></span>Union</span></div>
+            <p><span class="label">Who &amp; why:</span> the January 1814 Treaty of Kiel, forced on defeated Denmark at the close of the Napoleonic Wars, cedes Norway to the King of Sweden as compensation for Sweden's own wartime losses (including Finland, five years earlier). Norway briefly resists with its own May 1814 Eidsvoll constitution before a short war settles it into a narrower personal union &mdash; a shared king, but Norway keeps its own constitution, parliament, and laws throughout.</p>
+            <p><span class="label">What it represents:</span> Sweden's own blue-and-gold cross carries a small union mark (a combined red-white-blue emblem) in the canton from 1844 onward, a compromise flag marking the shared crown without either kingdom's flag absorbing the other's.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio before 1906; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, gold Scandinavian cross; union mark (small red/white/blue emblem) in the upper canton from 1844.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Gold</span><span class="hex">#C9A13C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Union mark red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1e2f96"/>
+              <rect x="90" width="34" height="200" fill="#c9a13c"/>
+              <rect y="83" width="300" height="34" fill="#c9a13c"/>
+            </svg>
+            <div class="flag-caption">the plain blue-and-gold cross, three centuries of independent statehood</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1523 &ndash; 1814</div>
+            <h3 class="card-title">Kingdom of Sweden (independent, post-Kalmar)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Gustav Vasa is elected king on 6 June 1523 (still celebrated as Sweden's national day), founding the Vasa dynasty and ending Swedish participation in the Kalmar Union for good. Finland leaves the union alongside Sweden, remaining integrated Swedish territory &mdash; not a colony, but ordinary provinces under the same crown &mdash; for the whole of this era. That changes in 1808&ndash;09: Russia invades in February 1808, and by the 17 September 1809 Treaty of Fredrikshamn, Sweden formally cedes the whole of Finland after roughly 650 years of shared rule, never again holding territory outside the Scandinavian peninsula.</p>
+            <p><span class="label">What it represents:</span> the blue-and-gold Scandinavian cross, evolving out of the earlier Tre Kronor arms, becomes Sweden's settled national banner through this entire span &mdash; the same design, largely unaltered, that the kingdom still flies today.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio recorded for most of this period.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, off-center gold Scandinavian cross.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Gold</span><span class="hex">#C9A13C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#c9a13c"/>
+              <rect x="90" width="34" height="200" fill="#a4302a"/>
+              <rect y="83" width="300" height="34" fill="#a4302a"/>
+              <g fill="#f4efe1">
+                <circle cx="150" cy="52" r="10"/>
+                <circle cx="126" cy="152" r="10"/>
+                <circle cx="174" cy="152" r="10"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the Kalmar Union banner, shared with Denmark and Norway</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1397 &ndash; 1523</div>
+            <h3 class="card-title">Kalmar Union</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c9a13c"></span>Union</span></div>
+            <p><span class="label">Who &amp; why:</span> Margaret I, having assembled personal control over Denmark, Norway, and (by conquest) Sweden through the 1380s&ndash;90s, has her great-nephew Eric of Pomerania crowned king of a single union at Kalmar Castle in June 1397. Sweden enters with Finland as its own attached territory. The union never fully merges institutions &mdash; each kingdom keeps its own laws and nobility &mdash; and Swedish resentment of Danish-favoring rule builds steadily, boiling over after the November 1520 Stockholm Bloodbath, which finally breaks the union for good.</p>
+            <p><span class="label">What it represents:</span> a shared union banner &mdash; the three crowns of the united realm on a red-and-gold cross field &mdash; flown alongside each kingdom's own older arms; Sweden's own Tre Kronor device, already in use before 1397, is widely believed to be the origin of the union's own three-crowns symbolism.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Gold field, red Scandinavian cross, three white/silver crowns (simplified here as dots).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Gold</span><span class="hex">#C9A13C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">Crowns, white/silver</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1e2f96"/>
+              <g fill="#c9a13c">
+                <path d="M150,58 l10,22 24,3 -17,17 4,24 -21,-11 -21,11 4,-24 -17,-17 24,-3 Z"/>
+                <path d="M108,120 l8,17 19,2 -14,13 3,19 -16,-9 -16,9 3,-19 -14,-13 19,-2 Z"/>
+                <path d="M192,120 l8,17 19,2 -14,13 3,19 -16,-9 -16,9 3,-19 -14,-13 19,-2 Z"/>
+              </g>
+            </svg>
+            <div class="flag-caption">Tre Kronor &mdash; three gold crowns, reconstructed from 14th-century seals</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">995 &ndash; 1397</div>
+            <h3 class="card-title">Kingdom of Sweden (medieval, pre-Kalmar)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Olof Skötkonung, baptized around 1008, is the first king reliably attested ruling both the Svear (around Lake Mälaren) and the Götar (to the south) together, taken here as the kingdom's consolidation point, close to the hub's own 995 starting date for a unified Swedish crown. Over the following centuries the Folkung dynasty and later Magnus Eriksson expand and formalize royal authority, and by the 13th century, Swedish conquest and settlement bring Finland under the same crown &mdash; the start of a shared history that runs unbroken until 1809.</p>
+            <p><span class="label">What it represents:</span> no single flag is fixed this early; the Tre Kronor (Three Crowns) device &mdash; three gold crowns, arranged two over one &mdash; is the earliest Swedish royal symbol with real attestation, appearing on seals and in Magnus Eriksson's own coat of arms by the 1330s&ndash;40s, and is shown here on Sweden's later blue as an informed reconstruction representing the whole span, not a documented banner from year one.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no fixed flag; shown as a reconstructed device on a plain field.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, three gold crowns (two over one), attested from the 1330s onward.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Gold</span><span class="hex">#C9A13C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; pre-unification era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 900 &ndash; 995</div>
+            <h3 class="card-title">Fragmented Svear and G&ouml;tar chieftaincies</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Fragmented chieftaincies</span></div>
+            <p><span class="label">Who &amp; why:</span> around 900, what is now Sweden is a patchwork of Svear chieftaincies around Lake Mälaren and Götar territories to the south, with no single king ruling both. Trading centers like Birka thrive under local rulers during this later Viking Age, but a unified Swedish kingdom in any recognizable sense is still a century away, arriving only when Olof Sk&ouml;tkonung is baptized around 1008 and is reliably attested ruling both peoples together.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag survives from this pre-heraldic, pre-Christian era; Viking Age Scandinavia used raven and other totemic banners rather than fixed territorial flags, and none can be attributed specifically to the Svear or G&ouml;tar with confidence. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="scandinavia-hub.html"><b>Scandinavia hub</b><span>Five countries, eleven centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>

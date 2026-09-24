@@ -1,0 +1,506 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Denmark</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Denmark, from Harald Bluetooth's Jelling kingdom to the modern constitutional monarchy — home of the Dannebrog, one of the world's oldest continuously used national flags.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: 62ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 62px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 300px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 12px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="scandinavia-hub.html">Scandinavia hub</a></p>
+  <p class="kicker">Family research &middot; Phase 6 of the world atlas</p>
+  <h1>Flags of Denmark</h1>
+  <p class="lede">From Harald Bluetooth's Jelling stones &mdash; Denmark's own 10th-century "birth certificate" &mdash; through a three-crown union that briefly held all of Scandinavia, four centuries bound to Norway, the 1814 treaty that cut that tie, and a 20th-century occupation the country's own flag never actually left. Five entries, because Denmark's real history is unusually stable: one continuous kingdom, rarely conquered, whose flag changes only twice in eight hundred years.</p>
+  <p class="lede">The Dannebrog &mdash; red field, offset white Scandinavian cross &mdash; is traditionally dated to 15 June 1219, making it one of the oldest national flag designs still in everyday use anywhere in the world. Its legend, its long absence during the Kalmar Union, and its quiet survival through five years of German occupation are the spine of this page.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Denmark (metropolitan Denmark; Iceland, the Faroe Islands, and Greenland are treated as attached territories in prose, not shown as a separate internal split), c. 965&ndash;present, five political entities. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom</b> &mdash; independently ruled under a Danish crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Union kingdom</b> &mdash; crown shared with another realm</div>
+    </div>
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, six eras</h2>
+    <p class="imap-sub">Denmark's own real border, traced whole &mdash; like Slovakia and North Macedonia elsewhere in this atlas, this is a page without a genuine internal split to show honestly. Denmark's historic dependencies (Iceland, the Faroes, Greenland) were governed as attached territories, not as a divided Danish homeland, so the map below shows one region throughout. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>The flag survives even where the kingdom doesn't stay fully independent.</b> During the German occupation of 1940&ndash;45, Denmark kept its own government, its own king, and its own Dannebrog flying &mdash; almost uniquely among occupied countries in WWII. The map's fill color barely moves across eight centuries; what actually changes, era to era, is who else's crown Denmark's own crown was tied to.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 965</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 260 320" xmlns="http://www.w3.org/2000/svg">
+        <path fill="var(--tile-sea)" fill-rule="evenodd" d="M0,0 H260 V320 H0 Z M156.3,129.5 L144.0,163.7 L129.0,153.9 L92.7,219.2 L106.4,263.5 L74.1,277.3 L36.0,265.3 L15.5,214.9 L14.0,122.1 L22.4,97.6 L36.9,70.3 L81.3,64.7 L99.0,39.6 L139.6,14.0 L137.9,60.7 L122.9,90.3 L129.0,115.7 L156.3,129.5 Z M246.0,206.5 L215.7,280.1 L163.0,228.8 L155.9,191.1 L229.9,161.0 L246.0,206.5 Z M106.4,263.5 L107.3,298.6 L158.2,319.7 L157.7,352.0 L209.0,334.9 L237.3,310.0 L294.3,345.9 L318.1,374.8 L329.9,421.0 L315.8,445.2 L334.1,477.6 L346.6,526.2 L342.7,557.5 L363.3,615.5 L340.8,625.0 L327.5,614.5 L314.9,631.8 L278.7,649.4 L259.9,672.0 L223.3,691.8 L232.1,718.8 L237.4,757.1 L263.2,778.9 L291.6,818.0 L273.9,859.8 L255.7,871.4 L262.9,930.5 L258.2,946.0 L242.5,927.4 L218.3,924.6 L182.2,940.9 L137.7,937.0 L130.6,961.0 L105.0,935.8 L89.8,940.8 L35.8,913.0 L25.4,932.7 L-17.5,932.1 L-11.1,867.4 L14.4,805.2 L-58.2,788.5 L-82.0,764.7 L-79.2,724.9 L-89.3,704.4 L-83.5,643.0 L-92.0,547.9 L-61.7,547.8 L-48.9,513.6 L-36.3,430.5 L-45.8,399.8 L-35.9,380.5 L6.2,375.6 L15.6,395.6 L49.8,350.9 L38.3,316.8 L36.0,265.3 L74.1,277.3 L106.4,263.5 Z M724.8,-712.0 L675.9,-648.6 L683.8,-593.0 L603.5,-520.0 L506.1,-441.8 L469.4,-314.0 L505.3,-250.0 L553.5,-199.6 L507.2,-97.1 L454.8,-75.9 L435.5,76.6 L406.9,161.6 L345.7,152.9 L317.1,224.9 L258.7,229.1 L242.7,143.2 L200.5,40.2 L162.2,-88.3 L184.4,-140.6 L226.4,-202.9 L243.1,-309.6 L210.8,-355.6 L207.7,-476.2 L240.5,-561.4 L290.5,-559.9 L308.1,-595.9 L289.7,-626.9 L368.0,-754.6 L418.5,-855.3 L451.8,-919.9 L500.2,-919.6 L513.5,-970.2 L608.6,-955.7 L616.0,-1015.4 L647.3,-1019.1 L714.5,-974.7 L793.2,-912.9 L794.6,-773.0 L811.6,-737.7 L724.8,-712.0 Z"/>
+        <g pointer-events="none">
+          <path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" d="M106.4,263.5 L107.3,298.6 L158.2,319.7 L157.7,352.0 L209.0,334.9 L237.3,310.0 L294.3,345.9 L318.1,374.8 L329.9,421.0 L315.8,445.2 L334.1,477.6 L346.6,526.2 L342.7,557.5 L363.3,615.5 L340.8,625.0 L327.5,614.5 L314.9,631.8 L278.7,649.4 L259.9,672.0 L223.3,691.8 L232.1,718.8 L237.4,757.1 L263.2,778.9 L291.6,818.0 L273.9,859.8 L255.7,871.4 L262.9,930.5 L258.2,946.0 L242.5,927.4 L218.3,924.6 L182.2,940.9 L137.7,937.0 L130.6,961.0 L105.0,935.8 L89.8,940.8 L35.8,913.0 L25.4,932.7 L-17.5,932.1 L-11.1,867.4 L14.4,805.2 L-58.2,788.5 L-82.0,764.7 L-79.2,724.9 L-89.3,704.4 L-83.5,643.0 L-92.0,547.9 L-61.7,547.8 L-48.9,513.6 L-36.3,430.5 L-45.8,399.8 L-35.9,380.5 L6.2,375.6 L15.6,395.6 L49.8,350.9 L38.3,316.8 L36.0,265.3 L74.1,277.3 L106.4,263.5 Z"/>
+          <path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" d="M724.8,-712.0 L675.9,-648.6 L683.8,-593.0 L603.5,-520.0 L506.1,-441.8 L469.4,-314.0 L505.3,-250.0 L553.5,-199.6 L507.2,-97.1 L454.8,-75.9 L435.5,76.6 L406.9,161.6 L345.7,152.9 L317.1,224.9 L258.7,229.1 L242.7,143.2 L200.5,40.2 L162.2,-88.3 L184.4,-140.6 L226.4,-202.9 L243.1,-309.6 L210.8,-355.6 L207.7,-476.2 L240.5,-561.4 L290.5,-559.9 L308.1,-595.9 L289.7,-626.9 L368.0,-754.6 L418.5,-855.3 L451.8,-919.9 L500.2,-919.6 L513.5,-970.2 L608.6,-955.7 L616.0,-1015.4 L647.3,-1019.1 L714.5,-974.7 L793.2,-912.9 L794.6,-773.0 L811.6,-737.7 L724.8,-712.0 Z"/>
+          <g class="context-label">
+            <text x="145" y="308">GERMANY</text>
+            <text x="228" y="88">SWEDEN</text>
+          </g>
+        </g>
+        <path id="ireg-dk" class="ireg-fill" d="M156.3,129.5 L144.0,163.7 L129.0,153.9 L92.7,219.2 L106.4,263.5 L74.1,277.3 L36.0,265.3 L15.5,214.9 L14.0,122.1 L22.4,97.6 L36.9,70.3 L81.3,64.7 L99.0,39.6 L139.6,14.0 L137.9,60.7 L122.9,90.3 L129.0,115.7 L156.3,129.5 Z M246.0,206.5 L215.7,280.1 L163.0,228.8 L155.9,191.1 L229.9,161.0 L246.0,206.5 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-dk" x="130" y="175">DENMARK</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Harald Bluetooth's Denmark</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline (mainland Jutland plus the largest eastern islands, Zealand and Funen; smaller islands and the Baltic island of Bornholm are omitted for clarity) &mdash; simplified from source data, no internal partition. Germany, Denmark's only land neighbor, and Sweden across the narrow &Oslash;resund strait, shown faint for context only.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <rect x="90" width="34" height="200" fill="#f4efe1"/>
+              <rect y="83" width="300" height="34" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the Dannebrog &mdash; red field, offset white cross</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1814 &ndash; present</div>
+            <h3 class="card-title">Kingdom of Denmark</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Sovereign kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> the January 1814 Treaty of Kiel forces Denmark, on the losing side of the Napoleonic Wars, to cede Norway to the King of Sweden &mdash; but Denmark negotiates hard and keeps its older North Atlantic dependencies, Iceland, the Faroe Islands, and Greenland, carved out of the transfer. The June Constitution of 1849 ends centuries of absolute monarchy and establishes a constitutional, parliamentary system still in force today. German forces invade on 9 April 1940; Denmark capitulates within hours and lives under an unusually "model" occupation &mdash; King Christian X remains on the throne and the elected government keeps functioning &mdash; until Berlin imposes direct martial law in August 1943 after resistance sabotage escalates. Liberation comes in May 1945. Iceland uses Denmark's own wartime paralysis to hold a 1944 independence referendum, ending their personal union for good; Denmark becomes a founding NATO member in 1949 and joins the EU (then EEC) in 1973, while Greenland and the Faroe Islands are granted home rule in 1979 and 1948 respectively and remain part of the Danish Realm today.</p>
+            <p><span class="label">What it represents:</span> the same Dannebrog flown since 1219, minus only the Kalmar Union's interruption &mdash; a design old enough, and used continuously enough, that it is widely cited as the oldest state flag still in everyday use anywhere in the world. Remarkably, occupying Germany never replaced it: the Dannebrog kept flying over Denmark for almost the entire war.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">Roughly 28:37 (state flag); civil "splitflag" variants are swallow-tailed. Cross bar offset toward the hoist.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, white Scandinavian cross with the vertical arm shifted left of center.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <rect x="90" width="34" height="200" fill="#f4efe1"/>
+              <rect y="83" width="300" height="34" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the same Dannebrog, flown by both halves of the union</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1523 &ndash; 1814</div>
+            <h3 class="card-title">Denmark&ndash;Norway (Oldenburg personal union)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Union kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> when Sweden breaks free of the Kalmar Union in 1523, Denmark and Norway stay bound together under the House of Oldenburg &mdash; a narrower, two-way union that will outlast the original three-way arrangement by nearly three centuries. Christian III's Reformation of 1536 makes Lutheranism the state religion and formally reduces Norway's own institutions to a Danish dependency in all but name, with real power sitting firmly in Copenhagen. Denmark-Norway becomes a minor colonial and mercantile power &mdash; trading posts in India and West Africa, the Danish West Indies in the Caribbean &mdash; through the 17th and 18th centuries, before the Napoleonic Wars prove disastrous: the Royal Navy seizes the Danish fleet at Copenhagen in 1807, pushing Denmark into an alliance with Napoleon that ends in defeat and, in 1814, the loss of Norway itself.</p>
+            <p><span class="label">What it represents:</span> the Dannebrog continues as the shared banner of both kingdoms &mdash; no distinct Norwegian flag exists yet in this period; Norway will not fly its own separate design until the 19th century, after leaving this union for Sweden's.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio for most of this period.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, offset white cross &mdash; unchanged from the medieval Dannebrog.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#c9a13c"/>
+              <rect x="90" width="34" height="200" fill="#a4302a"/>
+              <rect y="83" width="300" height="34" fill="#a4302a"/>
+              <g fill="#f4efe1">
+                <circle cx="150" cy="52" r="10"/>
+                <circle cx="126" cy="152" r="10"/>
+                <circle cx="174" cy="152" r="10"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the union's own banner &mdash; a gold field, red cross, three crowns</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1397 &ndash; 1523</div>
+            <h3 class="card-title">Kalmar Union (Denmark, Norway &amp; Sweden)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Union kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> Margaret I of Denmark &mdash; regent of Denmark, Norway, and (by conquest) Sweden, and one of medieval Europe's most formidable rulers &mdash; spends the 1380s and 1390s assembling personal control over all three crowns. At Kalmar Castle in June 1397 her great-nephew Eric of Pomerania is crowned king of a single union binding all of Scandinavia, with Denmark the dominant partner throughout. The union never merges institutions; each kingdom keeps its own laws and nobility. Swedish resentment of Danish-favoring rule builds for over a century, boiling over after the Stockholm Bloodbath of November 1520, when Danish king Christian II has dozens of Swedish nobles and clergy executed. Gustav Vasa's rebellion captures Stockholm by June 1523, ending Swedish participation in the union for good.</p>
+            <p><span class="label">What it represents:</span> a distinct union banner &mdash; gold field, red cross, three crowns representing the three united kingdoms &mdash; used alongside continued domestic use of the Dannebrog within Denmark itself; the union symbol, not the Dannebrog, is what this era is remembered for.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Gold field, red offset cross, three white/silver crowns (simplified here as circles).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Gold</span><span class="hex">#C9A13C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">Crowns, white</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <rect x="90" width="34" height="200" fill="#f4efe1"/>
+              <rect y="83" width="300" height="34" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the Dannebrog, in the form it has kept for 800 years</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1219 &ndash; 1397</div>
+            <h3 class="card-title">Kingdom of Denmark (medieval, Dannebrog era)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> King Valdemar II ("the Victorious") leads a Danish crusading army into Estonia, expanding Danish power around the Baltic. Tradition holds that at the Battle of Lindanise (near modern Tallinn) on 15 June 1219, as the battle turns against the Danes, a red cloth bearing a white cross falls from the sky &mdash; the Dannebrog &mdash; rallying the troops to victory. The legend is first recorded in a 16th-century chronicle, centuries after the supposed event, so historians treat it as a national origin myth rather than verified fact; still, the flag design itself is attested from around this period, and Denmark's claim to the world's oldest continuously used national flag rests on it. Valdemar's Baltic conquests mostly unravel after his capture and ransom in 1223, but the flag outlasts the empire that supposedly produced it.</p>
+            <p><span class="label">What it represents:</span> red field, offset white Scandinavian cross &mdash; the Dannebrog design, essentially unchanged in the eight centuries since, with only the Kalmar Union's own banner briefly displacing it as the flag of state.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for this era.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, white cross with the vertical arm offset toward the hoist &mdash; unchanged since.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; pre-Dannebrog era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 965 &ndash; 1219</div>
+            <h3 class="card-title">Kingdom of Denmark (medieval, pre-Dannebrog)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> Gorm the Old is traditionally regarded as the first historically attested king of a unified Denmark, ruling from Jelling until his death around 958&ndash;964. His son, Harald "Bluetooth" Gormsson, raises the larger of the two Jelling stones around 965 with a runic inscription proclaiming he "won for himself all of Denmark and Norway, and made the Danes Christian" &mdash; effectively Denmark's own birth certificate as a unified Christian kingdom, and today a UNESCO World Heritage site. Harald's descendants Sweyn Forkbeard and Cnut the Great extend Danish power into England in the early 11th century, briefly ruling a North Sea empire spanning Denmark, England, and Norway, though it does not survive Cnut's death in 1035.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag survives from this earliest two and a half centuries of the unified kingdom; heraldic flags of this kind are still generations away across most of Europe. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="scandinavia-hub.html"><b>Scandinavia hub</b><span>Five countries, eleven centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed; boundary source data: johan/world.geo.json.
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var DK_PRE = "#8a6a3a", DK_DANNEBROG = "#a9762f", DK_KALMAR = "#c9a13c", DK_UNION = "#9c3b28", DK_MODERN = "#a4302a";
+
+  var IFLAGS = {
+    undocumented: '<rect width="300" height="200" fill="#cfc6ae"/><text x="150" y="132" font-size="74" text-anchor="middle" fill="#8a7d5c" font-family="serif">?</text>',
+    dannebrog: '<rect width="300" height="200" fill="#a4302a"/><rect x="90" width="34" height="200" fill="#f4efe1"/><rect y="83" width="300" height="34" fill="#f4efe1"/>',
+    kalmar: '<rect width="300" height="200" fill="#c9a13c"/><rect x="90" width="34" height="200" fill="#a4302a"/><rect y="83" width="300" height="34" fill="#a4302a"/><g fill="#f4efe1"><circle cx="150" cy="52" r="10"/><circle cx="126" cy="152" r="10"/><circle cx="174" cy="152" r="10"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML =
+    '<span><span class="sw" style="background:' + DK_PRE + '"></span>Kingdom of Denmark (pre-Dannebrog)</span>' +
+    '<span><span class="sw" style="background:' + DK_DANNEBROG + '"></span>Kingdom of Denmark (Dannebrog era)</span>' +
+    '<span><span class="sw" style="background:' + DK_KALMAR + '"></span>Kalmar Union</span>' +
+    '<span><span class="sw" style="background:' + DK_UNION + '"></span>Denmark&ndash;Norway (union)</span>' +
+    '<span><span class="sw" style="background:' + DK_MODERN + '"></span>Kingdom of Denmark (modern)</span>';
+
+  var ISNAP = [
+    { year:"c. 965", name:"Harald Bluetooth's Denmark", fill: DK_PRE, flagKey:"undocumented", owner:"Kingdom of Denmark",
+      story:"Gorm the Old is the first historically attested king of a unified Denmark; his son Harald Bluetooth raises the larger Jelling stone around 965, proclaiming he “won for himself all of Denmark and Norway, and made the Danes Christian.” No flag survives from this era &mdash; heraldry itself is still generations away." },
+    { year:"1219", name:"The Dannebrog falls, by legend, at Lindanise", fill: DK_DANNEBROG, flagKey:"dannebrog", owner:"Kingdom of Denmark",
+      story:"Tradition holds that during King Valdemar II's Baltic crusade, a red cloth with a white cross fell from the sky at the Battle of Lindanise on 15 June 1219, rallying a losing Danish army to victory. The story is a 16th-century chronicle's retelling of a 13th-century event, but the flag design itself is genuinely medieval &mdash; the start of the Dannebrog's long, largely unbroken run as Denmark's own flag." },
+    { year:"1397", name:"The Kalmar Union", fill: DK_KALMAR, flagKey:"kalmar", owner:"Kalmar Union (Denmark, Norway & Sweden)",
+      story:"Margaret I unites Denmark, Norway, and Sweden under her great-nephew Eric of Pomerania at Kalmar in June 1397, with Denmark the dominant partner. A distinct union banner &mdash; gold field, red cross, three crowns &mdash; represents the joint realm, even as the Dannebrog stays in domestic use within Denmark itself." },
+    { year:"1523", name:"Sweden breaks away; Denmark–Norway continues", fill: DK_UNION, flagKey:"dannebrog", owner:"Denmark–Norway (personal union)",
+      story:"Gustav Vasa's rebellion ends Swedish participation in the union in 1523, but Denmark and Norway stay bound together under the House of Oldenburg for nearly three more centuries &mdash; a narrower union, with real power concentrated in Copenhagen. The Dannebrog, unchanged, flies over both kingdoms." },
+    { year:"1814", name:"Treaty of Kiel — Norway lost, Iceland kept", fill: DK_MODERN, flagKey:"dannebrog", owner:"Kingdom of Denmark",
+      story:"Denmark, on the losing side of the Napoleonic Wars, is forced to cede Norway to Sweden in January 1814 &mdash; but keeps Iceland, the Faroe Islands, and Greenland. The 1849 June Constitution ends absolute monarchy soon after, establishing the constitutional, parliamentary kingdom that continues today." },
+    { year:"1945–present", name:"Occupation, liberation, and the modern kingdom", fill: DK_MODERN, flagKey:"dannebrog", owner:"Kingdom of Denmark",
+      story:"Germany occupies Denmark from April 1940, but in an unusually light touch, the Danish king and elected government keep functioning until Berlin imposes direct martial law in August 1943 &mdash; the Dannebrog keeps flying almost the entire time, nearly unique among WWII-occupied states. Liberation comes in May 1945; Iceland uses the wartime disruption to become fully independent in 1944, and Denmark goes on to found NATO in 1949 and join the EU in 1973, while Greenland and the Faroe Islands remain self-governing parts of the Danish Realm today." }
+  ];
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+  var iRegFill = document.getElementById("ireg-dk");
+  var iLbl = document.getElementById("ilbl-dk");
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+    iEraOwners.innerHTML = "<b>" + era.owner + "</b>: all of Denmark";
+
+    iRegFill.setAttribute("fill", era.fill);
+    var lblColor = iTextColorFor(era.fill);
+    iLbl.setAttribute("fill", lblColor);
+    iLbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKey) + '<div class="ic-label">Denmark</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
+
+</body></html>

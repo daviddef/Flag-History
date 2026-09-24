@@ -1,0 +1,353 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags Atlas — Index</title>
+<meta name="description" content="Landing page for the family flags atlas: search or browse every country and hub by region, crown, or empire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: 68ch; opacity: .88; margin: 0 0 10px; }
+
+  .search-wrap { margin-top: 36px; }
+  .search-box {
+    width: 100%; padding: 14px 18px; font-size: 1.02rem; font-family: "Source Sans 3", sans-serif;
+    border: 1px solid var(--card-border); border-radius: 4px; background: var(--card); color: var(--ink);
+    outline: none;
+  }
+  .search-box:focus { border-color: var(--brick); }
+  .search-box::placeholder { color: var(--muted); }
+
+  .result-count { margin-top: 18px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); }
+
+  .hubs-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .hubs-section h2 { font-size: 1.3rem; margin: 0 0 16px; }
+  .hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .hub-card {
+    display: block; padding: 22px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .hub-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .hub-card .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .hub-card b { display: block; font-family: "Fraunces", serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; }
+  .hub-card span { color: var(--muted); font-size: .9rem; line-height: 1.5; }
+
+  .countries-section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .countries-section h2 { font-size: 1.3rem; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .country-card {
+    display: block; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+  .country-card .card-head { display: flex; align-items: flex-start; gap: 10px; }
+  .country-card .flag-box { flex: none; width: 40px; margin-top: 1px; }
+  .country-card .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .country-card .head-text { min-width: 0; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.08rem; font-weight: 600; margin-bottom: 4px; }
+  .country-card .status {
+    font-family: "IBM Plex Mono", monospace; font-size: 9px; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--brick); background: var(--paper); border: 1px solid var(--card-border); border-radius: 3px;
+    padding: 2px 6px; display: inline-block;
+  }
+  .country-card .status.pending { color: var(--muted); }
+  .country-card .crowns { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .country-card .crown-tag { font-family: "IBM Plex Mono", monospace; font-size: 9px; color: var(--muted); background: var(--paper); border: 1px solid var(--card-border); border-radius: 10px; padding: 2px 7px; }
+  .country-card.dimmed { opacity: .32; }
+  .country-card.no-link { cursor: default; }
+
+  .empty-state { margin-top: 24px; padding: 30px; text-align: center; color: var(--muted); border: 1px dashed var(--card-border); border-radius: 4px; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.2rem; margin: 0 0 12px; }
+  .about p { max-width: 66ch; opacity: .88; margin: 0 0 12px; font-size: .95rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="kicker">Family research &middot; World flags atlas</p>
+  <h1>Flags Atlas</h1>
+  <p class="lede">Every country and hub in the atlas so far, in one place. Search by name, region, crown, or empire to see who ruled where, and jump straight to the flag timeline.</p>
+
+  <div class="search-wrap">
+    <input type="text" class="search-box" id="searchBox" placeholder="Search a country, region, crown, or empire&hellip;" aria-label="Search countries">
+    <div class="result-count" id="resultCount"></div>
+  </div>
+
+  <div class="countries-section">
+    <h2>All countries</h2>
+    <div class="country-grid" id="countryGrid"></div>
+    <div class="empty-state" id="emptyState" style="display:none;">No countries match that search. Try a broader term, or clear the filters.</div>
+  </div>
+
+  <div class="hubs-section">
+    <h2>The hubs</h2>
+    <div class="hub-grid">
+      <a class="hub-card" href="yugoslavia-hub.html">
+        <span class="swatch-strip" style="background:#a4302a"></span>
+        <span class="meta">Phase 1&ndash;2 &middot; 10 lineages tracked &middot; 9 centuries</span>
+        <b>Former Yugoslavia</b>
+        <span>Croatia, Slovenia, Serbia, Bosnia &amp; Herzegovina, Montenegro, North Macedonia, plus Bulgaria, Albania, and Greece completing the Balkan picture &mdash; a real traced map with a time slider across nine eras, c. 1200&ndash;present.</span>
+      </a>
+      <a class="hub-card" href="habsburg-hub.html">
+        <span class="swatch-strip" style="background:#7a5a9a"></span>
+        <span class="meta">Phase 3 &middot; 10 lineages tracked &middot; 4 centuries</span>
+        <b>Habsburg Lands</b>
+        <span>Austria, Hungary, Czechia, Slovakia, Italy, Romania, Poland &mdash; plus Slovenia, Croatia, and Serbia crossing over from the Yugoslavia hub &mdash; c. 1541&ndash;present.</span>
+      </a>
+      <a class="hub-card" href="germany-hub.html">
+        <span class="swatch-strip" style="background:#2f6b4a"></span>
+        <span class="meta">Phase 4 &middot; 2 lineages tracked &middot; 6 eras</span>
+        <b>German Lands</b>
+        <span>Germany traced as its own real east-west split, plus Austria crossing over from the Habsburg hub &mdash; c. 1815&ndash;present.</span>
+      </a>
+      <a class="hub-card" href="british-isles-hub.html">
+        <span class="swatch-strip" style="background:#1f7a52"></span>
+        <span class="meta">Phase 6 &middot; 5 lineages tracked &middot; 8 eras</span>
+        <b>British Isles</b>
+        <span>England, Scotland, Wales, Northern Ireland, and Ireland &mdash; nine centuries of union, conquest, and partition, from fragmented medieval kingdoms to the 1707 and 1801 unions to the 1922 split of Ireland.</span>
+      </a>
+      <a class="hub-card" href="iberia-hub.html">
+        <span class="swatch-strip" style="background:#c9a13c"></span>
+        <span class="meta">Phase 6 &middot; 2 lineages tracked &middot; 9 eras</span>
+        <b>Iberia</b>
+        <span>Spain and Portugal &mdash; the Reconquista's slow reversal of Al-Andalus, the 1580&ndash;1640 Iberian Union, and each country's own 20th-century path through republic, civil war, and dictatorship.</span>
+      </a>
+      <a class="hub-card" href="low-countries-hub.html">
+        <span class="swatch-strip" style="background:#7c5a2e"></span>
+        <span class="meta">Phase 6 &middot; 3 lineages tracked &middot; 11 eras</span>
+        <b>Low Countries</b>
+        <span>Belgium, the Netherlands, and Luxembourg &mdash; one Burgundian bloc that splits at the 1581 Dutch Revolt, reunites twice (1795, 1815), then splits for good in 1830 and 1890 &mdash; c. 1450&ndash;present.</span>
+      </a>
+      <a class="hub-card" href="scandinavia-hub.html">
+        <span class="swatch-strip" style="background:#1e2f96"></span>
+        <span class="meta">Phase 6 &middot; 5 lineages tracked &middot; 11 eras</span>
+        <b>Scandinavia</b>
+        <span>Sweden, Norway, Denmark, Finland, and Iceland &mdash; all five briefly united by the 1397 Kalmar Union, then splitting apart in five separate stages: 1523, 1809, 1814, 1905, 1917, and 1944 &mdash; c. 900&ndash;present, with Iceland's true North Atlantic isolation preserved on the map.</span>
+      </a>
+      <a class="hub-card" href="baltics-hub.html">
+        <span class="swatch-strip" style="background:#9e3039"></span>
+        <span class="meta">Phase 6 &middot; 3 lineages tracked &middot; 11 eras</span>
+        <b>Baltic States</b>
+        <span>Lithuania, Latvia, and Estonia &mdash; centuries of genuinely separate medieval fates (crusader Terra Mariana vs. free Lithuania) collapsing into a remarkably synchronized 20th century: independence (1918), Soviet annexation (1940), Nazi occupation (1941), Soviet reoccupation (1944/45), and restoration (1991), all four flips shared by all three at once.</span>
+      </a>
+      <a class="hub-card" href="eastern-europe-hub.html">
+        <span class="swatch-strip" style="background:#0057b7"></span>
+        <span class="meta">Phase 6 &middot; 3 lineages tracked &middot; 10 eras</span>
+        <b>Eastern Europe</b>
+        <span>Ukraine, Belarus, and Moldova &mdash; a common medieval ancestor in Kievan Rus', then a thousand years pulled apart by Lithuania, Poland, the Ottomans, Russia, and the Soviet Union before landing on three separate flags in 1991.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>Roadmap &mdash; toward the whole globe</h2>
+    <p>The long-term goal: every country in the world gets its own dedicated page like Croatia's, and every region gets a real cross-country map hub first. Current phase status:</p>
+    <p><b>Phase 1&ndash;2, Former Yugoslavia:</b> complete &mdash; hub plus all 9 dedicated country pages (Bulgaria, Albania, and Greece included).<br>
+    <b>Phase 3, Habsburg Lands:</b> complete &mdash; hub plus all 7 dedicated country pages.<br>
+    <b>Phase 4, German Lands:</b> complete &mdash; hub plus Germany's own page.<br>
+    <b>Phase 5:</b> complete &mdash; every hub-only country from Phases 1&ndash;4 now has its own dedicated page.<br>
+    <b>Phase 6a, six new hubs:</b> complete &mdash; British Isles, Iberia, Low Countries, Scandinavia, Baltic States, and Eastern Europe.<br>
+    <b>Phase 6b:</b> complete &mdash; dedicated pages built for all 18 Phase 6 countries.<br>
+    <b>Phase 7+:</b> next up, starting with Russia as its own phase given its scale, then broadening outward continent by continent.</p>
+  </div>
+
+  <div class="about">
+    <h2>How this index works</h2>
+    <p>Each card below is one country. A <b>Country</b> badge means a full paint-ready flag timeline exists, newest flag first, with an internal-regions map of that country's own historically distinct areas. A <b>Hub</b> badge means the country appears as a real, colored region in a hub's cross-country map and timeline, but doesn't have its own dedicated flag-by-flag page yet &mdash; the card links to that hub instead.</p>
+    <p>The crown/empire tags under each card are the powers that controlled that country for some real stretch of its history, drawn from the hub maps' own era data &mdash; not exhaustive, but accurate to what's actually been built so far. They're searchable too: try typing "Ottoman" or "Habsburg" into the box above.</p>
+  </div>
+
+  <footer>
+    Part of a family-research project. See each hub or country page for full sourcing (Wikipedia, Flags of the World, Britannica).
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var FLAGS = {
+    croatia: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1e2f96"/><g transform="translate(150,100) scale(0.5)"><rect x="-45" y="-45" width="90" height="90" fill="#f4efe1" stroke="#5c4a1a" stroke-width="2"/><g fill="#a4302a"><rect x="-45" y="-45" width="18" height="18"/><rect x="-9" y="-45" width="18" height="18"/><rect x="27" y="-45" width="18" height="18"/><rect x="-27" y="-27" width="18" height="18"/><rect x="9" y="-27" width="18" height="18"/><rect x="-45" y="-9" width="18" height="18"/><rect x="-9" y="-9" width="18" height="18"/><rect x="27" y="-9" width="18" height="18"/><rect x="-27" y="9" width="18" height="18"/><rect x="9" y="9" width="18" height="18"/><rect x="-45" y="27" width="18" height="18"/><rect x="-9" y="27" width="18" height="18"/><rect x="27" y="27" width="18" height="18"/></g></g>',
+    slovenia: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#1e2f96"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><rect x="38" y="30" width="64" height="60" fill="#1e2f96" stroke="#c9a13c" stroke-width="2"/>',
+    serbia: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#1e2f96"/><rect y="133.3" width="300" height="66.7" fill="#f4efe1"/><ellipse cx="108" cy="100" rx="34" ry="28" fill="#f4efe1" stroke="#8a6a1f" stroke-width="1.5"/><text x="108" y="110" font-size="22" text-anchor="middle" fill="#a4302a" font-family="serif">⚜</text>',
+    bosnia: '<rect width="300" height="200" fill="#0018a8"/><path d="M0,0 L120,0 L300,200 L300,150 L60,0 Z" fill="#fecb00"/><g fill="#f4efe1"><path d="M195,25 l3,7 7.5,0.5 -5.7,5 1.8,7.4 -6.6,-4.2 -6.6,4.2 1.8,-7.4 -5.7,-5 7.5,-0.5 Z"/><path d="M220,60 l3,7 7.5,0.5 -5.7,5 1.8,7.4 -6.6,-4.2 -6.6,4.2 1.8,-7.4 -5.7,-5 7.5,-0.5 Z"/><path d="M245,95 l3,7 7.5,0.5 -5.7,5 1.8,7.4 -6.6,-4.2 -6.6,4.2 1.8,-7.4 -5.7,-5 7.5,-0.5 Z"/><path d="M270,130 l3,7 7.5,0.5 -5.7,5 1.8,7.4 -6.6,-4.2 -6.6,4.2 1.8,-7.4 -5.7,-5 7.5,-0.5 Z"/></g>',
+    montenegro: '<rect width="300" height="200" fill="#c9a13c"/><rect x="10" y="10" width="280" height="180" fill="#a4302a"/><ellipse cx="150" cy="100" rx="45" ry="38" fill="#c9a13c"/><text x="150" y="112" font-size="28" text-anchor="middle" fill="#a4302a" font-family="serif">⚜</text>',
+    macedonia: '<rect width="300" height="200" fill="#ce2028"/><g fill="#f9d616"><circle cx="150" cy="100" r="20"/><path d="M150,100 L150,10 M150,100 L228,55 M150,100 L228,145 M150,100 L150,190 M150,100 L72,145 M150,100 L72,55" stroke="#f9d616" stroke-width="14"/></g>',
+    austria: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
+    hungary: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/>',
+    czechia: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/><path d="M0,0 L130,100 L0,200 Z" fill="#1e2f96"/>',
+    slovakia: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#1e2f96"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><rect x="60" y="70" width="40" height="52" fill="#a4302a" stroke="#f4efe1" stroke-width="2"/>',
+    italy: '<rect width="100" height="200" fill="#0b7a3d"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#a4302a"/>',
+    romania: '<rect width="100" height="200" fill="#1e2f96"/><rect x="100" width="100" height="200" fill="#f9d616"/><rect x="200" width="100" height="200" fill="#a4302a"/>',
+    poland: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/>',
+    bulgaria: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#0b7a3d"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
+    albania: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100) scale(0.09)"><path d="M0,-420 C-210,-380 -350,-260 -350,-100 C-350,100 -180,280 0,380 C180,280 350,100 350,-100 C350,-260 210,-380 0,-420 Z" fill="#241f14"/><path d="M-160,-40 q-60,-140 40,-220 q60,50 20,90 q80,-30 120,10 q60,-20 90,40 q60,10 30,80 q40,60 -30,100 q-80,70 -270,-100 Z" fill="#241f14"/><path d="M160,-40 q60,-140 -40,-220 q-60,50 -20,90 q-80,-30 -120,10 q-60,-20 -90,40 q-60,10 -30,80 q-40,60 30,100 q80,70 270,-100 Z" fill="#241f14"/></g>',
+    greece: '<rect width="300" height="200" fill="#1e5288"/><g fill="#f4efe1"><rect y="0" width="300" height="22"/><rect y="44" width="300" height="22"/><rect y="88" width="300" height="22"/><rect y="132" width="300" height="22"/><rect y="176" width="300" height="22"/></g><rect width="110" height="110" fill="#1e5288"/><rect x="42" y="0" width="26" height="110" fill="#f4efe1"/><rect x="0" y="42" width="110" height="26" fill="#f4efe1"/>',
+    germany: '<rect width="300" height="66.7" fill="#241f14"/><rect y="66.7" width="300" height="66.6" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#f9d616"/>',
+    belgium: '<rect width="100" height="200" fill="#000000"/><rect x="100" width="100" height="200" fill="#fdda24"/><rect x="200" width="100" height="200" fill="#ef3340"/>',
+    netherlands: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/>',
+    luxembourg: '<rect width="300" height="66.7" fill="#ed2939"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#00a1de"/>',
+    lithuania: '<rect width="300" height="66.7" fill="#f9d616"/><rect y="66.7" width="300" height="66.6" fill="#1c7a3d"/><rect y="133.3" width="300" height="66.7" fill="#9e2b25"/>',
+    latvia: '<rect width="300" height="80" fill="#9e3039"/><rect y="80" width="300" height="40" fill="#f4efe1"/><rect y="120" width="300" height="80" fill="#9e3039"/>',
+    estonia: '<rect width="300" height="66.7" fill="#0072ce"/><rect y="66.7" width="300" height="66.6" fill="#000000"/><rect y="133.3" width="300" height="66.7" fill="#f4efe1"/>',
+    sweden: '<rect width="300" height="200" fill="#1e2f96"/><rect x="90" width="34" height="200" fill="#c9a13c"/><rect y="83" width="300" height="34" fill="#c9a13c"/>',
+    norway: '<rect width="300" height="200" fill="#a4302a"/><rect x="82" width="26" height="200" fill="#f4efe1"/><rect y="75" width="300" height="26" fill="#f4efe1"/><rect x="90" width="10" height="200" fill="#1e2f96"/><rect y="83" width="300" height="10" fill="#1e2f96"/>',
+    denmark: '<rect width="300" height="200" fill="#a4302a"/><rect x="90" width="34" height="200" fill="#f4efe1"/><rect y="83" width="300" height="34" fill="#f4efe1"/>',
+    finland: '<rect width="300" height="200" fill="#f4efe1"/><rect x="90" width="34" height="200" fill="#1a3a6b"/><rect y="83" width="300" height="34" fill="#1a3a6b"/>',
+    iceland: '<rect width="300" height="200" fill="#2f6b8a"/><rect x="86" width="26" height="200" fill="#f4efe1"/><rect y="75" width="300" height="26" fill="#f4efe1"/><rect x="94" width="10" height="200" fill="#a4302a"/><rect y="83" width="300" height="10" fill="#a4302a"/>',
+    ireland: '<rect width="100" height="200" fill="#169b62"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#ff883e"/>',
+    ukraine: '<rect width="300" height="100" fill="#1f5fae"/><rect y="100" width="300" height="100" fill="#e8b923"/>',
+    unitedkingdom: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/>',
+    spain: '<rect width="300" height="50" fill="#aa151b"/><rect y="50" width="300" height="100" fill="#f1bf00"/><rect y="150" width="300" height="50" fill="#aa151b"/>',
+    portugal: '<rect width="120" height="200" fill="#0b6e3f"/><rect x="120" width="180" height="200" fill="#a4302a"/><circle cx="120" cy="100" r="34" fill="#f9d616"/>',
+    belarus: '<rect width="300" height="133.3" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/><rect width="30" height="200" fill="#f4efe1"/>',
+    moldova: '<rect width="100" height="200" fill="#003da5"/><rect x="100" width="100" height="200" fill="#f9d616"/><rect x="200" width="100" height="200" fill="#a4302a"/>'
+  };
+  function flagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+
+  var COUNTRIES = [
+    { name:"Croatia", flag:"croatia", ownPage:true, url:"croatia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#a4302a",
+      crowns:["Habsburg","Ottoman","Venice","Napoleonic France","Kingdom of Italy (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
+    { name:"Slovenia", flag:"slovenia", ownPage:true, url:"slovenia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#1e2f96",
+      crowns:["Habsburg","Napoleonic France","Nazi Germany","Kingdom of Italy (WWII)","Hungary (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
+    { name:"Serbia", flag:"serbia", ownPage:true, url:"serbia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#6a3f8f",
+      crowns:["Nemanjić dynasty","Ottoman","Habsburg","Nazi Germany","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
+    { name:"Bosnia & Herzegovina", flag:"bosnia", ownPage:true, url:"bosnia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#c9a13c",
+      crowns:["Kotromanić dynasty","Ottoman","Habsburg","NDH (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
+    { name:"Montenegro", flag:"montenegro", ownPage:true, url:"montenegro-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#7c2e1f",
+      crowns:["Zeta / Crnojević","Venice","Habsburg","Ottoman","Italy (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
+    { name:"North Macedonia", flag:"macedonia", ownPage:true, url:"macedonia-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#c9a13c",
+      crowns:["Byzantine","First Bulgarian Empire","Serbian Empire (Dušan)","Ottoman","Bulgaria (WWII)","Kingdom of Yugoslavia","SFR Yugoslavia","Modern republic"] },
+    { name:"Bulgaria", flag:"bulgaria", ownPage:true, url:"bulgaria-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#9a5a3a",
+      crowns:["First Bulgarian Empire","Byzantine","Second Bulgarian Empire","Ottoman","Autonomous principality","Kingdom of Bulgaria","Axis ally (WWII)","Communist bloc","Modern republic"] },
+    { name:"Albania", flag:"albania", ownPage:true, url:"albania-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#c9603c",
+      crowns:["Medieval principalities","Skanderbeg / League of Lezhë","Ottoman","Principality of Albania","Kingdom of Albania (Zog I)","Italy (personal union)","Communist bloc (isolated)","Modern republic"] },
+    { name:"Greece", flag:"greece", ownPage:true, url:"greece-flags.html", hub:"Former Yugoslavia", region:"Balkans", color:"#2c5f8a",
+      crowns:["Byzantine","Frankokratia (Crusader states)","Ottoman","Kingdom of Greece","Nazi Germany","Military junta","Modern republic"] },
+    { name:"Austria", flag:"austria", ownPage:true, url:"austria-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#7a5a9a",
+      crowns:["Babenberg dynasty","Habsburg","Austria-Hungary","Corporatist state","Nazi Germany","Allied occupation","Modern republic"] },
+    { name:"Hungary", flag:"hungary", ownPage:true, url:"hungary-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#b8863f",
+      crowns:["Árpád dynasty","Ottoman","Habsburg","Austria-Hungary","Communist bloc","Fascist puppet state","Modern republic"] },
+    { name:"Czechia", flag:"czechia", ownPage:true, url:"czechia-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#1e2f96",
+      crowns:["Přemyslid duchy","Kingdom of Bohemia","Habsburg","Czechoslovakia","Nazi Germany (Protectorate)","Communist bloc","Modern republic"] },
+    { name:"Slovakia", flag:"slovakia", ownPage:true, url:"slovakia-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#d4924a",
+      crowns:["Great Moravia","Kingdom of Hungary","Habsburg","Czechoslovakia","Slovak Republic (WWII puppet state)","Communist bloc","Modern republic"] },
+    { name:"Italy", flag:"italy", ownPage:true, url:"italy-flags.html", hub:"Habsburg Lands", region:"Southern Europe", color:"#0b7a3d",
+      crowns:["County/Duchy of Savoy","Kingdom of Sardinia","Napoleonic France","Kingdom of Italy","Italian Social Republic (RSI)","Modern republic"] },
+    { name:"Romania", flag:"romania", ownPage:true, url:"romania-flags.html", hub:"Habsburg Lands", region:"Southeastern Europe", color:"#8c2f6b",
+      crowns:["Wallachia (Ottoman vassal)","Moldavia (Ottoman vassal)","United Principalities","Kingdom of Romania","Fascist / Axis-aligned","Communist bloc","Modern republic"] },
+    { name:"Poland", flag:"poland", ownPage:true, url:"poland-flags.html", hub:"Habsburg Lands", region:"Central Europe", color:"#1f8a8a",
+      crowns:["Piast duchy","Kingdom of Poland","Polish-Lithuanian Commonwealth","Partitioned (Prussia/Russia/Austria)","Second Polish Republic","Nazi/Soviet occupation","Communist bloc","Modern republic"] },
+    { name:"Germany", flag:"germany", ownPage:true, url:"germany-flags.html", hub:"German Lands", region:"Central Europe", color:"#2f6b4a",
+      crowns:["Holy Roman Empire","Confederation of the Rhine","German Confederation","North German Confederation","German Empire","Weimar Republic","Nazi Germany","Allied occupation","Cold War West (FRG) / East (GDR)","Modern republic"] },
+    { name:"United Kingdom", flag:"unitedkingdom", ownPage:true, url:"uk-flags.html", hub:"British Isles", region:"British Isles", color:"#00247d",
+      crowns:["Kingdom of England","Kingdom of Scotland","Union of the Crowns","Kingdom of Great Britain","United Kingdom of Great Britain and Ireland","Modern United Kingdom"] },
+    { name:"Ireland", flag:"ireland", ownPage:true, url:"ireland-flags.html", hub:"British Isles", region:"British Isles", color:"#1f7a52",
+      crowns:["Gaelic kingdoms","Anglo-Norman Lordship of Ireland","Kingdom of Ireland","United Kingdom of Great Britain and Ireland","Irish Free State / Éire (dominion)","Modern republic"] },
+    { name:"Spain", flag:"spain", ownPage:true, url:"spain-flags.html", hub:"Iberia", region:"Iberia", color:"#aa151b",
+      crowns:["Kingdom of Castile","Crown of Aragón","Emirate of Granada","Catholic Monarchs' union","Habsburg Spain","Bourbon Spain","Napoleonic occupation","Second Republic","Francoist State","Modern constitutional monarchy"] },
+    { name:"Portugal", flag:"portugal", ownPage:true, url:"portugal-flags.html", hub:"Iberia", region:"Iberia", color:"#0b6e3f",
+      crowns:["County of Portugal","Kingdom of Portugal","Iberian Union (Habsburg Spain)","Kingdom of Portugal (restored)","First Republic","Estado Novo","Modern republic"] },
+    { name:"Belgium", flag:"belgium", ownPage:true, url:"belgium-flags.html", hub:"Low Countries", region:"Low Countries", color:"#1a1a1a",
+      crowns:["Burgundian Netherlands","Habsburg (Spanish) Netherlands","Austrian Netherlands","Napoleonic France","United Kingdom of the Netherlands","Nazi Germany","Modern kingdom"] },
+    { name:"Netherlands", flag:"netherlands", ownPage:true, url:"netherlands-flags.html", hub:"Low Countries", region:"Low Countries", color:"#c9762f",
+      crowns:["Burgundian / Habsburg Netherlands","Dutch Republic","Batavian Republic","Kingdom of Holland","Napoleonic France","United Kingdom of the Netherlands","Nazi Germany","Modern kingdom"] },
+    { name:"Luxembourg", flag:"luxembourg", ownPage:true, url:"luxembourg-flags.html", hub:"Low Countries", region:"Low Countries", color:"#00a1de",
+      crowns:["Burgundian / Habsburg Netherlands","Spanish Netherlands","Austrian Netherlands","Napoleonic France","Personal union w/ Dutch crown","Nazi Germany","Modern grand duchy"] },
+    { name:"Lithuania", flag:"lithuania", ownPage:true, url:"lithuania-flags.html", hub:"Baltics", region:"Baltics", color:"#1c7a3d",
+      crowns:["Grand Duchy of Lithuania","Polish-Lithuanian Commonwealth","Russian Empire","Independent republic (1918)","Soviet Union","Nazi Germany","Soviet Union (LSSR)","Modern republic"] },
+    { name:"Latvia", flag:"latvia", ownPage:true, url:"latvia-flags.html", hub:"Baltics", region:"Baltics", color:"#9e3039",
+      crowns:["Livonian Order","Duchy of Courland","Swedish crown","Russian Empire","Independent republic (1918)","Soviet Union","Nazi Germany","Soviet Union (LSSR)","Modern republic"] },
+    { name:"Estonia", flag:"estonia", ownPage:true, url:"estonia-flags.html", hub:"Baltics", region:"Baltics", color:"#0072ce",
+      crowns:["Livonian Order","Danish Estonia","Swedish crown","Russian Empire","Independent republic (1918)","Soviet Union","Nazi Germany","Soviet Union (ESSR)","Modern republic"] },
+    { name:"Sweden", flag:"sweden", ownPage:true, url:"sweden-flags.html", hub:"Scandinavia", region:"Scandinavia", color:"#1e2f96",
+      crowns:["Svear/Götar chieftaincies","Kingdom of Sweden","Kalmar Union","Vasa dynasty","Union of Sweden and Norway","Modern kingdom"] },
+    { name:"Norway", flag:"norway", ownPage:true, url:"norway-flags.html", hub:"Scandinavia", region:"Scandinavia", color:"#c0392b",
+      crowns:["Fragmented chieftaincies","Kingdom of Norway","Kalmar Union","Denmark–Norway","Union of Sweden and Norway","Nazi Germany (occupation)","Modern kingdom"] },
+    { name:"Denmark", flag:"denmark", ownPage:true, url:"denmark-flags.html", hub:"Scandinavia", region:"Scandinavia", color:"#a4302a",
+      crowns:["Jelling dynasty","Kingdom of Denmark","Kalmar Union","Denmark–Norway","Nazi Germany (occupation)","Modern kingdom"] },
+    { name:"Finland", flag:"finland", ownPage:true, url:"finland-flags.html", hub:"Scandinavia", region:"Scandinavia", color:"#1a3a6b",
+      crowns:["Finnic tribal lands","Part of Sweden","Kalmar Union","Grand Duchy of Finland (Russian Empire)","Modern republic"] },
+    { name:"Iceland", flag:"iceland", ownPage:true, url:"iceland-flags.html", hub:"Scandinavia", region:"Scandinavia", color:"#2f6b8a",
+      crowns:["Icelandic Commonwealth (Althing)","Kingdom of Norway","Kalmar Union","Denmark–Norway","Kingdom of Iceland (union w/ Denmark)","Modern republic"] },
+    { name:"Ukraine", flag:"ukraine", ownPage:true, url:"ukraine-flags.html", hub:"Eastern Europe", region:"Eastern Europe", color:"#1f5fae",
+      crowns:["Kievan Rus'","Galicia-Volhynia","Grand Duchy of Lithuania","Kingdom of Poland","Cossack Hetmanate","Russian Empire","Ukrainian People's Republic","Soviet Union","Nazi Germany (occupation)","Modern republic"] },
+    { name:"Belarus", flag:"belarus", ownPage:true, url:"belarus-flags.html", hub:"Eastern Europe", region:"Eastern Europe", color:"#a4302a",
+      crowns:["Principality of Polotsk","Grand Duchy of Lithuania","Polish-Lithuanian Commonwealth","Russian Empire","Belarusian People's Republic","Soviet Union (BSSR)","Modern republic"] },
+    { name:"Moldova", flag:"moldova", ownPage:true, url:"moldova-flags.html", hub:"Eastern Europe", region:"Eastern Europe", color:"#003da5",
+      crowns:["Principality of Moldavia (Ottoman vassal)","Russian Empire (Bessarabia)","Kingdom of Romania","Soviet Union (Moldavian SSR)","Modern republic"] }
+  ];
+
+  var grid = document.getElementById("countryGrid");
+  var searchBox = document.getElementById("searchBox");
+  var resultCountEl = document.getElementById("resultCount");
+  var emptyStateEl = document.getElementById("emptyState");
+
+  function renderGrid() {
+    var q = searchBox.value.trim().toLowerCase();
+    var matched = COUNTRIES.filter(function (c) {
+      if (!q) return true;
+      var hay = (c.name + " " + c.region + " " + c.hub + " " + c.crowns.join(" ")).toLowerCase();
+      return hay.indexOf(q) !== -1;
+    });
+
+    resultCountEl.textContent = matched.length + " of " + COUNTRIES.length + " countries";
+    emptyStateEl.style.display = matched.length ? "none" : "block";
+
+    grid.innerHTML = matched.map(function (c) {
+      var statusHtml = c.ownPage
+        ? '<span class="status">Country</span>'
+        : '<span class="status pending">Hub</span>';
+      var subtitle = c.ownPage ? c.region : (c.region + ' &middot; ' + c.hub);
+      var crownsHtml = c.crowns.map(function (t) {
+        return '<span class="crown-tag">' + t + '</span>';
+      }).join("");
+      return '<a class="country-card" href="' + c.url + '">' +
+        '<span class="swatch-strip" style="background:' + c.color + '"></span>' +
+        '<div class="card-head">' +
+          '<div class="flag-box">' + flagSvg(c.flag) + '</div>' +
+          '<div class="head-text"><b>' + c.name + '</b>' + statusHtml + '</div>' +
+        '</div>' +
+        '<span style="color:var(--muted);font-size:.82rem;">' + subtitle + '</span>' +
+        '<div class="crowns">' + crownsHtml + '</div>' +
+        '</a>';
+    }).join("");
+  }
+
+  searchBox.addEventListener("input", renderGrid);
+
+  renderGrid();
+})();
+</script>
+
+</body></html>

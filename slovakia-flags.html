@@ -1,0 +1,798 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta charset="UTF-8">
+<title>Flags of the Carpathian Frontier</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Slovakia, from Great Moravia to the republic of today — with a map of each era.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: 62ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .ictx-border { fill: none; stroke: var(--hair); stroke-width: 1; opacity: .55; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 8px; font-weight: 600; letter-spacing: .02em; text-anchor: middle; fill: var(--muted); opacity: .7; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="habsburg-hub.html">Habsburg Lands hub</a></p>
+  <p class="kicker">Family research &middot; Phase 5 of the world atlas</p>
+  <h1>Flags of the Carpathian Frontier</h1>
+  <p class="lede">Slovakia was, for eleven centuries, someone else's frontier: the unconquered northern rump of the Kingdom of Hungary when the Ottomans held Buda, the junior half of a seventy-five-year union with the Czechs, and for six wartime years a hollow "independent" state under a priest who answered to Berlin. Its own tricolor &mdash; white, blue, red &mdash; only flew as an official state flag for the first time in 1939, and only stopped being shared with anyone else on 1 January 1993.</p>
+  <p class="lede">No flag in this atlas has a stranger genealogy: today's Slovak state flag is a lightly modified version of the one first raised by a fascist puppet regime, kept because the colors themselves &mdash; not the government that first codified them &mdash; were always understood as Slovak.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Slovakia, c. 825&ndash;present, twelve political entities. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Principality / kingdom</b> &mdash; medieval or early polity</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Autonomous region</b> &mdash; self-governing within a larger state</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#2f6b4a"></span><b>Republic</b> &mdash; democratic, sovereign or federated</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#8c2f2f"></span><b>Communist state</b> &mdash; one-party, Soviet-aligned</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#3f3f3f"></span><b>Fascist / puppet state</b> &mdash; installed by an outside power</div>
+    </div>
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, nine rulers</h2>
+    <p class="imap-sub">Slovakia's own real border, traced whole &mdash; like North Macedonia, this is a page without a genuine internal split to show honestly. The historic regions (Spiš, Šariš, the Váh valley) were geographic and ethnographic, not separately governed the way Royal Hungary and Ottoman Hungary once were. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is the one Habsburg-lands page in the atlas that never splits internally.</b> Unlike Hungary next door &mdash; whose 1541&ndash;1699 partition line runs a few dozen kilometers south of the modern Slovak border &mdash; the territory shown here stayed under a single administration in every era. What changes is only who ruled all of it at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 833</span>
+        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 320 165" xmlns="http://www.w3.org/2000/svg">
+        <g id="ictx-neighbors" pointer-events="none">
+          <path class="ictx-border" d="M14.3,88 L-10.1,72.8 L-34.9,77 L-75.9,52.6 L-94.5,58.6 L-124.2,91.3 L-163.5,65.5 L-193.3,31.2 L-220.3,11.9 L-225.9,-21.8 L-235.1,-45.6 L-196.7,-63 L-177.1,-82.9 L-139.2,-98.4 L-125.9,-113.6 L-112,-104.4 L-88.4,-112.8 L-63.4,-87 L-23.9,-80.1 L-27.2,-58.1 L1.5,-41.5 L9.4,-62.2 L45.7,-53.2 L50.7,-28.2 L90,-23.4 L114.3,16 L98.5,16.1 L90.3,30.5 L78.2,34 L74.7,52.2 L64.6,56 L63.2,63.4 L45.1,71.7 L21.7,70.4 L14.3,88 Z"/>
+          <path class="ictx-border" d="M-88.4,-112.8 L-110,-163.8 L-105.9,-191.4 L-119,-234.2 L-138.2,-262.7 L-123.4,-284.1 L-135.8,-324.8 L-99.7,-348.2 L49.3,-412.3 L102.1,-398.8 L106,-379.3 L157,-378.3 L222.1,-369.2 L319.2,-370.4 L346.3,-361.8 L359,-337.2 L361.3,-301.8 L375.9,-271.4 L375.6,-239.5 L343.9,-223.2 L360.2,-186.1 L361.2,-150.5 L387.8,-80.7 L382.1,-58.2 L355.9,-48.9 L307.9,17.6 L321.5,53.5 L259.8,18.1 L221.8,29.4 L196.8,21.2 L165.6,38.4 L139,10 L117.2,20.9 L90,-23.4 L50.7,-28.2 L45.7,-53.2 L9.4,-62.2 L1.5,-41.5 L-27.2,-58.1 L-23.9,-80.1 L-63.4,-87 L-88.4,-112.8 Z"/>
+          <path class="ictx-border" d="M797.6,-192.3 L817.3,-189.1 L830.7,-207.3 L901.5,-211 L935.2,-165.7 L922,-149.5 L926.4,-124.7 L968.5,-120.8 L986.2,-70.4 L1053.3,-42.3 L1093.8,-54.9 L1126.4,-17.5 L1235.2,7.7 L1214.3,73 L1226,117.1 L1217.7,143.8 L1166.5,149.7 L1139.3,172 L1137.6,207.5 L1095.5,213.9 L1060.3,239.8 L1010.8,244 L965.3,273.8 L968.4,323.6 L994.3,342.9 L1048.1,338.1 L1037.8,366.6 L980,380.5 L908.3,426.7 L878.9,410.5 L890.5,372.9 L832.8,349.5 L892.7,307.6 L877.4,289.2 L795.3,269 L791.7,239.2 L742.7,249 L682.2,352.2 L658.2,338.5 L633.4,351.3 L609.8,336.6 L646.8,275 L643.1,260.7 L704.5,261.8 L672.3,188 L653,174.9 L656.8,147.8 L633,126.3 L572.3,98.4 L502.3,118 L489,136.7 L431.9,156.7 L407.4,137.2 L340.9,128 L318,145.1 L314.4,123.7 L285,101.9 L310,48.9 L321.5,53.5 L307.9,17.6 L355.9,-48.9 L382.1,-58.2 L387.8,-80.7 L361.2,-150.5 L415.4,-175.3 L456.4,-177.1 L630.2,-138.4 L650,-152.4 L663.8,-133.7 L732.5,-129.8 L735.9,-170 L752.2,-187.6 L797.6,-192.3 Z"/>
+          <path class="ictx-border" d="M-25.8,227.5 L-8.3,176 L-18.5,158.7 L11.3,158.5 L15.3,125.8 L42.1,146.3 L61.6,155 L106,145.2 L110.2,129.2 L131.2,126.8 L157,114.4 L162.7,119.5 L187.5,109.5 L199.9,90.7 L217.2,85.8 L273.8,110.1 L285,101.9 L314.4,123.7 L318,145.1 L285.8,161.9 L260.8,216.1 L228.8,270.4 L186.5,285.5 L153.5,281.9 L93.2,314.9 L49.6,299.5 L10.1,265.2 L-6.7,255.4 L-16.9,228.4 L-25.8,227.5 Z"/>
+          <path class="ictx-border" d="M15.3,125.8 L11.3,158.5 L-18.5,158.7 L-8.3,176 L-25.8,227.5 L-35.9,241 L-82.1,243 L-108.8,261.1 L-152.4,254.9 L-227.9,234.3 L-239.7,206.4 L-292,220.3 L-298.1,235.6 L-330.1,224.2 L-357.1,222 L-381,207.4 L-372.9,187.9 L-374.9,173.7 L-359,169.3 L-332.3,191.5 L-324.7,170.4 L-278.1,173.8 L-240.4,159.4 L-215,161.9 L-198.6,178.3 L-193.6,164.7 L-201.1,112.6 L-182.1,102.4 L-163.5,65.5 L-124.2,91.3 L-94.5,58.6 L-75.9,52.6 L-34.9,77 L-10.1,72.8 L14.3,88 L10,98.1 L15.3,125.8 Z"/>
+          <text class="context-label" x="18" y="10">CZECHIA</text>
+          <text class="context-label" x="200" y="6">POLAND</text>
+          <text class="context-label" x="314" y="75">UKRAINE</text>
+          <text class="context-label" x="125" y="160">HUNGARY</text>
+          <text class="context-label" x="10" y="158">AUSTRIA</text>
+        </g>
+        <path id="ireg-sk" class="ireg-fill" d="M114.3,16.0 L117.2,20.9 L139.0,10.0 L165.6,38.4 L196.8,21.2 L221.8,29.4 L259.8,18.1 L310.0,48.9 L295.3,69.7 L285.0,101.9 L273.8,110.1 L217.2,85.8 L199.9,90.7 L187.5,109.5 L162.7,119.5 L157.0,114.4 L131.2,126.8 L110.2,129.2 L106.0,145.2 L61.6,155.0 L42.1,146.3 L15.3,125.8 L10.0,98.1 L14.2,88.0 L21.7,70.4 L45.1,71.7 L63.2,63.4 L64.6,56.0 L74.7,52.2 L78.2,34.0 L90.3,30.5 L98.5,16.1 L114.3,16.0 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-sk" x="150" y="72">SLOVAKIA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Great Moravia (Nitra united in)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="12">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#f4efe1"/>
+              <rect y="66.7" width="300" height="66.6" fill="#1e2f96"/>
+              <rect y="133.3" width="300" height="66.7" fill="#a4302a"/>
+              <g transform="translate(85,100)">
+                <path d="M-22,-30 h44 v42 q0,26 -22,32 q-22,-6 -22,-32 Z" fill="#1e2f96" stroke="#f4efe1" stroke-width="2.5"/>
+                <path d="M-22,-5 h44 M0,-27 v49 M-14,-19 h28 M-14,11 h28" stroke="#f4efe1" stroke-width="4"/>
+                <path d="M-4,-40 q4,10 -2,16 q6,-2 8,6 q6,-4 6,4" fill="none" stroke="#a4302a" stroke-width="3"/>
+                <path d="M-4,-40 q4,10 -2,16 q6,-2 8,6 q6,-4 6,4" fill="none" stroke="#a4302a" stroke-width="3" transform="scale(-1,1)"/>
+              </g>
+            </svg>
+            <div class="flag-caption">white&ndash;blue&ndash;red with the double cross on three hills, offset to the hoist</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1993 &ndash; present</div>
+            <h3 class="card-title">Slovak Republic</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Sovereign state</span></div>
+            <p><span class="label">Who &amp; why:</span> the "Velvet Divorce" &mdash; negotiated entirely by parliament, with no referendum in either republic &mdash; dissolves Czechoslovakia at midnight on 1 January 1993. Vladimír Mečiar's HZDS had pushed hardest for separation; Slovakia joins NATO in 2004 and the EU the same year, then adopts the euro in 2009.</p>
+            <p><span class="label">What it represents:</span> the same white-blue-red tricolor and double-cross-on-three-hills coat of arms first codified for the 1939 wartime state, with the shield redrawn and the tricolor's proportions fixed by the 1992 constitution &mdash; a deliberate reclaiming of a much older national symbol rather than the invention of a new one.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal horizontal bands, coat of arms offset toward the hoist.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top, blue middle, red bottom; state arms (double cross on three blue hills) left of center.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="11">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="100" fill="#f4efe1"/>
+              <rect y="100" width="300" height="100" fill="#a4302a"/>
+              <path d="M0,0 L150,100 L0,200 Z" fill="#1e2f96"/>
+            </svg>
+            <div class="flag-caption">the Czechoslovak flag, kept through the "hyphen war" to the very end</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1990 &ndash; 1993</div>
+            <h3 class="card-title">Czech and Slovak Federative Republic</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Federated republic</span></div>
+            <p><span class="label">Who &amp; why:</span> after the November 1989 Velvet Revolution ends one-party rule, the country is renamed twice within weeks &mdash; briefly the "Czechoslovak Federative Republic," then, after Slovak objections to the missing hyphen, the "Czech and Slovak Federative Republic" from 20 April 1990. Václav Havel presides over a genuinely federal state until Mečiar and Klaus agree to dissolve it in 1992.</p>
+            <p><span class="label">What it represents:</span> the same white-red flag with the blue hoist triangle adopted in 1920, unchanged through the "hyphen war" dispute even as the state's very name was fought over &mdash; Slovak proposals for a new shared symbol went nowhere before the union itself ended.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3; blue isosceles triangle from the hoist to flag center.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top, red bottom, blue wedge overlaid from the hoist.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="10">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="100" fill="#f4efe1"/>
+              <rect y="100" width="300" height="100" fill="#a4302a"/>
+              <path d="M0,0 L150,100 L0,200 Z" fill="#1e2f96"/>
+            </svg>
+            <div class="flag-caption">unchanged through four decades of one-party rule</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1948 &ndash; 1990</div>
+            <h3 class="card-title">Czechoslovak Socialist Republic</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#8c2f2f"></span>Communist state</span></div>
+            <p><span class="label">Who &amp; why:</span> the Communist Party seizes full control in the February 1948 coup; the country is formally renamed the Czechoslovak Socialist Republic under the 1960 constitution. The 1968 "Prague Spring" reforms are crushed by a Warsaw Pact invasion that August; a 1969 constitutional law federalizes the state into separate Czech and Slovak Socialist Republics under the same central party, giving Slovakia its own nominal republic-level institutions for the first time without changing the overall regime.</p>
+            <p><span class="label">What it represents:</span> notably, Czechoslovakia is one of the few Warsaw Pact states that never adds a Communist star, wheat sheaf, or hammer-and-sickle to its actual national flag &mdash; the 1920 white-red-blue tricolor with the hoist wedge simply continues, the party's symbols confined to the separate state emblem and military insignia.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3; blue isosceles triangle from the hoist to flag center.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top, red bottom, blue wedge overlaid from the hoist. No party emblem on the flag itself.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="9">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="100" fill="#f4efe1"/>
+              <rect y="100" width="300" height="100" fill="#a4302a"/>
+              <path d="M0,0 L150,100 L0,200 Z" fill="#1e2f96"/>
+            </svg>
+            <div class="flag-caption">the same wedge tricolor, restored after six years of wartime rupture</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1945 &ndash; 1948</div>
+            <h3 class="card-title">Third Czechoslovak Republic (restored)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> the Košice Government Programme of April 1945 lays out a restored, reunified Czechoslovak state as Soviet and Romanian forces liberate Slovakia; the wartime Tiso government's officials are tried and Tiso himself is executed for treason in 1947. Genuinely multi-party at first, the republic's democratic institutions are dismantled in the February 1948 Communist coup.</p>
+            <p><span class="label">What it represents:</span> the pre-war 1920 Czechoslovak flag is simply restored &mdash; the 1939&ndash;45 Slovak state's own tricolor and coat of arms are set aside along with the regime that flew them, a clean symbolic break echoed later, in reverse, when Slovakia becomes independent again in 1993.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3; blue isosceles triangle from the hoist to flag center.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top, red bottom, blue wedge overlaid from the hoist.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="8">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#f4efe1"/>
+              <rect y="66.7" width="300" height="66.6" fill="#1e2f96"/>
+              <rect y="133.3" width="300" height="66.7" fill="#a4302a"/>
+              <g transform="translate(85,100)">
+                <path d="M-22,-30 h44 v42 q0,26 -22,32 q-22,-6 -22,-32 Z" fill="#1e2f96" stroke="#f4efe1" stroke-width="2.5"/>
+                <path d="M-22,-5 h44 M0,-27 v49 M-14,-19 h28 M-14,11 h28" stroke="#f4efe1" stroke-width="4"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the first official Slovak state flag &mdash; and today's flag's direct ancestor</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1939 &ndash; 1945</div>
+            <h3 class="card-title">Slovak Republic (1939&ndash;1945, Nazi client state)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#3f3f3f"></span>Fascist / puppet state</span></div>
+            <p><span class="label">Who &amp; why:</span> as Hitler prepares to dismember what remains of Czecho-Slovakia, the Slovak Diet, meeting under direct German pressure, declares independence on 14 March 1939 with the Catholic priest Jozef Tiso as president &mdash; formally sovereign, in practice a client state bound by a "Protection Treaty" that ceded control of its military and foreign policy to Berlin. The regime deports roughly 70,000 Slovak Jews to German-run camps beginning in 1942; the Slovak National Uprising of August&ndash;October 1944 fails militarily but becomes the postwar republic's founding resistance myth.</p>
+            <p><span class="label">What it represents:</span> the traditional white-blue-red Slovak national tricolor, used informally since the 19th century, is formally codified as the state flag for the first time, with the double-cross-on-three-hills arms added offset to the hoist &mdash; the same basic design, minus the regime, that Slovakia readopts in 1993.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal horizontal bands, coat of arms offset toward the hoist.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top, blue middle, red bottom; state arms (double cross on three hills) left of center.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#f4efe1"/>
+              <rect y="66.7" width="300" height="66.6" fill="#1e2f96"/>
+              <rect y="133.3" width="300" height="66.7" fill="#a4302a"/>
+            </svg>
+            <div class="flag-caption">the plain national tricolor, flown alongside (not instead of) the state flag</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">October 1938 &ndash; March 1939</div>
+            <h3 class="card-title">Autonomous Slovak Land (within the Second Czecho-Slovak Republic)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Autonomous region</span></div>
+            <p><span class="label">Who &amp; why:</span> the 30 September 1938 Munich Agreement strips the Sudetenland from the Czech lands and fatally weakens the central government; the 6 October 1938 Žilina Agreement grants Slovakia its own autonomous government under Jozef Tiso within a renamed, hyphenated "Czecho-Slovakia." Hungary annexes a strip of southern Slovakia that November under the First Vienna Award, foreshadowing the full collapse five months later.</p>
+            <p><span class="label">What it represents:</span> the historic white-blue-red Slovak tricolor &mdash; used unofficially by Slovak nationalists since Ľudovít Štúr's 19th-century movement &mdash; flies informally alongside the still-official Czecho-Slovak state flag, a brief five-month rehearsal for the fully independent state's own flag five months later.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio recorded for this informal use.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top, blue middle, red bottom &mdash; no coat of arms.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="100" fill="#f4efe1"/>
+              <rect y="100" width="300" height="100" fill="#a4302a"/>
+              <path d="M0,0 L150,100 L0,200 Z" fill="#1e2f96"/>
+            </svg>
+            <div class="flag-caption">a brand-new flag for a brand-new shared state</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1918 &ndash; 1938</div>
+            <h3 class="card-title">First Czechoslovak Republic</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> Czechoslovakia is proclaimed in Prague on 28 October 1918 as Austria-Hungary collapses, uniting the Czech lands with Slovakia (still legally "Upper Hungary" until this moment) under Tomáš Garrigue Masaryk. Slovakia enters the new state without ever having been a separate polity of its own &mdash; its borders with Hungary are fixed only after further fighting in 1919, and Slovak autonomy movements, led by figures like Andrej Hlinka, push throughout the interwar period for powers the centralized Prague government never fully grants.</p>
+            <p><span class="label">What it represents:</span> a wholly new flag adopted 30 March 1920 &mdash; the historic Bohemian white-over-red bicolor with a blue triangular wedge added from the hoist, both to distinguish it from Poland's identical white-red and to visually include Slovakia (blue was associated with Slovak regional identity) in a flag that was otherwise entirely Czech in origin.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3; blue isosceles triangle from the hoist to flag center.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top, red bottom, blue wedge overlaid from the hoist.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1e2f96"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E2F96</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#a4302a"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/>
+              <g transform="translate(150,100)">
+                <rect x="-18" y="-15" width="36" height="30" rx="2" fill="#0b7a3d" stroke="#c9a13c" stroke-width="2"/>
+                <path d="M-10,-15 q10,-12 20,0" fill="none" stroke="#c9a13c" stroke-width="2.5"/>
+              </g>
+            </svg>
+            <div class="flag-caption">Hungary's own tricolor, flown over a kingdom finally whole again</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1699 &ndash; 1918</div>
+            <h3 class="card-title">Kingdom of Hungary (Habsburg-ruled, reunited)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom (Habsburg crown)</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1699 Treaty of Karlowitz confirms Habsburg control over the whole reunited Kingdom of Hungary, folding the former Royal Hungary frontier &mdash; today's Slovakia &mdash; into the same administration as the reconquered Ottoman core for the first time in over a century and a half. Bratislava (then Pressburg/Pozsony) serves as the kingdom's coronation capital and seat of the Diet until 1848, a status inherited directly from its frontier role; the 1867 Ausgleich then makes Hungary, Slovakia included, the co-equal Transleithanian half of Austria-Hungary until the 1918 collapse.</p>
+            <p><span class="label">What it represents:</span> the same Hungarian red-white-green with the Holy Crown coat of arms flown across the whole kingdom &mdash; Slovakia's Slovak-speaking population lives under this flag for over two centuries as one linguistic minority within a state whose official language shifts increasingly toward Magyarization in the flag's final decades.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal horizontal bands.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red-white-green; state coat of arms with Holy Crown centered (simplified here).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0b7a3d"></span><span class="meta"><span class="name">Green</span><span class="hex">#0B7A3D</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#a4302a"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/>
+              <g transform="translate(150,100)">
+                <rect x="-18" y="-15" width="36" height="30" rx="2" fill="#0b7a3d" stroke="#c9a13c" stroke-width="2"/>
+                <path d="M-10,-15 q10,-12 20,0" fill="none" stroke="#c9a13c" stroke-width="2.5"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the same Hungarian crown flag &mdash; flown over the one part of Hungary the Ottomans never took</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1526 &ndash; 1699</div>
+            <h3 class="card-title">Royal Hungary (Habsburg-ruled, unconquered crownland)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom (Habsburg crown)</span></div>
+            <p><span class="label">Who &amp; why:</span> after King Louis II dies at Mohács in 1526 and the Ottomans capture Buda in 1541, the historic Kingdom of Hungary splits three ways &mdash; Ottoman Hungary in the center, semi-autonomous Transylvania in the east, and Habsburg "Royal Hungary" in the north and west, whose territory is essentially today's Slovakia plus a strip of western Hungary. Bratislava becomes Royal Hungary's capital and, from 1563, its coronation city, hosting eleven Habsburg coronations over the next two-and-a-half centuries.</p>
+            <p><span class="label">What it represents:</span> the same Hungarian coat-of-arms flag the whole kingdom had used before Mohács continues to fly here, unbroken &mdash; Slovakia is, in effect, the one piece of medieval Hungary that never stops being ruled as the Kingdom of Hungary for a single year of this century and a half.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio for most of this period.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red-white-green with the Hungarian coat of arms, used on state and military occasions.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0b7a3d"></span><span class="meta"><span class="name">Green</span><span class="hex">#0B7A3D</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#a4302a">
+                <rect y="0" width="300" height="25"/>
+                <rect y="50" width="300" height="25"/>
+                <rect y="100" width="300" height="25"/>
+                <rect y="150" width="300" height="25"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the Árpád stripes &mdash; the dynasty's own arms, reconstructed</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1000 &ndash; 1526</div>
+            <h3 class="card-title">Kingdom of Hungary (Medieval)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> Stephen I, crowned c. 1000/1001, completes the conquest and Christianization of the Carpathian Basin his predecessors began, incorporating the former Great Moravian and Magyar-settled lands of present-day Slovakia as the kingdom's northern counties from the outset. Slovak towns flourish within the kingdom &mdash; Košice becomes the first town in Europe granted its own coat of arms, in 1369 &mdash; even as the kingdom's ruling and urban elite is increasingly German- and Hungarian-speaking. The 1526 Battle of Mohács, where King Louis II dies, ends the medieval kingdom outright.</p>
+            <p><span class="label">What it represents:</span> the Árpád stripes &mdash; four red and four white horizontal bands, attested in seals from the 13th century onward &mdash; flown across the whole kingdom, Slovak-inhabited counties included, as the oldest heraldic device associated with the Hungarian crown.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Eight equal horizontal stripes, alternating white and red.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; tribal conquest era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">907 &ndash; 1000</div>
+            <h3 class="card-title">Hungarian Tribal Conquest (Principality of Hungary)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Tribal principality</span></div>
+            <p><span class="label">Who &amp; why:</span> the Magyar tribal federation under Árpád's successors destroys the remnants of Great Moravia and decisively defeats a Bavarian-led army at the 907 Battle of Pressburg (near modern Bratislava), opening the Carpathian Basin, Slovakia included, to Magyar settlement and control over the following decades. Slavic populations in the region are not displaced but gradually incorporated under Magyar rule, a slow process completed well before Stephen I's coronation.</p>
+            <p><span class="label">What it represents:</span> the same pre-heraldic, pre-Christian tribal federation documented on Hungary's own page &mdash; no securely attested flag survives; totemic standards, not a fixed territorial banner, were the norm. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; pre-heraldic era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 825 &ndash; 907</div>
+            <h3 class="card-title">Principality of Nitra &amp; Great Moravia</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Early Slavic principality</span></div>
+            <p><span class="label">Who &amp; why:</span> Pribina rules the semi-independent Principality of Nitra from around the 820s, building what is traditionally dated as the first Christian church in Slavic Central Europe (consecrated c. 828), until Mojmír I of Moravia conquers Nitra and expels Pribina in 833, uniting it with his own Moravian principality to form what historians call Great Moravia. Under Rastislav (r. 846&ndash;870) and especially Svatopluk I (r. 871&ndash;894), Great Moravia becomes the first major Slavic state in the region &mdash; hosting the Byzantine missionaries Cyril and Methodius from 863, who devise the Glagolitic script for Old Church Slavonic &mdash; before internal succession disputes and Magyar pressure bring on its collapse by c. 907.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag survives from this pre-heraldic, early Christian era; Great Moravian rulers are known from coins, seals, and chronicle accounts, not vexillological records. Shown here honestly blank rather than invented, matching how this same class of early Slavic state is treated elsewhere in the atlas.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="habsburg-hub.html"><b>Habsburg Lands hub</b><span>Seven countries, four centuries</span></a>
+      <a class="link-card" href="austria-flags.html"><b>Austria</b><span>Red-white-red since Leopold V</span></a>
+      <a class="link-card" href="hungary-flags.html"><b>Hungary</b><span>Thirteen flags, one tricolor</span></a>
+      <a class="link-card" href="yugoslavia-hub.html"><b>Former Yugoslavia hub</b><span>Nine countries, nine centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var IC = {
+    moravia:"#6e6047", tribal:"#8a6a3f", hungary:"#a9762f", habsburg:"#7a5a9a",
+    czechoslovak:"#1e2f96", tiso:"#3f3f3f", restored:"#2f6b4a", communist:"#8c2f2f", modern:"#d4924a"
+  };
+  var INAMES = {
+    moravia:"Principality of Nitra / Great Moravia", tribal:"Hungarian Tribal Conquest", hungary:"Kingdom of Hungary",
+    habsburg:"Kingdom of Hungary (Habsburg crown)", czechoslovak:"Czechoslovakia (First Republic)",
+    tiso:"Slovak Republic (1939–45, Nazi client)", restored:"Czechoslovakia (restored)",
+    communist:"Czechoslovak Socialist Republic", modern:"Slovak Republic"
+  };
+  var IFLAGS = {
+    moravia: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    tribal: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    hungary: '<rect width="300" height="200" fill="#f4efe1"/><g fill="#a4302a"><rect y="0" width="300" height="25"/><rect y="50" width="300" height="25"/><rect y="100" width="300" height="25"/><rect y="150" width="300" height="25"/></g>',
+    habsburg: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/><g transform="translate(150,100)"><rect x="-18" y="-15" width="36" height="30" rx="2" fill="#0b7a3d" stroke="#c9a13c" stroke-width="2"/><path d="M-10,-15 q10,-12 20,0" fill="none" stroke="#c9a13c" stroke-width="2.5"/></g>',
+    czechoslovak: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/><path d="M0,0 L150,100 L0,200 Z" fill="#1e2f96"/>',
+    tiso: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#1e2f96"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><g transform="translate(85,100)"><path d="M-22,-30 h44 v42 q0,26 -22,32 q-22,-6 -22,-32 Z" fill="#1e2f96" stroke="#f4efe1" stroke-width="2.5"/></g>',
+    restored: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/><path d="M0,0 L150,100 L0,200 Z" fill="#1e2f96"/>',
+    communist: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/><path d="M0,0 L150,100 L0,200 Z" fill="#1e2f96"/>',
+    modern: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#1e2f96"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><g transform="translate(85,100)"><path d="M-22,-30 h44 v42 q0,26 -22,32 q-22,-6 -22,-32 Z" fill="#1e2f96" stroke="#f4efe1" stroke-width="2.5"/><path d="M-22,-5 h44 M0,-27 v49 M-14,-19 h28 M-14,11 h28" stroke="#f4efe1" stroke-width="4"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 833", name:"Great Moravia (Nitra united in)", t:{ sk:IC.moravia }, flagKeys:{ sk:"moravia" },
+      story:"Pribina rules the semi-independent Principality of Nitra from the 820s; Mojmír I of Moravia conquers it and expels Pribina in 833, uniting Nitra with Moravia to form Great Moravia. Under Rastislav and Svatopluk I it becomes the first major Slavic state in the region, hosting Cyril and Methodius from 863. No securely documented flag survives from this pre-heraldic era." },
+    { year:"907", name:"Hungarian tribal conquest", t:{ sk:IC.tribal }, flagKeys:{ sk:"tribal" },
+      story:"The Magyar tribal federation destroys the remnants of Great Moravia and defeats a Bavarian-led army at the 907 Battle of Pressburg, near modern Bratislava, opening the region to Magyar settlement and control. Slavic populations are gradually incorporated, not displaced, over the following decades &mdash; still no attested flag for this tribal, pre-Christian federation." },
+    { year:"1000", name:"Kingdom of Hungary formalized", t:{ sk:IC.hungary }, flagKeys:{ sk:"hungary" },
+      story:"Stephen I's c. 1000/1001 coronation completes the Christian Kingdom of Hungary, incorporating the Slovak-inhabited lands as the kingdom's northern counties from the outset. The Árpád stripes &mdash; four red, four white &mdash; are the oldest attested heraldic device of the crown that rules here for the next five centuries." },
+    { year:"1526", name:"Royal Hungary, the unconquered core", t:{ sk:IC.habsburg }, flagKeys:{ sk:"habsburg" },
+      story:"After Mohács and the 1541 fall of Buda, the old kingdom splits three ways. Today's Slovakia becomes the heart of Habsburg \"Royal Hungary\" &mdash; the one piece of the medieval kingdom the Ottomans never take. Bratislava becomes Royal Hungary's capital and, from 1563, hosts eleven Habsburg coronations." },
+    { year:"1699", name:"Kingdom of Hungary reunited", t:{ sk:IC.habsburg }, flagKeys:{ sk:"habsburg" },
+      story:"The Treaty of Karlowitz reunites the whole Kingdom of Hungary under the Habsburgs, folding the former Ottoman core back in alongside Slovakia. The same red-white-green, Holy-Crown-bearing flag continues, through the 1867 Ausgleich, until Austria-Hungary's 1918 collapse." },
+    { year:"1918", name:"Czechoslovakia declared", t:{ sk:IC.czechoslovak }, flagKeys:{ sk:"czechoslovak" },
+      story:"Czechoslovakia is proclaimed in Prague on 28 October 1918, uniting the Czech lands with Slovakia for the first time in either's history. A wholly new flag &mdash; the historic Bohemian white-over-red bicolor plus a blue hoist wedge &mdash; is adopted in 1920, the blue meant to visually include Slovakia." },
+    { year:"1939", name:"Wartime Slovak Republic", t:{ sk:IC.tiso }, flagKeys:{ sk:"tiso" },
+      story:"As Hitler dismembers Czecho-Slovakia, the Slovak Diet declares independence on 14 March 1939 under Jozef Tiso &mdash; formally sovereign, in practice a German client bound by a Protection Treaty. The traditional white-blue-red Slovak tricolor becomes an official state flag for the first time, with the double-cross-on-hills arms added." },
+    { year:"1945", name:"Czechoslovakia restored", t:{ sk:IC.restored }, flagKeys:{ sk:"restored" },
+      story:"The 1945 Košice Government Programme restores a unified Czechoslovak state; the 1920 wedge tricolor returns and, remarkably, survives the 1948 Communist coup and four decades of one-party rule completely unchanged &mdash; no star or emblem ever added to the national flag itself." },
+    { year:"1993–present", name:"Independent Slovak Republic", t:{ sk:IC.modern }, flagKeys:{ sk:"modern" },
+      story:"The Velvet Divorce, negotiated by parliament with no referendum in either republic, dissolves Czechoslovakia at midnight on 1 January 1993. Slovakia readopts a refined version of the 1939 tricolor and double-cross arms &mdash; the state gone, the symbol reclaimed &mdash; and joins NATO and the EU in 2004." }
+  ];
+
+  var IREGIONS = ["sk"];
+  var IREGION_NAMES = { sk:"Slovakia" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.sk; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
+
+</body></html>

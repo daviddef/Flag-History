@@ -1,0 +1,862 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta charset="utf-8">
+<title>Flags of Greece</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Greece, from the Crusader states of the Frankokratia to the republic of today — with a map of the 1916 National Schism.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c; --sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: 62ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 320px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease, opacity 0.45s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease, opacity .45s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; pointer-events: none; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="yugoslavia-hub.html">Former Yugoslavia hub</a></p>
+  <p class="kicker">Balkan peninsula &middot; Phase 6 of the world atlas</p>
+  <h1>Flags of Greece</h1>
+  <p class="lede">From Crusader knights carving up a broken Byzantium, through a millennium-adjacent stretch of Ottoman rule, a nine-year war of independence, three kingdoms interrupted twice by republics, a Nazi occupation split three ways, and a seven-year colonels' junta &mdash; twelve flags, and a blue-and-white cross that has flown, in one form or another, over almost every one of them.</p>
+  <p class="lede">The cross itself long predates the modern striped flag: a plain white cross on blue was already flying as an improvised revolutionary banner in 1821, and blue and white were fixed as Greece's national colors by the first National Assembly at Epidaurus in January 1822 &mdash; the same colors, reasserted after every occupation, dictatorship, and regime change since.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Greece, c. 1204&ndash;present, twelve political entities. <b>A note on the map:</b> Greece's official boundary data is a MultiPolygon &mdash; the mainland plus dozens of islands, down to tiny Aegean rocks. For the map below, this page uses the mainland polygon only (which includes the Peloponnese, joined to it in this data as one ring); Crete, the Ionian islands, and the Aegean archipelago are real Greek territory throughout this history but are simplified out of the map graphics entirely. Unlike most pages in this atlas, the map's border outline itself actually changes shape across four real turning points &mdash; 1832, 1881, 1913, and 1923/present &mdash; rather than reusing one modern outline throughout; two of those four (1913 and 1923/present) are decimated from genuine historical-boundaries GeoJSON data (<code>aourednik/historical-basemaps</code> and the modern <code>johan/world.geo.json</code> outline this atlas already uses elsewhere), while the other two (1832 and 1881, for which no machine-readable dataset was found) are careful hand approximations built from the real modern coastline cut along the documented treaty frontiers &mdash; see the note above the map for specifics. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom / empire</b> &mdash; monarchy, medieval or modern</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Occupied / foreign rule</b> &mdash; ruled from outside Greek lands</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#2f6b4a"></span><b>Republic</b> &mdash; democratic, sovereign</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#3f3f3f"></span><b>Military dictatorship</b> &mdash; junta rule</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#8c2f2f"></span><b>Revolutionary / provisional government</b> &mdash; contested, not yet settled</div>
+    </div>
+  </div>
+
+  <div class="imap-section">
+    <h2>Greece's changing shape, 1832&ndash;present</h2>
+    <p class="imap-sub">Instead of reusing one modern outline throughout, this map's border shape actually grows at four real turning points &mdash; 1832 (the original small kingdom), 1881 (Thessaly and Arta annexed), 1913 (post&ndash;Balkan Wars, nearly doubling the country), and 1923/present (post&ndash;Lausanne, essentially modern). The 1916&ndash;17 National Schism &mdash; Eleftherios Venizelos's pro-Allied "Provisional Government of National Defence" in Thessaloniki against King Constantine I's officially neutral royal government in Athens &mdash; is layered on top of the 1913-era border, since that's the shape actually in effect during the split. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Both governments flew the same flag.</b> There was no rival banner &mdash; the National Schism was entirely political, a fight over who actually spoke for Greece, not over its symbols. The internal line traces roughly the old 1881&ndash;1912 Greek-Ottoman border, the boundary between "Old Greece" and the Macedonian territory won in the Balkan Wars, which is almost exactly where the two governments' real control diverged. It solidifies only for the two years the split was physically real, and dissolves the moment Venizelos reunites the country in June 1917.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1832</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg">
+        <path id="imap-sea" fill="var(--sea)" pointer-events="none" d="M247.3,95.8 L225.3,90.7 L174.2,104.8 L203.4,135.3 L182.0,144.2 L158.6,144.2 L136.3,116.3 L128.4,128.2 L137.8,160.6 L158.9,186.1 L143.0,198.0 L166.4,223.1 L187.3,238.8 L187.9,269.5 L149.0,255.1 L161.4,282.8 L134.6,288.5 L150.6,336.4 L122.6,337.1 L88.1,313.5 L72.3,270.0 L64.9,233.9 L26.9,178.0 L-30,178.0 L-30,400 L340,400 L340,150 L247.3,150 Z"/>
+        <path fill="none" stroke="var(--hair)" stroke-width="1" opacity="0.55" pointer-events="none" d="M42.6,41.4 L37.2,59.8 L43.2,83.1 L60.7,96.4 L59.8,110.6 L46.1,118.5 L43.6,136.1 L24.0,162.5 L16.8,158.7 L16.0,146.7 L-7.4,128.5 L-11.0,102.6 L-7.5,65.6 L-1.7,48.7 L-8.8,40.1 L-11.6,22.9 L6.6,-3.9 L9.3,6.3 L20.7,1.5 L29.6,16.1 L39.7,21.7 L42.6,41.4 Z"/>
+        <path fill="none" stroke="var(--hair)" stroke-width="1" opacity="0.55" pointer-events="none" d="M42.6,41.4 L47.9,41.8 L49.8,30.7 L74.7,22.3 L84.1,20.2 L98.5,17.0 L118.0,16.1 L139.1,33.5 L142.1,69.5 L134.1,71.3 L127.1,80.7 L104.3,79.7 L88.2,91.5 L60.7,96.4 L43.2,83.1 L37.2,59.8 L42.6,41.4 Z"/>
+        <path fill="none" stroke="var(--hair)" stroke-width="1" opacity="0.55" pointer-events="none" d="M129.7,-87.9 L141.8,-65.6 L158.1,-69.5 L190.5,-61.1 L252.4,-58.2 L273.3,-72.1 L322.9,-84.7 L353.6,-64.9 L378.3,-59.2 L356.5,-36.7 L341.1,2.1 L354.7,33.1 L318.4,25.8 L275.5,42.9 L275.0,69.9 L236.7,75.1 L207.0,56.1 L173.3,71.0 L142.1,69.5 L139.1,33.5 L118.0,16.1 L124.9,8.4 L120.4,2.0 L127.5,-15.3 L143.5,-32.3 L123.0,-55.7 L119.3,-75.6 L129.7,-87.9 Z"/>
+        <path fill="none" stroke="var(--hair)" stroke-width="1" opacity="0.55" pointer-events="none" d="M320.8,104.6 L285.6,133.9 L272.4,108.6 L272.9,97.4 L283.0,91.3 L296.0,57.3 L275.5,42.9 L318.4,25.8 L354.7,33.1 L359.7,54.0 L396.5,71.5 L388.8,84.8 L338.8,87.8 L320.8,104.6 Z"/>
+        <g class="context-label">
+          <text x="8" y="70">ALBANIA</text>
+          <text x="85" y="10">N. MACEDONIA</text>
+          <text x="235" y="8">BULGARIA</text>
+          <text x="305" y="115">TURKEY</text>
+        </g>
+        <path id="ireg-whole" class="ireg-fill" d=""/>
+        <path id="ireg-south" class="ireg-fill" d=""/>
+        <path id="ireg-north" class="ireg-fill" d=""/>
+        <path class="iborder-line" id="ib-north-south" d=""/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-north" x="150" y="95">MACEDONIA &amp; THE NORTH</text>
+          <text class="ireg-label" id="ilbl-south" x="110" y="230">OLD GREECE</text>
+          <text class="ireg-label" id="ilbl-whole" x="130" y="200">KINGDOM OF GREECE</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">The original kingdom</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <p class="imap-story" id="iEraStory"></p>
+      <p class="map-note">Real traced border per era, decimated from historical GeoJSON data for 1913 and 1923/present, hand-approximated for 1832 and 1881 (see the scope note above) &mdash; still schematic, not a surveyed line; island geography (Crete, Ionian and Aegean islands) is excluded throughout, exactly as elsewhere on this page. Albania, North Macedonia, Bulgaria, and (European) Turkey are traced faint for orientation only, positioned against Greece's real modern borders regardless of which era is selected &mdash; they don't grow or shrink with the slider the way Greece's own outline does.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="12">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#0d5eaf">
+                <rect y="0" width="300" height="22.22"/>
+                <rect y="44.44" width="300" height="22.22"/>
+                <rect y="88.88" width="300" height="22.22"/>
+                <rect y="133.32" width="300" height="22.22"/>
+                <rect y="177.76" width="300" height="22.24"/>
+              </g>
+              <rect width="111.11" height="111.11" fill="#0d5eaf"/>
+              <rect x="44.44" width="22.22" height="111.11" fill="#f4efe1"/>
+              <rect y="44.44" width="111.11" height="22.22" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">nine blue-white stripes, cross in the canton &mdash; unchanged since the junta fell</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1974 &ndash; present</div>
+            <h3 class="card-title">Hellenic Republic (Third Republic)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> the junta collapses in July 1974 after its disastrous attempt to annex Cyprus triggers a Turkish invasion; Constantine Karamanlis returns from exile in Paris to lead the "Metapolitefsi," the transition to democracy. A December 1974 referendum abolishes the monarchy for good (69% against its return), and a new constitution follows in 1975. Greece joins the EEC in 1981 and adopts the euro in 2001.</p>
+            <p><span class="label">What it represents:</span> the same nine-stripe blue-white cross flag flown since the 19th century, its official shade standardized by law in 1978 &mdash; the design itself never changed across kingdom, republic, occupation, or junta; only who stood beneath it did.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">5 blue stripes, 4 white, starting and ending blue; blue canton (5 stripes tall, square) with a white Greek cross.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="11">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#0d5eaf">
+                <rect y="0" width="300" height="22.22"/>
+                <rect y="44.44" width="300" height="22.22"/>
+                <rect y="88.88" width="300" height="22.22"/>
+                <rect y="133.32" width="300" height="22.22"/>
+                <rect y="177.76" width="300" height="22.24"/>
+              </g>
+              <rect width="111.11" height="111.11" fill="#0d5eaf"/>
+              <rect x="44.44" width="22.22" height="111.11" fill="#f4efe1"/>
+              <rect y="44.44" width="111.11" height="22.22" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the same flag, flown over a country ruled by force</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1967 &ndash; 1974</div>
+            <h3 class="card-title">Greek military junta ("Regime of the Colonels")</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#3f3f3f"></span>Military dictatorship</span></div>
+            <p><span class="label">Who &amp; why:</span> a group of army colonels led by Georgios Papadopoulos seizes power in a coup on 21 April 1967, citing a supposed communist threat ahead of scheduled elections. King Constantine II's own countercoup attempt that December fails, sending him into exile for good. A further internal coup by Dimitrios Ioannidis in November 1973 hardens the regime shortly before its own collapse over Cyprus.</p>
+            <p><span class="label">What it represents:</span> no new flag &mdash; the colonels ruled under the existing national colors, occasionally paired with a phoenix emblem on government seals and propaganda, but the flag itself stayed the unaltered blue-white cross throughout.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Unchanged from the flag before and after.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="10">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#0d5eaf">
+                <rect y="0" width="300" height="22.22"/>
+                <rect y="44.44" width="300" height="22.22"/>
+                <rect y="88.88" width="300" height="22.22"/>
+                <rect y="133.32" width="300" height="22.22"/>
+                <rect y="177.76" width="300" height="22.24"/>
+              </g>
+              <rect width="111.11" height="111.11" fill="#0d5eaf"/>
+              <rect x="44.44" width="22.22" height="111.11" fill="#f4efe1"/>
+              <rect y="44.44" width="111.11" height="22.22" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">restored monarchy, a bloody civil war, and postwar recovery under one flag</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1944 &ndash; 1967</div>
+            <h3 class="card-title">Kingdom of Greece (postwar)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> Athens is liberated in October 1944 and a government of national unity returns from exile, but tension between royalist and communist resistance factions explodes into the "Dekemvriana" clashes within weeks. A September 1946 plebiscite restores King George II; full-scale civil war between the government and the communist Democratic Army of Greece runs 1946&ndash;1949, ending in government victory with heavy American and British backing. George II dies in 1947 and is succeeded by his brother Paul, then Paul's son Constantine II in 1964.</p>
+            <p><span class="label">What it represents:</span> the same national flag, unbroken in legal continuity from the government-in-exile through liberation, plebiscite, and civil war &mdash; the monarchy restored, but the colors never needed restoring at all.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Unchanged from the government-in-exile flag before it.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="9">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#0d5eaf">
+                <rect y="0" width="300" height="22.22"/>
+                <rect y="44.44" width="300" height="22.22"/>
+                <rect y="88.88" width="300" height="22.22"/>
+                <rect y="133.32" width="300" height="22.22"/>
+                <rect y="177.76" width="300" height="22.24"/>
+              </g>
+              <rect width="111.11" height="111.11" fill="#0d5eaf"/>
+              <rect x="44.44" width="22.22" height="111.11" fill="#f4efe1"/>
+              <rect y="44.44" width="111.11" height="22.22" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the flag of a government that had fled its own capital</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1941 &ndash; 1944</div>
+            <h3 class="card-title">Axis occupation &amp; government-in-exile</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Occupied / foreign rule</span></div>
+            <p><span class="label">Who &amp; why:</span> after repelling Mussolini's October 1940 invasion, Greece falls to a German intervention in April 1941; the Battle of Crete ends organized resistance by early June. The country is carved into German, Italian, and Bulgarian occupation zones &mdash; Bulgaria annexing Greek Macedonia and Thrace outright &mdash; while the legitimate government flees first to Crete, then Egypt and London. Mass famine kills tens of thousands over the winter of 1941&ndash;42; resistance movements EAM-ELAS and EDES fight the occupiers and, increasingly, each other.</p>
+            <p><span class="label">What it represents:</span> the same blue-white cross, flown by the government-in-exile as its claim to unbroken legal continuity, even as three separate foreign administrations ran the country it claimed to govern.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Unchanged national flag; occupation zones flew German, Italian, and Bulgarian flags in practice, not shown here.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="8">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#0d5eaf">
+                <rect y="0" width="300" height="22.22"/>
+                <rect y="44.44" width="300" height="22.22"/>
+                <rect y="88.88" width="300" height="22.22"/>
+                <rect y="133.32" width="300" height="22.22"/>
+                <rect y="177.76" width="300" height="22.24"/>
+              </g>
+              <rect width="111.11" height="111.11" fill="#0d5eaf"/>
+              <rect x="44.44" width="22.22" height="111.11" fill="#f4efe1"/>
+              <rect y="44.44" width="111.11" height="22.22" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the monarchy returns, then tips into open dictatorship</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1935 &ndash; 1941</div>
+            <h3 class="card-title">Kingdom of Greece (restored)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> a heavily manipulated November 1935 referendum restores King George II after eleven chaotic republican years. Unable to form a stable government, George appoints General Ioannis Metaxas prime minister in 1936, who suspends parliament in August and rules by decree as the "4th of August Regime" &mdash; an authoritarian, if idiosyncratic, dictatorship under a king who never fully controlled it. Metaxas's defiant "No" (Ochi) to Mussolini's October 1940 ultimatum becomes a founding national legend.</p>
+            <p><span class="label">What it represents:</span> the same restored royal tricolor-cross, with Metaxas's own regime adding fasces-adjacent symbolism to propaganda but never altering the flag itself.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Unchanged from the interwar flag before it.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#0d5eaf">
+                <rect y="0" width="300" height="22.22"/>
+                <rect y="44.44" width="300" height="22.22"/>
+                <rect y="88.88" width="300" height="22.22"/>
+                <rect y="133.32" width="300" height="22.22"/>
+                <rect y="177.76" width="300" height="22.24"/>
+              </g>
+              <rect width="111.11" height="111.11" fill="#0d5eaf"/>
+              <rect x="44.44" width="22.22" height="111.11" fill="#f4efe1"/>
+              <rect y="44.44" width="111.11" height="22.22" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">no crown was ever on this flag to remove</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1924 &ndash; 1935</div>
+            <h3 class="card-title">Second Hellenic Republic</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4a"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> the National Assembly declares a republic on 25 March 1924 after King George II is forced out, the monarchy discredited by the Asia Minor catastrophe. The republic is chronically unstable &mdash; more than a dozen governments and several coup attempts in eleven years, including a failed 1935 Venizelist coup that ends Venizelos's own political career. A rigged November 1935 referendum restores the king before the year is out.</p>
+            <p><span class="label">What it represents:</span> the identical blue-white cross flag &mdash; Greece's flag carried no royal crown or crest to strip out when the monarchy fell, unlike many of its neighbors, so the republic's break with the kingdom shows up in its institutions, not its banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Unchanged national flag, used by both kingdom and republic alike.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#0d5eaf">
+                <rect y="0" width="300" height="22.22"/>
+                <rect y="44.44" width="300" height="22.22"/>
+                <rect y="88.88" width="300" height="22.22"/>
+                <rect y="133.32" width="300" height="22.22"/>
+                <rect y="177.76" width="300" height="22.24"/>
+              </g>
+              <rect width="111.11" height="111.11" fill="#0d5eaf"/>
+              <rect x="44.44" width="22.22" height="111.11" fill="#f4efe1"/>
+              <rect y="44.44" width="111.11" height="22.22" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">territorial triumph, a wartime split, and catastrophe &mdash; all under one flag</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1913 &ndash; 1924</div>
+            <h3 class="card-title">Kingdom of Greece (Balkan Wars to catastrophe)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> the Balkan Wars of 1912&ndash;13 nearly double Greece's territory and population, adding Macedonia, Epirus, Crete, and the northern Aegean islands, just before King George I's assassination in Thessaloniki hands the throne to Constantine I. The 1916&ndash;17 National Schism (see the map above) splits the country between Constantine's neutral Athens and Venizelos's pro-Allied Thessaloniki before Venizelos reunites it. Emboldened, Venizelos pushes a 1919 landing at Smyrna that collapses into catastrophic defeat by 1922, followed by a massive forced population exchange with Turkey under the 1923 Treaty of Lausanne. Constantine, restored by an intervening 1920 plebiscite, abdicates again in the defeat's aftermath.</p>
+            <p><span class="label">What it represents:</span> the same flag flew over Greece's greatest 20th-century territorial expansion and its greatest catastrophe within the same decade &mdash; through a genuine internal partition, a war won, and a war catastrophically lost.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Unchanged from the flag of the original kingdom.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g fill="#0d5eaf">
+                <rect y="0" width="300" height="22.22"/>
+                <rect y="44.44" width="300" height="22.22"/>
+                <rect y="88.88" width="300" height="22.22"/>
+                <rect y="133.32" width="300" height="22.22"/>
+                <rect y="177.76" width="300" height="22.24"/>
+              </g>
+              <rect width="111.11" height="111.11" fill="#0d5eaf"/>
+              <rect x="44.44" width="22.22" height="111.11" fill="#f4efe1"/>
+              <rect y="44.44" width="111.11" height="22.22" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the modern flag's design fixed under Greece's first king</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1832 &ndash; 1913</div>
+            <h3 class="card-title">Kingdom of Greece (original)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1832 London Protocol, signed by Britain, France, and Russia, recognizes full Greek independence and installs the seventeen-year-old Otto of Bavaria as king &mdash; a foreign monarch imposed on a country that had just fought nine years to rule itself. Otto is deposed by a bloodless 1862 revolt; the Great Powers replace him with the Danish prince George I in 1863, whose fifty-year reign becomes the longest of any modern Greek monarch, ending with his 1913 assassination just after the Balkan Wars' territorial gains.</p>
+            <p><span class="label">What it represents:</span> the nine-stripe blue-white cross flag, essentially the modern design, flying continuously as the kingdom's civil and state flag for eight decades of nation-building, border wars, and slow territorial expansion beyond the small original state.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">5 blue stripes, 4 white, starting and ending blue; blue canton with a white Greek cross.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#1e6fb5"/>
+              <rect x="0" y="82" width="300" height="36" fill="#f4efe1"/>
+              <rect x="132" y="0" width="36" height="200" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">a plain blue field, a white cross &mdash; the revolution's own improvised banner</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1821 &ndash; 1832</div>
+            <h3 class="card-title">Greek War of Independence</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#8c2f2f"></span>Revolutionary / provisional government</span></div>
+            <p><span class="label">Who &amp; why:</span> the uprising begins in March 1821 across the Peloponnese and spreads rapidly, though early Greek unity is fragile &mdash; rival regional factions fight both the Ottomans and, at times, each other, cycling through several rival provisional governments and constitutions (Epidaurus 1822, Astros 1823, Troezen 1827) before the Great Powers' 1827 naval intervention at Navarino turns the tide. Ioannis Kapodistrias governs as the fragile state's first head from 1828 until his 1831 assassination, and the 1832 London Protocol finally installs Otto as king.</p>
+            <p><span class="label">What it represents:</span> the blue-white cross, fixed as the national colors by the First National Assembly at Epidaurus in January 1822 &mdash; blue for the sea and sky, white for the purity of the cause &mdash; already recognizably the ancestor of every Greek flag that follows, even before the state itself had settled its own government.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded; varied by faction and region.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue field, white Greek cross &mdash; a simpler precursor to the later striped civil flag.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#1e6fb5"></span><span class="meta"><span class="name">Blue</span><span class="hex">#1E6FB5</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <g transform="translate(150,100)">
+                <path d="M-30,0 A38,38 0 1 0 22,-32 A28,28 0 1 1 -30,0 Z" fill="#f4efe1"/>
+                <path d="M40,-6 l5,15 16,0 -13,10 5,15 -13,-9 -13,9 5,-15 -13,-10 16,0 Z" fill="#f4efe1"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the standard Ottoman provincial banner &mdash; no distinct Greek flag existed here</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1460 &ndash; 1821</div>
+            <h3 class="card-title">Ottoman rule</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Occupied / foreign rule</span></div>
+            <p><span class="label">Who &amp; why:</span> the Despotate of the Morea, the Byzantines' last stronghold on the Greek mainland, falls to Sultan Mehmed II's forces in 1460, a year after Constantinople itself; the last scattered pockets of Byzantine and Venetian resistance in the Aegean mop up over the following decades. Nearly four centuries of Ottoman administration follow, organized into shifting sanjaks and eyalets, with periods of Venetian reconquest along parts of the coast (notably a 1684&ndash;1715 Venetian hold on the Peloponnese) interrupting but not ending Ottoman control until the 1821 uprising.</p>
+            <p><span class="label">What it represents:</span> the standard Ottoman red field with crescent and star, flown over Greek lands with no distinct territorial flag of their own &mdash; the same banner as the rest of the Sultan's domains.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">Varied by era.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, white crescent and star.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">Crescent &amp; star, white</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#c9a13c"/>
+              <g fill="#241f14">
+                <path d="M150,60 L110,90 L60,80 L90,110 L60,130 L110,120 L150,150 L190,120 L240,130 L210,110 L240,80 L190,90 Z"/>
+                <circle cx="130" cy="95" r="7"/>
+                <circle cx="170" cy="95" r="7"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the Palaiologan double-headed eagle, a reclaimed but shrinking empire</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1261 &ndash; 1460</div>
+            <h3 class="card-title">Byzantine restoration (Despotate of the Morea)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom / empire</span></div>
+            <p><span class="label">Who &amp; why:</span> the Nicaean emperor Michael VIII Palaiologos retakes Constantinople in 1261, ending the Latin Empire and restoring Byzantine rule, though large parts of Greece remain under Frankish and Venetian control for generations yet. From 1349, the reclaimed Peloponnese is governed as the semi-autonomous Despotate of the Morea, often ruled by a son or brother of the reigning emperor from its capital at Mystras &mdash; a genuine cultural flowering even as the empire around it shrinks to almost nothing. Constantinople itself falls to the Ottomans in 1453; the Morea, the empire's last substantial territory, holds out seven years longer.</p>
+            <p><span class="label">What it represents:</span> the black double-headed eagle associated with the Palaiologos dynasty, symbolizing the emperor's claim over both East and West even as actual Byzantine territory dwindled to a handful of enclaves &mdash; shown here as an informed reconstruction, since no single fixed state flag in the modern sense was used.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded &mdash; heraldic device, not a modern flag.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Gold/yellow field, black double-headed eagle (simplified here).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Gold</span><span class="hex">#C9A13C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#241f14"></span><span class="meta"><span class="name">Black</span><span class="hex">#241F14</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; a fractured patchwork of Crusader lordships, each with its own banner</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1204 &ndash; 1261</div>
+            <h3 class="card-title">Frankokratia (Crusader states of Greece)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Occupied / foreign rule</span></div>
+            <p><span class="label">Who &amp; why:</span> the Fourth Crusade's catastrophic 1204 sack of Constantinople shatters Byzantine authority, and Western knights carve up Greek lands among themselves: the Duchy of Athens under the Burgundian de la Roche family, the Principality of Achaea in the Peloponnese under the Villehardouins, and scattered Venetian holdings (Crete, Negroponte, and Aegean island lordships) controlling the sea lanes. Byzantine successor states &mdash; based in Nicaea, Epirus, and Trebizond &mdash; contest this patchwork from the margins for the next half-century.</p>
+            <p><span class="label">What it represents:</span> no single flag, because there was no single state &mdash; each Crusader lordship flew its own Western European heraldic banner (the de la Roche and Villehardouin arms among them), and Venice its own lion of St. Mark over its island and coastal holdings. Shown here honestly blank rather than picking one lord's arms to stand in for all of them.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no single attested flag for the territory as a whole.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="yugoslavia-hub.html"><b>Former Yugoslavia hub</b><span>Nine countries, nine centuries</span></a>
+      <a class="link-card" href="serbia-flags.html"><b>Serbia</b><span>The Nemanji&#263; kingdom, four Ottoman centuries, the republic today</span></a>
+      <a class="link-card" href="macedonia-flags.html"><b>North Macedonia</b><span>Du&scaron;an's capital at Skopje, a flag redesigned by treaty</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed; island geography (Crete, the Ionian and Aegean archipelagos) is simplified out of the map graphics entirely, though those islands were Greek territory throughout the periods this page describes.
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var PATHS = {
+    p1832: "M143.0,198.0 L166.4,223.1 L187.3,238.8 L187.9,269.5 L149.0,255.1 L161.4,282.8 L134.6,288.5 L150.6,336.4 L122.6,337.1 L88.1,313.5 L72.3,270.0 L64.9,233.9 L48.4,208.9 L59.0,195.3 L78.8,191.0 L97.7,188.3 L120.9,191.0 L133.6,195.3 Z",
+    p1881: "M128.4,128.2 L137.8,160.6 L158.9,186.1 L143.0,198.0 L166.4,223.1 L187.3,238.8 L187.9,269.5 L149.0,255.1 L161.4,282.8 L134.6,288.5 L150.6,336.4 L122.6,337.1 L88.1,313.5 L72.3,270.0 L64.9,233.9 L48.4,208.9 L26.9,178.0 L40.9,155.7 L59.8,147.5 L80.9,143.2 L102.0,141.0 L116.7,138.9 Z",
+    p1913: "M215.7,67.2 L208.1,94.7 L207.5,88.7 L201.2,89.4 L187.3,101.6 L170.9,100.1 L177.2,116.2 L198.7,132.5 L176.8,120.8 L170.5,123.4 L182.3,142.3 L156.4,126.5 L171.0,144.3 L155.1,143.7 L150.1,127.7 L133.5,115.9 L137.9,106.7 L122.7,115.0 L127.3,120.5 L121.7,135.7 L154.1,185.4 L146.3,190.8 L146.0,181.7 L137.8,176.5 L132.3,180.8 L138.7,195.1 L122.6,203.1 L151.3,214.5 L167.5,231.6 L178.0,231.9 L184.6,239.4 L181.2,244.5 L185.7,263.6 L179.3,267.9 L165.0,247.1 L139.8,256.2 L145.8,258.5 L146.2,270.2 L157.7,270.5 L161.7,279.6 L148.7,286.2 L142.9,284.1 L145.2,279.0 L129.0,273.3 L143.4,326.0 L130.4,318.4 L118.4,330.9 L101.3,304.0 L92.7,314.7 L82.2,298.8 L85.7,282.5 L69.1,260.1 L78.4,241.0 L89.9,243.4 L98.0,236.1 L133.5,253.3 L149.0,242.2 L116.0,227.6 L67.1,231.9 L50.2,204.5 L66.5,196.2 L60.1,190.3 L46.2,192.1 L22.8,166.5 L59.4,103.3 L88.0,97.2 L102.4,82.8 L121.0,85.2 L192.8,63.4 Z",
+    pmodern: "M296.0,57.3 L283.0,91.3 L272.9,97.3 L247.3,95.8 L225.3,90.7 L174.2,104.8 L203.4,135.3 L182.0,144.2 L158.6,144.2 L136.3,116.3 L128.4,128.2 L137.8,160.6 L158.9,186.1 L143.0,198.0 L166.4,223.1 L187.3,238.8 L187.9,269.5 L149.0,255.1 L161.4,282.8 L134.6,288.5 L150.6,336.4 L122.6,337.1 L88.1,313.5 L72.3,270.0 L64.9,233.9 L26.9,178.0 L24.0,162.5 L43.6,136.1 L46.1,118.5 L59.8,110.6 L60.7,96.3 L88.2,91.5 L104.3,79.7 L127.1,80.7 L134.1,71.2 L142.1,69.4 L173.3,71.0 L207.0,56.1 L236.7,75.1 L275.0,69.9 L275.5,42.9 Z",
+    regSouth1916: "M121.7,135.7 L154.1,185.4 L146.3,190.8 L146.0,181.7 L137.8,176.5 L132.3,180.8 L138.7,195.1 L122.6,203.1 L151.3,214.5 L167.5,231.6 L178.0,231.9 L184.6,239.4 L181.2,244.5 L185.7,263.6 L179.3,267.9 L165.0,247.1 L139.8,256.2 L145.8,258.5 L146.2,270.2 L157.7,270.5 L161.7,279.6 L148.7,286.2 L142.9,284.1 L145.2,279.0 L129.0,273.3 L143.4,326.0 L130.4,318.4 L118.4,330.9 L101.3,304.0 L92.7,314.7 L82.2,298.8 L85.7,282.5 L69.1,260.1 L78.4,241.0 L89.9,243.4 L98.0,236.1 L133.5,253.3 L149.0,242.2 L116.0,227.6 L67.1,231.9 L50.2,204.5 L66.5,196.2 L60.1,190.3 L46.2,192.1 L22.8,166.5 L40.9,155.7 L59.8,147.5 L80.9,143.2 L102.0,141.0 L116.7,138.9 Z",
+    regNorth1916: "M22.8,166.5 L59.4,103.3 L88.0,97.2 L102.4,82.8 L121.0,85.2 L192.8,63.4 L215.7,67.2 L208.1,94.7 L207.5,88.7 L201.2,89.4 L187.3,101.6 L170.9,100.1 L177.2,116.2 L198.7,132.5 L176.8,120.8 L170.5,123.4 L182.3,142.3 L156.4,126.5 L171.0,144.3 L155.1,143.7 L150.1,127.7 L133.5,115.9 L137.9,106.7 L122.7,115.0 L127.3,120.5 L121.7,135.7 L116.7,138.9 L102.0,141.0 L80.9,143.2 L59.8,147.5 L40.9,155.7 Z"
+  };
+
+  var IC = { kingdom: "#a9762f", royalist: "#a9762f", venizelist: "#204b5c" };
+  var INAMES = { kingdom: "Kingdom of Greece", royalist: "Royal government (Athens)", venizelist: "Provisional Government of National Defence (Thessaloniki)" };
+
+  // mode: "whole" = single fill (ireg-whole), "split" = two fills (ireg-south/ireg-north)
+  var ISNAP = [
+    { year:"1832", mode:"whole", shape:"p1832", color:IC.kingdom, name:"The original kingdom",
+      owners:"<b>Kingdom of Greece</b>: the Peloponnese, Attica, Boeotia, Phocis, and Aetolia-Acarnania only.",
+      story:"The 1832 London Protocol fixes Greece's first border along the Arta&ndash;Volos line, running roughly from the Gulf of Arta in the west to the Gulf of Volos in the east. Thessaly, Epirus, Macedonia, Crete, and the Aegean and Ionian islands all remain outside the new kingdom &mdash; a state covering barely a third of what is Greece today." },
+    { year:"1881", mode:"whole", shape:"p1881", color:IC.kingdom, name:"Thessaly and Arta added",
+      owners:"<b>Kingdom of Greece</b>: the 1832 kingdom plus Thessaly and the Arta district of Epirus.",
+      story:"The 1881 Convention of Constantinople, negotiated after the Congress of Berlin, cedes Thessaly and a slice of southern Epirus around Arta to Greece &mdash; the kingdom's first major territorial gain in half a century, pushing the northern frontier up to near Mt&nbsp;Olympus. The rest of Epirus (including Ioannina) and all of Macedonia remain Ottoman." },
+    { year:"1913", mode:"split", shape:"p1913", t:{ north:IC.royalist, south:IC.royalist }, name:"One Greece, a neutral king",
+      owners:"", story:"The Balkan Wars of 1912&ndash;13 nearly double Greece's territory, adding Macedonia, Epirus, Crete, and the northern Aegean islands, just before King George I's assassination in Thessaloniki hands the throne to Constantine I. This is the border in effect for the rest of this map's steps &mdash; Western Thrace and the modern eastern border are still a decade away. Constantine insists on strict neutrality as World War I begins, straining his relationship with his own prime minister, Eleftherios Venizelos, who wants Greece in the war on the Allied side." },
+    { year:"1916", mode:"split", shape:"p1913", t:{ north:IC.venizelist, south:IC.royalist }, name:"Venizelos breaks with Athens",
+      owners:"", story:"In September 1916, Venizelos sets up a rival \"Provisional Government of National Defence\" in Thessaloniki, backed by the Allied powers already using northern Greece as a base against Bulgaria; his government controls Macedonia, the northern islands, and Crete, while Constantine's officially neutral royal government keeps Athens and \"Old Greece\" to the south. Both sides fly the same flag &mdash; the split is political, not symbolic &mdash; and both operate inside the same 1913 external border." },
+    { year:"1917", mode:"split", shape:"p1913", t:{ north:IC.venizelist, south:IC.venizelist }, name:"Reunited under Venizelos",
+      owners:"", story:"Allied pressure forces Constantine to abdicate in June 1917 in favor of his younger son Alexander; Venizelos returns to Athens and brings the whole country into WWI on the Allied side. The internal line dissolves here &mdash; this is the only time in Greece's modern history this specific internal division was ever real, and the border itself doesn't change again until Lausanne." },
+    { year:"1923–present", mode:"whole", shape:"pmodern", color:IC.kingdom, name:"Modern borders",
+      owners:"<b>Greece</b>: the 1913 kingdom plus Western Thrace, finalized by the 1923 Treaty of Lausanne after the catastrophic Greco-Turkish War.",
+      story:"The 1919 Smyrna landing collapses into defeat by 1922; the 1923 Treaty of Lausanne finalizes Greece's border essentially where it stands today, adding Western Thrace but permanently losing the Asia Minor ambitions of the previous decade. A century-old process, from a kingdom a third this size, ends here." }
+  ];
+
+  var IREGIONS = ["north","south"];
+  var IREGION_NAMES = { north:"Macedonia & the North", south:"Old Greece & the Peloponnese" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iSlider = document.getElementById("iSlider");
+  var elWhole = document.getElementById("ireg-whole");
+  var elSouth = document.getElementById("ireg-south");
+  var elNorth = document.getElementById("ireg-north");
+  var elBorderLine = document.getElementById("ib-north-south");
+  var lblWhole = document.getElementById("ilbl-whole");
+  var lblNorth = document.getElementById("ilbl-north");
+  var lblSouth = document.getElementById("ilbl-south");
+
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = ['<span><span class="sw" style="background:' + IC.kingdom + '"></span>Kingdom of Greece</span>',
+                          '<span><span class="sw" style="background:' + IC.venizelist + '"></span>Provisional Govt (Thessaloniki)</span>'].join("");
+
+  var currentShapeKey = null;
+
+  function setPath(el, key) {
+    el.setAttribute("d", PATHS[key] || "");
+  }
+
+  function applyEra(idx, animate) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+
+    var doSwap = function () {
+      if (era.mode === "whole") {
+        elWhole.style.display = "";
+        elSouth.style.display = "none";
+        elNorth.style.display = "none";
+        elBorderLine.style.strokeOpacity = 0.06;
+        setPath(elWhole, era.shape);
+        elWhole.setAttribute("fill", era.color);
+        lblWhole.setAttribute("x", 130); lblWhole.setAttribute("y", era.year === "1832" ? 220 : 190);
+        lblWhole.style.opacity = 1; lblNorth.style.opacity = 0; lblSouth.style.opacity = 0;
+        var wc = iTextColorFor(era.color);
+        lblWhole.setAttribute("fill", wc); lblWhole.setAttribute("stroke", wc === "#201a12" ? "#f7f1e3" : "#201a12");
+      } else {
+        elWhole.style.display = "none";
+        elSouth.style.display = "";
+        elNorth.style.display = "";
+        setPath(elSouth, "regSouth1916");
+        setPath(elNorth, "regNorth1916");
+        elSouth.setAttribute("fill", era.t.south);
+        elNorth.setAttribute("fill", era.t.north);
+        var same = era.t.north === era.t.south;
+        elBorderLine.setAttribute("d", "M127.3,136.7 L116.7,138.9 L102.0,141.0 L80.9,143.2 L59.8,147.5 L40.9,155.7 L26.9,178.0");
+        elBorderLine.style.strokeOpacity = same ? 0.06 : 0.85;
+        elBorderLine.style.strokeWidth = same ? 1 : 2.4;
+        lblWhole.style.opacity = 0; lblNorth.style.opacity = 1; lblSouth.style.opacity = 1;
+        var nc = iTextColorFor(era.t.north), sc = iTextColorFor(era.t.south);
+        lblNorth.setAttribute("fill", nc); lblNorth.setAttribute("stroke", nc === "#201a12" ? "#f7f1e3" : "#201a12");
+        lblSouth.setAttribute("fill", sc); lblSouth.setAttribute("stroke", sc === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+      [elWhole, elSouth, elNorth].forEach(function (el) { el.style.opacity = 1; });
+    };
+
+    var shapeChanged = era.shape !== currentShapeKey;
+    currentShapeKey = era.shape;
+
+    if (animate && shapeChanged) {
+      [elWhole, elSouth, elNorth, lblWhole, lblNorth, lblSouth].forEach(function (el) { el.style.opacity = 0; });
+      setTimeout(doSwap, 260);
+    } else {
+      doSwap();
+    }
+
+    iEraName.textContent = era.name;
+    iEraOwners.innerHTML = era.owners || "";
+    iEraStory.innerHTML = era.story;
+  }
+
+  iSlider.addEventListener("input", function () { applyEra(parseInt(iSlider.value, 10), true); });
+  applyEra(0, false);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    applyEra(next, true);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; applyEra(0, true); }
+    iPlayTimer = setInterval(iStepPlay, 2000);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
+
+</body></html>
