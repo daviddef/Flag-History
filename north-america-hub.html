@@ -1,0 +1,125 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of North America</title>
+<meta name="description" content="A hub for the family flag atlas: the United States, Canada, and Mexico, from Indigenous civilizations through European colonization to independence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: 66ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: 66ch; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 19 of the world atlas</p>
+  <h1>Flags of North America</h1>
+  <p class="lede">Just three countries in this hub, but few regions carry more historical weight. Long before European contact, the continent held sophisticated, distinct civilizations: the Haudenosaunee (Iroquois) Confederacy in the northeast, whose consensus-based political structure is a documented influence on later democratic thought; the Maya civilization across southern Mexico and Central America, with its writing system, astronomy, and monumental cities; and the Aztec (Mexica) Empire, centered on the island capital of Tenochtitlan &mdash; by the early 1500s one of the largest cities on Earth. Hundreds of other distinct Indigenous, First Nations, and Native American peoples and nations occupied every part of the continent, each with its own language, governance, and territory.</p>
+  <p class="lede">European colonization arrived in overlapping waves and remade the continent by force. Hern&aacute;n Cort&eacute;s led the Spanish conquest of the Aztec Empire in 1519&ndash;1521, culminating in the fall of Tenochtitlan and three centuries of Spanish rule as New Spain. Further north, Britain and France competed for territory that became the United States and Canada, founding colonies, missions, and fur-trading networks along the Atlantic coast and the St. Lawrence River. Across the whole continent, this colonization produced real, well-documented displacement, violence, and demographic catastrophe for Indigenous peoples, through disease, warfare, forced removal, and the seizure of land, continuing well into each country's national period.</p>
+  <p class="lede">The three countries then diverged sharply. The United States declared independence in 1776, a founding that coexisted with chattel slavery for the nation's first 89 years until the Civil War (1861&ndash;65), fought centrally over slavery, before the country rose to global-power status in the 20th century. Canada took a far more gradual, largely peaceful path: New France passed to Britain in 1763, its colonies confederated in 1867, and full sovereignty arrived in stages, from the 1931 Statute of Westminster to the 1982 Constitution Act. Mexico won independence from Spain in 1821 after an 11-year war, endured a turbulent 19th century that included the 1846&ndash;48 Mexican-American War and the loss of roughly half its national territory to the United States, and was transformed again by the Mexican Revolution of 1910&ndash;1920.</p>
+
+  <div class="countries">
+    <h2>The 3 countries</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#b31942"></span>
+        <span class="era">publishing next</span>
+        <b>United States</b>
+        <span>Thirteen British colonies whose 1776 Declaration of Independence coexisted with chattel slavery for the nation's first 89 years, a Civil War (1861&ndash;65) fought centrally over slavery, and a 20th-century rise to global superpower.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#ff0000"></span>
+        <span class="era">publishing next</span>
+        <b>Canada</b>
+        <span>New France, ceded to Britain in 1763, confederated as a self-governing dominion in 1867, and reached full sovereignty through a gradual, largely peaceful process completed by the 1982 Constitution Act.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#006341"></span>
+        <span class="era">publishing next</span>
+        <b>Mexico</b>
+        <span>The Aztec (Mexica) capital of Tenochtitlan fell to Hern&aacute;n Cort&eacute;s in 1521, opening three centuries as New Spain; independence came in 1821, the 1846&ndash;48 war with the United States cost Mexico roughly half its territory, and the Mexican Revolution followed in 1910&ndash;1920.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this hub</h2>
+    <p>This hub shows all three North American countries without the atlas's usual interactive map &mdash; the real-coastline, era-slider visualization that the Former Yugoslavia and other hubs use to show territory changing hands across centuries. That map, along with each country's own deep-dive flag lineage, is planned for a later phase; this page ships as a lighter placeholder with real historical context above and one card per country.</p>
+    <p>Colors above are drawn from each country's current national flag, not a historical palette, since no per-country flag lineage exists yet. Once a country's own page publishes, its card here will link out.</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This hub is one region in a larger set. See the other phases here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="central-america-hub.html"><b>Central America hub</b><span>Seven countries, one federal union</span></a>
+      <a class="link-card" href="caribbean-hub.html"><b>Caribbean hub</b><span>Islands across empires and eras</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica.
+  </footer>
+
+</div>
+
+</body></html>
