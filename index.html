@@ -532,6 +532,8 @@
     southkorea: '<rect width="300" height="200" fill="#f4efe1"/><circle cx="150" cy="100" r="42" fill="#cd2e3a"/><path d="M150,58 A21,21 0 0 1 150,100 A21,21 0 0 0 150,142 A42,42 0 0 0 150,58 Z" fill="#0047a0"/><g stroke="#241f14" stroke-width="6"><line x1="55" y1="45" x2="95" y2="45"/><line x1="55" y1="58" x2="95" y2="58"/><line x1="55" y1="71" x2="95" y2="71"/></g><g stroke="#241f14" stroke-width="6"><line x1="205" y1="129" x2="223" y2="129"/><line x1="227" y1="129" x2="245" y2="129"/><line x1="205" y1="142" x2="223" y2="142"/><line x1="227" y1="142" x2="245" y2="142"/><line x1="205" y1="155" x2="245" y2="155"/></g>',
     singapore: '<rect width="300" height="100" fill="#ee2536"/><rect y="100" width="300" height="100" fill="#f4efe1"/><path d="M60,60 a30,30 0 1 0 4,0 a24,24 0 1 1 -4,0 Z" fill="#f4efe1"/>',
     cambodia: '<rect width="300" height="50" fill="#032ea1"/><rect y="50" width="300" height="100" fill="#e00025"/><rect y="150" width="300" height="50" fill="#032ea1"/><g fill="#f4efe1"><rect x="115" y="70" width="10" height="60"/><rect x="145" y="60" width="10" height="70"/><rect x="175" y="70" width="10" height="60"/><path d="M110,70 h80 l-10,-14 h-60 Z"/></g>',
+    laos: '<rect width="300" height="50" fill="#c8102e"/><rect y="50" width="300" height="100" fill="#00247d"/><rect y="150" width="300" height="50" fill="#c8102e"/><circle cx="150" cy="100" r="40" fill="#f4efe1"/>',
+    brunei: '<rect width="300" height="200" fill="#fecb00"/><polygon points="0,0 300,0 300,60 0,140" fill="#f4efe1"/><polygon points="0,60 300,140 300,200 0,200" fill="#000000"/><ellipse cx="150" cy="100" rx="30" ry="24" fill="#c8102e"/>',
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -1273,6 +1275,10 @@
       crowns:["British trading post / Straits Settlements","Japanese occupation","British Crown Colony","State within Malaysia","Republic of Singapore"] },
     { name:"Cambodia", flag:"cambodia", ownPage:true, url:"cambodia-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#032ea1",
       crowns:["Khmer Empire (Angkor) and decline","French Protectorate of Cambodia","Kingdom of Cambodia (independence)","Khmer Republic","Democratic Kampuchea (Khmer Rouge)","People's Republic of Kampuchea","Kingdom of Cambodia (restored)"] },
+    { name:"Laos", flag:"laos", ownPage:true, url:"laos-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#ce1126",
+      crowns:["Lan Xang Kingdom","Fragmented Lao kingdoms","French Protectorate of Laos","Kingdom of Laos (independent)","Lao People's Democratic Republic"] },
+    { name:"Brunei", flag:"brunei", ownPage:true, url:"brunei-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#fecb00",
+      crowns:["Bruneian Empire and decline","British protectorate (established)","Japanese occupation","British protectorate (post-war)","British protectorate (self-governing)","Sultanate of Brunei (independent)"] },
   ];
 
   var grid = document.getElementById("countryGrid");

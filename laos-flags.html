@@ -1,0 +1,329 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Laos</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Laos, from the Lan Xang kingdom through French Indochina to the communist republic established in 1975.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="southeast-asia-hub.html">Southeast Asia hub</a></p>
+  <p class="kicker">Family research &middot; Southeast Asia atlas</p>
+  <h1>Flags of Laos</h1>
+  <p class="lede">From the Lan Xang kingdom &mdash; the "Land of a Million Elephants" &mdash; through its later split into three rival principalities, French colonization as part of Indochina, a monarchy restored after Japanese occupation, and a communist government in power since 1975 &mdash; five flags across a landlocked country's long path between larger neighbors.</p>
+  <p class="lede">Laos is unusual in swapping its national symbol entirely at the point of revolution: the royal three-headed elephant flag was fully retired in 1975 in favor of a plain red-blue-red design with a white disc, a deliberate break from every royal and colonial flag that came before it.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Laos, 1353&ndash;present, five political entries. The post-Lan Xang split into the Luang Prabang, Vientiane, and Champasak kingdoms, and their later vassalage to Siam, is shown as a single bridging entry rather than three invented sub-periods, since no single flag distinguishes them individually in the historical record. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="50" fill="#c8102e"/>
+              <rect y="50" width="300" height="100" fill="#00247d"/>
+              <rect y="150" width="300" height="50" fill="#c8102e"/>
+              <circle cx="150" cy="100" r="40" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">red-blue-red with a white disc, adopted at the 1975 revolution</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1975 &ndash; present</div>
+            <h3 class="card-title">Lao People's Democratic Republic</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Republic, socialist</span></div>
+            <p><span class="label">Who &amp; why:</span> the communist Pathet Lao movement, which had fought alongside North Vietnam through the wider Indochina wars, takes full power as the Kingdom of Laos collapses in December 1975; King Savang Vatthana abdicates, ending the monarchy, and a one-party communist state remains in place to the present, among the last of its kind in the world.</p>
+            <p><span class="label">What it represents:</span> a white disc, representing the moon over the Mekong and the unity of the people, centered on a blue band flanked by red &mdash; a wholesale break from every royal and colonial flag that preceded it.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, red-blue-red horizontal bands (1:2:1).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#c8102e"></span><span class="meta"><span class="name">Red</span><span class="hex">#C8102E</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00247D</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#c8102e"/>
+              <ellipse cx="150" cy="110" rx="42" ry="34" fill="#f4efe1"/>
+              <ellipse cx="150" cy="108" rx="28" ry="22" fill="#c8102e"/>
+              <path d="M150,60 q22,-14 44,0" stroke="#f4efe1" stroke-width="4" fill="none"/>
+            </svg>
+            <div class="flag-caption">red field, white three-headed elephant under a parasol</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1953 &ndash; 1975</div>
+            <h3 class="card-title">Kingdom of Laos (independent)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Kingdom, constitutional</span></div>
+            <p><span class="label">Who &amp; why:</span> Laos gains full independence from France in October 1953 under King Sisavang Vong, but spends nearly its entire independent existence as a monarchy drawn into the wider regional conflict, with a three-way civil war between royalist, neutralist, and communist Pathet Lao factions, heavily overlapping with, and covertly bombed during, the Vietnam War. That civil war ends with the communist takeover in 1975.</p>
+            <p><span class="label">What it represents:</span> a white three-headed elephant, Erawan, standing on a five-tier pedestal beneath a royal parasol on a red field &mdash; the Lan Xang kingdom's own elephant imagery, adapted as the modern royal kingdom's flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#c8102e"></span><span class="meta"><span class="name">Red</span><span class="hex">#C8102E</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#ae1c28"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#21468b"/>
+            </svg>
+            <div class="flag-caption">French tricolor, flown over the protectorate</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1893 &ndash; 1953</div>
+            <h3 class="card-title">French Protectorate of Laos</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#21468b"></span>Colonial (France)</span></div>
+            <p><span class="label">Who &amp; why:</span> France establishes a protectorate over Luang Prabang in 1893, following gunboat pressure on Siam, and gradually extends control over the other Lao principalities, folding them all into French Indochina by 1899, with a single reunified Laos administered under the Luang Prabang monarchy. Japan occupies Indochina through the war years and briefly installs an independent Lao government in 1945 before France reasserts colonial control after Japan's surrender, holding on until 1953.</p>
+            <p><span class="label">What it represents:</span> the plain French tricolor, the colonial power's own national flag, with the Luang Prabang monarchy retained as a French-supervised figurehead over the reunified protectorate.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal bands.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#ae1c28"></span><span class="meta"><span class="name">Red</span><span class="hex">#AE1C28</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#21468b"></span><span class="meta"><span class="name">Blue</span><span class="hex">#21468B</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#c8102e"/>
+              <ellipse cx="150" cy="110" rx="42" ry="34" fill="#f4efe1"/>
+              <ellipse cx="150" cy="108" rx="28" ry="22" fill="#c8102e"/>
+            </svg>
+            <div class="flag-caption">the Luang Prabang elephant flag, used by the strongest of the three kingdoms</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 1707 &ndash; 1893</div>
+            <h3 class="card-title">Fragmented Lao kingdoms (Luang Prabang, Vientiane, Champasak)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Fragmented kingdoms</span></div>
+            <p><span class="label">Who &amp; why:</span> succession disputes split Lan Xang into three rival kingdoms &mdash; Luang Prabang, Vientiane, and Champasak &mdash; around 1707&ndash;1713, none of which ever reunites the old kingdom's territory. All three progressively fall under Siamese suzerainty over the eighteenth and nineteenth centuries, with Vientiane's own 1827&ndash;28 uprising against Siam crushed and the city itself destroyed, before France's 1893 protectorate over Luang Prabang ends outright Siamese control.</p>
+            <p><span class="label">What it represents:</span> Luang Prabang, the most durable of the three and the eventual seat of the later unified monarchy, is understood to have used its own elephant banner by this era; the other two kingdoms' individual flags are not well documented, so this entry represents the fragmented period through the best-attested of the three.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded; shown at 3:2.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#c8102e"></span><span class="meta"><span class="name">Red</span><span class="hex">#C8102E</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder &mdash; no attested Lan Xang banner survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1353 &ndash; 1707</div>
+            <h3 class="card-title">Lan Xang Kingdom</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Fa Ngum founds Lan Xang ("Land of a Million Elephants") in 1353, unifying Lao-speaking principalities along the middle Mekong with Khmer military backing and establishing Theravada Buddhism as the state religion. The kingdom reaches its greatest extent and prosperity under King Sourigna Vongsa in the mid-1600s, but succession disputes following his death fracture it into three rival kingdoms by the early 1700s.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag survives from Lan Xang itself; the three-headed elephant later associated with the region only appears clearly in the historical record from the successor kingdoms onward, so this entry is shown honestly blank rather than projecting that later symbol backward.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom, independent</b> &mdash; sovereign under its own crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Fragmented kingdoms</b> &mdash; split, later under Siamese suzerainty</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#21468b"></span><b>Colonial (France)</b> &mdash; French protectorate rule</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Kingdom, constitutional</b> &mdash; sovereign, monarch bound by constitution</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Republic, socialist</b> &mdash; one-party communist state</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="southeast-asia-hub.html"><b>Southeast Asia hub</b><span>Eleven countries, thirteen centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>

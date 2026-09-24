@@ -1,0 +1,358 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Brunei</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Brunei, from the powerful Bruneian Empire through British protection to full independence in 1984 as one of the last absolute monarchies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="southeast-asia-hub.html">Southeast Asia hub</a></p>
+  <p class="kicker">Family research &middot; Southeast Asia atlas</p>
+  <h1>Flags of Brunei</h1>
+  <p class="lede">From a fifteenth- and sixteenth-century empire that ruled much of Borneo and the southern Philippines, through a long decline that reduced it to a fraction of its former territory, seven decades as a British protectorate, and full independence in 1984 &mdash; six flags tracing the shrinking and then stabilizing fortunes of one of the last remaining absolute monarchies anywhere in the world.</p>
+  <p class="lede">Brunei's yellow-white-black flag with its red crest, adopted in 1959, has flown continuously since &mdash; through the transition from protectorate to full sovereignty in 1984 without any change to its design.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Brunei, 15th century&ndash;present, six political entries. Japanese wartime occupation (1942&ndash;45) interrupts the British protectorate era and is shown as its own separate entry, splitting that protectorate into two dated spans. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#fecb00"/>
+              <polygon points="0,0 300,0 300,60 0,140" fill="#f4efe1"/>
+              <polygon points="0,60 300,140 300,200 0,200" fill="#000000"/>
+              <ellipse cx="150" cy="100" rx="30" ry="24" fill="#c8102e"/>
+            </svg>
+            <div class="flag-caption">yellow field with diagonal white and black bands, red crest, adopted 1959</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1984 &ndash; present</div>
+            <h3 class="card-title">Sultanate of Brunei (full independence)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Sultanate, absolute</span></div>
+            <p><span class="label">Who &amp; why:</span> Brunei gains full independence from Britain on 1 January 1984, the last of Britain's Southeast Asian territories to do so, under Sultan Hassanal Bolkiah, who has now reigned since 1967. Substantial oil and gas reserves fund one of the highest per-capita incomes in the region, and the sultan retains full executive power as one of the world's last true absolute monarchs, having formally implemented sharia-based criminal law from 2014 onward.</p>
+            <p><span class="label">What it represents:</span> the same flag adopted for self-government in 1959 continues unchanged into full sovereignty &mdash; yellow for the sultan, white and black diagonal bands for the chief minister and other senior officials, and the national crest in red at center.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#fecb00"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FECB00</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c8102e"></span><span class="meta"><span class="name">Red (crest)</span><span class="hex">#C8102E</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#fecb00"/>
+              <polygon points="0,0 300,0 300,60 0,140" fill="#f4efe1"/>
+              <polygon points="0,60 300,140 300,200 0,200" fill="#000000"/>
+              <ellipse cx="150" cy="100" rx="30" ry="24" fill="#c8102e"/>
+            </svg>
+            <div class="flag-caption">the same flag, flown under continued British protection</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1959 &ndash; 1984</div>
+            <h3 class="card-title">British protectorate (self-governing)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Sultanate, protectorate</span></div>
+            <p><span class="label">Who &amp; why:</span> a 1959 constitution grants Brunei internal self-government while Britain retains control of defense and foreign affairs; Sultan Omar Ali Saifuddien III declines to join the new Federation of Malaysia in 1963, in part over precedence and revenue-sharing disputes, keeping Brunei on a separate path toward eventual full independence.</p>
+            <p><span class="label">What it represents:</span> the 1959 flag adds the national crest &mdash; a crescent, wings, umbrella, and hands &mdash; in red to the earlier plain yellow-white-black design, marking the shift to self-government.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#fecb00"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FECB00</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#fecb00"/>
+              <polygon points="0,0 300,0 300,60 0,140" fill="#f4efe1"/>
+              <polygon points="0,60 300,140 300,200 0,200" fill="#000000"/>
+            </svg>
+            <div class="flag-caption">plain yellow-white-black, the pre-crest protectorate flag</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1945 &ndash; 1959</div>
+            <h3 class="card-title">British protectorate (post-war)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Protectorate (Britain)</span></div>
+            <p><span class="label">Who &amp; why:</span> British administration resumes after Japan's surrender, and the sultanate continues under the residential system, its sultan retaining internal authority under British supervision, while post-war reconstruction and growing oil revenues (from fields discovered in the 1920s) begin reshaping the small territory's economy.</p>
+            <p><span class="label">What it represents:</span> the plain yellow field with diagonal white and black bands, without the later crest &mdash; yellow for the sultan, the other two colors for his senior officials.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">1:2.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#fecb00"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FECB00</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <circle cx="150" cy="100" r="55" fill="#a4302a"/>
+            </svg>
+            <div class="flag-caption">Japanese military administration ensign</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1942 &ndash; 1945</div>
+            <h3 class="card-title">Japanese occupation</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#5c2a24"></span>Occupation (Japan)</span></div>
+            <p><span class="label">Who &amp; why:</span> Japan invades Borneo in December 1941 and occupies Brunei through the rest of the war, valuing its oil fields; the sultanate's own administration is left largely in place as a local instrument of Japanese rule until Australian forces liberate the territory in mid-1945.</p>
+            <p><span class="label">What it represents:</span> the Japanese naval and military ensign, flown over the occupied sultanate; no distinct Bruneian flag flew during this period.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#fecb00"/>
+            </svg>
+            <div class="flag-caption">plain yellow, the sultan's own royal color</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1888 &ndash; 1942</div>
+            <h3 class="card-title">British protectorate (established)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Protectorate (Britain)</span></div>
+            <p><span class="label">Who &amp; why:</span> facing continued territorial losses to the neighboring Brooke family's Sarawak and to British North Borneo, Sultan Hashim Jalilul Alam Aqamaddin accepts British protection in 1888 to halt the sultanate's decline; a British Resident is installed from 1906, advising the sultan on all matters except local custom and Islamic religious affairs, a system that endures for over half a century.</p>
+            <p><span class="label">What it represents:</span> plain yellow, the color exclusively associated with Brunei's royalty since well before this era, serves as the sultanate's own flag through the earlier protectorate years, before the 1959 constitution adds the white, black, and crest.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded; shown at 3:2.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#fecb00"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FECB00</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#fecb00"/>
+              <rect width="300" height="200" fill="none" stroke="#a4302a" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#a4302a">EMPIRE &amp;</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#a4302a">DECLINE</text>
+            </svg>
+            <div class="flag-caption">the sultan's yellow, standing in for a poorly documented span</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">15th century &ndash; 1888</div>
+            <h3 class="card-title">Bruneian Empire and its decline</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire / Sultanate</span></div>
+            <p><span class="label">Who &amp; why:</span> the Bruneian Empire reaches its peak in the fifteenth and sixteenth centuries under sultans such as Bolkiah, controlling much of Borneo's coastline and extending influence into the southern Philippines, including Manila before Spanish conquest. A long decline follows from internal succession disputes, piracy, and growing European pressure; the empire cedes Sarawak to the Brooke family (self-styled "White Rajahs") from 1841 and loses North Borneo to a British chartered company by the 1880s, shrinking to a small remnant before accepting British protection in 1888.</p>
+            <p><span class="label">What it represents:</span> no single flag is well documented across this long span of rise and decline; plain yellow, the color exclusively reserved for Brunei's royalty across its known history, is shown here as a reasonable representative color rather than a specific attested banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no single attested flag; shown as the sultan's royal color.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#fecb00"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FECB00</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Empire / Sultanate, absolute</b> &mdash; sovereign under the sultan's full authority</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Protectorate (Britain)</b> &mdash; British-supervised, sultan retained</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#5c2a24"></span><b>Occupation (Japan)</b> &mdash; wartime military rule</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="southeast-asia-hub.html"><b>Southeast Asia hub</b><span>Eleven countries, thirteen centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>
