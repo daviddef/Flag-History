@@ -1,0 +1,410 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Egypt</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Egypt, from Pharaonic antiquity through the Islamic caliphates, Ottoman and British rule, Nasser's pan-Arabism, to the modern republic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="maghreb-nile-hub.html">Maghreb &amp; Nile hub</a></p>
+  <p class="kicker">Family research &middot; Phase 8 of the world atlas</p>
+  <h1>Flags of Egypt</h1>
+  <p class="lede">Egypt is the deepest lineage in this entire atlas: Pharaonic civilization along the Nile runs back some three thousand years before any of this page's flags existed, through Persian, Greek (Ptolemaic), and Roman rule, the Arab-Islamic conquest, a long Ottoman period, Muhammad Ali's 19th-century modernizing dynasty, British occupation, and finally a republic that briefly tried to unite the wider Arab world under one flag. This page necessarily compresses antiquity into a single honest bridging entry before the historical record allows real flag-by-flag detail.</p>
+  <p class="lede">Gamal Abdel Nasser's 1952 republic pursued pan-Arabism aggressively &mdash; nationalizing the Suez Canal in 1956, triggering the Suez Crisis, and briefly merging Egypt's own statehood into unions with Syria and then Syria and Libya together, each with its own shared flag, before settling into the red-white-black tricolor Egypt still flies today.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Egypt, antiquity&ndash;present, seven political entities. No interactive map on this page &mdash; that layer is deferred project-wide to a future phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#ce1126"/>
+              <rect y="66.7" width="300" height="66.7" fill="#f4efe1"/>
+              <rect y="133.4" width="300" height="66.6" fill="#1a1a1a"/>
+              <g transform="translate(150,100) scale(1.1)">
+                <path fill="#c9a13c" d="M-22,-6 a22,20 0 1,1 44,0 l-4,4 a17,15 0 1,0 -36,0 Z"/>
+                <path fill="#c9a13c" d="M-2,-4 h4 v18 h-4 Z"/>
+              </g>
+            </svg>
+            <div class="flag-caption">red-white-black tricolor, golden Eagle of Saladin &mdash; the current flag</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1984 &ndash; present</div>
+            <h3 class="card-title">Arab Republic of Egypt (modern)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Republic, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> after the Federation of Arab Republics dissolves and Egypt signs the 1979 peace treaty with Israel following the 1973 war, the current national emblem &mdash; the golden Eagle of Saladin, a symbol tracing back to the historic Arab liberation flag &mdash; is formally fixed to the flag's center in 1984, replacing the earlier hawk of Quraish design.</p>
+            <p><span class="label">What it represents:</span> the red-white-black horizontal tricolor, in continuous use in some form since the 1952 revolution, now carries the golden Eagle of Saladin, holding a scroll inscribed with the republic's name.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Horizontal tricolor: red, white, black; golden Eagle of Saladin centered on the white band.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#ce1126"></span><span class="meta"><span class="name">Red</span><span class="hex">#CE1126</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1a1a1a"></span><span class="meta"><span class="name">Black</span><span class="hex">#1A1A1A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9a13c"></span><span class="meta"><span class="name">Gold eagle</span><span class="hex">#C9A13C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#ce1126"/>
+              <rect y="66.7" width="300" height="66.7" fill="#f4efe1"/>
+              <rect y="133.4" width="300" height="66.6" fill="#1a1a1a"/>
+              <circle cx="140" cy="100" r="9" fill="#1a1a1a"/>
+              <circle cx="160" cy="100" r="9" fill="#1a1a1a"/>
+            </svg>
+            <div class="flag-caption">the republic's tricolor, changing emblem through two pan-Arab unions</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1953 &ndash; 1984</div>
+            <h3 class="card-title">Republic of Egypt / United Arab Republic / Federation of Arab Republics</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Republic, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> the Free Officers' 1952 revolution, led by Gamal Abdel Nasser, ends the monarchy and declares a republic in June 1953. Nasser's pan-Arabism produces the 1958&ndash;1961 United Arab Republic with Syria (two green stars on the tricolor) and, after Syria's withdrawal, the 1972&ndash;1977 Federation of Arab Republics with Libya and Syria (a golden hawk of Quraish). Nasser's nationalization of the Suez Canal in 1956 triggers the Suez Crisis, a defining confrontation with Britain, France, and Israel that Egypt, backed by US and Soviet pressure, wins politically.</p>
+            <p><span class="label">What it represents:</span> the red-white-black tricolor, adopted at the republic's founding, keeps its structure through both pan-Arab unions while its central emblem changes twice to mark each new political arrangement &mdash; shown here as one bridging entry across a genuinely fast-moving 31 years.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Horizontal tricolor: red, white, black; central emblem changes by sub-period (eagle 1953&ndash;58, two green stars 1958&ndash;72, golden hawk 1972&ndash;84).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#ce1126"></span><span class="meta"><span class="name">Red</span><span class="hex">#CE1126</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#1a1a1a"></span><span class="meta"><span class="name">Black</span><span class="hex">#1A1A1A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#0b6e3f"/>
+              <path fill="#f4efe1" d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/>
+              <path fill="#f4efe1" d="M110,110 l5,14 15,1 -12,9.4 4.4,14.3 -12.4,-9 -12.4,9 4.4,-14.3 -12,-9.4 15,-1 Z"/>
+              <path fill="#f4efe1" d="M190,110 l5,14 15,1 -12,9.4 4.4,14.3 -12.4,-9 -12.4,9 4.4,-14.3 -12,-9.4 15,-1 Z"/>
+            </svg>
+            <div class="flag-caption">green field, white crescent and three stars &mdash; the Kingdom of Egypt</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1922 &ndash; 1953</div>
+            <h3 class="card-title">Kingdom of Egypt</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, nominal/full independence</span></div>
+            <p><span class="label">Who &amp; why:</span> Britain unilaterally declares Egypt nominally independent in 1922, with Sultan Fuad I becoming King, though British forces and advisors retain substantial real influence, especially over the Suez Canal Zone and foreign policy, until the 1936 Anglo-Egyptian Treaty narrows that role. The monarchy is abolished by the Free Officers' revolution in 1953.</p>
+            <p><span class="label">What it represents:</span> a new flag adopted at nominal independence in 1922 &mdash; green field, white crescent, three white stars representing Egypt, Nubia, and Sudan under one crown &mdash; replacing the Khedivate's earlier red banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green field, white crescent, three white five-pointed stars.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0b6e3f"></span><span class="meta"><span class="name">Green</span><span class="hex">#0B6E3F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <g fill="#f4efe1">
+                <path d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/>
+                <circle cx="180" cy="80" r="6"/>
+                <circle cx="185" cy="100" r="6"/>
+                <circle cx="180" cy="120" r="6"/>
+              </g>
+            </svg>
+            <div class="flag-caption">red field, white crescent and three stars &mdash; Muhammad Ali's dynasty, later occupied</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1805 &ndash; 1922</div>
+            <h3 class="card-title">Muhammad Ali dynasty / Khedivate of Egypt</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c9a13c"></span>Autonomous / occupied</span></div>
+            <p><span class="label">Who &amp; why:</span> Muhammad Ali, an Ottoman-Albanian officer, seizes power in 1805 and founds a dynasty that modernizes Egypt's military, economy, and infrastructure while remaining a nominal Ottoman vassal, raised to the autonomous title "Khedive" in 1867. Egypt's mounting debt from the Suez Canal (opened 1869) and other projects gives Britain the pretext to occupy the country militarily in 1882, though nominal Khedivate sovereignty continues under British control until 1914.</p>
+            <p><span class="label">What it represents:</span> the Khedivate's own red flag, with a white crescent and three stars, formalized in 1881 and continuing to fly, largely unchanged, straight through the start of the British occupation the following year.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio for most of this period; 1881 flag roughly 2:3.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, white crescent and (from 1881) three white stars.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <g fill="#f4efe1">
+                <path d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/>
+                <path d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/>
+              </g>
+            </svg>
+            <div class="flag-caption">Ottoman red, white crescent and star &mdash; provincial Egypt</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1517 &ndash; 1805</div>
+            <h3 class="card-title">Ottoman Egypt</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c9a13c"></span>Ottoman province</span></div>
+            <p><span class="label">Who &amp; why:</span> the Ottoman Sultan Selim I defeats the Mamluk Sultanate at the Battle of Ridaniya in 1517, absorbing Egypt as an Ottoman province called an eyalet, though Mamluk beys continue to hold substantial local power under nominal Ottoman governors for most of this nearly three-century span.</p>
+            <p><span class="label">What it represents:</span> the standard Ottoman red field with white crescent and star, flown across this and other Ottoman provinces of the era.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for this era.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red field, white crescent and five-pointed star.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO SINGLE FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; Arab-Islamic caliphates and sultanates</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">642 &ndash; 1517</div>
+            <h3 class="card-title">Arab-Islamic Egypt: caliphates to Mamluks</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Successive caliphates/sultanates</span></div>
+            <p><span class="label">Who &amp; why:</span> the Rashidun Arab conquest of Byzantine Egypt completes in 642, beginning nearly nine centuries under Umayyad, Abbasid, Tulunid, Ikhshidid, Fatimid (who found Cairo in 969 as their capital), Ayyubid (founded by Saladin), and finally Mamluk rule &mdash; a slave-soldier military caste that rules as sultans and repels the Mongols at Ain Jalut in 1260, until Ottoman conquest in 1517.</p>
+            <p><span class="label">What it represents:</span> no single flag can honestly represent nearly nine centuries and at least six distinct ruling dynasties across this territory; heraldic banners of this era are poorly and inconsistently attested. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no single attested flag across this span.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO SINGLE FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; Pharaonic through Roman antiquity</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">Antiquity &ndash; 642</div>
+            <h3 class="card-title">Pharaonic, Persian, Greek &amp; Roman Egypt</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Antiquity</span></div>
+            <p><span class="label">Who &amp; why:</span> Egypt is one of the world's oldest continuous civilizations, its unified Pharaonic state dating back roughly five thousand years, followed by Achaemenid Persian conquest (525 BC), Alexander the Great and the Greek Ptolemaic dynasty (323&ndash;30 BC, ending with Cleopatra VII), and then nearly seven centuries as a province of Rome and, later, the Byzantine Empire, until the Arab conquest of 642.</p>
+            <p><span class="label">What it represents:</span> flags as a heraldic device do not exist in this period; ancient Egypt used standards, banners, and royal insignia (such as the crook and flail, or Pharaonic double crown) rather than territorial flags in the modern sense. Shown here honestly blank rather than invented, standing in for millennia of civilization this atlas cannot reduce to a single painted banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no flags existed as a heraldic form in this era.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Antiquity / successive dynasties</b> &mdash; no single flag</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c9a13c"></span><b>Ottoman province / autonomous</b> &mdash; under or loosely under the Sultan</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom / Republic, independent</b> &mdash; sovereign under its own government</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="maghreb-nile-hub.html"><b>Maghreb &amp; Nile hub</b><span>Six countries, fourteen centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>
