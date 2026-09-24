@@ -535,6 +535,14 @@
     laos: '<rect width="300" height="50" fill="#c8102e"/><rect y="50" width="300" height="100" fill="#00247d"/><rect y="150" width="300" height="50" fill="#c8102e"/><circle cx="150" cy="100" r="40" fill="#f4efe1"/>',
     brunei: '<rect width="300" height="200" fill="#fecb00"/><polygon points="0,0 300,0 300,60 0,140" fill="#f4efe1"/><polygon points="0,60 300,140 300,200 0,200" fill="#000000"/><ellipse cx="150" cy="100" rx="30" ry="24" fill="#c8102e"/>',
     timorleste: '<rect width="300" height="200" fill="#dc241f"/><polygon points="0,0 0,200 150,100" fill="#ffc726"/><polygon points="0,0 0,200 100,100" fill="#000000"/><path d="M40,90 l6,16 17,1 -13,11 5,17 -15,-9 -15,9 5,-17 -13,-11 17,-1 Z" fill="#f4efe1"/>',
+    india: '<rect width="300" height="66.7" fill="#ff9933"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#138808"/><circle cx="150" cy="100" r="20" fill="none" stroke="#000080" stroke-width="2.5"/><circle cx="150" cy="100" r="3" fill="#000080"/>',
+    pakistan: '<rect width="300" height="200" fill="#01411c"/><rect width="75" height="200" fill="#f4efe1"/><circle cx="185" cy="100" r="35" fill="#f4efe1"/><circle cx="197" cy="100" r="28" fill="#01411c"/><polygon points="220.0,66.0 223.5,75.1 233.3,75.7 225.7,81.9 228.2,91.3 220.0,86.0 211.8,91.3 214.3,81.9 206.7,75.7 216.5,75.1" fill="#f4efe1"/>',
+    bangladesh: '<rect width="300" height="200" fill="#006a4e"/><circle cx="135" cy="100" r="45" fill="#f42a41"/>',
+    srilanka: '<rect width="300" height="200" fill="#ffb700"/><rect x="8" width="292" height="200" fill="#8d153a"/><rect x="8" width="30" height="200" fill="#00534e"/><rect x="38" width="30" height="200" fill="#ea7a00"/><rect x="76" y="20" width="200" height="160" fill="#8d153a" stroke="#ffb700" stroke-width="4"/><circle cx="176" cy="100" r="35" fill="#ffb700"/>',
+    nepal: '<rect width="300" height="200" fill="#003893"/><rect x="6" y="6" width="288" height="188" fill="#dc143c"/><circle cx="100" cy="70" r="18" fill="none" stroke="#f4efe1" stroke-width="4"/><polygon points="200.0,114.0 204.1,124.3 215.2,125.1 206.7,132.2 209.4,142.9 200.0,137.0 190.6,142.9 193.3,132.2 184.8,125.1 195.9,124.3" fill="#f4efe1"/>',
+    bhutan: '<polygon points="0,0 300,0 0,200" fill="#ffde00"/><polygon points="300,0 300,200 0,200" fill="#ff4e12"/><path d="M90,150 Q120,90 160,110 Q200,130 230,70 Q210,110 175,120 Q140,135 120,170 Z" fill="#f4efe1" stroke="#000000" stroke-width="1.5"/>',
+    maldives: '<rect width="300" height="200" fill="#d21034"/><rect x="60" y="30" width="200" height="140" fill="#00843d"/><circle cx="180" cy="100" r="34" fill="#f4efe1"/><circle cx="192" cy="100" r="28" fill="#00843d"/>',
+    afghanistan: '<rect width="300" height="200" fill="#f4efe1"/><rect y="86" width="300" height="28" fill="#000000"/>',
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -1282,6 +1290,22 @@
       crowns:["Bruneian Empire and decline","British protectorate (established)","Japanese occupation","British protectorate (post-war)","British protectorate (self-governing)","Sultanate of Brunei (independent)"] },
     { name:"Timor-Leste", flag:"timorleste", ownPage:true, url:"timor-leste-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#dc241f",
       crowns:["Portuguese Timor","Proclaimed independence / Indonesian occupation","UN Transitional Administration (UNTAET)","Democratic Republic of Timor-Leste"] },
+    { name:"India", flag:"india", ownPage:true, url:"india-flags.html", hub:"South Asia", region:"South Asia", color:"#ff9933",
+      crowns:["Indus Valley Civilization","Maurya Empire","Gupta Empire","Delhi Sultanate","Mughal Empire","British East India Company","British Raj","Union & Republic of India"] },
+    { name:"Pakistan", flag:"pakistan", ownPage:true, url:"pakistan-flags.html", hub:"South Asia", region:"South Asia", color:"#01411c",
+      crowns:["Indus Valley Civilization","Islamic sultanates","Mughal Empire","British Raj","Dominion of Pakistan","Islamic Republic of Pakistan"] },
+    { name:"Bangladesh", flag:"bangladesh", ownPage:true, url:"bangladesh-flags.html", hub:"South Asia", region:"South Asia", color:"#006a4e",
+      crowns:["Historic Bengal","Bengal Sultanate","Mughal Bengal","East India Company rule","British Raj","East Pakistan","People's Republic of Bangladesh"] },
+    { name:"Sri Lanka", flag:"srilanka", ownPage:true, url:"sri-lanka-flags.html", hub:"South Asia", region:"South Asia", color:"#ffb700",
+      crowns:["Kingdom of Anuradhapura","Chola conquest","Kingdom of Polonnaruwa","Later Sinhalese kingdoms","Kingdom of Kandy","Portuguese/Dutch Ceylon","British Ceylon","Dominion of Ceylon","Republic of Sri Lanka"] },
+    { name:"Nepal", flag:"nepal", ownPage:true, url:"nepal-flags.html", hub:"South Asia", region:"South Asia", color:"#dc143c",
+      crowns:["Fragmented hill kingdoms","Kingdom of Nepal (Shah unification)","Rana oligarchy","Restored monarchy","Panchayat system","Constitutional monarchy","Federal Democratic Republic"] },
+    { name:"Bhutan", flag:"bhutan", ownPage:true, url:"bhutan-flags.html", hub:"South Asia", region:"South Asia", color:"#ffde00",
+      crowns:["Fragmented valley principalities","Druk Desi dual theocracy","Hereditary monarchy (Wangchuck)","Modern kingdom"] },
+    { name:"Maldives", flag:"maldives", ownPage:true, url:"maldives-flags.html", hub:"South Asia", region:"South Asia", color:"#d21034",
+      crowns:["Early Buddhist-era kingdom","Early Maldive Sultanate","Portuguese occupation","Restored Sultanate","First Republic","Sultanate under British protectorate","Republic of Maldives"] },
+    { name:"Afghanistan", flag:"afghanistan", ownPage:true, url:"afghanistan-flags.html", hub:"South Asia", region:"South Asia", color:"#000000",
+      crowns:["Ancient successive empires","Durrani Empire","Kingdom of Afghanistan","Republic of Afghanistan","Democratic Republic (PDPA)","Islamic State (civil war)","Islamic Emirate (Taliban, first)","Islamic Republic","Islamic Emirate (Taliban, second)"] },
   ];
 
   var grid = document.getElementById("countryGrid");

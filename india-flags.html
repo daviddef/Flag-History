@@ -1,0 +1,753 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of India</title>
+<meta name="description" content="A chronological, paint-ready atlas of the flags and civilizational symbols connected to the Indian subcontinent, from the undocumented Indus Valley Civilization through Maurya, Gupta, Delhi Sultanate, and Mughal rule, British colonial control, the independence movement's own flags, and the modern Republic's tricolor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="south-asia-hub.html">South Asia hub</a></p>
+  <p class="kicker">Family research &middot; Phase 16 of the world atlas</p>
+  <h1>Flags of India</h1>
+  <p class="lede">Five thousand years compressed into sixteen entries: an undocumented Bronze Age civilization along the Indus, a succession of classical empires that gave the modern flag its central emblem, centuries of regional kingdoms and sultanates, two centuries of European commercial and then Crown rule, a decades-long independence movement that designed and redesigned its own banner before the country ever flew one officially, and finally the saffron-white-green tricolor that has now flown, unchanged in design, for close to eighty years.</p>
+  <p class="lede">The navy-blue wheel at the center of today's flag is not a modern invention: it is a direct visual descendant of the Ashoka Chakra, the wheel carved onto Mauryan emperor Ashoka's 3rd-century-BCE pillars &mdash; making this one of the few national flags anywhere that reaches back to a specific, datable ancient artifact for its central symbol.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> political entities and symbols connected to the Indian subcontinent, c. 3300 BCE &ndash; present, sixteen entries. Several entries deliberately overlap rather than sit end-to-end: the four independence-movement flags (entries 12&ndash;15) were unofficial protest and party banners flown against &mdash; not instead of &mdash; British Crown rule (entry 11), and the Mughal Empire's later, declining phase (entry 9) overlaps the East India Company's own rise to real power (entry 10), since the Mughal emperor remained the nominal sovereign for decades after the Company held the actual administration. These are treated as parallel tracks, not as contradictory dates. The Mughal Empire itself (1526&ndash;1857) is covered in far greater depth on its own page &mdash; see the link in entries 8&ndash;9 below. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="16">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#ff9933"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#138808"/>
+              <circle cx="150" cy="100" r="22" fill="none" stroke="#0b3a8a" stroke-width="2.4"/>
+              <g stroke="#0b3a8a" stroke-width="1.6">
+                <line x1="150" y1="78" x2="150" y2="122"/><line x1="128" y1="100" x2="172" y2="100"/>
+                <line x1="134.4" y1="84.4" x2="165.6" y2="115.6"/><line x1="165.6" y1="84.4" x2="134.4" y2="115.6"/>
+                <line x1="141.5" y1="79.6" x2="158.5" y2="120.4"/><line x1="158.5" y1="79.6" x2="141.5" y2="120.4"/>
+                <line x1="130.4" y1="90.5" x2="169.6" y2="109.5"/><line x1="169.6" y1="90.5" x2="130.4" y2="109.5"/>
+              </g>
+              <circle cx="150" cy="100" r="3" fill="#0b3a8a"/>
+            </svg>
+            <div class="flag-caption">saffron / white / green tricolor with the navy Ashoka Chakra</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1947 &ndash; present</div>
+            <h3 class="card-title">Union &amp; Republic of India</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b45"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> the Constituent Assembly adopts this tricolor on 22 July 1947, days before British India is partitioned into the two independent dominions of India and Pakistan on 15 August 1947 &mdash; a transfer of power accompanied by one of the largest population movements of the 20th century and widespread communal violence, whose human toll is still debated by historians. India becomes a sovereign republic under its own constitution on 26 January 1950 (still marked as Republic Day), but the flag and the underlying state are a direct continuity from 1947, so that transition is folded into this single entry rather than treated as a new banner. One long-running territorial dispute from partition, over the former princely state of Jammu and Kashmir, remains unresolved between India and Pakistan to this day; this page describes only that a dispute exists and takes no position on it. The flag's design has not changed since 1947.</p>
+            <p><span class="label">What it represents:</span> saffron (courage and sacrifice), white (truth and peace), and green (faith and chivalry) in equal horizontal bands, with the 24-spoke Ashoka Chakra in navy blue replacing the spinning wheel (charkha) of the pre-independence Congress flag &mdash; a deliberate substitution of an ancient imperial symbol for a more recent political one, meant to represent the nation rather than any single movement or community.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, three equal horizontal bands.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Saffron / white / green bands; navy 24-spoke chakra centered on the white band, diameter roughly three-quarters of the white band's height.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#ff9933"></span><span class="meta"><span class="name">India saffron</span><span class="hex">#FF9933</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#138808"></span><span class="meta"><span class="name">India green</span><span class="hex">#138808</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0b3a8a"></span><span class="meta"><span class="name">Chakra navy</span><span class="hex">#0B3A8A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="15">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#ff9933"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#138808"/>
+              <circle cx="150" cy="100" r="20" fill="none" stroke="#0b3a8a" stroke-width="2"/>
+              <circle cx="150" cy="100" r="9" fill="none" stroke="#0b3a8a" stroke-width="2"/>
+              <line x1="150" y1="80" x2="150" y2="120" stroke="#0b3a8a" stroke-width="2"/>
+            </svg>
+            <div class="flag-caption">the Indian National Congress flag, charkha in navy on white</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1931 &ndash; 1947</div>
+            <h3 class="card-title">Indian National Congress tricolor (formal adoption)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c07830"></span>Independence movement</span></div>
+            <p><span class="label">Who &amp; why:</span> at its August 1931 Karachi session, the Indian National Congress formally adopts a refined version of the 1921 flag: saffron replaces the earlier red, and the charkha (spinning wheel) &mdash; already closely associated with Gandhi's campaign for economic self-reliance and hand-spun cloth &mdash; is fixed in navy blue on the white band. This becomes the de facto flag of the independence movement for its final, most intense sixteen years, flown at protests, rallies, and the 1942 Quit India campaign.</p>
+            <p><span class="label">What it represents:</span> saffron, white, and green are given the same non-sectarian reading later carried into the national flag; the charkha stands for self-sufficiency and the boycott of British textiles, a central plank of Gandhi's constructive program.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, unofficial (no state authority to fix a ratio).</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Saffron / white / green bands; navy charkha (wheel with axle line) centered on the white band.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#ff9933"></span><span class="meta"><span class="name">Saffron</span><span class="hex">#FF9933</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#138808"></span><span class="meta"><span class="name">Green</span><span class="hex">#138808</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0b3a8a"></span><span class="meta"><span class="name">Charkha navy</span><span class="hex">#0B3A8A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="14">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#a4302a"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#138808"/>
+              <circle cx="150" cy="100" r="20" fill="none" stroke="#0b3a8a" stroke-width="2"/>
+              <circle cx="150" cy="100" r="9" fill="none" stroke="#0b3a8a" stroke-width="2"/>
+              <line x1="150" y1="80" x2="150" y2="120" stroke="#0b3a8a" stroke-width="2"/>
+            </svg>
+            <div class="flag-caption">red / white / green Swaraj flag with charkha, 1921 prototype</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1921 &ndash; 1931</div>
+            <h3 class="card-title">Swaraj flag (Gandhi &amp; the Congress, informal)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c07830"></span>Independence movement</span></div>
+            <p><span class="label">Who &amp; why:</span> in 1921, Pingali Venkayya presents Mahatma Gandhi with a two-color red-and-green flag intended to represent India's two largest religious communities, Hindus and Muslims. Gandhi asks for a white band to be added for other communities and suggests the charkha be placed at the center as a unifying, secular emblem tied to his campaign of economic self-reliance. The Congress does not yet adopt it as an official party flag, but it circulates widely as the movement's own banner through the 1920s.</p>
+            <p><span class="label">What it represents:</span> red for the Hindu community, green for the Muslim community, white for all other communities and for peace between them, and the charkha for self-sufficient, home-spun cloth as a form of economic resistance to British textile imports.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio; informal movement banner.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Red / white / green bands; navy charkha centered on the white band.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#138808"></span><span class="meta"><span class="name">Green</span><span class="hex">#138808</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0b3a8a"></span><span class="meta"><span class="name">Charkha navy</span><span class="hex">#0B3A8A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="13">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#a4302a"/>
+              <g fill="#0b6e3f"><rect y="0" width="300" height="22.2"/><rect y="44.4" width="300" height="22.2"/><rect y="88.8" width="300" height="22.2"/><rect y="133.2" width="300" height="22.2"/><rect y="177.6" width="300" height="22.4"/></g>
+              <rect width="70" height="45" fill="#00247d"/>
+              <g stroke="#f4efe1" stroke-width="2.4"><line x1="0" y1="0" x2="70" y2="45"/><line x1="70" y1="0" x2="0" y2="45"/></g>
+              <line x1="35" y1="0" x2="35" y2="45" stroke="#f4efe1" stroke-width="4"/>
+              <line x1="0" y1="22.5" x2="70" y2="22.5" stroke="#f4efe1" stroke-width="4"/>
+              <line x1="35" y1="0" x2="35" y2="45" stroke="#a4302a" stroke-width="1.4"/>
+              <line x1="0" y1="22.5" x2="70" y2="22.5" stroke="#a4302a" stroke-width="1.4"/>
+              <g fill="#f4efe1"><circle cx="200" cy="70" r="4"/><circle cx="215" cy="80" r="4"/><circle cx="222" cy="98" r="4"/><circle cx="215" cy="116" r="4"/><circle cx="200" cy="122" r="4"/><circle cx="185" cy="112" r="4"/><circle cx="188" cy="92" r="4"/></g>
+              <path d="M120,150 a14,14 0 1 0 0.1,0 z M126,150 a10,10 0 1 1 -0.1,0 z" fill="#f4efe1"/>
+              <path d="M96,150 l5,-8 5,8 -5,3 z" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">Home Rule flag: red/green stripes, Union Jack canton, Saptarishi stars, crescent</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1917 &ndash; 1921</div>
+            <h3 class="card-title">Home Rule Movement flag</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c07830"></span>Independence movement</span></div>
+            <p><span class="label">Who &amp; why:</span> Annie Besant and Bal Gangadhar Tilak launch the Indian Home Rule Movement in 1916, campaigning for dominion self-government within the British Empire on the model already granted to Australia and Canada. A flag combining nine red and green stripes with a Union Jack in the canton is flown at Home Rule League rallies from 1917, explicitly signaling loyalty to the Empire alongside a demand for self-rule rather than full independence &mdash; a more moderate position than the Congress would later take.</p>
+            <p><span class="label">What it represents:</span> the seven white stars in the Saptarishi (Great Bear / Ursa Major) pattern hold symbolic weight in Hindu tradition; the crescent moon and star reference the movement's appeal across religious communities; the Union Jack canton marks the movement's dominion-status goal rather than a break from Britain.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio; informal movement banner.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Nine alternating red and green horizontal stripes; Union Jack canton; seven white stars (Saptarishi) and a white crescent and star scattered across the field.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0b6e3f"></span><span class="meta"><span class="name">Green</span><span class="hex">#0B6E3F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Union Jack blue</span><span class="hex">#00247D</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="12">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#0b6e3f"/>
+              <rect y="66.7" width="300" height="66.6" fill="#f9d616"/>
+              <rect y="133.3" width="300" height="66.7" fill="#a4302a"/>
+              <g fill="#f4efe1"><circle cx="30" cy="33" r="8"/><circle cx="66" cy="33" r="8"/><circle cx="102" cy="33" r="8"/><circle cx="138" cy="33" r="8"/><circle cx="174" cy="33" r="8"/><circle cx="210" cy="33" r="8"/><circle cx="246" cy="33" r="8"/><circle cx="282" cy="33" r="8"/></g>
+              <text x="150" y="105" text-anchor="middle" font-family="serif" font-size="16" fill="#7c2e1f">Vande Mataram</text>
+              <circle cx="230" cy="170" r="12" fill="#f4efe1"/>
+              <path d="M50,178 a16,16 0 1 1 24,-14 a13,13 0 1 0 -24,14 z" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">the 1906 Calcutta flag: green/saffron/red, lotuses, sun and crescent</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1906 &ndash; 1917</div>
+            <h3 class="card-title">Calcutta flag ("Bande Mataram" flag)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c07830"></span>Independence movement</span></div>
+            <p><span class="label">Who &amp; why:</span> nationalist leaders unveil this banner at a rally in Calcutta (now Kolkata) on 7 August 1906, in the charged atmosphere following Lord Curzon's 1905 partition of Bengal &mdash; widely seen as a deliberate attempt to weaken the nationalist movement along religious lines, and one of the sparks of the early Swadeshi (self-reliance/boycott) campaign. A modified version is displayed by Bhikaiji Cama at an international socialist congress in Stuttgart, Germany, in 1907, an early instance of the movement's own symbol appearing on a world stage.</p>
+            <p><span class="label">What it represents:</span> eight lotuses on the green band represent the eight provinces of British India at the time; "Vande Mataram" ("I bow to thee, Mother"), from Bankim Chandra Chattopadhyay's 1882 novel Anandamath, becomes an anthem of the independence movement; the sun and crescent moon on the red band gesture toward Hindu and Muslim symbolism respectively.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio; informal movement banner.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green / saffron / red horizontal bands; eight white lotuses on the green band; "Vande Mataram" lettered across the saffron band; sun and crescent on the red band.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0b6e3f"></span><span class="meta"><span class="name">Green</span><span class="hex">#0B6E3F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f9d616"></span><span class="meta"><span class="name">Saffron/yellow</span><span class="hex">#F9D616</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="11">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#00247d"/>
+              <rect width="150" height="100" fill="#00247d"/>
+              <g stroke="#f4efe1" stroke-width="7"><line x1="0" y1="0" x2="150" y2="100"/><line x1="150" y1="0" x2="0" y2="100"/></g>
+              <g stroke="#a4302a" stroke-width="3"><line x1="0" y1="0" x2="150" y2="100"/><line x1="150" y1="0" x2="0" y2="100"/></g>
+              <line x1="75" y1="0" x2="75" y2="100" stroke="#f4efe1" stroke-width="11"/>
+              <line x1="0" y1="50" x2="150" y2="50" stroke="#f4efe1" stroke-width="11"/>
+              <line x1="75" y1="0" x2="75" y2="100" stroke="#a4302a" stroke-width="4"/>
+              <line x1="0" y1="50" x2="150" y2="50" stroke="#a4302a" stroke-width="4"/>
+              <g transform="translate(210,120)">
+                <path d="M0,-26 l7,17 18,2 -14,13 4,18 -15,-9 -15,9 4,-18 -14,-13 18,-2 Z" fill="#f4efe1" stroke="#c9a13c" stroke-width="1.5"/>
+              </g>
+            </svg>
+            <div class="flag-caption">Union Jack canton on dark blue, Star of India badge in the fly</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1858 &ndash; 1947</div>
+            <h3 class="card-title">British Raj (Crown rule)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#46647a"></span>Crown colony</span></div>
+            <p><span class="label">Who &amp; why:</span> after the failed rebellion of 1857 (the Indian Mutiny / First War of Independence, depending on the historiographical tradition), the British Crown abolishes East India Company rule via the Government of India Act 1858 and takes direct control. Queen Victoria is proclaimed Empress of India in 1877. Crown rule lasts ninety years, marked by famine, sweeping infrastructure and administrative change, two World Wars in which Indian troops serve in large numbers, and a steadily growing nationalist movement that this rule never fully suppresses (see entries 12&ndash;15).</p>
+            <p><span class="label">What it represents:</span> the unofficial "Star of India" flag &mdash; a dark blue field with the Union Jack in the canton and the Star of India badge in the fly &mdash; is used informally to represent British India on land and sea; there was no single flag mandated for universal civil use across the subcontinent throughout this period.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Dark blue field; Union Jack canton; Star of India badge (star with central device) in the fly.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Dark blue</span><span class="hex">#00247D</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Union Jack red</span><span class="hex">#A4302A</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="10">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect width="300" height="200" fill="#f4efe1"/>
+                <g fill="#a4302a"><rect y="0" width="300" height="15.4"/><rect y="30.8" width="300" height="15.4"/><rect y="61.6" width="300" height="15.4"/><rect y="92.4" width="300" height="15.4"/><rect y="123.2" width="300" height="15.4"/><rect y="154" width="300" height="15.4"/><rect y="184.8" width="300" height="15.2"/></g>
+              </g>
+              <rect width="110" height="80" fill="#00247d"/>
+              <g stroke="#f4efe1" stroke-width="5"><line x1="0" y1="0" x2="110" y2="80"/><line x1="110" y1="0" x2="0" y2="80"/></g>
+              <g stroke="#a4302a" stroke-width="2.2"><line x1="0" y1="0" x2="110" y2="80"/><line x1="110" y1="0" x2="0" y2="80"/></g>
+              <line x1="55" y1="0" x2="55" y2="80" stroke="#f4efe1" stroke-width="8"/>
+              <line x1="0" y1="40" x2="110" y2="40" stroke="#f4efe1" stroke-width="8"/>
+              <line x1="55" y1="0" x2="55" y2="80" stroke="#a4302a" stroke-width="3"/>
+              <line x1="0" y1="40" x2="110" y2="40" stroke="#a4302a" stroke-width="3"/>
+            </svg>
+            <div class="flag-caption">Company striped ensign: red/white stripes, Union Jack canton</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1757 &ndash; 1858</div>
+            <h3 class="card-title">British East India Company rule</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Company rule</span></div>
+            <p><span class="label">Who &amp; why:</span> Robert Clive's victory at the Battle of Plassey in June 1757 gives the East India Company effective control of Bengal, and the Company steadily expands its administrative and military reach across the subcontinent over the following century, governing through a mix of direct control and subsidiary alliances with local rulers &mdash; including, nominally, the Mughal emperor himself, whose court survives as a titular authority until 1857 (see entry 9). The 1857 rebellion, brutally suppressed on both sides, ends Company rule entirely; Parliament transfers all governance to the Crown the following year.</p>
+            <p><span class="label">What it represents:</span> the Company's own ensign &mdash; alternating red and white horizontal stripes with the Union Jack in the canton &mdash; is flown on Company ships and forts; it predates and is sometimes cited as a visual precursor, by coincidence of design rather than direct lineage, to the later flag of the United States.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Thirteen alternating red and white horizontal stripes; Union Jack canton.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#a4302a"></span><span class="meta"><span class="name">Red</span><span class="hex">#A4302A</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#00247d"></span><span class="meta"><span class="name">Union Jack blue</span><span class="hex">#00247D</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="entry" data-n="9">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#0b6e3f" opacity=".55"/>
+              <path d="M150,60 l10,22 24,3 -17,17 4,24 -21,-11 -21,11 4,-24 -17,-17 24,-3 Z" fill="#f9d616" opacity=".55"/>
+              <rect width="300" height="200" fill="none" stroke="#a4302a" stroke-width="4" stroke-dasharray="9 7"/>
+            </svg>
+            <div class="flag-caption">the same imperial banner, faded &mdash; real power shifting elsewhere</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1707 &ndash; 1857</div>
+            <h3 class="card-title">Mughal decline &amp; British ascendancy</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire</span></div>
+            <p><span class="label">Who &amp; why:</span> after Aurangzeb's death in 1707, the empire fragments under weak successors, regional revolts, and Maratha, Sikh, and Afghan incursions, while the East India Company steadily converts commercial privilege into territorial control (entry 10). The Mughal emperor remains the nominal sovereign &mdash; other rulers, including the British, continue to seek his formal sanction for decades &mdash; even as actual power drains away. The line ends when the British exile the last emperor, Bahadur Shah II, after the 1857 rebellion, formally abolishing the dynasty. This whole era is <a href="mughal-empire-flags.html">covered in depth on its own page</a>.</p>
+            <p><span class="label">What it represents:</span> the same green field and gold sun/star emblem used through the dynasty's peak (entry 8), shown faded here to signal a sovereign in name only over the empire's final century and a half.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green field, gold sun/star emblem; see the Mughal page for period-specific variants.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0b6e3f"></span><span class="meta"><span class="name">Green</span><span class="hex">#0B6E3F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f9d616"></span><span class="meta"><span class="name">Gold</span><span class="hex">#F9D616</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="entry" data-n="8">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#0b6e3f"/>
+              <path d="M150,55 l11,24 26,3 -19,18 5,26 -23,-12 -23,12 5,-26 -19,-18 26,-3 Z" fill="#f9d616"/>
+            </svg>
+            <div class="flag-caption">green field, gold sun/star emblem &mdash; imperial peak</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1526 &ndash; 1707</div>
+            <h3 class="card-title">Mughal Empire (founding to peak)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire</span></div>
+            <p><span class="label">Who &amp; why:</span> Babur, a Timurid prince, founds the empire with his 1526 victory at Panipat; his descendants &mdash; especially Akbar, Shah Jahan, and Aurangzeb &mdash; expand it into one of the wealthiest and most powerful states in the early modern world, ruling most of the subcontinent at its height. This span is <a href="mughal-empire-flags.html">covered in depth, phase by phase, on its own page</a>; it is summarized briefly here only to keep this page's own timeline unbroken.</p>
+            <p><span class="label">What it represents:</span> a green field with a gold sun or star-burst emblem, used across the dynasty's peak reigns as the closest thing to a consistent imperial banner in a period without a single fixed national flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green field, gold sun/star emblem, centered.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0b6e3f"></span><span class="meta"><span class="name">Green</span><span class="hex">#0B6E3F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f9d616"></span><span class="meta"><span class="name">Gold</span><span class="hex">#F9D616</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#7c2e1f"/>
+              <path d="M150,50 l60,90 h-120 z" fill="none" stroke="#f9d616" stroke-width="3"/>
+              <circle cx="150" cy="120" r="20" fill="none" stroke="#f9d616" stroke-width="3"/>
+            </svg>
+            <div class="flag-caption">dark red field, gold crescent-and-blade motif &mdash; reconstructed</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1206 &ndash; 1526</div>
+            <h3 class="card-title">Delhi Sultanate</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#9c3b28"></span>Sultanate</span></div>
+            <p><span class="label">Who &amp; why:</span> Qutb-ud-din Aibak, a former slave-general (Mamluk) of the Ghurid Empire, establishes an independent sultanate at Delhi in 1206. Five successive dynasties &mdash; Mamluk, Khalji, Tughlaq, Sayyid, and Lodi &mdash; rule from Delhi over the next three centuries, at times controlling most of the subcontinent, introducing Indo-Islamic architecture and administration and repelling repeated Mongol invasions. The sultanate ends in 1526 when Babur defeats the last Lodi sultan at Panipat, founding the Mughal Empire.</p>
+            <p><span class="label">What it represents:</span> no single sultanate flag survives with confidence across five different ruling dynasties; the crescent-and-banner motifs shown here are informed reconstructions typical of the period's Islamic courts, not a documented state flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no single flag attested across five dynasties.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Dark red field with gold crescent and blade motifs, as an informed reconstruction.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#7c2e1f"></span><span class="meta"><span class="name">Dark red</span><span class="hex">#7C2E1F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f9d616"></span><span class="meta"><span class="name">Gold</span><span class="hex">#F9D616</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO SINGLE</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">FLAG</text>
+            </svg>
+            <div class="flag-caption">placeholder &mdash; many regional kingdoms, no one banner</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 550 &ndash; 1206</div>
+            <h3 class="card-title">Medieval regional kingdoms</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#8a7a54"></span>Fragmented kingdoms</span></div>
+            <p><span class="label">Who &amp; why:</span> after the Gupta Empire's decline, the subcontinent fragments into numerous regional powers over six and a half centuries &mdash; among them Harsha's short-lived north Indian empire, the Chalukyas and Rashtrakutas in the Deccan, the Pala and Gurjara-Pratihara dynasties in the north and east, and the Chola Empire in the south, which at its 11th-century peak projects naval power as far as Southeast Asia. No single polity governs the subcontinent as a whole during this span, which ends with the establishment of the Delhi Sultanate in 1206.</p>
+            <p><span class="label">What it represents:</span> dozens of royal emblems and temple banners exist across these kingdoms (the Chola tiger standard among the best-attested), but no single flag can represent this fragmented, multi-centered era; shown here honestly blank rather than picking one dynasty to stand for all of them.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no single attested flag for the era.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#7c2e1f"/>
+              <circle cx="150" cy="100" r="42" fill="none" stroke="#f9d616" stroke-width="4"/>
+              <g stroke="#f9d616" stroke-width="2">
+                <line x1="150" y1="58" x2="150" y2="142"/><line x1="108" y1="100" x2="192" y2="100"/>
+                <line x1="120" y1="70" x2="180" y2="130"/><line x1="180" y1="70" x2="120" y2="130"/>
+              </g>
+            </svg>
+            <div class="flag-caption">reconstructed wheel emblem after the Ashoka Chakra motif</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">320 &ndash; 550 CE</div>
+            <h3 class="card-title">Gupta Empire</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire</span></div>
+            <p><span class="label">Who &amp; why:</span> Chandragupta I founds the dynasty around 320 CE, and successors including Samudragupta and Chandragupta II expand it across most of northern India, presiding over what is widely called classical India's golden age &mdash; major advances in mathematics (the concept of zero), astronomy, medicine, and Sanskrit literature and art. The empire weakens under Hunnic (Hephthalite) invasions from the late 5th century and effectively dissolves by the mid-6th century into successor regional kingdoms.</p>
+            <p><span class="label">What it represents:</span> no Gupta state flag is documented; Gupta coinage and inscriptions do show wheel (chakra) and Garuda motifs associated with royal authority, echoing the earlier Mauryan chakra, and the wheel shown here is a reconstruction gesturing at that visual continuity rather than a specific surviving banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag; reconstructed emblem shown.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Dark red field, gold wheel (chakra) motif, centered.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#7c2e1f"></span><span class="meta"><span class="name">Dark red</span><span class="hex">#7C2E1F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f9d616"></span><span class="meta"><span class="name">Gold</span><span class="hex">#F9D616</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO SINGLE</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">FLAG</text>
+            </svg>
+            <div class="flag-caption">placeholder &mdash; Shunga, Satavahana, Kushan and other regional powers</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 185 BCE &ndash; 320 CE</div>
+            <h3 class="card-title">Post-Mauryan regional kingdoms</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#8a7a54"></span>Fragmented kingdoms</span></div>
+            <p><span class="label">Who &amp; why:</span> the Maurya Empire collapses after the assassination of its last emperor around 185 BCE, and the subcontinent splits among successor and rival powers over the following five centuries &mdash; the Shunga and later Satavahana dynasties in the north and Deccan, Indo-Greek and Indo-Scythian kingdoms in the northwest, and the Kushan Empire, which at its height links India to Central Asia and the Silk Road trade. This bridging span ends with the rise of the Gupta Empire around 320 CE.</p>
+            <p><span class="label">What it represents:</span> as with the medieval bridging entry above, no single flag can honestly represent this genuinely fragmented, multi-power span; shown here blank rather than assigning one dynasty's symbol to the whole era.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no single attested flag for the era.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#7c2e1f"/>
+              <circle cx="150" cy="100" r="42" fill="none" stroke="#f4efe1" stroke-width="4"/>
+              <g stroke="#f4efe1" stroke-width="2">
+                <line x1="150" y1="58" x2="150" y2="142"/><line x1="108" y1="100" x2="192" y2="100"/>
+                <line x1="120" y1="70" x2="180" y2="130"/><line x1="180" y1="70" x2="120" y2="130"/>
+                <line x1="130" y1="63" x2="170" y2="137"/><line x1="170" y1="63" x2="130" y2="137"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the Ashoka Chakra motif, reconstructed from the Sarnath pillar</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 322 &ndash; 185 BCE</div>
+            <h3 class="card-title">Maurya Empire</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire</span></div>
+            <p><span class="label">Who &amp; why:</span> Chandragupta Maurya unifies most of the subcontinent into a single empire beginning around 322 BCE, the first to do so at this scale. His grandson Ashoka (reigned c. 268&ndash;232 BCE) expands it further, then, after witnessing the human cost of the Kalinga War, converts to Buddhism and turns to policies of non-violence, religious tolerance, and public works &mdash; recorded on edicts carved into pillars and rocks across the empire. The empire declines after Ashoka's death and ends with the assassination of its last ruler around 185 BCE.</p>
+            <p><span class="label">What it represents:</span> Ashoka's pillars, most famously the Lion Capital at Sarnath, carry a 24-spoke dharma wheel (chakra) representing the Buddhist wheel of righteous law &mdash; the same wheel, in modified form, that centers the modern Indian flag (entry 16) and appears on the national emblem. No cloth flag from this period survives; the emblem shown here reconstructs the pillar carving rather than a documented banner.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested cloth flag; reconstructed pillar emblem shown.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Dark red field, white/stone-colored 24-spoke wheel (chakra), centered.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#7c2e1f"></span><span class="meta"><span class="name">Dark red</span><span class="hex">#7C2E1F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">Stone white</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder &mdash; Vedic clans and the sixteen Mahajanapadas</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 1300 &ndash; 322 BCE</div>
+            <h3 class="card-title">Vedic period &amp; early historic kingdoms (Mahajanapadas)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#8a7a54"></span>Fragmented kingdoms</span></div>
+            <p><span class="label">Who &amp; why:</span> this long bridging span covers the transition from the late Indus Valley Civilization through the Vedic period &mdash; the era of the Rigveda and the other Vedic texts, composed by Indo-Aryan-speaking peoples across the north Indian plains &mdash; into the sixteen Mahajanapadas ("great realms"), the regional kingdoms and oligarchic republics recorded by the 6th century BCE, among them Magadha, Kosala, and Avanti. Magadha steadily absorbs its neighbors over this period, laying the direct groundwork for the Maurya Empire that follows.</p>
+            <p><span class="label">What it represents:</span> no flag, royal or otherwise, is documented from this long span; textual sources describe chariot standards and clan totems but nothing that functions as a fixed territorial flag. Shown here honestly blank, bridging the gap between the Indus Valley Civilization and the Maurya Empire rather than inventing a symbol.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 16 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder &mdash; Bronze Age civilization, no state symbols survive</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 3300 &ndash; 1300 BCE</div>
+            <h3 class="card-title">Indus Valley Civilization</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Civilization</span></div>
+            <p><span class="label">Who &amp; why:</span> one of the world's earliest urban civilizations flourishes along the Indus River and its tributaries (in present-day Pakistan and northwest India), with major planned cities at Mohenjo-daro and Harappa featuring advanced sanitation, standardized weights, and extensive trade networks reaching as far as Mesopotamia. Its script remains undeciphered, so its political structure &mdash; whether centralized states, city-states, or something else &mdash; is still debated among archaeologists. The civilization declines gradually from around 1900 BCE, for reasons still debated (climate shifts and river-course changes are leading theories), fading into smaller Late Harappan cultures by roughly 1300 BCE.</p>
+            <p><span class="label">What it represents:</span> no flag, banner, or comparable state symbol is documented or can be attributed to the Indus Valley Civilization with any confidence; its undeciphered script and the absence of monumental royal imagery (unlike contemporary Egypt or Mesopotamia) leave no basis for a reconstruction. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Civilization</b> &mdash; no attested central state</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#8a7a54"></span><b>Fragmented kingdoms</b> &mdash; multiple regional powers, no single crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Empire</b> &mdash; a single sovereign ruling most of the subcontinent</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#9c3b28"></span><b>Sultanate</b> &mdash; Islamic monarchy centered on Delhi</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Company rule</b> &mdash; a chartered trading company exercising sovereign power</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#46647a"></span><b>Crown colony</b> &mdash; direct rule by the British Crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c07830"></span><b>Independence movement</b> &mdash; an unofficial party or protest banner, not a state flag</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#2f6b45"></span><b>Republic</b> &mdash; sovereign under its own constitution</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="south-asia-hub.html"><b>South Asia hub</b><span>India, Pakistan, and their shared history</span></a>
+      <a class="link-card" href="mughal-empire-flags.html"><b>Flags of the Mughal Empire</b><span>1526&ndash;1857, in full depth</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>

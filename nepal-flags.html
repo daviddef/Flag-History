@@ -1,0 +1,491 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Nepal</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that has flown over Nepal, from fragmented Kathmandu Valley and hill kingdoms to the modern federal republic — including the world's only non-quadrilateral national flag.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="south-asia-hub.html">South Asia hub</a></p>
+  <p class="kicker">Family research &middot; Phase 16 of the world atlas</p>
+  <h1>Flags of Nepal</h1>
+  <p class="lede">Nepal is the one entry in this atlas that was never colonized by a European power. Its story runs instead through a patchwork of Kathmandu Valley and hill principalities, a single military unification campaign that built the modern state from the Gorkha hills outward, a war and treaty with the East India Company that fixed Nepal's borders without ever putting it under the Crown, a century of hereditary prime ministers ruling behind a titular throne, and a long, often interrupted push toward democracy that finally ends the monarchy altogether in 2008.</p>
+  <p class="lede">Through nearly all of that, one emblem persists: a crimson double pennant bearing a moon and a sun, the world's only national flag that is not a quadrilateral. Its colors and shape trace to Shah-era royal banners and Rana-era military pennants; its exact geometry was fixed only in 1962, when the sun and moon lost the human faces they had carried for generations.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Nepal, c. 1200&ndash;present, seven political entities. Nepal was never a European colony &mdash; the 1814&ndash;16 Anglo-Nepalese War cost it border territory under the Sugauli Treaty but left it a sovereign, if British-influenced, buffer state throughout. No single flag can be documented for the fragmented pre-unification era, so that entry is shown honestly blank rather than invented. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="7">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#003893"/>
+              <path d="M76,27 L211,64 L153,100 L211,143 L76,173 Z" fill="#dc143c"/>
+              <path d="M130,38 a14,14 0 1,0 0,28 a10,10 0 1,1 0,-28" fill="#fff"/>
+              <g transform="translate(130,132)" fill="#fff">
+                <circle r="10"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(0)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(45)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(90)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(135)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(180)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(225)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(270)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(315)"/>
+              </g>
+            </svg>
+            <div class="flag-caption">crimson double pennant, blue border, plain sun and moon &mdash; current form since 1962</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">2008 &ndash; present</div>
+            <h3 class="card-title">Federal Democratic Republic of Nepal</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#3f6b3f"></span>Federal republic</span></div>
+            <p><span class="label">Who &amp; why:</span> the newly elected Constituent Assembly meets on 28 May 2008 and votes to abolish the 240-year-old Shah monarchy, proclaiming the Federal Democratic Republic of Nepal. The move follows the 2006 peace accord that ended a decade-long Maoist insurgency and a mass pro-democracy movement earlier that same year; a 2015 constitution formalizes Nepal's present structure of seven federal provinces.</p>
+            <p><span class="label">What it represents:</span> the flag itself does not change at the republic's founding &mdash; only the state beneath it does. The crimson double pennant, blue border, and white sun and moon continue unaltered from their 1962 geometric standardization.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">Not a width:height ratio &mdash; Nepal's is the only national flag fixed by geometric construction (compass and straightedge) rather than a rectangle, set out in Schedule 1 of the 1962 constitution.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Crimson double pennant (two stacked triangular points) with a blue border; a white crescent moon in the upper pennant, a white twelve-rayed sun in the lower.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#dc143c"></span><span class="meta"><span class="name">Crimson</span><span class="hex">#DC143C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#003893"></span><span class="meta"><span class="name">Blue border</span><span class="hex">#003893</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffffff"></span><span class="meta"><span class="name">White</span><span class="hex">#FFFFFF</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#003893"/>
+              <path d="M76,27 L211,64 L153,100 L211,143 L76,173 Z" fill="#dc143c"/>
+              <path d="M130,38 a14,14 0 1,0 0,28 a10,10 0 1,1 0,-28" fill="#fff"/>
+              <g transform="translate(130,132)" fill="#fff">
+                <circle r="10"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(0)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(45)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(90)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(135)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(180)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(225)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(270)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(315)"/>
+              </g>
+            </svg>
+            <div class="flag-caption">the same double pennant, flown over a restored constitutional monarchy</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1990 &ndash; 2008</div>
+            <h3 class="card-title">Restored constitutional monarchy</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Kingdom, constitutional monarchy</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1990 People's Movement forces King Birendra to lift the ban on political parties and accept a new constitution restoring multiparty democracy under the crown. A Maoist insurgency against the monarchy and government breaks out in 1996 and runs for a decade, killing an estimated 17,000 people before a November 2006 peace accord brings the rebels into mainstream politics. The June 2001 royal massacre, in which Crown Prince Dipendra killed King Birendra and much of the royal family before dying himself, passes the throne to the unpopular King Gyanendra, whose own 2005 seizure of direct power collapses within a year under renewed mass protest.</p>
+            <p><span class="label">What it represents:</span> the standardized 1962 double pennant continues unchanged through this turbulent constitutional period.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">Geometric construction per the 1962 specification, unchanged.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Crimson double pennant, blue border, white crescent moon and twelve-rayed sun.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#dc143c"></span><span class="meta"><span class="name">Crimson</span><span class="hex">#DC143C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#003893"></span><span class="meta"><span class="name">Blue border</span><span class="hex">#003893</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffffff"></span><span class="meta"><span class="name">White</span><span class="hex">#FFFFFF</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#003893"/>
+              <path d="M76,27 L211,64 L153,100 L211,143 L76,173 Z" fill="#dc143c"/>
+              <path d="M130,38 a14,14 0 1,0 0,28 a10,10 0 1,1 0,-28" fill="#fff"/>
+              <g transform="translate(130,132)" fill="#fff">
+                <circle r="10"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(0)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(45)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(90)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(135)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(180)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(225)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(270)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(315)"/>
+              </g>
+            </svg>
+            <div class="flag-caption">geometry fixed in 1962, two years into this period; shown in its post-standardization form</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1960 &ndash; 1990</div>
+            <h3 class="card-title">Panchayat system</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#9c3b28"></span>Kingdom, absolute (Panchayat)</span></div>
+            <p><span class="label">Who &amp; why:</span> unhappy with the elected government, King Mahendra stages a royal coup in December 1960, dissolves parliament, bans political parties, and imprisons the elected prime minister. In their place he installs the Panchayat system: a tiered structure of indirectly elected councils that keeps real authority with the palace behind a facade of local representation. It lasts three decades, through Mahendra's reign and into his son Birendra's, until mass protest forces its end in 1990.</p>
+            <p><span class="label">What it represents:</span> the crimson double pennant reaches its present, legally fixed geometric form in the 1962 constitution, which also strips the human faces that the sun and moon had carried since at least the 19th century.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">Fixed by geometric construction from 1962 onward; informal proportions before that.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Crimson double pennant, blue border, white crescent moon and twelve-rayed sun (faces removed by the 1962 specification).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#dc143c"></span><span class="meta"><span class="name">Crimson</span><span class="hex">#DC143C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#003893"></span><span class="meta"><span class="name">Blue border</span><span class="hex">#003893</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffffff"></span><span class="meta"><span class="name">White</span><span class="hex">#FFFFFF</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#003893"/>
+              <path d="M76,27 L211,64 L153,100 L211,143 L76,173 Z" fill="#dc143c"/>
+              <path d="M130,38 a14,14 0 1,0 0,28 a10,10 0 1,1 0,-28" fill="#fff"/>
+              <circle cx="126" cy="50" r="1.4" fill="#003893"/>
+              <circle cx="133" cy="50" r="1.4" fill="#003893"/>
+              <path d="M124,55 q6,4 12,0" stroke="#003893" stroke-width="1.4" fill="none"/>
+              <g transform="translate(130,132)" fill="#fff">
+                <circle r="10"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(0)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(45)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(90)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(135)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(180)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(225)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(270)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(315)"/>
+              </g>
+              <circle cx="126" cy="128" r="1.4" fill="#003893"/>
+              <circle cx="134" cy="128" r="1.4" fill="#003893"/>
+              <path d="M124,134 q6,4 12,0" stroke="#003893" stroke-width="1.4" fill="none"/>
+            </svg>
+            <div class="flag-caption">pre-standardization form, with human faces in the sun and moon</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1951 &ndash; 1960</div>
+            <h3 class="card-title">Restored monarchy, early multiparty democracy</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Kingdom, constitutional monarchy</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1950&ndash;51 revolution, backed by India and the Nepali Congress, ends more than a century of Rana rule and restores King Tribhuvan to actual power. Nepal holds its first democratic general election in 1959, bringing B. P. Koirala and the Nepali Congress to office &mdash; a brief opening that King Mahendra closes with his own coup at the end of 1960.</p>
+            <p><span class="label">What it represents:</span> the crimson double pennant, still in its older, informally proportioned form, with a human profile visible within both the moon and the sun &mdash; a feature carried over from Shah- and Rana-era pennants and not yet removed by law.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed geometric construction yet; shape drawn informally.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Crimson double pennant, blue border, white crescent moon and sun each bearing a simple human face.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#dc143c"></span><span class="meta"><span class="name">Crimson</span><span class="hex">#DC143C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#003893"></span><span class="meta"><span class="name">Blue border</span><span class="hex">#003893</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffffff"></span><span class="meta"><span class="name">White</span><span class="hex">#FFFFFF</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#003893"/>
+              <path d="M76,27 L211,64 L153,100 L211,143 L76,173 Z" fill="#dc143c"/>
+              <path d="M130,38 a14,14 0 1,0 0,28 a10,10 0 1,1 0,-28" fill="#fff"/>
+              <circle cx="126" cy="50" r="1.4" fill="#003893"/>
+              <circle cx="133" cy="50" r="1.4" fill="#003893"/>
+              <path d="M124,55 q6,4 12,0" stroke="#003893" stroke-width="1.4" fill="none"/>
+              <g transform="translate(130,132)" fill="#fff">
+                <circle r="10"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(0)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(45)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(90)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(135)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(180)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(225)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(270)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(315)"/>
+              </g>
+              <circle cx="126" cy="128" r="1.4" fill="#003893"/>
+              <circle cx="134" cy="128" r="1.4" fill="#003893"/>
+              <path d="M124,134 q6,4 12,0" stroke="#003893" stroke-width="1.4" fill="none"/>
+            </svg>
+            <div class="flag-caption">the same royal pennant flown throughout a century of Rana rule</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1846 &ndash; 1951</div>
+            <h3 class="card-title">Rana oligarchy</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#7c2e1f"></span>Kingdom, Rana oligarchy</span></div>
+            <p><span class="label">Who &amp; why:</span> the September 1846 Kot Massacre, in which Jung Bahadur Kunwar (later Rana) orchestrates the killing of dozens of rival courtiers and nobles in the royal palace courtyard, leaves him in control of the army and government. He takes the hereditary title of prime minister for his family, later renamed Rana, reducing the Shah kings to titular monarchs while real power passes down a hereditary line of Rana prime ministers for the next 104 years.</p>
+            <p><span class="label">What it represents:</span> the flag itself does not change with the Kot Massacre &mdash; the same crimson pennant continues as Nepal's national and royal symbol, flown now over a state actually run by the Rana family rather than the Shah kings it nominally still served.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed geometric construction; shape drawn informally.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Crimson double pennant, blue border, white crescent moon and sun each bearing a simple human face.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#dc143c"></span><span class="meta"><span class="name">Crimson</span><span class="hex">#DC143C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#003893"></span><span class="meta"><span class="name">Blue border</span><span class="hex">#003893</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffffff"></span><span class="meta"><span class="name">White</span><span class="hex">#FFFFFF</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#003893"/>
+              <path d="M76,27 L211,64 L153,100 L211,143 L76,173 Z" fill="#dc143c"/>
+              <path d="M130,38 a14,14 0 1,0 0,28 a10,10 0 1,1 0,-28" fill="#fff"/>
+              <circle cx="126" cy="50" r="1.4" fill="#003893"/>
+              <circle cx="133" cy="50" r="1.4" fill="#003893"/>
+              <path d="M124,55 q6,4 12,0" stroke="#003893" stroke-width="1.4" fill="none"/>
+              <g transform="translate(130,132)" fill="#fff">
+                <circle r="10"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(0)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(45)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(90)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(135)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(180)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(225)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(270)"/>
+                <polygon points="0,-20 4,-12 -4,-12" transform="rotate(315)"/>
+              </g>
+              <circle cx="126" cy="128" r="1.4" fill="#003893"/>
+              <circle cx="134" cy="128" r="1.4" fill="#003893"/>
+              <path d="M124,134 q6,4 12,0" stroke="#003893" stroke-width="1.4" fill="none"/>
+            </svg>
+            <div class="flag-caption">the double pennant's earliest well-attested form, an informed reconstruction</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1768 &ndash; 1846</div>
+            <h3 class="card-title">Kingdom of Nepal (Shah dynasty, unification)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Kingdom, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Prithvi Narayan Shah, king of the small hill principality of Gorkha, begins a military campaign of conquest in the 1740s&ndash;50s and captures the Kathmandu Valley in 1768&ndash;69, ending Malla rule there and founding the Shah dynasty's Kingdom of Nepal on the unified territory. Continued Gorkhali expansion northward and westward eventually provokes the British East India Company, and the 1814&ndash;16 Anglo-Nepalese War ends with the March 1816 Sugauli Treaty: Nepal cedes border territory (including much of the modern Nepal-India borderlands) but is never annexed or made a colony, remaining a sovereign, British-influenced buffer state.</p>
+            <p><span class="label">What it represents:</span> the crimson double pennant with a human-faced sun and moon, combining royal Shah and later Rana-era military pennant traditions, is Nepal's earliest well-documented national banner; the specific proportions shown here are an informed reconstruction rather than an official specification, since none existed yet.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No official specification; shown as an informed reconstruction.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Crimson double pennant, blue border, white crescent moon and sun each bearing a simple human face.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#dc143c"></span><span class="meta"><span class="name">Crimson</span><span class="hex">#DC143C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#003893"></span><span class="meta"><span class="name">Blue border</span><span class="hex">#003893</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffffff"></span><span class="meta"><span class="name">White</span><span class="hex">#FFFFFF</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#5c2a24"/>
+              <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="96" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder pennant outline &mdash; pre-unification era, no single flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">c. 1200 &ndash; 1768</div>
+            <h3 class="card-title">Fragmented hill kingdoms and Kathmandu Valley principalities</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>Fragmented hill kingdoms</span></div>
+            <p><span class="label">Who &amp; why:</span> from around 1200, the Kathmandu Valley is ruled by the Malla dynasty, which by 1482 splits into three rival city-kingdoms &mdash; Kathmandu, Patan, and Bhaktapur &mdash; each with its own court. Outside the valley, dozens of small principalities scattered across the middle hills, including the small kingdom of Gorkha, govern independently with no shared crown. This patchwork ends only when Gorkha's Prithvi Narayan Shah conquers the valley in 1768&ndash;69 and begins unifying the surrounding hill states under one throne.</p>
+            <p><span class="label">What it represents:</span> no single flag can be attributed with confidence to this fragmented era &mdash; the Malla courts used royal seals, coats of arms, and temple banners rather than fixed territorial flags, and no one design can stand in for dozens of separate principalities. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Fragmented hill kingdoms</b> &mdash; no single crown yet</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Kingdom, independent</b> &mdash; sovereign under its own Shah crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#7c2e1f"></span><b>Kingdom, Rana oligarchy</b> &mdash; titular Shah king, real power held by hereditary Rana prime ministers</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Kingdom, constitutional monarchy</b> &mdash; crown shares power with an elected multiparty government</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#9c3b28"></span><b>Kingdom, absolute (Panchayat)</b> &mdash; parties banned, power held directly by the palace</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#3f6b3f"></span><b>Federal republic</b> &mdash; no monarchy, elected federal government</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="south-asia-hub.html"><b>South Asia hub</b><span>Nepal and its neighbors</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
+  </footer>
+
+</div>
+
+</body></html>
