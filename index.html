@@ -519,6 +519,7 @@
     sanmarino: '<rect width="300" height="100" fill="#ffffff"/><rect y="100" width="300" height="100" fill="#4ab4e6"/><g transform="translate(150,100)"><path d="M-26,18 L-18,-4 L18,-4 L26,18 Z" fill="#4a7c3a"/><rect x="-20" y="-22" width="10" height="20" fill="#8a8a8a"/><rect x="-5" y="-28" width="10" height="26" fill="#8a8a8a"/><rect x="10" y="-22" width="10" height="20" fill="#8a8a8a"/><circle cx="0" cy="-34" r="5" fill="#c9a13c"/></g>',
     vaticancity: '<rect width="150" height="200" fill="#ffe000"/><rect x="150" width="150" height="200" fill="#ffffff"/><g transform="translate(225,100)"><ellipse cx="0" cy="-38" rx="20" ry="14" fill="#ffe000" stroke="#b08d1f" stroke-width="2"/><circle cx="0" cy="-48" r="4" fill="#e6c200"/><line x1="-28" y1="-5" x2="28" y2="35" stroke="#c9a13c" stroke-width="6"/><line x1="28" y1="-5" x2="-28" y2="35" stroke="#8a8a8a" stroke-width="6"/><path d="M0,15 l10,10 -10,6 -10,-6 Z" fill="#a4302a"/></g>',
     indonesia: '<rect width="300" height="100" fill="#ce1126"/><rect y="100" width="300" height="100" fill="#f4efe1"/>',
+    philippines: '<polygon points="0,0 0,200 130,100" fill="#f4efe1"/><rect x="130" width="170" height="100" fill="#0038a8"/><rect x="130" y="100" width="170" height="100" fill="#ce1126"/><circle cx="65" cy="100" r="26" fill="#fcd116"/>',
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -1230,6 +1231,8 @@
       alts:["Ottoman Empire","Ottoman Turkey","Sublime Porte","Suleiman the Magnificent"] },
     { name:"Indonesia", flag:"indonesia", ownPage:true, url:"indonesia-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#ce1126",
       crowns:["Srivijaya","Majapahit Empire","Fragmented sultanates","Dutch East India Company (VOC)","Dutch East Indies","Japanese occupation","Proclaimed republic","Republic of Indonesia"] },
+    { name:"Philippines", flag:"philippines", ownPage:true, url:"philippines-flags.html", hub:"Southeast Asia", region:"Southeast Asia", color:"#0038a8",
+      crowns:["Pre-colonial polities","Captaincy General of the Philippines (Spain)","First Philippine Republic (Malolos)","US colonial administration","Commonwealth of the Philippines","Japanese occupation","Republic of the Philippines"] },
   ];
 
   var grid = document.getElementById("countryGrid");
