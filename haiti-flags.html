@@ -1,0 +1,374 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Haiti</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Haiti, from Spanish and French colonial Hispaniola through the 1804 revolution that founded the hemisphere's second independent nation, empire, kingdom, and the republic of today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #1a2420; --paper: #f5f0e3; --card: #fdf8ec; --card-border: #ddd2b0;
+    --brick: #d9662f; --brick-2: #c14f1d; --brass: #c9962c; --adriatic: #1f7a7a; --adriatic-2: #145c5c;
+    --muted: #6e6551; --hair: #ddd2b0; --focus: #1f7a7a;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #eef0e2; --paper: #10181a; --card: #16211f; --card-border: #2a3a35;
+      --brick: #ef9a5c; --brick-2: #f2ac78; --brass: #e0bb6e; --adriatic: #4fc2c2; --adriatic-2: #7fd6d6;
+      --muted: #93a29a; --hair: #2a3a35;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #eef0e2; --paper: #10181a; --card: #16211f; --card-border: #2a3a35;
+    --brick: #ef9a5c; --brick-2: #f2ac78; --brass: #e0bb6e; --adriatic: #4fc2c2; --adriatic-2: #7fd6d6;
+    --muted: #93a29a; --hair: #2a3a35;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="caribbean-hub.html">Caribbean hub</a></p>
+  <p class="kicker">Family research &middot; Caribbean hub &middot; Phase 10 of the world atlas</p>
+  <h1>Flags of Haiti</h1>
+  <p class="lede">Haiti's 1 January 1804 independence is a real, historically major first: the Haitian Revolution is the only successful large-scale slave revolt in history to found a sovereign nation, and Haiti became the second independent nation in the Americas, just decades after the United States. That founding act &mdash; won against Napoleonic France's own expeditionary army &mdash; makes everything on this page, however politically messy afterward, sit on genuinely exceptional ground.</p>
+  <p class="lede">What follows independence is honestly tangled: an empire, a kingdom-versus-republic civil split, a long reunified republic interrupted by a second empire, a 20th-century dictatorship that reached back to revolutionary colors, and the restored republic Haiti flies today. Six entries trace it, newest first.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the western third of Hispaniola, c. 1492&ndash;present, six political entities. Haiti's own 1822&ndash;1844 occupation and unification of the eastern two-thirds of the island (the future Dominican Republic) doesn't get its own card here &mdash; it's Haiti ruling <i>out</i>, not a change to Haiti's own flag, so it's covered honestly in the prose of the entry it falls within instead. The brief Second Empire of Faustin I (1849&ndash;1859) gets the same treatment. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="100" fill="#00209f"/>
+              <rect y="100" width="300" height="100" fill="#d21034"/>
+              <ellipse cx="150" cy="100" rx="34" ry="26" fill="#f4efe1" stroke="#8a6a1f" stroke-width="1.5"/>
+              <path d="M150,82 q-5,10 -11,14 q6,2 11,9 q5,-7 11,-9 q-6,-4 -11,-14 Z" fill="#2e7d32"/>
+              <circle cx="150" cy="107" r="4" fill="#c9962c"/>
+            </svg>
+            <div class="flag-caption">blue over red bicolor, coat of arms (palm, cannons, Phrygian cap) simplified to a placeholder mark</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1986 &ndash; present</div>
+            <h3 class="card-title">Restored Republic of Haiti</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c9962c"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> Jean-Claude "Baby Doc" Duvalier flees the country on 7 February 1986, ending the 29-year Duvalier dictatorship. Among the first acts of the new order is restoring the traditional blue-and-red flag in place of the black-and-red banner the regime had imposed. Haiti's politics remain turbulent in the decades since &mdash; coups, foreign interventions, the 2010 earthquake, gang violence in the 2020s &mdash; but the flag itself has not changed again.</p>
+            <p><span class="label">What it represents:</span> the restored vertical blue-and-red bicolor with the central coat of arms &mdash; a palm tree, cannons and cannonballs, a Phrygian cap, and the motto "L'Union Fait La Force" ("Union Makes Strength") &mdash; Haiti's flag today.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">3:5, per Haitian law; shown here as a plain rectangle.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Horizontal blue-over-red bicolor with a white central panel bearing the coat of arms; arms shown here only as a simplified placeholder mark, not the full emblem.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00209f"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00209F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d21034"></span><span class="meta"><span class="name">Red</span><span class="hex">#D21034</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9962c"></span><span class="meta"><span class="name">Arms gold (placeholder)</span><span class="hex">#C9962C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="100" fill="#111111"/>
+              <rect y="100" width="300" height="100" fill="#d21034"/>
+              <ellipse cx="150" cy="100" rx="34" ry="26" fill="#f4efe1" stroke="#8a6a1f" stroke-width="1.5"/>
+              <path d="M150,82 q-5,10 -11,14 q6,2 11,9 q5,-7 11,-9 q-6,-4 -11,-14 Z" fill="#2e7d32"/>
+              <circle cx="150" cy="107" r="4" fill="#c9962c"/>
+            </svg>
+            <div class="flag-caption">black over red bicolor, same simplified arms placeholder</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1964 &ndash; 1986</div>
+            <h3 class="card-title">Duvalier dictatorship (black-and-red flag)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c14f1d"></span>Dictatorship</span></div>
+            <p><span class="label">Who &amp; why:</span> François "Papa Doc" Duvalier, president from 1957, entrenches a repressive one-party regime backed by the paramilitary Tonton Macoute, declaring himself president-for-life in 1964. His son Jean-Claude "Baby Doc" succeeds him in 1971 and continues the same system. In 1964 Papa Doc changes the national flag's colors from blue-and-red to black-and-red.</p>
+            <p><span class="label">What it represents:</span> the change invokes Jean-Jacques Dessalines' short-lived 1804&ndash;06 Empire flag, recast as a nationalist and noirisme symbol tying the regime to Haiti's Black revolutionary founding rather than to the 19th- and 20th-century blue-and-red republic.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">3:5, matching the surrounding republic-era standard; shown as a plain rectangle.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Horizontal black-over-red bicolor, same central white panel and arms placeholder as the modern flag.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#111111"></span><span class="meta"><span class="name">Black</span><span class="hex">#111111</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d21034"></span><span class="meta"><span class="name">Red</span><span class="hex">#D21034</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="100" fill="#00209f"/>
+              <rect y="100" width="300" height="100" fill="#d21034"/>
+              <ellipse cx="150" cy="100" rx="34" ry="26" fill="#f4efe1" stroke="#8a6a1f" stroke-width="1.5"/>
+              <path d="M150,82 q-5,10 -11,14 q6,2 11,9 q5,-7 11,-9 q-6,-4 -11,-14 Z" fill="#2e7d32"/>
+              <circle cx="150" cy="107" r="4" fill="#c9962c"/>
+            </svg>
+            <div class="flag-caption">blue over red bicolor, the settled republic flag through this long span (arms simplified)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1820 &ndash; 1964</div>
+            <h3 class="card-title">Reunified Republic of Haiti (blue-and-red bicolor)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c9962c"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> President Jean-Pierre Boyer reunifies Christophe's northern Kingdom and Pétion's southern Republic in 1820, then in February 1822 also occupies and unifies the Spanish-speaking eastern two-thirds of Hispaniola under Port-au-Prince, ruling the whole island until the Dominicans' 1844 independence breaks it apart again. This long stretch is not free of further interruption: the Second Empire of Haiti under Emperor Faustin I briefly revives a black-and-red flag between 1849 and 1859, before the 1859 revolution restores blue-and-red for good.</p>
+            <p><span class="label">What it represents:</span> the vertical blue-and-red bicolor with the central coat of arms becomes the settled national flag through this entire span, aside from that one black-and-red interruption under Faustin I &mdash; the same basic design later revived in 1986 and flown today.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio recorded for most of this period.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Blue-over-red bicolor with central coat of arms (shown simplified); briefly black-over-red under Faustin I, 1849&ndash;1859, not shown as a separate card.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00209f"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00209F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d21034"></span><span class="meta"><span class="name">Red</span><span class="hex">#D21034</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="100" fill="#00209f"/>
+              <rect y="100" width="300" height="100" fill="#d21034"/>
+            </svg>
+            <div class="flag-caption">the original 1803 Arcahaie flag: blue and red torn from the French tricolor, no arms yet</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1803 &ndash; 1820</div>
+            <h3 class="card-title">Revolution, Empire, and civil split</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#d9662f"></span>Revolution / civil split</span></div>
+            <p><span class="label">Who &amp; why:</span> this entry deliberately bridges a genuinely messy 17-year span rather than inventing false sub-boundaries. The Haitian Revolution, begun in 1791 under Toussaint Louverture (who dies in French captivity in 1803), reaches its climax when Jean-Jacques Dessalines tears the white from the French tricolor at the Congress of Arcahaie on 18 May 1803 &mdash; still celebrated as Haiti's Flag Day &mdash; creating a blue-and-red flag. Independence is declared 1 January 1804, renaming Saint-Domingue "Haiti": the second independent nation in the Americas and the only nation ever founded by a successful large-scale slave revolt. Dessalines proclaims himself Emperor Jacques I later in 1804, and the flag becomes black-and-red under the short-lived First Empire. After his assassination in 1806, the country splits: Henri Christophe's northern Kingdom of Haiti flies its own crowned-arms flag, while Alexandre Pétion's southern Republic of Haiti reverts to blue-and-red. The two are reunited only in 1820.</p>
+            <p><span class="label">What it represents:</span> the flag shown here is the original 1803 Arcahaie bicolor at the start of this span &mdash; blue and red, no coat of arms yet &mdash; standing in for a decade and a half that genuinely saw an empire, a kingdom, and a republic, in that order.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for the 1803 original.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Plain blue-over-red bicolor, no arms; the 1804&ndash;06 Empire used black-and-red instead (not separately shown).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#00209f"></span><span class="meta"><span class="name">Blue</span><span class="hex">#00209F</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d21034"></span><span class="meta"><span class="name">Red</span><span class="hex">#D21034</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <text x="150" y="132" font-size="92" text-anchor="middle" fill="#c9962c" font-family="serif">&#9770;</text>
+            </svg>
+            <div class="flag-caption">white field, gold Bourbon fleur-de-lis (text glyph, simplified)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1697 &ndash; 1803</div>
+            <h3 class="card-title">French Saint-Domingue</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#1f7a7a"></span>French colony</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1697 Treaty of Ryswick formally cedes the western third of Hispaniola &mdash; settled by French buccaneers and planters based on Tortuga since the 1620s&ndash;40s &mdash; to France as Saint-Domingue. By the 1780s it is the richest colony in the world, its sugar and coffee wealth built entirely on the brutal slave labor of enslaved Africans. That wealth, and that cruelty, are what set up the 1791 revolt.</p>
+            <p><span class="label">What it represents:</span> the plain white French royal and colonial ensign, bearing gold Bourbon fleurs-de-lis, the standard French flag of the period before the Revolution introduced the tricolor.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio recorded.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Plain white field, gold fleur-de-lis device (shown here as a single simplified mark, not the full scattered semé pattern sometimes used).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9962c"></span><span class="meta"><span class="name">Gold</span><span class="hex">#C9962C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="26"/>
+            </svg>
+            <div class="flag-caption">Cross of Burgundy: red diagonal saltire on white, the standard Spanish colonial ensign</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1492 &ndash; 1697</div>
+            <h3 class="card-title">Spanish Hispaniola (western part)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#145c5c"></span>Spanish colony</span></div>
+            <p><span class="label">Who &amp; why:</span> Columbus's first permanent settlement in the Americas is founded on this island in 1492&ndash;93, and Spain claims the whole of Hispaniola. Its grip on the thinly-populated western third weakens steadily over the 17th century as French buccaneers and planters, based on Tortuga, move in from the 1620s&ndash;40s onward, a presence formally ceded to France in 1697.</p>
+            <p><span class="label">What it represents:</span> the Cross of Burgundy &mdash; a red diagonal saltire on white &mdash; the standard Spanish colonial and maritime banner, the same one flown at the same time over the eastern (future Dominican) side of the island, since Hispaniola was one Spanish possession until this split.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio recorded.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White field, red diagonal (X-form) saltire of raguly branches, simplified here as a plain X.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#c9432c"></span><span class="meta"><span class="name">Burgundy red</span><span class="hex">#C9432C</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#145c5c"></span><b>Spanish colony</b> &mdash; under the Spanish crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#1f7a7a"></span><b>French colony</b> &mdash; under the French crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#d9662f"></span><b>Revolution / civil split</b> &mdash; the founding decade and a half, bridged rather than over-precisely subdivided</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c9962c"></span><b>Republic</b> &mdash; sovereign, republican government</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c14f1d"></span><b>Dictatorship</b> &mdash; one-party authoritarian rule</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the hub and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="caribbean-hub.html"><b>Caribbean hub</b><span>Thirteen island nations, five centuries</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications.
+  </footer>
+
+</div>
+
+</body></html>
