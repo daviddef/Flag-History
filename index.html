@@ -393,6 +393,11 @@
   var searchBox = document.getElementById("searchBox");
   var resultCountEl = document.getElementById("resultCount");
   var emptyStateEl = document.getElementById("emptyState");
+  var hubCards = Array.prototype.slice.call(document.querySelectorAll(".hub-card"));
+  var hubsSection = document.querySelector(".hubs-section");
+  var hubsHeading = hubsSection ? hubsSection.querySelector("h2") : null;
+  var hubsHeadingBase = hubsHeading ? hubsHeading.textContent : "";
+  var hubsEmptyStateEl = null;
 
   function renderGrid() {
     var q = searchBox.value.trim().toLowerCase();
@@ -423,6 +428,32 @@
         '<div class="crowns">' + crownsHtml + '</div>' +
         '</a>';
     }).join("");
+
+    filterHubs(q);
+  }
+
+  function filterHubs(q) {
+    var visibleCount = 0;
+    hubCards.forEach(function (card) {
+      var hay = card.textContent.toLowerCase();
+      var isMatch = !q || hay.indexOf(q) !== -1;
+      card.style.display = isMatch ? "" : "none";
+      if (isMatch) visibleCount++;
+    });
+
+    if (hubsHeading) {
+      hubsHeading.textContent = q ? (hubsHeadingBase + " (" + visibleCount + " of " + hubCards.length + ")") : hubsHeadingBase;
+    }
+
+    if (hubsSection) {
+      if (!hubsEmptyStateEl) {
+        hubsEmptyStateEl = document.createElement("div");
+        hubsEmptyStateEl.className = "empty-state";
+        hubsEmptyStateEl.textContent = "No hubs match that search.";
+        hubsSection.appendChild(hubsEmptyStateEl);
+      }
+      hubsEmptyStateEl.style.display = visibleCount ? "none" : "block";
+    }
   }
 
   searchBox.addEventListener("input", renderGrid);
