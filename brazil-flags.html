@@ -1,0 +1,359 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Brazil</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Brazil, from uncharted indigenous territory through Portuguese colony, an accidental co-equal kingdom, an independent empire, and the republic whose stars still map the sky over Rio on the night it was born.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="south-america-hub.html">South America hub</a></p>
+  <p class="kicker">Family research &middot; Phase 15 of the world atlas</p>
+  <h1>Flags of Brazil</h1>
+  <p class="lede">Pedro &Aacute;lvares Cabral's landing on the Brazilian coast in April 1500 opens three centuries of Portuguese colonization &mdash; but Brazil's own story soon runs strange: when Napoleon's armies invaded Portugal in 1807, the entire Portuguese royal court fled across the Atlantic and set up the seat of empire in Rio de Janeiro, the only time a European colonial power actually governed from inside its own colony. In 1815 that arrangement was made formal, with colonial Brazil elevated to a co-equal kingdom alongside Portugal itself.</p>
+  <p class="lede">When independence came in 1822, Brazil took a path no neighbor followed: it stayed a monarchy, under Pedro I and then Pedro II, while Spanish South America fractured into republics around it. Not until 1889 did a republic finally arrive &mdash; and the flag adopted that year carries a genuinely documented detail: its 27 white stars reproduce the exact configuration of the night sky over Rio de Janeiro on 15 November 1889, the day the republic was proclaimed, each star standing for a state or federal district and the constellation updated as Brazil's internal map grew, most recently in 1992.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Brazil, c. 1500&ndash;present, five entries from pre-contact indigenous nations through colony, accidental co-equal kingdom, independent empire, and republic. Brazil's federal states have been added and adjusted over time (most recently in 1992), but that is a change of internal composition within one continuous republic, not a governing split, so &mdash; consistent with this atlas's practice of only mapping genuine internal partitions &mdash; this page carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#009c3b"/>
+              <path d="M150,20 L280,100 L150,180 L20,100 Z" fill="#ffdf00"/>
+              <circle cx="150" cy="100" r="42" fill="#002776"/>
+              <rect x="112" y="94" width="76" height="14" fill="#f4efe1"/>
+              <text x="150" y="104" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" font-weight="700" fill="#002776">ORDEM E PROGRESSO</text>
+              <g fill="#f4efe1">
+                <circle cx="150" cy="70" r="2.2"/><circle cx="130" cy="82" r="2.2"/><circle cx="170" cy="82" r="2.2"/>
+                <circle cx="122" cy="100" r="2.2"/><circle cx="178" cy="100" r="2.2"/><circle cx="130" cy="118" r="2.2"/>
+                <circle cx="170" cy="118" r="2.2"/><circle cx="150" cy="130" r="2.2"/><circle cx="140" cy="90" r="2.2"/>
+                <circle cx="160" cy="90" r="2.2"/><circle cx="140" cy="110" r="2.2"/><circle cx="160" cy="110" r="2.2"/>
+                <circle cx="150" cy="82" r="2.2"/><circle cx="150" cy="118" r="2.2"/><circle cx="112" cy="100" r="2.2"/>
+                <circle cx="188" cy="100" r="2.2"/><circle cx="135" cy="72" r="2.2"/><circle cx="165" cy="72" r="2.2"/>
+                <circle cx="135" cy="128" r="2.2"/><circle cx="165" cy="128" r="2.2"/><circle cx="120" cy="88" r="2.2"/>
+                <circle cx="180" cy="88" r="2.2"/><circle cx="120" cy="112" r="2.2"/><circle cx="180" cy="112" r="2.2"/>
+                <circle cx="150" cy="60" r="2.2"/><circle cx="150" cy="140" r="2.2"/><circle cx="150" cy="100" r="2.2"/>
+              </g>
+            </svg>
+            <div class="flag-caption">green field, gold rhombus, blue globe with 27 stars &mdash; unchanged since 1889 (last star update 1992)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1889 &ndash; present</div>
+            <h3 class="card-title">Federative Republic of Brazil</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> a military coup led by Marshal Deodoro da Fonseca deposes Pedro II on 15 November 1889 and proclaims the republic, ending 67 years of monarchy. The 20th century that follows is turbulent &mdash; the Vargas era of the 1930s&ndash;40s, then a military dictatorship from 1964 to 1985 &mdash; but through all of it the republican flag itself never changes, so this single entry spans the whole span from proclamation to today.</p>
+            <p><span class="label">What it represents:</span> green field (echoing the old imperial green), gold rhombus, and a blue celestial globe bearing 27 white five-pointed stars in the exact arrangement of the sky over Rio de Janeiro on the night of the proclamation, one star per state and the Federal District, plus the motto "Ordem e Progresso" (Order and Progress), drawn from Auguste Comte's Positivist slogan.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">7:10, official since the 1889/1992 flag laws.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green field, centered gold rhombus, blue globe with 27 stars and white motto band, star pattern last revised 1992.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#009c3b"></span><span class="meta"><span class="name">Green</span><span class="hex">#009C3B</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffdf00"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FFDF00</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#002776"></span><span class="meta"><span class="name">Blue</span><span class="hex">#002776</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#009c3b"/>
+              <path d="M150,20 L280,100 L150,180 L20,100 Z" fill="#ffdf00"/>
+              <circle cx="150" cy="100" r="40" fill="#002776"/>
+              <circle cx="150" cy="100" r="40" fill="none" stroke="#f4efe1" stroke-width="1.5"/>
+              <g fill="#f4efe1">
+                <circle cx="150" cy="70" r="2.5"/><circle cx="170" cy="85" r="2.5"/><circle cx="163" cy="120" r="2.5"/>
+                <circle cx="137" cy="120" r="2.5"/><circle cx="130" cy="85" r="2.5"/>
+              </g>
+              <path d="M136,68 l28,0 l-6,14 l6,14 l-28,0 l6,-14 Z" fill="none" stroke="#ffdf00" stroke-width="2"/>
+            </svg>
+            <div class="flag-caption">Empire flag &mdash; armillary sphere and imperial crown replace the republic's stars-and-motto globe</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1822 &ndash; 1889</div>
+            <h3 class="card-title">Empire of Brazil</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Empire, independent</span></div>
+            <p><span class="label">Who &amp; why:</span> Prince Pedro, regent of Brazil, declares independence from Portugal on 7 September 1822 on the banks of the Ipiranga (the "Grito do Ipiranga") and is crowned Pedro I, Emperor of Brazil. He abdicates in 1831 in favor of his five-year-old son, who reigns as Pedro II from 1840 until the 1889 republican coup. Uniquely among Brazil's South American neighbors &mdash; all of which broke from Spain as republics &mdash; independent Brazil kept its monarchy for 67 years.</p>
+            <p><span class="label">What it represents:</span> green field for the House of Braganza (Pedro's dynasty) and gold rhombus for the House of Habsburg (via his wife, Empress Leopoldina), with a blue armillary sphere &mdash; a navigational device tied to Portugal's maritime past &mdash; ringed by 19 stars for the empire's provinces and topped with the imperial crown.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No single fixed ratio maintained throughout; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Green field, gold rhombus, blue armillary sphere with a ring of stars, imperial crown above (simplified here).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#009c3b"></span><span class="meta"><span class="name">Green</span><span class="hex">#009C3B</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffdf00"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#FFDF00</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#002776"></span><span class="meta"><span class="name">Blue</span><span class="hex">#002776</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <rect y="0" width="300" height="66" fill="#002776"/>
+              <rect y="134" width="300" height="66" fill="#002776"/>
+              <circle cx="150" cy="100" r="34" fill="none" stroke="#ffdf00" stroke-width="5"/>
+              <circle cx="150" cy="100" r="20" fill="#a4302a"/>
+            </svg>
+            <div class="flag-caption">simplified Portuguese royal banner &mdash; Brazil had no separate flag of its own in this period</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1815 &ndash; 1822</div>
+            <h3 class="card-title">United Kingdom of Portugal, Brazil and the Algarves</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a4302a"></span>Kingdom, in union</span></div>
+            <p><span class="label">Who &amp; why:</span> when Napoleon's forces invaded Portugal in 1807, the Portuguese royal family and court fled across the Atlantic and, by 1808, were governing the empire from Rio de Janeiro &mdash; a genuinely unusual reversal, the only case of a European colonial power's own capital operating out of its colony. In 1815 King John VI formalized this by elevating Brazil from a colony to a kingdom co-equal with Portugal itself, joined under one crown as the United Kingdom of Portugal, Brazil and the Algarves.</p>
+            <p><span class="label">What it represents:</span> Brazil did not yet have a flag distinct from Portugal's own royal banner during this brief seven-year union; shown here is a simplified approximation of the Portuguese royal arms and colors of the period, standing in for the shared sovereign's flag rather than any dedicated Brazilian design.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed Brazilian ratio &mdash; no separate Brazilian flag existed.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Portuguese royal banner (simplified approximation): blue and white bands with a stylized central arms device.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#002776"></span><span class="meta"><span class="name">Blue</span><span class="hex">#002776</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#ffdf00"></span><span class="meta"><span class="name">Gold</span><span class="hex">#FFDF00</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <rect width="300" height="200" fill="none" stroke="#a4302a" stroke-width="4" stroke-dasharray="8 6"/>
+              <circle cx="150" cy="90" r="26" fill="none" stroke="#002776" stroke-width="4"/>
+              <path d="M150,64 L150,116 M124,90 L176,90" stroke="#002776" stroke-width="4"/>
+              <text x="150" y="150" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#a4302a">NO FIXED FLAG</text>
+            </svg>
+            <div class="flag-caption">Portuguese royal arms approximation &mdash; no single fixed colonial banner is attested throughout this span</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1500 &ndash; 1815</div>
+            <h3 class="card-title">Colonial Brazil (Portuguese America)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#7c2e1f"></span>Colony</span></div>
+            <p><span class="label">Who &amp; why:</span> Pedro &Aacute;lvares Cabral lands on the Brazilian coast in April 1500 and claims the territory for the Portuguese crown. Over the following three centuries, Portugal builds a colonial economy first on sugar and later on gold and diamonds, run under royal charters and later direct crown administration &mdash; a single, continuous Portuguese-speaking colonial track, in contrast to the Spanish colonial administrations that produced every other country in this hub.</p>
+            <p><span class="label">What it represents:</span> no single fixed flag flew over colonial Brazil for this entire 315-year span; ships and colonial authorities generally flew variants of the Portuguese royal arms and ensigns of the period, which changed repeatedly in Portugal itself, rather than any dedicated Brazilian colonial banner. Shown here honestly as a variable, approximate emblem rather than a fabricated fixed flag.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no fixed colonial flag; Portuguese royal ensigns varied across the period.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Approximate Portuguese royal arms motif on a plain field, standing in for a variable, unfixed colonial banner.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#002776"></span><span class="meta"><span class="name">Blue</span><span class="hex">#002776</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; pre-contact era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">to 1500</div>
+            <h3 class="card-title">Pre-colonial indigenous peoples</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>No unified polity</span></div>
+            <p><span class="label">Who &amp; why:</span> before European contact, the territory now called Brazil was home to a wide diversity of indigenous nations &mdash; Tupi and Guaran&iacute; peoples along the coast and in the interior, along with many other distinct groups across the Amazon basin and beyond &mdash; organized into villages, kinship networks, and regional alliances rather than any single overarching state.</p>
+            <p><span class="label">What it represents:</span> no unified polity existed to fly a single flag, and no fixed heraldic banner is documented for any of these nations individually. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>No unified polity</b> &mdash; diverse nations, no single crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#7c2e1f"></span><b>Colony</b> &mdash; administered under a foreign crown, no separate flag</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a4302a"></span><b>Kingdom, in union</b> &mdash; co-equal kingdom sharing a crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Empire, independent</b> &mdash; sovereign monarchy under its own crown</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Republic</b> &mdash; sovereign, no monarch</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="south-america-hub.html"><b>South America hub</b><span>A continent of Iberian colonies and their divergent paths</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications.
+  </footer>
+
+</div>
+
+</body></html>

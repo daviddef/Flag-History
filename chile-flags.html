@@ -1,0 +1,374 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Chile</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Chile, from pre-colonial Mapuche and Diaguita peoples with no unified polity, through Spanish colonial rule, independence, and a long republican era interrupted by dictatorship, to the modern democratic republic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="south-america-hub.html">South America hub</a></p>
+  <p class="kicker">Family research &middot; Phase 15 of the world atlas</p>
+  <h1>Flags of Chile</h1>
+  <p class="lede">Spanish colonization of Chile begins in earnest in 1541, when Pedro de Valdivia founds Santiago on behalf of the Crown, establishing Spanish rule across the fertile central valley. But Spain never manages to subdue the Mapuche south of the Biob&iacute;o River, who hold that frontier through the Arauco War for well over 250 years of the colonial period &mdash; a genuinely distinct story next to most of Spain's other American possessions, where conquest was far more complete.</p>
+  <p class="lede">Independence follows a hard road: after a 1814 royalist reconquest ends the short-lived &ldquo;Patria Vieja,&rdquo; Bernardo O'Higgins and Jos&eacute; de San Mart&iacute;n lead a combined Chilean&ndash;Argentine army across the Andes in January 1817, and O'Higgins proclaims Chilean independence on 12 February 1818 under essentially the same star-and-stripes flag still flown today. What follows is, by regional standards, an unusually long and stable run of constitutional government &mdash; punctuated by the War of the Pacific (1879&ndash;84), in which Chile defeats an allied Peru and Bolivia and annexes Bolivia's Pacific coastline, a decisive and still-sensitive episode in the region's own history &mdash; before that stability breaks decisively on 11 September 1973, when the military overthrows elected president Salvador Allende; Augusto Pinochet's dictatorship then holds power until a 1988 plebiscite defeat and the 1990 return to civilian rule.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Chile, c. 1541&ndash;present, six political entries. Chile's own modern territory was never split into separate crowned or governing entities the way some other pages in this atlas track, so &mdash; per the same rule applied elsewhere &mdash; this page carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="6">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <rect y="100" width="300" height="100" fill="#d52b1e"/>
+              <rect width="100" height="100" fill="#0039a6"/>
+              <path d="M50,26 L58,46 L80,46 L62,58 L69,80 L50,66 L31,80 L38,58 L20,46 L42,46 Z" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">La Estrella Solitaria &mdash; unchanged in design since 1817&ndash;18</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1990 &ndash; present</div>
+            <h3 class="card-title">Republic of Chile (democratic, modern)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#2f6b4f"></span>Republic, democratic</span></div>
+            <p><span class="label">Who &amp; why:</span> Pinochet loses the October 1988 plebiscite on extending his rule, and civilian government returns in March 1990 under elected president Patricio Aylwin. Democratic institutions and regular elections have continued without interruption since, through a series of peaceful transfers of power across the political spectrum.</p>
+            <p><span class="label">What it represents:</span> the same national flag flown since O'Higgins's 1817&ndash;18 decree &mdash; white and red bands with a blue canton and single white five-pointed star, La Estrella Solitaria (the Lone Star) &mdash; carried forward unchanged through the return to democracy.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, two equal horizontal bands (white over red); blue square canton on the white band, side equal to the band's height.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top band, red bottom band, blue canton in the upper hoist with a single centered white five-pointed star.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d52b1e"></span><span class="meta"><span class="name">Red</span><span class="hex">#D52B1E</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0039a6"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0039A6</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <rect y="100" width="300" height="100" fill="#d52b1e"/>
+              <rect width="100" height="100" fill="#0039a6"/>
+              <path d="M50,26 L58,46 L80,46 L62,58 L69,80 L50,66 L31,80 L38,58 L20,46 L42,46 Z" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">same national flag, flown throughout the military government</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1973 &ndash; 1990</div>
+            <h3 class="card-title">Military dictatorship under Pinochet</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#4a3b3b"></span>Military dictatorship</span></div>
+            <p><span class="label">Who &amp; why:</span> on 11 September 1973 the armed forces, led by Army commander Augusto Pinochet, overthrow the democratically elected socialist government of Salvador Allende, who dies during the assault on the presidential palace, La Moneda. Pinochet then heads a military government until 1990; his rule is marked by significant political repression, including thousands of forced disappearances and deaths, and by market-oriented economic reforms. He steps aside after losing the 1988 plebiscite and the 1990 transition to civilian rule.</p>
+            <p><span class="label">What it represents:</span> the national flag is unchanged &mdash; the government made no alteration to the 1817&ndash;18 design, flying the same white, red, and blue star flag as both the preceding republic and the democracy that follows.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, unchanged from the standing national design.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top band, red bottom band, blue canton with a single white five-pointed star.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d52b1e"></span><span class="meta"><span class="name">Red</span><span class="hex">#D52B1E</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0039a6"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0039A6</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <rect y="100" width="300" height="100" fill="#d52b1e"/>
+              <rect width="100" height="100" fill="#0039a6"/>
+              <path d="M50,26 L58,46 L80,46 L62,58 L69,80 L50,66 L31,80 L38,58 L20,46 L42,46 Z" fill="#f4efe1"/>
+            </svg>
+            <div class="flag-caption">fixed by O'Higgins's decree, essentially unchanged across a century and a half</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1818 &ndash; 1973</div>
+            <h3 class="card-title">Republic of Chile (19th&ndash;20th century)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> from independence in 1818, Chile builds a comparatively long and stable constitutional republic by the standards of newly independent Spanish America, with regular succession under a series of 19th- and 20th-century constitutions. The largest single episode of this era is the War of the Pacific (1879&ndash;84), fought against the allied forces of Peru and Bolivia over nitrate-rich northern territory; Chile wins decisively, and by the war's settlement Bolivia loses its entire Pacific coastline while Chile annexes it along with formerly Peruvian territory further north &mdash; a decisive and still-sensitive episode in the region's own history, noted here factually as part of Chile's own territorial timeline. This single flag continuity spans over 150 years, through the War of the Pacific, the early-20th-century parliamentary and presidential republics, and the Popular Unity government of Salvador Allende elected in 1970, up to the 1973 coup.</p>
+            <p><span class="label">What it represents:</span> the design fixed by O'Higgins's 1817&ndash;18 decree &mdash; white and red bands, blue canton, single white star &mdash; carried through this entire span essentially unaltered.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, formalized over the course of the 19th century.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White top band, red bottom band, blue canton with a single white five-pointed star.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d52b1e"></span><span class="meta"><span class="name">Red</span><span class="hex">#D52B1E</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0039a6"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0039A6</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="67" fill="#0039a6"/>
+              <rect y="67" width="300" height="66" fill="#f4efe1"/>
+              <rect y="133" width="300" height="67" fill="#f0c419"/>
+            </svg>
+            <div class="flag-caption">the 1812 Patria Vieja tricolor; the star-and-stripes design followed in 1817&ndash;18</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1817 &ndash; 1818</div>
+            <h3 class="card-title">War of independence &mdash; Patria Nueva</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#b5651d"></span>Revolutionary government</span></div>
+            <p><span class="label">Who &amp; why:</span> the first independence government, the &ldquo;Patria Vieja&rdquo; (1810&ndash;14), flies an early blue-white-yellow tricolor from 1812 before Spanish royalist forces reconquer the country in 1814. From exile in Argentina, Bernardo O'Higgins and Jos&eacute; de San Mart&iacute;n organize the Army of the Andes and cross the mountains in January 1817, winning the decisive Battle of Chacabuco. O'Higgins formally proclaims Chilean independence on 12 February 1818, adopting the white-red-blue star flag that remains Chile's national flag today.</p>
+            <p><span class="label">What it represents:</span> the flag shown is the 1812 Patria Vieja tricolor, Chile's first national banner; it is replaced by the definitive white, red, and blue star design under O'Higgins in 1817&ndash;18, the same flag carried into every entry after this one.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Three equal horizontal bands: blue, white, yellow.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#0039a6"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0039A6</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f0c419"></span><span class="meta"><span class="name">Yellow</span><span class="hex">#F0C419</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <line x1="0" y1="0" x2="300" y2="200" stroke="#d52b1e" stroke-width="28"/>
+              <line x1="300" y1="0" x2="0" y2="200" stroke="#d52b1e" stroke-width="28"/>
+            </svg>
+            <div class="flag-caption">Cross of Burgundy &mdash; simplified Spanish colonial banner</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1541 &ndash; 1810s</div>
+            <h3 class="card-title">Captaincy General of Chile</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Colony</span></div>
+            <p><span class="label">Who &amp; why:</span> Pedro de Valdivia founds Santiago in February 1541, establishing Spanish rule across the central valley as a captaincy general under the Viceroyalty of Peru. But the Mapuche south of the Biob&iacute;o River fight the Arauco War against Spanish forces for over 250 years and are never fully conquered during the colonial period &mdash; a genuinely distinct frontier story next to Spain's other American colonies, most of which saw far more complete conquest.</p>
+            <p><span class="label">What it represents:</span> the Cross of Burgundy (a red saltire on white), widely used as a military and colonial banner across the Spanish Empire, shown here as a simplified approximation of the flags flown over Spanish Chile; no single flag was specific to the captaincy itself.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed civil ratio recorded for this period; shown at 3:2.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White field, red diagonal saltire cross (Cross of Burgundy, simplified &mdash; the historical version has ragged, knotted edges).</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#d52b1e"></span><span class="meta"><span class="name">Red</span><span class="hex">#D52B1E</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c2a24"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder maroon field &mdash; pre-contact era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">to 1541</div>
+            <h3 class="card-title">Pre-colonial indigenous peoples</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>No unified polity</span></div>
+            <p><span class="label">Who &amp; why:</span> before Spanish contact, the territory of present-day Chile is home to the Mapuche across the central-south, the Diaguita in the north-central valleys, and other distinct peoples including the Atacame&ntilde;o, Aymara, and Chango further north, along with the Selk'nam and other groups in the far south. No single polity governs this territory, and no central authority unites these peoples before 1541.</p>
+            <p><span class="label">What it represents:</span> no securely documented flag survives from this era; these were not flag-using societies in the European heraldic sense, and no banner can be honestly attributed to any of them. Shown here blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>No unified polity</b> &mdash; no single ruling authority</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Colony</b> &mdash; governed as part of a foreign empire</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#b5651d"></span><b>Revolutionary government</b> &mdash; wartime independence authority</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Republic</b> &mdash; sovereign constitutional government</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#4a3b3b"></span><b>Military dictatorship</b> &mdash; constitutional rule suspended under military rule</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#2f6b4f"></span><b>Republic, democratic</b> &mdash; sovereign, elected civilian government</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="south-america-hub.html"><b>South America hub</b><span>The continent's countries, side by side</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications.
+  </footer>
+
+</div>
+
+</body></html>

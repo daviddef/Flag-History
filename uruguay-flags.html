@@ -1,0 +1,354 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flags of Uruguay</title>
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Uruguay, from Charrúa territory through a fought-over colonial frontier to the British-brokered buffer state that became the modern republic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.08rem; max-width: none; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .scope-note { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; font-size: .94rem; color: var(--muted); }
+  .scope-note b { color: var(--ink); font-weight: 600; }
+
+  .legend { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .legend h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+  .legend-item { display: flex; gap: 10px; align-items: baseline; font-size: .88rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
+  .legend-item b { color: var(--ink); font-weight: 600; }
+
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { margin-top: 56px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 1px; background: var(--hair); }
+  @media (max-width: 560px) { .timeline::before { left: 9px; } }
+  .entry { position: relative; padding-left: 46px; margin-bottom: 46px; }
+  @media (max-width: 560px) { .entry { padding-left: 30px; } }
+  .entry::before {
+    content: attr(data-n);
+    position: absolute; left: 1px; top: 3px;
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid var(--paper); outline: 1px solid var(--hair);
+    background: var(--card);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 600;
+    color: var(--brick); display: flex; align-items: center; justify-content: center;
+  }
+  @media (max-width: 560px) { .entry::before { left: -5px; width: 18px; height: 18px; font-size: 9px; } }
+
+  .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 4px; overflow: hidden; }
+  .card-head { display: flex; gap: 20px; padding: 20px; align-items: flex-start; }
+  @media (max-width: 620px) { .card-head { flex-direction: column; } }
+  .flag-box { flex: none; width: 168px; }
+  .flag-box svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .flag-caption { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--muted); margin-top: 6px; letter-spacing: .01em; }
+
+  .card-body { flex: 1; min-width: 0; }
+  .card-dates { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; color: var(--brass); letter-spacing: .03em; margin-bottom: 6px; }
+  .card-title { font-size: 1.32rem; font-weight: 600; line-height: 1.18; margin: 0 0 10px; text-wrap: balance; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
+    display: inline-flex; align-items: center; gap: 5px;
+  }
+  .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .card-body p { margin: 0 0 10px; font-size: .96rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body .label { color: var(--brick); font-weight: 600; }
+
+  details.paint { border-top: 1px solid var(--hair); }
+  details.paint > summary {
+    cursor: pointer; list-style: none; padding: 12px 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--adriatic); display: flex; align-items: center; gap: 8px; user-select: none;
+  }
+  details.paint > summary::-webkit-details-marker { display: none; }
+  details.paint > summary::before { content: "+"; font-family: "Fraunces", serif; font-size: 15px; width: 14px; }
+  details.paint[open] > summary::before { content: "\2212"; }
+  details.paint > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .paint-body { padding: 4px 20px 20px; }
+  .spec-row { display: flex; gap: 8px; font-size: .87rem; margin-bottom: 10px; }
+  .spec-row .k { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--muted); flex: none; width: 88px; padding-top: 2px; }
+  .spec-row .v { color: var(--ink); }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .swatch { display: flex; align-items: center; gap: 8px; border: 1px solid var(--card-border); border-radius: 2px; padding: 5px 9px 5px 5px; background: var(--paper); }
+  .swatch .chip { width: 20px; height: 20px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .swatch .meta { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; line-height: 1.3; }
+  .swatch .meta .name { color: var(--ink); display: block; }
+  .swatch .meta .hex { color: var(--muted); display: block; }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a> &middot; <a href="south-america-hub.html">South America hub</a></p>
+  <p class="kicker">Family research &middot; Phase 15 of the world atlas</p>
+  <h1>Flags of Uruguay</h1>
+  <p class="lede">The land on the eastern bank of the Uruguay River &mdash; the "Banda Oriental" &mdash; sat for more than a century on the exact seam between two American empires, and both fought for it accordingly. Portugal pushed a trading post across the water from Buenos Aires in 1680; Spain answered by founding Montevideo forty years later to hold the line; and when Spanish rule finally collapsed, Portuguese Brazil simply annexed the territory outright rather than let it go independent, precisely because whoever held the eastern bank held the mouth of the Río de la Plata.</p>
+  <p class="lede">What makes Uruguay's founding genuinely unusual in this atlas is that it did not become independent by winning its own war of liberation the way most of its neighbors did. After the 1825 Thirty-Three Orientals uprising dragged Argentina and Brazil into a war neither could win outright, Britain stepped in as mediator: the 1828 Treaty of Montevideo, guaranteed by the United Kingdom, created Uruguay as a deliberate buffer state wedged between its two much larger neighbors &mdash; independence granted less to satisfy Uruguayan self-determination than to keep Argentina and Brazil from fighting each other over the territory again.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the lands of present-day Uruguay, c. 1500s (Charrúa era)&ndash;present. This page carries no internal-partition map &mdash; there is no genuine internal governing split within Uruguay's own modern borders at any point in its history, so it follows the atlas's single-continuous-timeline template rather than the split-map template used elsewhere. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="entry" data-n="5">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <rect y="22.2" width="300" height="22.2" fill="#0038a8"/>
+              <rect y="66.7" width="300" height="22.2" fill="#0038a8"/>
+              <rect y="111.1" width="300" height="22.2" fill="#0038a8"/>
+              <rect y="155.6" width="300" height="22.2" fill="#0038a8"/>
+              <rect x="0" y="0" width="130" height="111" fill="#f4efe1" stroke="#d9c9a0" stroke-width="1"/>
+              <circle cx="65" cy="55" r="18" fill="#f6b40e"/>
+              <circle cx="65" cy="55" r="9" fill="#e0a10c"/>
+              <g stroke="#f6b40e" stroke-width="3">
+                <line x1="85" y1="55" x2="95" y2="55"/>
+                <line x1="79.1" y1="68.1" x2="86.2" y2="75.2"/>
+                <line x1="65" y1="75" x2="65" y2="85"/>
+                <line x1="50.9" y1="68.1" x2="43.8" y2="75.2"/>
+                <line x1="45" y1="55" x2="35" y2="55"/>
+                <line x1="50.9" y1="41.9" x2="43.8" y2="34.8"/>
+                <line x1="65" y1="35" x2="65" y2="25"/>
+                <line x1="79.1" y1="41.9" x2="86.2" y2="34.8"/>
+              </g>
+            </svg>
+            <div class="flag-caption">nine white/blue stripes, Sol de Mayo in the canton &mdash; unchanged since 1830</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1830 &ndash; present</div>
+            <h3 class="card-title">Oriental Republic of Uruguay (modern)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#a9762f"></span>Republic</span></div>
+            <p><span class="label">Who &amp; why:</span> the 1830 constitution formally establishes the Oriental Republic of Uruguay following the 1828 British-brokered independence settlement, fixing the flag in its final form the same year. The 20th century brings real turbulence &mdash; including a 1973&ndash;85 civil-military dictatorship &mdash; but none of it touches the flag itself, which has flown unaltered through democratic government, dictatorship, and the return to democracy alike.</p>
+            <p><span class="label">What it represents:</span> nine alternating white and blue horizontal stripes, one for each of the republic's nine original departments, with a golden Sol de Mayo (Sun of May) in a white canton &mdash; the same sun emblem carried on Argentina's flag, a direct nod to the shared revolutionary-era heritage of the Río de la Plata provinces.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, fixed by law; shown here simplified with five representative stripes rather than all nine.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Nine horizontal stripes (five white, four blue) with a white canton bearing the golden Sol de Mayo, a sun with a face and sixteen alternating rays.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#0038a8"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0038A8</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f6b40e"></span><span class="meta"><span class="name">Gold sun</span><span class="hex">#F6B40E</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="entry" data-n="4">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="66.7" fill="#75aadb"/>
+              <rect y="66.7" width="300" height="66.7" fill="#f4efe1"/>
+              <rect y="133.3" width="300" height="66.7" fill="#9c3b28"/>
+              <text x="150" y="105" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#201a12">LIBERTAD O MUERTE</text>
+            </svg>
+            <div class="flag-caption">Thirty-Three Orientals banner, light blue/white/red with "Libertad o Muerte"</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1825 &ndash; 1828</div>
+            <h3 class="card-title">Independence and the buffer-state settlement</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#c9a13c"></span>Republic, independence declared</span></div>
+            <p><span class="label">Who &amp; why:</span> the "Treinta y Tres Orientales" (Thirty-Three Orientals), led by Juan Antonio Lavalleja, land on the Banda Oriental in April 1825 and rise against Brazilian rule, triggering a war between Argentina and Brazil over the territory. Neither side can settle it by force, so Britain steps in to broker the December 1828 Treaty of Montevideo, under which both Argentina and Brazil recognize an independent Uruguay &mdash; created deliberately as a buffer state between them, a genuinely distinctive founding rationale among this atlas's republics.</p>
+            <p><span class="label">What it represents:</span> the independence fighters' own historic banner, sometimes shown as a light-blue, white, and red tricolor carrying the motto "Libertad o Muerte" (Liberty or Death) &mdash; the predecessor to the fixed 1830 national design.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for this irregular, campaign-era banner.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Three horizontal bands &mdash; light blue, white, red &mdash; with the motto "Libertad o Muerte" across the field.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#75aadb"></span><span class="meta"><span class="name">Light blue</span><span class="hex">#75AADB</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#9c3b28"></span><span class="meta"><span class="name">Red</span><span class="hex">#9C3B28</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="entry" data-n="3">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="150" height="200" fill="#204b5c"/>
+              <rect x="150" width="150" height="200" fill="#2a7f3e"/>
+              <circle cx="150" cy="100" r="30" fill="#f6b40e" stroke="#f4efe1" stroke-width="3"/>
+              <circle cx="150" cy="100" r="14" fill="#204b5c"/>
+            </svg>
+            <div class="flag-caption">left: Portuguese/United Kingdom colonial banner (1816&ndash;22); right: Brazilian Empire banner (1822&ndash;25)</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1816 &ndash; 1825</div>
+            <h3 class="card-title">Cisplatina (Portuguese/Brazilian rule)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#9c3b28"></span>Annexed province</span></div>
+            <p><span class="label">Who &amp; why:</span> Portuguese-Brazilian forces invade in 1816 and complete the annexation of the Banda Oriental by 1817, renaming it the "Cisplatine Province" and formally folding it into the United Kingdom of Portugal, Brazil and the Algarves. After Brazil's own 1822 break from Portugal, the province passes intact into the newly independent Empire of Brazil. Brazilian rule over the province is a direct trigger for the Thirty-Three Orientals' 1825 uprising.</p>
+            <p><span class="label">What it represents:</span> the province flew under Portuguese colonial authority through 1822, then under the banner of the Brazilian Empire afterward &mdash; shown here honestly as two halves of one entry rather than a single continuous flag, since the ruling banner itself changed mid-period even though the annexation did not.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for the province's own use; shown as an illustrative split panel.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Left half: Portuguese colonial blue field. Right half: Brazilian Empire green field. Center: simplified gold armillary/imperial emblem.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#204b5c"></span><span class="meta"><span class="name">Portuguese blue</span><span class="hex">#204B5C</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#2a7f3e"></span><span class="meta"><span class="name">Brazilian green</span><span class="hex">#2A7F3E</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#f6b40e"></span><span class="meta"><span class="name">Gold emblem</span><span class="hex">#F6B40E</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="entry" data-n="2">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#f4efe1"/>
+              <g stroke="#9c3b28" stroke-width="26" stroke-linecap="square">
+                <line x1="10" y1="10" x2="290" y2="190"/>
+                <line x1="290" y1="10" x2="10" y2="190"/>
+              </g>
+            </svg>
+            <div class="flag-caption">Cross of Burgundy on white &mdash; standard Spanish colonial banner</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">1680s &ndash; 1816</div>
+            <h3 class="card-title">Banda Oriental (Spanish colonial, contested with Portugal)</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#204b5c"></span>Colony, contested</span></div>
+            <p><span class="label">Who &amp; why:</span> Spain and Portugal dispute this stretch of the eastern riverbank for well over a century. Portugal opens the contest by founding Colônia do Sacramento in 1680, directly across the river from Buenos Aires; Spain answers by founding Montevideo in 1724&ndash;30 to secure the eastern bank against further Portuguese encroachment. The territory remains a genuine, long-running frontier flashpoint between the two empires' American claims until Portuguese/Brazilian forces finally seize it outright in 1816.</p>
+            <p><span class="label">What it represents:</span> the Cross of Burgundy &mdash; a red saltire on a white or cream field &mdash; the standard military and civil banner flown across Spain's American colonies, including the contested Banda Oriental garrisons and Montevideo itself.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">No fixed ratio recorded for colonial-era use.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">White/cream field, red saltire (Cross of Burgundy); shown here with straight bands rather than the historically jagged, knotted-branch edges.</span></div>
+            <div class="swatches">
+              <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
+              <div class="swatch"><span class="chip" style="background:#9c3b28"></span><span class="meta"><span class="name">Red saltire</span><span class="hex">#9C3B28</span></span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="entry" data-n="1">
+      <div class="card">
+        <div class="card-head">
+          <div class="flag-box">
+            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#5c4a2a"/>
+              <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/>
+              <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text>
+              <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>
+            </svg>
+            <div class="flag-caption">placeholder field &mdash; pre-contact era, no flag survives</div>
+          </div>
+          <div class="card-body">
+            <div class="card-dates">to 1680s</div>
+            <h3 class="card-title">Charr&uacute;a and other indigenous peoples</h3>
+            <div class="tag-row"><span class="tag"><span class="dot" style="background:#6b5c4a"></span>No unified polity</span></div>
+            <p><span class="label">Who &amp; why:</span> the Charr&uacute;a and other indigenous peoples inhabit the territory in small, mobile communities before European contact, with no single ruling authority over the region. Comparatively sparse Spanish and Portuguese settlement follows contact, a direct consequence of the territory's position as a frontier zone between the two empires rather than a core holding of either.</p>
+            <p><span class="label">What it represents:</span> no flag or fixed territorial banner is documented for this era or these peoples. Shown here honestly blank rather than invented.</p>
+          </div>
+        </div>
+        <details class="paint">
+          <summary>Paint guide</summary>
+          <div class="paint-body">
+            <div class="spec-row"><span class="k">Proportions</span><span class="v">N/A &mdash; no attested flag.</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="legend">
+    <h2>Reading the tags</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>No unified polity</b> &mdash; no single ruling authority</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Colony, contested</b> &mdash; disputed frontier between two empires</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#9c3b28"></span><b>Annexed province</b> &mdash; absorbed outright into a larger state</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c9a13c"></span><b>Republic, independence declared</b> &mdash; sovereignty claimed, not yet settled</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Republic</b> &mdash; sovereign, internationally recognized</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This page is one lineage in a larger set. See the region-wide map and the other countries here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+      <a class="link-card" href="south-america-hub.html"><b>South America hub</b><span>The continent's countries, side by side</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications.
+  </footer>
+
+</div>
+
+</body></html>

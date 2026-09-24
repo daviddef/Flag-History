@@ -420,7 +420,18 @@
     uzbekistan: '<rect width="300" height="63" fill="#0099b5"/><rect y="69" width="300" height="62" fill="#f4efe1"/><rect y="137" width="300" height="63" fill="#1eb53a"/><circle cx="60" cy="35" r="16" fill="#f4efe1"/>',
     turkmenistan: '<rect width="300" height="200" fill="#00843d"/><rect x="0" width="30" height="200" fill="#7c2e1f"/>',
     kyrgyzstan: '<rect width="300" height="200" fill="#e8112d"/><circle cx="150" cy="100" r="34" fill="#ffce00"/>',
-    tajikistan: '<rect width="300" height="46.7" fill="#cc0000"/><rect y="46.7" width="300" height="106.6" fill="#f4efe1"/><rect y="153.3" width="300" height="46.7" fill="#006600"/><circle cx="150" cy="90" r="10" fill="#f9d616"/>'
+    tajikistan: '<rect width="300" height="46.7" fill="#cc0000"/><rect y="46.7" width="300" height="106.6" fill="#f4efe1"/><rect y="153.3" width="300" height="46.7" fill="#006600"/><circle cx="150" cy="90" r="10" fill="#f9d616"/>',
+    kenya: '<rect width="300" height="66.7" fill="#050505"/><rect y="66.7" width="300" height="66.6" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#1e7a4a"/><rect y="60" width="300" height="6.7" fill="#f4efe1"/><rect y="133.3" width="300" height="6.7" fill="#f4efe1"/><polygon points="150,72 172,84 168,112 132,112 128,84" fill="#f4efe1"/>',
+    tanzania: '<polygon points="0,0 300,200 0,200" fill="#1e7a4a"/><polygon points="0,0 300,0 300,200" fill="#00a3dd"/><polygon points="4,4 296,196" stroke="#050505" stroke-width="26"/>',
+    ethiopia: '<rect width="300" height="66.7" fill="#1e7a4a"/><rect y="66.7" width="300" height="66.6" fill="#f9d616"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><circle cx="150" cy="100" r="30" fill="#1a3a6b"/>',
+    uganda: '<rect width="300" height="33.3" fill="#050505"/><rect y="33.3" width="300" height="33.3" fill="#f9d616"/><rect y="66.6" width="300" height="33.4" fill="#a4302a"/><rect y="100" width="300" height="33.3" fill="#050505"/><rect y="133.3" width="300" height="33.3" fill="#f9d616"/><rect y="166.6" width="300" height="33.4" fill="#a4302a"/><circle cx="150" cy="100" r="34" fill="#f4efe1"/>',
+    rwanda: '<rect width="300" height="200" fill="#1a5fb4"/><rect y="150" width="300" height="50" fill="#1e9c5a"/><rect y="130" width="300" height="20" fill="#f9d616"/><circle cx="240" cy="50" r="24" fill="#f9d616"/>',
+    burundi: '<rect width="300" height="200" fill="#f4efe1"/><polygon points="150,0 0,100 150,200" fill="#a4302a"/><polygon points="150,0 300,100 150,200" fill="#a4302a"/><polygon points="0,0 150,0 0,100" fill="#1e7a4a"/><polygon points="300,0 150,0 300,100" fill="#1e7a4a"/><polygon points="0,200 150,200 0,100" fill="#1e7a4a"/><polygon points="300,200 150,200 300,100" fill="#1e7a4a"/><circle cx="150" cy="100" r="42" fill="#f4efe1"/>',
+    somalia: '<rect width="300" height="200" fill="#6fd0ea"/><path d="M150,72 l14,32 35,4 -26,25 8,35 -31,-19 -31,19 8,-35 -26,-25 35,-4 Z" fill="#f4efe1"/>',
+    eritrea: '<polygon points="0,0 300,0 300,60 0,140" fill="#1e7a4a"/><polygon points="0,140 300,60 300,200 0,200" fill="#1a3a6b"/><polygon points="0,0 0,200 150,100" fill="#a4302a"/><circle cx="90" cy="100" r="20" fill="#f9d616"/>',
+    djibouti: '<rect width="300" height="100" fill="#6fd0ea"/><rect y="100" width="300" height="100" fill="#1e9c5a"/><polygon points="0,0 130,100 0,200" fill="#f4efe1"/><path d="M65,60 l9,24 26,3 -19,18 5,26 -21,-13 -21,13 5,-26 -19,-18 26,-3 Z" fill="#cf142b"/>',
+    southsudan: '<rect width="300" height="50" fill="#050505"/><rect y="50" width="300" height="12" fill="#f4efe1"/><rect y="62" width="300" height="50" fill="#a4302a"/><rect y="112" width="300" height="12" fill="#f4efe1"/><rect y="124" width="300" height="76" fill="#1e7a4a"/><polygon points="0,0 130,100 0,200" fill="#1a3a6b"/><path d="M45,75 l7,17 18,2 -14,12 4,18 -15,-9 -15,9 4,-18 -14,-12 18,-2 Z" fill="#f9d616"/>',
+    madagascar: '<rect width="100" height="200" fill="#f4efe1"/><rect x="100" width="200" height="100" fill="#a4302a"/><rect x="100" y="100" width="200" height="100" fill="#1e7a4a"/>'
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -664,7 +675,29 @@
     { name:"Kyrgyzstan", flag:"kyrgyzstan", ownPage:true, url:"kyrgyzstan-flags.html", hub:"Central Asia", region:"Central Asia", color:"#e8112d",
       crowns:["Yenisei Kyrgyz Khaganate","Tian Shan tribal confederations","Russian Turkestan","Kara-Kirghiz AO / Kirghiz ASSR","Kirghiz SSR","Modern republic"] },
     { name:"Tajikistan", flag:"tajikistan", ownPage:true, url:"tajikistan-flags.html", hub:"Central Asia", region:"Central Asia", color:"#006600",
-      crowns:["Ancient Sogdiana and Bactria (Persianate)","Early Islamic conquest of Transoxiana","Samanid golden age","Mongol conquest / Chagatai Khanate","Timurid Empire","Khanate / Emirate of Bukhara","Bukharan PSR / Tajik ASSR","Tajik SSR","Modern republic"] }
+      crowns:["Ancient Sogdiana and Bactria (Persianate)","Early Islamic conquest of Transoxiana","Samanid golden age","Mongol conquest / Chagatai Khanate","Timurid Empire","Khanate / Emirate of Bukhara","Bukharan PSR / Tajik ASSR","Tajik SSR","Modern republic"] },
+    { name:"Kenya", flag:"kenya", ownPage:true, url:"kenya-flags.html", hub:"East Africa", region:"East Africa", color:"#a4302a",
+      crowns:["Swahili coast under Zanzibari influence","East Africa Protectorate / Kenya Colony","Mau Mau uprising","Modern republic"] },
+    { name:"Tanzania", flag:"tanzania", ownPage:true, url:"tanzania-flags.html", hub:"East Africa", region:"East Africa", color:"#1e7a4a",
+      crowns:["Coastal Swahili towns","German East Africa","Tanganyika (British mandate/trust territory)","Zanzibar Sultanate / 1964 Revolution","Union of Tanganyika and Zanzibar"] },
+    { name:"Ethiopia", flag:"ethiopia", ownPage:true, url:"ethiopia-flags.html", hub:"East Africa", region:"East Africa", color:"#c9a13c",
+      crowns:["Kingdom of Aksum","Solomonic dynasty / Ethiopian Empire","Italian occupation (1936–41)","The Derg (military junta)","Modern federal republic"] },
+    { name:"Uganda", flag:"uganda", ownPage:true, url:"uganda-flags.html", hub:"East Africa", region:"East Africa", color:"#7a4a1f",
+      crowns:["Kingdom of Buganda","Uganda Protectorate","Idi Amin dictatorship","Modern republic"] },
+    { name:"Rwanda", flag:"rwanda", ownPage:true, url:"rwanda-flags.html", hub:"East Africa", region:"East Africa", color:"#1a5fb4",
+      crowns:["Kingdom of Rwanda","Ruanda-Urundi (Belgian mandate/trust territory)","Independence-era republic","1994 genocide","Modern republic (post-2001 flag)"] },
+    { name:"Burundi", flag:"burundi", ownPage:true, url:"burundi-flags.html", hub:"East Africa", region:"East Africa", color:"#a4302a",
+      crowns:["Kingdom of Burundi","Ruanda-Urundi (Belgian mandate/trust territory)","Independent Kingdom of Burundi","Modern republic"] },
+    { name:"Somalia", flag:"somalia", ownPage:true, url:"somalia-flags.html", hub:"East Africa", region:"East Africa", color:"#6fd0ea",
+      crowns:["Sultanate of Adal / Ajuran Sultanate","British Somaliland / Italian Somaliland","Somali Republic (1960 union)","Siad Barre dictatorship","State collapse / federal republic"] },
+    { name:"Eritrea", flag:"eritrea", ownPage:true, url:"eritrea-flags.html", hub:"East Africa", region:"East Africa", color:"#6b7a2e",
+      crowns:["Italian Eritrea","British Military Administration","Federation with, then annexation by, Ethiopia","Modern republic"] },
+    { name:"Djibouti", flag:"djibouti", ownPage:true, url:"djibouti-flags.html", hub:"East Africa", region:"East Africa", color:"#6fa3b8",
+      crowns:["Afar sultanates & Issa Somali clans","French Somaliland / Territory of the Afars and the Issas","Modern republic"] },
+    { name:"South Sudan", flag:"southsudan", ownPage:true, url:"south-sudan-flags.html", hub:"East Africa", region:"East Africa", color:"#2b2e33",
+      crowns:["Stateless Nilotic peoples","Ottoman-Egyptian expansion / Mahdist State","Anglo-Egyptian Sudan","South within independent Sudan (civil wars)","Modern republic (2011)"] },
+    { name:"Madagascar", flag:"madagascar", ownPage:true, url:"madagascar-flags.html", hub:"East Africa", region:"East Africa", color:"#5a8a6b",
+      crowns:["Early Austronesian-descended kingdoms","Kingdom of Madagascar (Merina)","French Madagascar","Modern republic"] }
   ];
 
   var grid = document.getElementById("countryGrid");
