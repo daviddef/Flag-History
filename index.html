@@ -356,7 +356,8 @@
     spain: '<rect width="300" height="50" fill="#aa151b"/><rect y="50" width="300" height="100" fill="#f1bf00"/><rect y="150" width="300" height="50" fill="#aa151b"/>',
     portugal: '<rect width="120" height="200" fill="#0b6e3f"/><rect x="120" width="180" height="200" fill="#a4302a"/><circle cx="120" cy="100" r="34" fill="#f9d616"/>',
     belarus: '<rect width="300" height="133.3" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/><rect width="30" height="200" fill="#f4efe1"/>',
-    moldova: '<rect width="100" height="200" fill="#003da5"/><rect x="100" width="100" height="200" fill="#f9d616"/><rect x="200" width="100" height="200" fill="#a4302a"/>'
+    moldova: '<rect width="100" height="200" fill="#003da5"/><rect x="100" width="100" height="200" fill="#f9d616"/><rect x="200" width="100" height="200" fill="#a4302a"/>',
+    saudiarabia: '<rect width="300" height="200" fill="#0f5c33"/><text x="150" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#f4efe1">شهادة</text><line x1="90" y1="130" x2="210" y2="130" stroke="#f4efe1" stroke-width="6"/>'
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -434,7 +435,9 @@
     { name:"Moldova", flag:"moldova", ownPage:true, url:"moldova-flags.html", hub:"Eastern Europe", region:"Eastern Europe", color:"#003da5",
       crowns:["Principality of Moldavia (Ottoman vassal)","Russian Empire (Bessarabia)","Kingdom of Romania","Soviet Union (Moldavian SSR)","Modern republic"] },
     { name:"Russia", flag:"russia", ownPage:true, url:"russia-flags.html", hub:"Phase 7", region:"Eurasia", color:"#0039a6",
-      crowns:["Kievan Rus'","Mongol/Tatar suzerainty","Grand Duchy of Moscow","Tsardom of Russia","Russian Empire","Soviet Union (RSFSR)","Modern federation"] }
+      crowns:["Kievan Rus'","Mongol/Tatar suzerainty","Grand Duchy of Moscow","Tsardom of Russia","Russian Empire","Soviet Union (RSFSR)","Modern federation"] },
+    { name:"Saudi Arabia", flag:"saudiarabia", ownPage:true, url:"saudi-arabia-flags.html", hub:"Arabian Peninsula", region:"Arabian Peninsula", color:"#0f5c33",
+      crowns:["Caliphal / Ottoman-era Hejaz and Najd","First Saudi State (Diriyah)","Second Saudi State / Rashidi Ha'il","Emirate / Sultanate of Nejd","Kingdom of Hejaz and Nejd","Modern kingdom"] }
   ];
 
   var grid = document.getElementById("countryGrid");
