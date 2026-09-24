@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<meta charset="UTF-8">
+<title>Flags of East Africa</title>
+<meta name="description" content="A hub for the family flag atlas: eleven East African country lineages, from Ethiopia's ancient unbroken statehood to South Sudan's 2011 independence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
+    --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --tile: #ddd0aa; --tile-line: #b7a679; --tile-text: #7a6a45; --tile-sea: #b9d3da;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+      --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+      --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
+    --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
+    --muted: #9a9280; --hair: #33393f; --tile: #262b31; --tile-line: #3a4147; --tile-text: #8a8f94; --tile-sea: #17303a;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Sans 3", system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding-inline: 20px; padding-block: 48px 80px; }
+  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--adriatic); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 18px; text-wrap: balance; }
+  .lede { font-size: 1.1rem; max-width: 68ch; opacity: .88; margin: 0 0 10px; }
+  .lede + .lede { margin-top: 12px; }
+
+  .countries { margin-top: 44px; }
+  .countries h2 { font-size: 1.15rem; font-weight: 600; margin: 0 0 16px; }
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .country-card {
+    display: block; padding: 20px; border: 1px solid var(--card-border); background: var(--card);
+    border-radius: 4px; text-decoration: none; color: var(--ink); position: relative; overflow: hidden;
+  }
+  .country-card .swatch-strip { position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+  .country-card .era { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--brass); margin-bottom: 6px; }
+  .country-card b { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+  .country-card span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+  .about { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .about h2 { font-size: 1.3rem; margin: 0 0 12px; }
+  .about p { max-width: 66ch; opacity: .88; margin: 0 0 12px; }
+
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
+  footer a { color: var(--adriatic); }
+
+  .roadmap { margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--hair); }
+  .roadmap h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  .roadmap p { max-width: 62ch; opacity: .88; margin: 0 0 20px; }
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .link-card { display: block; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 3px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+  .link-card b { display: block; font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+  .link-card span { color: var(--muted); font-size: .82rem; }
+</style>
+
+<div class="wrap">
+
+  <p class="breadcrumb"><a href="index.html">&larr; Flags Atlas index</a></p>
+  <p class="kicker">Family research &middot; Hub &middot; Phase 12 of the world atlas</p>
+  <h1>Flags of East Africa</h1>
+  <p class="lede">Eleven countries with some of the most distinctive statehoods on the continent. Ethiopia is Africa's oldest continuously independent state &mdash; the Aksumite Kingdom, then the Ethiopian Empire, never colonized except a brief 1936&ndash;41 Italian occupation. Along the coast, the Sultanate of Zanzibar and Swahili city-states like Kilwa and Mombasa built a real, distinct Indian Ocean trading civilization, linking East Africa to Arabia, Persia, and India centuries before Europeans arrived.</p>
+  <p class="lede">Everywhere else, the 1880s&ndash;1900s "Scramble for Africa" carved the region among Britain, Germany, Italy, and France. Most of the region won independence in the early-to-mid 1960s, but two moments came much later and stand on their own: Eritrea's 1993 independence from Ethiopia after a thirty-year war, and South Sudan's 2011 independence from Sudan &mdash; the world's newest country. Individual country pages, with full flag timelines like the rest of the atlas, are publishing next.</p>
+
+  <div class="countries">
+    <h2>The eleven lineages</h2>
+    <div class="country-grid">
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#a4302a"></span>
+        <span class="era">publishing next</span>
+        <b>Kenya</b>
+        <span>The Mau Mau uprising against British rule, independence in 1963 under Jomo Kenyatta, and a coast shaped by Swahili trading city-states.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#1e824c"></span>
+        <span class="era">publishing next</span>
+        <b>Tanzania</b>
+        <span>German East Africa, then British Tanganyika, uniting with the island Sultanate of Zanzibar in 1964 to form modern Tanzania.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#c9a13c"></span>
+        <span class="era">publishing next</span>
+        <b>Ethiopia</b>
+        <span>Africa's oldest continuously independent state &mdash; the Aksumite Kingdom through the Ethiopian Empire, never colonized except a 1936&ndash;41 Italian occupation.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#7a4a1f"></span>
+        <span class="era">publishing next</span>
+        <b>Uganda</b>
+        <span>The Kingdom of Buganda's precolonial power, a British protectorate from 1894, and independence in 1962.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#1e2f96"></span>
+        <span class="era">publishing next</span>
+        <b>Rwanda</b>
+        <span>The old Kingdom of Rwanda, Belgian trusteeship after the First World War, and the 1994 genocide against the Tutsi the country has spent three decades rebuilding from.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#8a2f5c"></span>
+        <span class="era">publishing next</span>
+        <b>Burundi</b>
+        <span>A centuries-old kingdom, joined with Rwanda under Belgian rule as Ruanda-Urundi, independence in 1962, and its own monarchy dissolved in 1966.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#4a90d9"></span>
+        <span class="era">publishing next</span>
+        <b>Somalia</b>
+        <span>British and Italian Somaliland united at independence in 1960; central state authority collapsed after 1991, and the country has been rebuilding it since.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#6b7a2e"></span>
+        <span class="era">publishing next</span>
+        <b>Eritrea</b>
+        <span>Italy's first African colony from the 1880s, later federated with and then annexed by Ethiopia, and a thirty-year war that won independence in 1993.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#6fa3b8"></span>
+        <span class="era">publishing next</span>
+        <b>Djibouti</b>
+        <span>French Somaliland at the mouth of the Red Sea, held onto by France through the region's wave of decolonization, independent only in 1977.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#2b2e33"></span>
+        <span class="era">publishing next</span>
+        <b>South Sudan</b>
+        <span>Decades of civil war against Khartoum ended in a 2011 referendum that made it the world's newest country.</span>
+      </a>
+      <a class="country-card" href="#" onclick="return false;">
+        <span class="swatch-strip" style="background:#5a8a6b"></span>
+        <span class="era">publishing next</span>
+        <b>Madagascar</b>
+        <span>An Austronesian-heritage population unlike its African neighbors, the Kingdom of Imerina's unification of the island, and French colonization from 1897.</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About this atlas</h2>
+    <p>This started as a family history project: tracing the flags that flew over the lands our ancestors came from, close enough to paint accurately &mdash; correct colors, correct proportions, correct dates. East Africa joins the atlas as its own hub because its history stands apart from the rest of the project so far: one country here, Ethiopia, was never colonized in any lasting sense, while a Swahili-coast trading civilization linked this region to the Indian Ocean world centuries before the European "Scramble for Africa" arrived.</p>
+    <p>This is a deliberately lighter hub page for now &mdash; a placeholder grid of the eleven lineages rather than the full interactive map built for earlier hubs like Former Yugoslavia or Scandinavia. A later phase will add a real traced map, time slider, and flag-by-flag timeline to this region, matching that fuller template. Colors above are provisional swatches, not final flag specifications.</p>
+  </div>
+
+  <div class="roadmap">
+    <h2>More of the atlas</h2>
+    <p>This hub is one region in a larger set. See the rest of the atlas here:</p>
+    <div class="link-grid">
+      <a class="link-card" href="index.html"><b>Flags Atlas index</b><span>Search every country and hub</span></a>
+    </div>
+  </div>
+
+  <footer>
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are provisional placeholders pending each country's dedicated page.
+  </footer>
+
+</div>
+
+</body></html>
