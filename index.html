@@ -279,6 +279,12 @@
         <b>Central Asia</b>
         <span>Kazakhstan, Uzbekistan, Turkmenistan, Kyrgyzstan, and Tajikistan &mdash; the Silk Road's Samarkand and Bukhara, Genghis Khan's Mongol conquest, Timur's empire, the 19th-century Great Game, Russian and Soviet rule, and independence in 1991. Country pages and the interactive map are planned for a later phase.</span>
       </a>
+      <a class="hub-card" href="central-africa-indian-ocean-hub.html">
+        <span class="swatch-strip" style="background:#003ea6"></span>
+        <span class="meta">Phase 23 &middot; 7 countries &middot; placeholder hub</span>
+        <b>Central Africa &amp; the Indian Ocean</b>
+        <span>Central African Republic, Chad, S&atilde;o Tom&eacute; &amp; Pr&iacute;ncipe, Equatorial Guinea, Comoros, Seychelles, and Mauritius &mdash; a deliberate grab-bag grouped for atlas-coverage completeness: the Bokassa dictatorship, Chad's long civil-conflict history, early sugar-plantation colonies built on enslaved labor, sub-Saharan Africa's only Spanish colony, and Indian Ocean islands settled as plantation economies. Country pages and the interactive map are planned for a later phase.</span>
+      </a>
     </div>
   </div>
 
@@ -436,7 +442,7 @@
 
     grid.innerHTML = matched.map(function (c) {
       var statusHtml = c.ownPage
-        ? '<span class="status">Country</span>'
+        ? ''
         : '<span class="status pending">Hub</span>';
       var subtitle = c.ownPage ? c.region : (c.region + ' &middot; ' + c.hub);
       var crownsHtml = c.crowns.map(function (t) {
