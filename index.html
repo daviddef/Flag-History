@@ -368,7 +368,10 @@
     senegal: '<rect width="100" height="200" fill="#00853f"/><rect x="100" width="100" height="200" fill="#fdef42"/><rect x="200" width="100" height="200" fill="#e31b23"/><path fill="#00853f" d="M150,80 l7,20 21,2 -17,14 6,20 -17,-13 -17,13 6,-20 -17,-14 21,-2 Z"/>',
     mali: '<rect width="100" height="200" fill="#14b53a"/><rect x="100" width="100" height="200" fill="#fcd116"/><rect x="200" width="100" height="200" fill="#ce1126"/>',
     cotedivoire: '<rect width="100" height="200" fill="#f77f00"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#009e60"/>',
-    guinea: '<rect width="100" height="200" fill="#ce1126"/><rect x="100" width="100" height="200" fill="#fcd116"/><rect x="200" width="100" height="200" fill="#009460"/>'
+    guinea: '<rect width="100" height="200" fill="#ce1126"/><rect x="100" width="100" height="200" fill="#fcd116"/><rect x="200" width="100" height="200" fill="#009460"/>',
+    switzerland: '<rect width="300" height="200" fill="#a4302a"/><rect x="127" y="35" width="46" height="130" fill="#f4efe1"/><rect x="85" y="77" width="130" height="46" fill="#f4efe1"/>',
+    cyprus: '<rect width="300" height="200" fill="#f4efe1"/><path d="M95,70 q-14,10 -10,28 q-8,10 2,22 q-4,14 12,18 q6,10 20,6 q10,10 24,2 q16,6 26,-6 q14,2 20,-12 q12,-4 10,-18 q10,-10 2,-22 q4,-14 -10,-20 q-2,-14 -18,-14 q-8,-10 -22,-4 q-12,-8 -24,0 q-14,-4 -22,8 q-14,0 -18,12 Z" fill="#d57800"/><path d="M120,150 q10,20 30,26" stroke="#4a7729" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M180,150 q-10,20 -30,26" stroke="#4a7729" stroke-width="5" fill="none" stroke-linecap="round"/>',
+    malta: '<rect width="150" height="200" fill="#f4efe1"/><rect x="150" width="150" height="200" fill="#a4302a"/><rect x="10" y="10" width="46" height="46" fill="#f4efe1" stroke="#a4302a" stroke-width="5"/>'
   };
   function flagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (FLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -482,7 +485,13 @@
       crowns:["Fragmented Akan/Mande kingdoms","French Ivory Coast","Autonomous republic","Modern republic"],
       alts:["Ivory Coast"] },
     { name:"Guinea", flag:"guinea", ownPage:true, url:"guinea-flags.html", hub:"West Africa", region:"West Africa", color:"#ce1126",
-      crowns:["Imamate of Fouta Djallon","French Guinea","Modern republic"] }
+      crowns:["Imamate of Fouta Djallon","French Guinea","Modern republic"] },
+    { name:"Switzerland", flag:"switzerland", ownPage:true, url:"switzerland-flags.html", hub:"Europe's Independents", region:"Central Europe", color:"#a4302a",
+      crowns:["Old Swiss Confederacy (Empire suzerainty)","Old Swiss Confederacy (independent)","Helvetic Republic","Act of Mediation confederacy","Restored confederacy","Modern federal state"] },
+    { name:"Cyprus", flag:"cyprus", ownPage:true, url:"cyprus-flags.html", hub:"Europe's Independents", region:"Southern Europe", color:"#d57800",
+      crowns:["Byzantine province","Kingdom of Cyprus (Lusignan)","Venetian Cyprus","Ottoman province","British administration","Crown Colony of Cyprus","Modern republic"] },
+    { name:"Malta", flag:"malta", ownPage:true, url:"malta-flags.html", hub:"Europe's Independents", region:"Southern Europe", color:"#a4302a",
+      crowns:["Various outside rule (antiquity–medieval)","Knights Hospitaller","French occupation","British protection","Crown Colony of Malta","Modern state / republic"] }
   ];
 
   var grid = document.getElementById("countryGrid");
