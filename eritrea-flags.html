@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +223,42 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Eritrea, c. 1800&ndash;present, five political entities. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, five eras</h2>
+    <p class="imap-sub">Eritrea's own real border, drawn by Italy in 1890 and traced whole here &mdash; that colonial boundary outlived Italian rule itself and still holds today. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Eritrea has no genuine internal governing split to show.</b> Every era here &mdash; fragmented pre-colonial rule, the Italian colony, the British military administration, the Ethiopian federation and annexation, and the independent state &mdash; governed the whole of Italy's 1890 boundary as one unit. What changes is only who held it.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">before 1890</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="60" y="120">SUDAN</text>
+          <text x="250" y="150">RED SEA</text>
+          <text x="150" y="290">ETHIOPIA</text>
+          <text x="230" y="255">DJIBOUTI</text>
+        </g>
+        <path id="ireg-er" class="ireg-fill" d="M244.09,268.81 L231.95,256.90 L217.35,235.32 L201.60,223.50 L192.42,210.79 L161.51,196.03 L137.16,195.59 L128.59,187.90 L107.77,196.55 L86.21,179.84 L75.12,207.31 L33.78,199.62 L30.00,184.88 L45.29,130.80 L48.80,106.34 L59.98,95.05 L86.14,89.00 L104.11,68.00 L124.73,110.60 L134.51,144.39 L153.98,162.32 L202.46,197.08 L222.19,218.06 L241.43,239.30 L252.54,251.94 L270.00,263.02 L259.29,272.00 L244.09,268.81 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-er" x="140" y="165">ERITREA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Red Sea coastal sultanates &amp; highland peoples</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (johan/world.geo.json, ERI), no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -403,6 +477,105 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { fragmented: "#6b5c4a", colonial: "#7a4a1f", union: "#204b5c", republic: "#1e7a4a" };
+  var INAMES = {
+    fragmented: "Red Sea coastal sultanates &amp; highland peoples", colonial: "Colonial rule (Italy, then Britain)",
+    union: "Federation with / annexation by Ethiopia", republic: "State of Eritrea"
+  };
+  var IFLAGS = {
+    noflag: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    italy: '<rect width="300" height="200" fill="#f4efe1"/><rect width="100" height="200" fill="#1e7a4a"/><rect x="200" width="100" height="200" fill="#a4302a"/><circle cx="150" cy="100" r="26" fill="#a9762f" stroke="#7a4a1f" stroke-width="2"/>',
+    britain: '<rect width="300" height="200" fill="#204b5c"/><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#cf142b" stroke-width="7"/><rect x="62.5" width="25" height="100" fill="#f4efe1"/><rect y="37.5" width="150" height="25" fill="#f4efe1"/><rect x="68.5" width="13" height="100" fill="#cf142b"/><rect y="43.5" width="150" height="13" fill="#cf142b"/>',
+    ethiopia: '<rect width="300" height="66.7" fill="#1e7a4a"/><rect y="66.7" width="300" height="66.6" fill="#f9d616"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><rect x="128" y="76" width="44" height="48" fill="#f9d616" stroke="#a4302a" stroke-width="2"/>',
+    modern: '<polygon points="0,0 300,0 300,60 0,140" fill="#1e7a4a"/><polygon points="0,140 300,60 300,200 0,200" fill="#1a3a6b"/><polygon points="0,0 0,200 150,100" fill="#a4302a"/><circle cx="90" cy="100" r="20" fill="#f9d616"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"before 1890", name:"Red Sea coastal sultanates &amp; highland peoples", t:{ er:IC.fragmented }, flagKeys:{ er:"noflag" },
+      story:"The coast passes through Ottoman and later Egyptian nominal control at ports like Massawa, while the highlands remain tied to the Ethiopian state and lowland peoples live under local sultanates. No unified Eritrean polity exists before the Italian boundary is drawn." },
+    { year:"1890", name:"Italian Eritrea", t:{ er:IC.colonial }, flagKeys:{ er:"italy" },
+      story:"Italy formally proclaims the colony of Eritrea in January 1890, its first colony anywhere in Africa, administered from Asmara. Eritrea later stages Italy's 1935–36 invasion of Ethiopia before British forces end Italian rule in 1941." },
+    { year:"1941", name:"British Military Administration", t:{ er:IC.colonial }, flagKeys:{ er:"britain" },
+      story:"British and Commonwealth forces end Italian rule in the 1941 East African Campaign. Britain administers the territory as a military occupation while its final status is debated internationally, resolved by the UN's 1950 federation decision." },
+    { year:"1952", name:"Federation with, then annexation by, Ethiopia", t:{ er:IC.union }, flagKeys:{ er:"ethiopia" },
+      story:"A UN resolution federates Eritrea with Ethiopia in 1952 under its own parliament and flag. That autonomy erodes through the 1950s; Emperor Haile Selassie annexes Eritrea outright in 1962, triggering a thirty-year war of independence." },
+    { year:"1993–present", name:"State of Eritrea", t:{ er:IC.republic }, flagKeys:{ er:"modern" },
+      story:"The EPLF takes Asmara in May 1991, ending the war; a UN-supervised referendum in April 1993 confirms independence almost unanimously under President Isaias Afwerki. A further border war with Ethiopia (1998–2000) is only fully normalized in 2018." }
+  ];
+
+  var IREGIONS = ["er"];
+  var IREGION_NAMES = { er:"Eritrea" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.er; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
