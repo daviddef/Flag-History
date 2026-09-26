@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +223,43 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Uganda, c. 1700&ndash;present, five political entities. The precolonial section is scoped to the Kingdom of Buganda specifically, since it was the dominant, best-documented precolonial state and the one the later protectorate was built around; other precolonial kingdoms (Bunyoro, Toro, Ankole, Busoga) and stateless northern peoples existed alongside it but are not each given a separate entry. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, four rulers</h2>
+    <p class="imap-sub">Uganda's own real border, traced whole &mdash; another page in this atlas without an internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is one of the countries in the atlas that doesn't split internally.</b> Precolonial Buganda shared the lake shore with Bunyoro, Toro, Ankole, and stateless northern peoples, but this page &mdash; like the timeline above &mdash; is honestly scoped to Buganda as the dominant, best-documented kingdom rather than inventing borders for entities not otherwise covered here. Once the protectorate and later the republic existed, all of modern Uganda's territory was governed as one unit.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">before c. 1700</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="60" y="16">SOUTH SUDAN</text>
+          <text x="270" y="90">KENYA</text>
+          <text x="30" y="140">DR CONGO</text>
+          <text x="170" y="320">TANZANIA</text>
+          <text x="60" y="270">RWANDA</text>
+        </g>
+        <path id="ireg-ug" class="ireg-fill" d="M136.7,295.3 L78.8,294.6 L60.3,301.0 L28.8,317.3 L16.0,311.9 L16.4,272.1 L28.7,251.9 L31.6,209.5 L42.7,185.0 L62.9,157.5 L83.2,143.4 L100.2,124.7 L79.0,117.6 L82.2,55.8 L103.9,41.4 L137.5,53.2 L180.0,40.9 L217.1,41.0 L249.6,16.7 L274.6,53.4 L280.8,79.9 L304.0,140.5 L284.8,178.9 L258.8,213.9 L243.7,235.3 L244.2,291.2 L136.7,295.3 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-ug" x="172" y="168">UGANDA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Early Buganda, Bunyoro &amp; neighboring peoples</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -371,6 +446,105 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = {
+    early: "#5c2a24", buganda: "#a9762f", protectorate: "#204b5c", republic: "#1e7a4a"
+  };
+  var INAMES = {
+    early: "No flag documented (early Buganda, Bunyoro & neighbors)", buganda: "Kingdom of Buganda (precolonial)",
+    protectorate: "Uganda Protectorate", republic: "Republic of Uganda"
+  };
+  var IFLAGS = {
+    early: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    buganda: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#7a4a1f" stroke-width="10"/><circle cx="150" cy="100" r="46" fill="#a9762f"/><path d="M150,66 l9,24 26,3 -19,18 5,26 -21,-13 -21,13 5,-26 -19,-18 26,-3 Z" fill="#f4efe1"/>',
+    protectorate: '<rect width="300" height="200" fill="#204b5c"/><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#cf142b" stroke-width="7"/><rect x="62.5" width="25" height="100" fill="#f4efe1"/><rect y="37.5" width="150" height="25" fill="#f4efe1"/><rect x="68.5" width="13" height="100" fill="#cf142b"/><rect y="43.5" width="150" height="13" fill="#cf142b"/><circle cx="205" cy="100" r="34" fill="#f4efe1" stroke="#7a4a1f" stroke-width="3"/><path d="M205,84 l6,15 16,2 -12,11 4,16 -14,-9 -14,9 4,-16 -12,-11 16,-2 Z" fill="#7a4a1f"/>',
+    republic: '<rect width="300" height="33.3" fill="#050505"/><rect y="33.3" width="300" height="33.3" fill="#f9d616"/><rect y="66.6" width="300" height="33.4" fill="#a4302a"/><rect y="100" width="300" height="33.3" fill="#050505"/><rect y="133.3" width="300" height="33.3" fill="#f9d616"/><rect y="166.6" width="300" height="33.4" fill="#a4302a"/><circle cx="150" cy="100" r="34" fill="#f4efe1" stroke="#050505" stroke-width="2"/><path d="M150,80 l6,16 17,2 -13,11 4,17 -14,-9 -14,9 4,-17 -13,-11 17,-2 Z" fill="#7a4a1f"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"before c. 1700", name:"Early Buganda, Bunyoro & neighboring peoples", t:{ ug:IC.early }, flagKeys:{ ug:"early" },
+      story:"Several early kingdoms take shape around Lake Victoria and the Nile's source, most notably the Bunyoro-Kitara complex from which Buganda, Toro, and other later kingdoms emerge, alongside largely stateless societies in the north. No securely documented flag survives for any of them." },
+    { year:"c. 1700", name:"Kingdom of Buganda (precolonial)", t:{ ug:IC.buganda }, flagKeys:{ ug:"buganda" },
+      story:"Buganda becomes the most powerful and centralized kingdom on Lake Victoria's shores, expanding at the expense of its older rival Bunyoro. Its openness to outside contact makes it the natural hub around which British colonial authority is later built. No single national flag is documented; the Kabaka's own sun-and-star emblem is shown as an informed reconstruction." },
+    { year:"1894", name:"Uganda Protectorate", t:{ ug:IC.protectorate }, flagKeys:{ ug:"protectorate" },
+      story:"Britain declares a protectorate over Buganda in 1894, expanding by treaty and conquest into the wider Uganda Protectorate by 1896&ndash;1902, governing largely through indirect rule via Buganda's existing court while other kingdoms and the stateless north are administered on varying terms. The colonial blue ensign carries the protectorate's crowned-crane badge." },
+    { year:"1962–present", name:"Republic of Uganda", t:{ ug:IC.republic }, flagKeys:{ ug:"republic" },
+      story:"Independence arrives 9 October 1962, initially as a quasi-federal state preserving Buganda's kingdom status before Obote declares a unitary republic in 1966. Through further upheaval, including Idi Amin's 1971&ndash;79 dictatorship, Uganda has flown the same black-yellow-red flag with its crowned crane throughout." }
+  ];
+
+  var IREGIONS = ["ug"];
+  var IREGION_NAMES = { ug:"Uganda" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.ug; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
