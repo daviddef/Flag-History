@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,42 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Syria, antiquity&ndash;present, twelve political entities. No interactive map or internal-region view is included here &mdash; that layer is deferred project-wide to a later phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Twelve eras, one real border</h2>
+    <p class="imap-sub">Syria's own present-day border, traced whole and used retrospectively across every earlier era &mdash; imperial Damascus's own extent, from antiquity to the 2024 transition. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This page doesn't split internally.</b> The French Mandate did carve Syria into several separately-administered states (Damascus, Aleppo, the Alawite territory, Jabal Druze) for part of 1920&ndash;36, but this page's own timeline treats the Mandate as one entry &mdash; so the internal detail is noted here in prose rather than drawn as a formal partition the rest of the timeline doesn't otherwise track.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">antiquity&ndash;636</span>
+        <input type="range" id="iSlider" min="0" max="11" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="330" y="60">TURKEY</text>
+          <text x="330" y="200">IRAQ</text>
+          <text x="80" y="270">JORDAN</text>
+          <text x="60" y="200">LEBANON</text>
+        </g>
+        <path id="ireg-syr" class="ireg-fill" d="M180.20,221.38 L97.75,276.00 L50.85,255.69 L50.04,255.34 L55.75,247.55 L55.11,226.57 L65.44,198.51 L88.39,179.19 L81.51,159.10 L62.57,156.48 L58.64,117.27 L68.95,96.18 L80.22,84.95 L91.49,73.72 L93.77,45.13 L107.55,55.10 L153.90,40.84 L176.30,50.49 L210.94,50.33 L259.38,31.10 L282.07,31.97 L329.96,24.00 L308.38,55.98 L285.34,68.64 L289.30,106.08 L273.40,168.04 L180.20,221.38 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-syr" x="190" y="150">SYRIA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Ancient &amp; Byzantine Syria</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (Syria's present-day extent, used retrospectively) &mdash; no internal partition; see the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -650,6 +723,98 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { none:"#6e6047", caliphate:"#7c6a2e", sultanate1:"#5c4a2e", sultanate2:"#a9762f", ottoman:"#a4302a",
+             mandate:"#2c5f8a", republic:"#007a3d", union:"#c9a13c", baathist:"#7a2a2a", transitional:"#9c8a4a" };
+  var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    umayyad: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#c9b98a" stroke-width="3"/>',
+    abbasid: '<rect width="300" height="200" fill="#000000"/><rect width="300" height="200" fill="none" stroke="#a9762f" stroke-width="3"/>',
+    zengidayyubid: '<rect width="300" height="200" fill="#201d18"/><circle cx="150" cy="100" r="30" fill="none" stroke="#a9762f" stroke-width="4"/>',
+    mamluk: '<rect width="300" height="200" fill="#a9762f"/><path d="M150,58 q-32,10 -38,42 q18,-8 24,6 q-16,6 -8,22 q18,-12 20,8 q2,-20 20,-8 q8,-16 -8,-22 q6,-14 24,-6 q-6,-32 -38,-42 Z" fill="#241f14"/>',
+    ottoman: '<rect width="300" height="200" fill="#a4302a"/><path d="M120,70 A38,38 0 1 0 172,102 A28,28 0 1 1 120,70 Z" fill="#f4efe1"/><path d="M200,84 l5,15 16,0 -13,10 5,15 -13,-9 -13,9 5,-15 -13,-10 16,0 Z" fill="#f4efe1"/>',
+    frenchmandate: '<rect width="100" height="200" fill="#0b3d7a"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#a4302a"/><rect x="0" width="70" height="45" fill="#f4efe1" opacity=".9"/>',
+    indep: '<rect width="300" height="66.7" fill="#007a3d"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#000000"/><g fill="#c8102e"><path d="M100,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/><path d="M150,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/><path d="M200,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/></g>',
+    uar: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#000000"/><g fill="#0b7a3d"><path d="M115,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/><path d="M185,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/></g>',
+    postunion: '<rect width="300" height="66.7" fill="#007a3d"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#000000"/><g fill="#c8102e"><path d="M100,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/><path d="M150,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/><path d="M200,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/></g>',
+    baathist: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#000000"/><g fill="#0b7a3d"><path d="M115,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/><path d="M185,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/></g>',
+    transitional: '<rect width="300" height="66.7" fill="#007a3d"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#000000"/><g fill="#c8102e"><path d="M100,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/><path d="M150,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/><path d="M200,85 l4,12 12,0 -10,8 4,12 -10,-8 -10,8 4,-12 -10,-8 12,0 Z"/></g>'
+  };
+  function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.none + '"></span>No flag documented</span><span><span class="sw" style="background:' + IC.caliphate + '"></span>Caliphate</span><span><span class="sw" style="background:' + IC.sultanate1 + '"></span>Zengid/Ayyubid</span><span><span class="sw" style="background:' + IC.sultanate2 + '"></span>Mamluk</span><span><span class="sw" style="background:' + IC.ottoman + '"></span>Ottoman</span><span><span class="sw" style="background:' + IC.mandate + '"></span>French Mandate</span><span><span class="sw" style="background:' + IC.republic + '"></span>Republic</span><span><span class="sw" style="background:' + IC.union + '"></span>Union with Egypt</span><span><span class="sw" style="background:' + IC.baathist + '"></span>Ba&#x27;athist republic</span><span><span class="sw" style="background:' + IC.transitional + '"></span>Transitional government</span>';
+
+  var ISNAP = [
+    { year:"antiquity&ndash;636", name:"Ancient &amp; Byzantine Syria", fill:IC.none, flagKey:"ancient",
+      story:"Damascus and Aleppo pass through Aramean, Assyrian, Persian, Seleucid, Roman, and Byzantine hands over millennia &mdash; no single flag survives from any pre-Islamic era on this territory." },
+    { year:"636&ndash;750", name:"Umayyad Caliphate (Damascus as imperial capital)", fill:IC.caliphate, flagKey:"umayyad",
+      story:"Muslim armies take Damascus in 634&ndash;36; the Umayyad dynasty makes it the capital of an empire stretching from Iberia to Central Asia, flying a plain white banner as its dynastic color." },
+    { year:"750&ndash;1174", name:"Abbasid suzerainty and local dynasties", fill:IC.caliphate, flagKey:"abbasid",
+      story:"The Abbasid revolution moves the caliphate's capital to Baghdad in 750; Syria becomes a contested province under shifting local dynasties, nominally loyal to a black-bannered Abbasid caliph." },
+    { year:"1174&ndash;1260", name:"Zengid &amp; Ayyubid Damascus", fill:IC.sultanate1, flagKey:"zengidayyubid",
+      story:"Saladin unites Damascus under Ayyubid rule in 1174, launching the campaigns that retake Jerusalem from the Crusaders in 1187; the dynasty rules Syria and Egypt together until the Mongol invasion and Mamluk takeover." },
+    { year:"1260&ndash;1517", name:"Mamluk Sultanate", fill:IC.sultanate2, flagKey:"mamluk",
+      story:"Mamluk sultans ruling from Cairo halt the Mongol advance at Ain Jalut in 1260 and govern Syria as a frontier province for over two and a half centuries, until Ottoman conquest." },
+    { year:"1517&ndash;1918", name:"Ottoman Empire (Damascus and Aleppo eyalets)", fill:IC.ottoman, flagKey:"ottoman",
+      story:"Sultan Selim I conquers Syria in 1516&ndash;17; the region is governed as Ottoman provinces for exactly four centuries, under the standard red Ottoman banner with crescent and star, until the empire's WWI collapse." },
+    { year:"1920&ndash;1946", name:"French Mandate", fill:IC.mandate, flagKey:"frenchmandate",
+      story:"The League of Nations grants France a Mandate over Syria in 1920; for part of this period France divides the territory into separate states for Damascus, Aleppo, the Alawite coast, and Jabal Druze before recentralizing, a real internal fragmentation this map doesn't separately trace." },
+    { year:"1946&ndash;1958", name:"Syrian Republic (independence)", fill:IC.republic, flagKey:"indep",
+      story:"French troops withdraw in April 1946, completing full independence; the new republic adopts a green-white-black tricolor with three red stars, tracing its lineage to the wider Arab Revolt flag." },
+    { year:"1958&ndash;1961", name:"United Arab Republic (union with Egypt)", fill:IC.union, flagKey:"uar",
+      story:"Syria and Egypt merge into the United Arab Republic in 1958 under Gamal Abdel Nasser, adopting a shared red-white-black flag with two green stars; the union collapses in 1961 amid Syrian dissatisfaction with Egyptian dominance." },
+    { year:"1961&ndash;1980", name:"Syrian Arab Republic (post-union)", fill:IC.republic, flagKey:"postunion",
+      story:"Syria restores independent statehood in 1961 and readopts the pre-union green-white-black flag with three red stars, a design that alternates with the UAR-era flag depending on the government of the day through the 1960s and 70s." },
+    { year:"1980&ndash;2024", name:"Ba&#x27;athist Syrian Arab Republic", fill:IC.baathist, flagKey:"baathist",
+      story:"Hafez al-Assad's government readopts the red-white-black, two-green-star flag in 1980, a design his son Bashar al-Assad's government keeps until the regime's fall in December 2024, ending over four decades of Assad-family rule." },
+    { year:"2024&ndash;present", name:"Transitional government", fill:IC.transitional, flagKey:"transitional",
+      story:"Rebel forces topple the Assad government in December 2024; the transitional administration restores the green-white-black, three-red-star independence-era flag as the country's new/old national symbol." }
+  ];
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.innerHTML = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+    document.getElementById("ireg-syr").setAttribute("fill", era.fill);
+    iEraOwners.innerHTML = "<b>" + era.name + "</b>";
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKey) + '<div class="ic-label">Syria</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
