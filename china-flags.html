@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -185,6 +223,43 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the Chinese mainland, from the Qin unification in 221 BCE to the present, ten political periods. Taiwan's political status is disputed: the People's Republic of China (founded 1949, this page's current entry) claims Taiwan as its own territory, while Taiwan has been self-governing under the Republic of China's government since 1949, with its own military, elections, and currency. This page states that dispute as a live, unresolved fact without taking a position on which claim is correct &mdash; see <a href="taiwan-flags.html">Taiwan's own page</a> for the Republic of China's side of the story since 1949. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+
+  <div class="imap-section">
+    <h2>One realm, ten periods</h2>
+    <p class="imap-sub">China&rsquo;s own real border, traced whole &mdash; this page&rsquo;s ten mainland periods (Qin through the People&rsquo;s Republic) are dynastic and regime changes over essentially the same national territory, not a partition into separately governed pieces. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, not a partition map.</b> Genuine internal fragmentations exist in Chinese history &mdash; the Warring States, the Three Kingdoms, the Northern/Southern Song split &mdash; but this page&rsquo;s own timeline doesn&rsquo;t carry those as separate tracked entities; it moves dynasty to dynasty across the same broad territory. So the map traces the whole country rather than inventing a partition the timeline itself doesn&rsquo;t use. The Yuan (Mongol) period is deliberately brief here &mdash; see the linked Mongol Empire page for that empire&rsquo;s own fuller story.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">221 &amp;ndash; 206 BCE</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 290.0 170.6" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="150" y="8">RUSSIA / MONGOLIA</text>
+          <text x="55" y="45">KAZAKHSTAN</text>
+          <text x="60" y="130">INDIA / MYANMAR</text>
+          <text x="255" y="100">PACIFIC OCEAN</text>
+        </g>
+        <path id="ireg-cn" class="ireg-fill" d="M243.8,30.7 L251.1,32.0 L256.2,35.0 L257.9,39.0 L264.3,39.0 L268.0,37.4 L275.0,36.1 L271.1,41.5 L269.7,46.1 L266.8,50.2 L261.7,49.5 L258.0,51.0 L259.2,54.6 L258.6,59.6 L256.4,59.7 L256.4,61.9 L253.7,59.4 L252.0,61.8 L245.4,63.6 L246.1,65.8 L242.4,65.7 L240.4,64.3 L237.5,67.3 L229.4,72.3 L223.5,73.6 L220.4,75.6 L215.8,76.7 L218.0,74.7 L217.2,73.1 L220.5,70.2 L218.3,68.0 L209.8,72.5 L207.2,75.2 L203.0,75.4 L200.9,77.4 L203.1,80.3 L206.6,80.9 L206.7,82.9 L210.1,84.1 L214.8,81.1 L221.3,82.8 L222.0,85.0 L216.0,86.2 L214.0,88.5 L209.9,90.6 L207.7,93.6 L212.3,95.9 L213.9,100.1 L219.4,107.2 L219.3,110.4 L216.7,111.6 L217.7,113.8 L220.2,115.1 L218.5,121.9 L216.1,122.3 L205.6,137.5 L193.9,145.0 L189.1,145.5 L186.5,147.4 L185.1,146.0 L182.7,148.1 L172.3,150.9 L170.8,155.4 L168.5,155.6 L167.4,152.5 L168.4,150.9 L156.4,149.1 L154.4,147.4 L155.1,145.0 L151.2,144.2 L149.1,142.6 L145.5,144.8 L138.0,145.3 L133.6,147.0 L134.2,151.8 L131.9,151.7 L131.4,149.0 L128.3,150.2 L123.3,147.8 L124.6,144.3 L121.9,143.5 L120.9,139.6 L116.4,140.3 L116.9,135.3 L120.9,131.7 L121.0,125.0 L119.1,124.0 L117.7,121.5 L110.7,121.2 L112.1,119.4 L110.1,116.7 L107.1,118.5 L103.5,117.5 L94.8,123.3 L91.4,123.9 L84.2,121.6 L79.2,125.9 L78.8,122.5 L76.2,123.4 L66.5,122.0 L59.7,119.3 L58.3,117.3 L51.7,113.9 L48.3,112.6 L46.5,113.6 L40.6,110.7 L36.5,108.0 L35.3,103.3 L38.3,103.9 L38.5,101.7 L36.8,99.6 L37.2,96.1 L32.6,91.1 L25.7,89.4 L24.4,86.2 L20.5,83.0 L20.0,78.9 L16.1,78.4 L15.0,74.4 L16.2,73.5 L15.6,72.5 L19.7,70.5 L22.6,69.7 L27.1,70.2 L28.7,67.5 L34.1,67.0 L35.6,65.3 L42.3,63.0 L42.6,59.7 L45.5,58.6 L41.7,51.2 L52.2,48.6 L55.3,41.0 L63.7,42.4 L66.0,40.5 L66.2,36.2 L69.8,35.8 L74.7,32.6 L75.8,35.6 L79.3,37.8 L85.4,39.4 L88.3,42.8 L86.7,47.8 L88.2,49.6 L98.9,51.0 L106.7,54.1 L111.1,60.5 L124.5,61.3 L130.1,60.7 L140.6,64.0 L145.7,64.0 L147.6,65.3 L152.5,63.0 L170.7,59.9 L176.7,56.2 L174.7,53.1 L176.9,50.4 L183.6,51.7 L187.8,49.4 L194.3,47.8 L200.4,43.8 L209.9,43.7 L210.4,42.2 L203.1,37.9 L199.9,39.4 L193.3,39.3 L192.2,37.6 L197.2,30.1 L202.3,31.7 L208.3,29.1 L208.3,27.2 L214.4,21.3 L214.4,19.0 L212.1,18.0 L215.6,15.9 L226.5,15.0 L236.5,17.8 L242.2,26.5 L243.8,30.7 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-cn" x="0" y="4">CHINA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (johan/world.geo.json) &mdash; no internal partition, per the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -553,6 +628,121 @@
   </footer>
 
 </div>
+
+
+<script>
+(function () {
+  var IC = { qin:"#241f14", han:"#9c3b28", tang:"#c9a13c", song:"#7c2e1f", yuan:"#4a4238", ming:"#8a1f1f", qing:"#d9b23c", beiyang:"#1e2f96", nationalist:"#12315c", prc:"#de2910" };
+  var INAMES = { qin:"Qin Dynasty", han:"Han Dynasty", tang:"Tang Dynasty", song:"Song Dynasty", yuan:"Yuan Dynasty (Mongol rule)", ming:"Ming Dynasty", qing:"Qing Dynasty", beiyang:"Republic of China (Beiyang government)", nationalist:"Republic of China (Nationalist government, mainland)", prc:"People's Republic of China" };
+  var IFLAGS = {
+    qin: "<rect width=\"300\" height=\"200\" fill=\"#241f14\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#a9762f\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#a9762f\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#a9762f\">FLAG YET</text>",
+    han: "<rect width=\"300\" height=\"200\" fill=\"#9c3b28\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#f4efe1\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#f4efe1\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#f4efe1\">FLAG YET</text>",
+    tang: "<rect width=\"300\" height=\"200\" fill=\"#c9a13c\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#5c2a24\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#5c2a24\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#5c2a24\">FLAG YET</text>",
+    song: "<rect width=\"300\" height=\"200\" fill=\"#a4302a\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#f4efe1\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#f4efe1\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#f4efe1\">FLAG YET</text>",
+    yuan: "<rect width=\"300\" height=\"200\" fill=\"#241f14\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">FLAG YET</text>",
+    ming: "<rect width=\"300\" height=\"200\" fill=\"#8a1f1f\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#ffde00\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#ffde00\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#ffde00\">FLAG YET</text>",
+    qing: "<rect width=\"300\" height=\"200\" fill=\"#ffde00\"/><path d=\"M60,60 q40,-30 90,-15 q50,15 60,50 q10,35 -20,55 q-15,-10 -10,-25 q-25,10 -45,-5 q-25,-18 -15,-40 q-30,5 -60,-20 Z\" fill=\"none\" stroke=\"#1e2f96\" stroke-width=\"6\"/><circle cx=\"230\" cy=\"70\" r=\"7\" fill=\"#de2910\"/>",
+    beiyang: "<rect width=\"300\" height=\"40\" fill=\"#de2910\"/><rect y=\"40\" width=\"300\" height=\"40\" fill=\"#ffde00\"/><rect y=\"80\" width=\"300\" height=\"40\" fill=\"#1e2f96\"/><rect y=\"120\" width=\"300\" height=\"40\" fill=\"#f4efe1\"/><rect y=\"160\" width=\"300\" height=\"40\" fill=\"#241f14\"/>",
+    nationalist: "<rect width=\"300\" height=\"200\" fill=\"#fe0000\"/><rect width=\"130\" height=\"108\" fill=\"#000095\"/><circle cx=\"65\" cy=\"54\" r=\"30\" fill=\"#000095\" stroke=\"#f4efe1\" stroke-width=\"5\"/><circle cx=\"65\" cy=\"54\" r=\"11\" fill=\"#000095\"/><g fill=\"#f4efe1\"><rect x=\"61\" y=\"14\" width=\"8\" height=\"80\" transform=\"rotate(0 65 54)\"/><rect x=\"61\" y=\"14\" width=\"8\" height=\"80\" transform=\"rotate(30 65 54)\"/><rect x=\"61\" y=\"14\" width=\"8\" height=\"80\" transform=\"rotate(60 65 54)\"/><rect x=\"61\" y=\"14\" width=\"8\" height=\"80\" transform=\"rotate(90 65 54)\"/><rect x=\"61\" y=\"14\" width=\"8\" height=\"80\" transform=\"rotate(120 65 54)\"/><rect x=\"61\" y=\"14\" width=\"8\" height=\"80\" transform=\"rotate(150 65 54)\"/></g>",
+    prc: "<rect width=\"300\" height=\"200\" fill=\"#de2910\"/><g fill=\"#ffde00\"><path d=\"M50,35 l8,22 23,1 -18,15 6,22 -19,-13 -19,13 6,-22 -18,-15 23,-1 Z\" transform=\"scale(1.15) translate(-5,-3)\"/><path d=\"M96,24 l3,8 8,0.5 -6,5.5 2,8 -7,-4.5 -7,4.5 2,-8 -6,-5.5 8,-0.5 Z\"/><path d=\"M110,44 l3,8 8,0.5 -6,5.5 2,8 -7,-4.5 -7,4.5 2,-8 -6,-5.5 8,-0.5 Z\"/><path d=\"M108,68 l3,8 8,0.5 -6,5.5 2,8 -7,-4.5 -7,4.5 2,-8 -6,-5.5 8,-0.5 Z\"/><path d=\"M92,82 l3,8 8,0.5 -6,5.5 2,8 -7,-4.5 -7,4.5 2,-8 -6,-5.5 8,-0.5 Z\"/></g>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"221 &ndash; 206 BCE", name:"Qin Dynasty", t:{ cn:IC.qin }, flagKeys:{ cn:"qin" },
+      story:"King Zheng of Qin conquers the last Warring States and proclaims himself Qin Shi Huang, the &ldquo;First Emperor,&rdquo; in 221 BCE &mdash; China&rsquo;s first unified imperial state. No flag exists in this era; Qin ideology favored black, the water element&rsquo;s color, shown here as a reference only." },
+    { year:"206 BCE &ndash; 220 CE", name:"Han Dynasty", t:{ cn:IC.han }, flagKeys:{ cn:"han" },
+      story:"Liu Bang founds the Han after Qin&rsquo;s collapse, ruling roughly four centuries &mdash; long enough that China&rsquo;s majority ethnic group still calls itself Han today. The Silk Road opens under Emperor Wu; regional warlordism ends the dynasty in 220 CE. No flag survives; red, the fire element&rsquo;s color, is an informed reference only." },
+    { year:"618 &ndash; 907", name:"Tang Dynasty", t:{ cn:IC.tang }, flagKeys:{ cn:"tang" },
+      story:"The Li family founds the Tang in 618, presiding over a high point of premodern Chinese civilization &mdash; cosmopolitan Chang&rsquo;an, Tang poetry, and Silk Road trade at its peak. The An Lushan Rebellion weakens it fatally; it collapses in 907. No flag survives from this period; the gold shown is a court-palette reference only." },
+    { year:"960 &ndash; 1279", name:"Song Dynasty", t:{ cn:IC.song }, flagKeys:{ cn:"song" },
+      story:"Zhao Kuangyin reunifies most of China after the Five Dynasties chaos, founding the Song in 960 &mdash; a commercial and technological golden age of movable type, gunpowder, and paper money. The dynasty never fully controls the north, losing it to the Jurchen Jin in 1127, before Kublai Khan&rsquo;s Mongols conquer the remaining Southern Song in 1279. No state flag exists yet; red is a ceremonial-color reference only." },
+    { year:"1271 &ndash; 1368", name:"Yuan Dynasty (Mongol rule)", t:{ cn:IC.yuan }, flagKeys:{ cn:"yuan" },
+      story:"Kublai Khan, grandson of Genghis Khan, completes the conquest of Song China and proclaims the Yuan in 1271, ruling China as part of the wider, fractured Mongol Empire. Ming rebellion drives the Mongol court back to the steppe in 1368. Kept brief here on purpose &mdash; the Mongol Empire&rsquo;s own banners are covered on this atlas&rsquo;s dedicated Mongol Empire page." },
+    { year:"1368 &ndash; 1644", name:"Ming Dynasty", t:{ cn:IC.ming }, flagKeys:{ cn:"ming" },
+      story:"Zhu Yuanzhang, a former peasant and monk, drives out the Mongol Yuan and founds the Ming in 1368, restoring native Han rule. The Ming build the Forbidden City and send Zheng He&rsquo;s treasure fleets across the Indian Ocean, before falling to peasant rebellion and the invading Manchu in 1644. No flag exists yet; red-and-gold is the dynasty&rsquo;s own palette, shown as reference only." },
+    { year:"1644 &ndash; 1912", name:"Qing Dynasty", t:{ cn:IC.qing }, flagKeys:{ cn:"qing" },
+      story:"The Manchu-led Qing conquer Beijing in 1644 and rule for nearly 270 years, China&rsquo;s last imperial dynasty. Facing Western and Japanese naval powers that all flew national flags, the court adopts the Yellow Dragon banner for its navy in the 1860s&ndash;70s, formalized as the empire&rsquo;s first official national flag in 1889. The dynasty falls with the 1911 Xinhai Revolution and Puyi&rsquo;s 1912 abdication." },
+    { year:"1912 &ndash; 1928", name:"Republic of China (Beiyang government)", t:{ cn:IC.beiyang }, flagKeys:{ cn:"beiyang" },
+      story:"The Xinhai Revolution topples the last Qing emperor, six-year-old Puyi, who abdicates in February 1912, ending over two thousand years of imperial rule. The nominally unified republic runs in practice through competing Beiyang warlord factions until the Kuomintang&rsquo;s Northern Expedition in 1928. Five stripes stand for the &ldquo;five races&rdquo; the republic claimed to unite: Han, Manchu, Mongol, Hui, and Tibetan." },
+    { year:"1928 &ndash; 1949", name:"Republic of China (Nationalist government, mainland)", t:{ cn:IC.nationalist }, flagKeys:{ cn:"nationalist" },
+      story:"Chiang Kai-shek&rsquo;s Nationalist Kuomintang completes the Northern Expedition in 1928 and adopts its own party banner &mdash; Blue Sky, White Sun, and a Wholly Red Earth &mdash; as the national flag. A brutal civil war against the Communist Party runs almost continuously from 1927, interrupted by Japan&rsquo;s full invasion of 1937&ndash;45, before the Nationalists lose the mainland in 1949 and relocate to Taiwan, where this same flag continues today." },
+    { year:"1949 &ndash; present", name:"People's Republic of China", t:{ cn:IC.prc }, flagKeys:{ cn:"prc" },
+      story:"The Chinese Communist Party, led by Mao Zedong, wins the civil war and proclaims the People&rsquo;s Republic in Beijing on 1 October 1949, while the defeated Nationalists relocate to Taiwan. The PRC claims Taiwan as its own territory, a claim Taiwan&rsquo;s government disputes &mdash; an unresolved, live political question, covered from Taiwan&rsquo;s side on its own page. The five-star flag: one large star for Communist Party leadership, four smaller stars for the social classes the party claimed to unite." }
+  ];
+
+  var IREGIONS = ["cn"];
+  var IREGION_NAMES = { cn:"China" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) { lbl2.setAttribute("fill", tcol); lbl2.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.cn; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
