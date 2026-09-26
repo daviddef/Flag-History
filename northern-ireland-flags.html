@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +223,40 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the six counties that became Northern Ireland in 1921 (historically part of the province of Ulster, though Ulster itself has nine counties), c. 1177&ndash;present, five political entities. Before 1921 this territory's flag history is identical to the rest of Gaelic Ireland/the Kingdom of Ireland/the United Kingdom of Great Britain and Ireland &mdash; see the Ireland page for the fuller island-wide account; entries here are written specifically from Ulster/Northern Ireland's own vantage point. No internal governing split exists within Northern Ireland's own modern borders at any point covered here, so this page carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, no internal split</h2>
+    <p class="imap-sub">Northern Ireland's own real border, traced whole &mdash; there is no genuinely separate internal region to carve out here; what changes, era to era, is which flag flew as the official state or governmental banner over the whole territory. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This page carries no internal-partition map by design.</b> Northern Ireland's six counties have never been divided into two separately-governed pieces the way, say, Royal and Ottoman Hungary were &mdash; the political contest here has always been over which flag represents the whole territory, not over which government controls which slice of it.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1177</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 220 165" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="110" y="155">REPUBLIC OF IRELAND</text>
+          <text x="205" y="95">GREAT BRITAIN &rarr;</text>
+        </g>
+        <path id="ireg-ni" class="ireg-fill" d="M201.5,78.7 L150.6,144.0 L78.8,124.4 L20.0,125.7 L39.6,74.8 L20.0,23.9 L99.6,20.0 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-ni" x="115" y="80">NORTHERN IRELAND</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Gaelic and Plantation Ulster</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (simplified from public coastal-vertex data), no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -422,6 +494,104 @@
 </div>
 
 <script>
+(function () {
+  var IC = { lordship:"#1e3f6b", union1:"#00247d", union2:"#00247d", stormont:"#9c3b28", union3:"#00247d" };
+  var INAMES = {
+    lordship:"Gaelic and Plantation Ulster (Lordship / Kingdom of Ireland)",
+    union1:"Ulster (United Kingdom of Great Britain and Ireland)",
+    union2:"Northern Ireland (created by partition)",
+    stormont:"Northern Ireland (Stormont government flag)",
+    union3:"Northern Ireland (direct rule to devolution)"
+  };
+  var IFLAGS = {
+    lordship: '<rect width="300" height="200" fill="#1e3f6b"/><path d="M118,152 Q106,58 170,48 Q224,42 217,90 Q212,58 176,64 Q138,71 144,152 Z" fill="#c9a13c"/><path d="M151,72 L151,140 M163,66 L163,142 M175,64 L175,144 M187,63 L187,146" stroke="#1e3f6b" stroke-width="2.5"/><path d="M95,140 l6,12 13,1 -10,9 3,13 -12,-6 -12,6 3,-13 -10,-9 13,-1 Z" fill="#9c3b28"/>',
+    union: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/>',
+    stormont: '<rect width="300" height="200" fill="#f4efe1"/><rect x="125" width="50" height="200" fill="#9c3b28"/><rect y="75" width="300" height="50" fill="#9c3b28"/><polygon points="150,60 168,96 208,100 178,126 188,166 150,144 112,166 122,126 92,100 132,96" fill="#f4efe1" stroke="#9c3b28" stroke-width="3"/><path d="M138,88 h24 l-6,10 h6 l-12,26 -12,-26 h6 Z" fill="#9c3b28"/><path d="M110,55 c22,-14 58,-14 80,0 l-8,10 c-18,-10 -46,-10 -64,0 Z" fill="#f9d616" stroke="#9c3b28" stroke-width="2"/>'
+  };
+  var IFLAGKEY = { lordship:"lordship", union1:"union", union2:"union", stormont:"stormont", union3:"union" };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1177 – 1801", name:INAMES.lordship, t:{ ni:IC.lordship }, flagKeys:{ ni:IFLAGKEY.lordship },
+      story:"John de Courcy's 1177 invasion begins Anglo-Norman inroads, but Ulster stays the most thoroughly Gaelic part of Ireland under the O'Neill and O'Donnell dynasties until the Nine Years' War ends in 1603 and the 1606–10 Ulster Plantation resettles the land with Protestant tenants from Britain — the demographic root of everything that follows. Throughout, Ulster is simply part of the Lordship (from 1177), then Kingdom (from 1541), of Ireland; no separate Ulster flag existed under the crown." },
+    { year:"1801", name:INAMES.union1, t:{ ni:IC.union1 }, flagKeys:{ ni:IFLAGKEY.union1 },
+      story:"The Act of Union, in force from 1 January 1801, merges the Kingdom of Ireland into the United Kingdom of Great Britain and Ireland. Ulster industrializes heavily around Belfast while growing nationalist Home Rule demands from the 1880s meet fierce unionist resistance, culminating in the 1912 Ulster Covenant. The 1801 Union Flag flies over the whole of Ireland, Ulster included." },
+    { year:"1921", name:INAMES.union2, t:{ ni:IC.union2 }, flagKeys:{ ni:IFLAGKEY.union2 },
+      story:"The Government of Ireland Act 1920 partitions Ireland; Northern Ireland's Parliament opens at Belfast City Hall in June 1921 and exercises its right under the Anglo-Irish Treaty to opt out of the emerging Irish Free State within the month. Only the Union Flag flies officially — no separate Ulster Banner exists yet." },
+    { year:"1953", name:INAMES.stormont, t:{ ni:IC.stormont }, flagKeys:{ ni:IFLAGKEY.stormont },
+      story:"For Elizabeth II's 1953 coronation, the Governor of Northern Ireland is granted a new banner derived from the Stormont government's own coat of arms: St George's Cross charged with a star bearing the Red Hand of Ulster, topped with the Crown of St Edward. It is the devolved government's own flag, never Northern Ireland's national flag outright, and flies only until Stormont is prorogued in 1972." },
+    { year:"1972–present", name:INAMES.union3, t:{ ni:IC.union3 }, flagKeys:{ ni:IFLAGKEY.union3 },
+      story:"Escalating violence in the Troubles leads to direct rule from Westminster from March 1972; devolved government returns only intermittently, most durably after the 1998 Good Friday Agreement. With the Ulster Banner's official status gone, the Union Flag remains Northern Ireland's only officially flown state flag — it has no single national flag of its own recognized in law today, and display remains genuinely contested." }
+  ];
+
+  var IREGIONS = ["ni"];
+  var IREGION_NAMES = { ni:"Northern Ireland" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    iEraOwners.innerHTML = "<b>" + era.name + "</b>: whole territory";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
