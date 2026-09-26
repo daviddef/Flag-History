@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 320px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,43 @@
   <p class="lede">The 1889 union also coincides with the large-scale arrival of Indian indentured laborers &mdash; recruited from 1845 onward to work the sugar estates after emancipation &mdash; whose descendants permanently reshaped the islands' demographics and remain a defining, distinctive feature of this country's history within the wider Caribbean.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Trinidad and Tobago, 1498&ndash;present, four flags. No interactive map here &mdash; Trinidad and Tobago is not yet traced in the Caribbean hub's regional map, and this page instead follows the Sweden-style plain timeline format. Tobago's own colonial history flipped hands so many times before 1814 that inventing precise sub-dates for every change would be dishonest; this page instead uses one bridging entry that explains the real messiness in prose rather than fabricating false precision. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Trinidad and Tobago, 1498&ndash;present, four flags. Tobago's own colonial history flipped hands so many times before 1814 that inventing precise sub-dates for every change would be dishonest; this page instead uses one bridging entry that explains the real messiness in prose rather than fabricating false precision. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Two islands, one union in 1889</h2>
+    <p class="imap-sub">Trinidad and Tobago's own real borders, split into the two islands that were separately colonized and separately administered until Britain's 1889 union &mdash; the two islands are literally two separate landmasses, so this is the most natural split in the whole atlas. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Tobago stayed a separate colony for 17 years after Trinidad had already settled.</b> Trinidad became British for good in 1797; Tobago, after roughly thirty changes of hands among Dutch, French, Courlander, and British claimants, didn't finally settle as British until 1814 &mdash; and even then the two islands were governed as separate colonies for another 75 years. The border here only dissolves in 1889, and never comes back.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1962&ndash;present</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="270" y="10">CARIBBEAN SEA</text>
+          <text x="30" y="275">VENEZUELA</text>
+        </g>
+        <path id="ireg-trinidad" class="ireg-fill" d="M47.0,142.4 L49.7,144.1 L45.3,144.3 L47.8,138.7 L51.7,142.6 L47.0,142.4 Z M59.7,138.5 L61.8,137.7 L62.4,141.6 L56.9,142.6 L59.7,138.5 Z M54.0,138.7 L53.8,141.6 L51.9,137.7 L54.0,138.7 Z M189.3,204.7 L191.2,209.9 L196.9,208.4 L193.2,210.5 L190.8,217.1 L189.8,232.9 L192.7,247.2 L186.4,244.5 L178.6,252.0 L159.7,259.7 L137.3,257.4 L117.4,260.5 L81.9,259.7 L71.5,263.2 L58.8,257.2 L42.5,259.5 L37.5,257.2 L20.3,265.5 L14.0,264.4 L18.0,257.0 L32.2,253.4 L33.7,248.0 L58.0,241.8 L57.8,237.1 L64.5,236.8 L69.6,233.1 L70.1,226.3 L90.1,229.2 L99.5,224.0 L103.9,216.3 L100.9,211.1 L103.1,209.9 L102.0,204.5 L96.9,201.0 L99.0,200.7 L96.9,200.5 L95.6,193.7 L97.5,193.9 L95.6,192.9 L101.1,180.2 L101.4,164.6 L95.2,153.4 L96.1,150.1 L88.5,147.2 L87.6,143.9 L75.8,140.4 L70.9,145.5 L70.3,142.4 L64.1,142.4 L63.3,136.4 L74.3,129.6 L86.6,130.0 L93.7,126.9 L98.6,128.7 L100.5,124.0 L103.7,126.7 L106.6,124.2 L108.8,127.7 L111.9,122.3 L115.7,123.4 L121.2,117.1 L150.8,120.6 L163.3,115.5 L181.1,114.0 L183.0,111.7 L207.7,112.8 L193.2,135.4 L183.4,141.4 L188.1,172.7 L182.8,174.4 L182.2,178.8 L189.3,204.7 Z"/>
+        <path id="ireg-tobago" class="ireg-fill" d="M286.0,22.5 L283.7,24.0 L283.9,21.5 L286.0,22.5 Z M236.9,35.4 L248.6,25.2 L260.4,22.7 L269.3,17.5 L273.1,20.2 L275.9,18.4 L274.6,15.5 L279.6,14.0 L281.4,15.9 L278.8,23.1 L280.3,29.2 L278.4,31.8 L275.0,29.8 L275.0,33.9 L269.7,33.3 L267.4,37.9 L257.2,44.5 L248.6,43.7 L244.1,48.4 L239.9,45.9 L231.2,54.9 L219.8,52.8 L220.9,47.6 L225.1,48.7 L231.9,38.1 L236.9,35.4 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-trinidad" x="110" y="195" style="font-size:11px">TRINIDAD</text>
+          <text class="ireg-label" id="ilbl-tobago" x="253" y="62" style="font-size:9px">TOBAGO</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Independent Trinidad and Tobago</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced borders (1km-resolution coastline) &mdash; Trinidad and Tobago are genuinely two separate islands, shown at true relative scale and position.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -367,11 +441,114 @@
   </div>
 
   <footer>
-    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. No map on this page &mdash; Trinidad and Tobago is not yet traced in the Caribbean hub's interactive regional map.
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches are informed reconstructions, not official specifications. Map is schematic and not surveyed.
   </footer>
 
 </div>
 
+<script>
+(function () {
+  var IC = {
+    spanish: "#c9432c", contested: "#8a6a4a", british_t: "#2c5f8a", british_o: "#3a7db0",
+    united: "#1b3a76", independent: "#c1272d"
+  };
+  var INAMES = {
+    spanish: "Spanish Trinidad", contested: "Contested among European powers (Tobago)",
+    british_t: "British colony of Trinidad (separate)", british_o: "British colony of Tobago (separate)",
+    united: "United Crown Colony of Trinidad and Tobago", independent: "Independent Trinidad and Tobago"
+  };
+  var IFLAGS = {
+    spanish: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c1272d" stroke-width="26"/>',
+    contested: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
+    british_t: '<rect width="300" height="200" fill="#1b3a76"/><rect width="150" height="100" fill="#1b3a76"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="12"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c1272d" stroke-width="5"/><rect y="42" width="150" height="16" fill="#f4efe1"/><rect x="67" width="16" height="100" fill="#f4efe1"/><rect y="46" width="150" height="8" fill="#c1272d"/><rect x="71" width="8" height="100" fill="#c1272d"/>',
+    british_o: '<rect width="300" height="200" fill="#1b3a76"/><rect width="150" height="100" fill="#1b3a76"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="12"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c1272d" stroke-width="5"/><rect y="42" width="150" height="16" fill="#f4efe1"/><rect x="67" width="16" height="100" fill="#f4efe1"/><rect y="46" width="150" height="8" fill="#c1272d"/><rect x="71" width="8" height="100" fill="#c1272d"/>',
+    united: '<rect width="300" height="200" fill="#1b3a76"/><rect width="150" height="100" fill="#1b3a76"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="12"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c1272d" stroke-width="5"/><rect y="42" width="150" height="16" fill="#f4efe1"/><rect x="67" width="16" height="100" fill="#f4efe1"/><rect y="46" width="150" height="8" fill="#c1272d"/><rect x="71" width="8" height="100" fill="#c1272d"/><circle cx="220" cy="140" r="30" fill="#f4efe1" stroke="#8a6a1f" stroke-width="2"/><path d="M220,118 l6,16 17,2 -13,11 4,17 -14,-9 -14,9 4,-17 -13,-11 17,-2 Z" fill="#1f7a7a"/>',
+    independent: '<rect width="300" height="200" fill="#c1272d"/><path d="M0,0 L300,200" stroke="#f4efe1" stroke-width="46"/><path d="M0,0 L300,200" stroke="#111111" stroke-width="30"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"1498–1797", name:"Spanish Trinidad / contested Tobago", t:{ trinidad:IC.spanish, tobago:IC.contested }, flagKeys:{ trinidad:"spanish", tobago:"contested" },
+      story:"Columbus sights Trinidad in 1498; Spain claims it but leaves it a chronically neglected, thinly populated colonial backwater for three centuries. Tobago, meanwhile, is claimed and fought over by Dutch, French, Courlander, and other powers from as early as the 1620s, with no settled single ruler for most of this same period." },
+    { year:"1797–1814", name:"Trinidad turns British; Tobago still contested", t:{ trinidad:IC.british_t, tobago:IC.contested }, flagKeys:{ trinidad:"british_t", tobago:"contested" },
+      story:"A British naval force captures Trinidad from Spain in 1797, formalized by the 1802 Treaty of Amiens &mdash; it stays a separate British colony from then on. Tobago is still, at this point, unsettled among rival European claimants; its own fate isn't fixed for another seventeen years." },
+    { year:"1814–1889", name:"Two separate British colonies", t:{ trinidad:IC.british_t, tobago:IC.british_o }, flagKeys:{ trinidad:"british_t", tobago:"british_o" },
+      story:"The 1814 Treaty of Paris, closing the Napoleonic Wars, finally settles Tobago as British for good after roughly thirty changes of hands. Both islands are now British, but still governed as two entirely separate colonies for another 75 years." },
+    { year:"1889–1962", name:"United Crown Colony of Trinidad and Tobago", t:{ trinidad:IC.united, tobago:IC.united }, flagKeys:{ trinidad:"united", tobago:"united" },
+      story:"In 1889 Britain administratively unites its two separate colonies into a single Crown Colony, ending decades of parallel colonial governance &mdash; and the border between them dissolves for good. This period also sees the continuing large-scale arrival of Indian indentured laborers, recruited from 1845 onward." },
+    { year:"1962–present", name:"Independent Trinidad and Tobago", t:{ trinidad:IC.independent, tobago:IC.independent }, flagKeys:{ trinidad:"independent", tobago:"independent" },
+      story:"Independence is achieved on 31 August 1962. The country becomes a republic in 1976, but this same red-black-white flag has flown continuously through both moments, over both islands as one sovereign state." }
+  ];
+
+  var IREGIONS = ["trinidad","tobago"];
+  var IREGION_NAMES = { trinidad:"Trinidad", tobago:"Tobago" };
+  var IADJ = [];
+
+  function iGroupsFor(t) { return IREGIONS.map(function (r) { return [r]; }); }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
