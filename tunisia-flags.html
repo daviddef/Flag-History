@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 280px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,42 @@
   <p class="lede">The Tunisian Revolution that began in December 2010, sparked by the self-immolation of street vendor Mohamed Bouazizi and culminating in President Ben Ali's flight in January 2011, is widely credited as the spark that set off the broader Arab Spring across the region.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Tunisia, c. 800&ndash;present, five political entities. No interactive map on this page &mdash; that layer is deferred project-wide to a future phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Tunisia, c. 800&ndash;present, five political entities. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, five eras</h2>
+    <p class="imap-sub">Tunisia's own real border, traced whole &mdash; a single continuous territory since well before this page's own timeline begins, with no genuine internal region to carve out. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>No internal split here by design.</b> Every dynasty, regency, protectorate, and republic on this page governed the same Tunisian territory as a single whole; even the Beylik's own gradual autonomy from Istanbul, and the French protectorate's real authority behind the bey's nominal rule, are changes of who governed, not changes to the shape of the country itself.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1956&ndash;present</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 145 280" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="30" y="22">ALGERIA</text>
+          <text x="110" y="22">MEDITERRANEAN</text>
+          <text x="70" y="260">LIBYA</text>
+        </g>
+        <path id="ireg-tn" class="ireg-fill" d="M129.8,165.1 L126.3,169.9 L127.8,170.4 L127.5,176.6 L126.1,176.6 L129.8,190.2 L114.5,198.4 L105.6,206.5 L103.1,206.1 L102.7,209.9 L98.4,215.0 L94.0,215.0 L88.5,225.2 L93.3,243.0 L91.1,249.1 L81.6,262.3 L78.0,262.2 L72.3,266.0 L58.2,202.3 L37.9,187.9 L37.0,176.9 L31.0,167.3 L22.9,164.3 L14.1,143.2 L14.3,133.9 L17.8,129.5 L22.4,128.9 L23.6,122.3 L34.1,116.3 L35.7,113.7 L34.6,112.5 L37.0,111.0 L34.7,104.5 L36.7,103.5 L41.4,93.5 L36.6,90.9 L38.7,84.9 L37.9,78.6 L35.3,76.5 L34.9,71.2 L39.4,53.0 L32.1,50.1 L40.6,45.9 L41.7,43.2 L40.0,41.0 L47.1,38.6 L45.6,37.8 L46.1,34.7 L51.7,33.5 L62.6,24.4 L77.6,20.7 L81.0,21.1 L81.9,23.1 L78.6,24.5 L79.7,27.8 L82.8,26.8 L83.0,24.9 L79.9,24.9 L81.9,23.2 L93.0,26.4 L88.9,28.0 L91.2,28.8 L91.3,27.4 L90.8,33.1 L95.1,37.3 L90.6,39.8 L93.8,39.4 L93.1,40.8 L96.0,42.4 L99.4,42.1 L101.8,37.4 L107.0,35.8 L111.0,31.0 L115.8,30.9 L117.0,38.5 L110.7,45.2 L108.2,51.5 L100.6,54.3 L97.3,62.5 L100.3,68.1 L98.0,67.0 L103.2,73.5 L108.9,74.5 L108.8,77.7 L115.1,80.2 L114.2,82.1 L116.0,84.2 L114.7,90.0 L118.4,93.8 L115.2,96.4 L114.7,100.3 L111.5,102.9 L111.3,106.4 L106.0,113.7 L88.5,125.3 L85.6,132.2 L88.2,139.9 L98.8,148.4 L97.7,149.3 L105.8,146.4 L104.5,152.3 L107.4,154.5 L111.5,152.5 L111.6,148.2 L113.5,148.4 L117.0,152.2 L117.6,157.4 L116.4,158.4 L122.1,161.2 L117.4,159.9 L116.5,161.0 L118.8,163.7 L129.8,165.1 Z M106.3,145.9 L105.9,144.4 L106.5,143.2 L106.6,140.0 L107.8,139.6 L111.7,140.6 L111.8,140.3 L111.6,139.9 L111.7,139.9 L110.7,139.2 L111.7,139.9 L112.0,140.1 L112.0,140.8 L112.3,140.4 L114.0,142.0 L115.3,142.3 L115.4,143.8 L113.6,144.8 L113.2,146.8 L112.7,147.3 L112.7,145.7 L112.4,145.8 L111.3,147.4 L111.5,148.1 L111.2,147.3 L110.6,147.7 L110.4,149.0 L109.9,148.2 L110.1,146.9 L108.8,145.4 L107.7,145.9 L107.6,146.7 L106.8,146.7 L106.3,145.9 Z M121.9,108.6 L122.1,109.4 L121.4,109.4 L122.4,110.6 L122.3,111.2 L120.8,111.3 L120.8,111.7 L117.2,113.4 L117.5,112.1 L118.9,110.7 L118.5,110.0 L119.3,110.7 L120.1,110.6 L120.3,109.8 L119.9,109.2 L120.8,109.0 L120.7,107.6 L121.7,108.6 L121.6,108.0 L122.8,108.6 L121.9,108.6 Z M114.3,114.5 L112.7,113.6 L113.5,113.1 L117.2,113.4 L115.0,115.1 L114.3,114.5 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-tn" x="75" y="140" style="font-size:9px">TUNISIA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Republic of Tunisia</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (1km-resolution coastline), no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -395,6 +468,99 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = {
+    dynasties: "#6b5c4a", ottoman: "#c9a13c", beylik: "#c9a13c", protectorate: "#204b5c", republic: "#a9762f"
+  };
+  var INAMES = {
+    dynasties: "Early Islamic dynasties of Ifriqiya", ottoman: "Beylik of Tunis (early Ottoman regency)",
+    beylik: "Beylik of Tunis (autonomous)", protectorate: "French Protectorate of Tunisia", republic: "Republic of Tunisia"
+  };
+  var IFLAGS = {
+    dynasties: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
+    ottoman: '<rect width="300" height="200" fill="#a4302a"/><g fill="#f4efe1"><path d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/><path d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/></g>',
+    beylik: '<rect width="300" height="200" fill="#e70013"/><circle cx="150" cy="100" r="54" fill="#f4efe1"/><path fill="#e70013" d="M150,64 a36,36 0 1,0 0,72 a29,29 0 1,1 0,-72 Z"/><path fill="#e70013" d="M150,62 l6.4,19.7 20.7,0 -16.7,12.2 6.4,19.7 -16.8,-12.2 -16.8,12.2 6.4,-19.7 -16.7,-12.2 20.7,0 Z"/>',
+    protectorate: '<rect width="300" height="200" fill="#e70013"/><circle cx="150" cy="100" r="54" fill="#f4efe1"/><path fill="#e70013" d="M150,64 a36,36 0 1,0 0,72 a29,29 0 1,1 0,-72 Z"/><path fill="#e70013" d="M150,62 l6.4,19.7 20.7,0 -16.7,12.2 6.4,19.7 -16.8,-12.2 -16.8,12.2 6.4,-19.7 -16.7,-12.2 20.7,0 Z"/><rect width="300" height="200" fill="none" stroke="#1a2f6b" stroke-width="10" stroke-opacity="0.35"/>',
+    republic: '<rect width="300" height="200" fill="#e70013"/><circle cx="150" cy="100" r="54" fill="#f4efe1"/><path fill="#e70013" d="M150,64 a36,36 0 1,0 0,72 a29,29 0 1,1 0,-72 Z"/><path fill="#e70013" d="M150,62 l6.4,19.7 20.7,0 -16.7,12.2 6.4,19.7 -16.8,-12.2 -16.8,12.2 6.4,-19.7 -16.7,-12.2 20.7,0 Z"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 800–1574", name:"Early Islamic dynasties of Ifriqiya", t:{ tn:IC.dynasties }, flagKeys:{ tn:"dynasties" },
+      story:"The Aghlabid dynasty, ruling from Kairouan from 800, is followed by Fatimid rule, the Zirids, brief Almohad unification, and finally the Hafsid dynasty from 1229. No single flag can honestly represent nearly eight centuries and several distinct ruling dynasties; heraldic banners of this era are poorly attested." },
+    { year:"1574–1831", name:"Beylik of Tunis (early Ottoman regency)", t:{ tn:IC.ottoman }, flagKeys:{ tn:"ottoman" },
+      story:"Ottoman forces finally secure Tunis in 1574 after decades of contest with Habsburg Spain, ending the Hafsid dynasty and installing an Ottoman-appointed bey. The standard Ottoman red field with white crescent and star flies across the regency until the 1831 reform." },
+    { year:"1831–1881", name:"Beylik of Tunis (autonomous)", t:{ tn:IC.beylik }, flagKeys:{ tn:"beylik" },
+      story:"Husain II Bey adopts a distinct Tunisian flag in 1831, a mark of the beylik's growing autonomy from Istanbul even as it remains under nominal Ottoman suzerainty. Tunisia is the first Arab and Muslim state to formally abolish slavery, in 1846." },
+    { year:"1881–1956", name:"French Protectorate of Tunisia", t:{ tn:IC.protectorate }, flagKeys:{ tn:"protectorate" },
+      story:"France invades in 1881 and imposes the Treaty of Bardo, establishing a protectorate that leaves the Husainid bey nominally in place while French officials hold real authority. The bey's own 1831 flag continues to fly as Tunisia's national banner throughout." },
+    { year:"1956–present", name:"Republic of Tunisia", t:{ tn:IC.republic }, flagKeys:{ tn:"republic" },
+      story:"Tunisia gains independence from France in March 1956, and the monarchy is abolished a year later under Habib Bourguiba. More than five decades later, the 2010–11 Tunisian Revolution makes Tunisia the birthplace of the Arab Spring. The same 1831 flag flies unchanged through all of it." }
+  ];
+
+  var IREGIONS = ["tn"];
+  var IREGION_NAMES = { tn:"Tunisia" };
+  var IADJ = [];
+
+  function iGroupsFor(t) { return [["tn"]]; }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+    });
+
+    iEraOwners.innerHTML = "<b>" + INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t.tn; })[0]] + "</b>";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
