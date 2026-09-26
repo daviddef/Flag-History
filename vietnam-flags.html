@@ -18,21 +18,21 @@
   :root {
     --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
     --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
-    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c; --sea: #b9d3da;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
       --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
-      --muted: #9a9280; --hair: #33393f;
+      --muted: #9a9280; --hair: #33393f; --sea: #17303a;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
     --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
-    --muted: #9a9280; --hair: #33393f;
+    --muted: #9a9280; --hair: #33393f; --sea: #17303a;
     color-scheme: dark;
   }
   * { box-sizing: border-box; }
@@ -175,6 +175,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 260px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -186,7 +224,41 @@
   <p class="lede">Vietnam's modern flag &mdash; a gold star on red &mdash; was first raised by Ho Chi Minh's independence movement in 1945 and became the flag of the entire reunified country in 1976, after three decades in which it represented only the northern half.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Vietnam, before 111 BCE&ndash;present, seven political entries. The 1954&ndash;1975 partition into North and South Vietnam, and the 1945&ndash;1954 period of contested sovereignty against reasserted French colonial rule, are each shown as single dual-flag entries rather than invented sub-periods, since no clean date split exists for either genuinely contested span. This page carries no internal-partition map; that phase is deferred project-wide. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Vietnam, before 111 BCE&ndash;present, seven political entries. The 1954&ndash;1975 partition into North and South Vietnam, and the 1945&ndash;1954 period of contested sovereignty against reasserted French colonial rule, are each shown as single dual-flag entries rather than invented sub-periods, since no clean date split exists for either genuinely contested span. The map below does carry a real internal split for the one era that genuinely had one &mdash; the 17th-parallel partition, 1954&ndash;1975/76. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>The 17th parallel, 1954&ndash;1975/76</h2>
+    <p class="imap-sub">Vietnam's own real coastline, split along the one internal line this atlas can document with confidence &mdash; the Geneva Accords' partition at the 17th parallel, which cut the country into North and South for two decades. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This is the atlas's clearest case for a genuine internal split.</b> Unlike Venezuela or North Macedonia, Vietnam's 1954&ndash;1975 division was a real, internationally recognized border with its own demilitarized zone, its own two governments, its own two flags, and a war fought explicitly over reunifying it. The line below only solidifies for that one span &mdash; it dissolves before 1954 (no partition yet existed) and again after 1975&ndash;76 (the North's final offensive erased it for good).
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">before 938</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 260 420" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="260" height="420" fill="var(--sea)"/>
+        <path id="ireg-north" class="ireg-fill" d="M185.33,70.29 L153.18,91.72 L133.10,115.39 L127.81,132.78 L146.23,159.19 L163.54,184.34 L142.53,184.34 L134.16,172.18 L114.15,142.58 L85.29,127.59 L92.20,118.59 L107.59,112.02 L98.26,90.17 L68.60,89.98 L57.79,67.21 L43.71,47.43 L56.64,41.32 L75.85,41.44 L99.27,38.55 L119.80,25.20 L131.41,34.60 L153.42,39.17 L149.62,53.61 L161.08,63.79 L185.33,70.29 Z"/>
+        <path id="ireg-south" class="ireg-fill" d="M163.54,184.34 L168.76,191.92 L190.62,207.40 L205.25,227.52 L216.29,273.88 L213.03,317.96 L192.94,334.46 L165.36,350.59 L145.71,371.47 L115.68,394.80 L106.93,378.73 L113.70,361.76 L95.83,347.53 L116.68,337.44 L141.97,335.62 L131.39,320.44 L171.87,301.16 L174.84,271.14 L169.26,254.43 L173.64,229.39 L167.57,211.69 L149.34,194.26 L142.53,184.34 Z"/>
+        <path class="iborder-line" id="ib-north-south" d="M142.53,184.34 L163.54,184.34"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-north" x="115" y="108">NORTH</text>
+          <text class="ireg-label" id="ilbl-south" x="155" y="292">SOUTH</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Chinese imperial rule</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline, split at 17&deg;N &mdash; the one genuinely documented internal partition in Vietnam's history; the border line dissolves outside 1954&ndash;1975/76.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -474,6 +546,140 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    china:"#a4302a", none:"#5c2a24", nguyen:"#fcd116", french:"#21468b",
+    contested:"#8a3a2a", drv:"#da251d", rvn:"#fcd116", reunified:"#da251d"
+  };
+  var INAMES = {
+    china:"Chinese imperial rule", none:"Independent dynasties (no flag documented)", nguyen:"Nguyễn dynasty (independent empire)",
+    french:"French Indochina", contested:"Contested independence (DRV declared / French Indochina War)",
+    drv:"Democratic Republic of Vietnam (North)", rvn:"Republic of Vietnam (South)", reunified:"Socialist Republic of Vietnam (reunified)"
+  };
+  var IFLAGS = {
+    china: '<rect width="300" height="200" fill="#fcd116"/><text x="150" y="100" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="46" fill="#a4302a">龍</text>',
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    nguyen: '<rect width="300" height="200" fill="#fcd116"/><rect x="120" y="40" width="60" height="120" fill="#a4302a"/>',
+    french: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/>',
+    drv: '<rect width="300" height="200" fill="#da251d"/><path d="M150,58 l14,42 44,0 -36,26 14,42 -36,-26 -36,26 14,-42 -36,-26 44,0 Z" fill="#ffcd00"/>',
+    rvn: '<rect width="300" height="200" fill="#fcd116"/><rect y="66.7" width="300" height="22.2" fill="#da251d"/><rect y="88.9" width="300" height="22.2" fill="#da251d"/><rect y="111.1" width="300" height="22.2" fill="#da251d"/>',
+    reunified: '<rect width="300" height="200" fill="#da251d"/><path d="M150,58 l14,42 44,0 -36,26 14,42 -36,-26 -36,26 14,-42 -36,-26 44,0 Z" fill="#ffcd00"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"before 938", name:"Chinese imperial rule (Bắc thuộc)", t:{ north:IC.china, south:IC.china }, flagKeys:{ north:"china", south:"china" },
+      story:"Successive Chinese dynasties administer the Red River Delta as directly ruled commanderies for over a thousand years. No distinct Vietnamese symbol exists, and the whole territory answers to the same imperial dragon standard &mdash; no internal line to draw." },
+    { year:"938–1802", name:"Independent Vietnamese dynasties", t:{ north:IC.none, south:IC.none }, flagKeys:{ north:"none", south:"none" },
+      story:"Ngô Quyền's 938 victory opens nearly nine centuries of independent dynastic rule &mdash; the Lý, Trần, later Lê, and others. No single flag is securely documented, and the country is governed (with interruptions) as one piece." },
+    { year:"1802–1887", name:"Nguyễn dynasty (independent empire)", t:{ north:IC.nguyen, south:IC.nguyen }, flagKeys:{ north:"nguyen", south:"nguyen" },
+      story:"Nguyễn Ánh unifies the country in 1802, the first dynasty to rule the full length of Vietnam from Huế as one kingdom under imperial yellow." },
+    { year:"1887–1945", name:"French Indochina", t:{ north:IC.french, south:IC.french }, flagKeys:{ north:"french", south:"french" },
+      story:"France unites Tonkin, Annam, and Cochinchina with Cambodia (and later Laos) into the Indochinese Union in 1887, governing Vietnam's whole length as one colonial territory under the French tricolor." },
+    { year:"1945–1954", name:"Contested independence / French Indochina War", t:{ north:IC.contested, south:IC.contested }, flagKeys:{ north:"drv", south:"rvn" },
+      story:"Ho Chi Minh proclaims independence in Hanoi in September 1945; France refuses to accept the loss and fights the First Indochina War to reassert control nationwide. Fighting ranges across the whole country rather than along any fixed line, so no genuine partition exists yet &mdash; both flags shown, but no border drawn." },
+    { year:"1954–1975/76", name:"Partition at the 17th parallel", t:{ north:IC.drv, south:IC.rvn }, flagKeys:{ north:"drv", south:"rvn" },
+      story:"The 1954 Geneva Accords partition the country at the 17th parallel, pending elections that are never held. Ho Chi Minh's communist-led Democratic Republic governs the North from Hanoi; the anti-communist, US-backed Republic of Vietnam governs the South from Saigon. Escalating war ends only with the North's final 1975 offensive and Saigon's fall." },
+    { year:"1976–present", name:"Socialist Republic of Vietnam (reunified)", t:{ north:IC.reunified, south:IC.reunified }, flagKeys:{ north:"reunified", south:"reunified" },
+      story:"A National Assembly formally reunifies the country on 2 July 1976 under Communist Party rule. The North's gold-star-on-red flag now flies over the whole country &mdash; the 17th-parallel line, once real, never reappears." }
+  ];
+
+  var IREGIONS = ["north","south"];
+  var IREGION_NAMES = { north:"North Vietnam", south:"South Vietnam" };
+  var IADJ = [["north","south"]];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.4");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0];
+      var name = INAMES[label] || era.t[g[0]];
+      if (!seen[name]) { seen[name] = []; parts.push(name); }
+      g.forEach(function (id) { seen[name].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (name) { return "<b>" + name + "</b>: " + seen[name].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
