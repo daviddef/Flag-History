@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,41 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Suriname, c. 1500s (indigenous and early colonial era) &ndash; present, four political entries. No internal governing split exists within Suriname's own modern borders at any point in its history, so unlike some other pages in this atlas, this one carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Four eras, one real border</h2>
+    <p class="imap-sub">Suriname's own real coastal border, traced whole &mdash; one lineage of Dutch colonial administration from a single riverine outpost to today's republic, with no genuinely separate internal region to carve out. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This page doesn't split internally.</b> Dutch Guiana was governed as a single colony from Paramaribo throughout; the interior's Indigenous and Maroon communities were never organized as a rival, separately-ruled polity in the way this atlas reserves for a genuine internal split.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1500s&ndash;1667</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="330" y="30">ATLANTIC</text>
+          <text x="55" y="20">GUYANA</text>
+          <text x="330" y="270">FRENCH GUIANA</text>
+        </g>
+        <path id="ireg-sur" class="ireg-fill" d="M121.52,27.12 L193.11,39.12 L199.54,28.32 L247.85,24.00 L312.09,40.10 L280.99,91.59 L285.71,132.56 L309.17,168.05 L298.73,193.82 L293.47,221.22 L278.23,246.40 L244.00,233.71 L215.79,239.84 L191.68,234.51 L185.70,251.86 L195.72,263.76 L190.34,276.00 L157.85,271.10 L121.36,219.03 L113.51,185.22 L94.39,185.15 L67.91,141.65 L78.93,110.75 L75.70,96.63 L111.97,81.00 L121.52,27.12 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-sur" x="190" y="150">SURINAME</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Indigenous peoples and earlier settlement attempts</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastal border &mdash; no internal partition; see the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -366,6 +438,73 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { none:"#6b5c4a", colony:"#9c3b28", autonomous:"#204b5c", republic:"#a9762f" };
+  var IFLAGS = {
+    indigenous: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    dutchguiana: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/>',
+    autonomous: '<rect width="300" height="200" fill="#f4efe1"/><ellipse cx="150" cy="100" rx="72" ry="40" fill="none" stroke="#c8102e" stroke-width="5"/><circle cx="150" cy="60" r="9" fill="#1a1a1a"/><circle cx="207" cy="85" r="9" fill="#8b5a2b"/><circle cx="185" cy="135" r="9" fill="#ecc81a"/><circle cx="115" cy="135" r="9" fill="#c8102e"/><circle cx="93" cy="85" r="9" fill="#f4efe1" stroke="#1a1a1a" stroke-width="2"/>',
+    modern: '<rect width="300" height="200" fill="#377e3f"/><rect y="40" width="300" height="120" fill="#f4efe1"/><rect y="60" width="300" height="80" fill="#c8102e"/><path d="M150,76 L155.59,92.32 L172.83,92.58 L159.04,102.94 L164.11,119.42 L150,109.5 L135.89,119.42 L140.96,102.94 L127.17,92.58 L144.41,92.32 Z" fill="#ecc81a"/>'
+  };
+  function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.none + '"></span>No unified polity</span><span><span class="sw" style="background:' + IC.colony + '"></span>Colony</span><span><span class="sw" style="background:' + IC.autonomous + '"></span>Autonomous territory</span><span><span class="sw" style="background:' + IC.republic + '"></span>Republic</span>';
+
+  var ISNAP = [
+    { year:"c. 1500s&ndash;1667", name:"Indigenous peoples and earlier settlement attempts", fill:IC.none, flagKey:"indigenous",
+      story:"Kalina, Arawak, and other Indigenous peoples inhabit the coast and interior; early Spanish, English, and French attempts at settlement fail to take permanent root before the Dutch arrive." },
+    { year:"1667&ndash;1954", name:"Dutch Guiana (Netherlands colony)", fill:IC.colony, flagKey:"dutchguiana",
+      story:"The Dutch formally take control in 1667 (confirmed by the Treaty of Breda, traded for New Amsterdam/New York), building a plantation colony on enslaved and later indentured labor for nearly three centuries under the Netherlands tricolor." },
+    { year:"1954&ndash;1975", name:"Suriname, autonomous country within the Kingdom of the Netherlands", fill:IC.autonomous, flagKey:"autonomous",
+      story:"The 1954 Charter for the Kingdom of the Netherlands grants Suriname full internal self-government while the Dutch crown retains defense and foreign affairs; a distinct flag with five stars representing the colony's major ethnic groups is adopted in 1959." },
+    { year:"1975&ndash;present", name:"Republic of Suriname (independent, modern)", fill:IC.republic, flagKey:"modern",
+      story:"Suriname becomes fully independent on 25 November 1975 under Prime Minister Henck Arron, adopting a green-white-red flag with a central yellow star symbolizing unity and a golden future." }
+  ];
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.innerHTML = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+    document.getElementById("ireg-sur").setAttribute("fill", era.fill);
+    iEraOwners.innerHTML = "<b>" + era.name + "</b>";
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKey) + '<div class="ic-label">Suriname</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
