@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 260px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +223,42 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Thailand, c. 1238&ndash;present, four political entries. The Sukhothai and Ayutthaya kingdoms are combined into one bridging entry since no single flag is attested for either, and Ayutthaya's own plain red ship ensign is the earliest reasonably documented banner. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, four flags</h2>
+    <p class="imap-sub">Thailand's own real border, traced whole &mdash; the one Southeast Asian country never carved up by a colonial power, so there's no genuinely separate internal region to show. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>No internal split here by design.</b> Siam's nineteenth-century diplomacy kept the kingdom's core territory unified while British Burma and French Indochina absorbed its neighbors; what changes on this map is only which flag flew over the whole country.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1932&ndash;present</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="60" y="20">MYANMAR</text>
+          <text x="150" y="60">LAOS</text>
+          <text x="150" y="230">CAMBODIA</text>
+          <text x="90" y="300">MALAYSIA</text>
+        </g>
+        <path id="ireg-th" class="ireg-fill" d="M70.1,16.4 L71.7,18.6 L75.1,15.4 L80.1,20.2 L76.6,29.0 L78.3,33.4 L94.7,32.8 L92.6,36.4 L96.1,43.7 L89.9,56.5 L92.6,64.4 L88.2,74.8 L92.2,76.9 L111.0,61.2 L123.6,70.0 L131.3,65.8 L136.1,56.7 L149.5,58.7 L166.6,78.5 L165.2,96.6 L171.7,105.9 L179.2,107.5 L178.2,111.3 L183.7,115.2 L180.1,121.1 L183.5,129.3 L179.5,141.1 L172.4,145.4 L166.7,140.6 L133.2,142.8 L122.1,158.0 L116.2,159.1 L127.9,199.1 L122.4,188.0 L121.2,190.9 L115.2,187.9 L115.5,183.9 L104.4,177.0 L85.8,178.2 L88.4,160.8 L80.2,159.0 L67.3,164.4 L70.5,169.6 L67.6,176.5 L68.8,187.9 L59.4,205.8 L53.7,226.2 L50.9,226.6 L50.9,239.3 L52.9,250.1 L65.1,248.7 L79.6,293.9 L90.3,300.3 L94.6,297.9 L100.2,300.1 L111.2,312.7 L105.7,323.5 L100.7,319.3 L91.6,326.0 L88.5,321.9 L91.1,312.6 L85.8,313.0 L83.5,307.2 L75.8,306.5 L72.6,302.6 L70.8,309.0 L61.8,299.0 L63.0,294.2 L58.4,289.1 L56.0,290.4 L50.8,280.6 L48.7,282.1 L47.5,274.7 L43.1,275.4 L41.3,267.7 L36.1,269.1 L36.3,273.0 L33.2,271.6 L32.0,260.4 L35.4,256.7 L33.9,250.7 L43.5,219.5 L61.5,195.5 L56.9,179.6 L49.9,169.3 L52.2,165.3 L50.1,152.1 L39.7,143.0 L31.2,126.5 L33.5,122.2 L39.3,120.9 L39.0,106.6 L44.8,105.1 L46.2,99.7 L41.3,102.1 L37.8,87.9 L23.2,72.5 L19.7,59.2 L17.2,60.2 L14.0,54.3 L22.7,53.6 L20.6,46.1 L28.1,27.8 L32.5,30.6 L47.6,29.3 L49.5,21.6 L58.9,20.7 L57.3,15.5 L61.8,17.1 L67.5,14.0 L70.1,16.4 Z M35.6,276.5 L36.1,278.0 L35.4,279.0 L35.8,279.3 L35.6,279.6 L35.9,280.0 L35.5,279.8 L35.4,280.0 L35.1,279.2 L34.9,279.2 L34.5,279.6 L34.3,280.5 L33.6,280.9 L33.7,280.6 L33.3,280.3 L33.5,280.0 L33.4,278.9 L32.8,278.3 L33.4,278.2 L33.5,277.8 L32.7,277.2 L33.2,276.8 L33.0,276.1 L33.3,276.2 L33.4,275.9 L33.0,274.4 L33.7,273.7 L33.7,272.6 L33.5,272.8 L33.3,271.7 L34.4,272.3 L34.5,273.4 L35.1,273.4 L35.3,274.1 L36.0,274.0 L36.1,273.7 L36.4,273.9 L36.3,275.0 L36.0,274.8 L35.8,275.4 L36.1,276.1 L35.7,276.0 L35.3,276.4 L35.6,276.5 Z M69.2,245.4 L68.6,246.0 L67.6,246.3 L67.4,246.0 L66.9,246.1 L67.0,245.3 L66.7,244.5 L67.0,244.4 L67.0,243.6 L66.7,242.7 L68.0,242.5 L69.4,243.1 L69.7,242.4 L70.0,242.5 L70.2,243.1 L69.6,243.7 L69.6,243.5 L69.5,243.6 L69.9,245.0 L69.4,245.0 L69.2,245.4 Z M118.2,192.8 L117.1,191.7 L116.8,192.0 L117.0,192.6 L115.8,192.4 L115.7,192.7 L115.3,192.1 L115.2,190.6 L114.4,188.9 L114.8,188.8 L114.4,188.5 L116.5,189.5 L117.2,190.8 L117.4,190.8 L117.2,191.4 L117.6,191.2 L118.4,192.3 L118.2,192.8 Z M61.1,303.0 L61.1,302.3 L61.9,303.5 L61.8,304.9 L62.1,305.2 L62.2,306.2 L62.1,306.8 L61.7,306.5 L61.7,307.1 L61.3,307.3 L60.1,305.3 L60.4,304.9 L60.5,304.0 L61.3,303.1 L61.1,303.0 Z M49.7,284.2 L49.7,284.4 L49.3,284.0 L50.1,286.4 L49.9,287.1 L48.6,285.0 L48.3,283.2 L48.9,283.3 L49.1,284.0 L49.4,283.5 L49.1,283.8 L49.4,283.1 L49.1,283.5 L48.7,283.1 L48.7,282.5 L50.1,282.5 L50.5,283.1 L50.3,284.5 L50.3,284.3 L49.7,284.2 Z M69.8,240.9 L69.2,240.3 L68.0,239.9 L67.6,238.9 L67.8,238.2 L68.2,238.0 L68.5,238.3 L68.9,238.0 L69.6,238.3 L69.5,238.6 L69.9,238.8 L70.0,239.3 L69.8,240.9 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-th" x="89" y="155">THAILAND</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Kingdom of Thailand</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (1km-resolution coastline), no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -354,6 +428,96 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = {
+    ayutthaya: "#a4302a", chakri: "#a4302a", absolute: "#a9762f", constitutional: "#204b5c"
+  };
+  var INAMES = {
+    ayutthaya: "Sukhothai / Ayutthaya kingdoms", chakri: "Kingdom of Siam (Chakri, absolute)",
+    absolute: "Kingdom of Siam (late absolute monarchy)", constitutional: "Kingdom of Thailand (constitutional)"
+  };
+  var IFLAGS = {
+    ayutthaya: '<rect width="300" height="200" fill="#a4302a"/>',
+    chakri: '<rect width="300" height="200" fill="#a4302a"/><ellipse cx="150" cy="100" rx="42" ry="34" fill="#f4efe1"/><ellipse cx="150" cy="98" rx="28" ry="22" fill="#a4302a"/>',
+    absolute: '<rect width="300" height="33.3" fill="#a51931"/><rect y="33.3" width="300" height="26.7" fill="#f4efe1"/><rect y="60" width="300" height="80" fill="#241f5c"/><rect y="140" width="300" height="26.7" fill="#f4efe1"/><rect y="166.7" width="300" height="33.3" fill="#a51931"/>',
+    constitutional: '<rect width="300" height="200" fill="#a51931"/><rect y="33.3" width="300" height="26.7" fill="#f4efe1"/><rect y="60" width="300" height="80" fill="#241f5c"/><rect y="140" width="300" height="26.7" fill="#f4efe1"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1238–1782", name:"Sukhothai / Ayutthaya kingdoms", t:{ th:IC.ayutthaya }, flagKeys:{ th:"ayutthaya" },
+      story:"Sukhothai, traditionally dated from 1238, is often regarded as the first unified Thai state; it is absorbed by the rising Ayutthaya kingdom (founded 1351), a major regional trading power for over four centuries. No fixed national flag existed this early; Ayutthaya's ships fly a plain red ensign by the seventeenth century, the earliest reasonably documented banner." },
+    { year:"1782–1917", name:"Kingdom of Siam (Chakri, absolute)", t:{ th:IC.chakri }, flagKeys:{ th:"chakri" },
+      story:"General Chakri founds the still-reigning dynasty in 1782, crowned Rama I, moving the capital to Bangkok. Nineteenth-century kings Mongkut and Chulalongkorn pursue skillful diplomacy between British and French colonial ambitions, preserving the kingdom's core independence. A white elephant, added under Rama II, distinguishes Siamese ships from other red-flagged vessels in the region." },
+    { year:"1917–1932", name:"Kingdom of Siam (late absolute monarchy)", t:{ th:IC.absolute }, flagKeys:{ th:"absolute" },
+      story:"King Vajiravudh (Rama VI) adopts the red-white-blue trirang in 1917, adding blue in solidarity with the Allied powers of World War I, into which Siam enters that same year &mdash; a modernizing gesture from a monarchy still ruling by decree." },
+    { year:"1932–present", name:"Kingdom of Thailand (constitutional)", t:{ th:IC.constitutional }, flagKeys:{ th:"constitutional" },
+      story:"A bloodless 1932 coup forces King Prajadhipok to accept a constitution, ending absolute monarchy; the Chakri dynasty continues to reign as head of state. The country renames itself from Siam to Thailand in 1939, remaining the only Southeast Asian country never colonized by a European power. The same trirang flag flies unchanged through the transition." }
+  ];
+
+  var IREGIONS = ["th"];
+  var IREGION_NAMES = { th:"Thailand" };
+  var IADJ = [];
+
+  function iGroupsFor(t) { return [["th"]]; }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+    });
+
+    iEraOwners.innerHTML = "<b>" + INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t.th; })[0]] + "</b>";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
