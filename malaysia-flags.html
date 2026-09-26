@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 460px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,49 @@
   <p class="lede">The Jalur Gemilang ("Stripes of Glory") still carries fourteen stripes and a fourteen-point star today, a design fixed in 1963 for the federation's original fourteen states and territories &mdash; unchanged even after Singapore's 1965 departure left the count symbolically, rather than literally, accurate.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Malaysia (Peninsular Malaya, Sabah, and Sarawak), pre-1826&ndash;present, six political entries. Sabah and Sarawak's own separate colonial and wartime histories under different administrations are folded into the peninsula's timeline here for a single unified lineage; each carries meaningful local variation not covered in depth on this page. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Malaysia (Peninsular Malaya, Sabah, and Sarawak), pre-1826&ndash;present, six political entries. The timeline cards below follow the peninsula's own lineage for readability; the map just above the timeline splits the two halves apart, since Sabah and Sarawak's own separate colonial and wartime histories genuinely diverged from the peninsula's until 1963. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Two Malaysias, pre-1826&ndash;1963</h2>
+    <p class="imap-sub">Peninsular Malaysia and East Malaysia (Sabah &amp; Sarawak, on Borneo) are separated by more than 600&nbsp;km of the South China Sea &mdash; and for most of their history, by entirely different governments too. Press play, or drag the slider, to watch the two halves converge only once, in 1963.</p>
+    <div class="rule-box">
+      <b>This is the one page in this batch with a genuine, documented internal split.</b> The peninsula and Borneo were never part of the same polity before 1963: different sultanates, then a crown colony (Straits Settlements) on one side against the private Brooke Raj and the British North Borneo Chartered Company on the other, then separate Crown Colonies even after both were nominally British. They are shown here as two disconnected regions, colored independently, because that is what they were &mdash; not one country with an internal border, but two countries that later merged.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">pre-1826</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="105" y="18">THAILAND</text>
+          <text x="151" y="182">SINGAPORE</text>
+          <text x="335" y="240">INDONESIA (Kalimantan)</text>
+          <text x="80" y="235">INDONESIA (Sumatra)</text>
+          <text x="304" y="98">BRUNEI</text>
+          <text x="213" y="130" style="opacity:.6">SOUTH CHINA SEA</text>
+        </g>
+        <path id="ireg-pen" class="ireg-fill" d="M114.8,98.2 L115.9,105.2 L124.7,103.6 L129.1,98.0 L132.2,99.3 L140.2,107.4 L145.8,116.4 L146.6,125.5 L145.2,131.7 L146.5,136.3 L147.5,144.3 L152.2,148.0 L157.5,159.9 L157.2,164.5 L147.7,165.4 L135.0,155.4 L119.0,144.7 L117.5,137.8 L109.7,128.8 L107.8,117.6 L103.0,110.3 L104.4,100.5 L101.5,94.7 L103.8,92.3 L114.8,98.2 Z"/>
+        <path id="ireg-bor" class="ireg-fill" d="M350.9,121.5 L341.0,126.1 L329.4,123.9 L313.9,123.8 L309.2,139.2 L304.0,143.9 L297.1,162.6 L286.2,165.5 L273.4,161.7 L267.0,162.9 L259.1,169.7 L250.5,168.8 L241.8,171.5 L232.6,163.9 L230.4,154.9 L240.3,159.5 L250.7,157.0 L253.4,145.6 L259.1,143.0 L275.3,140.1 L284.9,129.4 L291.5,120.9 L297.7,127.9 L300.5,123.3 L306.9,123.7 L308.3,108.5 L318.7,99.1 L325.5,88.5 L330.9,88.5 L337.8,95.3 L338.4,101.2 L347.3,104.9 L358.5,109.0 L357.6,114.3 L348.5,114.9 L350.9,121.5 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-pen" x="129" y="196" style="font-size:9px">PENINSULAR</text>
+          <text class="ireg-label" id="ilbl-pen2" x="129" y="207" style="font-size:9px">MALAYSIA</text>
+          <text class="ireg-label" id="ilbl-bor" x="298" y="186" style="font-size:9px">EAST MALAYSIA</text>
+          <text class="ireg-label" id="ilbl-bor2" x="298" y="197" style="font-size:8px">(SABAH &amp; SARAWAK)</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Divided: sultanates and Brunei suzerainty</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastlines for both halves; there is no shared land border between them to draw, since &ndash; unlike the internal splits elsewhere in this atlas &ndash; they are separated by open sea, not a survey line.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -436,6 +516,122 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    sultanate:"#a4302a", brunei_suz:"#6e6047", straits:"#00247d", brooke:"#7c2e1f",
+    japan:"#f4efe1", crowncolony:"#163846", malaya1957:"#cc0001", malaysia1963:"#cc0001"
+  };
+  var INAMES = {
+    sultanate:"Malacca Sultanate &amp; successor sultanates", brunei_suz:"Brunei suzerainty &amp; local polities",
+    straits:"Straits Settlements / British Malaya", brooke:"Brooke Raj (Sarawak) &amp; North Borneo Chartered Company",
+    japan:"Japanese occupation", crowncolony:"Crown Colonies of Sarawak &amp; North Borneo",
+    malaya1957:"Federation of Malaya (independent)", malaysia1963:"Malaysia (federation)"
+  };
+  var IFLAGS = {
+    sultanate: '<rect width="300" height="200" fill="#a4302a"/>',
+    brunei_suz: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    straits: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/>',
+    brooke: '<rect width="300" height="200" fill="#241f14"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#fecb00" stroke-width="22"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#a4302a" stroke-width="8"/><circle cx="150" cy="100" r="18" fill="#241f14" stroke="#fecb00" stroke-width="3"/><path d="M150,90 l4,10 11,1 -8,7 3,10 -10,-6 -10,6 3,-10 -8,-7 11,-1 Z" fill="#fecb00"/>',
+    japan: '<rect width="300" height="200" fill="#f4efe1"/><circle cx="150" cy="100" r="55" fill="#a4302a"/>',
+    crowncolony: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/><circle cx="220" cy="120" r="26" fill="#fff" stroke="#6e6047" stroke-width="2"/>',
+    malaya1957: '<rect width="300" height="200" fill="#cc0001"/><rect y="18.2" width="300" height="18.2" fill="#f4efe1"/><rect y="54.5" width="300" height="18.2" fill="#f4efe1"/><rect y="90.9" width="300" height="18.2" fill="#f4efe1"/><rect y="127.3" width="300" height="18.2" fill="#f4efe1"/><rect y="163.6" width="300" height="18.2" fill="#f4efe1"/><rect width="130" height="109" fill="#010066"/><path d="M65,55 l8,18 20,2 -15,12 5,19 -18,-10 -18,10 5,-19 -15,-12 20,-2 Z" fill="#fecb00"/>',
+    malaysia1963: '<rect width="300" height="200" fill="#cc0001"/><rect y="14.3" width="300" height="14.3" fill="#f4efe1"/><rect y="42.9" width="300" height="14.3" fill="#f4efe1"/><rect y="71.4" width="300" height="14.3" fill="#f4efe1"/><rect y="100" width="300" height="14.3" fill="#f4efe1"/><rect y="128.6" width="300" height="14.3" fill="#f4efe1"/><rect y="157.1" width="300" height="14.3" fill="#f4efe1"/><rect y="185.7" width="300" height="14.3" fill="#f4efe1"/><rect width="130" height="107" fill="#010066"/><path d="M65,54 l8,18 20,2 -15,12 5,19 -18,-10 -18,10 5,-19 -15,-12 20,-2 Z" fill="#fecb00"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"pre-1826", name:"Divided: sultanates and Brunei suzerainty", t:{ pen:IC.sultanate, bor:IC.brunei_suz }, flagKeys:{ pen:"sultanate", bor:"brunei_suz" },
+      story:"On the peninsula, the Malacca Sultanate and its successor states (notably Johor) hold the strait's trade; no single flag unifies them, and plain red, Malacca's traditional royal color, stands in as a schematic reconstruction. On Borneo, the coast lies under the loose suzerainty of the Sultanate of Brunei, with Dayak, Kadazan-Dusun, and Murut communities largely self-governing inland &mdash; no flag survives for either side, and the two territories share no political connection at all." },
+    { year:"1826", name:"Straits Settlements formed; Borneo unchanged", t:{ pen:IC.straits, bor:IC.brunei_suz }, flagKeys:{ pen:"straits", bor:"brunei_suz" },
+      story:"Britain consolidates Penang, Malacca, and Singapore into the Straits Settlements crown colony in 1826, later extending protectorate treaties over the peninsula's individual sultanates. Borneo is untouched by this expansion for another fifteen years, remaining under Brunei's loose suzerainty and local rule &mdash; the first genuine divergence between the two halves of what is now Malaysia." },
+    { year:"1841", name:"Sarawak ceded to James Brooke; North Borneo follows in 1881", t:{ pen:IC.straits, bor:IC.brooke }, flagKeys:{ pen:"straits", bor:"brooke" },
+      story:"The Sultan of Brunei cedes Sarawak to the English adventurer James Brooke in 1841, founding a private dynasty of \"White Rajahs\" that rules for over a century. North Borneo follows a different path in 1881, chartered to the British North Borneo Company. Neither is ever part of the Straits Settlements or the peninsula's protected sultanates &mdash; shown here as one bracketed Borneo era, distinct from the peninsula throughout." },
+    { year:"1942", name:"Japanese occupation, both regions", t:{ pen:IC.japan, bor:IC.japan }, flagKeys:{ pen:"japan", bor:"japan" },
+      story:"Japanese forces sweep down the peninsula after landing in December 1941 and separately invade Borneo in January 1942, occupying Sarawak, North Borneo, and Brunei alongside Malaya and Singapore. For the only time before 1963, one single foreign power governs both halves of today's Malaysia at once &mdash; though still through two separate military administrations, never a unified one." },
+    { year:"1946", name:"Postwar: Malayan Union vs. Borneo Crown Colonies", t:{ pen:IC.straits, bor:IC.crowncolony }, flagKeys:{ pen:"straits", bor:"crowncolony" },
+      story:"Britain returns after Japan's surrender. On the peninsula, the centralizing Malayan Union gives way to the more devolved Federation of Malaya by 1948. On Borneo, Rajah Vyner Brooke cedes Sarawak to the British Crown on 1 July 1946, and the North Borneo Chartered Company transfers its territory that same year &mdash; both becoming ordinary Crown Colonies, administratively separate from the peninsula throughout." },
+    { year:"1957", name:"Malaya independent; Borneo still colonial", t:{ pen:IC.malaya1957, bor:IC.crowncolony }, flagKeys:{ pen:"malaya1957", bor:"crowncolony" },
+      story:"The Federation of Malaya gains independence from Britain on 31 August 1957 under Tunku Abdul Rahman, adopting an eleven-stripe flag for its eleven states. Sarawak and North Borneo remain separate British Crown Colonies for six more years, governed from London, with no role in Malaya's own independence." },
+    { year:"1963–present", name:"Malaysia: the two halves unite", t:{ pen:IC.malaysia1963, bor:IC.malaysia1963 }, flagKeys:{ pen:"malaysia1963", bor:"malaysia1963" },
+      story:"On 16 September 1963 the Federation of Malaya merges with Singapore, Sabah (the renamed North Borneo), and Sarawak to form Malaysia &mdash; the first and only time the peninsula and Borneo territories are governed as one state. Singapore separates in 1965; the fourteen-stripe flag, kept unchanged, still nods to the federation's original fourteen states and territories." }
+  ];
+
+  var IREGIONS = ["pen","bor"];
+  var IREGION_NAMES = { pen:"Peninsular Malaysia", bor:"East Malaysia (Sabah &amp; Sarawak)" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      ["ilbl-" + id, "ilbl-" + id + "2"].forEach(function (lid) {
+        var lbl = document.getElementById(lid);
+        if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      });
+    });
+
+    var penLabel = Object.keys(IC).filter(function (k) { return IC[k] === era.t.pen; })[0];
+    var borLabel = Object.keys(IC).filter(function (k) { return IC[k] === era.t.bor; })[0];
+    if (era.t.pen === era.t.bor) {
+      iEraOwners.innerHTML = "<b>" + INAMES[penLabel] + "</b>: " + IREGION_NAMES.pen + ", " + IREGION_NAMES.bor;
+    } else {
+      iEraOwners.innerHTML = "<b>" + INAMES[penLabel] + "</b>: " + IREGION_NAMES.pen + " &middot; <b>" + INAMES[borLabel] + "</b>: " + IREGION_NAMES.bor;
+    }
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
