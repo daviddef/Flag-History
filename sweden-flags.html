@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,41 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Sweden, c. 900&ndash;present, six political entities. Sweden and Finland shared one crown for roughly 650 years (from medieval conquest of Finland until its 1809 cession to Russia), but because this page is scoped to Sweden's own modern territory, that period is treated as a single continuous Swedish entry rather than an internal split &mdash; Finland's own page in this atlas covers that shared history from its side. No genuine internal governing split exists within Sweden's own modern borders at any point in its history, so unlike some other pages in this atlas, this one carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Six eras, one real border</h2>
+    <p class="imap-sub">Sweden's own real coastal border, traced whole &mdash; a single crown's lineage from fragmented chieftaincies to today's kingdom, with no genuinely separate internal region on Swedish soil itself. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This page doesn't split internally.</b> Sweden's real internal split &mdash; Finland, held from the Middle Ages until 1809 &mdash; is a separate country today with its own flag lineage, not a sub-region of modern Sweden, so it isn't carved out here. The Kalmar Union and the Sweden&ndash;Norway union were unions of separate crowns, not partitions within Sweden.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 900&ndash;995</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="330" y="120">BALTIC SEA</text>
+          <text x="150" y="18">NORWAY</text>
+          <text x="60" y="220">DENMARK</text>
+        </g>
+        <path id="ireg-swe" class="ireg-fill" d="M230.30,86.02 L222.01,98.81 L223.35,110.04 L209.76,124.78 L193.27,140.55 L187.05,166.37 L193.13,179.29 L201.29,189.46 L193.45,210.14 L184.57,214.43 L181.31,245.21 L176.46,262.39 L166.10,260.61 L161.26,275.16 L151.37,276.00 L148.66,258.67 L141.51,237.86 L135.01,211.93 L138.78,201.37 L145.88,188.80 L148.71,167.24 L143.25,157.95 L142.73,133.60 L148.27,116.41 L156.74,116.72 L159.72,109.45 L156.61,103.19 L169.87,77.40 L178.41,57.07 L184.05,44.03 L192.25,44.09 L194.51,33.88 L210.61,36.82 L211.87,24.75 L217.16,24.00 L228.55,32.97 L241.88,45.46 L242.11,73.69 L244.99,80.82 L230.30,86.02 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-swe" x="190" y="150">SWEDEN</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Fragmented Svear and G&ouml;tar chieftaincies</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastal border &mdash; no internal partition; see the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -439,6 +511,79 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { fragmented:"#6b5c4a", kingdom:"#a9762f", union:"#c9a13c" };
+  var IFLAGS = {
+    frag: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    premed: '<rect width="300" height="200" fill="#1e2f96"/><g fill="#c9a13c"><path d="M150,58 l10,22 24,3 -17,17 4,24 -21,-11 -21,11 4,-24 -17,-17 24,-3 Z"/><path d="M108,120 l8,17 19,2 -14,13 3,19 -16,-9 -16,9 3,-19 -14,-13 19,-2 Z"/><path d="M192,120 l8,17 19,2 -14,13 3,19 -16,-9 -16,9 3,-19 -14,-13 19,-2 Z"/></g>',
+    kalmar: '<rect width="300" height="200" fill="#c9a13c"/><rect x="90" width="34" height="200" fill="#a4302a"/><rect y="83" width="300" height="34" fill="#a4302a"/><g fill="#f4efe1"><circle cx="150" cy="52" r="10"/><circle cx="126" cy="152" r="10"/><circle cx="174" cy="152" r="10"/></g>',
+    postkalmar: '<rect width="300" height="200" fill="#1e2f96"/><rect x="90" width="34" height="200" fill="#c9a13c"/><rect y="83" width="300" height="34" fill="#c9a13c"/>',
+    norwayunion: '<rect width="300" height="200" fill="#1e2f96"/><rect x="90" width="34" height="200" fill="#c9a13c"/><rect y="83" width="300" height="34" fill="#c9a13c"/><rect x="18" y="28" width="54" height="36" fill="#a4302a"/><rect x="18" y="28" width="54" height="12" fill="#f4efe1"/><rect x="18" y="52" width="54" height="12" fill="#1e2f96"/>',
+    modern: '<rect width="300" height="200" fill="#1e2f96"/><rect x="90" width="34" height="200" fill="#c9a13c"/><rect y="83" width="300" height="34" fill="#c9a13c"/>'
+  };
+  function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.fragmented + '"></span>Fragmented chieftaincies</span><span><span class="sw" style="background:' + IC.kingdom + '"></span>Kingdom, independent</span><span><span class="sw" style="background:' + IC.union + '"></span>Union</span>';
+
+  var ISNAP = [
+    { year:"c. 900&ndash;995", name:"Fragmented Svear and G&ouml;tar chieftaincies", fill:IC.fragmented, flagKey:"frag",
+      story:"Svear (around Lake Mälaren) and Götar (further south) exist as separate Norse chieftaincies with no unified crown and no documented flag of any kind." },
+    { year:"995&ndash;1397", name:"Kingdom of Sweden (medieval, pre-Kalmar)", fill:IC.kingdom, flagKey:"premed",
+      story:"Olof Skötkonung, traditionally credited as Sweden's first Christian king, unites Svealand and Götaland under one crown around 995, founding the medieval kingdom that precedes the Kalmar Union." },
+    { year:"1397&ndash;1523", name:"Kalmar Union", fill:IC.union, flagKey:"kalmar",
+      story:"The 1397 Kalmar Union joins Sweden, Denmark, and Norway under a single monarch to counter the rising power of the Hanseatic League &mdash; a union Sweden repeatedly resists and finally breaks under Gustav Vasa." },
+    { year:"1523&ndash;1814", name:"Kingdom of Sweden (independent, post-Kalmar)", fill:IC.kingdom, flagKey:"postkalmar",
+      story:"Gustav Vasa leads a successful rebellion and is elected king in 1523, ending the Kalmar Union for Sweden and founding the Vasa dynasty; Sweden rises to become a major European power over the following two centuries." },
+    { year:"1814&ndash;1905", name:"Sweden&ndash;Norway (personal union)", fill:IC.union, flagKey:"norwayunion",
+      story:"Following the Napoleonic Wars, Sweden forces Norway into a personal union in 1814 under the Swedish crown &mdash; two separate kingdoms sharing one monarch, marked on Sweden's own flag by a small union canton." },
+    { year:"1905&ndash;present", name:"Kingdom of Sweden (independent, modern)", fill:IC.kingdom, flagKey:"modern",
+      story:"Norway peacefully dissolves the union in 1905 after a referendum; Sweden drops the union mark from its flag and continues as a fully independent constitutional monarchy to this day." }
+  ];
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.innerHTML = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+    document.getElementById("ireg-swe").setAttribute("fill", era.fill);
+    iEraOwners.innerHTML = "<b>" + era.name + "</b>";
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKey) + '<div class="ic-label">Sweden</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
