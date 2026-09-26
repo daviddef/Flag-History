@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,45 @@
   <p class="lede">The flag chosen at that 1847 independence &mdash; eleven red-and-white stripes for the eleven signers of the Declaration of Independence, a blue canton with a single white star, deliberately modeled on the flag of the United States &mdash; has not changed since, through a century of Americo-Liberian settler dominance over the indigenous majority, a 1980 coup, two devastating civil wars, and the peace that has held since 2003.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Liberia, c. 1000&ndash;present, six political entities. The pre-1822 entry covers indigenous polities that had no involvement in or say over the colonization that followed &mdash; a genuinely different story from most of this atlas, and one this page states plainly rather than glossing over. From 1822 onward the lineage is single and continuous: American Colonization Society settlement, then Commonwealth, then Republic, with no internal partition and so no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Liberia, c. 1000&ndash;present, six political entities. The pre-1822 entry covers indigenous polities that had no involvement in or say over the colonization that followed &mdash; a genuinely different story from most of this atlas, and one this page states plainly rather than glossing over. From 1822 onward the lineage is single and continuous: American Colonization Society settlement, then Commonwealth, then Republic, with no internal partition. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, six rulers</h2>
+    <p class="imap-sub">Liberia's own real border, traced whole &mdash; this page has no internal split to show honestly. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>The Americo-Liberian settler elite dominated politics for over a century without ever creating a second, separately-flagged territory.</b> Political power stayed concentrated in coastal settler communities while the indigenous interior held little formal say for generations &mdash; a real and significant inequality, documented plainly in the timeline below &mdash; but it was never expressed as two separate flags or governments. What changes here is only who ruled all of it at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1000</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 277.6 300" xmlns="http://www.w3.org/2000/svg">
+        <g style="pointer-events:none">
+          <g class="context-label">
+            <text x="60" y="14">SIERRA LEONE</text>
+            <text x="230" y="14">GUINEA</text>
+            <text x="240" y="150" text-anchor="end">C&Ocirc;TE D'IVOIRE</text>
+            <text x="150" y="290">ATLANTIC OCEAN</text>
+          </g>
+        </g>
+        <path id="ireg-lr" class="ireg-fill" d="M240.8,270.5 L225.8,271.0 L166.6,243.4 L114.5,199.4 L65.5,167.8 L26.9,130.5 L40.6,112.0 L43.6,95.2 L69.5,63.8 L96.3,36.8 L108.5,35.5 L123.5,29.0 L147.5,64.4 L143.7,87.7 L154.9,100.0 L171.1,100.3 L182.9,77.0 L199.1,78.5 L196.4,95.3 L202.2,123.2 L189.7,148.9 L206.4,164.8 L224.7,168.6 L249.0,192.8 L250.7,215.6 L245.3,222.8 L240.8,270.5 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-lr" x="140" y="155">LIBERIA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Indigenous Kru, Vai, Gola, and neighboring peoples</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (Natural Earth 50m via ADM0_A3=LBR), no internal partition &mdash; see the rule box above for why. Neighbor labels are approximate.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -459,6 +535,112 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    indigenous: "#6e6047", acs: "#a9762f", commonwealth: "#204b5c", republic1: "#9c3b28",
+    republic2: "#7c2e1f", republic3: "#bf0a30"
+  };
+  var INAMES = {
+    indigenous: "Indigenous Kru, Vai, Gola, and neighboring peoples (no flag documented)",
+    acs: "American Colonization Society settlement", commonwealth: "Commonwealth of Liberia",
+    republic1: "Republic of Liberia (Americo-Liberian era)",
+    republic2: "Republic of Liberia (coup and civil war)",
+    republic3: "Republic of Liberia (postwar)"
+  };
+  var IFLAGS = {
+    indigenous: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    acs: '<rect width="300" height="200" fill="#bf0a30"/><rect y="15.4" width="300" height="15.4" fill="#f4efe1"/><rect y="46.2" width="300" height="15.4" fill="#f4efe1"/><rect y="76.9" width="300" height="15.4" fill="#f4efe1"/><rect y="107.7" width="300" height="15.4" fill="#f4efe1"/><rect y="138.5" width="300" height="15.4" fill="#f4efe1"/><rect y="169.2" width="300" height="15.4" fill="#f4efe1"/><rect width="120" height="107.7" fill="#002868"/><rect x="48" width="24" height="107.7" fill="#f4efe1"/><rect y="41.85" width="120" height="24" fill="#f4efe1"/>',
+    commonwealth: '<rect width="300" height="200" fill="#bf0a30"/><rect y="15.4" width="300" height="15.4" fill="#f4efe1"/><rect y="46.2" width="300" height="15.4" fill="#f4efe1"/><rect y="76.9" width="300" height="15.4" fill="#f4efe1"/><rect y="107.7" width="300" height="15.4" fill="#f4efe1"/><rect y="138.5" width="300" height="15.4" fill="#f4efe1"/><rect y="169.2" width="300" height="15.4" fill="#f4efe1"/><rect width="120" height="107.7" fill="#002868"/><rect x="48" width="24" height="107.7" fill="#f4efe1"/><rect y="41.85" width="120" height="24" fill="#f4efe1"/>',
+    republic1: '<rect width="300" height="200" fill="#bf0a30"/><rect y="18.18" width="300" height="18.18" fill="#f4efe1"/><rect y="54.55" width="300" height="18.18" fill="#f4efe1"/><rect y="90.91" width="300" height="18.18" fill="#f4efe1"/><rect y="127.27" width="300" height="18.18" fill="#f4efe1"/><rect y="163.64" width="300" height="18.18" fill="#f4efe1"/><rect width="127" height="127" fill="#002868"/><path fill="#f4efe1" d="M63.5,42 L71,64 94,64 75.5,78 82.5,100 63.5,86.5 44.5,100 51.5,78 33,64 56,64 Z"/>',
+    republic2: '<rect width="300" height="200" fill="#bf0a30"/><rect y="18.18" width="300" height="18.18" fill="#f4efe1"/><rect y="54.55" width="300" height="18.18" fill="#f4efe1"/><rect y="90.91" width="300" height="18.18" fill="#f4efe1"/><rect y="127.27" width="300" height="18.18" fill="#f4efe1"/><rect y="163.64" width="300" height="18.18" fill="#f4efe1"/><rect width="127" height="127" fill="#002868"/><path fill="#f4efe1" d="M63.5,42 L71,64 94,64 75.5,78 82.5,100 63.5,86.5 44.5,100 51.5,78 33,64 56,64 Z"/>',
+    republic3: '<rect width="300" height="200" fill="#bf0a30"/><rect y="18.18" width="300" height="18.18" fill="#f4efe1"/><rect y="54.55" width="300" height="18.18" fill="#f4efe1"/><rect y="90.91" width="300" height="18.18" fill="#f4efe1"/><rect y="127.27" width="300" height="18.18" fill="#f4efe1"/><rect y="163.64" width="300" height="18.18" fill="#f4efe1"/><rect width="127" height="127" fill="#002868"/><path fill="#f4efe1" d="M63.5,42 L71,64 94,64 75.5,78 82.5,100 63.5,86.5 44.5,100 51.5,78 33,64 56,64 Z"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1000", name:"Indigenous Kru, Vai, Gola, and neighboring peoples", t:{ lr:IC.indigenous }, flagKeys:{ lr:"indigenous" },
+      story:"For centuries before 1822, the coast and forest of what is now Liberia are home to the Kru, Vai, Gola, Kpelle, Bassa, and other peoples, organized into independent towns and chiefdoms rather than any single unifying state. None had any involvement in, or say over, the colonization that followed." },
+    { year:"1822", name:"American Colonization Society settlement", t:{ lr:IC.acs }, flagKeys:{ lr:"acs" },
+      story:"In 1822 the American Colonization Society begins landing free-born and formerly enslaved settlers at Cape Mesurado, naming the settlement Monrovia after US President James Monroe. On 9 April 1827 the ACS board adopts a distinct colonial banner: US-derived stripes with a white cross in place of stars." },
+    { year:"1839", name:"Commonwealth of Liberia", t:{ lr:IC.commonwealth }, flagKeys:{ lr:"commonwealth" },
+      story:"In 1839 the ACS reorganizes its scattered coastal settlements into the Commonwealth of Liberia, a single quasi-self-governing unit with an appointed governor, still nominally under Society oversight. Settler leaders increasingly chafe at foreign trading tariffs the Commonwealth cannot enforce as a non-sovereign entity." },
+    { year:"1847", name:"Republic of Liberia (Americo-Liberian era)", t:{ lr:IC.republic1 }, flagKeys:{ lr:"republic1" },
+      story:"On 26 July 1847 the Commonwealth declares itself the independent Republic of Liberia, Africa's first republic and the only African state never formally colonized by a European power. Politics remain dominated for the whole era by the settler-descended Americo-Liberian elite over an indigenous majority who hold little formal power until the 1980 coup." },
+    { year:"1980", name:"Republic of Liberia (coup and civil war)", t:{ lr:IC.republic2 }, flagKeys:{ lr:"republic2" },
+      story:"On 12 April 1980, Master Sergeant Samuel Doe leads a coup that kills President Tolbert and ends 133 years of Americo-Liberian dominance, but Doe's rule collapses into open war when Charles Taylor's forces invade in December 1989. Two civil wars (1989&ndash;97, 1999&ndash;2003) together kill an estimated quarter-million people." },
+    { year:"2003–present", name:"Republic of Liberia (postwar)", t:{ lr:IC.republic3 }, flagKeys:{ lr:"republic3" },
+      story:"The August 2003 Accra peace agreement ends the second civil war and forces Charles Taylor into exile. Ellen Johnson Sirleaf wins election in 2005, taking office as Africa's first elected female head of state. The 1847 flag, unchanged throughout, now flies over a republic rebuilding rather than one at war." }
+  ];
+
+  var IREGIONS = ["lr"];
+  var IREGION_NAMES = { lr:"Liberia" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.lr; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
