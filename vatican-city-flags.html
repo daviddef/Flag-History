@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,40 @@
   <p class="lede">Four eras, one institution: the sprawling Papal States, the stateless interregnum of the Roman Question, and finally the 0.49-square-kilometer Vatican City State &mdash; whose yellow-and-white flag with the crossed keys and papal tiara directly descends from the last Papal States banner flown before 1870.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the papacy's own sovereign or quasi-sovereign territory, from the traditional 756 Donation of Pepin to the present, four political phases. This page tracks the Holy See's territorial and flag history specifically &mdash; not the broader history of the Catholic Church. No interactive map: Vatican City's territory is a single walled enclave inside Rome, too small for a meaningful territorial map at this atlas's scale. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the papacy's own sovereign or quasi-sovereign territory, from the traditional 756 Donation of Pepin to the present, four political phases. This page tracks the Holy See's territorial and flag history specifically &mdash; not the broader history of the Catholic Church. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>The world's smallest border, four rulers</h2>
+    <p class="imap-sub">Vatican City's own real border, traced at true scale and shape &mdash; the smallest country outline in this atlas. Press play, or drag the slider, to watch the papacy's territorial status change, era to era.</p>
+    <div class="rule-box">
+      <b>This map, like the timeline above, is scoped to Vatican City's own tiny modern 0.49&nbsp;km&sup2; enclave &mdash; not the much larger Papal States that the papacy actually governed across central Italy for most of this history.</b> Showing that real medieval and early-modern territorial extent geographically would require a wholly different map at a wholly different scale; this atlas instead keeps one fixed reference outline throughout, exactly as it does for every other country's page, and lets the color and story text carry the territorial history. During 1870&ndash;1929 the papacy held no sovereign territory of any size at all &mdash; not even this one.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">756</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 260 308" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="150" y="16">ROME (ITALY)</text>
+        </g>
+        <path id="ireg-va" class="ireg-fill" d="M89.0,288.8 L16.0,227.6 L25.1,129.5 L70.7,19.2 L235.0,31.4 L244.0,288.8 L89.0,288.8 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-va" x="130" y="182" style="font-size:9px">VATICAN CITY</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Papal States (temporal rule, early era)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border of the modern city-state, held fixed across all four eras &mdash; see the rule box above for why. No internal partition.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -378,6 +449,105 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = {
+    early: "#c9a13c", restored: "#e6c200", noterritory: "#8a7f68", modern: "#f6b40e"
+  };
+  var INAMES = {
+    early: "Papal States (early era, gold-and-red gonfalone)", restored: "Papal States (restored, 1825 flag)",
+    noterritory: "The Roman Question (no sovereign territory)", modern: "Vatican City State"
+  };
+  var IFLAGS = {
+    early: '<rect width="300" height="200" fill="#a4302a"/><rect width="300" height="100" fill="#c9a13c"/>',
+    restored: '<rect width="150" height="200" fill="#ffe000"/><rect x="150" width="150" height="200" fill="#ffffff"/><g transform="translate(225,100)"><line x1="-24" y1="-5" x2="24" y2="30" stroke="#c9a13c" stroke-width="5"/><line x1="24" y1="-5" x2="-24" y2="30" stroke="#8a8a8a" stroke-width="5"/><ellipse cx="0" cy="-32" rx="16" ry="11" fill="#ffe000" stroke="#b08d1f" stroke-width="2"/></g>',
+    noterritory: '<rect width="150" height="200" fill="#ffe000" opacity="0.55"/><rect x="150" width="150" height="200" fill="#f4efe1" opacity="0.55"/><rect width="300" height="200" fill="none" stroke="#6e6047" stroke-width="4" stroke-dasharray="8 6"/><g transform="translate(225,100)" opacity="0.7"><line x1="-24" y1="-5" x2="24" y2="30" stroke="#c9a13c" stroke-width="5"/><line x1="24" y1="-5" x2="-24" y2="30" stroke="#8a8a8a" stroke-width="5"/></g><text x="150" y="180" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700" fill="#6e6047">NO TERRITORY</text>',
+    modern: '<rect width="150" height="200" fill="#ffe000"/><rect x="150" width="150" height="200" fill="#ffffff"/><g transform="translate(225,100)"><ellipse cx="0" cy="-38" rx="20" ry="14" fill="#ffe000" stroke="#b08d1f" stroke-width="2"/><rect x="-16" y="-42" width="32" height="6" fill="#e6c200"/><rect x="-16" y="-34" width="32" height="6" fill="#e6c200"/><circle cx="0" cy="-48" r="4" fill="#e6c200"/><line x1="-28" y1="-5" x2="28" y2="35" stroke="#c9a13c" stroke-width="6"/><line x1="28" y1="-5" x2="-28" y2="35" stroke="#8a8a8a" stroke-width="6"/><circle cx="-28" cy="-5" r="6" fill="#c9a13c"/><circle cx="28" cy="-5" r="6" fill="#8a8a8a"/><path d="M0,15 l10,10 -10,6 -10,-6 Z" fill="#a4302a"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"756", name:"Papal States (temporal rule, early era)", t:{ va:IC.early }, flagKeys:{ va:"early" },
+      story:"Frankish king Pepin the Short defeats the Lombards and grants a band of central Italian territory to the pope in 756 &mdash; the traditional founding of over a thousand years of direct papal temporal rule. For most of this long era the papal gonfalone uses gold and red, the ancient colors of Rome (SPQR), rather than the yellow-and-white familiar today." },
+    { year:"1825", name:"Papal States (restored, pre-unification)", t:{ va:IC.restored }, flagKeys:{ va:"restored" },
+      story:"After Napoleon's fall, the 1814&ndash;15 Congress of Vienna restores the Papal States to papal rule across central Italy. Pope Leo XII formally adopts the yellow-and-white bicolor with crossed keys and tiara in 1825 &mdash; the same design Vatican City still flies today, unbroken since." },
+    { year:"1870", name:"The Roman Question", t:{ va:IC.noterritory }, flagKeys:{ va:"noterritory" },
+      story:"Troops of the Kingdom of Italy breach the Aurelian Walls at Porta Pia on 20 September 1870 and capture Rome, ending over a thousand years of papal temporal rule. Pope Pius IX declares himself a &quot;prisoner in the Vatican&quot; for nearly sixty years &mdash; the papal flag continues in private use, but corresponds to no sovereign territory recognized under international law." },
+    { year:"1929–present", name:"Vatican City State", t:{ va:IC.modern }, flagKeys:{ va:"modern" },
+      story:"The 11 February 1929 Lateran Treaty between Pope Pius XI and Mussolini's Italy ends the Roman Question by creating a new, deliberately tiny sovereign state around St. Peter's Basilica &mdash; the world's smallest internationally recognized sovereign state, governed by the pope as an absolute elective monarchy." }
+  ];
+
+  var IREGIONS = ["va"];
+  var IREGION_NAMES = { va:"Vatican City" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.va; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
