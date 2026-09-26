@@ -171,6 +171,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -182,7 +220,50 @@
   <p class="lede">No single flag survives from Georgia's ancient or early medieval past; the continuous thread here is not a banner but the Bagrationi dynasty's own maroon-and-gold cross, attested from the unified kingdom onward and knowingly revived, in a new five-cross form, when the modern republic adopted its current flag in January 2004.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Georgia, c. 600 BCE&ndash;present, nine political entities. This page is a flag timeline only &mdash; no interactive map of internal regional splits is included here; that layer is deferred to a future phase of the atlas, project-wide. See the Caucasus hub for a regional map covering Georgia alongside Armenia and Azerbaijan.
+    <b>Scope of this page:</b> the lands of present-day Georgia, c. 600 BCE&ndash;present, nine political entities. See the Caucasus hub for a regional map covering Georgia alongside Armenia and Azerbaijan.
+  </div>
+
+  <div class="imap-section">
+    <h2>Abkhazia and South Ossetia's de facto split, 1991&ndash;present</h2>
+    <p class="imap-sub">Georgia's own real border, with the one internal split its post-Soviet history genuinely supports &mdash; the two breakaway regions that fought their way out of Tbilisi's control in the early 1990s and remain, decades later, outside it. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Both splits are real, geographically stable, and still unresolved.</b> South Ossetia's 1991&ndash;92 war ends with a ceasefire that has never been reversed; Abkhazia's 1992&ndash;93 war ends with every Georgian government institution physically expelled from the territory. Russia's 2008 recognition of both as "independent" states is itself recognized by only a handful of other governments &mdash; Georgia, the UN, and nearly every other country still draw the national border exactly where it was before 1991. The internal line below is schematic, not a surveyed administrative boundary.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1991</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 440 251" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="220" y="14">RUSSIA</text>
+          <text x="60" y="14">RUSSIA (Black Sea coast)</text>
+          <text x="380" y="60">AZERBAIJAN</text>
+          <text x="340" y="235">ARMENIA</text>
+          <text x="170" y="240">TURKEY</text>
+        </g>
+        <path id="ireg-core" class="ireg-fill" d="M120.9,185.1 L129.4,152.3 L115.2,99.8 L82.3,71.5 L50.8,62.6 L30.0,39.1 L36.9,30.0 L85.0,43.1 L168.7,55.6 L246.1,92.5 L256.1,106.7 L290.6,94.7 L343.6,110.8 L361.0,142.3 L396.8,160.1 L382.0,170.7 L410.0,212.3 L402.3,221.4 L371.6,216.8 L329.2,194.7 L315.3,207.2 L236.3,219.2 L181.5,181.5 L120.9,185.1 Z"/>
+        <path id="ireg-abkhazia" class="ireg-fill" d="M30.0,39.1 L36.9,30.0 L85.0,43.1 L95.0,75.0 L60.0,100.0 L50.8,62.6 Z"/>
+        <path id="ireg-ossetia" class="ireg-fill" d="M110.0,50.0 L168.7,55.6 L200.0,70.0 L175.0,105.0 L130.0,100.0 L105.0,80.0 Z"/>
+        <path class="iborder-line" id="ib-core-abkhazia" d="M85.0,43.1 L95.0,75.0 L60.0,100.0"/>
+        <path class="iborder-line" id="ib-core-ossetia" d="M110.0,50.0 L105.0,80.0 L130.0,100.0 L175.0,105.0 L200.0,70.0"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-abkhazia" x="60" y="65" style="font-size:8px">ABKHAZIA</text>
+          <text class="ireg-label" id="ilbl-ossetia" x="150" y="85" style="font-size:7.5px">S. OSSETIA</text>
+          <text class="ireg-label" id="ilbl-core" x="260" y="160">REST OF GEORGIA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Georgia declares independence</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Schematic internal partition on a real traced border &mdash; the Abkhazia/South Ossetia lines are approximate, not surveyed administrative boundaries.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -535,6 +616,128 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    unified:"#8f3a4a", modern:"#9c1f3a", abkhazia:"#2f6f47", ossetia:"#b8862f"
+  };
+  var INAMES = {
+    unified:"Republic of Georgia (whole territory)", modern:"Republic of Georgia (Tbilisi-controlled core)",
+    abkhazia:"Abkhazia (de facto independent, unrecognized)", ossetia:"South Ossetia (de facto independent, unrecognized)"
+  };
+  var IFLAGS = {
+    georgia_old: '<rect width="300" height="200" fill="#8f3a4a"/><rect x="0" y="0" width="92" height="60" fill="#f4efe1"/><rect x="0" y="0" width="92" height="20" fill="#241f14"/><rect x="0" y="40" width="92" height="20" fill="#241f14"/>',
+    georgia_modern: '<rect width="300" height="200" fill="#f4efe1"/><rect x="128" width="44" height="200" fill="#9c1f3a"/><rect y="78" width="300" height="44" fill="#9c1f3a"/><g fill="#9c1f3a"><g transform="translate(65,40)"><rect x="-10" y="-3" width="20" height="6"/><rect x="-3" y="-10" width="6" height="20"/></g><g transform="translate(235,40)"><rect x="-10" y="-3" width="20" height="6"/><rect x="-3" y="-10" width="6" height="20"/></g><g transform="translate(65,160)"><rect x="-10" y="-3" width="20" height="6"/><rect x="-3" y="-10" width="6" height="20"/></g><g transform="translate(235,160)"><rect x="-10" y="-3" width="20" height="6"/><rect x="-3" y="-10" width="6" height="20"/></g></g>',
+    abkhazia_flag: '<rect width="300" height="200" fill="#fff"/><rect y="0" width="300" height="28.6" fill="#5aa02c"/><rect y="57.1" width="300" height="28.6" fill="#5aa02c"/><rect y="114.3" width="300" height="28.6" fill="#5aa02c"/><rect y="171.4" width="300" height="28.6" fill="#5aa02c"/><rect x="0" y="0" width="100" height="100" fill="#a4302a"/><circle cx="50" cy="50" r="26" fill="#fff"/>',
+    ossetia_flag: '<rect width="300" height="66.7" fill="#fff"/><rect y="66.7" width="300" height="66.6" fill="#c1272d"/><rect y="133.3" width="300" height="66.7" fill="#f9d616"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"1991", name:"Georgia declares independence", t:{ core:IC.unified, abkhazia:IC.unified, ossetia:IC.unified }, flagKeys:{ core:"georgia_old", abkhazia:"georgia_old", ossetia:"georgia_old" },
+      story:"Georgia declares restoration of independence on 9 April 1991, nominally reuniting the whole territory shown here under Tbilisi. Conflict in South Ossetia had already flared that January, and the fragile unity shown at this snapshot does not last the year." },
+    { year:"1992", name:"South Ossetia's war ends in de facto split", t:{ core:IC.unified, abkhazia:IC.unified, ossetia:IC.ossetia }, flagKeys:{ core:"georgia_old", abkhazia:"georgia_old", ossetia:"ossetia_flag" },
+      story:"The 1991&ndash;92 South Ossetia War ends with a June 1992 ceasefire, brokered with Russian involvement, that has never been reversed. South Ossetia governs itself with its own institutions and flag &mdash; a white-red-yellow tricolor &mdash; recognized by almost no one, including Georgia." },
+    { year:"1993", name:"Abkhazia's war ends in de facto split", t:{ core:IC.unified, abkhazia:IC.abkhazia, ossetia:IC.ossetia }, flagKeys:{ core:"georgia_old", abkhazia:"abkhazia_flag", ossetia:"ossetia_flag" },
+      story:"The 1992&ndash;93 War in Abkhazia ends that September with every Georgian government institution expelled from the territory and a mass displacement of ethnic Georgian residents. Abkhazia's own green-and-white striped flag, with a red canton, flies over a region no Georgian government has controlled since." },
+    { year:"2008–present", name:"Russian recognition freezes the split", t:{ core:IC.modern, abkhazia:IC.abkhazia, ossetia:IC.ossetia }, flagKeys:{ core:"georgia_modern", abkhazia:"abkhazia_flag", ossetia:"ossetia_flag" },
+      story:"Georgia adopts its current five-cross flag in January 2004. The brief August 2008 Russo-Georgian War over South Ossetia ends with Russia formally recognizing both Abkhazia and South Ossetia as independent states &mdash; a recognition joined by only a handful of other governments. The line on this map has not moved since." }
+  ];
+
+  var IREGIONS = ["core","abkhazia","ossetia"];
+  var IREGION_NAMES = { core:"Rest of Georgia", abkhazia:"Abkhazia", ossetia:"South Ossetia" };
+  var IADJ = [["core","abkhazia"],["core","ossetia"]];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.4");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
@@ -546,5 +749,6 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+})();
 </script>
 </body></html>
