@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,43 @@
   <p class="lede">What makes Uruguay's founding genuinely unusual in this atlas is that it did not become independent by winning its own war of liberation the way most of its neighbors did. After the 1825 Thirty-Three Orientals uprising dragged Argentina and Brazil into a war neither could win outright, Britain stepped in as mediator: the 1828 Treaty of Montevideo, guaranteed by the United Kingdom, created Uruguay as a deliberate buffer state wedged between its two much larger neighbors &mdash; independence granted less to satisfy Uruguayan self-determination than to keep Argentina and Brazil from fighting each other over the territory again.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Uruguay, c. 1500s (Charrúa era)&ndash;present. This page carries no internal-partition map &mdash; there is no genuine internal governing split within Uruguay's own modern borders at any point in its history, so it follows the atlas's single-continuous-timeline template rather than the split-map template used elsewhere. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Uruguay, c. 1500s (Charrúa era)&ndash;present. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, five rulers</h2>
+    <p class="imap-sub">Uruguay's own real border, traced whole &mdash; another page in this atlas without an internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is one of the countries in the atlas that doesn't split internally.</b> The Banda Oriental was a contested frontier between Spain and Portugal for over a century, but contested does not mean divided &mdash; whichever crown or state held the upper hand at a given moment held the whole territory, not a separate piece of it. What changes here is only who that was.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">to 1680s</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 330" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="60" y="14">BRAZIL</text>
+          <text x="230" y="14">BRAZIL</text>
+          <text x="40" y="200">ARGENTINA</text>
+          <text x="230" y="250">ATLANTIC</text>
+        </g>
+        <path id="ireg-uy" class="ireg-fill" d="M57.2,23.7 L90.5,17.2 L142.0,64.4 L161.1,62.6 L214.0,101.7 L254.3,135.5 L284.0,177.0 L261.4,205.9 L275.6,240.5 L253.3,278.9 L195.3,312.8 L157.4,300.6 L129.6,307.1 L82.1,280.9 L47.3,282.9 L16.0,249.1 L20.0,209.7 L31.1,196.1 L30.6,135.3 L44.4,72.6 L57.2,23.7 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-uy" x="150" y="160">URUGUAY</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Charr&uacute;a and other indigenous peoples</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -411,6 +485,109 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = {
+    precontact: "#5c4a2a", colonial: "#204b5c", cisplatina: "#2a7f3e", independence: "#75aadb", modern: "#0038a8"
+  };
+  var INAMES = {
+    precontact: "No flag documented (Charrúa & other peoples)", colonial: "Banda Oriental (Spanish colonial, contested)",
+    cisplatina: "Cisplatina (Portuguese/Brazilian rule)", independence: "Independence / buffer-state settlement",
+    modern: "Oriental Republic of Uruguay"
+  };
+  var IFLAGS = {
+    precontact: '<rect width="300" height="200" fill="#5c4a2a"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    colonial: '<rect width="300" height="200" fill="#f4efe1"/><g stroke="#9c3b28" stroke-width="26" stroke-linecap="square"><line x1="10" y1="10" x2="290" y2="190"/><line x1="290" y1="10" x2="10" y2="190"/></g>',
+    cisplatina: '<rect width="150" height="200" fill="#204b5c"/><rect x="150" width="150" height="200" fill="#2a7f3e"/><circle cx="150" cy="100" r="30" fill="#f6b40e" stroke="#f4efe1" stroke-width="3"/><circle cx="150" cy="100" r="14" fill="#204b5c"/>',
+    independence: '<rect width="300" height="66.7" fill="#75aadb"/><rect y="66.7" width="300" height="66.7" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#9c3b28"/><text x="150" y="105" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#201a12">LIBERTAD O MUERTE</text>',
+    modern: '<rect width="300" height="200" fill="#f4efe1"/><rect y="22.2" width="300" height="22.2" fill="#0038a8"/><rect y="66.7" width="300" height="22.2" fill="#0038a8"/><rect y="111.1" width="300" height="22.2" fill="#0038a8"/><rect y="155.6" width="300" height="22.2" fill="#0038a8"/><rect x="0" y="0" width="130" height="111" fill="#f4efe1" stroke="#d9c9a0" stroke-width="1"/><circle cx="65" cy="55" r="18" fill="#f6b40e"/><circle cx="65" cy="55" r="9" fill="#e0a10c"/><g stroke="#f6b40e" stroke-width="3"><line x1="85" y1="55" x2="95" y2="55"/><line x1="79.1" y1="68.1" x2="86.2" y2="75.2"/><line x1="65" y1="75" x2="65" y2="85"/><line x1="50.9" y1="68.1" x2="43.8" y2="75.2"/><line x1="45" y1="55" x2="35" y2="55"/><line x1="50.9" y1="41.9" x2="43.8" y2="34.8"/><line x1="65" y1="35" x2="65" y2="25"/><line x1="79.1" y1="41.9" x2="86.2" y2="34.8"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"to 1680s", name:"Charrúa and other indigenous peoples", t:{ uy:IC.precontact }, flagKeys:{ uy:"precontact" },
+      story:"The Charrúa and other indigenous peoples inhabit the territory in small, mobile communities before European contact, with no single ruling authority over the region. No flag or fixed territorial banner is documented." },
+    { year:"1680s", name:"Banda Oriental (Spanish colonial, contested with Portugal)", t:{ uy:IC.colonial }, flagKeys:{ uy:"colonial" },
+      story:"Spain and Portugal dispute this stretch of riverbank for well over a century, Portugal founding Colônia do Sacramento in 1680 and Spain answering with Montevideo in 1724&ndash;30. The Cross of Burgundy, Spain's standard colonial banner, flies over the contested garrisons until Brazilian forces seize the territory outright in 1816." },
+    { year:"1816", name:"Cisplatina (Portuguese/Brazilian rule)", t:{ uy:IC.cisplatina }, flagKeys:{ uy:"cisplatina" },
+      story:"Portuguese-Brazilian forces complete the annexation by 1817, renaming it the Cisplatine Province. After Brazil's own 1822 break from Portugal, the province passes intact into the newly independent Empire of Brazil &mdash; a direct trigger for the 1825 uprising that follows." },
+    { year:"1825", name:"Independence and the buffer-state settlement", t:{ uy:IC.independence }, flagKeys:{ uy:"independence" },
+      story:"The Thirty-Three Orientals rise against Brazilian rule in 1825, triggering a war between Argentina and Brazil that neither side can settle by force. Britain brokers the December 1828 Treaty of Montevideo, creating an independent Uruguay as a deliberate buffer state between the two powers." },
+    { year:"1830–present", name:"Oriental Republic of Uruguay (modern)", t:{ uy:IC.modern }, flagKeys:{ uy:"modern" },
+      story:"The 1830 constitution formally establishes the republic, fixing the flag in its final form the same year. Nine white and blue stripes for the republic's nine original departments, and a golden Sol de Mayo shared with Argentina's own flag, have flown unaltered through everything since, including the 1973&ndash;85 dictatorship." }
+  ];
+
+  var IREGIONS = ["uy"];
+  var IREGION_NAMES = { uy:"Uruguay" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.uy; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
