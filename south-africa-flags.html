@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,45 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day South Africa, from Khoikhoi and San societies through Dutch and British colonization, the Boer Republics, the Union, and apartheid to the modern democratic republic. The Zulu Kingdom under Shaka and the 1879 Anglo-Zulu War are discussed in the prose of the relevant colonial-era entry rather than as a separate timeline row, since their dates run concurrent with British/Boer rule rather than in succession to it. No interactive map on this page &mdash; deferred to a future phase of the atlas. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>British colony and Boer republics, 1806&ndash;1910</h2>
+    <p class="imap-sub">South Africa's own real border, split into the two pieces that were, for over half a century, ruled by entirely different governments: the British-administered Cape and Natal on the coast, and the independent Boer republics (Transvaal and the Orange Free State) in the interior highveld. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>The Boer republics were fully independent states, not colonies.</b> Britain formally recognized Transvaal's independence in 1852 and the Orange Free State's in 1854; both later lost that independence by force in the 1899&ndash;1902 Second Boer War, not by treaty. The border below only solidifies for the span the two pieces were genuinely governed apart &mdash; it dissolves before the republics existed and again after the 1910 Union reunites the whole territory under one government.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">pre-1652</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="330" y="60">MOZAMBIQUE</text>
+          <text x="90" y="30">NAMIBIA</text>
+          <text x="230" y="40">BOTSWANA</text>
+          <text x="140" y="290">CAPE OF GOOD HOPE</text>
+        </g>
+        <path id="ireg-coast" class="ireg-fill" d="M310.69,165.88 L307.29,168.74 L299.91,178.80 L295.06,188.98 L285.19,203.16 L265.51,223.59 L253.23,235.47 L240.08,244.48 L221.89,252.16 L213.01,253.19 L210.77,258.69 L200.19,255.76 L191.57,259.53 L172.71,255.71 L162.16,258.13 L154.95,257.09 L137.00,264.91 L122.14,268.04 L111.38,275.52 L103.47,276.00 L96.10,268.94 L90.22,268.58 L82.72,259.74 L81.90,262.48 L79.59,257.16 L79.68,245.55 L74.03,232.29 L79.64,228.68 L79.19,213.48 L67.79,194.95 L59.04,178.18 L59.02,178.13 L46.52,152.40 L54.86,142.61 L61.73,148.03 L64.67,156.50 L72.48,157.94 L83.42,161.69 L92.77,160.24 L108.31,150.12 L108.33,76.99 L113.03,79.97 L123.35,98.78 L121.75,110.84 L125.63,117.79 L138.10,115.77 L146.80,106.94 L155.05,100.98 L159.31,91.50 L167.80,86.91 L175.13,89.31 L183.45,94.86 L197.62,95.84 L208.75,91.23 L210.51,85.05 L213.57,75.58 L223.04,73.99 L228.28,66.56 L234.07,53.36 L249.70,38.58 L274.33,24.00 L281.41,24.22 L289.84,27.57 L295.70,25.19 L304.95,27.17 L313.29,55.04 L317.82,69.10 L314.72,91.18 L316.21,98.29 L307.42,94.66 L302.39,96.07 L300.75,101.84 L295.99,109.27 L296.16,116.12 L306.54,126.85 L316.73,124.71 L320.28,115.92 L333.48,116.08 L329.13,130.50 L327.07,146.95 L322.57,155.88 L310.69,165.88 Z"/>
+        <path id="ireg-interior" class="ireg-fill" d="M130,70 L250,65 L295,115 L300,175 L255,205 L190,205 L140,180 L105,140 L100,95 Z"/>
+        <path class="iborder-line" id="ib-coast-interior" d="M130,70 L250,65 L295,115 L300,175 L255,205 L190,205 L140,180 L105,140 L100,95"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-coast" x="270" y="230">CAPE &amp; NATAL</text>
+          <text class="ireg-label" id="ilbl-interior" x="195" y="135">TRANSVAAL &amp; O.F.S.</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Khoikhoi and San societies</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Schematic internal partition on a real traced border &mdash; the interior/coastal dividing line approximates the old Transvaal/Orange Free State frontier, not a surveyed boundary.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -455,6 +531,120 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { none:"#6b5c4a", colony:"#6e6047", boer:"#5c7a3a", apartheid:"#7c2e1f", republic:"#204b5c" };
+  var INAMES = { none:"No unified rule", colony:"British colonial administration", boer:"Boer republics (Transvaal &amp; O.F.S.)", apartheid:"Union/Republic (segregation era)", republic:"Republic of South Africa (democratic)" };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    dutch: '<rect width="300" height="66.6" fill="#ae1c28"/><rect y="66.6" width="300" height="66.6" fill="#fff"/><rect y="133.2" width="300" height="66.8" fill="#21468b"/>',
+    britishblue: '<rect width="300" height="200" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="32" fill="#fff" stroke="#6e6047" stroke-width="2"/>',
+    vierkleur: '<rect width="300" height="200" fill="#f4efe1"/><rect width="100" height="200" fill="#009e49"/><rect width="300" height="66.6" fill="#000"/><rect y="66.6" width="300" height="66.7" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#002395"/><rect width="100" height="200" fill="#009e49"/>',
+    britishred: '<rect width="300" height="200" fill="#c8102e"/><rect width="150" height="100" fill="#c8102e"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#00247d"/><rect width="150" height="20" y="40" fill="#00247d"/><circle cx="220" cy="120" r="32" fill="#fff" stroke="#6e6047" stroke-width="2"/>',
+    apartheid: '<rect width="300" height="66.6" fill="#ff6b00"/><rect y="66.6" width="300" height="66.6" fill="#fff"/><rect y="133.2" width="300" height="66.8" fill="#002395"/><rect x="115" y="76" width="70" height="48" fill="#fff"/><rect x="118" y="79" width="21" height="16" fill="#00247d"/><rect x="139" y="79" width="21" height="16" fill="#de3831"/><rect x="160" y="79" width="21" height="16" fill="#007a4d"/>',
+    modern: '<polygon points="0,0 120,100 0,200" fill="#000"/><polygon points="0,0 300,0 300,80 90,100 300,120 300,200 0,200 0,0" fill="none"/><rect width="300" height="80" fill="#de3831"/><rect y="120" width="300" height="80" fill="#002395"/><polygon points="0,80 150,100 0,120" fill="#fff"/><polygon points="0,86 180,100 0,114" fill="#007a4d"/><polygon points="0,0 120,100 0,200" fill="#000"/><polygon points="0,20 100,100 0,180" fill="#ffb612"/><polygon points="0,60 60,100 0,140" fill="#007a4d"/>'
+  };
+  function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.none + '"></span>Pre-colonial societies</span><span><span class="sw" style="background:' + IC.colony + '"></span>Colony / Dominion</span><span><span class="sw" style="background:' + IC.boer + '"></span>Boer republics</span><span><span class="sw" style="background:' + IC.apartheid + '"></span>White-minority rule</span><span><span class="sw" style="background:' + IC.republic + '"></span>Republic, multiparty democracy</span>';
+
+  var ISNAP = [
+    { year:"pre-1652", name:"Khoikhoi and San societies", t:{ coast:IC.none, interior:IC.none }, flagKeys:{ coast:"none", interior:"none" },
+      story:"Khoikhoi pastoralists and San hunter-gatherers inhabit the region for thousands of years with no centralized state and no flag of any kind &mdash; shown here as one undivided territory." },
+    { year:"1652&ndash;1806", name:"Dutch Cape Colony", t:{ coast:IC.colony, interior:IC.colony }, flagKeys:{ coast:"dutch", interior:"dutch" },
+      story:"The Dutch East India Company establishes a supply station at the Cape in 1652 under the Dutch Prince's Flag; the interior highveld remains outside colonial control, so the whole territory is shown as one undivided Dutch sphere." },
+    { year:"1806&ndash;1852", name:"British Cape Colony (Boer republics not yet founded)", t:{ coast:IC.colony, interior:IC.colony }, flagKeys:{ coast:"britishblue", interior:"britishblue" },
+      story:"Britain seizes the Cape from the Dutch in 1806; Boer trekboers move inland from the 1830s in the Great Trek, but no independent Boer state yet exists, so the map still shows one undivided territory under British claim." },
+    { year:"1852&ndash;1902", name:"British Cape &amp; Natal, and the Boer Republics", t:{ coast:IC.colony, interior:IC.boer }, flagKeys:{ coast:"britishblue", interior:"vierkleur" },
+      story:"Britain recognizes Transvaal's independence in 1852 and the Orange Free State's in 1854 &mdash; for half a century, the coast (Cape Colony and Natal) and the interior highveld are genuinely separate countries, until the 1899&ndash;1902 Second Boer War ends both republics by force." },
+    { year:"1902&ndash;1910", name:"Reunified under British rule", t:{ coast:IC.colony, interior:IC.colony }, flagKeys:{ coast:"britishred", interior:"britishred" },
+      story:"Following the Boer War, Transvaal and the Orange Free State become British colonies alongside the Cape and Natal &mdash; all four territories now governed by the same colonial authority for the first time, ahead of formal union in 1910." },
+    { year:"1910&ndash;1928", name:"Union of South Africa (Dominion)", t:{ coast:IC.colony, interior:IC.colony }, flagKeys:{ coast:"britishred", interior:"britishred" },
+      story:"The four colonies unite as the self-governing Union of South Africa within the British Empire on 31 May 1910, flying the British Red Ensign with the Union's own badge." },
+    { year:"1928&ndash;1994", name:"Union / Republic of South Africa (segregation and apartheid)", t:{ coast:IC.apartheid, interior:IC.apartheid }, flagKeys:{ coast:"apartheid", interior:"apartheid" },
+      story:"A new orange-white-blue flag is adopted in 1928; the National Party's 1948 election victory formalizes apartheid, a system of racial segregation that governs the whole country shown here until 1994." },
+    { year:"1994&ndash;present", name:"Republic of South Africa (democratic)", t:{ coast:IC.republic, interior:IC.republic }, flagKeys:{ coast:"modern", interior:"modern" },
+      story:"South Africa's first fully democratic, universal-suffrage election in April 1994 brings Nelson Mandela to power and introduces the six-color \"rainbow nation\" flag, governing the whole reunited territory as one constitutional democracy." }
+  ];
+
+  var IREGIONS = ["coast","interior"];
+  var IREGION_NAMES = { coast:"Cape &amp; Natal (coast)", interior:"Transvaal &amp; O.F.S. (interior)" };
+  var IADJ = [["coast","interior"]];
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.innerHTML = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + (id === "coast" ? "coast" : "interior")).setAttribute("fill", era.t[id]);
+    });
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.4");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
