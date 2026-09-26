@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,42 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day (north) Sudan, antiquity&ndash;present, seven political entities. No interactive map on this page &mdash; that layer is deferred project-wide to a future phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Seven eras, one real border</h2>
+    <p class="imap-sub">Sudan's own present-day border (post-2011, without South Sudan), traced whole and used retrospectively across the earlier eras. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <div class="rule-box">
+      <b>This page doesn't split internally.</b> Historic Sudan's real border once ran much further south, and the 1956&ndash;2011 period genuinely was governed as one country with what's now South Sudan &mdash; that split lives on <a href="south-sudan-flags.html">South Sudan's own page</a> as a change of who rules the south, not as an internal partition drawn on this map. This map shows the currently-Sudanese portion of each historic state.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1070 BC&ndash;1504 AD</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="330" y="40">RED SEA</text>
+          <text x="60" y="30">LIBYA / EGYPT</text>
+          <text x="60" y="270">CHAD / C.A.R.</text>
+          <text x="220" y="290">SOUTH SUDAN</text>
+        </g>
+        <path id="ireg-sudan" class="ireg-fill" d="M258.85,260.09 L256.33,259.72 L256.64,250.35 L254.46,243.88 L245.10,236.44 L242.92,222.86 L245.10,208.96 L236.68,207.67 L235.44,211.87 L224.52,212.84 L228.89,218.34 L230.45,229.65 L220.47,240.00 L211.42,253.58 L202.07,255.52 L186.79,244.53 L179.93,248.41 L178.06,253.90 L168.70,257.46 L168.08,261.34 L149.99,261.34 L147.49,257.46 L134.40,256.81 L127.85,260.04 L122.86,258.43 L113.50,247.44 L110.38,242.26 L97.29,244.85 L92.30,253.58 L87.62,270.39 L81.38,273.95 L75.80,276.00 L74.33,275.12 L68.03,269.70 L66.86,263.85 L69.81,256.01 L69.76,248.32 L59.28,236.55 L57.22,228.49 L57.44,223.93 L50.77,218.38 L50.57,207.44 L46.76,200.17 L40.38,201.26 L42.21,194.34 L46.91,186.49 L44.86,178.69 L50.83,172.91 L47.04,168.51 L51.84,156.89 L60.14,143.02 L75.80,144.33 L74.91,69.57 L75.13,61.67 L96.02,61.61 L96.02,24.00 L169.05,24.00 L239.53,24.00 L311.58,24.00 L317.43,42.48 L313.45,45.90 L316.09,65.28 L322.76,87.77 L329.68,92.41 L339.62,99.37 L330.43,110.12 L317.05,113.21 L311.33,118.99 L309.54,131.51 L301.71,159.18 L303.64,166.72 L300.75,182.89 L293.36,201.45 L282.41,210.78 L274.62,225.16 L272.79,232.86 L264.19,238.14 L258.81,257.85 L258.85,260.09 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-sudan" x="185" y="150">SUDAN</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Kingdom of Kush &amp; Christian Nubian kingdoms</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (Sudan's present-day extent, used retrospectively) &mdash; no internal partition; see the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -458,6 +531,82 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { fragmented:"#6b5c4a", ottoman:"#c9a13c", condominium:"#204b5c", sovereign:"#a9762f" };
+  var IFLAGS = {
+    kush: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO SINGLE FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    funj: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    turcoegypt: '<rect width="300" height="200" fill="#a4302a"/><g fill="#f4efe1"><path d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/><path d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/></g>',
+    mahdist: '<rect width="300" height="200" fill="#1a1a1a"/><text x="150" y="95" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#f4efe1">ARABIC</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#f4efe1">INSCRIPTION</text>',
+    angloegypt: '<rect width="150" height="200" fill="#a4302a"/><g fill="#f4efe1"><path d="M75,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/></g><rect x="150" width="150" height="100" fill="#00247d"/><rect x="150" y="100" width="150" height="100" fill="#f4efe1"/><rect x="150" width="150" height="200" fill="none" stroke="#c9a13c" stroke-width="3" stroke-dasharray="6 5"/>',
+    indep: '<rect width="300" height="66.7" fill="#0072ce"/><rect y="66.7" width="300" height="66.7" fill="#f4efe1"/><rect y="133.4" width="300" height="66.6" fill="#009e49"/><path fill="#c9a13c" d="M150,90 a10,10 0 1,0 0,20 a8,8 0 1,1 0,-20 Z"/>',
+    modern: '<rect width="300" height="66.7" fill="#d21034"/><rect y="66.7" width="300" height="66.7" fill="#f4efe1"/><rect y="133.4" width="300" height="66.6" fill="#1a1a1a"/><path d="M0,0 L110,100 L0,200 Z" fill="#009e49"/>'
+  };
+  function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.fragmented + '"></span>Successive kingdoms</span><span><span class="sw" style="background:' + IC.ottoman + '"></span>Ottoman-Egyptian rule</span><span><span class="sw" style="background:' + IC.condominium + '"></span>Condominium</span><span><span class="sw" style="background:' + IC.sovereign + '"></span>Sultanate / Republic, independent</span>';
+
+  var ISNAP = [
+    { year:"c. 1070 BC&ndash;1504 AD", name:"Kingdom of Kush &amp; Christian Nubian kingdoms", fill:IC.fragmented, flagKey:"kush",
+      story:"Kush, Christian Nubia's kingdoms (Nobatia, Makuria, Alodia), and their successors govern the middle Nile for over two and a half thousand years, through pharaonic, Meroitic, and Christian eras &mdash; no single flag survives from any of them." },
+    { year:"1504&ndash;1821", name:"Funj Sultanate (Sennar)", fill:IC.fragmented, flagKey:"funj",
+      story:"The Funj Sultanate, centered on Sennar, unites much of what's now northern Sudan as an Islamic state from 1504, ruling for over three centuries before Ottoman-Egyptian conquest ends it." },
+    { year:"1821&ndash;1885", name:"Turco-Egyptian Sudan", fill:IC.ottoman, flagKey:"turcoegypt",
+      story:"Muhammad Ali's Egypt, nominally under Ottoman suzerainty, conquers and administers Sudan from 1821, extracting slaves and taxes under a red Ottoman-style banner with crescent and star." },
+    { year:"1885&ndash;1898", name:"Mahdist State", fill:IC.fragmented, flagKey:"mahdist",
+      story:"Muhammad Ahmad, proclaiming himself the Mahdi, leads a religious uprising that overruns Khartoum in 1885 and rules an independent Islamic state for thirteen years before Anglo-Egyptian reconquest." },
+    { year:"1899&ndash;1956", name:"Anglo-Egyptian Sudan", fill:IC.condominium, flagKey:"angloegypt",
+      story:"Britain and Egypt jointly govern Sudan as a condominium from 1899 following the reconquest, administering north and south under different policies until independence in 1956." },
+    { year:"1956&ndash;1970", name:"Republic of the Sudan (independence flag)", fill:IC.sovereign, flagKey:"indep",
+      story:"Sudan becomes independent on 1 January 1956 under a blue-white-green tricolor, immediately inheriting the north-south tensions that will erupt into the First Sudanese Civil War the same year." },
+    { year:"1970&ndash;present", name:"Republic of the Sudan (modern flag)", fill:IC.sovereign, flagKey:"modern",
+      story:"The current red-white-black pan-Arab tricolor with a green hoist triangle is adopted in 1970 under Gaafar Nimeiry, and remains Sudan's flag through the 2011 secession of South Sudan and beyond." }
+  ];
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.innerHTML = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+    document.getElementById("ireg-sudan").setAttribute("fill", era.fill);
+    iEraOwners.innerHTML = "<b>" + era.name + "</b>";
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKey) + '<div class="ic-label">Sudan</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
