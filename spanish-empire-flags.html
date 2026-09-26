@@ -164,6 +164,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -176,6 +214,48 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the Spanish Empire as a transnational entity, 1492&ndash;1898, six phases. See <a href="mexico-flags.html">Mexico</a> and <a href="spain-flags.html">Spain</a> for how the story continues on either side of the imperial relationship. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Peak extent and the long unwinding</h2>
+    <p class="imap-sub">A simplified schematic of the empire's own reach across the Americas and the Philippines &mdash; not a traced national border, since the Spanish Empire was never a single contiguous country. Each blob is a rough stand-in for a major piece of the empire; it fills in gold when Spain holds it and fades to grey once it's lost. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This is a schematic extent map, not a surveyed one.</b> The blobs below are simplified stand-ins for Iberia, New Spain (Mexico &amp; Central America), Spanish South America, the Caribbean (Cuba &amp; Puerto Rico), and the Philippines &mdash; positioned for rough legibility, not geographic accuracy. Real borders for each successor country live on that country's own page in this atlas.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1492</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="65" y="20">IBERIA</text>
+          <text x="330" y="120">PHILIPPINES</text>
+        </g>
+        <ellipse id="ireg-iberia" class="ireg-fill" cx="65" cy="45" rx="30" ry="20"/>
+        <ellipse id="ireg-newspain" class="ireg-fill" cx="115" cy="100" rx="34" ry="24"/>
+        <ellipse id="ireg-caribbean" class="ireg-fill" cx="168" cy="85" rx="18" ry="12"/>
+        <ellipse id="ireg-southamerica" class="ireg-fill" cx="150" cy="180" rx="34" ry="55"/>
+        <ellipse id="ireg-philippines" class="ireg-fill" cx="330" cy="140" rx="24" ry="18"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-iberia" x="65" y="49">SPAIN</text>
+          <text class="ireg-label" id="ilbl-newspain" x="115" y="104" style="font-size:8px">NEW SPAIN</text>
+          <text class="ireg-label" id="ilbl-caribbean" x="168" y="89" style="font-size:7px">CARIBBEAN</text>
+          <text class="ireg-label" id="ilbl-southamerica" x="150" y="184" style="font-size:8px">S. AMERICA</text>
+          <text class="ireg-label" id="ilbl-philippines" x="330" y="144" style="font-size:7px">PHILIPPINES</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">1492 &mdash; unification and first voyage</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Simplified schematic extent map, not traced national borders and not surveyed &mdash; see the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -413,6 +493,89 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { none:"#d9c9a0", held:"#a9762f", lost:"#6e6047" };
+  var IFLAGS = {
+    y1492: '<rect width="300" height="200" fill="#aa151b"/><rect x="60" y="50" width="80" height="100" fill="#f1bf00"/><rect x="160" y="50" width="80" height="100" fill="#f4efe1"/>',
+    conquest: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#a4302a" stroke-width="26"/>',
+    viceroy: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#a4302a" stroke-width="26"/><rect x="0" y="0" width="130" height="90" fill="#f1bf00" opacity="0.25"/>',
+    peak: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#a4302a" stroke-width="26"/><circle cx="150" cy="100" r="20" fill="#f1bf00" stroke="#a4302a" stroke-width="3"/>',
+    independence: '<rect width="300" height="50" fill="#aa151b"/><rect y="50" width="300" height="100" fill="#f1bf00"/><rect y="150" width="300" height="50" fill="#aa151b"/><text x="150" y="112" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" font-weight="700" fill="#7c2e1f">1810&ndash;1825</text>',
+    residual: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#a4302a" stroke-width="26"/>'
+  };
+  function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.none + '"></span>Not yet Spanish</span><span><span class="sw" style="background:' + IC.held + '"></span>Held by Spain</span><span><span class="sw" style="background:' + IC.lost + '"></span>Lost / independent</span>';
+
+  var REGIONS = ["iberia","newspain","caribbean","southamerica","philippines"];
+  var RNAMES = { iberia:"Spain (Iberia)", newspain:"New Spain (Mexico &amp; Central America)", caribbean:"Caribbean (Cuba &amp; Puerto Rico)", southamerica:"Spanish South America", philippines:"Philippines" };
+
+  var ISNAP = [
+    { year:"1492", name:"1492 &mdash; unification and first voyage", t:{ iberia:IC.held, newspain:IC.none, caribbean:IC.none, southamerica:IC.none, philippines:IC.none }, flagKey:"y1492",
+      story:"The fall of Granada completes Spain's own unification under Isabella and Ferdinand, and Columbus's Crown-sponsored voyage that same year opens the Atlantic &mdash; the empire's very first territory is, for now, just Iberia itself." },
+    { year:"1519&ndash;1533", name:"Conquest of the Aztec and Inca empires", t:{ iberia:IC.held, newspain:IC.held, caribbean:IC.held, southamerica:IC.held, philippines:IC.none }, flagKey:"conquest",
+      story:"Hern\u00e1n Cort\u00e9s topples the Aztec Empire by 1521; Francisco Pizarro topples the Inca Empire by 1533. Two of the Americas' greatest civilizations fall within fourteen years to small, disease-aided Spanish expeditions, and the Caribbean islands already serve as staging ground for both campaigns." },
+    { year:"1535/1542&ndash;1580s", name:"The viceroyalties (New Spain and Peru)", t:{ iberia:IC.held, newspain:IC.held, caribbean:IC.held, southamerica:IC.held, philippines:IC.held }, flagKey:"viceroy",
+      story:"The Viceroyalty of New Spain (1535) and the Viceroyalty of Peru (1542) formalize Spanish administration over the conquered Americas; Miguel L\u00f3pez de Legazpi's 1565&ndash;71 expedition adds the Philippines, reached across the Pacific from Mexico rather than around Africa." },
+    { year:"1580s&ndash;1808", name:"Imperial peak and Bourbon reforms", t:{ iberia:IC.held, newspain:IC.held, caribbean:IC.held, southamerica:IC.held, philippines:IC.held }, flagKey:"peak",
+      story:"Silver from Potos\u00ed and Mexican mines sustains Spain's ambitions across two centuries; the empire on which \"the sun never sets\" spans every piece shown here at once, even as 18th-century Bourbon reforms try to tighten royal control over an increasingly restive colonial administration." },
+    { year:"1808&ndash;1830s", name:"Latin American wars of independence", t:{ iberia:IC.held, newspain:IC.lost, caribbean:IC.held, southamerica:IC.lost, philippines:IC.held }, flagKey:"independence",
+      story:"Napoleon's 1808 invasion of Spain and the forced abdication of Ferdinand VII trigger juntas and independence movements across the Americas; by the 1820s, Mexico, Peru, and nearly every mainland colony has broken away, leaving Spain only Cuba, Puerto Rico, and the Philippines of its once-vast American and Pacific holdings." },
+    { year:"1898", name:"Spanish-American War &mdash; loss of the residual empire", t:{ iberia:IC.held, newspain:IC.lost, caribbean:IC.lost, southamerica:IC.lost, philippines:IC.lost }, flagKey:"residual",
+      story:"Defeat in the brief 1898 Spanish-American War strips Spain of Cuba, Puerto Rico, Guam, and the Philippines in a matter of months &mdash; the empire's last overseas possessions, ending four centuries of global reach and leaving only Iberia itself." }
+  ];
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.innerHTML = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+    REGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+    });
+    var held = REGIONS.filter(function (id) { return era.t[id] === IC.held; });
+    var lost = REGIONS.filter(function (id) { return era.t[id] === IC.lost; });
+    var parts = [];
+    if (held.length) parts.push("<b>Held</b>: " + held.map(function (id) { return RNAMES[id]; }).join(", "));
+    if (lost.length) parts.push("<b>Lost</b>: " + lost.map(function (id) { return RNAMES[id]; }).join(", "));
+    iEraOwners.innerHTML = parts.join(" &middot; ");
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKey) + '<div class="ic-label">Spain</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
