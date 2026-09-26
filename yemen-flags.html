@@ -18,21 +18,21 @@
   :root {
     --ink: #241a12; --paper: #f2e8d5; --card: #faf3e3; --card-border: #dcc99a;
     --brick: #a4302a; --brick-2: #7c2e1f; --brass: #a9762f; --sea: #1f6b6b; --sea-2: #164f4f;
-    --muted: #6e6047; --hair: #cbb98d; --focus: #a4302a;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #a4302a; --map-sea: #b9d3da;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
       --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --sea: #4fa3a3; --sea-2: #6fbcbc;
-      --muted: #9a9280; --hair: #33393f;
+      --muted: #9a9280; --hair: #33393f; --map-sea: #17303a;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
     --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --sea: #4fa3a3; --sea-2: #6fbcbc;
-    --muted: #9a9280; --hair: #33393f;
+    --muted: #9a9280; --hair: #33393f; --map-sea: #17303a;
     color-scheme: dark;
   }
   * { box-sizing: border-box; }
@@ -173,6 +173,45 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--sea); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .map-note { margin-top: 10px; font-size: .82rem; color: var(--muted); font-style: italic; }
 </style>
 
 <div class="wrap">
@@ -184,7 +223,41 @@
   <p class="lede">Yemen's modern flag &mdash; plain red, white, and black, no emblem &mdash; has flown over a unified state only since 1990, a shorter run than the north-south split that came before it; the two halves' pan-Arab tricolors, one crowned with a green star, the other with a red star in a blue triangle, are the direct ancestors of the flag that still flies today.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Yemen, ancient South Arabia to present, nine political entries including a genuine north/south split from 1918/1839 to 1990. No interactive map &mdash; this is a flag-only timeline. The 2014&ndash;15 civil war is noted factually and neutrally; Yemen's flag has not changed in law since 1990 even though on-the-ground control is currently contested among several factions. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Yemen, ancient South Arabia to present, nine political entries including a genuine north/south split from 1918/1839 to 1990. The map below does carry a real internal split for that span &mdash; one of the best-documented internal partitions in this whole atlas. The 2014&ndash;15 civil war is noted factually and neutrally; Yemen's flag has not changed in law since 1990 even though on-the-ground control is currently contested among several factions. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>North &amp; South Yemen, 1839&ndash;1990</h2>
+    <p class="imap-sub">Yemen's own real coastline, split along the line that separated British-controlled Aden and its hinterland from the northern highlands &mdash; a division that hardened into two entirely separate, internationally recognized states, the Yemen Arab Republic and the People's Democratic Republic of Yemen, before 1990's reunification. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This is one of the atlas's strongest cases for a real internal split.</b> Unlike the earlier ancient kingdoms, where no unified Yemeni state existed at all, 1839&ndash;1990 saw the territory genuinely governed as two separate pieces for a century and a half straight &mdash; first colonial/Ottoman, then a kingdom-turned-republic against a Marxist state, each with its own flag, capital, and currency. The line below solidifies for that whole span and dissolves only twice: never before 1839 (no partition existed to dissolve), and permanently after the 22 May 1990 union.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1200 BCE</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 340" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="380" height="340" fill="var(--map-sea)"/>
+        <path id="ireg-north" class="ireg-fill" d="M50.14,263.23 L45.83,253.16 L46.72,235.49 L41.63,225.95 L35.54,202.03 L26.60,188.74 L32.83,187.17 L29.64,172.40 L33.41,166.16 L32.03,152.06 L45.69,141.74 L42.50,128.11 L50.74,112.22 L63.52,120.63 L71.95,117.70 L107.86,116.96 L113.56,120.19 L143.64,123.43 L155.57,121.81 L163.35,132.59 L177.87,127.20 L200.16,93.25 L229.20,78.70 L318.91,66.31 L328.12,86.51 Z"/>
+        <path id="ireg-south" class="ireg-fill" d="M353.40,142.26 L330.89,150.94 L324.87,165.30 L324.14,176.32 L293.16,189.97 L243.45,205.06 L215.59,227.87 L201.89,229.65 L192.56,227.74 L174.37,241.16 L154.54,247.38 L128.42,249.06 L120.57,250.90 L113.77,259.44 L105.61,261.80 L100.79,270.02 L85.39,269.31 L75.45,273.69 L53.92,272.05 L50.14,263.23 L328.12,86.51 L343.25,119.66 L353.40,142.26 Z"/>
+        <path class="iborder-line" id="ib-north-south" d="M50.14,263.23 L328.12,86.51"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-north" x="110" y="110">NORTH</text>
+          <text class="ireg-label" id="ilbl-south" x="230" y="200">SOUTH</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Sabaean Kingdom</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline, split along an approximate historical North/South line (schematic, not surveyed) &mdash; the border dissolves before 1839 and after 1990.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -492,6 +565,144 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    none:"#5c2a24", imamate:"#0f5c33", ottomanNorth:"#6b5c4a", adenSouth:"#204b5c",
+    kingdomNorth:"#a4302a", adenColonyS:"#1e5fae", yar:"#8a3a2a", pdry:"#1e5fae", reunified:"#a4302a"
+  };
+  var INAMES = {
+    none:"No flag documented", imamate:"Zaidi Imamate of the highlands", ottomanNorth:"Ottoman northern Yemen (Imamate resistance)", adenSouth:"Aden under British control",
+    kingdomNorth:"Mutawakkilite Kingdom of Yemen (North)", adenColonyS:"British Aden (South)",
+    yar:"Yemen Arab Republic (North)", pdry:"People's Democratic Republic of Yemen (South)", reunified:"Republic of Yemen (reunified)"
+  };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    imamate: '<rect width="300" height="200" fill="#0f5c33"/>',
+    ottomanNorth: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100)"><path d="M-30,0 A38,38 0 1 0 22,-32 A28,28 0 1 1 -30,0 Z" fill="#f4efe1"/><path d="M40,-6 l5,15 16,0 -13,10 5,15 -13,-9 -13,9 5,-15 -13,-10 16,0 Z" fill="#f4efe1"/></g>',
+    adenSouth: '<rect width="300" height="200" fill="#a4302a"/>',
+    kingdomNorth: '<rect width="300" height="200" fill="#a4302a"/><g stroke="#f4efe1" stroke-width="5" stroke-linecap="round" fill="none"><line x1="90" y1="100" x2="210" y2="100"/><line x1="205" y1="93" x2="216" y2="100"/><line x1="205" y1="107" x2="216" y2="100"/></g><g fill="#f4efe1"><circle cx="105" cy="60" r="4"/><circle cx="130" cy="52" r="4"/><circle cx="155" cy="48" r="4"/><circle cx="180" cy="52" r="4"/><circle cx="205" cy="60" r="4"/></g>',
+    adenColonyS: '<rect width="300" height="200" fill="#1e3a6b"/><rect width="130" height="90" fill="#00247d"/><path d="M0,0 L130,90 M130,0 L0,90" stroke="#f4efe1" stroke-width="12"/><path d="M0,0 L130,90 M130,0 L0,90" stroke="#cf142b" stroke-width="5"/><rect x="52" width="26" height="90" fill="#f4efe1"/><rect y="35" width="130" height="20" fill="#f4efe1"/><rect x="58" width="14" height="90" fill="#cf142b"/><rect y="39" width="130" height="12" fill="#cf142b"/>',
+    yar: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#241f14"/><path d="M150,86 l6,15 16,1 -13,11 4,16 -13,-8 -13,8 4,-16 -13,-11 16,-1 Z" fill="#0b7a3d"/>',
+    pdry: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#241f14"/><path d="M0,0 L90,100 L0,200 Z" fill="#1e5fae"/><path d="M40,90 l4,11 12,1 -9,8 3,12 -10,-6 -10,6 3,-12 -9,-8 12,-1 Z" fill="#a4302a"/>',
+    reunified: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#241f14"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1200–110 BCE", name:"Sabaean Kingdom", t:{ north:IC.none, south:IC.none }, flagKeys:{ north:"none", south:"none" },
+      story:"The Sabaean Kingdom, home to the legendary Queen of Sheba, grows wealthy on the incense trade and dominates South Arabia for the better part of a millennium. No flag survives from this Bronze and Iron Age kingdom &mdash; governed as one piece, with no internal line to draw." },
+    { year:"c. 110 BCE–630 CE", name:"Himyarite Kingdom", t:{ north:IC.none, south:IC.none }, flagKeys:{ north:"none", south:"none" },
+      story:"The Himyarite Kingdom absorbs the Sabaean and Qatabanian kingdoms, unifying most of South Arabia under one crown by the 3rd century. No flag survives from this pre-Islamic kingdom." },
+    { year:"630–897", name:"Early Islamic Yemen", t:{ north:IC.none, south:IC.none }, flagKeys:{ north:"none", south:"none" },
+      story:"Yemen converts to Islam and comes under Rashidun, Umayyad, then Abbasid caliphal authority. No flag in the modern territorial sense survives from this era." },
+    { year:"897–1839", name:"Zaidi Imamate of the highlands", t:{ north:IC.imamate, south:IC.imamate }, flagKeys:{ north:"imamate", south:"imamate" },
+      story:"The Zaidi Imamate is founded in the northern highlands in 897, one of the longest-running political institutions in the Islamic world, though it never controls all of Yemen at once. Green, the Imamate's traditional color, is shown here as an informed reconstruction &mdash; still one piece, no genuine internal partition yet." },
+    { year:"1839–1918", name:"Aden under British control / Ottoman northern Yemen", t:{ north:IC.ottomanNorth, south:IC.adenSouth }, flagKeys:{ north:"ottomanNorth", south:"adenSouth" },
+      story:"The British East India Company seizes Aden in 1839 to secure a coaling station on the route to India. The north comes back under direct Ottoman control from 1849 as the Yemen Vilayet, though the Zaidi Imamate in the highlands never fully submits. A genuinely split, contested span &mdash; the line below solidifies for the first time." },
+    { year:"1918–1962/67", name:"Mutawakkilite Kingdom of Yemen (North) &amp; British Aden (South)", t:{ north:IC.kingdomNorth, south:IC.adenColonyS }, flagKeys:{ north:"kingdomNorth", south:"adenColonyS" },
+      story:"The Ottoman collapse at the end of WWI lets Imam Yahya's Zaidi Imamate assert full independence in the north in 1918, ruling as the Mutawakkilite Kingdom. The south stays under separate British rule &mdash; Aden a Crown Colony from 1937 &mdash; the two halves developing along entirely separate tracks decades before either used the word \"Yemen\" for a unified state." },
+    { year:"1967/1962–1990", name:"North Yemen (Arab Republic) / South Yemen (PDRY)", t:{ north:IC.yar, south:IC.pdry }, flagKeys:{ north:"yar", south:"pdry" },
+      story:"A 1962 republican coup ends the northern Zaidi Imamate and founds the Yemen Arab Republic; in the south, the National Liberation Front drives out the British in 1967, and by 1970 the People's Democratic Republic of Yemen declares itself the only Marxist state ever to govern in the Arab world &mdash; two fully separate, internationally recognized states, each with its own flag." },
+    { year:"1990–present", name:"Republic of Yemen (reunified)", t:{ north:IC.reunified, south:IC.reunified }, flagKeys:{ north:"reunified", south:"reunified" },
+      story:"North and South Yemen formally unite on 22 May 1990, ending 72 years of separate northern and southern statehood. The plain red-white-black tricolor, stripped of either predecessor's own emblem, now flies over the whole country &mdash; the line below, real for a century and a half, never reappears." }
+  ];
+
+  var IREGIONS = ["north","south"];
+  var IREGION_NAMES = { north:"North Yemen", south:"South Yemen" };
+  var IADJ = [["north","south"]];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.4");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0];
+      var name = INAMES[label] || era.t[g[0]];
+      if (!seen[name]) { seen[name] = []; parts.push(name); }
+      g.forEach(function (id) { seen[name].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (name) { return "<b>" + name + "</b>: " + seen[name].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
