@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -185,6 +223,45 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day C&ocirc;te d'Ivoire, from pre-colonial Akan and Mande polities through French colonization to the modern republic. No single flag is attested for the many smaller kingdoms that preceded French rule, so that era is shown as one honest, clearly labeled entry rather than an invented banner. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+
+  <div class="imap-section">
+    <h2>One territory, four eras</h2>
+    <p class="imap-sub">C&ocirc;te d&rsquo;Ivoire&rsquo;s own real border, traced whole &mdash; no single power ever unified this territory before French colonization, and the modern republic has never itself been split between rival governments despite two civil wars. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, not a partition map.</b> The 2002&ndash;07 and 2010&ndash;11 conflicts split the country north-south in practice, with rebel forces controlling the north for years at a time, but neither produced a recognized separate state or a lasting formal partition &mdash; a single government was restored both times. The pre-colonial era genuinely had no single ruler, but no one polity's borders map cleanly onto the modern country, so that era is shown honestly blank rather than invented.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">pre-1893</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 284.0 290.0" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="150" y="8">MALI / BURKINA FASO</text>
+          <text x="255" y="25">GHANA</text>
+          <text x="18" y="90">GUINEA</text>
+          <text x="25" y="165">LIBERIA</text>
+          <text x="150" y="280">GULF OF GUINEA</text>
+        </g>
+        <path id="ireg-ci" class="ireg-fill" d="M256.6,247.4 L237.5,247.8 L208.1,239.6 L181.2,240.1 L131.4,247.5 L60.6,275.0 L52.5,273.9 L55.7,239.3 L59.7,234.0 L58.5,217.5 L40.7,199.9 L27.3,197.0 L15.0,185.5 L24.2,166.8 L20.0,146.5 L21.9,134.3 L28.6,134.2 L31.1,115.9 L27.8,107.8 L31.8,101.9 L47.4,96.9 L37.1,63.2 L27.4,45.9 L30.7,31.6 L44.6,24.5 L56.2,30.8 L88.7,31.2 L96.4,18.9 L103.7,19.7 L115.8,15.0 L122.3,33.0 L149.5,21.4 L168.4,30.6 L175.7,44.5 L194.6,53.4 L209.3,42.8 L229.0,41.2 L257.8,52.1 L269.0,111.9 L251.2,147.2 L240.3,194.6 L258.5,230.8 L256.6,247.4 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-ci" x="0" y="-4">COTE</text>
+          <text class="ireg-label" id="ilbl-ci2" x="0" y="8">D IVOIRE</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (johan/world.geo.json) &mdash; no internal partition, per the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -361,6 +438,103 @@
   </footer>
 
 </div>
+
+
+<script>
+(function () {
+  var IC = { precolonial:"#6b5c4a", colony:"#204b5c", autonomous:"#c9a13c", independent:"#a9762f" };
+  var INAMES = { precolonial:"Pre-colonial Akan and Mande polities", colony:"French Ivory Coast (colony)", autonomous:"Autonomous Republic within the French Community", independent:"Republic of C&ocirc;te d'Ivoire (independent)" };
+  var IFLAGS = {
+    precolonial: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    colony: "<rect width=\"100\" height=\"200\" fill=\"#00247d\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#f4efe1\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#cf142b\"/>",
+    autonomous: "<rect width=\"100\" height=\"200\" fill=\"#f77f00\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#f4efe1\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#009e60\"/>",
+    independent: "<rect width=\"100\" height=\"200\" fill=\"#f77f00\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#f4efe1\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#009e60\"/>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"pre-1893", name:"Pre-colonial Akan and Mande polities", t:{ ci:IC.precolonial }, flagKeys:{ ci:"precolonial" },
+      story:"Before French rule, the territory holds no single unifying kingdom: Akan groups including the Baoul&eacute; migrate into the central forest in the 18th century, Agni kingdoms sit in the southeast, and Mande-speaking states including the Kong Empire hold sway in the north. Portuguese and later French traders make coastal contact from the 15th&ndash;17th centuries, but no single power controls the whole territory before colonization. No flag unifies this era; shown honestly blank." },
+    { year:"1893 &ndash; 1958", name:"French Ivory Coast (colony)", t:{ ci:IC.colony }, flagKeys:{ ci:"colony" },
+      story:"France formally declares the colony of Ivory Coast in 1893 after decades of coastal trading-post presence, then folds it into French West Africa (AOF) in 1904. Colonial rule brings forced labor and export-crop agriculture built largely on local and migrant labor; F&eacute;lix Houphou&euml;t-Boigny rises to prominence in this period as a planter and labor-rights advocate before entering French politics. The French Tricolore flies; no distinct territorial flag existed." },
+    { year:"1958 &ndash; 1960", name:"Autonomous Republic within the French Community", t:{ ci:IC.autonomous }, flagKeys:{ ci:"autonomous" },
+      story:"Unlike neighboring Guinea, C&ocirc;te d&rsquo;Ivoire votes &ldquo;yes&rdquo; in the September 1958 referendum on de Gaulle&rsquo;s French Community, becoming a self-governing republic within it rather than breaking immediately. Houphou&euml;t-Boigny, already a senior figure in French politics, leads the territory toward independence two years later. The orange-white-green tricolor is adopted 3 December 1959, ahead of full independence." },
+    { year:"1960 &ndash; present", name:"Republic of C&ocirc;te d'Ivoire (independent)", t:{ ci:IC.independent }, flagKeys:{ ci:"independent" },
+      story:"Independence comes on 7 August 1960 under Houphou&euml;t-Boigny, who governs until his death in 1993, a period often called the &ldquo;Ivorian miracle.&rdquo; Real strain follows: a civil war splits the country north-south from 2002 to 2007, and a disputed 2010 election triggers a second, sharper crisis in 2010&ndash;11 before a single government is restored. The orange-white-green tricolor &mdash; orange for the northern savanna, green for the southern forest, white for the peace between them &mdash; never changes through any of it." }
+  ];
+
+  var IREGIONS = ["ci"];
+  var IREGION_NAMES = { ci:"C&#244;te d&#39;Ivoire" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) { lbl2.setAttribute("fill", tcol); lbl2.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.ci; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
