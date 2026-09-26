@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,46 @@
   <p class="lede">Laos is unusual in swapping its national symbol entirely at the point of revolution: the royal three-headed elephant flag was fully retired in 1975 in favor of a plain red-blue-red design with a white disc, a deliberate break from every royal and colonial flag that came before it.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Laos, 1353&ndash;present, five political entries. The post-Lan Xang split into the Luang Prabang, Vientiane, and Champasak kingdoms, and their later vassalage to Siam, is shown as a single bridging entry rather than three invented sub-periods, since no single flag distinguishes them individually in the historical record. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Laos, 1353&ndash;present, five political entries. The post-Lan Xang split into the Luang Prabang, Vientiane, and Champasak kingdoms, and their later vassalage to Siam, is shown as a single bridging entry rather than three invented sub-periods, since no single flag distinguishes them individually in the historical record. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, five rulers</h2>
+    <p class="imap-sub">Laos's own real border, traced whole &mdash; this page has no internal split to show honestly. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>Three kingdoms did once fragment this territory &mdash; but not on flags anyone can honestly draw.</b> After Lan Xang split around 1707&ndash;13, Luang Prabang, Vientiane, and Champasak each had their own crown for nearly two centuries. But only Luang Prabang's own elephant banner is well documented; Vientiane and Champasak's individual flags are not, so drawing three separately-colored regions here would mean inventing two of them. The map instead shows who held all of Laos's present-day territory at once, era to era &mdash; consistent with how the timeline below treats that same span as one honest bridging entry.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1353</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 250.4 300" xmlns="http://www.w3.org/2000/svg">
+        <g style="pointer-events:none">
+          <g class="context-label">
+            <text x="60" y="14">CHINA</text>
+            <text x="200" y="60">VIETNAM</text>
+            <text x="30" y="150">MYANMAR</text>
+            <text x="20" y="230">THAILAND</text>
+            <text x="150" y="292">CAMBODIA</text>
+          </g>
+        </g>
+        <path id="ireg-la" class="ireg-fill" d="M78.2,32.3 L90.4,45.7 L92.5,52.1 L96.6,48.4 L100.2,52.0 L97.5,63.7 L104.3,74.3 L118.6,79.8 L131.0,72.8 L144.0,81.2 L138.2,87.0 L144.9,88.9 L147.0,93.6 L151.0,93.7 L153.2,98.9 L144.1,110.2 L129.2,108.6 L130.0,114.0 L125.4,119.1 L147.5,133.2 L159.0,137.5 L158.2,144.4 L167.4,151.5 L173.6,163.3 L195.4,185.4 L196.5,193.9 L199.5,198.4 L204.7,197.8 L206.8,202.3 L219.3,211.1 L219.2,213.7 L213.2,217.9 L226.2,233.3 L221.6,241.1 L222.6,248.8 L219.8,252.9 L216.5,252.0 L211.6,257.0 L203.9,259.9 L195.4,252.4 L191.4,255.9 L188.0,255.3 L186.3,258.2 L181.3,259.1 L185.3,267.4 L183.7,271.0 L179.4,270.9 L169.4,264.3 L164.5,265.7 L161.7,263.1 L160.0,259.0 L168.4,252.1 L169.8,242.4 L168.3,233.3 L172.3,222.0 L165.8,217.1 L166.0,212.7 L156.4,207.8 L150.3,199.2 L148.3,187.4 L150.2,175.6 L127.0,146.9 L109.3,144.4 L102.9,155.1 L92.4,161.0 L89.5,156.9 L77.5,149.9 L68.7,154.9 L66.4,159.0 L52.4,170.0 L45.5,167.6 L51.8,151.9 L49.2,143.4 L55.6,128.3 L53.6,112.2 L47.1,110.4 L37.9,113.6 L32.4,109.5 L35.6,95.7 L29.7,88.6 L24.2,92.2 L26.1,82.8 L29.9,77.0 L37.8,75.2 L35.1,73.4 L35.5,71.4 L40.0,64.1 L51.7,55.2 L54.6,65.7 L62.5,64.6 L66.8,67.0 L69.4,65.2 L67.3,62.3 L67.7,47.9 L62.0,35.8 L67.7,29.0 L70.5,32.0 L75.4,30.6 L78.2,32.3 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-la" x="125" y="155">LAOS</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Lan Xang Kingdom</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (Natural Earth 50m via ADM0_A3=LAO), no internal partition &mdash; see the rule box above for why. Neighbor labels are approximate.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -388,6 +465,108 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    lanxang: "#5c2a24", fragmented: "#6b5c4a", french: "#21468b", kingdom: "#204b5c", pdr: "#c8102e"
+  };
+  var INAMES = {
+    lanxang: "Lan Xang Kingdom (no flag documented)",
+    fragmented: "Fragmented Lao kingdoms (Luang Prabang, Vientiane, Champasak)",
+    french: "French Protectorate of Laos",
+    kingdom: "Kingdom of Laos (independent)",
+    pdr: "Lao People's Democratic Republic"
+  };
+  var IFLAGS = {
+    lanxang: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    fragmented: '<rect width="300" height="200" fill="#c8102e"/><ellipse cx="150" cy="110" rx="42" ry="34" fill="#f4efe1"/><ellipse cx="150" cy="108" rx="28" ry="22" fill="#c8102e"/>',
+    french: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/>',
+    kingdom: '<rect width="300" height="200" fill="#c8102e"/><ellipse cx="150" cy="110" rx="42" ry="34" fill="#f4efe1"/><ellipse cx="150" cy="108" rx="28" ry="22" fill="#c8102e"/><path d="M150,60 q22,-14 44,0" stroke="#f4efe1" stroke-width="4" fill="none"/>',
+    pdr: '<rect width="300" height="50" fill="#c8102e"/><rect y="50" width="300" height="100" fill="#00247d"/><rect y="150" width="300" height="50" fill="#c8102e"/><circle cx="150" cy="100" r="40" fill="#f4efe1"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"1353", name:"Lan Xang Kingdom", t:{ la:IC.lanxang }, flagKeys:{ la:"lanxang" },
+      story:"Fa Ngum founds Lan Xang (\"Land of a Million Elephants\") in 1353, unifying Lao-speaking principalities along the middle Mekong with Khmer military backing and establishing Theravada Buddhism as the state religion. No securely documented flag survives from Lan Xang itself." },
+    { year:"c. 1707", name:"Fragmented Lao kingdoms (Luang Prabang, Vientiane, Champasak)", t:{ la:IC.fragmented }, flagKeys:{ la:"fragmented" },
+      story:"Succession disputes split Lan Xang into three rival kingdoms around 1707&ndash;1713, none of which ever reunites the old kingdom's territory; all three progressively fall under Siamese suzerainty. Only Luang Prabang's own elephant banner is well documented, so it represents this fragmented period through the best-attested of the three." },
+    { year:"1893", name:"French Protectorate of Laos", t:{ la:IC.french }, flagKeys:{ la:"french" },
+      story:"France establishes a protectorate over Luang Prabang in 1893, gradually extending control over the other Lao principalities and folding them into French Indochina by 1899, with a single reunified Laos administered under the Luang Prabang monarchy. The plain French tricolor flew as the colonial power's own flag." },
+    { year:"1953", name:"Kingdom of Laos (independent)", t:{ la:IC.kingdom }, flagKeys:{ la:"kingdom" },
+      story:"Laos gains full independence from France in October 1953 under King Sisavang Vong, but spends nearly its entire independent existence drawn into a three-way civil war between royalist, neutralist, and communist Pathet Lao factions, heavily overlapping the Vietnam War. The white three-headed elephant Erawan stands on the royal flag's red field." },
+    { year:"1975–present", name:"Lao People's Democratic Republic", t:{ la:IC.pdr }, flagKeys:{ la:"pdr" },
+      story:"The communist Pathet Lao movement takes full power as the Kingdom of Laos collapses in December 1975; King Savang Vatthana abdicates, ending the monarchy. A white disc, representing the moon over the Mekong, centers a blue band flanked by red &mdash; a wholesale break from every royal and colonial flag that preceded it." }
+  ];
+
+  var IREGIONS = ["la"];
+  var IREGION_NAMES = { la:"Laos" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.la; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
