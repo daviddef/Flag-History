@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -187,6 +225,42 @@
     <b>Scope of this page:</b> the lands of present-day Myanmar, c. 1044&ndash;present, seven political entries. The Bagan, Toungoo, and Konbaung dynasties are combined into one long bridging entry, since no single flag is attested for the earlier two and the Konbaung royal peacock banner is used here to represent the whole pre-colonial span, with that scope made explicit. Part of a larger atlas &mdash; see the linked pages at the bottom.
   </div>
 
+
+  <div class="imap-section">
+    <h2>Myanmar's own border, seven rulers</h2>
+    <p class="imap-sub">Myanmar's own real border, traced whole &mdash; one continuous territory whose government changed hands repeatedly without ever splitting into separately governed halves. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page &mdash; Myanmar's borders were never genuinely partitioned between two rival administrations.</b> The country changed rulers violently and often, but each transition (dynastic collapse, British annexation, Japanese occupation, independence, military coups) passed control of the whole territory at once, not a divided piece of it.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">2021–present</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+        <g style="pointer-events:none">
+          <path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" pointer-events="none" d="M-72.9,-53.7 L-60.4,-26.5 L-55.7,-12.5 L-61.3,0.7 L-39.0,25.1 L-31.5,43.1 L-2.6,57.5 L22.4,66.2 L58.5,70.5 L58.2,56.4 L67.1,47.6 L68.4,61.1 L99.0,65.1 L110.4,56.3 L115.5,50.2 L142.0,31.3 L168.0,37.4 L177.5,45.2 L174.0,52.9 L149.2,68.3 L142.5,87.6 L136.1,105.5 L125.6,116.6 L117.7,130.3 L107.4,108.6 L98.3,110.3 L108.0,101.7 L94.6,88.0 L81.2,76.6 L64.9,70.0 L69.7,86.5 L66.7,100.3 L69.0,118.8 L69.1,135.1 L45.3,148.0 L19.9,165.3 L-4.1,190.0 L-16.9,205.2 L-40.9,214.2 L-42.1,242.4 L-46.9,266.8 L-53.6,290.7 L-67.2,309.5 L-76.7,322.7 L-94.8,290.8 L-104.2,270.5 L-116.5,231.8 L-133.5,186.5 L-137.3,152.4 L-167.5,146.2 L-178.1,124.7 L-197.0,107.7 L-160.2,98.6 L-171.4,69.4 L-165.6,48.9 L-137.3,35.6 L-116.8,8.1 L-116.4,-16.4 L-125.4,-37.6 L-99.6,-40.1 L-72.9,-53.7 Z"/><path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" pointer-events="none" d="M567.2,-248.7 L610.0,-221.8 L655.1,-218.9 L621.5,-188.0 L605.4,-155.0 L572.3,-142.5 L548.2,-130.4 L505.7,-110.3 L486.5,-111.9 L464.2,-113.9 L443.9,-88.8 L479.4,-86.2 L483.0,-69.5 L457.9,-45.7 L493.3,-1.7 L495.7,23.7 L473.9,61.7 L416.0,120.1 L382.0,130.1 L346.0,153.5 L321.4,134.7 L298.3,120.0 L256.9,121.2 L235.0,142.1 L226.6,132.9 L205.8,117.8 L182.6,88.7 L189.3,52.2 L168.0,37.4 L127.2,40.0 L99.6,48.2 L68.2,58.4 L29.7,46.0 L-2.2,28.8 L-48.7,9.4 L-55.3,-19.5 L-72.9,-53.7 L-109.6,-80.0 L-123.1,-94.8 L-112.2,-120.3 L-68.4,-131.5 L-42.8,-155.2 L-13.5,-191.0 L28.4,-217.2 L54.5,-242.4 L95.9,-209.4 L128.1,-183.3 L165.0,-152.5 L235.4,-149.6 L275.6,-137.1 L345.6,-154.5 L357.7,-176.2 L397.6,-188.3 L454.3,-208.3 L443.9,-225.6 L414.1,-220.9 L441.6,-245.3 L478.3,-278.8 L497.7,-298.9 L553.1,-276.4 L567.2,-248.7 Z"/><path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" pointer-events="none" d="M245.1,265.0 L233.5,258.7 L222.5,259.0 L224.4,248.2 L213.1,248.3 L212.1,263.3 L205.2,283.3 L201.0,295.4 L201.9,305.3 L210.2,305.7 L215.5,318.2 L217.8,330.0 L224.9,337.9 L232.7,339.4 L239.4,346.5 L235.2,352.2 L225.7,346.8 L215.2,340.8 L213.0,343.2 L207.9,338.0 L205.7,331.2 L198.9,323.5 L192.6,317.0 L190.5,325.0 L188.1,317.4 L189.5,308.9 L193.3,295.8 L199.5,281.8 L206.6,269.0 L201.5,256.5 L201.7,250.2 L191.7,231.7 L188.6,224.8 L193.1,222.3 L197.8,210.4 L192.5,201.4 L184.4,191.4 L178.1,179.4 L183.6,176.9 L189.4,162.2 L198.5,161.5 L206.0,155.6 L213.4,152.5 L218.9,156.7 L219.7,164.9 L225.2,179.9 L225.5,192.2 L239.0,184.0 L242.9,186.4 L250.4,186.0 L253.0,181.3 L262.7,182.2 L272.5,193.3 L273.3,206.8 L283.7,218.7 L283.1,230.3 L278.9,236.5 L266.9,234.5 L250.3,237.1 L242.0,248.5 L245.1,265.0 Z"/><path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" pointer-events="none" d="M278.9,236.5 L283.1,230.3 L283.7,218.7 L273.3,206.8 L272.5,193.3 L262.7,182.2 L253.0,181.3 L250.4,186.0 L242.9,186.4 L239.0,184.0 L225.5,192.2 L225.2,179.9 L228.3,165.5 L219.7,164.9 L218.9,156.7 L213.4,152.5 L216.1,147.4 L227.0,138.5 L228.2,141.7 L235.0,142.1 L233.1,126.5 L239.7,124.5 L247.3,135.3 L253.0,147.7 L268.8,147.8 L273.8,159.7 L265.6,163.3 L261.9,168.2 L277.3,176.4 L288.0,192.5 L296.1,204.6 L305.8,214.1 L309.0,223.8 L306.7,237.4 L295.3,232.4 L289.5,241.8 L278.9,236.5 Z"/><path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" pointer-events="none" d="M117.7,130.3 L117.5,140.1 L113.0,138.0 L113.8,149.0 L110.1,141.9 L109.4,134.9 L107.0,128.3 L101.6,120.4 L89.8,119.8 L90.9,125.5 L86.9,133.1 L81.4,130.3 L79.6,132.8 L75.9,131.3 L71.0,130.1 L69.0,118.8 L64.5,108.5 L66.7,100.3 L58.8,96.6 L61.6,91.6 L69.7,86.5 L60.4,79.3 L64.9,70.0 L75.1,75.9 L81.2,76.6 L82.4,86.1 L94.6,88.0 L106.5,87.8 L113.9,90.1 L108.0,101.7 L102.2,102.5 L98.3,110.3 L105.3,117.4 L107.4,108.6 L111.0,108.6 L117.7,130.3 Z"/>
+          <g class="context-label">
+            <text x="12" y="103.2">INDIA</text><text x="287.3" y="14">CHINA</text><text x="219.8" y="251.8">THAILAND</text><text x="258.6" y="181.6">LAOS</text><text x="91.2" y="111.7">BANGLADESH</text>
+          </g>
+        </g>
+        <path id="ireg-mm-0" class="ireg-fill" d="M206.0,155.6 L198.5,161.5 L189.4,162.2 L183.6,176.9 L178.1,179.4 L184.4,191.4 L192.5,201.4 L197.8,210.4 L193.1,222.3 L188.6,224.8 L191.7,231.7 L200.3,242.6 L201.7,250.2 L201.5,256.5 L206.6,269.0 L199.5,281.8 L193.3,295.8 L192.0,285.7 L196.0,275.2 L191.7,267.1 L192.7,252.2 L187.5,245.1 L183.3,228.7 L181.0,211.5 L175.4,200.2 L167.0,207.0 L152.4,216.8 L145.2,215.5 L137.2,212.3 L141.6,195.4 L139.0,182.6 L128.9,166.8 L130.5,161.9 L122.9,160.1 L113.8,149.0 L113.0,138.0 L117.5,140.1 L117.7,130.3 L124.1,127.0 L122.7,121.2 L125.6,116.6 L126.1,102.4 L136.1,105.5 L141.9,94.2 L142.5,87.6 L149.6,76.1 L149.2,68.3 L165.9,58.8 L175.0,61.3 L174.0,52.9 L178.5,50.4 L177.5,45.2 L185.0,44.2 L189.3,52.2 L194.9,55.5 L195.3,66.0 L194.8,77.2 L182.6,88.7 L181.1,104.9 L194.6,102.6 L197.7,115.2 L205.8,117.8 L202.1,129.2 L211.6,134.3 L217.2,136.9 L226.6,132.9 L227.0,138.5 L216.1,147.4 L213.4,152.5 L206.0,155.6 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-mm-0" x="175.2" y="158.2">MYANMAR</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Military rule (State Administration Council)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline and border, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
+  </div>
   <div class="timeline">
 
     <!-- 1 -->
@@ -462,6 +536,109 @@
   </footer>
 
 </div>
+
+
+<script>
+(function () {
+  var IC = { m2010: "#5c2a24", m1974: "#5c2a24", m1948: "#a9762f", mpeacock1943: "#5c2a24", mbritish: "#204b5c", mpeacockold: "#a9762f" };
+  var INAMES = { m2010: "Military rule (State Administration Council)", m1974: "Military-dominated rule (Ne Win era through SPDC)", m1948: "Union of Burma (independent)", mpeacock1943: "Japanese occupation (State of Burma)", mbritish: "British Burma", mpeacockold: "Bagan, Toungoo, and Konbaung dynasties" };
+  var IFLAGS = {
+    m2010: '<rect width="300" height="66.7" fill="#fecb00"/> <rect y="66.7" width="300" height="66.6" fill="#34b233"/> <rect y="133.3" width="300" height="66.7" fill="#ea2839"/> <path d="M150,80 l10,22 24,3 -17,17 4,24 -21,-11 -21,11 4,-24 -17,-17 24,-3 Z" fill="#f4efe1"/>',
+    m1974: '<rect width="300" height="200" fill="#a4302a"/> <rect width="130" height="86.7" fill="#21468b"/> <g fill="#f4efe1"><circle cx="30" cy="20" r="6"/><circle cx="65" cy="15" r="6"/><circle cx="100" cy="20" r="6"/><circle cx="20" cy="45" r="6"/><circle cx="65" cy="55" r="14"/><path d="M65,58 h10 M60,63 a10,4 0 0 0 10,0" stroke="#a4302a" stroke-width="3" fill="none"/></g>',
+    m1948: '<rect width="300" height="66.7" fill="#f4efe1"/> <rect y="66.7" width="300" height="66.6" fill="#a4302a"/> <rect y="133.3" width="300" height="66.7" fill="#21468b"/> <rect width="130" height="86.7" fill="#21468b"/> <path d="M65,20 l7,20 21,1 -17,14 6,20 -17,-12 -17,12 6,-20 -17,-14 21,-1 Z" fill="#f4efe1"/> <circle cx="30" cy="48" r="5" fill="#f4efe1"/><circle cx="100" cy="48" r="5" fill="#f4efe1"/>',
+    mpeacock1943: '<rect width="300" height="200" fill="#fecb00"/> <path d="M150,60 q40,10 32,58 q-6,32 -32,52 q-26,-20 -32,-52 q-8,-48 32,-58 Z" fill="#34b233"/> <path d="M150,60 q40,10 32,58 q-30,-10 -32,-58 Z" fill="#1a7a2e"/>',
+    mbritish: '<rect width="300" height="200" fill="#00247d"/> <path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/> <path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/> <rect x="125" width="50" height="200" fill="#f4efe1"/> <rect y="75" width="300" height="50" fill="#f4efe1"/> <rect x="137" width="26" height="200" fill="#cf142b"/> <rect y="87" width="300" height="26" fill="#cf142b"/>',
+    mpeacockold: '<rect width="300" height="200" fill="#fecb00"/> <path d="M150,55 q42,10 34,62 q-6,34 -34,54 q-28,-20 -34,-54 q-8,-52 34,-62 Z" fill="#34b233"/> <path d="M150,55 q42,10 34,62 q-32,-10 -34,-62 Z" fill="#1a7a2e"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"2021\u2013present", name:"Military rule (State Administration Council)", t:{ mm: IC.m2010 }, flagKeys:{ mm: "m2010" }, story:"The military (Tatmadaw) seizes power in a coup on 1 February 2021, alleging fraud in the 2020 election won decisively by Aung San Suu Kyi's party, and the State Administration Council continues to govern amid civil resistance. The 2010 flag flies unchanged &mdash; the same cloth, now standing for a government that overthrew the one elected under it." },
+    { year:"2011\u20132021", name:"Democratic transition (civilian-led government)", t:{ mm: IC.m2010 }, flagKeys:{ mm: "m2010" }, story:"A 2008 military-drafted constitution and 2010 elections usher in a nominally civilian government under President Thein Sein, beginning a decade of liberalization in which Aung San Suu Kyi's party wins landslide elections twice &mdash; before the military ends it all with the 2021 coup." },
+    { year:"1974\u20132010", name:"Military-dominated rule (Ne Win era through SPDC)", t:{ mm: IC.m1974 }, flagKeys:{ mm: "m1974" }, story:"General Ne Win's 1962 coup hardens into one-party military-socialist rule under the 1974 constitution; the 1988 uprising is violently suppressed, and successive juntas (SLORC, then SPDC) rename the country Myanmar in 1989 while ruling by force through this entire span." },
+    { year:"1948\u20131974", name:"Union of Burma (independent)", t:{ mm: IC.m1948 }, flagKeys:{ mm: "m1948" }, story:"Burma gains independence from Britain on 4 January 1948, months after independence hero Aung San's assassination. Ethnic insurgencies and political instability follow through the 1950s, until Ne Win's 1962 coup ends civilian parliamentary government for decades." },
+    { year:"1942\u20131945", name:"Japanese occupation (State of Burma)", t:{ mm: IC.mpeacock1943 }, flagKeys:{ mm: "mpeacock1943" }, story:"Japanese forces drive out British administration by mid-1942 and install a nominally independent State of Burma under Ba Maw in August 1943. Aung San, an initial collaborator, switches to the Allied side in 1945 as British and Commonwealth forces retake the country." },
+    { year:"1886\u20131942", name:"British Burma", t:{ mm: IC.mbritish }, flagKeys:{ mm: "mbritish" }, story:"The Third Anglo-Burmese War in 1885 ends the Konbaung dynasty; Britain formally annexes what remains of the kingdom on 1 January 1886, ruling it first as a province of British India, then as its own colony from 1937, until the 1942 Japanese invasion." },
+    { year:"c. 1044\u20131886", name:"Bagan, Toungoo, and Konbaung dynasties", t:{ mm: IC.mpeacockold }, flagKeys:{ mm: "mpeacockold" }, story:"King Anawrahta founds the Bagan Empire around 1044, the first major unification of the Irrawaddy basin. The Toungoo dynasty reunifies the region in the 1500s, and the Konbaung dynasty, founded in 1752, is the last independent Burmese kingdom &mdash; ended by three 19th-century Anglo-Burmese wars that culminate in Britain's 1886 annexation." }
+  ];
+
+  var IREGIONS = ["mm"];
+  var IREGION_NAMES = { mm: "Myanmar" };
+  var IREGION_PATHS = { mm: ["ireg-mm-0"] };
+  var IREGION_LABELS = { mm: ["ilbl-mm-0"] };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      var fillColor = era.t[id];
+      (IREGION_PATHS[id] || []).forEach(function (pid) {
+        var el = document.getElementById(pid);
+        if (el) el.setAttribute("fill", fillColor);
+      });
+      var tcol = iTextColorFor(fillColor);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      (IREGION_LABELS[id] || []).forEach(function (lid) {
+        var lbl = document.getElementById(lid);
+        if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      });
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t[IREGIONS[0]]; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
