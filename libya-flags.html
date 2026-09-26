@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 420px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,45 @@
   <p class="lede">Gaddafi's 1969 coup eventually produced the only national flag in modern history to be a single plain color with no design of any kind &mdash; a solid green field flown from 1977 to 2011, representing his political philosophy rather than any traditional heraldic device.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Libya, c. 900&ndash;present, seven political entities. No interactive map on this page &mdash; that layer is deferred project-wide to a future phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Libya, c. 900&ndash;present, seven political entities. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, seven rulers</h2>
+    <p class="imap-sub">Libya's own real border, traced whole. Press play, or drag the slider, to watch who held all of it, era to era &mdash; and read the 1943&ndash;51 note below for the one honest exception.</p>
+    <div class="rule-box">
+      <b>This page doesn't split internally, even though Libya's own history would support it.</b> Tripolitania, Cyrenaica, and Fezzan were governed separately for long stretches &mdash; including the 1943&ndash;51 Allied administration, when Britain ran the first two regions and France ran Fezzan under entirely different flags. But no single Libyan flag existed for any of those separately-run pieces; the division was administrative, not symbolic, so a map split would invent borders no flag ever marked. The story below flags that exception honestly instead.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 900</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="122" y="66">TUNISIA</text>
+          <text x="46" y="132">ALGERIA</text>
+          <text x="112" y="248">NIGER</text>
+          <text x="202" y="270">CHAD</text>
+          <text x="308" y="262">SUDAN</text>
+          <text x="316" y="142">EGYPT</text>
+        </g>
+        <path id="ireg-ly" class="ireg-fill" d="M168.8,184.6 L162.5,188.3 L157.5,182.8 L143.5,178.6 L139.6,172.4 L132.6,167.8 L128.5,169.6 L125.3,164.1 L125.0,159.8 L119.8,152.6 L123.3,148.5 L122.5,142.3 L123.6,136.8 L123.0,132.3 L124.6,124.3 L124.1,119.7 L121.2,110.9 L125.5,108.6 L126.3,104.5 L125.4,100.4 L131.4,96.6 L134.2,93.4 L138.5,90.5 L139.0,82.9 L149.4,86.3 L153.1,85.5 L160.5,87.1 L172.3,91.6 L176.5,100.4 L184.4,102.3 L196.9,106.4 L206.3,111.3 L210.7,108.8 L214.9,104.2 L212.9,96.6 L215.6,91.8 L222.0,87.2 L228.1,85.8 L240.1,87.9 L243.1,92.3 L246.4,92.3 L249.3,94.0 L258.1,95.2 L260.2,98.5 L257.0,103.2 L258.4,107.4 L256.1,113.5 L258.8,121.5 L258.8,212.9 L248.6,212.9 L248.5,217.1 L177.8,179.2 L168.8,184.6 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-ly" x="196" y="148">LIBYA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Ottoman Tripolitania, Cyrenaica &amp; Fezzan</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -467,6 +543,115 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    ottoman:"#a4302a", italy:"#009246", allied:"#204b5c", kingdom:"#e70013",
+    republic:"#a4302a", jamahiriya:"#239e46", modern:"#e70013"
+  };
+  var INAMES = {
+    ottoman:"Ottoman Tripolitania, Cyrenaica &amp; Fezzan", italy:"Italian Libya",
+    allied:"Allied Military Administration", kingdom:"Kingdom of Libya",
+    republic:"Libyan Arab Republic / Federation of Arab Republics",
+    jamahiriya:"Great Socialist People's Libyan Arab Jamahiriya",
+    modern:"Libya (post-revolution)"
+  };
+  var IFLAGS = {
+    ottoman: '<rect width="300" height="200" fill="#a4302a"/><g fill="#f4efe1"><path d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/><path d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/></g>',
+    italy: '<rect width="100" height="200" fill="#009246"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#ce2b37"/>',
+    allied: '<rect width="150" height="100" fill="#00247d"/><rect y="100" width="150" height="100" fill="#f4efe1"/><rect x="150" width="150" height="100" fill="#f4efe1"/><rect x="150" y="100" width="150" height="100" fill="#002395"/><rect x="0" width="300" height="200" fill="none" stroke="#a9762f" stroke-width="3" stroke-dasharray="6 5"/>',
+    kingdom: '<rect width="90" height="200" fill="#e70013"/><rect x="90" width="120" height="200" fill="#000000"/><rect x="210" width="90" height="200" fill="#239e46"/><path fill="#f4efe1" d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/><path fill="#f4efe1" d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/>',
+    republic: '<rect width="100" height="200" fill="#a4302a"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#1a1a1a"/><path fill="#c9a13c" d="M150,72 l16,44 h-32 Z"/>',
+    jamahiriya: '<rect width="300" height="200" fill="#239e46"/>',
+    modern: '<rect width="90" height="200" fill="#e70013"/><rect x="90" width="120" height="200" fill="#000000"/><rect x="210" width="90" height="200" fill="#239e46"/><path fill="#f4efe1" d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/><path fill="#f4efe1" d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 900", name:"Ottoman Tripolitania, Cyrenaica &amp; Fezzan", t:{ ly:IC.ottoman }, flagKeys:{ ly:"ottoman" },
+      story:"Direct Ottoman conquest is completed by 1551, with the semi-autonomous local Karamanli dynasty ruling as a largely independent Ottoman vassal from 1711 to 1835. The standard Ottoman red field with white crescent and star flies across the whole territory throughout, right up to the 1911 Italian invasion." },
+    { year:"1911", name:"Italian Libya", t:{ ly:IC.italy }, flagKeys:{ ly:"italy" },
+      story:"Italy invades in 1911, formally annexes the territory in 1912, and consolidates it under the name \"Libya\" from 1934 &mdash; the first use of that name for the unified territory in modern times. The Italian Tricolor flies as the colony's sole official flag until Allied forces expel Italy in 1943." },
+    { year:"1943", name:"Allied Military Administration", t:{ ly:IC.allied }, flagKeys:{ ly:"allied" },
+      story:"Britain administers Tripolitania and Cyrenaica while France separately administers the southern Fezzan region &mdash; an honestly split arrangement, shown here with a dashed border, that persists until UN-sponsored independence talks conclude in 1951. No single Libyan flag exists in this transitional period." },
+    { year:"1951", name:"Kingdom of Libya", t:{ ly:IC.kingdom }, flagKeys:{ ly:"kingdom" },
+      story:"On 24 December 1951 Libya becomes fully sovereign under King Idris &mdash; the first country ever brought to independence by the United Nations, unifying Tripolitania, Cyrenaica, and Fezzan into a single kingdom. A new tricolor is designed for independence, based on the wartime Cyrenaican resistance flag." },
+    { year:"1969", name:"Libyan Arab Republic / Federation of Arab Republics", t:{ ly:IC.republic }, flagKeys:{ ly:"republic" },
+      story:"Gaddafi's Revolutionary Command Council replaces the monarchy's flag with a red-white-black tricolor mirroring Egypt's own after the 1969 coup, then briefly joins the 1972&ndash;77 Federation of Arab Republics, a loose pan-Arab union with Egypt and Syria, before Gaddafi's own idiosyncratic banner replaces it." },
+    { year:"1977", name:"Great Socialist People's Libyan Arab Jamahiriya", t:{ ly:IC.jamahiriya }, flagKeys:{ ly:"jamahiriya" },
+      story:"Gaddafi declares Libya a \"Jamahiriya\" (state of the masses) in 1977 under his own \"Third International Theory,\" adopting a plain green field &mdash; the only national flag in modern history to carry no emblem, pattern, or additional color whatsoever &mdash; and rules for 42 years until the 2011 revolution." },
+    { year:"2011–present", name:"Libya (post-revolution)", t:{ ly:IC.modern }, flagKeys:{ ly:"modern" },
+      story:"Revolutionaries readopt the 1951 kingdom's red-black-green tricolor as their banner from the earliest days of the 2011 uprising; it becomes Libya's official flag again upon the fall of Gaddafi's government that October. Libya has since struggled with fragmented governance and recurring conflict between rival authorities." }
+  ];
+
+  var IREGIONS = ["ly"];
+  var IREGION_NAMES = { ly:"Libya" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.ly; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
