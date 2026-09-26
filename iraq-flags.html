@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,42 @@
   <p class="lede">Ottoman rule from 1534 gave way to British mandate after World War I, a monarchy carved from three Ottoman provinces, a republic after 1958, the well-documented Ba'athist era under Saddam Hussein, and the 2003 invasion that eventually produced the current flag, restyled in 2008.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the land of Mesopotamia and the modern state of Iraq, c. 3100 BCE&ndash;present, twelve political entities. The ancient period (Sumer through Assyria) and the long span of Persian and Hellenistic rule before the Arab conquest are each treated as single honest bridging entries, since no single flag can be attributed to either era and false precision would misrepresent how fragmented and multi-power those centuries actually were. No internal governing split exists within Iraq's own modern borders at any point covered here, so this page carries no interactive map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the land of Mesopotamia and the modern state of Iraq, c. 3100 BCE&ndash;present, twelve political entities. The ancient period (Sumer through Assyria) and the long span of Persian and Hellenistic rule before the Arab conquest are each treated as single honest bridging entries, since no single flag can be attributed to either era and false precision would misrepresent how fragmented and multi-power those centuries actually were. No internal governing split within Iraq's own modern borders is traceable across this span with the data available in this session, so the map below traces the whole country rather than an internal partition &mdash; see the rule box under the map for why. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, twelve rulers</h2>
+    <p class="imap-sub">Iraq's own real border, traced whole &mdash; the one page in this atlas region without a genuine internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is the honest single-region variant.</b> Iraq's history does include real regional distinctions &mdash; the Ottoman-era vilayets of Baghdad, Basra, and Mosul each answered to Istanbul as separate provinces for parts of this span, and the modern Kurdistan Region has held its own formal autonomous status since the 1970s, expanded under the 2005 constitution &mdash; but neither one reduces cleanly to the kind of traceable two-way partition line this map's simple two-territory adjacency model can honestly show, the way Hungary's Habsburg/Ottoman split can. Given the data available in this session, this map shows only who held the whole country, era to era, rather than inventing an internal division the record doesn't cleanly support.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iqPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iqYearTag">c. 3100 BCE</span>
+        <input type="range" id="iqSlider" min="0" max="11" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 215" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" style="pointer-events:none">
+          <text x="245" y="90">IRAN</text>
+          <text x="35" y="20">SYRIA</text>
+          <text x="175" y="205">PERSIAN GULF</text>
+        </g>
+        <path id="ireg-iq" class="ireg-fill" d="M131.1,39.3 L143.3,45.9 L144.7,58.9 L135.3,66.6 L131.0,83.9 L143.9,105.0 L166.6,117.2 L176.2,134.0 L173.2,150.1 L179.1,150.1 L179.3,161.9 L189.6,173.6 L166.1,170.7 L152.4,192.0 L117.9,190.2 L65.5,145.6 L37.9,130.0 L15.5,124.0 L8.0,97.0 L49.1,73.9 L56.1,47.0 L54.4,30.8 L64.5,25.3 L74.1,11.5 L82.0,8.0 L103.6,10.9 L110.2,16.5 L119.1,12.8 L131.1,39.3 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-iq" x="100" y="98">IRAQ</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iqEraName">Sumer, Akkad, Babylon &amp; Assyria</div>
+        <div class="imap-owners" id="iqEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iqFlagsRow"></div>
+      <p class="imap-story" id="iqEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iqLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -647,6 +720,132 @@
 </div>
 
 <script>
+(function () {
+  var IQ_C = {
+    sumer:"#5c2a24", persian:"#5c2a24", ummayad:"#f4efe1", abbasid:"#1a1712", mongol:"#5c2a24",
+    ottoman:"#e30a17", mandate:"#0b7a3d", kingdom:"#0b7a3d", republic1958:"#f9d616",
+    baath1963:"#ce1126", baath1991:"#ce1126", modern2008:"#ce1126"
+  };
+  var IQNAMES = {
+    sumer:"Sumer, Akkad, Babylon &amp; Assyria", persian:"Persian &amp; Hellenistic Rule",
+    ummayad:"Arab-Islamic Conquest (Rashidun/Umayyad)", abbasid:"Abbasid Caliphate (Baghdad)",
+    mongol:"Mongol Sack Aftermath / Contested Rule", ottoman:"Ottoman Iraq",
+    mandate:"British Mandate of Iraq", kingdom:"Kingdom of Iraq (independent)",
+    republic1958:"Iraqi Republic (post-monarchy)", baath1963:"Ba&#x27;athist Iraq",
+    baath1991:"Ba&#x27;athist Iraq (Allahu Akbar added)", modern2008:"Republic of Iraq (modern flag)"
+  };
+  var IQFLAGS = {
+    sumer: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    persian: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    ummayad: '<rect width="300" height="200" fill="#f4efe1"/>',
+    abbasid: '<rect width="300" height="200" fill="#1a1712"/>',
+    mongol: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    ottoman: '<rect width="300" height="200" fill="#e30a17"/><circle cx="120" cy="100" r="40" fill="#f4efe1"/><circle cx="134" cy="100" r="32" fill="#e30a17"/><path d="M172,100 l14,-9.5 -5,11 12,4 -12,4 5,11 Z" fill="#f4efe1"/>',
+    mandate: '<rect width="300" height="66.7" fill="#1a1712"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/><path d="M0,0 L110,100 L0,200 Z" fill="#ce1126"/><g fill="#f4efe1"><path d="M30,92 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/></g>',
+    kingdom: '<rect width="300" height="66.7" fill="#1a1712"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#0b7a3d"/><path d="M0,0 L110,100 L0,200 Z" fill="#ce1126"/><g fill="#f4efe1"><path d="M30,92 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/></g>',
+    republic1958: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><circle cx="150" cy="100" r="24" fill="#f9d616"/><rect x="146" y="86" width="8" height="28" fill="#1a1712" transform="rotate(20 150 100)"/>',
+    baath1963: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><g fill="#0b7a3d"><path d="M105,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/><path d="M150,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/><path d="M195,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/></g>',
+    baath1991: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><text x="150" y="108" text-anchor="middle" font-family="\'IBM Plex Mono\', monospace" font-size="16" font-weight="700" fill="#0b7a3d" letter-spacing="1">ALLAHU AKBAR</text><g fill="#0b7a3d"><path d="M62,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/><path d="M238,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/></g>',
+    modern2008: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><text x="150" y="108" text-anchor="middle" font-family="\'IBM Plex Mono\', monospace" font-size="17" font-weight="700" fill="#0b7a3d" letter-spacing="1">ALLAHU AKBAR</text>'
+  };
+  function iqFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IQFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iqLegendEl = document.getElementById("iqLegend");
+  iqLegendEl.innerHTML = Object.keys(IQ_C).map(function (k) {
+    return '<span><span class="sw" style="background:' + IQ_C[k] + '"></span>' + IQNAMES[k] + "</span>";
+  }).join("");
+
+  var IQSNAP = [
+    { year:"c. 3100 BCE", name:"Sumer, Akkad, Babylon &amp; Assyria", t:{ iq:IQ_C.sumer }, flagKeys:{ iq:"sumer" },
+      story:"Sumerian city-states develop the world's earliest writing by roughly 3100 BCE; Sargon of Akkad forges the first known multi-ethnic empire around 2334 BCE; Babylon rises under Hammurabi; Assyria, centered on Nineveh, builds one of the ancient world's most formidable military states before collapsing around 609 BCE. No flag, in the vexillological sense, exists anywhere in this era &mdash; shown honestly blank rather than invented." },
+    { year:"539 BCE", name:"Persian &amp; Hellenistic Imperial Rule", t:{ iq:IQ_C.persian }, flagKeys:{ iq:"persian" },
+      story:"Cyrus the Great's Achaemenid army takes Babylon in 539 BCE, ending nearly three millennia of native Mesopotamian rule. Mesopotamia then passes to Alexander's conquest, the Seleucids, the Parthians, and finally Sasanian Persia. Across four successive foreign empires and nearly twelve centuries, no flag can be honestly attributed to Mesopotamia as a political unit &mdash; shown blank rather than invented." },
+    { year:"637", name:"Arab-Islamic Conquest (Rashidun/Umayyad)", t:{ iq:IQ_C.ummayad }, flagKeys:{ iq:"ummayad" },
+      story:"Arab Muslim forces defeat the Sasanian army at al-Qadisiyyah around 636 and take Ctesiphon in 637, ending Persian rule over Mesopotamia. The territory remains under the Rashidun Caliphate and then the Damascus-based Umayyad dynasty until the 750 Abbasid Revolution. The plain white banner most associated with the Umayyads, who govern the bulk of this span, represents it here." },
+    { year:"762", name:"Abbasid Caliphate (Baghdad)", t:{ iq:IQ_C.abbasid }, flagKeys:{ iq:"abbasid" },
+      story:"Caliph al-Mansur founds Baghdad as the Abbasid capital in 762, and the city grows into the intellectual and commercial capital of the Islamic world &mdash; the House of Wisdom's translation movement and real advances in mathematics, astronomy, medicine, and philosophy &mdash; even as real political power fragments after the 9th century. The plain black Abbasid banner remains the recognized state color throughout, ending with the Mongols' 1258 sack of the city." },
+    { year:"1258", name:"Mongol Sack Aftermath / Contested Rule", t:{ iq:IQ_C.mongol }, flagKeys:{ iq:"mongol" },
+      story:"Hulagu Khan's Mongol army sacks Baghdad in February 1258, executes the last Abbasid caliph, and devastates the city on a scale from which it never fully recovers. Iraq passes through Mongol Ilkhanate rule, the Jalayirid dynasty, Timur's 1401 sack of Baghdad, and nearly three centuries as a contested borderland between rising powers. No single flag can honestly represent Iraq across this fragmented span &mdash; shown blank rather than invented." },
+    { year:"1534", name:"Ottoman Iraq", t:{ iq:IQ_C.ottoman }, flagKeys:{ iq:"ottoman" },
+      story:"Ottoman forces under Suleiman the Magnificent capture Baghdad in 1534; the border with Safavid Persia settles by the 1639 Treaty of Zuhab. Iraq remains organized as the Ottoman vilayets of Mosul, Baghdad, and Basra until the empire's defeat in World War I, flying the Ottoman red flag with white crescent and star, formally standardized in 1844." },
+    { year:"1920", name:"British Mandate of Iraq", t:{ iq:IQ_C.mandate }, flagKeys:{ iq:"mandate" },
+      story:"After the Ottoman defeat, Britain administers Mosul, Baghdad, and Basra under a League of Nations mandate from 1920, installing Faisal, a Hashemite prince and Arab Revolt leader, as king in 1921. Faisal brings the black-white-green tricolor with a red hoist triangle and white seven-pointed star used by the Arab Revolt, flying unchanged through full independence." },
+    { year:"1932", name:"Kingdom of Iraq (independent)", t:{ iq:IQ_C.kingdom }, flagKeys:{ iq:"kingdom" },
+      story:"The League of Nations mandate ends on 3 October 1932 and Iraq gains full independence under King Faisal I, while remaining tied to Britain by treaty. The same black-white-green flag with its red hoist triangle and star, flown since 1921, continues unchanged &mdash; a deliberate echo of the wartime Arab Revolt the Hashemites had led against Ottoman rule." },
+    { year:"1958", name:"Iraqi Republic (post-monarchy)", t:{ iq:IQ_C.republic1958 }, flagKeys:{ iq:"republic1958" },
+      story:"Brigadier Abd al-Karim Qasim leads the 14 July 1958 coup that kills King Faisal II and the royal family, ending the monarchy and declaring a republic. The new flag, adopted the following year, bears a yellow eight-pointed sun with a Kurdish dagger at its center, chosen to represent unity between Iraq's Arab and Kurdish populations." },
+    { year:"1963", name:"Ba&#x27;athist Iraq", t:{ iq:IQ_C.baath1963 }, flagKeys:{ iq:"baath1963" },
+      story:"The Ba'ath Party seizes power in the February 1963 Ramadan Revolution and adopts a red-white-black tricolor with three green stars that July, matching the pan-Arab color scheme Egypt and Syria had already adopted. The party consolidates lasting control after a second 1968 coup; Saddam Hussein becomes president in 1979." },
+    { year:"1991", name:"Ba&#x27;athist Iraq (Allahu Akbar added)", t:{ iq:IQ_C.baath1991 }, flagKeys:{ iq:"baath1991" },
+      story:"Amid the buildup to the Gulf War, Saddam Hussein orders Allahu Akbar added to the flag in his own handwriting in January 1991. The Ba'athist government falls in the 2003 invasion, but interim and early post-invasion Iraqi authorities keep this same flag in official use for years, until parliament finally legislates a redesign in 2008." },
+    { year:"2008", name:"Republic of Iraq (modern flag)", t:{ iq:IQ_C.modern2008 }, flagKeys:{ iq:"modern2008" },
+      story:"Iraq's parliament passes Law No. 9 of 2008, keeping the familiar red-white-black tricolor but standardizing Allahu Akbar in green Kufic calligraphy rather than Saddam Hussein's own handwriting, and dropping the three green stars associated with the former ruling party." }
+  ];
+
+  var IQREGIONS = ["iq"];
+  var IQREGION_NAMES = { iq:"Iraq" };
+  var IQADJ = [];
+
+  function iqTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iqYearTag = document.getElementById("iqYearTag");
+  var iqEraName = document.getElementById("iqEraName");
+  var iqEraOwners = document.getElementById("iqEraOwners");
+  var iqEraStory = document.getElementById("iqEraStory");
+  var iqFlagsRow = document.getElementById("iqFlagsRow");
+  var iqSlider = document.getElementById("iqSlider");
+
+  function iqRender(idx) {
+    var era = IQSNAP[idx];
+    iqYearTag.textContent = era.year;
+    iqEraName.innerHTML = era.name;
+    iqEraStory.innerHTML = era.story;
+
+    IQREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iqTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IQ_C).filter(function (k) { return IQ_C[k] === era.t.iq; })[0];
+    iqEraOwners.innerHTML = "<b>" + IQNAMES[label] + "</b>: whole country";
+
+    iqFlagsRow.innerHTML = IQREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iqFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IQREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iqSlider.addEventListener("input", function () { iqRender(parseInt(iqSlider.value, 10)); });
+  iqRender(0);
+
+  var iqPlaying = false, iqPlayTimer = null;
+  var iqPlayBtn = document.getElementById("iqPlayBtn");
+  function iqStepPlay() {
+    var next = parseInt(iqSlider.value, 10) + 1;
+    if (next > IQSNAP.length - 1) { iqStopPlay(); return; }
+    iqSlider.value = next;
+    iqRender(next);
+  }
+  function iqStartPlay() {
+    iqPlaying = true;
+    iqPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iqSlider.value, 10) >= IQSNAP.length - 1) { iqSlider.value = 0; iqRender(0); }
+    iqPlayTimer = setInterval(iqStepPlay, 1700);
+  }
+  function iqStopPlay() {
+    iqPlaying = false;
+    iqPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iqPlayTimer);
+  }
+  iqPlayBtn.addEventListener("click", function () { iqPlaying ? iqStopPlay() : iqStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
