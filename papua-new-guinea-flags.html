@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 460px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 9px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,50 @@
   <p class="lede">The documented flag history proper begins in 1884, when Germany and Britain carve the territory into two separately administered colonies on the same island. Australia inherits and eventually unifies that administration across the 20th century, and Papua New Guinea becomes fully independent on 16 September 1975 &mdash; the black, red, and gold flag chosen that year, carrying the raggiana bird-of-paradise and the Southern Cross, is the one still flown today.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the territory of present-day Papua New Guinea, pre-1884&ndash;present, four political entries. The 1884&ndash;1920 entry covers a genuinely divided colonial period &mdash; German rule in the northeast, British/Australian rule in the southeast &mdash; shown here as a split flag rather than collapsed into a single lineage. No interactive map on this page; see the Pacific hub for the region-wide overview. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the territory of present-day Papua New Guinea, pre-1884&ndash;present, four political entries. The 1884&ndash;1920 entry covers a genuinely divided colonial period &mdash; German rule in the northeast, British/Australian rule in the southeast &mdash; shown here as a split flag and, below, a real internal-split map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>German northeast, British/Australian southeast, 1884&ndash;1920</h2>
+    <p class="imap-sub">The real border of present-day Papua New Guinea (mainland plus Bougainville, New Britain, and New Ireland), split along the historical 1884 Anglo-German line: German New Guinea to the north and east, British/Australian Papua to the south. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Two entirely separate colonial administrations, no shared government.</b> German New Guinea and British/Australian Papua had different flags and different capitals until Australian forces occupied the German territory within weeks of WWI's 1914 outbreak; the border below solidifies only for 1884&ndash;1920 and dissolves the moment Australia administers both as one mandate.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">pre-1884</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 242 153" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="20" y="14">INDONESIA</text>
+          <text x="200" y="20">SOLOMON IS.</text>
+          <text x="60" y="148">CORAL SEA</text>
+        </g>
+        <path id="ireg-south" class="ireg-fill" d="M118.6,98.6 L127.0,112.4 L134.5,111.9 L134.0,117.7 L144.0,119.9 L140.1,122.3 L153.9,127.8 L152.5,131.6 L143.9,132.5 L140.7,129.1 L129.5,127.7 L116.4,125.7 L106.3,117.4 L98.9,110.3 L92.1,98.9 L75.2,93.2 L64.2,96.9 L56.2,101.2 L57.9,110.8 L47.7,115.2 L40.4,113.1 L26.9,112.5 L26.9,98.0 Z"/>
+        <g id="ireg-north" class="ireg-fill">
+          <path d="M26.9,98.0 L26.7,70.2 L26.5,27.8 L49.1,36.8 L73.1,44.2 L82.1,50.9 L89.3,57.4 L91.3,65.1 L112.9,73.1 L116.1,80.0 L104.1,81.4 L107.0,90.0 L118.6,98.6 Z"/>
+          <path d="M169.3,65.2 L162.5,66.3 L160.4,69.9 L153.3,73.1 L146.6,76.1 L139.7,76.1 L129.1,72.3 L121.6,68.7 L122.7,64.7 L134.4,66.6 L141.5,65.6 L143.5,59.3 L145.3,59.0 L146.6,65.9 L154.0,64.9 L157.7,60.5 L164.9,55.8 L163.5,48.2 L171.3,47.9 L173.9,50.1 L173.6,57.3 Z"/>
+          <path d="M184.3,52.5 L180.3,56.0 L177.8,48.3 L174.8,43.3 L168.9,39.0 L161.5,33.5 L152.1,29.6 L155.7,26.5 L162.7,30.1 L167.2,33.0 L172.6,36.1 L177.8,41.6 L182.8,45.7 Z"/>
+          <path d="M219.9,82.7 L216.3,84.0 L210.7,79.0 L205.0,70.7 L202.2,60.8 L204.0,59.6 L205.4,63.4 L209.3,66.4 L215.6,74.6 L221.8,79.0 Z"/>
+        </g>
+        <path class="iborder-line" id="ib-south-north" d="M26.9,98.0 L118.6,98.6"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-south" x="90" y="112">PAPUA (S/SE)</text>
+          <text class="ireg-label" id="ilbl-north" x="130" y="55">GERMAN NEW GUINEA (N/NE)</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Indigenous Papua New Guinea</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Schematic internal partition on a real traced border (simplified from public coastal-vertex data, including Bougainville, New Britain, and New Ireland) &mdash; the Anglo-German dividing line is approximate, not a surveyed frontier; it dissolves outside the 1884&ndash;1920 span.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -387,6 +468,126 @@
 </div>
 
 <script>
+(function () {
+  var IC = { precontact:"#6b5c4a", german:"#5c2a24", british:"#00247d", australia:"#204b5c", independent:"#a9762f" };
+  var INAMES = {
+    precontact:"Indigenous Papua New Guinea", german:"German New Guinea", british:"British/Australian Papua",
+    australia:"Australian-administered Territory of Papua and New Guinea", independent:"Independent Papua New Guinea"
+  };
+  var IFLAGS = {
+    noflag: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    german: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="18" fill="#1a1a1a"/><rect y="18" width="300" height="18" fill="#f4efe1"/><rect y="36" width="300" height="18" fill="#a4302a"/><path d="M190,105 q10,-16 25,-6 q6,-4 12,2 q-6,2 -8,8 q8,2 10,10 q-10,-4 -14,0 q-2,8 -12,8 q2,-8 -2,-12 q-8,0 -11,-10 Z" fill="#1a1a1a"/>',
+    ausensign: '<rect width="300" height="200" fill="#00247d"/><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#a4302a" stroke-width="7"/><rect x="62" width="26" height="100" fill="#f4efe1"/><rect y="37" width="150" height="26" fill="#f4efe1"/><rect x="68" width="14" height="100" fill="#a4302a"/><rect y="43" width="150" height="14" fill="#a4302a"/>',
+    independent: '<polygon points="0,0 300,0 0,200" fill="#000000"/><polygon points="300,0 300,200 0,200" fill="#ce1126"/><path d="M55,75 q8,-14 22,-16 q4,-8 14,-8 q-1,7 -8,11 q9,-1 16,6 q-9,1 -14,7 q10,0 15,9 q-13,-3 -20,1 q-3,9 -13,10 q3,-8 -1,-13 q-9,0 -14,-8 Z" fill="#f9d616"/><g fill="#ffffff"><path d="M270,60 l3,8 8,1 -6,6 1.5,8 -6.5,-4 -6.5,4 1.5,-8 -6,-6 8,-1 Z"/><path d="M260,110 l3,8 8,1 -6,6 1.5,8 -6.5,-4 -6.5,4 1.5,-8 -6,-6 8,-1 Z"/><path d="M230,150 l3,8 8,1 -6,6 1.5,8 -6.5,-4 -6.5,4 1.5,-8 -6,-6 8,-1 Z"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"pre-1884", t:{ south:IC.precontact, north:IC.precontact }, flagKeys:{ south:"noflag", north:"noflag" },
+      story:"Thousands of distinct clan and village communities, among the most linguistically diverse populations on Earth, organize locally rather than under any single overarching kingdom or state. No flag in the European heraldic sense governs this territory before 1884." },
+    { year:"1884 – 1920", t:{ south:IC.british, north:IC.german }, flagKeys:{ south:"ausensign", north:"german" },
+      story:"Germany annexes the northeast as German New Guinea in 1884; Britain declares a protectorate over the southeast the same year, transferred to Australia in 1906 as the Territory of Papua. Two entirely separate colonial administrations, different flags and capitals, run with no shared government until Australia occupies German New Guinea within weeks of WWI's 1914 outbreak." },
+    { year:"1920 – 1975", t:{ south:IC.australia, north:IC.australia }, flagKeys:{ south:"ausensign", north:"ausensign" },
+      story:"The League of Nations formally hands the former German territory to Australia as a mandate in 1920, administered alongside the already-Australian Territory of Papua but kept as two separate administrations until a 1949 act unifies them. The Australian Blue Ensign, the administering power's own flag, flies over both — no distinct territorial flag existed." },
+    { year:"1975–present", t:{ south:IC.independent, north:IC.independent }, flagKeys:{ south:"independent", north:"independent" },
+      story:"Papua New Guinea gains full independence on 16 September 1975. The 1971-competition flag's own black-red-gold palette — bird-of-paradise on black, Southern Cross on red — replaces any inherited colonial scheme, flown now over one unified, independent country." }
+  ];
+
+  var IREGIONS = ["south","north"];
+  var IREGION_NAMES = { south:"Papua (S/SE)", north:"German New Guinea (N/NE)" };
+  var IADJ = [["south","north"]];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = Object.keys(IC).filter(function (k) { return IC[k] === era.t.north; }).map(function (k) { return INAMES[k]; })[0];
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.2");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; }).map(function (k) { return INAMES[k]; })[0];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
