@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,45 @@
   <p class="lede">Senegal's green-yellow-red tricolor and central green star, fixed by law on 20 August 1960, were adopted under the country's first president, Léopold Sédar Senghor &mdash; a founding figure of the Négritude literary movement as much as a head of state &mdash; and the design has never been altered since.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Senegal, c. 1350&ndash;present, five political entities. Pre-Jolof clan history before the mid-14th century is too sparsely attested for a reliable starting point and is left out; the Casamance region's own distinct societies south of the Gambia River are treated as part of the broader Wolof/Serer-era fragmentation rather than split into a separate entry, since no additional flag evidence survives for them either. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Senegal, c. 1350&ndash;present, five political entities. Pre-Jolof clan history before the mid-14th century is too sparsely attested for a reliable starting point and is left out; the Casamance region's own distinct societies south of the Gambia River are treated as part of the broader Wolof/Serer-era fragmentation rather than split into a separate entry, since no additional flag evidence survives for them either. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One river valley, five flags</h2>
+    <p class="imap-sub">Senegal's own real border, traced whole &mdash; there is no internal split to draw. The Gambia forms a thin enclave along the Gambia River inside Senegal's own borders but was never part of Senegal's own political lineage, so it's marked only as a neighboring label, not carved out as an internal region. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>The Gambia is a neighbor, not a missing piece.</b> The narrow strip of the Gambia running through Senegal's south is a separate, distinct former British colony with its own flag history &mdash; not a region ever governed as part of Senegal's own state, so it isn't shown as an internal split here.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag"></span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+      <text x="134.2" y="54.6">MAURITANIA</text>
+      <text x="300.2" y="187.3">MALI</text>
+      <text x="262.3" y="249.0">GUINEA</text>
+      <text x="110.5" y="249.0">GUINEA-BISSAU</text>
+      <text x="105.8" y="189.7">GAMBIA</text>
+      <text x="25.2" y="130.4">ATLANTIC</text>
+        </g>
+        <path id="ireg-sn" class="ireg-fill" d="M264.0,126.9 L268.7,133.2 L265.3,139.0 L266.0,145.1 L271.0,146.8 L270.8,148.9 L274.4,151.1 L276.6,155.8 L275.3,164.3 L278.3,167.9 L278.3,171.7 L275.9,175.4 L271.9,177.7 L275.8,184.3 L281.7,189.0 L281.4,193.5 L284.6,196.5 L288.8,191.7 L294.8,193.9 L297.6,198.9 L296.8,200.8 L298.6,205.8 L302.6,207.5 L303.9,210.6 L303.1,213.0 L305.3,212.0 L305.7,214.2 L303.7,214.9 L303.4,218.9 L304.8,223.8 L302.0,226.6 L303.2,231.4 L301.7,232.7 L306.0,235.7 L305.5,239.3 L299.5,238.0 L288.0,240.3 L280.1,238.6 L276.6,240.1 L271.6,239.2 L267.4,241.9 L259.4,244.0 L254.4,240.2 L248.3,241.3 L245.8,238.3 L239.8,237.8 L233.2,233.0 L231.5,233.1 L230.0,236.3 L226.6,236.1 L225.2,234.0 L226.1,229.0 L224.7,228.2 L194.5,226.5 L125.0,226.3 L102.1,237.6 L76.3,236.9 L67.3,241.3 L52.3,242.7 L49.0,238.0 L48.9,235.0 L59.3,228.5 L61.5,231.7 L62.9,230.1 L69.2,232.4 L72.2,230.1 L76.8,229.7 L77.7,231.1 L85.4,228.5 L94.4,232.1 L99.7,230.4 L103.7,233.0 L110.1,228.3 L108.9,221.3 L113.1,219.4 L115.0,220.5 L115.7,218.7 L114.9,219.5 L112.8,219.0 L108.2,220.8 L108.5,227.7 L103.9,231.9 L102.4,231.4 L102.7,230.0 L97.8,228.8 L94.7,230.4 L90.9,230.0 L85.8,223.9 L83.2,228.2 L71.5,229.6 L69.2,231.7 L63.6,228.5 L64.7,226.5 L63.1,224.9 L62.7,228.8 L59.8,225.6 L56.7,226.7 L58.8,222.3 L58.5,220.7 L56.0,225.0 L56.1,228.5 L51.1,231.3 L50.0,226.3 L53.7,223.6 L52.0,222.8 L49.1,224.6 L50.3,220.9 L48.8,219.9 L51.0,215.6 L51.2,206.9 L53.2,203.6 L94.7,203.6 L95.4,195.2 L109.6,192.7 L116.3,193.9 L121.1,193.0 L123.4,190.9 L124.6,185.6 L127.7,183.1 L136.6,189.1 L144.2,191.3 L147.0,194.0 L153.6,194.3 L164.2,199.9 L172.1,200.2 L176.1,197.7 L186.4,196.1 L188.7,195.1 L190.3,190.7 L186.3,185.4 L182.2,183.6 L164.3,189.5 L159.4,186.3 L155.9,180.7 L152.0,179.6 L146.5,181.9 L143.6,180.1 L140.0,174.0 L130.6,172.2 L121.6,175.9 L119.8,174.0 L115.6,174.5 L112.1,177.5 L109.7,183.4 L60.2,183.2 L59.5,180.7 L62.7,178.4 L61.7,177.8 L62.7,176.0 L58.4,180.0 L56.7,178.9 L57.0,175.0 L60.4,171.0 L62.1,170.7 L63.7,172.9 L62.4,169.3 L63.7,163.5 L60.8,169.8 L56.6,171.0 L53.6,174.6 L51.6,171.3 L51.4,165.9 L53.5,164.1 L56.6,165.5 L59.5,164.2 L61.1,161.9 L58.8,161.6 L65.9,156.2 L69.5,155.7 L64.6,154.4 L65.0,156.3 L62.5,156.5 L60.4,160.2 L55.8,163.5 L52.6,162.9 L55.9,158.9 L52.3,160.6 L50.1,171.3 L49.6,160.8 L42.0,149.3 L41.5,145.1 L36.1,141.6 L28.8,130.9 L19.6,128.7 L18.6,132.6 L14.0,127.7 L21.8,125.7 L31.2,120.9 L45.2,105.2 L61.5,79.0 L64.7,60.6 L68.6,57.7 L71.0,47.2 L72.8,44.6 L80.6,42.5 L84.3,45.3 L91.7,44.2 L102.4,46.0 L105.3,44.1 L109.4,44.0 L112.2,41.2 L114.6,42.8 L128.3,41.2 L129.8,40.3 L129.1,37.3 L132.5,38.8 L135.5,36.0 L138.4,38.4 L158.3,38.8 L162.4,37.5 L182.7,52.8 L183.4,57.9 L187.2,59.6 L189.5,63.1 L194.5,59.8 L195.0,62.4 L197.4,63.8 L206.1,61.5 L205.3,64.3 L208.2,64.0 L214.1,72.1 L215.5,79.7 L218.3,82.5 L217.8,86.7 L223.9,87.9 L225.1,92.9 L230.8,92.1 L232.9,98.9 L237.2,102.8 L234.4,104.3 L239.2,106.1 L239.5,109.3 L242.5,111.3 L247.0,111.4 L253.5,115.4 L255.3,120.6 L264.0,126.9 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-sn" x="0" y="0">SENEGAL</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (Natural Earth 10m); neighboring-country labels are placed at their real geographic positions using the same projection.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -397,6 +473,120 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    jolof:"#a9762f",
+    fragmented:"#6b5c4a",
+    french:"#204b5c",
+    mali_fed:"#c9a13c",
+    independent:"#7c2e1f"
+  };
+  var INAMES = {
+    jolof:"Jolof Empire",
+    fragmented:"Fragmented Wolof & Serer kingdoms",
+    french:"French colonial Senegal",
+    mali_fed:"Mali Federation (Senegal & French Sudan)",
+    independent:"Republic of Senegal (independent)"
+  };
+  var IFLAGS = {
+    jolof: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    fragmented: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    french: "<rect width=\"300\" height=\"200\" fill=\"#0055A4\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#FFFFFF\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#EF4135\"/>",
+    mali_fed: "<rect width=\"300\" height=\"200\" fill=\"#00853F\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#FDEF42\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#E31B23\"/><g stroke=\"#111111\" stroke-width=\"6\" fill=\"none\" stroke-linecap=\"round\"><line x1=\"150\" y1=\"60\" x2=\"150\" y2=\"140\"/><path d=\"M120,75 L150,75 L120,55\"/><path d=\"M180,75 L150,75 L180,55\"/><path d=\"M120,125 L150,125 L120,145\"/><path d=\"M180,125 L150,125 L180,145\"/></g>",
+    independent: "<rect width=\"300\" height=\"200\" fill=\"#00853F\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#FDEF42\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#E31B23\"/><path d=\"M150,68 L157.35,89.89 L180.44,90.11 L161.89,103.86 L168.81,125.89 L150,112.5 L131.19,125.89 L138.11,103.86 L119.56,90.11 L142.65,89.89 Z\" fill=\"#00853F\"/>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  document.getElementById("ilbl-sn").setAttribute("x","150.5"); document.getElementById("ilbl-sn").setAttribute("y","140.5");
+
+  var ISNAP = [
+    { year:"c. 1350 \u2013 1549", name:"Jolof Empire", t:{sn:IC.jolof}, flagKeys:{sn:"jolof"}, story:"According to Wolof oral tradition, Ndiadiane Ndiaye unites the Wolof-speaking peoples of the Senegal River valley into the Jolof Empire around the mid-14th century, a loose overlordship over the later kingdoms of Cayor, Baol, and Waalo. No securely documented flag survives from this pre-colonial era, so it is shown honestly blank." },
+    { year:"1549 \u2013 1659", name:"Fragmented Wolof and Serer kingdoms", t:{sn:IC.fragmented}, flagKeys:{sn:"fragmented"}, story:"Jolof's overlordship collapses after its army's defeat at the Battle of Danki around 1549. Cayor, Waalo, Baol, and a reduced rump Jolof become fully independent; the Serer kingdoms of Sine and Saloum continue their own separate royal lines. No single power reunifies the region, and no flag survives for any of these successor kingdoms." },
+    { year:"1659 \u2013 1959", name:"French colonial Senegal (Saint-Louis, then French West Africa)", t:{sn:IC.french}, flagKeys:{sn:"french"}, story:"France establishes a permanent trading post at Saint-Louis in 1659. Senegal becomes the administrative and commercial center of French West Africa when that federation forms in 1895, with Dakar named its federal capital in 1902. The French tricolor flies over the whole territory throughout \u2014 Senegal has no distinct flag of its own under French rule." },
+    { year:"1959 \u2013 1960", name:"Mali Federation (Senegal & French Sudan)", t:{sn:IC.mali_fed}, flagKeys:{sn:"mali_fed"}, story:"Senegal and French Sudan join as the Mali Federation on 4 April 1959, an attempt to build a single larger state as the French Community loosens. The Federation gains internationally recognized independence on 20 June 1960 \u2014 but a dispute over federal versus territorial power fractures it within weeks. Senegal secedes on 20 August 1960." },
+    { year:"1960 \u2013 present", name:"Republic of Senegal (independent)", t:{sn:IC.independent}, flagKeys:{sn:"independent"}, story:"Senegal withdraws from the Mali Federation on 20 August 1960 and declares full independence the same day; L\u00e9opold S\u00e9dar Senghor, already known as a poet and N\u00e9gritude co-founder, is elected the country's first president that September. Senegal kept the green-yellow-red tricolor but swapped the Mali Federation's Kanaga figure for its own green star, fixed by law on independence day." }
+  ];
+
+  var IREGIONS = ["sn"];
+  var IREGION_NAMES = {sn:"Senegal"};
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      ["", "2", "3", "4"].forEach(function (suf) {
+        var lbl = document.getElementById("ilbl-" + id + suf);
+        if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      });
+    });
+
+    if (IREGIONS.length === 1) {
+      var id0 = IREGIONS[0];
+      var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t[id0]; })[0];
+      iEraOwners.innerHTML = "<b>" + (INAMES[label] || "") + "</b>: whole territory";
+    } else {
+      iEraOwners.innerHTML = IREGIONS.map(function (id) {
+        var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t[id]; })[0];
+        return "<b>" + IREGION_NAMES[id] + "</b>: " + (INAMES[label] || "");
+      }).join(" &middot; ");
+    }
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
