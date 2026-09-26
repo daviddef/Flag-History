@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -182,6 +220,37 @@
   <h1>Flags of Jamaica</h1>
   <p class="lede">A thinly held Spanish backwater for a century and a half, seized by Cromwell's fleet in 1655 and remade into Britain's richest sugar colony on the backs of enslaved Africans, and finally an independent nation on 6 August 1962 &mdash; Jamaica's own flag is still the only national banner in the world that carries no red, white, or blue at all.</p>
   <p class="lede">Four flags across five centuries: the Cross of Burgundy over Santiago de la Vega, two centuries of the plain Union Jack, a defaced Blue Ensign carrying the colony's own badge, and the gold-black-green saltire flown since the eve of independence.</p>
+
+  <div class="imap-section">
+    <h2>One island, four flags</h2>
+    <p class="imap-sub">Jamaica's own real coastline, traced whole &mdash; press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This page has no internal split to show.</b> Jamaica was governed as a single colony under Spain, then as a single colony under Britain, then as a single independent state &mdash; no rival authority ever held a separate, mappable part of the island at the same time. What changes here is only who ruled all of it at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1509</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label">
+          <text x="270" y="16">CARIBBEAN SEA</text>
+        </g>
+        <path id="ireg-jm" class="ireg-fill" d="M116.0,20.0 L192.1,30.7 L252.2,59.3 L270.9,91.9 L191.4,94.1 L157.1,114.0 L93.7,94.9 L29.1,51.5 L42.7,24.3 L90.2,16.0 L116.0,20.0 Z"/>
+        <text class="ireg-label" id="ilbl-jm" x="150" y="68">JAMAICA</text>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Spanish Jamaica</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
+  </div>
 
   <div class="timeline">
 
@@ -377,6 +446,99 @@
 </div>
 
 <script>
+(function () {
+  var IC = { spanish:"#c9432c", ujack:"#1b3a76", ensign:"#1b3a76", modern:"#009b3a" };
+  var INAMES = {
+    spanish:"Spanish Jamaica", ujack:"British Jamaica (plain Union Jack)",
+    ensign:"British Crown Colony of Jamaica (colonial ensign era)", modern:"Independent Jamaica"
+  };
+  var IFLAGS = {
+    spanish: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="26"/>',
+    ujack: '<rect width="300" height="200" fill="#1b3a76"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="24"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="10"/><rect y="80" width="300" height="40" fill="#f4efe1"/><rect x="130" width="40" height="200" fill="#f4efe1"/><rect y="88" width="300" height="24" fill="#c9432c"/><rect x="138" width="24" height="200" fill="#c9432c"/>',
+    ensign: '<rect width="300" height="200" fill="#1b3a76"/><g transform="scale(0.5)"><rect width="300" height="200" fill="#1b3a76"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="24"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="10"/><rect y="80" width="300" height="40" fill="#f4efe1"/><rect x="130" width="40" height="200" fill="#f4efe1"/><rect y="88" width="300" height="24" fill="#c9432c"/><rect x="138" width="24" height="200" fill="#c9432c"/></g><g transform="translate(210,88)"><path d="M0,0 L60,0 L60,68 L30,88 L0,68 Z" fill="#fdf8ec" stroke="#c9962c" stroke-width="2"/><path d="M9,13 L51,13 L51,54 L30,66 L9,54 Z" fill="#009b3a"/><circle cx="30" cy="34" r="9" fill="#fed100"/></g>',
+    modern: '<rect width="300" height="200" fill="#009b3a"/><path d="M0,0 L120,0 L0,80 Z" fill="#111"/><path d="M300,0 L180,0 L300,80 Z" fill="#111"/><path d="M0,200 L120,200 L0,120 Z" fill="#111"/><path d="M300,200 L180,200 L300,120 Z" fill="#111"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#fed100" stroke-width="30"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"1509", name:"Spanish Jamaica", t:{ jm:IC.spanish }, flagKeys:{ jm:"spanish" },
+      story:"Juan de Esquivel establishes the first Spanish settlement, Sevilla la Nueva, around 1509&ndash;10; the colony's capital shifts inland to Santiago de la Vega around 1534. Always a minor, thinly populated backwater next to Cuba or Hispaniola, held mainly for provisioning passing fleets, until Cromwell's expeditionary force captures the island in 1655." },
+    { year:"1655", name:"British Jamaica (plain Union Jack)", t:{ jm:IC.ujack }, flagKeys:{ jm:"ujack" },
+      story:"An English expeditionary force sent by Oliver Cromwell seizes Jamaica from Spain in May 1655. For roughly two centuries the island is administered under the plain Union flag, with no distinguishing colonial badge yet in use. Jamaica becomes Britain's wealthiest sugar colony, built on massive enslaved labor; slavery is abolished in 1834 and full emancipation follows in 1838." },
+    { year:"1875", name:"British Crown Colony of Jamaica (colonial ensign era)", t:{ jm:IC.ensign }, flagKeys:{ jm:"ensign" },
+      story:"Direct Crown Colony rule from London follows the 1865 Morant Bay rebellion and the abolition of Jamaica's old assembly. From the 1870s Jamaica flies a defaced Blue Ensign carrying its own badge &mdash; a heraldic shield centered on a golden pineapple &mdash; formalized by Colonial Office regulation in 1906, and flown until the West Indies Federation's collapse in 1962." },
+    { year:"1962–present", name:"Independent Jamaica", t:{ jm:IC.modern }, flagKeys:{ jm:"modern" },
+      story:"Jamaica withdraws from the short-lived West Indies Federation and becomes independent on 6 August 1962. The new flag &mdash; a gold diagonal saltire dividing black and green triangles &mdash; is chosen by a bipartisan parliamentary committee just before independence day; it is the only national flag in the world with no red, white, or blue in it at all." }
+  ];
+
+  var IREGIONS = ["jm"];
+  var IREGION_NAMES = { jm:"Jamaica" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    iEraOwners.innerHTML = "<b>" + era.name + "</b>: whole island";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
