@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -182,6 +220,45 @@
   <h1>Flags of Grenada</h1>
   <p class="lede">Grenada &mdash; the Kalinago's Camerhogne &mdash; passed from indigenous control to a violently established French settlement in 1650, then bounced between France and Britain through the eighteenth century's wars before settling into British hands for good in 1783. Independence in 1974 produced the flag Grenada still flies today, a banner that outlasted a Marxist revolution, an American invasion, and everything in between.</p>
   <p class="lede">Five flags across five and a half centuries: no documented banner for the Kalinago era, the French royal ensign, Britain's early colonial flag through the French interlude, the lasting British colonial Blue Ensign, and the red-yellow-green independence flag with its star and nutmeg pod &mdash; the mark of the Spice Isle.</p>
+
+  <div class="scope-note">
+    <b>Scope of this page:</b> the island of present-day Grenada (with Carriacou and Petite Martinique), c. 1498&ndash;present, five political entities. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One island, five flags</h2>
+    <p class="imap-sub">Grenada's own real coastline &mdash; the main island, Carriacou, and Petite Martinique &mdash; with no internal split to show. Press play, or drag the slider, to watch who held the whole territory, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, honestly.</b> Every government on this map, Kalinago, French, British-contested, British, and independent, held the whole island group at once; nothing in Grenada's history supports carving out a genuinely separate internal region.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1498</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 250 343" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="175" y="14">CARIBBEAN SEA</text>
+          <text x="75" y="330">ATLANTIC OCEAN</text>
+        </g>
+        <path id="ireg-gd" class="ireg-fill" d="M121.3,199.9 L125.8,209.4 L126.8,217.4 L124.9,244.7 L123.6,248.6 L121.2,252.4 L117.6,260.9 L117.7,265.2 L120.8,274.3 L119.4,276.0 L116.6,277.3 L115.0,280.6 L114.3,284.9 L114.2,289.5 L111.2,294.4 L87.9,306.7 L87.9,302.5 L83.3,304.8 L79.8,307.9 L77.6,312.1 L76.8,317.3 L71.8,316.4 L66.9,314.9 L62.3,312.8 L58.0,310.1 L52.4,315.1 L43.2,317.0 L33.1,316.5 L25.0,314.3 L43.8,302.1 L47.2,298.8 L49.2,290.6 L47.6,284.1 L44.9,277.8 L43.5,270.2 L46.4,257.8 L57.6,236.1 L58.0,226.4 L89.5,187.9 L100.9,185.9 L113.3,187.6 L125.0,195.0 L124.7,196.7 L121.3,199.9 Z M221.5,66.7 L212.0,63.8 L202.8,66.4 L193.8,71.1 L184.5,74.6 L186.4,71.2 L190.1,62.5 L191.9,59.1 L190.2,58.8 L184.5,59.1 L185.3,56.9 L188.5,51.5 L200.2,55.0 L207.3,45.5 L213.2,32.3 L221.5,25.0 L225.0,34.1 L224.1,44.2 L221.9,55.1 L221.5,66.7 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-gd" x="90" y="250">GRENADA</text>
+          <text class="ireg-label" id="ilbl-gd2" x="205" y="50" style="font-size:7.5px">CARRIACOU</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Kalinago Grenada</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
+  </div>
 
   <div class="timeline">
 
@@ -416,6 +493,108 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    none:"#4f7f6a", france:"#7a5aa5", contested:"#6e6068", britain:"#2c5f8a", modern:"#a9762f"
+  };
+  var INAMES = {
+    none:"Kalinago Grenada", france:"French Grenada",
+    contested:"Britain's first possession, and the French recapture", britain:"British Grenada (final and lasting British rule)",
+    modern:"Independent Grenada"
+  };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c4a2a"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
+    france: '<rect width="300" height="200" fill="#f4efe1"/><path d="M150,80 Q166,96 150,120 Q134,96 150,80 Z M150,120 Q158,134 150,150 M150,120 Q142,134 150,150 M126,104 Q138,96 150,104 M174,104 Q162,96 150,104" fill="none" stroke="#c9962c" stroke-width="5"/>',
+    contested: '<rect width="300" height="200" fill="#c9432c"/><rect width="150" height="100" fill="#1a3d7c"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="14"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c9432c" stroke-width="6"/><rect y="40" width="150" height="20" fill="#f4efe1"/><rect x="65" width="20" height="100" fill="#f4efe1"/><rect y="44" width="150" height="12" fill="#c9432c"/><rect x="69" width="12" height="100" fill="#c9432c"/>',
+    britain: '<rect width="300" height="200" fill="#1a3d7c"/><rect width="150" height="100" fill="#1a3d7c"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="14"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c9432c" stroke-width="6"/><rect y="40" width="150" height="20" fill="#f4efe1"/><rect x="65" width="20" height="100" fill="#f4efe1"/><rect y="44" width="150" height="12" fill="#c9432c"/><rect x="69" width="12" height="100" fill="#c9432c"/><circle cx="215" cy="120" r="34" fill="#dce6d8" stroke="#c9962c" stroke-width="2"/>',
+    modern: '<rect width="300" height="200" fill="#ce1126"/><polygon points="14,14 286,14 150,100" fill="#fcd116"/><polygon points="14,186 286,186 150,100" fill="#fcd116"/><polygon points="14,14 14,186 150,100" fill="#007a3d"/><polygon points="286,14 286,186 150,100" fill="#007a3d"/><circle cx="150" cy="100" r="24" fill="#ce1126"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1498", name:"Kalinago Grenada", t:{ gd:IC.none }, flagKeys:{ gd:"none" },
+      story:"Columbus sights the island in 1498 but does not land. Grenada, which the Kalinago called \"Camerhogne,\" remains under Kalinago control, resisting repeated European settlement attempts, until the French finally establish a permanent, violently imposed foothold in 1650. No securely documented flag survives from this era." },
+    { year:"1650", name:"French Grenada", t:{ gd:IC.france }, flagKeys:{ gd:"france" },
+      story:"French colonists from Martinique, led by Jacques Dyel du Parquet, establish a permanent settlement in 1650 after breaking Kalinago resistance in a brutal campaign. The plain white French royal ensign with the gold Bourbon fleur-de-lis flies over the whole island." },
+    { year:"1763", name:"Britain's first possession, and the French recapture", t:{ gd:IC.contested }, flagKeys:{ gd:"contested" },
+      story:"France cedes Grenada to Britain in the 1763 Treaty of Paris. French forces recapture the island in 1779 during the American Revolutionary War and hold it until the 1783 Treaty of Paris restores it to Britain for good &mdash; shown here as one honest bridging span rather than split into separate cards." },
+    { year:"1783", name:"British Grenada (final and lasting British rule)", t:{ gd:IC.britain }, flagKeys:{ gd:"britain" },
+      story:"The 1783 Treaty of Paris confirms Grenada as British again, and Britain holds it continuously from here through independence &mdash; sugar-then-nutmeg-and-cocoa plantation agriculture, emancipation in 1834&ndash;38, indentured labor, and membership in the West Indies Federation from 1958 to 1962." },
+    { year:"1974–present", name:"Independent Grenada", t:{ gd:IC.modern }, flagKeys:{ gd:"modern" },
+      story:"Grenada gains independence from Britain on 7 February 1974. The same red-yellow-green flag with its central star and nutmeg pod flies through the 1979 revolution, Maurice Bishop's 1983 execution, and the US-led invasion days later &mdash; every one a change of government, never of flag." }
+  ];
+
+  var IREGIONS = ["gd"];
+  var IREGION_NAMES = { gd:"Grenada" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) { lbl2.setAttribute("fill", tcol); lbl2.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.gd; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole island group";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
@@ -427,5 +606,6 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+})();
 </script>
 </body></html>
