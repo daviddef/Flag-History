@@ -520,8 +520,8 @@
       });
     });
 
-    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t[IREGIONS[0]]; })[0];
-    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory";
+    var fk0 = era.flagKeys[IREGIONS[0]];
+    iEraOwners.innerHTML = "<b>" + INAMES[fk0] + "</b>: whole territory";
 
     iFlagsRow.innerHTML = IREGIONS.map(function (id) {
       return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
