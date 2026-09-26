@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -187,6 +225,44 @@
     <b>Scope of this page:</b> the Korean peninsula's shared statehood history to 1945, then the Democratic People's Republic of Korea (North Korea) specifically from its 1948 founding, nine political periods. See <a href="south-korea-flags.html">South Korea's own page</a> for the Republic of Korea's parallel lineage since 1945. Part of a larger atlas &mdash; see the linked pages at the bottom.
   </div>
 
+
+  <div class="imap-section">
+    <h2>One peninsula, then two Koreas</h2>
+    <p class="imap-sub">The Korean peninsula's own real border, traced whole for both halves &mdash; one unified territory for nearly two thousand years of documented history, then split at the 38th parallel in 1945 into a division that has never healed. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This is the one page in this batch where a real, still-current split earns its own map.</b> Unlike Nigeria's brief pre-1914 protectorates, the Korean division is the defining fact of North Korea's entire modern existence: every government this page's own timeline documents before 1945 ruled the whole peninsula; every one since has ruled only the north. The south's own post-1945 flags are shown here only for context &mdash; they are not this page's subject and aren't detailed in the timeline below.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1948–present</span>
+        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+        <g style="pointer-events:none">
+          <path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" pointer-events="none" d="M173.1,-162.9 L251.0,-103.6 L333.2,-97.3 L272.0,-29.4 L242.8,43.3 L182.4,70.6 L138.6,97.3 L61.1,141.4 L26.3,138.1 L-14.4,133.6 L-51.3,188.8 L13.3,194.6 L19.9,231.2 L-25.8,283.6 L38.7,380.3 L43.0,436.2 L3.3,519.8 L-102.0,648.1 L-164.0,670.1 L-229.4,721.6 L-274.3,680.2 L-316.4,647.8 L-391.7,650.5 L-431.5,696.5 L-446.8,676.2 L-484.6,643.1 L-526.9,579.0 L-514.7,498.9 L-553.5,466.3 L-627.7,472.0 L-678.1,490.1 L-735.3,512.4 L-805.2,485.2 L-863.4,447.3 L-947.9,404.6 L-959.9,341.2 L-992.0,266.0 L-1058.8,208.1 L-1083.4,175.5 L-1063.6,119.5 L-983.8,94.9 L-937.2,42.8 L-883.9,-36.0 L-807.6,-93.5 L-760.1,-149.0 L-684.8,-76.5 L-626.1,-19.0 L-559.0,48.6 L-430.8,54.9 L-357.6,82.5 L-230.2,44.2 L-208.3,-3.5 L-135.5,-30.0 L-32.3,-74.0 L-51.2,-112.0 L-105.5,-101.7 L-55.5,-155.4 L11.3,-229.1 L46.6,-273.2 L147.6,-223.7 L173.1,-162.9 Z"/><path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" pointer-events="none" d="M-310.7,-981.0 L-174.8,-922.6 L-147.0,-879.4 L195.0,-862.7 L358.0,-821.1 L765.1,-796.7 L1024.3,-761.4 L1297.3,-767.6 L1357.8,-593.2 L1213.7,-499.3 L1012.3,-466.8 L969.3,-329.0 L835.8,-265.0 L973.3,-481.0 L794.3,-463.4 L590.1,-450.8 L459.5,-296.0 L420.2,-59.1 L246.2,63.8 L300.4,-24.1 L241.6,-131.9 L112.6,-265.1 L-1.7,-219.5 L-172.0,-156.4 L-336.0,-182.3 L-524.5,-200.5 L-655.3,-194.2 L-838.1,-179.4 L-1022.7,-295.7 L-1197.1,-332.0 L-1391.8,-251.8 L-1447.4,-202.1 L-1700.3,-183.7 L-1675.9,-66.7 L-1690.1,88.3 L-1770.8,49.0 L-1934.4,-9.5 L-1918.4,-83.0 L-1909.7,-167.9 L-2011.9,-207.8 L-2069.0,-233.3 L-2068.8,-289.6 L-2128.8,-348.0 L-2158.0,-454.9 L-2100.3,-597.1 L-2085.0,-758.1 L-1876.5,-659.1 L-1946.7,-586.4 L-1827.9,-665.4 L-1717.3,-701.9 L-1556.1,-737.0 L-1410.5,-719.6 L-1218.2,-745.6 L-1194.1,-856.8 L-1089.5,-723.5 L-1057.1,-704.0 L-1066.3,-856.5 L-949.5,-841.1 L-773.8,-925.1 L-498.9,-965.1 L-310.7,-981.0 Z"/>
+          <g class="context-label">
+            <text x="12" y="210.5">CHINA</text><text x="12" y="14">RUSSIA</text>
+          </g>
+        </g>
+        <path id="ireg-north" class="ireg-fill" stroke="#241f14" stroke-width="1" stroke-opacity="0.3" d="M242.9,58.5 L246.2,63.8 L237.3,62.0 L227.1,72.2 L220.2,82.4 L221.0,104.0 L208.9,110.7 L204.8,116.0 L196.0,124.8 L180.4,129.8 L170.2,137.9 L169.5,150.9 L166.8,154.2 L176.1,159.1 L189.3,172.3 L186.0,179.5 L176.0,181.5 L159.5,183.0 L150.4,196.5 L139.9,195.5 L138.5,198.2 L127.1,192.5 L124.3,198.1 L117.4,200.6 L116.6,195.0 L110.6,192.2 L104.3,187.4 L110.7,174.2 L116.2,170.7 L114.1,165.2 L120.0,148.9 L118.5,144.0 L104.9,140.8 L93.8,132.7 L112.9,113.4 L138.6,97.3 L154.7,75.9 L165.8,85.4 L186.0,86.5 L182.4,70.6 L218.5,57.6 L227.8,40.8 L242.9,58.5 Z"/>
+        <path id="ireg-south" class="ireg-fill" stroke="#241f14" stroke-width="1" stroke-opacity="0.3" d="M189.3,172.3 L209.5,207.7 L215.3,227.2 L215.5,261.9 L206.7,278.4 L185.5,284.2 L166.8,296.6 L145.7,299.2 L143.1,282.8 L147.5,260.3 L137.1,229.0 L154.5,223.9 L138.5,198.2 L139.9,195.5 L150.4,196.5 L159.5,183.0 L176.0,181.5 L186.0,179.5 L189.3,172.3 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-north" x="165.5" y="134.0">NORTH</text>
+          <text class="ireg-label" id="ilbl-south" x="171.4" y="227.9">SOUTH</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Democratic People's Republic of Korea (North Korea)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline for both modern Koreas (the DMZ approximates, but doesn't exactly match, the 1945 38th-parallel line) &mdash; schematic where the two diverge, not surveyed.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
+  </div>
   <div class="timeline">
 
     <!-- 1: DPRK -->
@@ -504,6 +580,128 @@
   </footer>
 
 </div>
+
+
+<script>
+(function () {
+  var IC = { dprk: "#c9372c", rok: "#003478", sovnorth: "#6b5c4a", usamgik: "#21468b", japancol: "#6b5c4a", empire: "#a9762f", joseonflag: "#a9762f", nojoseon: "#a9762f", goryeo: "#a9762f", silla: "#6b5c4a", threekingdoms: "#6b5c4a" };
+  var INAMES = { dprk: "Democratic People's Republic of Korea", rok: "Republic of Korea (South, for context)", sovnorth: "Soviet-occupied north", usamgik: "US military government (South, for context)", japancol: "Japan (colonial Korea)", empire: "Korean Empire", joseonflag: "Joseon Dynasty (Taegukgi)", nojoseon: "Joseon Dynasty (no flag yet)", goryeo: "Goryeo Dynasty (no flag documented)", silla: "Unified Silla (no flag documented)", threekingdoms: "Three Kingdoms (no flag documented)" };
+  var IFLAGS = {
+    dprk: '<rect width="300" height="30" fill="#0047a0"/> <rect y="30" width="300" height="10" fill="#f4efe1"/> <rect y="40" width="300" height="120" fill="#cd2e3a"/> <rect y="160" width="300" height="10" fill="#f4efe1"/> <rect y="170" width="300" height="30" fill="#0047a0"/> <circle cx="90" cy="100" r="34" fill="#f4efe1"/> <path d="M90,72 l8,22 24,1 -19,16 7,23 -20,-14 -20,14 7,-23 -19,-16 24,-1 Z" fill="#cd2e3a"/>',
+    rok: '<rect width="300" height="200" fill="#f4efe1"/> <circle cx="150" cy="100" r="42" fill="#cd2e3a"/> <path d="M150,58 A21,21 0 0 1 150,100 A21,21 0 0 0 150,142 A42,42 0 0 0 150,58 Z" fill="#0047a0"/> <g stroke="#241f14" stroke-width="6"><line x1="55" y1="45" x2="95" y2="45"/><line x1="55" y1="58" x2="95" y2="58"/><line x1="55" y1="71" x2="95" y2="71"/></g> <g stroke="#241f14" stroke-width="6"><line x1="205" y1="129" x2="223" y2="129"/><line x1="227" y1="129" x2="245" y2="129"/><line x1="205" y1="142" x2="223" y2="142"/><line x1="227" y1="142" x2="245" y2="142"/><line x1="205" y1="155" x2="245" y2="155"/></g>',
+    sovnorth: '<rect width="300" height="200" fill="#f4efe1"/> <circle cx="150" cy="100" r="42" fill="#cd2e3a"/> <path d="M150,58 A21,21 0 0 1 150,100 A21,21 0 0 0 150,142 A42,42 0 0 0 150,58 Z" fill="#0047a0"/> <rect width="300" height="200" fill="none" stroke="#204b5c" stroke-width="4" stroke-dasharray="8 6"/>',
+    usamgik: '<rect width="300" height="200" fill="#f4efe1"/><g fill="#a4302a"><rect y="0" width="300" height="15.4"/><rect y="30.8" width="300" height="15.4"/><rect y="61.6" width="300" height="15.4"/><rect y="92.4" width="300" height="15.4"/><rect y="123.2" width="300" height="15.4"/><rect y="154" width="300" height="15.4"/><rect y="184.6" width="300" height="15.4"/></g><rect width="130" height="107.7" fill="#21468b"/><g fill="#f4efe1"><circle cx="20" cy="18" r="4"/><circle cx="50" cy="18" r="4"/><circle cx="80" cy="18" r="4"/><circle cx="110" cy="18" r="4"/><circle cx="35" cy="36" r="4"/><circle cx="65" cy="36" r="4"/><circle cx="95" cy="36" r="4"/><circle cx="20" cy="54" r="4"/><circle cx="50" cy="54" r="4"/><circle cx="80" cy="54" r="4"/><circle cx="110" cy="54" r="4"/><circle cx="35" cy="72" r="4"/><circle cx="65" cy="72" r="4"/><circle cx="95" cy="72" r="4"/><circle cx="20" cy="90" r="4"/><circle cx="50" cy="90" r="4"/><circle cx="80" cy="90" r="4"/><circle cx="110" cy="90" r="4"/></g>',
+    japancol: '<rect width="300" height="200" fill="#f4efe1"/> <circle cx="150" cy="100" r="60" fill="#bc002d"/>',
+    empire: '<rect width="300" height="200" fill="#f4efe1"/> <circle cx="150" cy="100" r="42" fill="#cd2e3a"/> <path d="M150,58 A21,21 0 0 1 150,100 A21,21 0 0 0 150,142 A42,42 0 0 0 150,58 Z" fill="#0047a0"/> <g stroke="#241f14" stroke-width="6"><line x1="55" y1="45" x2="95" y2="45"/><line x1="55" y1="58" x2="95" y2="58"/><line x1="55" y1="71" x2="95" y2="71"/></g> <g stroke="#241f14" stroke-width="6"><line x1="205" y1="129" x2="223" y2="129"/><line x1="227" y1="129" x2="245" y2="129"/><line x1="205" y1="142" x2="223" y2="142"/><line x1="227" y1="142" x2="245" y2="142"/><line x1="205" y1="155" x2="245" y2="155"/></g>',
+    joseonflag: '<rect width="300" height="200" fill="#f4efe1"/> <circle cx="150" cy="100" r="42" fill="#cd2e3a"/> <path d="M150,58 A21,21 0 0 1 150,100 A21,21 0 0 0 150,142 A42,42 0 0 0 150,58 Z" fill="#0047a0"/>',
+    nojoseon: '<rect width="300" height="200" fill="#1e2f96"/> <rect width="300" height="200" fill="none" stroke="#f4efe1" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#f4efe1">NO NATIONAL</text> <text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#f4efe1">FLAG YET</text>',
+    goryeo: '<rect width="300" height="200" fill="#7c2e1f"/> <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO NATIONAL</text> <text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">FLAG YET</text>',
+    silla: '<rect width="300" height="200" fill="#5c1f2e"/> <rect width="300" height="200" fill="none" stroke="#f4efe1" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#f4efe1">NO NATIONAL</text> <text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#f4efe1">FLAG YET</text>',
+    threekingdoms: '<rect width="300" height="200" fill="#3f5c3a"/> <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text> <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"1948\u2013present", name:"Democratic People's Republic of Korea (North Korea)", t:{ north: IC.dprk, south: IC.rok }, flagKeys:{ north: "dprk", south: "rok" }, story:"The DPRK is proclaimed on 9 September 1948 under Kim Il Sung, months after the Republic of Korea's own founding in the south that August &mdash; two rival states from one peninsula, each claiming to be the whole country's legitimate government. The 1950&ndash;53 Korean War fails to reunify either side; the flags and the division both remain unchanged since." },
+    { year:"1945\u20131948", name:"Soviet occupation and provisional government (north of the 38th parallel)", t:{ north: IC.sovnorth, south: IC.usamgik }, flagKeys:{ north: "sovnorth", south: "usamgik" }, story:"Japan's August 1945 surrender leaves the peninsula split at the 38th parallel between a Soviet occupation zone in the north and a US military government (USAMGIK) in the south &mdash; a wartime administrative convenience that hardens into a permanent division when each side sponsors a separate government in 1948." },
+    { year:"1910\u20131945", name:"Japanese colonial rule (Korea under Japan)", t:{ north: IC.japancol, south: IC.japancol }, flagKeys:{ north: "japancol", south: "japancol" }, story:"Japan formally annexes Korea in 1910 after decades of encroaching influence, ruling the whole peninsula as a single colony until its 1945 defeat in World War II. Japan's own Hinomaru flies throughout &mdash; no distinct Korean territorial flag exists under direct colonial rule, and the peninsula is not yet divided into north and south." },
+    { year:"1897\u20131910", name:"Korean Empire", t:{ north: IC.empire, south: IC.empire }, flagKeys:{ north: "empire", south: "empire" }, story:"King Gojong proclaims the Korean Empire in October 1897, asserting full sovereignty and formally adopting the Taegukgi (with its taegeuk and four trigrams) as the state's own flag, in a last attempt to resist Japanese and Russian encroachment before Japan's 1910 annexation ends it." },
+    { year:"1883\u20131897", name:"Joseon Dynasty (Taegukgi adopted)", t:{ north: IC.joseonflag, south: IC.joseonflag }, flagKeys:{ north: "joseonflag", south: "joseonflag" }, story:"The Joseon court formally adopts the Taegukgi in 1883 as Korea opens to international treaties and diplomacy, the first officially sanctioned national flag in Korean history, its red-and-blue taegeuk symbolizing balance and harmony." },
+    { year:"1392\u20131883", name:"Joseon Dynasty (pre-flag era)", t:{ north: IC.nojoseon, south: IC.nojoseon }, flagKeys:{ north: "nojoseon", south: "nojoseon" }, story:"General Yi Seong-gye founds the Joseon dynasty in 1392, ruling a unified Korea for exactly five centuries under a Confucian state order, without adopting a formal national flag until the 1883 Taegukgi." },
+    { year:"918\u20131392", name:"Goryeo Dynasty", t:{ north: IC.goryeo, south: IC.goryeo }, flagKeys:{ north: "goryeo", south: "goryeo" }, story:"Wang Geon founds the Goryeo dynasty in 918, unifying the peninsula's Later Three Kingdoms by 936 &mdash; the dynasty that gave Korea its Western name. No national flag is documented from this pre-heraldic era." },
+    { year:"676\u2013935", name:"Unified Silla", t:{ north: IC.silla, south: IC.silla }, flagKeys:{ north: "silla", south: "silla" }, story:"Silla unifies most of the peninsula by 676 with Tang Chinese assistance, ushering in Korea's first unified state and a golden age of Buddhist art and culture, until its own decline into the Later Three Kingdoms period by the early 10th century." },
+    { year:"c. 57 BCE\u2013668 CE", name:"Three Kingdoms of Korea (Goguryeo, Baekje, Silla)", t:{ north: IC.threekingdoms, south: IC.threekingdoms }, flagKeys:{ north: "threekingdoms", south: "threekingdoms" }, story:"Goguryeo, Baekje, and Silla, three rival kingdoms, dominate the peninsula and southern Manchuria for centuries of shifting alliances and warfare, until Silla's conquest of Baekje (660) and Goguryeo (668), with Tang support, ends the era." }
+  ];
+
+  var IREGIONS = ["north", "south"];
+  var IREGION_NAMES = { north: "North Korea", south: "South Korea (context)" };
+  var IADJ = [["north","south"]];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[era.flagKeys[g[0]]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
