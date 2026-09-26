@@ -171,6 +171,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -183,6 +220,36 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of historic and present-day Armenia, c. 321 BCE&ndash;present, ten political entities. This page is a flag timeline only &mdash; no interactive map of internal regional splits is included here; that layer is deferred to a future phase of the atlas, project-wide. See the Caucasus hub for a regional map covering Armenia alongside Georgia and Azerbaijan.
+  </div>
+
+    <div class="imap-section">
+    <h2>The eastern lineage of a once-divided homeland</h2>
+    <p class="imap-sub">This traces modern Armenia's own real border \u2014 which descends specifically from the EASTERN half of historic Armenia, the half Russia (not the Ottomans) ended up controlling. Press play, or drag the slider, to move through the page's own ten established eras.</p>
+    <div class="rule-box">
+      <b>Historic Armenia really was split for centuries \u2014 but not along modern Armenia\u2019s own borders.</b> From 1375 (Cilicia\u2019s fall) through 1828, the Armenian highlands were partitioned between the Ottoman Empire (west) and Safavid/Qajar Persia (east); when Russia annexed the eastern half in 1828, that specific eastern territory became the lineage modern Armenia descends from. Western Armenia stayed Ottoman, then Turkish, and was never part of the modern republic\u2019s own land \u2014 so a map scoped to today\u2019s Armenia can\u2019t honestly show a two-sided partition on its own soil; the split is real, but it happened on ground this page doesn\u2019t cover.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 321 BCE</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+        <path id="ireg-am0" class="ireg-fill" d="M49.96,41.94 L145.09,28.00 L159.26,51.48 L185.33,66.94 L171.56,89.35 L208.03,120.00 L188.73,148.46 L217.79,172.76 L248.52,187.40 L250.04,249.37 L225.26,252.00 L197.31,200.31 L197.63,186.52 L167.38,186.72 L147.11,162.75 L132.87,165.17 L105.90,139.08 L55.00,116.87 L61.59,73.38 L49.96,41.94 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-am0" x="150" y="150">ARMENIA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Ancient Kingdom of Armenia (Artaxiad &amp; Arsacid)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (modern frontier, the eastern lineage only) &mdash; see the rule box above for the Ottoman/Persian partition this territory's own history includes.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -558,6 +625,118 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = { ancient:"#3a2420", byzarab:"#5a4a3a", bagratid:"#2f4a7a", cilicia:"#6e6047", partition:"#8a5a3a", russian:"#241f14", genocide:"#3a2420", first_rep:"#c9372c", soviet:"#a4302a", modern:"#c9372c" };
+  var INAMES = { ancient:"Ancient Kingdom of Armenia (Artaxiad &amp;amp; Arsacid)", byzarab:"Byzantine and Arab overlordship", bagratid:"Bagratid Kingdom of Armenia", cilicia:"Loss of Ani, and the separate Kingdom of Cilicia", partition:"Centuries split between empires", russian:"Russian Armenia", genocide:"The Armenian Genocide and the end of Russian Armenia", first_rep:"First Republic of Armenia", soviet:"Soviet Armenia", modern:"Republic of Armenia (modern)" };
+  var IFLAGS = {
+    ancient: "<rect width=\"300\" height=\"200\" fill=\"#3a2420\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    byzarab: "<rect width=\"300\" height=\"200\" fill=\"#3a2420\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    bagratid: "<rect width=\"300\" height=\"200\" fill=\"#2f4a7a\"/>\n              <path d=\"M150,45 v110 M95,100 h110\" stroke=\"#d4af37\" stroke-width=\"14\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"11\" fill=\"#d4af37\"/>",
+    cilicia: "<rect width=\"300\" height=\"200\" fill=\"#6e6047\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"45\" fill=\"none\" stroke=\"#f4efe1\" stroke-width=\"6\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"11\" fill=\"#f4efe1\"/>",
+    partition: "<rect width=\"150\" height=\"200\" fill=\"#a4302a\"/>\n              <path d=\"M120,70 A38,38 0 1 0 172,102 A28,28 0 1 1 120,70 Z\" fill=\"#f4efe1\"/>\n              <rect x=\"150\" width=\"150\" height=\"200\" fill=\"#1f6f6f\"/>\n              <circle cx=\"225\" cy=\"100\" r=\"30\" fill=\"#d4af37\"/>",
+    russian: "<rect width=\"300\" height=\"66.7\" fill=\"#241f14\"/>\n              <rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#d4af37\"/>\n              <rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#f4efe1\"/>",
+    genocide: "<rect width=\"300\" height=\"200\" fill=\"#3a2420\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    first_rep: "<rect width=\"300\" height=\"66.7\" fill=\"#c9372c\"/>\n              <rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#2f4a8a\"/>\n              <rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#e8a33d\"/>",
+    soviet: "<rect width=\"300\" height=\"200\" fill=\"#a4302a\"/>\n              <rect x=\"0\" y=\"172\" width=\"300\" height=\"14\" fill=\"#2f4a8a\"/>\n              <g fill=\"#d4af37\" transform=\"translate(30,25)\"><rect x=\"0\" y=\"13\" width=\"30\" height=\"6\"/><rect x=\"12\" y=\"0\" width=\"6\" height=\"30\"/></g>",
+    modern: "<rect width=\"300\" height=\"66.7\" fill=\"#c9372c\"/>\n              <rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#2f4a8a\"/>\n              <rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#e8a33d\"/>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 321 BCE", name:"Ancient Kingdom of Armenia (Artaxiad &amp;amp; Arsacid)", t:{ am:IC.ancient }, flagKeys:{ am:"ancient" },
+      story:"The Artaxiad and later Arsacid dynasties rule an independent Armenian kingdom from 321 BCE, reaching its greatest extent under Tigranes the Great (r. 95\\u201355 BCE); Armenia becomes the world's first state to adopt Christianity as its official religion in 301 CE under King Tiridates III." },
+    { year:"428", name:"Byzantine and Arab overlordship", t:{ am:IC.byzarab }, flagKeys:{ am:"byzarab" },
+      story:"The Arsacid kingdom is partitioned and then abolished by 428 CE; Byzantine and Sasanian Persian, then Arab Caliphate overlordship follows, with local Armenian nakharar noble houses retaining real regional power even without a crowned king of their own." },
+    { year:"885", name:"Bagratid Kingdom of Armenia", t:{ am:IC.bagratid }, flagKeys:{ am:"bagratid" },
+      story:"Ashot I is crowned in 885, reviving Armenian statehood as the Bagratid Kingdom centered on the capital Ani, \\u201cthe city of 1,001 churches\\u201d \\u2014 a golden age of building and culture that lasts until Byzantine annexation begins its slow unraveling from 1045." },
+    { year:"1045", name:"Loss of Ani, and the separate Kingdom of Cilicia", t:{ am:IC.cilicia }, flagKeys:{ am:"cilicia" },
+      story:"With Ani lost and Seljuk Turkic invasions overrunning the Armenian highlands, many Armenians resettle in Cilicia on the Mediterranean coast, where a separate Armenian kingdom persists until the Mamluks capture its capital, Sis, in 1375 \\u2014 a different territory from historic Armenia itself, shown here only as a placeholder for the lack of any state on the historic homeland in this period." },
+    { year:"1375", name:"Centuries split between empires", t:{ am:IC.partition }, flagKeys:{ am:"partition" },
+      story:"With no Armenian kingdom left anywhere, the historic Armenian homeland is parceled between rival empires for nearly five centuries \\u2014 Turkic confederations first, then the Ottoman-Safavid rivalry formalized by 1555's Treaty of Amasya: western Armenia under the Ottomans, eastern Armenia under Safavid, later Qajar, Persia, a partition modern Armenia's own territory descends from the eastern half of." },
+    { year:"1828", name:"Russian Armenia", t:{ am:IC.russian }, flagKeys:{ am:"russian" },
+      story:"Russia conquers eastern Armenia from Qajar Persia by the 1828 Treaty of Turkmenchay; western Armenia remains Ottoman territory (and remains part of Turkey to this day, never part of modern Armenia's own borders) \\u2014 this page's traced border follows that eastern, Russian-then-Soviet-then-independent lineage throughout." },
+    { year:"1915", name:"The Armenian Genocide and the end of Russian Armenia", t:{ am:IC.genocide }, flagKeys:{ am:"genocide" },
+      story:"The Ottoman government's systematic 1915\\u20131918 genocide kills an estimated 1\\u20131.5 million Armenians in western (Ottoman) Armenia and forcibly deports the survivors, effectively ending millennia of Armenian presence there; Russian/eastern Armenia's own status also collapses as the Russian Empire itself falls in 1917." },
+    { year:"1918", name:"First Republic of Armenia", t:{ am:IC.first_rep }, flagKeys:{ am:"first_rep" },
+      story:"The First Republic of Armenia is declared on 28 May 1918 from the wreckage of the Transcaucasian federation, controlling only a small fraction of historic Armenian lands and struggling with war, refugees, and Ottoman/Turkish attack until Soviet Russia's Red Army takes over in December 1920." },
+    { year:"1920", name:"Soviet Armenia", t:{ am:IC.soviet }, flagKeys:{ am:"soviet" },
+      story:"Soviet Armenia is established as a constituent republic \\u2014 first within the Transcaucasian SFSR, then as its own Armenian SSR from 1936 \\u2014 governed from Moscow for seven decades until the USSR's 1991 collapse." },
+    { year:"1991", name:"Republic of Armenia (modern)", t:{ am:IC.modern }, flagKeys:{ am:"modern" },
+      story:"Armenia declares independence on 21 September 1991; the tricolor first flown by the 1918 First Republic is restored, its red for the blood shed defending the homeland, blue for Armenia's skies, and orange (or apricot) for the courage and work of the Armenian people." }
+  ];
+
+  var IREGIONS = ["am0"];
+  var IREGION_NAMES = { am0:"Armenia" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      var el = document.getElementById("ireg-" + id);
+      if (el) el.setAttribute("fill", era.t["am"]);
+      var tcol = iTextColorFor(era.t["am"]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      for (var i = 0; i < 4; i++) {
+        var lbl = document.getElementById("ilbl-" + id + (i === 0 ? "" : (i+1)));
+        if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t["am"]; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory shown";
+
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKeys["am"]) + '<div class="ic-label">Armenia</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
