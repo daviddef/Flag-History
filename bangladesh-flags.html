@@ -174,6 +174,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -186,6 +223,36 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the territory of present-day Bangladesh (historic East Bengal), c. 3rd century BCE &ndash; present, eight political entities. The Mughal era (1576&ndash;1757) is covered here only briefly, as one province among many under a single imperial flag; the empire's own fuller lineage is covered on its own page &mdash; see the link in that entry. The 1971 Liberation War is stated factually and briefly, limited to well-documented dates and outcomes rather than a full military or human account. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One delta, eight rulers</h2>
+    <p class="imap-sub">The delta of the Ganges and Brahmaputra, traced as one border &mdash; present-day Bangladesh has no internal governing split to show across any of its eight eras. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Why no internal split.</b> From ancient dynasties through the Mughal province, Company and Crown rule, the Pakistani wing, and independence, every era here was governed as one piece &mdash; there is no genuinely separate internal region of today's Bangladesh to carve out honestly.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag"></span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 348.0 460.0" xmlns="http://www.w3.org/2000/svg">
+        <path id="ireg-bd" class="ireg-fill" d="M324.0,338.2 L322.7,389.4 L299.8,378.6 L304.1,436.0 L285.4,398.8 L281.7,362.5 L269.2,328.1 L241.9,286.6 L181.7,283.7 L187.6,313.1 L167.1,352.8 L139.3,338.4 L129.8,351.4 L111.3,343.6 L86.0,337.2 L75.8,278.5 L53.1,224.8 L64.2,181.8 L24.0,162.7 L38.5,136.7 L79.4,110.2 L32.2,72.4 L55.3,24.0 L107.1,54.8 L138.3,58.3 L144.1,107.9 L206.3,117.7 L266.9,116.7 L304.6,128.8 L274.5,189.2 L245.2,193.3 L225.0,233.9 L260.8,270.9 L271.5,225.3 L289.6,225.1 L324.0,338.2 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-bd" x="189.2" y="241.4">BANGLADESH</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -523,6 +590,115 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = {
+    e0:"#a9762f", e1:"#8a4b2f", e2:"#204b5c", e3:"#6e6047", e4:"#9c3b28", e5:"#5c3d7c", e6:"#b23a2e", e7:"#2f7d4f"
+  };
+  var INAMES = {
+    e0:"Historic Bengal (ancient &amp; medieval)", e1:"Bengal Sultanate", e2:"Bengal under the Mughal Empire", e3:"Bengal under East India Company rule", e4:"Bengal under the British Raj", e5:"East Bengal / East Pakistan", e6:"Liberation War &amp; provisional Bangladesh", e7:"People's Republic of Bangladesh"
+  };
+  var IFLAGS = {
+    e0: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    e1: '<rect width="300" height="200" fill="#6b2b28"/><path d="M175,80 a30,30 0 1,0 2,42 a24,24 0 1,1 -2,-42Z" fill="#f4efe1"/>',
+    e2: '<rect width="300" height="200" fill="#0b6623"/><circle cx="150" cy="100" r="34" fill="#c9a13c"/><g stroke="#c9a13c" stroke-width="4"><path d="M150,44 L150,156 M94,100 L206,100 M113,63 L187,137 M187,63 L113,137"/></g>',
+    e3: '<rect width="300" height="200" fill="#f4efe1"/><g fill="#a4302a"><rect y="0" width="300" height="15.4"/><rect y="30.8" width="300" height="15.4"/><rect y="61.6" width="300" height="15.4"/><rect y="92.3" width="300" height="15.4"/><rect y="123.1" width="300" height="15.4"/><rect y="153.9" width="300" height="15.4"/><rect y="184.6" width="300" height="15.4"/></g><rect width="140" height="100" fill="#1e2f6e"/><g stroke="#f4efe1" stroke-width="12"><path d="M0,0 L140,100 M140,0 L0,100"/></g><g stroke="#a4302a" stroke-width="5"><path d="M0,0 L140,100 M140,0 L0,100"/></g><rect x="58" width="24" height="100" fill="#f4efe1"/><rect y="38" width="140" height="24" fill="#f4efe1"/><rect x="64" width="12" height="100" fill="#a4302a"/><rect y="44" width="140" height="12" fill="#a4302a"/>',
+    e4: '<rect width="300" height="200" fill="#1a2b57"/><rect width="140" height="100" fill="#1a2b57"/><g stroke="#f4efe1" stroke-width="14"><path d="M0,0 L140,100 M140,0 L0,100"/></g><g stroke="#a4302a" stroke-width="6"><path d="M0,0 L140,100 M140,0 L0,100"/></g><rect x="58" width="24" height="100" fill="#f4efe1"/><rect y="38" width="140" height="24" fill="#f4efe1"/><rect x="64" width="12" height="100" fill="#a4302a"/><rect y="44" width="140" height="12" fill="#a4302a"/><path d="M220,80 l7,18 19,1 -15,12 5,19 -16,-11 -16,11 5,-19 -15,-12 19,-1Z" fill="#c9a13c"/><circle cx="220" cy="100" r="6" fill="#a4302a"/>',
+    e5: '<rect width="300" height="200" fill="#01411c"/><rect width="60" height="200" fill="#f4efe1"/><circle cx="175" cy="100" r="38" fill="#f4efe1"/><circle cx="188" cy="100" r="31" fill="#01411c"/><path d="M225,72 l7,20 21,1 -17,13 6,20 -17,-12 -17,12 6,-20 -17,-13 21,-1Z" fill="#f4efe1"/>',
+    e6: '<rect width="300" height="200" fill="#006a4e"/><circle cx="132" cy="100" r="55" fill="#f42a41"/><path d="M120,72 q18,-8 26,10 q-4,20 -22,24 q10,-16 4,-30 q-4,-3 -8,-4Z" fill="#c9a13c"/>',
+    e7: '<rect width="300" height="200" fill="#006a4e"/><circle cx="132" cy="100" r="55" fill="#f42a41"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 3rd c. BCE–1204 CE", name:"Historic Bengal (ancient &amp; medieval)", t:{ bd:IC.e0 }, flagKeys:{ bd:"e0" },
+      story:"The Bengal delta passes through the Maurya and Gupta empires, Shashanka's 7th-century kingdom, the Buddhist Pala Empire from the 8th century, and the Hindu Sena dynasty from the 12th, until the 1204 conquest opens Bengal's Islamic era. No securely documented flag survives &mdash; shown honestly blank." },
+    { year:"1204–1576", name:"Bengal Sultanate", t:{ bd:IC.e1 }, flagKeys:{ bd:"e1" },
+      story:"Muhammad bin Bakhtiyar Khalji's 1204 conquest brings Bengal under Delhi Sultanate governors; it breaks away as its own independent Bengal Sultanate in 1352, enduring as a major regional Islamic power &mdash; trade, textiles, architecture &mdash; until Mughal conquest in 1576. No specific flag survives; shown as an informed reconstruction following regional sultanate conventions." },
+    { year:"1576–1757", name:"Bengal under the Mughal Empire", t:{ bd:IC.e2 }, flagKeys:{ bd:"e2" },
+      story:"Emperor Akbar completes the conquest of the Bengal Sultanate in 1576, absorbing Bengal as one of the empire's wealthiest provinces, administered from Dhaka. Bengal grows increasingly autonomous under its own nawabs as Mughal central authority weakens, until the Company's victory at Plassey in 1757. A green field with a gold sun motif represents the Mughal imperial alam tradition." },
+    { year:"1757–1858", name:"Bengal under East India Company rule", t:{ bd:IC.e3 }, flagKeys:{ bd:"e3" },
+      story:"The East India Company defeats Nawab Siraj-ud-Daulah at Plassey, 23 June 1757, gaining effective control, formalized in 1765 when Shah Alam II grants it the diwani over Bengal, Bihar, and Orissa. The Company's red-and-white striped ensign, with the British Union flag in canton, flies over its Bengal establishments until the 1857 rebellion ends Company rule." },
+    { year:"1858–1947", name:"Bengal under the British Raj", t:{ bd:IC.e4 }, flagKeys:{ bd:"e4" },
+      story:"Following the 1857 rebellion, the Crown assumes direct control under the Government of India Act 1858. Lord Curzon's controversial 1905 partition of Bengal along religious lines is reversed in 1911 after mass protest, foreshadowing 1947. The Union flag flies with the Star of India badge marking British India as a crown possession." },
+    { year:"1947–1971", name:"East Bengal / East Pakistan", t:{ bd:IC.e5 }, flagKeys:{ bd:"e5" },
+      story:"The August 1947 partition splits Bengal along the Radcliffe Line: East Bengal joins Pakistan as its eastern wing, geographically separated by roughly 1,600 km of Indian territory (renamed East Pakistan, 1955). The 1952 Bengali Language Movement becomes a formative grievance, feeding the nationalist movement toward the Awami League's 1970 mandate. Pakistan's green field, white hoist stripe, crescent and star fly over both wings." },
+    { year:"March–December 1971", name:"Liberation War &amp; provisional Bangladesh", t:{ bd:IC.e6 }, flagKeys:{ bd:"e6" },
+      story:"After the Awami League's decisive 1970 election win is denied, Pakistan's military launches a crackdown in late March 1971; independence is declared 26 March and a provisional government organizes at Mujibnagar. A nine-month war, fought largely by the Mukti Bahini, ends with Pakistan's surrender at Dhaka, 16 December 1971. Students first raise the green field, red sun disc, and gold silhouette map on 2 March 1971." },
+    { year:"1972–present", name:"People's Republic of Bangladesh", t:{ bd:IC.e7 }, flagKeys:{ bd:"e7" },
+      story:"Sheikh Mujibur Rahman returns to Dhaka in January 1972 to lead the new state. That January the wartime flag is simplified: the gold silhouette map is dropped for consistent printing, and the disc's position fixed toward the hoist so it reads centered when flying. Green for fields and forests; the red disc for the rising sun and for the blood of 1971." }
+  ];
+
+  var IREGIONS = ["bd"];
+  var IREGION_NAMES = { bd:"Bangladesh" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.bd; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + "</div></div>";
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
