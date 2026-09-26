@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,43 @@
   <p class="lede">Independence follows a hard road: after a 1814 royalist reconquest ends the short-lived &ldquo;Patria Vieja,&rdquo; Bernardo O'Higgins and Jos&eacute; de San Mart&iacute;n lead a combined Chilean&ndash;Argentine army across the Andes in January 1817, and O'Higgins proclaims Chilean independence on 12 February 1818 under essentially the same star-and-stripes flag still flown today. What follows is, by regional standards, an unusually long and stable run of constitutional government &mdash; punctuated by the War of the Pacific (1879&ndash;84), in which Chile defeats an allied Peru and Bolivia and annexes Bolivia's Pacific coastline, a decisive and still-sensitive episode in the region's own history &mdash; before that stability breaks decisively on 11 September 1973, when the military overthrows elected president Salvador Allende; Augusto Pinochet's dictatorship then holds power until a 1988 plebiscite defeat and the 1990 return to civilian rule.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Chile, c. 1541&ndash;present, six political entries. Chile's own modern territory was never split into separate crowned or governing entities the way some other pages in this atlas track, so &mdash; per the same rule applied elsewhere &mdash; this page carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Chile, c. 1541&ndash;present, six political entries. Chile's own modern territory was never split into separate crowned or governing entities the way some other pages in this atlas track, so &mdash; per the same rule applied elsewhere &mdash; the map below traces the whole country rather than an internal partition. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One long coastline, six eras</h2>
+    <p class="imap-sub">Chile&rsquo;s own real border, traced whole &mdash; the country&rsquo;s modern territory was never split into separately governed pieces the way some other pages in this atlas track. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, not a partition map.</b> Chile&rsquo;s narrow ribbon of territory between the Andes and the Pacific was fought over at its frontiers (the unconquered Mapuche south, the annexed Bolivian coastline after 1884) but never itself divided between rival governments the way Hungary or Cyprus were. What changes here is only who held it, not how it was cut up.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">to 1541</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 87.2 270.0" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="45" y="8">PERU</text>
+          <text x="75" y="28">BOLIVIA</text>
+          <text x="80" y="140">ARGENTINA</text>
+          <text x="12" y="140">PACIFIC OCEAN</text>
+        </g>
+        <path id="ireg-cl" class="ireg-fill" d="M64.1,40.9 L66.7,50.0 L71.4,49.1 L72.2,50.8 L70.0,57.6 L62.8,60.9 L63.0,71.9 L61.6,74.1 L63.6,76.7 L58.9,80.8 L54.6,87.0 L52.2,93.0 L52.8,99.4 L48.8,106.2 L51.8,117.6 L53.5,118.8 L53.5,124.9 L49.7,131.4 L49.9,136.9 L44.9,141.2 L44.9,147.3 L46.9,153.8 L42.9,156.2 L39.6,168.8 L40.7,176.9 L38.1,178.2 L39.6,185.9 L42.6,188.4 L40.4,191.2 L43.5,192.5 L44.2,195.0 L41.3,196.2 L42.0,200.1 L39.6,208.9 L36.1,214.5 L36.9,217.9 L34.8,222.1 L29.7,225.0 L30.3,232.0 L32.6,234.4 L37.0,234.0 L36.9,238.9 L39.6,242.8 L61.7,244.7 L55.9,244.6 L46.7,248.7 L45.6,254.8 L42.8,255.0 L35.4,252.8 L19.6,244.5 L17.5,240.3 L19.4,236.4 L16.0,232.0 L15.2,220.7 L18.0,214.3 L25.0,209.2 L15.0,207.3 L21.3,201.5 L23.5,190.5 L30.9,192.8 L34.3,179.1 L29.9,177.3 L27.8,185.6 L23.6,184.7 L28.0,162.9 L31.0,158.4 L28.6,144.5 L31.3,144.3 L42.8,113.2 L41.3,103.3 L43.2,97.8 L42.4,89.6 L46.3,81.6 L51.7,40.2 L49.8,20.1 L53.2,18.4 L55.0,15.0 L58.3,19.5 L59.1,24.3 L62.6,27.1 L60.5,33.5 L64.1,40.9 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-cl" x="0" y="4">CHILE</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (johan/world.geo.json) &mdash; no internal partition, per the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -432,6 +506,107 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { precolonial:"#6b5c4a", captaincy:"#204b5c", patrianueva:"#b5651d", republic:"#a9762f", pinochet:"#4a3b3b", modern:"#2f6b4f" };
+  var INAMES = { precolonial:"Pre-colonial indigenous peoples", captaincy:"Captaincy General of Chile", patrianueva:"War of independence &mdash; Patria Nueva", republic:"Republic of Chile (19th&ndash;20th century)", pinochet:"Military dictatorship under Pinochet", modern:"Republic of Chile (democratic, modern)" };
+  var IFLAGS = {
+    precolonial: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    captaincy: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><line x1=\"0\" y1=\"0\" x2=\"300\" y2=\"200\" stroke=\"#d52b1e\" stroke-width=\"28\"/><line x1=\"300\" y1=\"0\" x2=\"0\" y2=\"200\" stroke=\"#d52b1e\" stroke-width=\"28\"/>",
+    patrianueva: "<rect width=\"300\" height=\"67\" fill=\"#0039a6\"/><rect y=\"67\" width=\"300\" height=\"66\" fill=\"#f4efe1\"/><rect y=\"133\" width=\"300\" height=\"67\" fill=\"#f0c419\"/>",
+    republic: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><rect y=\"100\" width=\"300\" height=\"100\" fill=\"#d52b1e\"/><rect width=\"100\" height=\"100\" fill=\"#0039a6\"/><path d=\"M50,26 L58,46 L80,46 L62,58 L69,80 L50,66 L31,80 L38,58 L20,46 L42,46 Z\" fill=\"#f4efe1\"/>",
+    pinochet: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><rect y=\"100\" width=\"300\" height=\"100\" fill=\"#d52b1e\"/><rect width=\"100\" height=\"100\" fill=\"#0039a6\"/><path d=\"M50,26 L58,46 L80,46 L62,58 L69,80 L50,66 L31,80 L38,58 L20,46 L42,46 Z\" fill=\"#f4efe1\"/>",
+    modern: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><rect y=\"100\" width=\"300\" height=\"100\" fill=\"#d52b1e\"/><rect width=\"100\" height=\"100\" fill=\"#0039a6\"/><path d=\"M50,26 L58,46 L80,46 L62,58 L69,80 L50,66 L31,80 L38,58 L20,46 L42,46 Z\" fill=\"#f4efe1\"/>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"to 1541", name:"Pre-colonial indigenous peoples", t:{ cl:IC.precolonial }, flagKeys:{ cl:"precolonial" },
+      story:"Before Spanish contact, the Mapuche hold the central-south, the Diaguita the north-central valleys, and the Atacame&ntilde;o, Aymara, and other peoples the far north and south. No single polity unites this territory, and no securely documented flag survives &mdash; shown honestly blank rather than invented." },
+    { year:"1541 &ndash; 1810s", name:"Captaincy General of Chile", t:{ cl:IC.captaincy }, flagKeys:{ cl:"captaincy" },
+      story:"Pedro de Valdivia founds Santiago in February 1541, establishing Spanish rule under the Viceroyalty of Peru. The Mapuche south of the Biob&iacute;o fight the Arauco War for over 250 years and are never fully conquered &mdash; a genuinely distinct frontier next to Spain&rsquo;s other, more completely conquered American colonies. The Cross of Burgundy, used empire-wide, stands in for the era; no flag was specific to the captaincy itself." },
+    { year:"1817 &ndash; 1818", name:"War of independence &mdash; Patria Nueva", t:{ cl:IC.patrianueva }, flagKeys:{ cl:"patrianueva" },
+      story:"Royalist forces crush the first independence government, the &ldquo;Patria Vieja,&rdquo; in 1814. From exile, Bernardo O&rsquo;Higgins and Jos&eacute; de San Mart&iacute;n cross the Andes in January 1817 and win at Chacabuco; O&rsquo;Higgins proclaims independence on 12 February 1818. Shown here is the 1812 Patria Vieja blue-white-yellow tricolor, Chile&rsquo;s first national banner, just before the definitive star flag replaces it." },
+    { year:"1818 &ndash; 1973", name:"Republic of Chile (19th&ndash;20th century)", t:{ cl:IC.republic }, flagKeys:{ cl:"republic" },
+      story:"From 1818, Chile builds an unusually long, stable constitutional republic by regional standards. The War of the Pacific (1879&ndash;84) is the era&rsquo;s largest single episode &mdash; Chile defeats an allied Peru and Bolivia and annexes Bolivia&rsquo;s Pacific coastline, a decisive and still-sensitive regional episode, noted here factually. This single flag &mdash; white and red bands, blue canton, one white star &mdash; spans over 150 years, through Allende&rsquo;s 1970 election and up to the 1973 coup." },
+    { year:"1973 &ndash; 1990", name:"Military dictatorship under Pinochet", t:{ cl:IC.pinochet }, flagKeys:{ cl:"pinochet" },
+      story:"On 11 September 1973 the armed forces, led by Augusto Pinochet, overthrow the elected government of Salvador Allende, who dies in the assault on La Moneda. Pinochet&rsquo;s rule brings significant political repression, including thousands of forced disappearances, alongside market-oriented reforms, ending with his 1988 plebiscite defeat. The national flag itself is unaltered throughout." },
+    { year:"1990 &ndash; present", name:"Republic of Chile (democratic, modern)", t:{ cl:IC.modern }, flagKeys:{ cl:"modern" },
+      story:"Pinochet loses the October 1988 plebiscite, and civilian government returns in March 1990 under Patricio Aylwin. Democratic institutions and regular, peaceful transfers of power have continued since. The flag flown is the same one decreed by O&rsquo;Higgins in 1817&ndash;18, unbroken through the return to democracy." }
+  ];
+
+  var IREGIONS = ["cl"];
+  var IREGION_NAMES = { cl:"Chile" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) { lbl2.setAttribute("fill", tcol); lbl2.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.cl; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
