@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,41 @@
   <p class="lede">Four flags carry this lineage: no flag at all for the pre-contact chiefdoms, a real and short-lived royal ensign for the Cakobau kingdom, the British Blue Ensign for the colonial decades, and the light-blue shield flag that has flown, essentially unaltered, since 1970.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the islands of present-day Fiji, pre-1871 to present, four political entries. No interactive map on this page &mdash; see the Pacific hub for the region-wide overview. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the islands of present-day Fiji, pre-1871 to present, four political entries. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One archipelago, four flags</h2>
+    <p class="imap-sub">Fiji's own real coastline &mdash; Viti Levu, Vanua Levu, and Taveuni among the traced islands &mdash; with no internal split to show. Press play, or drag the slider, to watch who held the whole archipelago, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, honestly.</b> Pre-1871 Fiji was never one polity &mdash; Bau, Rewa, and Cakaudrove and other chiefdoms held shifting, overlapping spheres of influence with no stable, mappable internal boundary between them, which is exactly why the timeline itself leaves that era's flag blank. Everything after 1871 was governed as one unit, so there is nothing genuine to carve apart on the map either.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">pre-1871</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 251" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="150" y="14">PACIFIC OCEAN</text>
+        </g>
+        <path id="ireg-fj" class="ireg-fill" d="M116.9,142.8 L147.5,169.7 L132.8,218.3 L77.6,231.1 L28.6,219.6 L20.0,178.7 L54.3,146.7 L94.8,158.2 L116.9,142.8 Z M205.0,92.7 L148.1,112.3 L136.7,77.6 L181.2,58.5 L209.4,53.4 L261.6,24.3 L261.6,69.8 L205.0,92.7 Z M269.0,64.8 L261.6,69.8 L261.6,24.3 L280.0,20.0 L269.0,64.8 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-fj" x="75" y="188">VITI LEVU</text>
+          <text class="ireg-label" id="ilbl-fj2" x="220" y="60">VANUA LEVU</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Indigenous Fijian chiefdoms</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -418,6 +490,104 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    none:"#6b5c4a", cakobau:"#9c3b28", colony:"#204b5c", modern:"#a9762f"
+  };
+  var INAMES = {
+    none:"Indigenous Fijian chiefdoms", cakobau:"Kingdom of Fiji (Cakobau)",
+    colony:"British Crown Colony of Fiji", modern:"Independent Fiji"
+  };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    cakobau: '<rect width="300" height="200" fill="#1e3a6e"/><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#a4302a" stroke-width="7"/><rect x="62" width="26" height="100" fill="#f4efe1"/><rect y="37" width="150" height="26" fill="#f4efe1"/><rect x="68" width="14" height="100" fill="#a4302a"/><rect y="43" width="150" height="14" fill="#a4302a"/><g fill="#f4efe1"><ellipse cx="222" cy="132" rx="24" ry="13"/><path d="M246,130 q15,-5 11,4 q-7,4 -11,-2 Z"/><path d="M200,128 q-11,-9 -20,-3 q9,2 15,9 Z"/><circle cx="248" cy="127" r="6"/></g>',
+    colony: '<rect width="300" height="200" fill="#00247d"/><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#a4302a" stroke-width="7"/><rect x="62" width="26" height="100" fill="#f4efe1"/><rect y="37" width="150" height="26" fill="#f4efe1"/><rect x="68" width="14" height="100" fill="#a4302a"/><rect y="43" width="150" height="14" fill="#a4302a"/><circle cx="222" cy="140" r="34" fill="#f4efe1" stroke="#c9a13c" stroke-width="3"/>',
+    modern: '<rect width="300" height="200" fill="#74acdf"/><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#a4302a" stroke-width="7"/><rect x="62" width="26" height="100" fill="#f4efe1"/><rect y="37" width="150" height="26" fill="#f4efe1"/><rect x="68" width="14" height="100" fill="#a4302a"/><rect y="43" width="150" height="14" fill="#a4302a"/><path d="M190,55 H280 V100 Q280,142 235,166 Q190,142 190,100 Z" fill="#f4efe1" stroke="#a4302a" stroke-width="2"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"pre-1871", name:"Indigenous Fijian chiefdoms", t:{ fj:IC.none }, flagKeys:{ fj:"none" },
+      story:"For centuries before European contact, competing confederacies and chiefdoms &mdash; Bau, Rewa, and Cakaudrove among them &mdash; hold shifting, overlapping spheres of influence across the islands, with no single ruler or stable internal boundary that could honestly be drawn on a map. No flag, in the European sense, is part of this political culture, and none is invented here to stand in for one." },
+    { year:"1871", name:"Kingdom of Fiji (Cakobau)", t:{ fj:IC.cakobau }, flagKeys:{ fj:"cakobau" },
+      story:"Ratu Seru Epenisa Cakobau, paramount chief of Bau, is proclaimed King of Fiji in 1871 under a Western-style constitution &mdash; the first time the whole archipelago is governed as one unit, however briefly and precariously." },
+    { year:"1874", name:"British Crown Colony of Fiji", t:{ fj:IC.colony }, flagKeys:{ fj:"colony" },
+      story:"Cakobau cedes the islands to Britain in the 1874 Deed of Cession. From 1879, Britain imports Indian indentured laborers to work the colony's sugar plantations, permanently reshaping the islands' demographics under nearly a century of crown-colony administration." },
+    { year:"1970–present", name:"Independent Fiji", t:{ fj:IC.modern }, flagKeys:{ fj:"modern" },
+      story:"Fiji gains full independence on 10 October 1970. The light-blue shield flag adopted that year has flown, essentially unaltered, over the whole of the same coastline shown here ever since." }
+  ];
+
+  var IREGIONS = ["fj"];
+  var IREGION_NAMES = { fj:"Fiji" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) { lbl2.setAttribute("fill", tcol); lbl2.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.fj; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole archipelago";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
@@ -429,5 +599,6 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+})();
 </script>
 </body></html>
