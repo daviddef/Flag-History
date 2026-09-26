@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 200px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +223,41 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Togo, tracking the French-administered half of the territory after the 1922 partition through to the modern republic. British Togoland's separate 1956 vote to join Ghana is noted for context but not tracked further here, since that territory's history continues on Ghana's own page. No single flag is attested for the pre-colonial Ewe and Mina chieftaincies. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, no split</h2>
+    <p class="imap-sub">Togo's own real border, traced whole &mdash; modern Togo descends only from the French-mandate portion of German Togoland; British Togoland became part of Ghana instead, so there's no genuine internal split within today's country to draw. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>The real split happened at the border, not inside it.</b> The 1922 League of Nations partition of German Togoland created two separate territories &mdash; British Togoland (which joined Ghana in 1957) and French Togoland (which became today's Togo). That partition falls outside this country's own present-day border, so this map shows Togo whole throughout, tracking only who governed all of it.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1960&ndash;present</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 84 180" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="20" y="20">GHANA</text>
+          <text x="65" y="20">BENIN</text>
+          <text x="42" y="175">GULF OF GUINEA</text>
+        </g>
+        <path id="ireg-tg" class="ireg-fill" d="M12.2,12.0 L31.8,16.0 L31.6,18.5 L36.5,16.4 L44.4,16.4 L43.4,22.5 L41.0,25.2 L40.2,35.6 L58.0,47.5 L58.5,58.3 L57.4,61.5 L58.1,63.3 L59.1,63.2 L59.9,68.4 L65.7,75.3 L66.2,92.4 L67.3,94.0 L65.9,97.8 L66.5,98.3 L67.2,123.9 L66.8,140.5 L64.2,140.5 L65.7,143.4 L65.3,146.7 L66.2,147.8 L64.7,150.1 L66.0,151.2 L65.8,152.4 L68.4,154.3 L68.4,155.8 L70.2,156.7 L71.7,162.8 L64.9,163.8 L64.4,164.4 L65.3,164.4 L53.2,168.0 L53.2,166.2 L49.6,166.2 L47.2,161.1 L43.8,161.1 L39.4,157.7 L38.2,155.0 L39.1,153.3 L36.5,152.6 L35.9,151.5 L36.3,148.5 L34.2,147.8 L34.2,146.4 L32.7,145.7 L33.7,142.9 L32.4,141.3 L34.9,139.7 L35.2,137.3 L34.5,136.9 L36.6,130.6 L36.1,128.0 L33.8,128.3 L32.3,126.1 L32.3,122.0 L34.4,121.1 L34.5,118.6 L35.6,118.6 L34.3,106.5 L35.2,103.7 L34.5,103.1 L36.0,101.3 L38.8,100.5 L38.8,98.8 L37.7,96.8 L36.4,96.3 L36.2,94.1 L30.8,90.9 L27.9,86.0 L28.7,85.9 L28.0,84.8 L31.4,84.6 L32.6,82.2 L30.4,77.0 L31.0,73.9 L32.8,71.9 L31.9,70.4 L33.4,68.7 L33.8,65.8 L30.2,62.9 L27.4,62.9 L26.8,64.3 L24.9,65.1 L23.7,64.4 L23.4,63.3 L24.7,63.5 L25.9,62.5 L23.7,61.7 L23.7,60.6 L28.4,60.4 L27.3,59.0 L25.5,59.9 L24.5,58.0 L24.9,57.1 L26.3,58.2 L27.2,57.4 L26.2,55.8 L27.3,49.8 L28.3,49.3 L27.4,46.5 L29.0,46.7 L29.2,45.5 L27.2,44.3 L27.5,39.2 L28.5,37.6 L26.2,37.8 L26.8,37.3 L25.2,34.2 L22.2,34.8 L20.8,31.0 L14.5,27.7 L13.6,25.2 L15.7,21.9 L16.2,17.5 L17.4,17.0 L17.1,14.4 L15.8,12.8 L14.7,13.6 L12.0,13.0 L12.2,12.0 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-tg" x="45" y="95" style="font-size:8.5px">TOGO</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Republic of Togo</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (1km-resolution coastline), no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -371,6 +444,96 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = {
+    none: "#6b5c4a", german: "#204b5c", french: "#204b5c", independent: "#a9762f"
+  };
+  var INAMES = {
+    none: "No unified flag documented", german: "German Togoland (protectorate)",
+    french: "French Togoland (mandate, then UN trust territory)", independent: "Republic of Togo (independent)"
+  };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
+    german: '<rect width="300" height="66.7" fill="#000000"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
+    french: '<rect width="300" height="200" fill="#00247d"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/>',
+    independent: '<rect width="300" height="44.4" fill="#006a4e"/><rect y="44.4" width="300" height="22.2" fill="#fcd116"/><rect y="66.6" width="300" height="22.2" fill="#006a4e"/><rect y="88.8" width="300" height="22.2" fill="#fcd116"/><rect y="111" width="300" height="22.2" fill="#006a4e"/><rect y="133.2" width="300" height="22.2" fill="#fcd116"/><rect y="155.4" width="300" height="22.3" fill="#006a4e"/><rect y="177.7" width="300" height="22.3" fill="#fcd116"/><rect width="110" height="110" fill="#d21034"/><path fill="#f4efe1" d="M55,32 l9,26 27,0 -22,17 8,26 -22,-16 -22,16 8,-26 -22,-17 27,0 Z"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"pre-1884", name:"Ewe and Mina communities", t:{ tg:IC.none }, flagKeys:{ tg:"none" },
+      story:"Ewe-speaking peoples and coastal Mina communities organize into many small, independent chieftaincies rather than one unifying kingdom. No securely documented flag unifies this era, since no single polity ever governed the whole territory." },
+    { year:"1884–1914", name:"German Togoland (protectorate)", t:{ tg:IC.german }, flagKeys:{ tg:"german" },
+      story:"German trader Gustav Nachtigal signs a protectorate treaty at Togoville in July 1884, Germany's first African colonial acquisition. Allied forces occupy the territory within weeks of World War I's outbreak in August 1914." },
+    { year:"1922–1960", name:"French Togoland (mandate, then UN trust territory)", t:{ tg:IC.french }, flagKeys:{ tg:"french" },
+      story:"The League of Nations divides former German Togoland between Britain and France in 1922. France administers the larger eastern portion &mdash; the part that becomes today's Togo &mdash; continuing under UN trusteeship after 1946. British Togoland to the west follows a separate path into Ghana, outside this map's own border." },
+    { year:"1960–present", name:"Republic of Togo (independent)", t:{ tg:IC.independent }, flagKeys:{ tg:"independent" },
+      story:"French Togoland becomes the independent Republic of Togo on 27 April 1960, the first of the 1960 wave of French West African independences. The same five-stripe, red-canton flag designed by Paul Ahyi has flown ever since." }
+  ];
+
+  var IREGIONS = ["tg"];
+  var IREGION_NAMES = { tg:"Togo" };
+  var IADJ = [];
+
+  function iGroupsFor(t) { return [["tg"]]; }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+    });
+
+    iEraOwners.innerHTML = "<b>" + INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t.tg; })[0]] + "</b>";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
