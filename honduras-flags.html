@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,41 @@
   <p class="lede">Honduras shares its blue-white-blue with Guatemala and El Salvador for the same reason: all three inherited it from the 1823&ndash;1841 Federal Republic of Central America. General Francisco Morazán, the federation's most determined defender and its last president, was Honduran-born &mdash; and the five stars added to the flag in 1866 are a direct, explicit tribute to the union he died trying to hold together.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Honduras, from the pre-conquest era to the present, seven political entities. Honduras was a peripheral province of the Captaincy General of Guatemala and later a founding member of the Central American federation, so its early chapters are shared history with Guatemala, El Salvador, Nicaragua, and Costa Rica &mdash; each covered on its own page in this atlas. No map accompanies this page; Honduras's modern borders were never internally split in the way some other countries in this atlas were. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Honduras, from the pre-conquest era to the present, seven political entities. Honduras was a peripheral province of the Captaincy General of Guatemala and later a founding member of the Central American federation, so its early chapters are shared history with Guatemala, El Salvador, Nicaragua, and Costa Rica &mdash; each covered on its own page in this atlas. The map below traces Honduras's own real border whole; its modern territory was never internally split in the way some other countries in this atlas were. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, seven rulers</h2>
+    <p class="imap-sub">Honduras's own real border, traced whole &mdash; there's no genuine internal split to show here. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, not a split one.</b> Honduras spent three centuries as one peripheral province of the Captaincy General of Guatemala, then passed as a whole through Mexican annexation, the Central American federation, and independence &mdash; it was never partitioned into rival zones of its own territory the way, say, Hungary's Habsburg and Ottoman-held lands were. What changes here is only who ruled all of it at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="hnPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="hnYearTag">to 1524</span>
+        <input type="range" id="hnSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label">
+          <text x="30" y="70">GUATEMALA</text>
+          <text x="255" y="188">NICARAGUA</text>
+        </g>
+        <path id="ireg-hn" class="ireg-fill" d="M101.2,192.0 L93.3,177.2 L79.4,173.1 L82.6,154.2 L76.4,149.1 L66.9,145.7 L46.9,151.3 L45.2,144.9 L31.3,137.4 L21.5,127.9 L8.0,124.0 L17.5,112.0 L13.9,102.7 L17.1,93.6 L38.8,80.4 L59.6,62.3 L64.4,64.2 L74.4,55.9 L87.5,55.2 L91.8,59.1 L98.9,56.7 L120.1,61.0 L141.3,59.7 L156.0,54.5 L161.4,49.2 L186.9,54.9 L198.9,53.8 L208.0,49.7 L236.1,57.3 L263.3,76.7 L280.0,83.9 L292.0,96.9 L276.3,96.0 L270.0,102.4 L254.1,108.6 L242.5,108.6 L232.4,114.6 L223.2,112.5 L215.4,105.3 L210.7,106.6 L204.8,117.9 L200.4,117.5 L199.6,127.3 L175.2,145.9 L170.5,151.8 L157.0,142.2 L147.2,154.8 L126.9,155.6 L127.9,178.8 L121.2,179.3 L115.4,190.1 L101.2,192.0 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="hnlbl-hn" x="150" y="112" style="font-size:11px">HONDURAS</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="hnEraName">Lenca, Maya, and other pre-conquest polities</div>
+        <div class="imap-owners" id="hnEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="hnFlagsRow"></div>
+      <p class="imap-story" id="hnEraStory"></p>
+
+      <p class="map-note">Real traced coastal boundary (simplified from public GeoJSON), no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="hnLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -492,5 +564,116 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+</script>
+
+<script>
+(function () {
+  var IC = {
+    preconquest:"#6b5c4a", colonial:"#7c2e1f", mexico:"#a4302a", federation:"#204b5c",
+    sovereignty1838:"#8a6a3f", fivestars1866:"#a9762f", modern1949:"#c9a13c"
+  };
+  var INAMES = {
+    preconquest:"Lenca, Maya, and other pre-conquest polities", colonial:"Captaincy General of Guatemala",
+    mexico:"Independence, then annexation to Mexico", federation:"Federal Republic of Central America",
+    sovereignty1838:"Republic of Honduras (early sovereignty)", fivestars1866:"Republic of Honduras (five-star flag)",
+    modern1949:"Republic of Honduras (modern)"
+  };
+  var IFLAGS = {
+    preconquest: '<rect width="300" height="200" fill="#3f4a2e"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    colonial: '<rect width="300" height="200" fill="#f4efe1"/><line x1="20" y1="20" x2="280" y2="180" stroke="#9c3b28" stroke-width="26"/><line x1="280" y1="20" x2="20" y2="180" stroke="#9c3b28" stroke-width="26"/>',
+    mexico: '<rect width="300" height="200" fill="#006341"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#a4302a"/><circle cx="150" cy="100" r="18" fill="#c9a13c"/>',
+    federation: '<rect width="300" height="66.7" fill="#4997d0"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#4997d0"/><g fill="#a9762f"><path d="M150,86 l24,20 h-48 Z"/><path d="M120,106 l14,16 h-28 Z"/><path d="M180,106 l14,16 h-28 Z"/></g>',
+    sovereignty1838: '<rect width="300" height="66.7" fill="#0073cf"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#0073cf"/>',
+    fivestars1866: '<rect width="300" height="66.7" fill="#0073cf"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#0073cf"/><g fill="#0073cf"><circle cx="105" cy="90" r="9"/><circle cx="135" cy="110" r="9"/><circle cx="150" cy="80" r="9"/><circle cx="165" cy="110" r="9"/><circle cx="195" cy="90" r="9"/></g>',
+    modern1949: '<rect width="300" height="66.7" fill="#0073cf"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#0073cf"/><g fill="#0073cf"><circle cx="105" cy="90" r="9"/><circle cx="135" cy="110" r="9"/><circle cx="150" cy="80" r="9"/><circle cx="165" cy="110" r="9"/><circle cx="195" cy="90" r="9"/></g>'
+  };
+  function hnFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var hnLegendEl = document.getElementById("hnLegend");
+  hnLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"to 1524", name:"Lenca, Maya, and other pre-conquest polities", t:{ hn:IC.preconquest }, flagKeys:{ hn:"preconquest" },
+      story:"Before European contact, the territory of present-day Honduras is home to a mix of peoples &mdash; Maya settlement in the west, around the great Classic-era site of Cop&aacute;n, and Lenca, Pech, Tolupan, and other indigenous groups elsewhere. No single state ever unifies this territory before Spanish arrival, and no securely documented flag survives &mdash; shown honestly blank rather than invented." },
+    { year:"1524", name:"Captaincy General of Guatemala", t:{ hn:IC.colonial }, flagKeys:{ hn:"colonial" },
+      story:"Spanish conquistador Crist&oacute;bal de Olid lands on the Honduran coast in 1524, and Honduras becomes a peripheral province of the Captaincy General of Guatemala, valued chiefly for silver mining and contested for centuries on its Caribbean coast. The Cross of Burgundy &mdash; a red saltire on a white field &mdash; served as a common military and colonial banner across the Spanish Empire throughout three centuries of colonial rule." },
+    { year:"1821", name:"Independence, then annexation to Mexico", t:{ hn:IC.mexico }, flagKeys:{ hn:"mexico" },
+      story:"The Captaincy General of Guatemala, including Honduras, declares independence from Spain on 15 September 1821; conservative elites then vote to annex the new nation to Agust&iacute;n de Iturbide's First Mexican Empire in early 1822. The Mexican Empire's green-white-red tricolor flies briefly over Honduran territory until Iturbide's abdication in March 1823." },
+    { year:"1823", name:"Federal Republic of Central America", t:{ hn:IC.federation }, flagKeys:{ hn:"federation" },
+      story:"After Mexican annexation collapses in 1823, Honduras joins the other four former provinces of the Captaincy General in forming the Federal Republic of Central America &mdash; producing the union's most consequential figure, Honduran-born general and, from 1830, president Francisco Moraz&aacute;n. The federation's blue-white-blue flag with five volcanoes and a cap of liberty, adopted 21 August 1823, is the direct ancestor of Honduras's own post-federation flag." },
+    { year:"1838", name:"Republic of Honduras (early sovereignty)", t:{ hn:IC.sovereignty1838 }, flagKeys:{ hn:"sovereignty1838" },
+      story:"Honduras formally secedes from the crumbling Federal Republic of Central America in November 1838, one of the first states to leave, spending its early decades entangled in near-constant regional wars, including Francisco Moraz&aacute;n's repeated attempts to force reunification by arms. Honduras keeps the federation's blue-white-blue stripes essentially unchanged in these early years." },
+    { year:"1866", name:"Republic of Honduras (five-star flag)", t:{ hn:IC.fivestars1866 }, flagKeys:{ hn:"fivestars1866" },
+      story:"President Jos&eacute; Mar&iacute;a Medina modifies the national flag on 16 February 1866, adding five blue stars to the white stripe in an explicitly unionist gesture honoring the five member states of the defunct Central American federation. The stars, arranged in an X pattern, remain on the flag to this day." },
+    { year:"1949–present", name:"Republic of Honduras (modern)", t:{ hn:IC.modern1949 }, flagKeys:{ hn:"modern1949" },
+      story:"President Juan Manuel G&aacute;lvez's 26 January 1949 decree fixes the exact positions of the five stars and the flag's official proportions and shade of blue in law, formalizing a design already in wide use. The stars still stand for the five states of the vanished federation and the enduring, if distant, hope of Central American reunification." }
+  ];
+
+  var IREGIONS = ["hn"];
+  var IREGION_NAMES = { hn:"Honduras" };
+  var IADJ = [];
+
+  function hnTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var hnYearTag = document.getElementById("hnYearTag");
+  var hnEraName = document.getElementById("hnEraName");
+  var hnEraOwners = document.getElementById("hnEraOwners");
+  var hnEraStory = document.getElementById("hnEraStory");
+  var hnFlagsRow = document.getElementById("hnFlagsRow");
+  var hnSlider = document.getElementById("hnSlider");
+
+  function hnRender(idx) {
+    var era = ISNAP[idx];
+    hnYearTag.textContent = era.year;
+    hnEraName.textContent = era.name;
+    hnEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = hnTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("hnlbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.hn; })[0];
+    hnEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    hnFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + hnFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  hnSlider.addEventListener("input", function () { hnRender(parseInt(hnSlider.value, 10)); });
+  hnRender(0);
+
+  var hnPlaying = false, hnPlayTimer = null;
+  var hnPlayBtn = document.getElementById("hnPlayBtn");
+  function hnStepPlay() {
+    var next = parseInt(hnSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { hnStopPlay(); return; }
+    hnSlider.value = next;
+    hnRender(next);
+  }
+  function hnStartPlay() {
+    hnPlaying = true;
+    hnPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(hnSlider.value, 10) >= ISNAP.length - 1) { hnSlider.value = 0; hnRender(0); }
+    hnPlayTimer = setInterval(hnStepPlay, 1700);
+  }
+  function hnStopPlay() {
+    hnPlaying = false;
+    hnPlayBtn.innerHTML = "&#9654;";
+    clearInterval(hnPlayTimer);
+  }
+  hnPlayBtn.addEventListener("click", function () { hnPlaying ? hnStopPlay() : hnStartPlay(); });
+})();
 </script>
 </body></html>
