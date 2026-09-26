@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +223,42 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Rwanda, c. 1600&ndash;present, four political entities. Rwanda shared colonial administration with neighboring Burundi as the joint territory of Ruanda-Urundi from 1916-1962, but the two were, and remain, distinct kingdoms and countries with their own separate histories &mdash; this page is scoped to Rwanda alone. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, four flags over it</h2>
+    <p class="imap-sub">Rwanda's own real border, traced whole &mdash; the highlands around Lake Kivu answered to a single government in every era below, so there's no genuinely separate internal region to carve out honestly. Press play, or drag the slider, to watch who held it all at once.</p>
+    <div class="rule-box">
+      <b>This is a single-region page.</b> The precolonial kingdom's Hutu/Tutsi/Twa distinction, and the violence that followed its colonial hardening, was a social and ethnic division, not a territorial one &mdash; there was never a separately governed Hutu region and Tutsi region to map. Rwanda shared colonial administration with Burundi as Ruanda-Urundi, but the two kept separate courts and separate kingdoms underneath that joint mandate, and this page is scoped to Rwanda's own territory alone.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1600</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="60" y="30">DR CONGO</text>
+          <text x="330" y="30">UGANDA</text>
+          <text x="330" y="270">TANZANIA</text>
+          <text x="60" y="270">BURUNDI</text>
+        </g>
+        <path id="ireg-rw" class="ireg-fill" d="M266.0,14.0 L326.5,100.1 L317.7,189.8 L273.7,209.1 L192.7,199.2 L146.0,286.0 L53.5,274.0 L67.6,190.6 L88.5,178.8 L94.2,88.0 L138.0,45.5 L174.9,61.1 L266.0,14.0 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-rw" x="200" y="150">RWANDA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Kingdom of Rwanda (precolonial)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border around Lake Kivu and the central highlands, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -368,6 +442,102 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    precolonial:"#a9762f", colonial:"#7a4a1f", independence:"#1e7a4a", postgenocide:"#1e7a4a"
+  };
+  var INAMES = {
+    precolonial:"Kingdom of Rwanda (precolonial)", colonial:"Ruanda-Urundi (Belgian mandate / UN trust territory)",
+    independence:"Republic of Rwanda (independence era)", postgenocide:"Republic of Rwanda (post-genocide)"
+  };
+  var IFLAGS = {
+    precolonial: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    colonial: '<rect width="300" height="200" fill="#f4efe1"/><rect width="100" height="200" fill="#1a1a1a"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#a4302a"/><circle cx="150" cy="100" r="26" fill="#a9762f" stroke="#7a4a1f" stroke-width="2"/>',
+    independence: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f9d616"/><rect y="133.3" width="300" height="66.7" fill="#1e7a4a"/><text x="150" y="112" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="34" font-weight="700" fill="#050505">R</text>',
+    postgenocide: '<rect width="300" height="200" fill="#1a5fb4"/><rect y="150" width="300" height="50" fill="#1e9c5a"/><rect y="130" width="300" height="20" fill="#f9d616"/><circle cx="240" cy="50" r="24" fill="#f9d616"/><g stroke="#f9d616" stroke-width="3"><line x1="240" y1="14" x2="240" y2="4"/><line x1="240" y1="86" x2="240" y2="96"/><line x1="204" y1="50" x2="194" y2="50"/><line x1="276" y1="50" x2="286" y2="50"/><line x1="215" y1="25" x2="208" y2="18"/><line x1="265" y1="75" x2="272" y2="82"/><line x1="265" y1="25" x2="272" y2="18"/><line x1="215" y1="75" x2="208" y2="82"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1600", name:"Kingdom of Rwanda (precolonial)", t:{ rw:IC.precolonial }, flagKeys:{ rw:"precolonial" },
+      story:"A centralized Kingdom of Rwanda, ruled by a Mwami through a Tutsi-dominated court and a cattle-based clientship system binding Hutu, Tutsi, and Twa subjects together, consolidates and expands across the highlands around Lake Kivu, reaching its greatest extent under Kigeli IV Rwabugiri in the late 19th century. German explorers make first sustained contact in the 1890s, and Germany claims the kingdom as part of German East Africa from 1897, ruling indirectly through the existing court. No national flag is documented from this era." },
+    { year:"1916", name:"Ruanda-Urundi (Belgian mandate / UN trust territory)", t:{ rw:IC.colonial }, flagKeys:{ rw:"colonial" },
+      story:"Belgian forces occupy Rwanda and Burundi during World War I; the League of Nations awards Belgium the joint mandate of Ruanda-Urundi in 1916/1922, continued as a UN trust territory after 1946. Belgian rule issues ethnic identity cards from 1933, hardening the Hutu/Tutsi distinction into a rigid colonial categorization &mdash; a well-documented cause of the violence that follows independence." },
+    { year:"1962", name:"Republic of Rwanda (independence era)", t:{ rw:IC.independence }, flagKeys:{ rw:"independence" },
+      story:"The 1959&ndash;61 \"Hutu Revolution\" overthrows the Tutsi monarchy, and Rwanda becomes independent on 1 July 1962 as a republic. Periodic anti-Tutsi violence recurs over the following decades, culminating in the 1994 genocide against the Tutsi and moderate Hutu, in which approximately 800,000 people are killed in roughly one hundred days." },
+    { year:"1994–present", name:"Republic of Rwanda (post-genocide)", t:{ rw:IC.postgenocide }, flagKeys:{ rw:"postgenocide" },
+      story:"The Rwandan Patriotic Front ends the genocide by taking Kigali in July 1994. Paul Kagame becomes president in 2000, overseeing reconstruction and rapid development. A new flag, adopted in 2001, deliberately replaces the genocide-era tricolor with a different color scheme entirely." }
+  ];
+
+  var IREGIONS = ["rw"];
+  var IREGION_NAMES = { rw:"Rwanda" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.rw; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
@@ -379,5 +549,6 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+})();
 </script>
 </body></html>
