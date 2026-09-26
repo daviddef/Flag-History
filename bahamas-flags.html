@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -182,6 +219,36 @@
   <h1>Flags of the Bahamas</h1>
   <p class="lede">A traditional first landfall of Columbus in 1492, followed by a Spanish slave-raiding campaign so thorough that the islands sat nearly empty for over a century before anyone resettled them. English planters and adventurers arrive from the 1640s, Nassau curdles into a pirate haven by the early 1700s, and a royal governor sent to stamp that out in 1718 opens two and a half centuries of unbroken British Crown rule &mdash; ending only with independence in 1973.</p>
   <p class="lede">Three flags for three very different kinds of sovereignty: an indigenous society that left no banner behind, a colony that flew Britain's ensign for longer than most of its Caribbean neighbors combined, and a modern nation whose aquamarine and gold are meant to be read, quite literally, as sea, sand, and sun.</p>
+
+  <div class="imap-section">
+    <h2>One border, three flags</h2>
+    <p class="imap-sub">The Bahamas' own real archipelago, traced whole &mdash; no internal partition to show here. Press play, or drag the slider, to watch who held the islands, era to era.</p>
+    <div class="rule-box">
+      <b>Why no internal split.</b> This is a single, unbroken British colonial lineage after the 1718 restoration of royal government, followed by one independence in 1973 &mdash; there is no genuinely separate internal region to carve out honestly. What changes here is only who held the whole archipelago at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag"></span>
+        <input type="range" id="iSlider" min="0" max="2" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 348.0 606.4" xmlns="http://www.w3.org/2000/svg">
+        <path id="ireg-bs" class="ireg-fill" d="M243.0,574.1 L205.8,582.4 L167.3,485.8 L110.6,437.3 L143.6,330.8 L189.2,337.6 L242.2,476.8 L243.0,574.1 Z M199.8,101.1 L34.6,128.0 L24.0,65.9 L95.2,52.5 L195.2,57.5 L199.8,101.1 Z M324.0,99.5 L297.9,218.7 L270.0,197.2 L272.5,109.5 L204.6,43.3 L204.3,24.0 L324.0,99.5 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-bs" x="193.1" y="474.9">THE BAHAMAS</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
+  </div>
 
   <div class="timeline">
 
@@ -323,11 +390,105 @@
   </div>
 
   <footer>
-    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; the colonial-era badge is a simplified reconstruction, not an official specification. This page carries no interactive map.
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; the colonial-era badge is a simplified reconstruction, not an official specification.
   </footer>
 
 </div>
 
+<script>
+(function () {
+  var IC = {
+    e0:"#6e6551", e1:"#1f7a7a", e2:"#c9962c"
+  };
+  var INAMES = {
+    e0:"Lucayan Taíno Bahamas &amp; depopulation", e1:"British Bahamas (Crown Colony)", e2:"Independent Commonwealth of the Bahamas"
+  };
+  var IFLAGS = {
+    e0: '<rect width="300" height="200" fill="#5a5040"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
+    e1: '<rect width="300" height="200" fill="#1b3a76"/><rect x="0" y="0" width="150" height="100" fill="#1b3a76"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="16"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c1272d" stroke-width="7"/><rect x="0" y="40" width="150" height="20" fill="#f4efe1"/><rect x="65" y="0" width="20" height="100" fill="#f4efe1"/><rect x="0" y="45.5" width="150" height="9" fill="#c1272d"/><rect x="70.5" y="0" width="9" height="100" fill="#c1272d"/><circle cx="220" cy="118" r="28" fill="#f4efe1"/><circle cx="213" cy="110" r="15" fill="#f9d616"/><path d="M196,132 L238,132 L217,104 Z" fill="#1b3a76"/>',
+    e2: '<rect width="300" height="66.7" fill="#00a9b7"/><rect y="66.7" width="300" height="66.6" fill="#f9d616"/><rect y="133.3" width="300" height="66.7" fill="#00a9b7"/><path d="M0,0 L110,100 L0,200 Z" fill="#0a0a0a"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1490s–1718", name:"Lucayan Taíno Bahamas &amp; depopulation", t:{ bs:IC.e0 }, flagKeys:{ bs:"e0" },
+      story:"San Salvador is traditionally identified as Columbus's first landfall in the Americas, 12 October 1492. Spain never settled the Bahamas, but its slave raiders did: within a few decades the Lucayan population was almost entirely wiped out, forced to Hispaniola and Cuba's gold mines and pearl fisheries. The islands sat nearly depopulated for over a century. No flag survives from Lucayan society or the loosely governed pirate period that briefly followed English settlement &mdash; shown honestly blank." },
+    { year:"1718–1973", name:"British Bahamas (Crown Colony)", t:{ bs:IC.e1 }, flagKeys:{ bs:"e1" },
+      story:"English settlement resumes with the Eleutheran Adventurers in 1648, but a governance vacuum turns Nassau into the “Republic of Pirates” by the early 1700s. The Crown answers by sending Woodes Rogers as first royal governor in 1718 &mdash; “Expulsis Piratis, Restituta Commercia” &mdash; and the Bahamas remain a British Crown Colony, unbroken, for two and a half centuries. The Blue Ensign flies with a badge of a sailing ship approaching an island under a rising sun." },
+    { year:"1973–present", name:"Independent Commonwealth of the Bahamas", t:{ bs:IC.e2 }, flagKeys:{ bs:"e2" },
+      story:"Internal self-government arrives with the 1964 constitution; the territory renames itself simply “The Bahamas” in 1969. Full independence follows 10 July 1973. Two aquamarine bands for the sea, gold for the sun and sand, and a black hoist triangle for the unity and strength of the Bahamian people drawing energy from land and sea alike." }
+  ];
+
+  var IREGIONS = ["bs"];
+  var IREGION_NAMES = { bs:"The Bahamas" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.bs; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + "</div></div>";
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
