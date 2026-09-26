@@ -481,6 +481,106 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    maravi:"#5c2a24", chieftaincies:"#5c2a24", nyasaland:"#00247d", federation:"#00247d", modern:"#000000"
+  };
+  var INAMES = {
+    maravi:"Maravi Confederation", chieftaincies:"Post-Maravi chieftaincies (Yao, Ngoni, Chewa)",
+    nyasaland:"Nyasaland (British Central Africa Protectorate)", federation:"Nyasaland in the Federation of Rhodesia and Nyasaland",
+    modern:"Republic of Malawi (independent)"
+  };
+  var IFLAGS = {
+    maravi: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    chieftaincies: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">REGALIA,</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>',
+    nyasaland: '<rect width="300" height="200" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="32" fill="#fff" stroke="#6e6047" stroke-width="2"/><path d="M205,105 l30,30 M235,105 l-30,30" stroke="#c8102e" stroke-width="3"/>',
+    federation: '<rect width="300" height="200" fill="#00247d"/><rect width="150" height="100" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="32" fill="#fff" stroke="#6e6047" stroke-width="2"/>',
+    modern: '<rect width="300" height="66.6" fill="#000"/><rect y="66.6" width="300" height="66.6" fill="#c8102e"/><rect y="133.2" width="300" height="66.8" fill="#009543"/><g fill="#e6521f"><circle cx="150" cy="35" r="6"/><circle cx="120" cy="45" r="5"/><circle cx="180" cy="45" r="5"/><circle cx="95" cy="58" r="4"/><circle cx="205" cy="58" r="4"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1480", name:"Maravi Confederation", t:{ mw:IC.maravi }, flagKeys:{ mw:"maravi" },
+      story:"The Maravi (or Malawi) peoples establish a loose confederation of chieftaincies around the southern end of Lake Malawi from the late 15th century, at its height controlling trade routes to the Indian Ocean coast and giving the modern country its name. No securely documented flag or banner survives; authority was expressed through regalia and chiefly symbols instead." },
+    { year:"c. 1650", name:"Post-Maravi chieftaincies (Yao, Ngoni, Chewa)", t:{ mw:IC.chieftaincies }, flagKeys:{ mw:"chieftaincies" },
+      story:"After the Maravi confederation's political unity declines from the mid-17th century, the region fragments into smaller Chewa chieftaincies, later joined by Yao traders and Ngoni groups who migrate in during the Mfecane's upheavals. No single successor state re-unifies the territory before British colonization, and no national flag survives for any of these polities." },
+    { year:"1891", name:"Nyasaland (British Central Africa Protectorate)", t:{ mw:IC.nyasaland }, flagKeys:{ mw:"nyasaland" },
+      story:"Britain declares a protectorate over the region in 1891, initially named British Central Africa and renamed Nyasaland in 1907, drawing partly on missionary and anti-slave-trade activity associated with David Livingstone's earlier expeditions. The standard British colonial Blue Ensign, defaced with Nyasaland's own badge, flies until the Federation period begins in 1953." },
+    { year:"1953", name:"Nyasaland in the Federation of Rhodesia and Nyasaland", t:{ mw:IC.federation }, flagKeys:{ mw:"federation" },
+      story:"Britain joins Nyasaland with Northern and Southern Rhodesia into the Central African Federation in 1953, a structure driven largely by the region's white settler minority and deeply unpopular among Nyasaland's African population, who organize sustained resistance. The Federation dissolves at the end of 1963 under that opposition's weight, and Nyasaland moves quickly to independence." },
+    { year:"1964–present", name:"Republic of Malawi (independent)", t:{ mw:IC.modern }, flagKeys:{ mw:"modern" },
+      story:"Nyasaland becomes independent as Malawi on 6 July 1964 under Hastings Banda, who rules as an increasingly authoritarian one-party head of state until multiparty elections end his 30-year rule in 1994. Black stands for the African people, the red rising sun for the dawn of African freedom, and green for the country's vegetation and Lake Malawi's shoreline fertility." }
+  ];
+
+  var IREGIONS = ["mw"];
+  var IREGION_NAMES = { mw:"Malawi" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.mw; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
