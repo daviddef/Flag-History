@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,44 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the island of Sri Lanka (historically Ceylon), c. 377 BCE&ndash;present, ten political entries. Dates for the earliest Sinhalese kingdoms follow the traditional chronology preserved in the island's own chronicles (the Mahavamsa and related texts) and should be read as the conventional reckoning rather than as independently attested fact. <b>A note on overlap:</b> for roughly two and a quarter centuries (1592&ndash;1815) two flags flew over the island at once &mdash; the Kandyan lion banner in the independent highland interior, and successive Portuguese, Dutch, and British colonial flags on the coast. This page cannot show two simultaneous tracks in one column, so the Kingdom of Kandy entry and the Portuguese entry below it are placed by narrative sequence rather than strict start-date order; each entry's text flags exactly where the overlap runs. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Coast and Kandy, 1592&ndash;1815</h2>
+    <p class="imap-sub">Sri Lanka's own real coastal outline, split into the two pieces that were, for over two centuries, ruled by entirely different powers: successive European colonial administrations on the coast, and the independent interior Kingdom of Kandy in the central highlands. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Kandy was never conquered by any of the three earlier European powers.</b> The Portuguese and Dutch both controlled only the coastal lowlands; Kandy held out as a fully independent kingdom until the British finally took it in 1815 &mdash; the first time in over two centuries that one power ruled the whole island. The border below only solidifies for the span the two pieces were genuinely governed apart.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 377 BCE&ndash;993 CE</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="330" y="60">BAY OF BENGAL</text>
+          <text x="60" y="60">GULF OF MANNAR</text>
+          <text x="190" y="290">INDIAN OCEAN</text>
+        </g>
+        <path id="ireg-coast" class="ireg-fill" d="M257.74,174.39 L247.99,242.45 L220.84,261.05 L164.54,276.00 L133.74,224.03 L122.26,130.09 L151.56,24.00 L196.30,60.32 L226.43,106.34 L257.74,174.39 Z"/>
+        <path id="ireg-kandy" class="ireg-fill" d="M175,110 L210,130 L215,175 L195,210 L155,215 L130,180 L135,135 Z"/>
+        <path class="iborder-line" id="ib-coast-kandy" d="M175,110 L210,130 L215,175 L195,210 L155,215 L130,180 L135,135"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-coast" x="200" y="240">COAST</text>
+          <text class="ireg-label" id="ilbl-kandy" x="172" y="168">KANDY</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Kingdom of Anuradhapura</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Schematic internal partition on a real traced coastal border &mdash; the coast/Kandy dividing line approximates the historical highland frontier, not a surveyed boundary.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -663,6 +738,127 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { kingdom:"#a9762f", foreign:"#6b5c4a", colony:"#204b5c", dominion:"#4a7c3f", republic:"#9c3b28" };
+  var INAMES = { kingdom:"Sinhalese kingdom", foreign:"Foreign conquest", colony:"Colony", dominion:"Dominion", republic:"Republic" };
+  var IFLAGS = {
+    anuradhapura: '<rect width="300" height="200" fill="#7c2331"/><g fill="#eab308"><ellipse cx="160" cy="120" rx="46" ry="26"/><circle cx="100" cy="100" r="24"/><path d="M84,80 L70,62 L92,70 Z"/><path d="M104,78 L112,58 L124,72 Z"/><path d="M198,104 Q222,96 230,116 Q212,120 200,112 Z"/><rect x="118" y="140" width="12" height="30" rx="3"/><rect x="145" y="142" width="12" height="32" rx="3"/><rect x="172" y="140" width="12" height="30" rx="3"/><rect x="192" y="136" width="12" height="28" rx="3"/></g>',
+    chola: '<rect width="300" height="200" fill="#c9a13c"/><g fill="#8a2a1e"><ellipse cx="150" cy="115" rx="55" ry="28"/><circle cx="95" cy="95" r="22"/><path d="M85,76 L75,58 L95,68 Z"/><path d="M108,74 L114,54 L128,68 Z"/><path d="M190,100 Q212,92 220,110 Q204,114 194,108 Z"/></g><g stroke="#2a1a12" stroke-width="4"><line x1="120" y1="96" x2="126" y2="120"/><line x1="140" y1="92" x2="146" y2="118"/><line x1="160" y1="94" x2="166" y2="120"/></g>',
+    polonnaruwa: '<rect width="300" height="200" fill="#7c2331"/><g fill="#eab308"><ellipse cx="160" cy="120" rx="46" ry="26"/><circle cx="100" cy="100" r="24"/><path d="M84,80 L70,62 L92,70 Z"/><path d="M104,78 L112,58 L124,72 Z"/><path d="M198,104 Q222,96 230,116 Q212,120 200,112 Z"/><rect x="118" y="140" width="12" height="30" rx="3"/><rect x="145" y="142" width="12" height="32" rx="3"/><rect x="172" y="140" width="12" height="30" rx="3"/><rect x="192" y="136" width="12" height="28" rx="3"/></g>',
+    latersinhalese: '<rect width="300" height="200" fill="#7c2331"/><g fill="#eab308"><ellipse cx="185" cy="118" rx="42" ry="23"/><circle cx="130" cy="99" r="21"/><path d="M115,80 L102,63 L123,72 Z"/><path d="M136,78 L143,59 L156,72 Z"/><path d="M223,102 Q244,95 251,112 Q236,116 225,110 Z"/><rect x="143" y="135" width="10" height="27" rx="2"/><rect x="168" y="137" width="10" height="29" rx="2"/><rect x="192" y="135" width="10" height="27" rx="2"/><rect x="209" y="131" width="10" height="25" rx="2"/></g>',
+    portuguese: '<rect width="300" height="200" fill="#f4efe1"/><g fill="#a4302a"><rect x="138" y="30" width="24" height="140"/><rect x="90" y="78" width="120" height="24"/></g><g fill="#f4efe1"><rect x="146" y="30" width="8" height="140"/><rect x="90" y="86" width="120" height="8"/></g>',
+    dutch: '<rect width="300" height="200" fill="#a4302a"/><rect y="66" width="300" height="68" fill="#f4efe1"/><rect y="134" width="300" height="66" fill="#204b5c"/><text x="150" y="110" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="700" font-size="30" fill="#204b5c">VOC</text>',
+    british: '<rect width="300" height="200" fill="#1e2f96"/><rect x="0" y="0" width="140" height="100" fill="#1e2f96"/><path d="M0,0 L140,100 M140,0 L0,100" stroke="#f4efe1" stroke-width="14"/><path d="M0,0 L140,100 M140,0 L0,100" stroke="#a4302a" stroke-width="6"/><path d="M70,0 V100 M0,50 H140" stroke="#f4efe1" stroke-width="20"/><path d="M70,0 V100 M0,50 H140" stroke="#a4302a" stroke-width="8"/><circle cx="215" cy="130" r="34" fill="#f4efe1" stroke="#a9762f" stroke-width="3"/><text x="215" y="136" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="700" font-size="11" fill="#204b5c">CEYLON</text>',
+    kandy: '<rect width="300" height="200" fill="#7c2331"/><rect x="6" y="6" width="288" height="188" fill="none" stroke="#eab308" stroke-width="6"/><g fill="#eab308"><ellipse cx="185" cy="118" rx="42" ry="23"/><circle cx="130" cy="99" r="21"/><path d="M115,80 L102,63 L123,72 Z"/><path d="M136,78 L143,59 L156,72 Z"/><path d="M223,102 Q244,95 251,112 Q236,116 225,110 Z"/><rect x="143" y="135" width="10" height="27" rx="2"/><rect x="168" y="137" width="10" height="29" rx="2"/><rect x="192" y="135" width="10" height="27" rx="2"/><rect x="209" y="131" width="10" height="25" rx="2"/></g>',
+    dominion: '<rect width="300" height="200" fill="#eab308"/><rect x="6" y="6" width="18" height="188" fill="#007749"/><rect x="30" y="6" width="18" height="188" fill="#ff7900"/><rect x="54" y="6" width="240" height="188" fill="#7c2331"/><g fill="#eab308"><ellipse cx="192" cy="118" rx="40" ry="22"/><circle cx="140" cy="100" r="20"/><path d="M126,82 L114,66 L134,74 Z"/><path d="M146,80 L152,62 L164,74 Z"/><path d="M228,102 Q248,96 254,112 Q240,116 230,110 Z"/><rect x="152" y="136" width="10" height="26" rx="2"/><rect x="176" y="138" width="10" height="28" rx="2"/><rect x="200" y="136" width="10" height="26" rx="2"/><rect x="216" y="132" width="10" height="24" rx="2"/><rect x="102" y="76" width="9" height="46" rx="2" transform="rotate(-30 106 99)"/></g>',
+    modern: '<rect width="300" height="200" fill="#eab308"/><rect x="6" y="6" width="18" height="188" fill="#007749"/><rect x="30" y="6" width="18" height="188" fill="#ff7900"/><rect x="54" y="6" width="240" height="188" fill="#7c2331"/><g fill="#eab308"><ellipse cx="192" cy="118" rx="40" ry="22"/><circle cx="140" cy="100" r="20"/><path d="M126,82 L114,66 L134,74 Z"/><path d="M146,80 L152,62 L164,74 Z"/><path d="M228,102 Q248,96 254,112 Q240,116 230,110 Z"/><rect x="152" y="136" width="10" height="26" rx="2"/><rect x="176" y="138" width="10" height="28" rx="2"/><rect x="200" y="136" width="10" height="26" rx="2"/><rect x="216" y="132" width="10" height="24" rx="2"/><rect x="102" y="76" width="9" height="46" rx="2" transform="rotate(-30 106 99)"/></g><g fill="#eab308"><path d="M70,20 C76,26 76,34 70,40 C64,34 64,26 70,20 Z"/><path d="M278,20 C284,26 284,34 278,40 C272,34 272,26 278,20 Z"/><path d="M70,160 C76,166 76,174 70,180 C64,174 64,166 70,160 Z"/><path d="M278,160 C284,166 284,174 278,180 C272,174 272,166 278,160 Z"/></g>'
+  };
+  function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.kingdom + '"></span>Kingdom, independent</span><span><span class="sw" style="background:' + IC.foreign + '"></span>Foreign conquest</span><span><span class="sw" style="background:' + IC.colony + '"></span>Colony</span><span><span class="sw" style="background:' + IC.dominion + '"></span>Dominion</span><span><span class="sw" style="background:' + IC.republic + '"></span>Republic</span>';
+
+  var ISNAP = [
+    { year:"c. 377 BCE&ndash;993 CE", name:"Kingdom of Anuradhapura", t:{ coast:IC.kingdom, kandy:IC.kingdom }, flagKeys:{ coast:"anuradhapura", kandy:"anuradhapura" },
+      story:"The Anuradhapura kingdom unites the island under one Sinhalese crown for over thirteen centuries, flying the legendary golden lion banner &mdash; an informed reconstruction, since no surviving artifact from this era exists." },
+    { year:"993&ndash;1070", name:"Chola conquest", t:{ coast:IC.foreign, kandy:IC.foreign }, flagKeys:{ coast:"chola", kandy:"chola" },
+      story:"The South Indian Chola dynasty conquers Anuradhapura in 993, ruling the island under its own tiger emblem for over seventy years before Sinhalese resistance restores native rule." },
+    { year:"1070&ndash;1236", name:"Kingdom of Polonnaruwa", t:{ coast:IC.kingdom, kandy:IC.kingdom }, flagKeys:{ coast:"polonnaruwa", kandy:"polonnaruwa" },
+      story:"Vijayabahu I expels the Cholas in 1070 and restores Sinhalese rule from a new capital at Polonnaruwa, again flying the reconstructed gold-lion banner over the whole island." },
+    { year:"1236&ndash;1592", name:"Later Sinhalese kingdoms (Dambadeniya, Gampola, Kotte)", t:{ coast:IC.kingdom, kandy:IC.kingdom }, flagKeys:{ coast:"latersinhalese", kandy:"latersinhalese" },
+      story:"The capital shifts repeatedly &mdash; Dambadeniya, Gampola, then Kotte &mdash; as Sinhalese kingdoms hold the whole island through the medieval period, still under the same lion device." },
+    { year:"1505&ndash;1658", name:"Portuguese Ceylon", t:{ coast:IC.foreign, kandy:IC.kingdom }, flagKeys:{ coast:"portuguese", kandy:"kandy" },
+      story:"Portuguese traders arrive in 1505 and gradually seize the coastal lowlands, flying the Order of Christ's red cross over their forts &mdash; but never reach the interior, where the independent Kingdom of Kandy is founded in 1592 and holds out completely." },
+    { year:"1658&ndash;1796", name:"Dutch Ceylon", t:{ coast:IC.colony, kandy:IC.kingdom }, flagKeys:{ coast:"dutch", kandy:"kandy" },
+      story:"The Dutch East India Company expels the Portuguese from the coast by 1658, ruling the lowlands under the VOC monogram for over a century &mdash; while Kandy, in the central highlands, remains just as independent as before, never conquered by either European power." },
+    { year:"1796&ndash;1815", name:"British Ceylon (coast) &amp; independent Kandy", t:{ coast:IC.colony, kandy:IC.kingdom }, flagKeys:{ coast:"british", kandy:"kandy" },
+      story:"Britain takes the coast from the Dutch in 1796, but Kandy still holds out &mdash; the last independent Sinhalese kingdom on the island, finally conquered only in 1815 after a series of Kandyan Wars." },
+    { year:"1815&ndash;1948", name:"British Ceylon (whole island)", t:{ coast:IC.colony, kandy:IC.colony }, flagKeys:{ coast:"british", kandy:"british" },
+      story:"The 1815 Kandyan Convention formally cedes the kingdom to Britain &mdash; the first time in recorded history that one power governs the entire island as a single unit, ending centuries of a genuinely divided Sri Lanka." },
+    { year:"1948&ndash;1972", name:"Dominion of Ceylon", t:{ coast:IC.dominion, kandy:IC.dominion }, flagKeys:{ coast:"dominion", kandy:"dominion" },
+      story:"Ceylon gains independence as a self-governing Dominion within the Commonwealth on 4 February 1948, adopting the lion flag with green and orange hoist stripes representing the island's minority communities." },
+    { year:"1972&ndash;present", name:"Republic of Sri Lanka", t:{ coast:IC.republic, kandy:IC.republic }, flagKeys:{ coast:"modern", kandy:"modern" },
+      story:"A new constitution in 1972 makes the country a republic and renames it Sri Lanka; four bo leaves are added to the flag's corners, completing the design flown today." }
+  ];
+
+  var IREGIONS = ["coast","kandy"];
+  var IREGION_NAMES = { coast:"Coastal lowlands", kandy:"Kingdom of Kandy (interior)" };
+  var IADJ = [["coast","kandy"]];
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.innerHTML = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+    });
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.4");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
