@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,45 @@
   <p class="lede">This page carries real historical weight: the Congo Free State era (1885&ndash;1908) is one of the most documented atrocities of the colonial period, and it is treated here with the factual weight it deserves rather than glossed over for the sake of a tidy flag list.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the territory of today's Democratic Republic of the Congo, c. 1390&ndash;present, six entries. No interactive map accompanies this page &mdash; this batch of the atlas defers maps to a later phase. Political-system tags are the only classification shown here (no leader or religion tags, unlike some richer pages elsewhere in this atlas). Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the territory of today's Democratic Republic of the Congo, c. 1390&ndash;present, six entries. Political-system tags are the only classification shown here (no leader or religion tags, unlike some richer pages elsewhere in this atlas). Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, six regimes</h2>
+    <p class="imap-sub">The DRC's own real border, traced whole &mdash; Africa's second-largest country by area, shown as one unit throughout its recorded political history. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <div class="rule-box">
+      <b>The only real territorial split in this history was Katanga's 1960&ndash;63 secession, and it never became a separate governed reality long enough to map honestly.</b> Moïse Tshombe's mineral-rich breakaway province was reabsorbed by UN and central-government forces within three years, without ever gaining the kind of settled, internationally durable administration that Hungary's Ottoman/Habsburg split, for example, held for a century and a half. It is noted in the timeline as an episode within the Congo Crisis era, not carved out here as its own governed region.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1390</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="80" y="20">CAR</text>
+          <text x="290" y="25">S. SUDAN / UGANDA</text>
+          <text x="20" y="140">CONGO-BRAZZAVILLE</text>
+          <text x="30" y="270">ANGOLA</text>
+          <text x="300" y="270">TANZANIA</text>
+          <text x="230" y="325">ZAMBIA</text>
+        </g>
+        <path id="ireg-cd" class="ireg-fill" d="M301.13,62.18 L300.26,78.97 L306.00,80.91 L301.40,86.01 L295.89,89.83 L290.42,97.31 L287.40,103.99 L286.60,115.51 L283.28,121.00 L283.16,131.82 L279.04,135.82 L278.51,144.37 L276.54,145.47 L275.22,153.33 L278.82,159.85 L279.73,177.17 L282.31,190.38 L280.88,197.84 L283.74,206.17 L292.05,214.21 L299.78,232.30 L294.14,230.84 L274.90,233.26 L271.06,234.98 L266.98,244.14 L270.19,250.48 L267.64,267.47 L265.87,281.88 L269.74,284.44 L279.75,290.03 L283.68,287.42 L284.88,302.90 L273.92,302.78 L268.04,294.88 L262.76,288.76 L251.79,286.75 L248.57,279.23 L239.82,283.76 L228.35,281.76 L223.56,275.24 L214.47,273.92 L207.76,274.26 L206.94,269.80 L201.99,269.44 L195.47,268.59 L186.60,270.74 L180.38,270.39 L176.83,271.71 L177.60,254.62 L172.82,249.30 L171.77,240.47 L173.88,231.81 L170.98,226.27 L170.71,217.24 L153.34,217.36 L154.58,212.19 L147.28,212.25 L146.50,214.73 L137.62,215.29 L134.03,223.66 L131.88,227.25 L123.97,225.22 L119.24,227.24 L109.77,228.40 L104.29,220.90 L101.00,216.25 L96.89,207.64 L93.35,196.95 L51.09,196.76 L46.07,198.48 L41.92,198.21 L36.01,200.14 L34.00,195.69 L37.64,194.17 L38.09,187.91 L40.43,184.22 L45.65,181.21 L49.41,182.67 L54.31,177.17 L62.11,177.31 L63.03,181.38 L68.38,183.92 L76.80,174.92 L85.15,167.91 L88.77,163.32 L88.29,151.51 L94.51,137.56 L101.07,130.16 L110.50,123.24 L112.15,118.66 L112.50,113.40 L114.84,108.42 L114.09,100.28 L115.87,87.56 L118.67,78.60 L122.96,70.92 L123.81,62.25 L125.10,52.24 L130.67,44.95 L138.34,40.33 L150.13,45.21 L159.25,50.50 L169.73,51.92 L180.41,54.72 L184.69,46.05 L186.66,44.94 L193.19,46.38 L209.13,39.22 L214.78,42.25 L219.42,41.82 L221.57,38.33 L226.89,37.10 L237.66,38.61 L246.85,38.94 L251.58,37.42 L260.25,49.27 L266.68,51.01 L270.52,48.60 L277.14,49.55 L285.12,46.51 L288.52,52.64 L301.13,62.18 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-cd" x="175" y="145">DR CONGO</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Kingdom of Kongo &amp; other polities</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (johan/world.geo.json, COD), no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -443,11 +519,117 @@
   </div>
 
   <footer>
-    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-20th-century swatches, and all Kingdom of Kongo imagery, are informed reconstructions, not official specifications.
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-20th-century swatches, and all Kingdom of Kongo imagery, are informed reconstructions, not official specifications. Map is schematic and not surveyed.
   </footer>
 
 </div>
 
+<script>
+(function () {
+  var IC = {
+    kongo: "#a9762f", freestate: "#7c2e1f", belgian: "#204b5c",
+    crisis: "#9c3b28", zaire: "#00953b", modern: "#123f91"
+  };
+  var INAMES = {
+    kongo: "Kingdom of Kongo &amp; other polities", freestate: "Congo Free State (Leopold II)",
+    belgian: "Belgian Congo", crisis: "Independence / Congo Crisis",
+    zaire: "Zaire (Mobutu)", modern: "Democratic Republic of the Congo"
+  };
+  var IFLAGS = {
+    kongo: '<rect width="300" height="200" fill="#7c2e1f"/><rect width="300" height="200" fill="none" stroke="#a9762f" stroke-width="4" stroke-dasharray="8 6"/><rect x="120" y="70" width="60" height="60" fill="#123f91" stroke="#f4efe1" stroke-width="2"/><g fill="#f4efe1"><circle cx="150" cy="86" r="6"/><circle cx="134" cy="114" r="6"/><circle cx="166" cy="114" r="6"/><circle cx="150" cy="100" r="6"/></g>',
+    freestate: '<rect width="300" height="200" fill="#0a3161"/><path d="M150,64 L158.4,89.7 H185.5 L163.5,105.6 L171.9,131.3 L150,115.4 L128.1,131.3 L136.5,105.6 L114.5,89.7 H141.6 Z" fill="#f7d618"/>',
+    belgian: '<rect width="300" height="200" fill="#0a3161"/><path d="M150,72 L156.3,90.9 L176.2,90.9 L160.1,102.6 L166.4,121.5 L150,109.8 L133.6,121.5 L139.9,102.6 L123.8,90.9 L143.7,90.9 Z" fill="#f7d618"/><g fill="#f7d618"><path d="M150,54 l3.1,9.5 h10 l-8.1,5.9 3.1,9.5 -8.1,-5.9 -8.1,5.9 3.1,-9.5 -8.1,-5.9 h10 Z"/><path d="M182,66 l3.1,9.5 h10 l-8.1,5.9 3.1,9.5 -8.1,-5.9 -8.1,5.9 3.1,-9.5 -8.1,-5.9 h10 Z"/><path d="M197,100 l3.1,9.5 h10 l-8.1,5.9 3.1,9.5 -8.1,-5.9 -8.1,5.9 3.1,-9.5 -8.1,-5.9 h10 Z"/><path d="M182,134 l3.1,9.5 h10 l-8.1,5.9 3.1,9.5 -8.1,-5.9 -8.1,5.9 3.1,-9.5 -8.1,-5.9 h10 Z"/><path d="M150,146 l3.1,9.5 h10 l-8.1,5.9 3.1,9.5 -8.1,-5.9 -8.1,5.9 3.1,-9.5 -8.1,-5.9 h10 Z"/><path d="M118,134 l3.1,9.5 h10 l-8.1,5.9 3.1,9.5 -8.1,-5.9 -8.1,5.9 3.1,-9.5 -8.1,-5.9 h10 Z"/></g>',
+    crisis: '<rect width="300" height="200" fill="#123f91"/><rect x="-40" y="80" width="380" height="52" fill="#f7d618" transform="rotate(-34 150 100)"/><rect x="-40" y="88" width="380" height="36" fill="#ce1126" transform="rotate(-34 150 100)"/><path d="M56,48 L62,66.4 L81.4,66.4 L65.7,77.7 L71.7,96.1 L56,84.9 L40.3,96.1 L46.3,77.7 L30.6,66.4 L50,66.4 Z" fill="#f7d618"/>',
+    zaire: '<rect width="300" height="200" fill="#00953b"/><circle cx="115" cy="100" r="46" fill="#f7d618"/><path d="M96,120 q6,-30 10,-42 q3,-9 12,-9" stroke="#141413" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M118,69 l6,-16 4,4 -4,13 8,-8 3,5 -9,9" fill="#ce1126"/>',
+    modern: '<rect width="300" height="200" fill="#007fff"/><rect x="-40" y="77" width="380" height="58" fill="#f7d618" transform="rotate(-34 150 100)"/><rect x="-40" y="86" width="380" height="40" fill="#ce1126" transform="rotate(-34 150 100)"/><path d="M56,50 L62.3,68.9 L82.2,68.9 L66.1,80.6 L72.4,99.5 L56,87.8 L39.6,99.5 L45.9,80.6 L29.8,68.9 L49.7,68.9 Z" fill="#f7d618"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1390", name:"Kingdom of Kongo &amp; other polities", t:{ cd:IC.kongo }, flagKeys:{ cd:"kongo" },
+      story:"No single pre-colonial state covered the Congo basin. The Kingdom of Kongo, founded c. 1390 near the Atlantic coast, is the best-documented of many polities, alongside the Kuba, Luba, and Lunda kingdoms further inland. Its rulers converted to Christianity after 1491, and the 1512 Portuguese-granted royal arms are its best-attested emblem." },
+    { year:"1885", name:"Congo Free State (Leopold II)", t:{ cd:IC.freestate }, flagKeys:{ cd:"freestate" },
+      story:"The 1884–85 Berlin Conference recognizes the territory not as a Belgian colony but as King Leopold II's personal property. A brutal rubber-quota system enforced by the Force Publique causes deaths commonly estimated in the millions, among the worst atrocities of the colonial era, until mounting exposure forces Leopold to cede the territory in 1908." },
+    { year:"1908", name:"Belgian Congo", t:{ cd:IC.belgian }, flagKeys:{ cd:"belgian" },
+      story:"International outrage forces Belgium to annex the territory as an ordinary state colony on 15 November 1908. Forced-labor abuses ease from the worst Free State extremes but colonial rule remains harsh and extractive, and denies Congolese people political representation for the whole period." },
+    { year:"1960", name:"Independence / Congo Crisis", t:{ cd:IC.crisis }, flagKeys:{ cd:"crisis" },
+      story:"Independence arrives abruptly on 30 June 1960. Within days the army mutinies and mineral-rich Katanga secedes under Moïse Tshombe; PM Patrice Lumumba is murdered in January 1961. The UN mounts a massive peacekeeping operation to hold the country together, and Katanga's secession is reversed by 1963, before Mobutu seizes full power in 1965." },
+    { year:"1971", name:"Zaire (Mobutu)", t:{ cd:IC.zaire }, flagKeys:{ cd:"zaire" },
+      story:"Mobutu Sese Seko's “authenticity” campaign renames the country Zaire in 1971–72. His Popular Movement of the Revolution becomes the sole legal party, sustaining a 32-year dictatorship marked by a personality cult, kleptocracy, and severe repression." },
+    { year:"1997–present", name:"Democratic Republic of the Congo", t:{ cd:IC.modern }, flagKeys:{ cd:"modern" },
+      story:"Laurent-Désiré Kabila's rebel coalition topples Mobutu in May 1997, restoring the country's earlier name and a diagonal-stripe flag. Two devastating regional wars follow, but the country has held contested, functioning multiparty elections since, including a first peaceful transfer of power in 2019." }
+  ];
+
+  var IREGIONS = ["cd"];
+  var IREGION_NAMES = { cd:"DR Congo" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.cd; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
