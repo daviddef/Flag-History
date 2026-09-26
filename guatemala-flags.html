@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,44 @@
   <p class="lede">Guatemala's blue and white are shared with Honduras and El Salvador for the same reason: all three inherited them from the 1823&ndash;1841 Federal Republic of Central America, whose own flag was itself a echo of Argentina's and the United Provinces' sky-blue-and-white, adopted by the federation's liberal founders as a break from Spanish red and yellow.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Guatemala, from the pre-conquest Maya era to the present, eight political entities. Guatemala was the seat of the Captaincy General of Guatemala (the Spanish colonial administration for the whole isthmus) and later the federation's largest member state, so its early chapters are shared history with Honduras, El Salvador, Nicaragua, and Costa Rica &mdash; each covered on its own page in this atlas. No map accompanies this page; Guatemala's borders were never internally split in the way some other countries in this atlas were, so a schematic map would add little. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Guatemala, from the pre-conquest Maya era to the present, eight political entities. Guatemala was the seat of the Captaincy General of Guatemala (the Spanish colonial administration for the whole isthmus) and later the federation's largest member state, so its early chapters are shared history with Honduras, El Salvador, Nicaragua, and Costa Rica &mdash; each covered on its own page in this atlas. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, eight rulers</h2>
+    <p class="imap-sub">Guatemala's own real border, traced whole &mdash; no internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, honestly.</b> The Captaincy General and the later federation each governed a larger, shared isthmus-wide territory, but within what is now Guatemala itself there was never a genuinely separate internal region to carve out &mdash; the pre-conquest Maya kingdoms were politically fragmented, but not along any boundary that survives to trace. What changes here is only who ruled the whole territory at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">to 1524</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 350 368" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="160" y="14">MEXICO</text>
+          <text x="300" y="70">BELIZE</text>
+          <text x="290" y="230">HONDURAS</text>
+          <text x="150" y="358">EL SALVADOR</text>
+          <text x="45" y="200">PACIFIC OCEAN</text>
+        </g>
+        <path id="ireg-gt" class="ireg-fill" d="M184.9,343.0 L146.4,329.4 L99.7,328.0 L65.4,312.5 L25.1,280.4 L26.9,257.7 L35.6,239.5 L25.0,224.9 L61.1,161.5 L157.2,161.2 L159.1,134.7 L147.0,130.0 L138.7,113.1 L111.0,95.1 L83.1,69.2 L116.9,69.0 L117.0,25.1 L186.9,25.0 L256.2,25.9 L255.6,87.6 L249.8,175.4 L272.1,175.4 L296.6,189.5 L303.0,177.9 L325.0,187.8 L290.9,217.5 L255.3,239.3 L250.1,254.3 L256.0,269.6 L240.5,289.3 L222.9,294.1 L226.9,303.3 L212.9,311.9 L187.2,331.5 L184.9,343.0 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-gt" x="175" y="180">GUATEMALA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Maya civilizations of the highlands and lowlands</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -508,6 +583,116 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    maya:"#6b5c4a", captaincy:"#7c2e1f", mexico:"#3f6b4a", federal:"#204b5c", postfed:"#8a7a4a", conservative:"#9c6a2f", liberal:"#a9762f", modern:"#b8862f"
+  };
+  var INAMES = {
+    maya:"Maya civilizations of the highlands and lowlands", captaincy:"Captaincy General of Guatemala",
+    mexico:"Independence, then annexation to Mexico", federal:"Federal Republic of Central America",
+    postfed:"Republic of Guatemala (post-federation)", conservative:"Conservative Republic of Guatemala",
+    liberal:"Liberal Republic of Guatemala", modern:"Republic of Guatemala (modern)"
+  };
+  var IFLAGS = {
+    maya: '<rect width="300" height="200" fill="#3f4a2e"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    captaincy: '<rect width="300" height="200" fill="#f4efe1"/><line x1="20" y1="20" x2="280" y2="180" stroke="#9c3b28" stroke-width="26"/><line x1="280" y1="20" x2="20" y2="180" stroke="#9c3b28" stroke-width="26"/>',
+    mexico: '<rect width="300" height="200" fill="#006341"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#a4302a"/><circle cx="150" cy="100" r="18" fill="#c9a13c"/>',
+    federal: '<rect width="300" height="66.7" fill="#4997d0"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#4997d0"/><g fill="#a9762f"><path d="M150,86 l24,20 h-48 Z"/><path d="M120,106 l14,16 h-28 Z"/><path d="M180,106 l14,16 h-28 Z"/></g>',
+    postfed: '<rect width="300" height="66.7" fill="#4997d0"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#4997d0"/>',
+    conservative: '<rect width="300" height="66.7" fill="#4997d0"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#4997d0"/><rect width="150" height="66.7" fill="#a4302a"/><rect y="133.3" width="150" height="66.7" fill="#c9a13c"/>',
+    liberal: '<rect width="100" height="200" fill="#4997d0"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#4997d0"/><circle cx="150" cy="100" r="22" fill="none" stroke="#a9762f" stroke-width="2.5"/>',
+    modern: '<rect width="100" height="200" fill="#4997d0"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#4997d0"/><circle cx="150" cy="100" r="26" fill="none" stroke="#a9762f" stroke-width="3"/><path d="M138,92 h24 M138,100 h24 M138,108 h24" stroke="#204b5c" stroke-width="3"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"to 1524", name:"Maya civilizations of the highlands and lowlands", t:{ gt:IC.maya }, flagKeys:{ gt:"maya" },
+      story:"What is now Guatemala sits at the heart of Maya civilization for well over two thousand years before European contact, home to rival, politically fragmented kingdoms from the great lowland cities to the Postclassic highland states, never a single unified Guatemalan polity. No securely documented flag survives." },
+    { year:"1524", name:"Captaincy General of Guatemala", t:{ gt:IC.captaincy }, flagKeys:{ gt:"captaincy" },
+      story:"Pedro de Alvarado invades in 1524 and, after brutal campaigns against the Kaqchikel and K'iche', founds the seat of the Captaincy General of Guatemala, the colonial jurisdiction covering the whole isthmus. The Cross of Burgundy flies for three centuries of Spanish rule." },
+    { year:"1821", name:"Independence, then annexation to Mexico", t:{ gt:IC.mexico }, flagKeys:{ gt:"mexico" },
+      story:"The Captaincy General declares independence on 15 September 1821, then conservative elites vote to annex the new nation to Agustín de Iturbide's First Mexican Empire in January 1822. The Mexican tricolor flies briefly until Iturbide's own abdication in March 1823." },
+    { year:"1823", name:"Federal Republic of Central America", t:{ gt:IC.federal }, flagKeys:{ gt:"federal" },
+      story:"The five former provinces of the Captaincy General form the Federal Republic in 1823, with Guatemala City serving as federal capital for almost the whole of its life. The federation's blue-white-blue, with five volcanoes and a cap of liberty, becomes the direct ancestor of Guatemala's own later flag." },
+    { year:"1841", name:"Republic of Guatemala (post-federation)", t:{ gt:IC.postfed }, flagKeys:{ gt:"postfed" },
+      story:"The federation dissolves by 1841; Guatemala, already its dominant state, simply continues as a fully sovereign republic under conservative strongman Rafael Carrera, keeping the plain federal blue-white-blue stripped of its central emblem." },
+    { year:"1851", name:"Conservative Republic of Guatemala", t:{ gt:IC.conservative }, flagKeys:{ gt:"conservative" },
+      story:"Carrera's conservative government turns back toward Spanish tradition; a pro-Spanish faction reworks red and yellow into the hoist side of the blue bands in 1851, a deliberate rejection of the federation's liberal colors, reversed twenty years later." },
+    { year:"1871", name:"Liberal Republic of Guatemala", t:{ gt:IC.liberal }, flagKeys:{ gt:"liberal" },
+      story:"The Liberal Revolution of 1871 restores the blue-white-blue on 17 August 1871, rearranged as vertical stripes, with the resplendent quetzal appearing on the flag for the first time &mdash; a design that survives, essentially unchanged, for the rest of Guatemala's history." },
+    { year:"1968–present", name:"Republic of Guatemala (modern)", t:{ gt:IC.modern }, flagKeys:{ gt:"modern" },
+      story:"Decree No. 12 of 1968 pins down the flag and coat of arms in precise legal detail. The same vertical blue-white-blue with its quetzal-and-rifles arms flies through decades of civil war (1960&ndash;1996) and a fragile peace, unchanged since 1871 in everything but specification." }
+  ];
+
+  var IREGIONS = ["gt"];
+  var IREGION_NAMES = { gt:"Guatemala" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.gt; })[0];
+    iEraOwners.innerHTML = "<b>" + (INAMES[label] || "") + "</b>: whole territory";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
@@ -519,5 +704,6 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+})();
 </script>
 </body></html>
