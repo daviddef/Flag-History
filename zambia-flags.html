@@ -18,21 +18,21 @@
   :root {
     --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
     --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
-    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c; --sea: #b9d3da;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
       --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
-      --muted: #9a9280; --hair: #33393f;
+      --muted: #9a9280; --hair: #33393f; --sea: #17303a;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
     --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
-    --muted: #9a9280; --hair: #33393f;
+    --muted: #9a9280; --hair: #33393f; --sea: #17303a;
     color-scheme: dark;
   }
   * { box-sizing: border-box; }
@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -183,7 +221,36 @@
   <p class="lede">Zambia takes its name from the Zambezi River, the great waterway (and its Victoria Falls) that borders much of the country. Its path runs from the Lozi Kingdom of Barotseland, which secured a special protected status distinct from the rest of the territory under British rule, through Cecil Rhodes's chartered British South Africa Company, direct Crown administration as Northern Rhodesia, an unpopular decade inside a settler-dominated federation, and finally independence in 1964 under Kenneth Kaunda.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Zambia, from the Lozi Kingdom of Barotseland and other pre-colonial polities through British colonial rule to the modern republic. No interactive map on this page &mdash; deferred to a future phase of the atlas. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Zambia, from the Lozi Kingdom of Barotseland and other pre-colonial polities through British colonial rule to the modern republic. Barotseland's own special protected status was a treaty relationship inside the wider territory, not a separate internally governed piece of it with its own border ever drawn on a map &mdash; so the map below traces the whole country's own real border instead. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, six flags</h2>
+    <p class="imap-sub">Zambia's own real traced border &mdash; no internal partition to show, since Barotseland's special status under the Litunga was always a treaty relationship layered onto the wider territory, never a separately governed piece with its own drawn boundary. Press play, or drag the slider, to watch the flag change over the same shape.</p>
+    <div class="rule-box">
+      <b>This is a single-region page.</b> Unlike Hungary's Ottoman/Habsburg split or Yemen's North/South line, Zambia has no genuinely separate internal region with its own real border in this atlas's sense &mdash; the British South Africa Company, direct Crown rule, and the Central African Federation each governed the whole territory as one piece, Barotseland's special treaty status notwithstanding. What changes here is only which flag flew over all of it at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1830</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="380" height="320" fill="var(--sea)"/>
+        <path id="ireg-zm" class="ireg-fill" d="M326.59,53.03 L339.30,65.37 L346.14,88.83 L341.56,96.33 L336.14,118.74 L341.32,141.64 L332.84,151.27 L324.67,176.95 L338.83,184.11 L257.12,206.90 L259.67,226.57 L239.28,230.36 L223.95,241.37 L220.67,250.96 L211.03,253.13 L187.62,275.87 L172.70,293.76 L163.61,294.40 L154.87,291.22 L124.77,288.19 L119.93,286.12 L119.73,283.83 L109.10,277.60 L91.64,276.00 L69.59,282.29 L52.02,265.02 L33.86,242.40 L35.10,154.43 L91.16,154.78 L88.87,145.24 L92.88,134.89 L88.15,121.92 L91.21,108.51 L88.36,99.93 L97.65,100.62 L99.20,109.22 L111.82,108.55 L128.91,111.10 L137.91,123.65 L159.47,127.51 L175.94,118.78 L181.98,133.27 L202.61,137.13 L212.53,148.91 L223.59,164.13 L244.20,164.35 L241.95,134.54 L234.56,139.57 L215.73,128.81 L208.46,123.89 L211.79,96.14 L216.57,63.41 L210.55,51.22 L218.22,33.57 L225.44,30.27 L261.61,25.60 L272.21,28.41 L283.46,35.45 L294.19,40.08 L311.31,44.73 L326.59,53.03 Z"/>
+        <text class="ireg-label" id="ilbl-zm" x="190" y="160">ZAMBIA</text>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Lozi Kingdom of Barotseland</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (simplified from GeoJSON survey data) &mdash; no internal partition, per the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -412,6 +479,103 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    none:"#5c2a24", bsac:"#00247d", crown:"#00247d", federation:"#00247d", modern:"#198a00"
+  };
+  var INAMES = {
+    none:"No flag documented", bsac:"British South Africa Company rule", crown:"Northern Rhodesia (Crown protectorate)",
+    federation:"Federation of Rhodesia and Nyasaland", modern:"Republic of Zambia (independent)"
+  };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">REGALIA,</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>',
+    bsac: '<rect width="300" height="200" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="30" fill="#fbde4a"/>',
+    crown: '<rect width="300" height="200" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="32" fill="#fff" stroke="#6e6047" stroke-width="2"/><rect x="205" y="105" width="30" height="30" fill="#000"/>',
+    federation: '<rect width="300" height="200" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="32" fill="#fff" stroke="#6e6047" stroke-width="2"/>',
+    modern: '<rect width="300" height="200" fill="#198a00"/><rect x="200" width="100" height="200" fill="#198a00"/><rect x="200" width="26" height="200" fill="#de2010"/><rect x="226" width="26" height="200" fill="#000"/><rect x="252" width="26" height="200" fill="#de2010"/><path d="M245,60 l8,20 21,2 -16,14 5,21 -18,-11 -18,11 5,-21 -16,-14 21,-2 Z" fill="#e67e22"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1830–1891", name:"Lozi Kingdom of Barotseland (and neighbors)", t:{ zm:IC.none }, flagKeys:{ zm:"none" },
+      story:"The Lozi Kingdom, centered on the Zambezi floodplain, is the region's most organized pre-colonial state; the Bemba, Chewa, Ngoni, and others maintain their own chieftaincies elsewhere. No securely documented national flag survives from this era &mdash; royal authority was expressed through regalia rather than a fixed banner." },
+    { year:"1891–1924", name:"British South Africa Company rule", t:{ zm:IC.bsac }, flagKeys:{ zm:"bsac" },
+      story:"Cecil Rhodes's British South Africa Company extends mineral concessions and administrative control north of the Zambezi from 1890–91, a private chartered corporation exercising governmental authority over the whole territory, Barotseland's own treaty relationship with the Company notwithstanding." },
+    { year:"1924–1953", name:"Northern Rhodesia (Crown protectorate)", t:{ zm:IC.crown }, flagKeys:{ zm:"crown" },
+      story:"The British Crown takes over direct administration from the Company in 1924. The Litunga of Barotseland retains a distinct treaty relationship and internal autonomy under indirect rule, but the territory as a whole is governed as one Crown protectorate." },
+    { year:"1953–1964", name:"Federation of Rhodesia and Nyasaland", t:{ zm:IC.federation }, flagKeys:{ zm:"federation" },
+      story:"Britain joins Northern Rhodesia, Southern Rhodesia, and Nyasaland into the Central African Federation in 1953, a structure deeply unpopular among the African populations of all three territories. Sustained nationalist opposition contributes to its dissolution at the end of 1963." },
+    { year:"1964–present", name:"Republic of Zambia (independent)", t:{ zm:IC.modern }, flagKeys:{ zm:"modern" },
+      story:"Northern Rhodesia becomes independent as Zambia on 24 October 1964 under founding president Kenneth Kaunda. Barotseland's special protected status is formally absorbed into the unitary Zambian state around independence, a point of ongoing debate within the country since." }
+  ];
+
+  var IREGIONS = ["zm"];
+  var IREGION_NAMES = { zm:"Zambia" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    document.getElementById("ireg-zm").setAttribute("fill", era.t.zm);
+    var tcol = iTextColorFor(era.t.zm);
+    var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+    var lbl = document.getElementById("ilbl-zm");
+    lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo);
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.zm; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
