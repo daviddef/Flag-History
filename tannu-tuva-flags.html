@@ -164,6 +164,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -176,6 +214,40 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the Sayan Mountains region straddling today's Tuva Republic (Russia) and northwestern Mongolia, 1914&ndash;present, four political stages. Documentation for Tuvan state flags is thinner and less consistent than for better-recorded European states; specifics below are informed reconstructions drawing on the fullest available descriptions, not verified official specifications. Part of the atlas's Vanished States hub, alongside four other real sovereign states with no surviving successor &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One republic, one border</h2>
+    <p class="imap-sub">Tuva's own territory, shown as a single region &mdash; there is no genuinely separate internal split to draw here, only a single Sayan Mountains territory that changed hands whole. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>No real GeoJSON boundary exists for Tannu Tuva.</b> It never held an ISO country code and vanished as a state in 1944, so the shape below is an honestly-labeled schematic approximation of the territory's rough outline &mdash; not a traced or surveyed border.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1944&ndash;present</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 210" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="150" y="14">RUSSIA (SIBERIA)</text>
+          <text x="150" y="200">MONGOLIA</text>
+        </g>
+        <path id="ireg-tuva" class="ireg-fill" d="M62,44 L118,27 L165,22 L220,42 L258,88 L245,132 L228,150 L172,176 L112,168 L68,148 L42,108 L38,72 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-tuva" x="150" y="102">TANNU TUVA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Tuva Republic (Russia)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Simplified/schematic shape, not a traced or surveyed border &mdash; see the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -344,6 +416,96 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = {
+    vassal: "#6b5c4a", tar: "#c9a13c", soviet: "#8c2f6b", russia: "#7a5a9a"
+  };
+  var INAMES = {
+    vassal: "Qing / Russian suzerainty (no distinct flag)", tar: "Tuvan People's Republic",
+    soviet: "Tuvan People's Republic (Sovietized)", russia: "USSR / Russian Federation"
+  };
+  var IFLAGS = {
+    vassal: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
+    tar: '<rect width="300" height="200" fill="#1a3a6b"/><rect x="0" y="0" width="110" height="80" fill="#f9d616"/><text x="55" y="50" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#1a3a6b">TAR</text>',
+    soviet: '<rect width="300" height="200" fill="#c8102e"/><rect x="0" y="0" width="130" height="90" fill="#1a3a6b"/><path d="M40,45 h50 M65,20 v50" stroke="#f9d616" stroke-width="7"/><path d="M50,58 l15,-20 15,20 Z" fill="#f9d616"/><circle cx="65" cy="30" r="7" fill="#f9d616"/>',
+    russia: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#0039a6"/><rect y="133.3" width="300" height="66.7" fill="#d52b1e"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"Before 1921", name:"Under Qing and Russian suzerainty", t:{ tuva:IC.vassal }, flagKeys:{ tuva:"vassal" },
+      story:"The Uryankhai region is a loosely governed dependency &mdash; part of Qing China's Outer Mongolian administration for over two centuries, then a Tsarist Russian protectorate (the Uryankhaisky Krai) from 1914. No distinct Tuvan territorial flag survives from this period." },
+    { year:"1921", name:"Tuvan People's Republic founded", t:{ tuva:IC.tar }, flagKeys:{ tuva:"tar" },
+      story:"Local revolutionaries, backed by the Red Army, declare the Tannu Tuva People's Republic on 14 August 1921 &mdash; nominally sovereign, recognized only by the USSR (1924) and Mongolia (1926), and entirely dependent on Soviet backing throughout." },
+    { year:"1943", name:"Sovietized final flag", t:{ tuva:IC.soviet }, flagKeys:{ tuva:"soviet" },
+      story:"By 1943 the ruling party under Salchak Toka has collectivized herds and suppressed Buddhist lamaseries on the Soviet model; the republic readopts a flag closer to Soviet republic design conventions shortly before petitioning for outright absorption." },
+    { year:"1944–present", name:"Tuva Republic (Russia)", t:{ tuva:IC.russia }, flagKeys:{ tuva:"russia" },
+      story:"In August 1944 the republic's own Little Khural petitions to join the USSR &mdash; widely understood to have been engineered by Moscow &mdash; and Tuva is absorbed as an autonomous oblast, later republic, of Russia. It remains a federal subject of the Russian Federation today, with no path back to separate statehood." }
+  ];
+
+  var IREGIONS = ["tuva"];
+  var IREGION_NAMES = { tuva:"Tannu Tuva" };
+  var IADJ = [];
+
+  function iGroupsFor(t) { return [["tuva"]]; }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+    });
+
+    iEraOwners.innerHTML = "<b>" + INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t.tuva; })[0]] + "</b>";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
