@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 220px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,40 @@
   <p class="lede">The crescent moon has marked Maldivian sovereignty in one form or another since at least the early twentieth century, migrating from a black Islamic-inscription panel to its present green field as the Sultanate modernized toward independence; the surrounding red field, by contrast, is the oldest continuously used element in this lineage, tracing back to a plain red Sultanate banner with no fixed origin date.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the Maldive Islands, c. 3rd century BCE&ndash;present, nine political entities. Sri Lankan (Ceylonese) and Dutch influence over the Sultanate's external affairs from roughly the 17th through 19th centuries never amounted to direct rule and left no separate flag of its own, so it is noted within the restored-Sultanate entry rather than broken out as its own period. The 1887&ndash;1965 British protectorate is treated as a genuine nuance, not a colony: the Sultan and his government retained full internal self-rule throughout, with Britain controlling only defense and foreign affairs. No internal governing split exists within the Maldives' own borders at any point in its history, so unlike some other pages in this atlas, this one carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the Maldive Islands, c. 3rd century BCE&ndash;present, nine political entities. Sri Lankan (Ceylonese) and Dutch influence over the Sultanate's external affairs from roughly the 17th through 19th centuries never amounted to direct rule and left no separate flag of its own, so it is noted within the restored-Sultanate entry rather than broken out as its own period. The 1887&ndash;1965 British protectorate is treated as a genuine nuance, not a colony: the Sultan and his government retained full internal self-rule throughout, with Britain controlling only defense and foreign affairs. No internal governing split exists within the Maldives' own borders at any point in its history. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One atoll chain, nine eras</h2>
+    <p class="imap-sub">The Maldives' own real islands, traced whole &mdash; roughly 1,200 coral islands strung across some 820&nbsp;km of the Indian Ocean, shown here as the ~65 largest by area. Press play, or drag the slider, to watch who held the chain, era to era.</p>
+    <div class="rule-box">
+      <b>No internal split, and no land neighbors at all.</b> The Maldives has never been divided into separately-governed pieces, and as a mid-ocean archipelago it borders no other country by land. What changes here is only who, if anyone, held the whole chain at once &mdash; almost always the Sultanate itself, with only two brief foreign interruptions in over 850 years.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 3rd c. BCE</span>
+        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="100" y="18" style="opacity:.6">INDIAN OCEAN</text>
+        </g>
+        <path id="ireg-mv" class="ireg-fill" d="M109.3,140.5 L109.5,140.6 L109.5,140.9 L109.4,141.3 L109.1,142.2 L108.8,142.5 L108.3,142.8 L107.6,142.7 L106.0,142.1 L106.1,142.0 L108.3,142.1 L108.6,141.9 L109.0,140.8 L109.3,140.5 Z M98.3,67.8 L98.4,67.8 L98.5,68.0 L98.1,68.9 L97.9,69.2 L97.5,69.5 L97.6,69.1 L98.1,68.3 L98.3,67.8 Z M96.5,278.8 L96.9,279.3 L97.1,280.0 L96.9,280.0 L96.4,279.0 L96.3,278.4 L96.7,278.3 L96.7,278.5 L96.6,278.5 L96.5,278.8 Z M103.8,192.1 L104.2,192.8 L104.2,193.2 L104.1,193.6 L103.8,192.1 Z M99.8,64.0 L99.8,64.4 L99.6,65.0 L99.5,64.5 L99.7,64.0 L99.8,64.0 Z M100.8,278.5 L100.7,279.1 L100.5,278.9 L100.5,278.6 L100.6,278.4 L100.8,278.2 L100.8,278.5 Z M92.5,134.9 L92.5,135.3 L92.2,135.3 L92.1,135.1 L92.5,134.9 Z M109.9,201.4 L110.4,201.4 L109.8,201.8 L109.9,201.4 Z M111.7,106.9 L111.9,107.3 L111.8,107.8 L111.6,107.0 L111.7,106.9 Z M100.6,279.6 L100.2,280.1 L100.3,279.5 L100.4,279.4 L100.6,279.6 Z M106.1,269.8 L106.4,270.1 L106.4,270.4 L106.2,270.1 L106.1,269.8 Z M98.9,66.5 L99.4,66.6 L99.0,66.8 L98.9,66.7 L98.9,66.5 Z M110.7,110.8 L110.4,111.0 L110.0,110.9 L110.3,110.8 L110.7,110.8 Z M99.4,62.5 L99.3,63.1 L99.2,63.1 L99.2,62.6 L99.4,62.5 Z M109.5,206.5 L109.4,207.1 L109.2,207.6 L109.4,206.7 L109.5,206.5 Z M96.8,70.0 L96.6,70.3 L96.5,70.3 L96.5,70.1 L96.8,70.0 Z M105.2,210.1 L105.2,210.4 L105.0,210.4 L105.0,210.3 L105.2,210.1 Z M96.5,255.2 L96.7,255.4 L96.7,255.6 L96.6,255.5 L96.5,255.2 Z M99.6,280.9 L99.3,281.2 L99.2,281.2 L99.3,281.0 L99.6,280.9 Z M108.5,209.0 L108.0,209.5 L107.9,209.4 L108.1,209.3 L108.5,209.0 Z M104.9,91.1 L105.0,91.5 L104.7,91.3 L104.9,91.1 Z M85.0,155.2 L85.1,155.4 L85.0,155.6 L84.9,155.5 L85.0,155.2 Z M91.7,160.2 L91.2,160.5 L91.5,160.2 L91.7,160.2 Z M93.1,121.8 L92.9,122.2 L93.0,121.9 L93.1,121.8 Z M106.7,209.5 L107.0,209.5 L106.8,209.7 L106.7,209.7 L106.7,209.5 Z M104.6,96.1 L104.7,96.3 L104.6,96.4 L104.5,96.3 L104.6,96.1 Z M100.6,83.4 L100.7,83.6 L100.6,83.7 L100.5,83.6 L100.6,83.4 Z M104.2,210.5 L104.5,210.6 L104.2,210.8 L104.2,210.5 Z M103.0,108.3 L103.0,108.4 L103.2,108.4 L103.1,108.4 L102.8,108.5 L102.8,108.4 L103.0,108.3 Z M106.6,94.8 L106.1,95.1 L106.4,94.8 L106.6,94.8 Z M99.4,80.9 L99.5,81.1 L99.5,81.2 L99.3,81.1 L99.4,80.9 Z M102.8,204.8 L103.0,204.9 L102.8,205.0 L102.7,205.0 L102.8,204.8 Z M90.1,184.7 L90.1,185.0 L89.9,184.9 L90.1,184.7 Z M91.8,91.1 L91.7,91.5 L91.6,91.3 L91.8,91.1 Z M99.7,254.8 L99.9,254.9 L99.8,255.1 L99.7,254.8 Z M108.2,144.4 L108.2,144.7 L108.1,144.5 L108.2,144.4 Z M91.3,59.0 L91.2,59.3 L91.1,59.1 L91.3,59.0 Z M104.9,97.8 L104.6,98.4 L104.7,98.2 L104.9,97.8 Z M94.4,183.4 L94.7,183.3 L94.5,183.5 L94.4,183.4 Z M93.9,98.5 L93.8,98.6 L93.7,98.6 L93.7,98.5 L93.9,98.5 Z M111.9,136.8 L111.9,137.0 L111.8,137.0 L111.8,136.9 L111.9,136.8 Z M85.3,147.3 L85.4,147.5 L85.3,147.5 L85.2,147.4 L85.3,147.3 Z M88.9,161.4 L89.0,161.5 L88.9,161.6 L88.8,161.5 L88.9,161.4 Z M93.1,172.8 L93.2,173.0 L93.1,173.0 L93.0,173.0 L93.1,172.8 Z M94.6,168.8 L94.8,168.9 L94.6,169.0 L94.6,168.9 L94.6,168.8 Z M90.9,185.1 L91.1,185.1 L91.0,185.2 L90.9,185.2 L90.9,185.1 Z M106.0,92.8 L106.0,93.0 L105.9,93.0 L105.8,92.9 L106.0,92.8 Z M92.1,158.3 L92.2,158.4 L92.1,158.5 L92.0,158.4 L92.1,158.3 Z M108.4,250.6 L108.2,250.8 L108.2,250.6 L108.4,250.6 Z M104.6,253.6 L104.3,253.7 L104.3,253.5 L104.6,253.6 Z M92.2,153.9 L92.3,154.1 L92.2,154.1 L92.1,154.1 L92.2,153.9 Z M92.2,152.1 L92.3,152.2 L92.1,152.3 L92.1,152.2 L92.2,152.1 Z M93.2,60.9 L93.2,61.3 L93.1,61.1 L93.2,60.9 Z M91.6,195.2 L91.7,195.5 L91.5,195.4 L91.6,195.2 Z M92.4,155.0 L92.5,155.2 L92.4,155.2 L92.3,155.2 L92.4,155.0 Z M106.5,119.7 L106.2,119.7 L106.3,119.5 L106.5,119.7 Z M97.0,198.8 L97.1,198.9 L97.2,199.1 L97.0,199.1 L97.0,198.8 Z M92.7,94.1 L92.8,94.5 L92.7,94.4 L92.7,94.1 Z M93.1,95.6 L93.0,95.8 L92.9,95.7 L93.1,95.6 Z M95.1,115.0 L95.2,115.2 L95.1,115.2 L95.0,115.2 L95.1,115.0 Z M103.8,182.3 L103.8,182.5 L103.7,182.4 L103.8,182.3 Z M91.3,90.8 L91.3,90.9 L91.2,90.9 L91.2,90.8 L91.3,90.8 Z M98.4,281.2 L98.7,281.4 L98.5,281.4 L98.4,281.2 Z M94.9,170.1 L95.1,170.2 L94.9,170.3 L94.9,170.1 Z M95.7,71.2 L95.5,71.4 L95.5,71.2 L95.7,71.2 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-mv" x="100" y="325" style="font-size:10px">MALDIVES</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Early Buddhist-era Maldivian kingdom(s)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastlines for the ~65 largest islands and atolls by area; hundreds of the smallest islets are omitted for legibility. No internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -534,6 +605,120 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    buddhist:"#5c2a24", earlysultanate:"#d21034", portuguese:"#f4efe1", restored:"#d21034",
+    protectorate:"#d21034", firstrepublic:"#d21034", restoredsultanate2:"#d21034", indepsultanate:"#d21034", modern:"#d21034"
+  };
+  var INAMES = {
+    buddhist:"Early Buddhist-era Maldivian kingdom(s)", earlysultanate:"Maldive Sultanate (early, Islamic era)",
+    portuguese:"Portuguese occupation of Mal&eacute;", restored:"Restored Maldive Sultanate",
+    protectorate:"Sultanate of the Maldive Islands (British protectorate)", firstrepublic:"First Republic of the Maldive Islands",
+    restoredsultanate2:"Sultanate restored (British protectorate continues)", indepsultanate:"Sultanate of the Maldive Islands (independent)",
+    modern:"Republic of Maldives (Second Republic)"
+  };
+  var IFLAGS = {
+    buddhist: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    earlysultanate: '<rect width="300" height="200" fill="#d21034"/>',
+    portuguese: '<rect width="300" height="200" fill="#f4efe1"/><rect x="140" width="20" height="200" fill="#0a5c36"/><rect y="90" width="300" height="20" fill="#0a5c36"/>',
+    restored: '<rect width="300" height="200" fill="#d21034"/>',
+    protectorate: '<rect width="300" height="200" fill="#d21034"/><rect x="50" y="12" width="200" height="176" fill="#f4efe1"/><rect x="58" y="20" width="184" height="160" fill="#1a1a1a"/><text x="150" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#f4efe1">&#1575;&#1604;&#1604;&#1607;</text>',
+    firstrepublic: '<rect width="300" height="200" fill="#d21034"/><rect x="50" y="12" width="200" height="176" fill="#f4efe1"/><rect x="58" y="20" width="184" height="160" fill="#1a1a1a"/><circle cx="146" cy="100" r="30" fill="#f4efe1"/><circle cx="160" cy="100" r="26" fill="#1a1a1a"/>',
+    restoredsultanate2: '<rect width="300" height="200" fill="#d21034"/><rect x="50" y="12" width="200" height="176" fill="#f4efe1"/><rect x="58" y="20" width="184" height="160" fill="#1a1a1a"/><circle cx="146" cy="100" r="30" fill="#f4efe1"/><circle cx="160" cy="100" r="26" fill="#1a1a1a"/>',
+    indepsultanate: '<rect width="300" height="200" fill="#d21034"/><rect x="54" y="16" width="192" height="168" fill="#007e3a"/><circle cx="146" cy="100" r="38" fill="#f4efe1"/><circle cx="164" cy="100" r="33" fill="#007e3a"/>',
+    modern: '<rect width="300" height="200" fill="#d21034"/><rect x="54" y="16" width="192" height="168" fill="#007e3a"/><circle cx="146" cy="100" r="38" fill="#f4efe1"/><circle cx="164" cy="100" r="33" fill="#007e3a"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 3rd c. BCE – 1153 CE", name:"Early Buddhist-era Maldivian kingdom(s)", t:{ mv:IC.buddhist }, flagKeys:{ mv:"buddhist" },
+      story:"Settled from around the 5th century BCE, the islands sit astride ancient Indian Ocean trade routes linking Arabia, East Africa, and South and Southeast Asia. Buddhism arrives by around the 3rd century BCE and becomes the settled religion of a line of local kings; no securely documented flag or banner survives this long era." },
+    { year:"1153", name:"Maldive Sultanate (early, Islamic era)", t:{ mv:IC.earlysultanate }, flagKeys:{ mv:"earlysultanate" },
+      story:"Maldivian tradition dates the ruling king's conversion to Islam to 1153 CE; he takes the title Sultan, founding the Maldive Sultanate. No flag specification survives from this long span; a plain red field is the earliest banner consistently associated with the throne in later sources, shown here as an informed reconstruction." },
+    { year:"1558", name:"Portuguese occupation of Malé", t:{ mv:IC.portuguese }, flagKeys:{ mv:"portuguese" },
+      story:"A Portuguese force seizes Malé in 1558, ruling the capital through a garrison and a local proxy administration for fifteen years &mdash; deeply resented, and never securely extended over the outer atolls. No distinct Maldivian flag survives; shown here is the Portuguese Order of Christ ensign flown by ships and forts of the era." },
+    { year:"1573", name:"Restored Maldive Sultanate", t:{ mv:IC.restored }, flagKeys:{ mv:"restored" },
+      story:"Muhammad Thakurufaanu expels the Portuguese garrison in 1573, founding a new ruling dynasty still celebrated each year as National Day. The plain red field that marked the Sultanate before the Portuguese interlude returns as the national banner, with no further modification recorded for three centuries." },
+    { year:"1887", name:"Sultanate of the Maldive Islands (British protectorate)", t:{ mv:IC.protectorate }, flagKeys:{ mv:"protectorate" },
+      story:"In December 1887 the Sultan signs an agreement placing the Maldives under British protection, administered loosely through the governor of Ceylon &mdash; internal government stays firmly in Maldivian hands throughout. Around 1903 a black panel bearing the Islamic Shahada in white Arabic script is added to the historic red field." },
+    { year:"1953", name:"First Republic of the Maldive Islands", t:{ mv:IC.firstrepublic }, flagKeys:{ mv:"firstrepublic" },
+      story:"Reformer Muhammad Amin Didi has the Sultanate abolished and is elected the country's first president on 1 January 1953. His government introduces social reforms, but food shortages and backlash bring a coup within the year. The white crescent moon is generally dated to this period, replacing the older Arabic calligraphy." },
+    { year:"1954", name:"Sultanate restored (British protectorate continues)", t:{ mv:IC.restoredsultanate2 }, flagKeys:{ mv:"restoredsultanate2" },
+      story:"The 1953 republic collapses within months amid a coup and popular unrest, and the Sultanate is restored in March 1954. Britain's protectorate arrangement continues underneath &mdash; internal government stays firmly Maldivian, with London responsible only for defense and external affairs until 1965." },
+    { year:"1965", name:"Sultanate of the Maldive Islands (independent)", t:{ mv:IC.indepsultanate }, flagKeys:{ mv:"indepsultanate" },
+      story:"Britain grants full independence on 26 July 1965, ending the protectorate. Sultan Muhammad Fareed Didi reigns as head of state, with Ibrahim Nasir as prime minister holding most executive power. The black inscription panel is replaced by a plain green rectangle, giving the flag essentially its present form." },
+    { year:"1968–present", name:"Republic of Maldives (Second Republic)", t:{ mv:IC.modern }, flagKeys:{ mv:"modern" },
+      story:"After a March 1968 referendum abolishes the restored Sultanate, Ibrahim Nasir becomes the first president of the Second Republic that November. Red stands for the blood of those who defended the nation, green for peace and prosperity, and the white crescent for Islam, the state religion &mdash; unchanged since 1965." }
+  ];
+
+  var IREGIONS = ["mv"];
+  var IREGION_NAMES = { mv:"Maldives" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    iEraOwners.innerHTML = "<b>" + era.name + "</b>: whole archipelago";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
