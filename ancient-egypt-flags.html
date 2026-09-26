@@ -164,6 +164,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -176,6 +213,36 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the Nile Valley civilization from unification (c. 3100 BCE) to Roman annexation (30 BCE), told as one continuous political lineage through its kingdoms, intermediate periods, and the Ptolemaic dynasty. This page hands off to <a href="egypt-flags.html">egypt-flags.html</a> for Egypt's later history as a Roman/Byzantine province, an Islamic caliphate territory, and eventually a modern nation-state. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+    <div class="imap-section">
+    <h2>The Nile Valley, one simplified outline</h2>
+    <p class="imap-sub">A single simplified Nile-valley/Delta outline (the modern Egyptian border, standing in for a territory whose exact ancient extent shifted constantly with each dynasty's fortunes) &mdash; not a survey of Old, Middle, and New Kingdom borders, which varied too much era to era for one small honest map. Press play, or drag the slider, to move through the page's own ten periods.</p>
+    <div class="rule-box">
+      <b>Ancient Egypt's territorial extent genuinely varied a great deal &mdash; from a fragmented, contested Nile Valley in the Intermediate Periods to a New Kingdom empire reaching into Nubia and the Levant.</b> Rather than invent a false year-by-year survey of exact borders this atlas cannot responsibly source, this map uses one simplified modern-Egypt outline throughout and lets the era name, story, and flag chip below carry the real distinction between a unified, fragmented, or occupied state.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 3100</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+        <path id="ireg-eg0" class="ireg-fill" d="M231.66,80.14 L226.12,89.03 L221.87,105.72 L216.51,117.23 L211.91,121.09 L205.33,113.96 L196.43,104.09 L182.35,72.41 L180.33,74.42 L188.50,97.74 L200.61,119.95 L215.52,154.38 L222.81,166.39 L229.14,178.87 L246.84,203.34 L242.92,207.19 L243.56,221.56 L266.54,241.39 L270.00,245.92 L191.76,245.92 L115.22,245.92 L35.92,245.92 L35.92,164.54 L35.92,85.95 L30.00,68.15 L35.08,54.50 L32.03,45.05 L39.17,34.45 L65.41,34.08 L84.40,39.92 L103.98,46.45 L113.12,49.90 L128.31,42.89 L136.43,36.56 L153.82,34.74 L167.85,37.53 L173.22,48.49 L177.80,41.27 L193.61,46.49 L208.99,47.74 L218.69,42.18 L231.66,80.14 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-eg0" x="150" y="150">EGYPT</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Early Dynastic Period</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Simplified modern-border outline standing in for the ancient Nile Valley and Delta &mdash; not a survey of shifting dynastic extents. See the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -544,6 +611,119 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = { early:"#a9762f", old:"#c9a13c", fip:"#6e6047", middle:"#204b5c", sip:"#6e6047", new:"#9c3b28", tip:"#6e6047", late:"#7a5a9a", ptolemaic:"#3c6a7c", roman:"#5c2a24" };
+  var INAMES = { early:"Early Dynastic Period", old:"Old Kingdom", fip:"First Intermediate Period", middle:"Middle Kingdom", sip:"Second Intermediate Period", new:"New Kingdom", tip:"Third Intermediate Period", late:"Late Period", ptolemaic:"Ptolemaic Kingdom", roman:"End of native/Hellenistic statehood" };
+  var IFLAGS = {
+    early: "<rect width=\"300\" height=\"200\" fill=\"#7c2e1f\"/>\n              <rect x=\"110\" y=\"40\" width=\"80\" height=\"120\" rx=\"4\" fill=\"#f4efe1\" stroke=\"#c9a13c\" stroke-width=\"3\"/>\n              <rect x=\"118\" y=\"48\" width=\"64\" height=\"18\" fill=\"#7c2e1f\"/>\n              <rect x=\"118\" y=\"72\" width=\"64\" height=\"18\" fill=\"#7c2e1f\"/>\n              <path d=\"M150,96 q-14,0 -14,14 q0,10 14,16 q14,-6 14,-16 q0,-14 -14,-14 Z\" fill=\"#c9a13c\"/>\n              <path d=\"M136,150 l28,0 -6,10 -16,0 Z\" fill=\"#c9a13c\"/>",
+    old: "<rect width=\"300\" height=\"200\" fill=\"#c9a13c\"/>\n              <path d=\"M124,50 l52,0 0,90 -26,35 -26,-35 Z\" fill=\"#f4efe1\" stroke=\"#a9762f\" stroke-width=\"3\"/>\n              <rect x=\"60\" y=\"150\" width=\"180\" height=\"10\" fill=\"#7c2e1f\"/>",
+    fip: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">REGIONAL</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">GOVERNORS</text>",
+    middle: "<rect width=\"300\" height=\"200\" fill=\"#e8c766\"/>\n              <path d=\"M150,40 a28,28 0 1,1 -0.1,0 Z\" fill=\"#f4efe1\" stroke=\"#a9762f\" stroke-width=\"3\"/>\n              <path d=\"M124,64 l52,0 0,86 -26,30 -26,-30 Z\" fill=\"#c9302a\"/>",
+    sip: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">HYKSOS</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">RULE (NORTH)</text>",
+    new: "<rect width=\"300\" height=\"200\" fill=\"#1a3a6b\"/>\n              <circle cx=\"150\" cy=\"90\" r=\"34\" fill=\"#e8c766\"/>\n              <path d=\"M150,56 q34,10 34,34 q0,24 -34,34 q-34,-10 -34,-34 q0,-24 34,-34 Z\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"3\"/>\n              <path d=\"M110,150 q40,26 80,0\" stroke=\"#e8c766\" stroke-width=\"8\" fill=\"none\"/>\n              <path d=\"M96,148 l14,22 M204,148 l-14,22\" stroke=\"#e8c766\" stroke-width=\"6\"/>",
+    tip: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">FRAGMENTED</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DYNASTIES</text>",
+    late: "<rect width=\"300\" height=\"200\" fill=\"#7c2e1f\"/>\n              <path d=\"M150,36 a28,28 0 1,1 -0.1,0 Z\" fill=\"#f4efe1\" stroke=\"#c9a13c\" stroke-width=\"3\"/>\n              <path d=\"M124,60 l52,0 0,90 -26,30 -26,-30 Z\" fill=\"#c9a13c\"/>\n              <path d=\"M150,64 q-24,20 -6,44\" stroke=\"#7c2e1f\" stroke-width=\"6\" fill=\"none\"/>",
+    ptolemaic: "<rect width=\"300\" height=\"200\" fill=\"#1a3a6b\"/>\n              <path d=\"M150,40 q34,0 34,34 l0,50 q0,30 -34,50 q-34,-20 -34,-50 l0,-50 q0,-34 34,-34 Z\" fill=\"#e8c766\" stroke=\"#c9a13c\" stroke-width=\"2\"/>\n              <circle cx=\"150\" cy=\"76\" r=\"15\" fill=\"#1a3a6b\"/>\n              <path d=\"M120,150 q30,20 60,0\" stroke=\"#e8c766\" stroke-width=\"6\" fill=\"none\"/>",
+    roman: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">ROMAN</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">ANNEXATION</text>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 3100", name:"Early Dynastic Period", t:{ eg:IC.early }, flagKeys:{ eg:"early" },
+      story:"Narmer (or Menes) unifies Upper and Lower Egypt around 3100 BCE, founding the First Dynasty and the world's first territorial state along the Nile &mdash; the origin of the dual Red Crown / White Crown kingship this atlas' own flag entries track." },
+    { year:"c. 2686", name:"Old Kingdom", t:{ eg:IC.old }, flagKeys:{ eg:"old" },
+      story:"The Old Kingdom (Dynasties 3&ndash;6) is Egypt's first great age of centralized pharaonic power, building the Giza pyramids under Khufu, Khafre, and Menkaure &mdash; the territory shown here is essentially the full historic extent, Nile Valley plus Delta." },
+    { year:"c. 2181", name:"First Intermediate Period", t:{ eg:IC.fip }, flagKeys:{ eg:"fip" },
+      story:"Central authority collapses after the Old Kingdom's end, c. 2181 BCE, fragmenting into competing local power centers, chiefly rival dynasties based at Herakleopolis in the north and Thebes in the south, until Theban reunification around 2055 BCE." },
+    { year:"c. 2055", name:"Middle Kingdom", t:{ eg:IC.middle }, flagKeys:{ eg:"middle" },
+      story:"Mentuhotep II reunifies Egypt from Thebes, opening the Middle Kingdom's own classical age of literature, monumental building, and Nubian expansion under the 12th Dynasty, before renewed fragmentation and the Hyksos' Delta incursions end it." },
+    { year:"c. 1650", name:"Second Intermediate Period", t:{ eg:IC.sip }, flagKeys:{ eg:"sip" },
+      story:"Central power again fragments: the Hyksos, a Semitic-speaking dynasty of West Asian origin, rule the eastern Delta from Avaris while Theban and other local rulers hold the south &mdash; the Second Intermediate Period, until Ahmose I expels the Hyksos around 1550 BCE." },
+    { year:"c. 1550", name:"New Kingdom", t:{ eg:IC.new }, flagKeys:{ eg:"new" },
+      story:"Ahmose I founds the 18th Dynasty and the New Kingdom, Egypt's imperial zenith under rulers like Hatshepsut, Akhenaten, Tutankhamun, and Ramesses II, projecting power deep into Nubia and the Levant before slow decline sets in after 1200 BCE." },
+    { year:"c. 1077", name:"Third Intermediate Period", t:{ eg:IC.tip }, flagKeys:{ eg:"tip" },
+      story:"Centralized authority weakens again after Ramesses XI: Egypt splits between a nominal pharaoh at Tanis in the Delta and a powerful line of Amun priests governing Thebes and the south, punctuated by Libyan- and Nubian-origin dynasties (including the 25th, Kushite, Dynasty)." },
+    { year:"c. 664", name:"Late Period", t:{ eg:IC.late }, flagKeys:{ eg:"late" },
+      story:"Assyrian invasion (671&ndash;663 BCE), a Saite (26th Dynasty) revival, and two periods of Persian Achaemenid rule (as its 27th and 31st Dynasties) alternate with brief native restorations, ending with Alexander the Great's conquest in 332 BCE." },
+    { year:"305", name:"Ptolemaic Kingdom", t:{ eg:IC.ptolemaic }, flagKeys:{ eg:"ptolemaic" },
+      story:"Alexander's general Ptolemy I Soter founds a Greek-speaking pharaonic dynasty ruling from Alexandria; the Ptolemaic Kingdom lasts nearly three centuries, ending with Cleopatra VII, the dynasty's final and most famous ruler." },
+    { year:"30 BCE", name:"End of native/Hellenistic statehood", t:{ eg:IC.roman }, flagKeys:{ eg:"roman" },
+      story:"Rome annexes Egypt as Augustus's personal province after Cleopatra VII's death in 30 BCE, ending independent Egyptian statehood outright &mdash; later Roman/Byzantine, Islamic, Ottoman, and modern Egyptian rule are covered on this atlas' own separate egypt-flags.html page." }
+  ];
+
+  var IREGIONS = ["eg0"];
+  var IREGION_NAMES = { eg0:"Egypt" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      var baseId = "eg";
+      var el = document.getElementById("ireg-" + id);
+      if (el) el.setAttribute("fill", era.t["eg"]);
+      var tcol = iTextColorFor(era.t["eg"]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      for (var i = 0; i < 4; i++) {
+        var lbl = document.getElementById("ilbl-" + id + (i === 0 ? "" : (i+1)));
+        if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t["eg"]; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory shown";
+
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKeys["eg"]) + '<div class="ic-label">Egypt</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
