@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,45 @@
   <p class="lede">Independence came bundled with two neighbors, not alone: Simón Bolívar's campaigns of the late 1810s created Gran Colombia, a single republic spanning modern Colombia, Venezuela, Ecuador, and briefly Panama, before regional rivalries pulled it apart within a decade of its founding. Colombia inherited the "New Granada" core and, later, would lose its own Panamanian province to a US-backed 1903 secession tied to canal politics.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the territory of present-day Colombia, c. 1450&ndash;present, six political entities. Panama is treated as Colombian territory through 1903 and as its own separate country after; this page does not attempt Panama's own flag lineage past that split. No internal governing partition exists within Colombia's own modern borders after independence, so this page carries no partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the territory of present-day Colombia, c. 1450&ndash;present, six political entities. Panama is treated as Colombian territory through 1903 and as its own separate country after; this page does not attempt Panama's own flag lineage past that split. No internal governing partition exists within Colombia's own modern borders after independence, so the map below traces the whole country rather than an internal partition. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+
+  <div class="imap-section">
+    <h2>One republic, five eras</h2>
+    <p class="imap-sub">Colombia&rsquo;s own real border, traced whole &mdash; the country&rsquo;s modern territory has never been split between separately governed pieces since independence. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, not a partition map.</b> Colombia&rsquo;s own borders shifted at the edges &mdash; Panama seceded in 1903, Gran Colombia itself split into three countries in 1830 &mdash; but the territory that is Colombia today was never itself divided between rival governments. What changes here is who held it, and how large the union around it was, not how Colombia&rsquo;s own core was cut up.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1450 &amp;ndash; 1550</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 218.2 290.0" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="55" y="20">PANAMA</text>
+          <text x="185" y="60">VENEZUELA</text>
+          <text x="60" y="268">ECUADOR</text>
+          <text x="14" y="130">PACIFIC</text>
+          <text x="190" y="245">BRAZIL</text>
+        </g>
+        <path id="ireg-co" class="ireg-fill" d="M71.2,210.6 L56.9,201.8 L52.5,204.2 L39.3,202.1 L35.5,195.4 L17.1,186.8 L15.0,181.9 L20.8,180.8 L20.1,173.0 L23.7,167.4 L31.5,166.3 L43.9,148.4 L38.2,144.7 L41.1,135.7 L37.6,121.5 L41.0,117.4 L38.5,104.3 L32.2,96.0 L34.2,88.4 L39.2,89.6 L42.2,84.9 L38.6,75.8 L40.4,73.5 L48.5,74.0 L60.1,63.2 L66.5,61.5 L69.5,43.2 L78.4,36.0 L88.2,35.7 L89.5,32.5 L101.6,33.8 L127.4,15.0 L132.9,16.0 L137.0,20.0 L134.0,25.3 L124.0,27.9 L109.5,45.9 L103.3,66.0 L111.4,67.1 L116.8,77.6 L116.7,92.9 L124.2,99.6 L153.2,100.1 L164.2,113.5 L190.5,110.9 L196.0,113.5 L189.7,127.1 L188.5,138.3 L196.6,156.7 L188.7,164.4 L198.5,173.3 L203.2,188.8 L200.3,190.7 L192.9,176.6 L187.8,181.9 L157.5,181.6 L157.7,191.3 L166.8,192.9 L166.3,198.9 L154.4,199.8 L154.4,211.1 L161.2,216.8 L163.7,225.7 L156.3,275.0 L148.6,266.7 L143.9,266.4 L153.9,250.6 L142.0,243.3 L132.7,244.6 L127.1,241.9 L118.5,246.0 L107.0,244.1 L97.8,227.8 L75.3,209.1 L71.2,210.6 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-co" x="0" y="4">COLOMBIA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (johan/world.geo.json) &mdash; no internal partition, per the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -387,6 +463,106 @@
   </footer>
 
 </div>
+
+
+<script>
+(function () {
+  var IC = { muisca:"#6b5c4a", viceroyalty:"#6e4a2f", grancolombia:"#c9a13c", newgranada:"#8a6a2f", modern:"#a9762f" };
+  var INAMES = { muisca:"Muisca Confederation", viceroyalty:"Viceroyalty of New Granada (Spanish colonial rule)", grancolombia:"Gran Colombia", newgranada:"Republic of New Granada", modern:"Republic of Colombia (modern)" };
+  var IFLAGS = {
+    muisca: "<rect width=\"300\" height=\"200\" fill=\"#c9a13c\"/><circle cx=\"150\" cy=\"100\" r=\"46\" fill=\"#8a5a2a\"/><circle cx=\"150\" cy=\"100\" r=\"30\" fill=\"#c9a13c\"/>",
+    viceroyalty: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#a9762f\" stroke-width=\"10\"/><path d=\"M0,0 L300,0 L300,50 L0,50 Z\" fill=\"#a4302a\"/><circle cx=\"150\" cy=\"120\" r=\"40\" fill=\"#c9a13c\"/>",
+    grancolombia: "<rect width=\"300\" height=\"66.7\" fill=\"#fcd116\"/><rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#003893\"/><rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#ce1126\"/><path d=\"M150,80 l7,20 21,2 -17,14 6,20 -17,-13 -17,13 6,-20 -17,-14 21,-2 Z\" fill=\"#f4efe1\"/>",
+    newgranada: "<rect width=\"300\" height=\"66.7\" fill=\"#fcd116\"/><rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#003893\"/><rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#ce1126\"/>",
+    modern: "<rect width=\"300\" height=\"100\" fill=\"#fcd116\"/><rect y=\"100\" width=\"300\" height=\"50\" fill=\"#003893\"/><rect y=\"150\" width=\"300\" height=\"50\" fill=\"#ce1126\"/>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1450 &ndash; 1550", name:"Muisca Confederation", t:{ co:IC.muisca }, flagKeys:{ co:"muisca" },
+      story:"On the high plateau around modern Bogot&aacute; and Tunja, the Muisca organize into a loose confederation of chiefdoms (zipa and zaque) by the 15th century, renowned for goldwork whose ritual offerings at Lake Guatavita feed the later Spanish El Dorado legend. Spanish forces conquer the Muisca heartland in 1537&ndash;38. No flag in the European sense is documented; the gold disc shown is a symbolic stand-in for their metalwork, not an attested banner." },
+    { year:"1550 &ndash; 1819", name:"Viceroyalty of New Granada (Spanish colonial rule)", t:{ co:IC.viceroyalty }, flagKeys:{ co:"viceroyalty" },
+      story:"Spain organizes the conquered northern Andes first under the Viceroyalty of Peru, then as its own Viceroyalty of New Granada (1717/1739), governing what is now Colombia, Venezuela, Ecuador, and Panama from Bogot&aacute;. Independence movements gather through the 1800s&ndash;10s, culminating in Sim&oacute;n Bol&iacute;var&rsquo;s 1819 victory at Boyac&aacute;. Spain flew no single fixed colonial flag; the cross of Burgundy and viceregal sun shown here are schematic, not a specific New Granada banner." },
+    { year:"1819 &ndash; 1830", name:"Gran Colombia", t:{ co:IC.grancolombia }, flagKeys:{ co:"grancolombia" },
+      story:"Bol&iacute;var&rsquo;s 1819 victory at Boyac&aacute; secures independence, and the Congress of Angostura proclaims Gran Colombia, uniting New Granada, Venezuela, Ecuador, and Panama into one republic under Bol&iacute;var. Regional caudillos resist Bogot&aacute;&rsquo;s central authority, and Venezuela and Ecuador secede by 1830, the year Bol&iacute;var dies. The yellow-blue-red tricolor, devised by Francisco de Miranda, becomes the shared ancestor of Colombia&rsquo;s, Venezuela&rsquo;s, and Ecuador&rsquo;s later flags." },
+    { year:"1830 &ndash; 1861", name:"Republic of New Granada", t:{ co:IC.newgranada }, flagKeys:{ co:"newgranada" },
+      story:"Gran Colombia dissolves in 1830&ndash;31; the remaining core, roughly the old Viceroyalty of New Granada plus Panama, reorganizes as the Republic of New Granada under Francisco de Paula Santander. The new state cycles through unitary rule and, from 1858, the Granadine Confederation, retaining the tricolor &mdash; still in equal bands &mdash; as a shared inheritance from Bol&iacute;var&rsquo;s project." },
+    { year:"1861 &ndash; present", name:"Republic of Colombia (modern)", t:{ co:IC.modern }, flagKeys:{ co:"modern" },
+      story:"After decades of federal and unitary experiments, the country settles on &ldquo;Republic of Colombia&rdquo; and a fixed flag under President Tom&aacute;s Cipriano de Mosquera in 1861. The republic survives the Thousand Days&rsquo; War, the 1903 loss of Panama, and, in recent decades, a long internal armed conflict substantially wound down by the 2016 FARC peace accord. The tricolor is kept, its yellow band now doubled in width &mdash; a distinction unique to Colombia among the old Gran Colombian states." }
+  ];
+
+  var IREGIONS = ["co"];
+  var IREGION_NAMES = { co:"Colombia" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) { lbl2.setAttribute("fill", tcol); lbl2.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.co; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
