@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,43 @@
   <p class="lede">This is the atlas's most politically sensitive page. Every date and event below is drawn from the well-documented historical record, and the account stops at the 1949 armistice agreements &mdash; it deliberately does not extend into, or characterize, the Israeli-Palestinian conflict as it has continued since. Where the record touches contested history, it sticks to dates, names, and documents rather than taking a side.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the land of present-day Israel, antiquity&ndash;present, seven political entities. No interactive map or internal-region view is included here &mdash; that layer is deferred project-wide to a later phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the land of present-day Israel, antiquity&ndash;present, seven political entities. The map below traces Israel's own whole-country boundary, era to era &mdash; there is no internal partition to show here, the same single-region treatment used elsewhere in this atlas where a territory has no genuinely separate internal region to carve out honestly. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, seven eras</h2>
+    <p class="imap-sub">Israel's own real border, traced whole &mdash; the same single-region treatment used elsewhere in this atlas for a territory with no genuinely separate internal region to carve out honestly. Press play, or drag the slider, to move through the same seven eras as the timeline below.</p>
+    <div class="rule-box">
+      <b>No internal partition is being characterized here.</b> The path traced is the outer boundary recorded for "Israel" in a standard public open geographic boundary dataset, shown for illustrative context only. It does not characterize, and should not be read as characterizing, the status of any disputed territory &mdash; see this page's own timeline text above and below for the neutral, source-based account of each era, including its more sensitive periods.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">antiquity</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 100 205" xmlns="http://www.w3.org/2000/svg">
+        <g style="pointer-events:none" class="context-label">
+          <text x="16" y="97">MED.</text>
+          <text x="16" y="106">SEA</text>
+          <text x="86" y="60">JORDAN</text>
+          <text x="24" y="185">EGYPT</text>
+        </g>
+        <path id="ireg-is" class="ireg-fill" d="M68.5,35.7 L61.3,51.0 L46.2,44.3 L37.5,76.7 L48.0,82.2 L37.3,88.9 L35.5,101.8 L55.1,95.1 L56.1,114.1 L35.3,192.0 L8.0,108.3 L20.1,92.2 L17.3,89.5 L28.3,66.7 L36.7,29.9 L42.7,17.6 L57.7,17.2 L61.5,8.6 L72.7,8.0 L73.3,27.9 L68.5,35.7 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-is" x="45" y="69" style="font-size:8px">ISRAEL</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Ancient &amp; biblical Israel through Roman Judea</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Boundary as recorded in a standard public open geographic boundary dataset, shown for illustrative context only &mdash; not a statement on the status of any disputed territory.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -481,5 +555,117 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+</script>
+
+<script>
+(function () {
+  var IC = {
+    ancient:"#6e6047", early_islamic:"#7c6a2e", crusader:"#8a1f2b", mamluk:"#a9762f",
+    ottoman:"#a4302a", mandate:"#5c3a8a", modern:"#0038b8"
+  };
+  var INAMES = {
+    ancient:"Ancient & biblical Israel through Roman Judea", early_islamic:"Early Islamic rule / Fatimid Palestine",
+    crusader:"Kingdom of Jerusalem (Crusader)", mamluk:"Mamluk Sultanate", ottoman:"Ottoman Empire",
+    mandate:"British Mandate for Palestine", modern:"State of Israel"
+  };
+  var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    early_islamic: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#c9b98a" stroke-width="3"/>',
+    crusader: '<rect width="300" height="200" fill="#f4efe1"/><g fill="#c9a13c"><rect x="132" y="55" width="36" height="90"/><rect x="105" y="82" width="90" height="36"/><rect x="118" y="38" width="18" height="18"/><rect x="118" y="144" width="18" height="18"/><rect x="180" y="66" width="18" height="18"/><rect x="180" y="116" width="18" height="18"/></g>',
+    mamluk: '<rect width="300" height="200" fill="#a9762f"/><path d="M150,58 q-32,10 -38,42 q18,-8 24,6 q-16,6 -8,22 q18,-12 20,8 q2,-20 20,-8 q8,-16 -8,-22 q6,-14 24,-6 q-6,-32 -38,-42 Z" fill="#241f14"/>',
+    ottoman: '<rect width="300" height="200" fill="#a4302a"/><path d="M120,70 A38,38 0 1 0 172,102 A28,28 0 1 1 120,70 Z" fill="#f4efe1"/><path d="M200,84 l5,15 16,0 -13,10 5,15 -13,-9 -13,9 5,-15 -13,-10 16,0 Z" fill="#f4efe1"/>',
+    mandate: '<rect width="300" height="200" fill="#0b1f6b"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="26"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#a4302a" stroke-width="10"/><rect x="125" y="0" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#a4302a"/><rect y="87" width="300" height="26" fill="#a4302a"/>',
+    modern: '<rect width="300" height="200" fill="#f4efe1"/><rect y="22" width="300" height="18" fill="#0038b8"/><rect y="160" width="300" height="18" fill="#0038b8"/><g stroke="#0038b8" stroke-width="6" fill="none"><path d="M150,68 L112,132 L188,132 Z"/><path d="M150,128 L112,64 L188,64 Z"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"antiquity", name:"Ancient & biblical Israel through Roman Judea", t:{ is:IC.ancient }, flagKeys:{ is:"ancient" },
+      story:"This span covers the Israelite and Judahite kingdoms of the biblical period, the First and Second Temple periods, Roman-era Judea, the Jewish revolts of 66&ndash;73 CE and 132&ndash;135 CE, and the centuries of Jewish diaspora that followed, alongside continued Jewish presence in the land. No securely documented flag survives from this span &mdash; national flags as a concept postdate it entirely, so it is shown honestly blank." },
+    { year:"636", name:"Early Islamic rule / Fatimid Palestine", t:{ is:IC.early_islamic }, flagKeys:{ is:"early_islamic" },
+      story:"Following the Rashidun conquest of the 630s, the region was organized as Jund Filastin under the Umayyad and then Abbasid caliphates, with Fatimid Egypt taking control in the 10th century until the First Crusade in 1099. No single fixed flag is documented across this span; plain white, the color most consistently associated with Umayyad banners, is shown here as representative of its earlier part, with Fatimid rule later associated with green." },
+    { year:"1099", name:"Kingdom of Jerusalem (Crusader)", t:{ is:IC.crusader }, flagKeys:{ is:"crusader" },
+      story:"The First Crusade took Jerusalem in July 1099, and Godfrey of Bouillon became the Kingdom of Jerusalem's first ruler. Saladin's forces retook Jerusalem itself in 1187, reducing the kingdom to a shrinking coastal strip; its mainland presence ended with the fall of Acre to the Mamluks in 1291. The kingdom's well-documented heraldic banner was the gold-on-white \"Jerusalem cross.\"" },
+    { year:"1291", name:"Mamluk Sultanate", t:{ is:IC.mamluk }, flagKeys:{ is:"mamluk" },
+      story:"The Mamluks, ruling from Cairo, took Acre in 1291, ending Crusader presence in the region, and administered it through provincial governors until the Ottoman conquest of 1516&ndash;17. Mamluk heraldry used gold and other emblematic blazons tied to individual sultans and officers rather than one fixed state flag; the design shown is an informed reconstruction, not a documented single national banner." },
+    { year:"1517", name:"Ottoman Empire", t:{ is:IC.ottoman }, flagKeys:{ is:"ottoman" },
+      story:"Ottoman conquest in 1516&ndash;17 absorbed the region into the wider provincial system of Ottoman Syria, without a separate administrative unit corresponding to modern Israel's borders. Four centuries of Ottoman rule followed, ending when British forces took the region during World War I in 1917. The Ottoman state flag &mdash; red field, white crescent and star &mdash; flew across all Ottoman provincial territory." },
+    { year:"1917", name:"British Mandate for Palestine", t:{ is:IC.mandate }, flagKeys:{ is:"mandate" },
+      story:"British forces took the region from Ottoman control in 1917, the same year of the Balfour Declaration. The League of Nations Mandate for Palestine was formalized at the 1920 San Remo Conference and administered from Jerusalem until 14 May 1948. The British Union Flag flew as the mandatory power's flag throughout this period." },
+    { year:"1948–present", name:"State of Israel", t:{ is:IC.modern }, flagKeys:{ is:"modern" },
+      story:"The British Mandate ended on 14 May 1948, and that day David Ben-Gurion declared the establishment of the State of Israel in Tel Aviv; war with neighboring states followed, ending in armistice agreements negotiated on Rhodes through 1949. The flag adopted in 1948 &mdash; a white field, two blue stripes, and a central blue Star of David &mdash; is based on the tallit and the flag the Zionist movement had used since the late 19th century." }
+  ];
+
+  var IREGIONS = ["is"];
+  var IREGION_NAMES = { is:"Israel" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function isRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) { lbl2.setAttribute("fill", tcol); lbl2.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.is; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { isRender(parseInt(iSlider.value, 10)); });
+  isRender(0);
+
+  var isPlaying = false, isPlayTimer = null;
+  var isPlayBtn = document.getElementById("iPlayBtn");
+  function isStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { isStopPlay(); return; }
+    iSlider.value = next;
+    isRender(next);
+  }
+  function isStartPlay() {
+    isPlaying = true;
+    isPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; isRender(0); }
+    isPlayTimer = setInterval(isStepPlay, 1700);
+  }
+  function isStopPlay() {
+    isPlaying = false;
+    isPlayBtn.innerHTML = "&#9654;";
+    clearInterval(isPlayTimer);
+  }
+  isPlayBtn.addEventListener("click", function () { isPlaying ? isStopPlay() : isStartPlay(); });
+})();
 </script>
 </body></html>
