@@ -9,7 +9,7 @@
   .record-region-grid a:hover { border-color: var(--brick); color: var(--brick); }
 </style></head><body>
 <title>Flags of Morocco</title>
-<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Morocco, from the early Islamic dynasties through four centuries of Alaouite rule to the modern kingdom.">
+<meta name="description" content="A chronological, paint-ready atlas of every flag that flew over Morocco, from the early Islamic dynasties of the Maghreb through the Alaouite sultanate, the divided French-and-Spanish protectorate, to the modern kingdom.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,45 @@
   <p class="lede">Morocco's modern flag &mdash; a red field with a green five-pointed star, the Seal of Solomon &mdash; dates only to 1915, added to an older plain-red Moroccan banner under Sultan Yusef during the French protectorate. It survived the protectorate era intact and became independent Morocco's own flag in 1956, unchanged since.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Morocco, c. 788&ndash;present, four political entities. No interactive map on this page &mdash; that layer is deferred project-wide to a future phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Morocco, c. 788&ndash;present, four political entities. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Two protectorates, one sultanate, 1912&ndash;1956</h2>
+    <p class="imap-sub">Morocco's own real border, split into the two zones the 1912 Treaty of Fez actually created: France's much larger zone across most of the country, and Spain's smaller zone along the northern Mediterranean coast and Tangier hinterland. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>The sultan's own sovereignty, nominally, never split &mdash; only who actually administered each zone did.</b> Simplified to the two main zones for legibility: Spain's separate, much smaller Ifni and Tarfaya zones in the far south, and the international administration of Tangier itself, aren't drawn as their own regions here. The border line below only solidifies for 1912&ndash;1956; before and after, the whole country is governed as one.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 788</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="170" y="30">ALGERIA</text>
+          <text x="30" y="190">W. SAHARA</text>
+          <text x="60" y="12">SPAIN</text>
+        </g>
+        <path id="ireg-spanish" class="ireg-fill" d="M97.4,57.6 L104.8,48.7 L116.4,42.7 L125.0,37.2 L132.7,23.6 L136.4,15.5 L144.9,15.5 L151.9,21.1 L162.9,20.2 L174.9,23.1 L179.9,23.3 L184.3,31.7 L185.0,39.7 L188.9,53.7 L192.0,56.5 L189.9,61.6 L174.7,63.8 L169.5,68.7 L150,66 L125,62 L108,58 Z"/>
+        <path id="ireg-french" class="ireg-fill" d="M97.4,57.6 L108,58 L125,62 L150,66 L169.5,68.7 L162.8,69.8 L162.3,79.6 L148.8,84.8 L144.3,91.4 L134.9,95.0 L123.3,97.0 L104.6,106.7 L104.7,122.3 L102.9,122.3 L103.2,129.4 L96.1,129.8 L92.3,132.8 L87.1,132.8 L82.9,131.1 L73.1,132.5 L69.4,142.8 L65.8,143.7 L60.3,160.4 L44.2,174.6 L40.4,192.8 L35.7,198.7 L34.3,203.5 L8.2,204.5 L8.0,204.5 L8.5,198.4 L13.0,194.8 L16.8,187.9 L16.0,183.5 L20.0,174.2 L26.5,165.8 L30.4,163.7 L33.4,156.0 L33.7,148.9 L37.9,140.8 L45.6,136.0 L52.9,122.5 L53.1,122.3 L58.9,117.3 L69.7,115.8 L78.8,106.8 L84.6,103.3 L94.3,92.3 L91.4,75.9 L95.8,64.5 L97.4,57.6 Z"/>
+        <path class="iborder-line" id="ib-spanish-french" d="M169.5,68.7 L150,66 L125,62 L108,58 L97.4,57.6"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-spanish" x="150" y="42">SPANISH ZONE</text>
+          <text class="ireg-label" id="ilbl-french" x="90" y="120">FRENCH ZONE</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Early Islamic dynasties</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Schematic internal partition on a real traced border &mdash; the French/Spanish dividing line is approximate, not a surveyed frontier, and Ifni, Tarfaya, and Tangier are simplified into the nearer of the two zones. See the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -351,6 +427,130 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    dynasties: "#6b5c4a", alaouite: "#a9762f", french: "#1a2f6b", spanish: "#c1272d", modern: "#006233"
+  };
+  var INAMES = {
+    dynasties: "Early Islamic dynasties (no single flag)", alaouite: "Alaouite Sultanate (independent)",
+    french: "French Protectorate zone", spanish: "Spanish Protectorate zone", modern: "Kingdom of Morocco (independent)"
+  };
+  var IFLAGS = {
+    dynasties: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO SINGLE</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">FLAG</text>',
+    alaouite: '<rect width="300" height="200" fill="#c1272d"/>',
+    french: '<rect width="100" height="200" fill="#0055a4"/><rect x="100" width="100" height="200" fill="#ffffff"/><rect x="200" width="100" height="200" fill="#ef4135"/>',
+    spanish: '<rect width="300" height="200" fill="#c1272d"/><rect y="50" width="300" height="100" fill="#f4c542"/>',
+    modern: '<rect width="300" height="200" fill="#c1272d"/><path fill="#006233" d="M150,80 l9.4,28.9 30.4,0 -24.6,17.9 9.4,28.9 -24.6,-17.9 -24.6,17.9 9.4,-28.9 -24.6,-17.9 30.4,0 Z"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 788", name:"Early Islamic dynasties", t:{ spanish:IC.dynasties, french:IC.dynasties }, flagKeys:{ spanish:"dynasties", french:"dynasties" },
+      story:"The Idrisid dynasty founds the first independent Islamic state in the far Maghreb around 788, followed by the Almoravids, Almohads, Marinids, and Saadis &mdash; nine centuries of successive independent dynasties, never incorporated into the Ottoman Empire." },
+    { year:"1666", name:"Alaouite Sultanate (independent)", t:{ spanish:IC.alaouite, french:IC.alaouite }, flagKeys:{ spanish:"alaouite", french:"alaouite" },
+      story:"The Alaouite dynasty formally takes the Moroccan throne under Sultan Moulay Rashid in 1666, ruling the whole country as one fully independent sultanate for the next two and a half centuries." },
+    { year:"1912", name:"French & Spanish Protectorates", t:{ spanish:IC.spanish, french:IC.french }, flagKeys:{ spanish:"spanish", french:"french" },
+      story:"The March 1912 Treaty of Fez cedes control over most of the country to France, while Spain administers a northern strip and the southern Ifni/Tarfaya zones. The sultan remains nominal sovereign throughout, with French and Spanish residents-general holding real power." },
+    { year:"1956–present", name:"Kingdom of Morocco (independent)", t:{ spanish:IC.modern, french:IC.modern }, flagKeys:{ spanish:"modern", french:"modern" },
+      story:"France and Spain end their protectorates in March and April 1956, restoring full sovereignty to Sultan Mohammed V and reuniting the whole country under the Alaouite crown once more." }
+  ];
+
+  var IREGIONS = ["spanish","french"];
+  var IREGION_NAMES = { spanish:"Spanish zone (north)", french:"French zone (rest of country)" };
+  var IADJ = [["spanish","french"]];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.4");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
