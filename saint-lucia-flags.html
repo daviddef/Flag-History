@@ -184,7 +184,41 @@
   <p class="lede">That back-and-forth finally ended in 1814, when the island settled for good as a British colony, and it stayed that way until independence in 1979. Four flags cover the whole span: a long stretch of sustained Kalinago control that outlasted most other islands' indigenous resistance, the messy Anglo-French contest itself, final British rule, and the modern flag's stylized Pitons.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the island of Saint Lucia, c. 1500&ndash;present, four entries, no interactive map. This atlas normally maps internal partitions or multi-power divisions with a dedicated visualization; Saint Lucia's history doesn't split that way &mdash; it's a single island that repeatedly changed hands as a whole, not a territory divided between powers at any one time. Rather than inventing false precision with a card (and an exact date) for each of the roughly fourteen flips between Britain and France, the third entry below names that pattern honestly as one bridging span. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the island of Saint Lucia, c. 1500&ndash;present, four entries. Saint Lucia's history doesn't split into internal regions &mdash; it's a single island that repeatedly changed hands as a whole, not a territory divided between powers at any one time. Rather than inventing false precision with a card (and an exact date) for each of the roughly fourteen flips between Britain and France, the third entry below names that pattern honestly as one bridging span. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One island, fought over fourteen times</h2>
+    <p class="imap-sub">Saint Lucia's own real coastline, traced whole &mdash; whoever held the island held all of it; Britain and France never split it between them at any single moment, only traded the whole thing back and forth. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page.</b> No island in the Caribbean changed hands more often &mdash; roughly fourteen captures and recaptures between Britain and France across a century and a half &mdash; but every one of those captures was of the whole island at once. There's no genuinely separate internal region to carve out honestly, only a single territory whose owner kept changing.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1500</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="60" y="30">CARIBBEAN SEA</text>
+          <text x="330" y="270">ATLANTIC OCEAN</text>
+        </g>
+        <path id="ireg-lc" class="ireg-fill" d="M212.4,15.2 L204.9,25.2 L196.5,26.0 L203.2,28.5 L208.5,38.0 L204.7,40.4 L204.4,35.4 L196.8,44.0 L191.2,43.3 L191.6,65.4 L180.5,74.6 L171.6,72.9 L180.6,81.9 L171.5,78.5 L166.2,82.3 L167.5,99.2 L159.1,97.0 L155.2,108.4 L160.1,111.8 L153.9,113.2 L145.0,129.3 L136.5,132.6 L135.3,142.6 L129.9,146.8 L123.0,166.0 L122.0,180.6 L134.4,187.5 L129.6,200.4 L133.2,207.2 L123.2,217.5 L130.6,231.3 L155.4,254.1 L177.0,256.9 L182.3,266.7 L202.7,271.8 L207.0,277.0 L202.1,283.9 L209.4,286.0 L214.5,283.2 L210.2,275.9 L223.6,252.0 L220.8,249.7 L224.4,245.2 L232.3,250.4 L237.4,247.4 L238.7,237.2 L243.7,233.4 L244.0,213.7 L250.2,211.5 L241.9,205.5 L249.5,205.0 L245.8,200.7 L251.2,198.6 L252.1,187.0 L248.4,184.1 L256.0,181.0 L250.7,182.0 L253.2,175.6 L242.6,174.7 L245.7,169.0 L250.6,170.2 L254.7,161.0 L247.7,152.3 L251.8,146.5 L247.2,143.6 L256.1,130.9 L254.5,113.5 L258.0,106.0 L254.9,102.0 L257.6,96.8 L252.3,94.1 L249.2,84.0 L248.5,69.0 L244.3,66.8 L251.0,52.8 L241.1,42.8 L232.1,46.8 L233.6,34.1 L228.7,35.6 L221.5,29.4 L228.6,25.5 L228.7,19.2 L212.4,15.2 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-lc" x="195" y="155">SAINT LUCIA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Kalinago Saint Lucia</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced island coastline, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -361,12 +395,108 @@
   </div>
 
   <footer>
-    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches, and the French and British colonial-era flags shown here, are informed reconstructions, not official specifications. No map for this page &mdash; Saint Lucia's history is one island repeatedly changing hands as a whole, not an internal partition, so unlike some other pages in this atlas it carries no dedicated map visualization.
+    Compiled from Wikipedia, Flags of the World (fotw.info / crwflags.com), and Britannica. Colors are close historical approximations for painting reference; pre-19th-century swatches, and the French and British colonial-era flags shown here, are informed reconstructions, not official specifications. Map is schematic and not surveyed.
   </footer>
 
 </div>
 
 <script>
+(function () {
+  var IC = {
+    kalinago:"#6e6551", contested:"#c14f1d", british:"#1f7a7a", independent:"#c9962c"
+  };
+  var INAMES = {
+    kalinago:"Kalinago Saint Lucia", contested:"Britain and France's fourteen changes of hands",
+    british:"British Saint Lucia (final rule)", independent:"Independent Saint Lucia"
+  };
+  var IFLAGS = {
+    kalinago: '<rect width="300" height="200" fill="#6e6551"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#fdf8ec">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#fdf8ec">DOCUMENTED</text>',
+    contested: '<rect width="300" height="200" fill="#fdf8ec"/><rect width="300" height="200" fill="none" stroke="#ddd2b0" stroke-width="2"/><text x="150" y="128" font-size="76" text-anchor="middle" fill="#c9962c" font-family="serif">&#9818;</text>',
+    british: '<rect width="300" height="200" fill="#0d2a5c"/><rect width="150" height="100" fill="#0d2a5c"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#fdf8ec" stroke-width="14"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c14f1d" stroke-width="6"/><rect y="42" width="150" height="16" fill="#fdf8ec"/><rect x="67" width="16" height="100" fill="#fdf8ec"/><rect y="46" width="150" height="8" fill="#c14f1d"/><rect x="71" width="8" height="100" fill="#c14f1d"/><polygon points="230,120 208,168 252,168" fill="#f6c645" stroke="#fdf8ec" stroke-width="3"/>',
+    independent: '<rect width="300" height="200" fill="#4a9fd8"/><polygon points="150,42 96,172 204,172" fill="#fdf8ec"/><polygon points="150,52 106,166 194,166" fill="#0a0a0a"/><polygon points="150,92 122,168 178,168" fill="#f6c645"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1500", name:"Kalinago Saint Lucia", t:{ lc:IC.kalinago }, flagKeys:{ lc:"kalinago" },
+      story:"Saint Lucia's indigenous Kalinago population resisted European settlement especially fiercely and successfully. Spanish, English, and Dutch attempts in the late 1500s and early 1600s were repeatedly destroyed or abandoned, leaving the island under effective Kalinago control for over a century and a half after first contact." },
+    { year:"1660", name:"Britain and France's fourteen changes of hands", t:{ lc:IC.contested }, flagKeys:{ lc:"contested" },
+      story:"Both France and England began serious settlement attempts from the 1650s&ndash;60s. What followed was roughly fourteen separate captures and recaptures by British and French forces across a century and a half, as the great powers' wars in Europe repeatedly spilled over into fights for this one island and its harbor at Castries." },
+    { year:"1814", name:"British Saint Lucia (final rule)", t:{ lc:IC.british }, flagKeys:{ lc:"british" },
+      story:"The 1814 Treaty of Paris, closing the Napoleonic Wars, confirms Saint Lucia as British for good. A sugar-plantation slave economy follows, with emancipation coming in 1834 (full freedom in 1838), then a shift toward banana cultivation as sugar declines." },
+    { year:"1979–present", name:"Independent Saint Lucia", t:{ lc:IC.independent }, flagKeys:{ lc:"independent" },
+      story:"Saint Lucia gains full independence from Britain on 22 February 1979, having already carried its flag as an internally self-governing colony since 1967. A large gold triangle in front of a black triangle forms a stylized image of the Pitons, the island's twin volcanic peaks near Soufri&egrave;re." }
+  ];
+
+  var IREGIONS = ["lc"];
+  var IREGION_NAMES = { lc:"Saint Lucia" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.lc; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole island";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
@@ -378,5 +508,6 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+})();
 </script>
 </body></html>
