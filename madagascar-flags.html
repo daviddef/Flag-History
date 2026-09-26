@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 400px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,40 @@
   <p class="lede">Madagascar's flag, adopted just ahead of full independence in 1960, keeps the old Merina Kingdom's own red and white in a field alongside a newer green.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the island of Madagascar, c. 500&ndash;present, four political entities. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the island of Madagascar, c. 500&ndash;present, four political entities. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One island, four eras</h2>
+    <p class="imap-sub">Madagascar's own real coastline, traced whole &mdash; an island with no land borders at all. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <div class="rule-box">
+      <b>This is another one-piece page.</b> Even the precolonial era shown here as "fragmented" was never a fixed set of separately-governed zones with lasting borders of their own &mdash; the island's numerous peoples and kingdoms shifted too fluidly for an honest internal partition. What changes is only who, if anyone, held the whole island at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 500</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="99" y="137">MOZAMBIQUE</text>
+        </g>
+        <path id="ireg-mg" class="ireg-fill" d="M211.3,96.6 L213.4,100.2 L215.4,105.7 L216.7,115.9 L218.7,119.8 L217.9,123.8 L216.5,126.3 L213.8,121.4 L212.3,123.8 L213.9,130.1 L213.1,133.6 L211.0,135.6 L210.5,142.7 L198.5,180.0 L195.4,191.7 L191.8,201.5 L185.4,203.4 L178.4,207.0 L167.5,201.8 L165.3,197.4 L164.8,190.0 L162.0,183.3 L161.3,177.2 L162.7,171.1 L166.4,169.7 L166.4,166.9 L170.2,160.5 L170.9,155.2 L169.0,151.2 L167.5,145.9 L166.9,138.1 L169.7,133.4 L170.8,128.1 L174.7,127.8 L182.1,124.5 L185.6,124.4 L190.1,119.6 L196.7,114.5 L199.1,110.2 L198.0,106.6 L201.4,107.7 L205.8,101.8 L205.9,96.8 L208.5,93.0 L211.3,96.6 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-mg" x="189" y="156">MADAGASCAR</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Early settlement &amp; pre-unification kingdoms</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -360,6 +431,102 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    early:"#5c2a24", merina:"#a4302a", french:"#1a3a6b", modern:"#1e7a4a"
+  };
+  var INAMES = {
+    early:"Early settlement &amp; pre-unification kingdoms", merina:"Kingdom of Madagascar (Merina, island-wide)",
+    french:"French Madagascar", modern:"Malagasy Republic / Republic of Madagascar"
+  };
+  var IFLAGS = {
+    early: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    merina: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#a4302a" stroke-width="10"/><circle cx="150" cy="100" r="42" fill="#a4302a"/><path d="M150,68 l8,22 24,3 -18,16 5,24 -19,-12 -19,12 5,-24 -18,-16 24,-3 Z" fill="#f4efe1"/>',
+    french: '<rect width="100" height="200" fill="#1a3a6b"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#cf142b"/><circle cx="150" cy="100" r="26" fill="#a9762f" stroke="#7a4a1f" stroke-width="2"/>',
+    modern: '<rect width="100" height="200" fill="#f4efe1"/><rect x="100" width="200" height="100" fill="#a4302a"/><rect x="100" y="100" width="200" height="100" fill="#1e7a4a"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 500", name:"Early settlement &amp; pre-unification kingdoms", t:{ mg:IC.early }, flagKeys:{ mg:"early" },
+      story:"Madagascar's first settlers arrive by outrigger canoe from the Indonesian archipelago roughly 1,500&ndash;2,000 years ago &mdash; a genuinely Austronesian origin, unlike any other population on the African continent. Numerous distinct peoples and kingdoms develop with no single central authority until the Merina Kingdom's rise from the late 18th century; no securely documented unified flag survives." },
+    { year:"c. 1810", name:"Kingdom of Madagascar (Merina, island-wide)", t:{ mg:IC.merina }, flagKeys:{ mg:"merina" },
+      story:"King Radama I completes the Merina Kingdom's conquest and unification of most of Madagascar by the 1820s, ruling from Antananarivo. A line of queens and kings governs through the 19th century &mdash; red and white are the historically attested Merina royal colors, carried into a stylized reconstruction here &mdash; until Queen Ranavalona III is deposed when France invades in 1895." },
+    { year:"1896", name:"French Madagascar", t:{ mg:IC.french }, flagKeys:{ mg:"french" },
+      story:"France formally annexes the kingdom as a colony in 1896&ndash;97, exiling the last monarch to Algeria and governing the whole island directly for the first time in its history. The French tricolor flies as the colonial power's own flag, typically alongside a colonial badge, until growing autonomy in the 1950s leads to self-governing republic status in 1958." },
+    { year:"1958–present", name:"Malagasy Republic / Republic of Madagascar", t:{ mg:IC.modern }, flagKeys:{ mg:"modern" },
+      story:"Madagascar becomes an autonomous republic within the French Community in 1958, adopting its own flag, and gains full independence on 26 June 1960 under President Philibert Tsiranana. White and red echo the old Merina Kingdom's royal colors; green represents the coastal peoples and the hope of the newly independent nation." }
+  ];
+
+  var IREGIONS = ["mg"];
+  var IREGION_NAMES = { mg:"Madagascar" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.mg; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole island";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
