@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,42 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day South Sudan, Ottoman-Egyptian era&ndash;present, five political entries. The country's own internal civil war since 2013 is noted briefly in the final entry rather than given a separate one, since the page's core scope is the flag lineage through the 2011 independence moment. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Five eras, one real border</h2>
+    <p class="imap-sub">South Sudan's own present-day border, traced whole and used retrospectively &mdash; the territory's own recorded history doesn't split into two further sub-regions of its own; what changes is only who held it. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This page doesn't split internally.</b> The region's defining split &mdash; south versus north within a unified Sudan &mdash; is between this territory and the rest of Sudan, not inside it, so it belongs on the map as a change of ruler, not an internal partition. See <a href="sudan-flags.html">Sudan's own page</a> for the northern side of that same story.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">before c. 1821</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="330" y="60">ETHIOPIA</text>
+          <text x="200" y="18">SUDAN</text>
+          <text x="60" y="140">C.A.R.</text>
+          <text x="180" y="280">UGANDA / KENYA</text>
+        </g>
+        <path id="ireg-ss" class="ireg-fill" d="M312.27,105.22 L312.59,127.24 L308.41,135.86 L293.56,136.56 L284.04,152.64 L301.21,154.67 L315.39,168.43 L320.29,179.72 L333.07,186.27 L349.60,217.00 L330.64,235.61 L313.43,252.47 L296.23,265.46 L276.55,265.39 L254.03,272.00 L236.24,265.69 L224.72,273.39 L200.10,254.62 L193.45,242.56 L177.88,248.54 L164.94,246.68 L157.45,251.42 L144.89,248.00 L127.95,224.68 L123.45,215.73 L102.54,204.56 L95.48,187.61 L83.82,175.40 L65.01,160.69 L64.75,151.51 L49.43,140.10 L30.40,129.07 L38.99,125.99 L48.59,120.66 L55.80,95.45 L63.48,82.36 L83.65,78.48 L88.45,86.24 L102.86,102.72 L110.54,105.15 L120.63,100.30 L140.80,101.27 L144.64,107.09 L172.49,107.09 L173.45,101.27 L187.86,95.94 L190.74,87.69 L201.31,81.88 L224.84,98.36 L239.24,95.45 L253.17,75.09 L268.54,59.58 L266.14,42.61 L259.41,34.37 L276.22,32.91 L278.14,26.61 L291.11,28.55 L287.75,49.40 L291.11,69.76 L305.51,80.91 L308.87,90.60 L308.39,104.66 L312.27,105.22 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-ss" x="190" y="180">SOUTH SUDAN</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Stateless Nilotic peoples</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (South Sudan's present-day extent, used retrospectively) &mdash; no internal partition; see the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -401,6 +474,76 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { fragmented:"#6b5c4a", colonial:"#7a4a1f", civilwar:"#5a5a55", sovereign:"#1e7a4a" };
+  var IFLAGS = {
+    stateless: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    mahdist: '<rect width="300" height="200" fill="#1e7a4a"/><rect width="300" height="200" fill="none" stroke="#f4efe1" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#f4efe1">MAHDIST STATE /</text><text x="150" y="116" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#f4efe1">OTTOMAN-EGYPTIAN SUDAN</text>',
+    angloegypt: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="7"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/><text x="150" y="185" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="700" fill="#f4efe1">ANGLO-EGYPTIAN SUDAN</text>',
+    civilwar: '<rect width="300" height="200" fill="#1e7a4a"/><circle cx="150" cy="100" r="34" fill="#f4efe1"/><path d="M150,80 l6,16 17,2 -13,11 4,17 -14,-9 -14,9 4,-17 -13,-11 17,-2 Z" fill="#050505"/><text x="150" y="180" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="700" fill="#f4efe1">SUDAN, INDEPENDENT &amp; DIVIDED</text>',
+    republic: '<rect width="300" height="50" fill="#050505"/><rect y="50" width="300" height="12" fill="#f4efe1"/><rect y="62" width="300" height="50" fill="#a4302a"/><rect y="112" width="300" height="12" fill="#f4efe1"/><rect y="124" width="300" height="76" fill="#1e7a4a"/><polygon points="0,0 130,100 0,200" fill="#1a3a6b"/><path d="M45,75 l7,17 18,2 -14,12 4,18 -15,-9 -15,9 4,-18 -14,-12 18,-2 Z" fill="#f9d616"/>'
+  };
+  function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.fragmented + '"></span>Fragmented / pre-state</span><span><span class="sw" style="background:' + IC.colonial + '"></span>Colonial rule</span><span><span class="sw" style="background:' + IC.civilwar + '"></span>Civil war / state collapse</span><span><span class="sw" style="background:' + IC.sovereign + '"></span>Republic, independent</span>';
+
+  var ISNAP = [
+    { year:"before c. 1821", name:"Stateless Nilotic peoples of the upper Nile", fill:IC.fragmented, flagKey:"stateless",
+      story:"Dinka, Nuer, Shilluk, and other Nilotic peoples govern themselves through kinship and cattle-based clan structures across the upper Nile, with no overarching state and no flag of any kind." },
+    { year:"c. 1821&ndash;1899", name:"Ottoman-Egyptian expansion &amp; the Mahdist State", fill:IC.fragmented, flagKey:"mahdist",
+      story:"Ottoman-Egyptian forces push slaving and administrative expeditions south from 1821 onward, followed from 1885 by the Mahdist State's own claim over the wider Sudan &mdash; neither power ever fully pacifies this southern territory." },
+    { year:"1899&ndash;1956", name:"Anglo-Egyptian Sudan", fill:IC.colonial, flagKey:"angloegypt",
+      story:"Britain and Egypt jointly govern Sudan as a condominium from 1899, but administer the south separately under \"Southern Policy,\" discouraging Arabic and Islam and orienting the region toward British East Africa &mdash; a divergence that outlives colonial rule itself." },
+    { year:"1956&ndash;2011", name:"South within independent Sudan (two civil wars)", fill:IC.civilwar, flagKey:"civilwar",
+      story:"Independence in 1956 hands power in Khartoum to the north with little southern representation; the First (1955&ndash;72) and Second (1983&ndash;2005) Sudanese Civil Wars follow, ending in the 2005 Comprehensive Peace Agreement's promise of a southern independence referendum." },
+    { year:"9 July 2011&ndash;present", name:"Republic of South Sudan", fill:IC.sovereign, flagKey:"republic",
+      story:"98.83% of southern voters back independence in the January 2011 referendum; South Sudan becomes the world's newest sovereign state on 9 July 2011, this territory governed as its own republic for the first time." }
+  ];
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.innerHTML = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+    document.getElementById("ireg-ss").setAttribute("fill", era.fill);
+    iEraOwners.innerHTML = "<b>" + era.name + "</b>";
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKey) + '<div class="ic-label">South Sudan</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
