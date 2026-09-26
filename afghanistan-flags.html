@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,36 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the territory of present-day Afghanistan, c. 550 BCE&ndash;present. Because Afghanistan was ruled successively by outside empires for most of its history before 1747, with no continuous local polity to track, the ancient and medieval span is compressed into broad entries rather than given false year-by-year precision. Deeper coverage of the Achaemenid Persian, Hellenistic/Greco-Bactrian, and later regional empires that passed through this territory lives on their own pages in this atlas &mdash; see <a href="persian-empire-flags.html">Persian Empire</a>, <a href="mongol-empire-flags.html">Mongol Empire</a>, and <a href="ottoman-empire-flags.html">Ottoman Empire</a> (the latter two never ruled Afghan territory directly but are referenced for regional context). This page is scoped to flags and polities specific to the Afghan lands themselves. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, no internal split</h2>
+    <p class="imap-sub">Afghanistan's own real border, traced whole &mdash; a landlocked crossroads state with no genuinely separate internal region to carve out honestly. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <div class="rule-box">
+      <b>Afghanistan has never had a well-documented internal partition of the kind this atlas tracks elsewhere.</b> Regional strongmen and provincial warlords have repeatedly contested control from the center, but no two rival governments each held a fixed, mapped half of the country the way Hungary or Poland once did &mdash; so this page shows one border and one ruling government at a time.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 550 BCE</span>
+        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+        <path id="ireg-af0" class="ireg-fill" d="M41.19,105.46 L57.93,112.96 L70.29,110.32 L73.72,101.36 L86.67,98.38 L95.92,92.37 L99.19,76.56 L113.02,72.74 L115.59,65.71 L123.33,70.99 L128.27,71.60 L137.41,71.74 L149.78,75.91 L154.80,78.32 L166.67,71.97 L172.20,75.79 L177.49,66.74 L187.29,67.15 L189.82,64.24 L191.56,56.27 L198.62,49.40 L207.50,53.89 L205.71,59.93 L210.68,60.87 L209.15,77.48 L215.64,83.95 L221.36,79.80 L228.64,77.84 L238.86,68.99 L250.16,70.44 L267.08,70.47 L270.00,76.15 L260.45,78.36 L252.11,82.01 L233.29,84.31 L215.67,88.46 L206.09,97.07 L209.97,105.45 L211.84,115.28 L203.67,123.58 L204.36,131.18 L199.85,138.29 L184.24,137.67 L190.69,150.75 L180.25,155.75 L173.28,167.68 L174.19,179.55 L167.77,185.11 L161.71,183.27 L149.17,185.85 L147.38,191.38 L135.16,191.34 L126.02,202.53 L125.45,219.35 L104.13,227.57 L92.70,225.83 L89.38,230.16 L79.57,227.64 L63.16,230.60 L35.67,220.51 L50.55,202.59 L49.21,189.87 L36.78,186.53 L35.50,173.99 L30.13,158.21 L37.14,147.38 L30.00,144.47 L34.51,130.08 L41.19,105.46 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-af0" x="150" y="130">AFGHANISTAN</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Ancient and medieval crossroads: successive outside empires</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (modern frontier), no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -542,6 +609,116 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = { ancient:"#5c2a24", durrani:"#204b5c", kingdom:"#a9762f", daoud:"#7c2e1f", pdpa:"#8c2f2f", mujahideen:"#2f6b4a", taliban1:"#3f3f3f", republic:"#1f6f4a", taliban2:"#3f3f3f" };
+  var INAMES = { ancient:"Ancient and medieval crossroads: successive outside empires", durrani:"Durrani Empire and successor Emirate of Afghanistan", kingdom:"Kingdom of Afghanistan (Barakzai dynasty, 20th-century monarchy)", daoud:"Republic of Afghanistan (Daoud Khan)", pdpa:"Democratic Republic of Afghanistan (PDPA / Soviet-backed)", mujahideen:"Islamic State of Afghanistan (mujahideen civil war era)", taliban1:"Islamic Emirate of Afghanistan (first Taliban rule)", republic:"Islamic Republic of Afghanistan (US/NATO-backed)", taliban2:"Islamic Emirate of Afghanistan (second Taliban rule)" };
+  var IFLAGS = {
+    ancient: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">NO SINGLE FLAG</text>\n              <text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">ATTRIBUTABLE</text>",
+    durrani: "<rect width=\"300\" height=\"200\" fill=\"#000000\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"40\" fill=\"#ffffff\"/>\n              <text x=\"150\" y=\"105\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9\" font-weight=\"700\" fill=\"#141413\">EMBLEM</text>",
+    kingdom: "<rect width=\"100\" height=\"200\" fill=\"#000000\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#c8102e\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#007a3d\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"34\" fill=\"#ffd100\"/>\n              <text x=\"150\" y=\"105\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9\" font-weight=\"700\" fill=\"#141413\">MOSQUE</text>",
+    daoud: "<rect width=\"100\" height=\"200\" fill=\"#000000\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#c8102e\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#007a3d\"/>\n              <text x=\"150\" y=\"108\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"10\" font-weight=\"700\" fill=\"#f4efe1\">EMBLEM</text>",
+    pdpa: "<rect width=\"300\" height=\"200\" fill=\"#c8102e\"/>\n              <rect x=\"20\" y=\"70\" width=\"70\" height=\"60\" fill=\"#ffd100\"/>\n              <text x=\"55\" y=\"108\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"9\" font-weight=\"700\" fill=\"#141413\">EMBLEM</text>",
+    mujahideen: "<rect width=\"300\" height=\"200\" fill=\"#ffffff\"/>\n              <rect width=\"300\" height=\"66\" fill=\"#007a3d\"/>\n              <rect y=\"133\" width=\"300\" height=\"67\" fill=\"#000000\"/>\n              <text x=\"150\" y=\"108\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"11\" font-weight=\"700\" fill=\"#141413\">EMBLEM</text>",
+    taliban1: "<rect width=\"300\" height=\"200\" fill=\"#ffffff\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#000000\" stroke-width=\"4\"/>\n              <text x=\"150\" y=\"95\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"15\" font-weight=\"700\" fill=\"#000000\">\u0644\u0627 \u0625\u0644\u0647 \u0625\u0644\u0627 \u0627\u0644\u0644\u0647</text>\n              <text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"15\" font-weight=\"700\" fill=\"#000000\">\u0645\u062d\u0645\u062f \u0631\u0633\u0648\u0644 \u0627\u0644\u0644\u0647</text>",
+    republic: "<rect width=\"100\" height=\"200\" fill=\"#000000\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#c8102e\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#007a3d\"/>\n              <text x=\"150\" y=\"105\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"10\" font-weight=\"700\" fill=\"#f4efe1\">SHAHADA + EMBLEM</text>",
+    taliban2: "<rect width=\"300\" height=\"200\" fill=\"#ffffff\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#000000\" stroke-width=\"4\"/>\n              <text x=\"150\" y=\"95\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"15\" font-weight=\"700\" fill=\"#000000\">\u0644\u0627 \u0625\u0644\u0647 \u0625\u0644\u0627 \u0627\u0644\u0644\u0647</text>\n              <text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"15\" font-weight=\"700\" fill=\"#000000\">\u0645\u062d\u0645\u062f \u0631\u0633\u0648\u0644 \u0627\u0644\u0644\u0647</text>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 550 BCE", name:"Ancient and medieval crossroads: successive outside empires", t:{ af:IC.ancient }, flagKeys:{ af:"ancient" },
+      story:"For over two thousand years before 1747, no continuous Afghan state existed: Achaemenid Persians, Alexander's Greeks, Mauryans, Kushans, Sassanids, and Islamic-era Ghaznavids, Ghurids, Timurids, and Mughals each held pieces of this crossroads territory in turn." },
+    { year:"1747", name:"Durrani Empire and successor Emirate of Afghanistan", t:{ af:IC.durrani }, flagKeys:{ af:"durrani" },
+      story:"Ahmad Shah Durrani is elected ruler at a Kandahar loya jirga in 1747, founding the Durrani Empire and, by most accounts, the Afghan state itself &mdash; its authority contracting over the 19th century into the modern Emirate as the British and Russian empires squeezed in from either side." },
+    { year:"1919", name:"Kingdom of Afghanistan (Barakzai dynasty, 20th-century monarchy)", t:{ af:IC.kingdom }, flagKeys:{ af:"kingdom" },
+      story:"Amanullah Khan declares full independence from British influence over foreign affairs in 1919, and the Barakzai dynasty rules Afghanistan as a kingdom for the rest of the century, surviving the Great Game's aftermath and reforms under Zahir Shah." },
+    { year:"17 July 1973", name:"Republic of Afghanistan (Daoud Khan)", t:{ af:IC.daoud }, flagKeys:{ af:"daoud" },
+      story:"King Zahir Shah's cousin Mohammed Daoud Khan seizes power in a bloodless 1973 coup, abolishing the monarchy and declaring a republic &mdash; ending 226 years of Durrani/Barakzai royal rule." },
+    { year:"27 April 1978", name:"Democratic Republic of Afghanistan (PDPA / Soviet-backed)", t:{ af:IC.pdpa }, flagKeys:{ af:"pdpa" },
+      story:"The People's Democratic Party of Afghanistan (PDPA) seizes power in the April 1978 Saur Revolution; Soviet troops intervene directly in December 1979 to prop up the communist government against a growing mujahideen insurgency, beginning a decade-long war." },
+    { year:"28 April 1992", name:"Islamic State of Afghanistan (mujahideen civil war era)", t:{ af:IC.mujahideen }, flagKeys:{ af:"mujahideen" },
+      story:"Soviet withdrawal is completed in 1989 and the PDPA government finally falls in April 1992; rival mujahideen factions that had fought the Soviets now fight each other for Kabul in a devastating civil war." },
+    { year:"27 September 1996", name:"Islamic Emirate of Afghanistan (first Taliban rule)", t:{ af:IC.taliban1 }, flagKeys:{ af:"taliban1" },
+      story:"The Taliban capture Kabul in September 1996, imposing a strict Islamic Emirate over most of the country while the Northern Alliance holds out in the northeast &mdash; ending only with the US-led invasion after September 2001." },
+    { year:"2001", name:"Islamic Republic of Afghanistan (US/NATO-backed)", t:{ af:IC.republic }, flagKeys:{ af:"republic" },
+      story:"A US/NATO-backed republic is established after the Taliban's 2001 fall, with a new constitution in 2004 and two decades of internationally supported government and elections, ending as the Taliban retake Kabul in August 2021." },
+    { year:"15 August 2021", name:"Islamic Emirate of Afghanistan (second Taliban rule)", t:{ af:IC.taliban2 }, flagKeys:{ af:"taliban2" },
+      story:"The Taliban re-declare the Islamic Emirate on 15 August 2021 as US/NATO forces complete withdrawal and the republic's government collapses &mdash; the same movement and name that ruled from 1996 to 2001." }
+  ];
+
+  var IREGIONS = ["af0"];
+  var IREGION_NAMES = { af0:"Afghanistan" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      var baseId = "af";
+      var el = document.getElementById("ireg-" + id);
+      if (el) el.setAttribute("fill", era.t["af"]);
+      var tcol = iTextColorFor(era.t["af"]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      for (var i = 0; i < 4; i++) {
+        var lbl = document.getElementById("ilbl-" + id + (i === 0 ? "" : (i+1)));
+        if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t["af"]; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory shown";
+
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKeys["af"]) + '<div class="ic-label">Afghanistan</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
