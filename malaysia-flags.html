@@ -594,8 +594,8 @@
       });
     });
 
-    var penLabel = Object.keys(IC).filter(function (k) { return IC[k] === era.t.pen; })[0];
-    var borLabel = Object.keys(IC).filter(function (k) { return IC[k] === era.t.bor; })[0];
+    var penLabel = era.flagKeys.pen;
+    var borLabel = era.flagKeys.bor;
     if (era.t.pen === era.t.bor) {
       iEraOwners.innerHTML = "<b>" + INAMES[penLabel] + "</b>: " + IREGION_NAMES.pen + ", " + IREGION_NAMES.bor;
     } else {
