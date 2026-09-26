@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,6 +221,43 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Angola, from the Kingdoms of Kongo and Ndongo through Portuguese colonization to the modern republic. No interactive map on this page &mdash; deferred to a future phase of the atlas. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+    <div class="imap-section">
+    <h2>Two kingdoms, 1390&ndash;1671</h2>
+    <p class="imap-sub">Angola's own real border, split into the two pieces genuinely ruled apart for nearly two centuries: the Kingdom of Kongo in the north (plus its Cabinda-area heartland), and the Kingdom of Ndongo &amp; Matamba further south and inland, the base of Queen Nzinga's decades-long resistance to Portuguese conquest. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Ndongo and Matamba held out against Portugal for nearly a century after Luanda's founding.</b> The Portuguese established Luanda in the Kongo/coastal sphere in 1575, but Queen Nzinga Mbande fought a decades-long resistance from Ndongo and then Matamba until her death in 1663 and the kingdom's final defeat in 1671 &mdash; the border line below only solidifies while the two pieces were genuinely ruled apart, and dissolves once Portugal controls both.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1975&ndash;present</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="60" y="20">DR CONGO</text>
+          <text x="270" y="130">ZAMBIA</text>
+          <text x="150" y="270">NAMIBIA</text>
+        </g>
+        <path id="ireg-kongo" class="ireg-fill" d="M61.67,48.69 L57.53,50.44 L53.18,37.96 L59.75,30.79 L64.67,28.00 L70.78,33.70 L64.85,37.18 L62.18,41.45 L61.67,48.69 Z M125.03,51.90 L129.04,64.27 L133.72,74.22 L137.46,79.59 L143.70,88.27 L154.47,86.93 L159.84,84.59 L168.84,86.94 L171.28,82.79 L175.37,73.11 L185.47,72.46 L186.35,69.59 L194.65,69.53 L193.24,75.51 L213.00,75.36 L213.30,85.81 L216.60,92.21 L214.20,102.22 L214.87,108.00 L69.42,108.00 L68.82,106.51 L69.69,103.06 L74.70,96.48 L69.76,80.44 L66.42,69.32 L58.26,58.82 L59.81,55.59 L66.54,53.36 L71.25,53.67 L76.97,51.68 L125.03,51.90 Z"/>
+        <path id="ireg-ndongo" class="ireg-fill" d="M214.87,108.00 L215.39,112.43 L220.83,118.59 L219.95,138.35 L223.99,136.82 L231.06,137.23 L241.15,134.75 L248.57,135.73 L250.29,140.88 L248.44,148.93 L251.30,156.72 L248.87,162.94 L250.26,168.67 L216.35,168.46 L215.60,221.28 L226.59,234.86 L237.21,245.23 L207.28,252.00 L167.85,249.65 L156.57,241.70 L90.55,242.41 L88.09,243.58 L78.38,236.07 L67.82,235.58 L58.07,238.40 L50.23,241.56 L48.70,231.12 L50.95,216.53 L56.57,201.33 L57.42,194.20 L62.71,179.24 L66.59,172.43 L75.94,161.57 L81.17,154.18 L82.88,141.88 L82.03,132.48 L77.16,126.54 L72.82,116.47 L69.42,108.00 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-kongo" x="150" y="80">KONGO</text>
+          <text class="ireg-label" id="ilbl-ndongo" x="150" y="190">NDONGO &amp; MATAMBA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Modern Angola</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Schematic internal partition on a real traced border &mdash; the Kongo/Ndongo dividing line is approximate, not a surveyed frontier.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -358,6 +432,127 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = {
+    kongo_early:"#5c2a24", unclaimed:"#6e6047", ndongo:"#204b5c", portuguese:"#006241", modern:"#cc092f"
+  };
+  var INAMES = {
+    kongo_early:"Kingdom of Kongo", unclaimed:"No centralized state yet", ndongo:"Kingdom of Ndongo &amp; Matamba", portuguese:"Portuguese Angola", modern:"Republic of Angola"
+  };
+  var IFLAGS = {
+    kongo_early: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    unclaimed: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    ndongo: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">REGALIA,</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>",
+    portuguese: "<rect width=\"300\" height=\"200\" fill=\"#006241\"/>\n              <rect width=\"300\" height=\"200\" fill=\"#c8102e\" fill-opacity=\"0\"/>\n              <rect x=\"0\" width=\"300\" height=\"200\" fill=\"none\"/>\n              <rect width=\"300\" height=\"200\" fill=\"#006241\"/>\n              <path d=\"M0,0 h300 v66.6 h-300 Z\" fill=\"#006241\"/>\n              <path d=\"M0,66.6 h300 v66.7 h-300 Z\" fill=\"#fff\"/>\n              <path d=\"M0,133.3 h300 v66.7 h-300 Z\" fill=\"#c8102e\"/>\n              <rect width=\"90\" height=\"66.6\" fill=\"#c8102e\"/>\n              <circle cx=\"45\" cy=\"33\" r=\"16\" fill=\"#fcd116\"/>",
+    modern: "<rect width=\"300\" height=\"100\" fill=\"#cc092f\"/>\n              <rect y=\"100\" width=\"300\" height=\"100\" fill=\"#000\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"26\" fill=\"#fcd116\"/>\n              <path d=\"M132,100 a18,18 0 1 1 9,15.6\" stroke=\"#cc092f\" stroke-width=\"6\" fill=\"none\"/>\n              <path d=\"M150,86 l4,10 11,1 -8,7 3,10 -10,-6 -10,6 3,-10 -8,-7 11,-1 Z\" fill=\"#000\"/>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1390", name:"Kongo founded, south not yet a state", t:{ kongo:IC.kongo_early, ndongo:IC.unclaimed }, flagKeys:{ kongo:"kongo_early", ndongo:"unclaimed" },
+      story:"The Kingdom of Kongo is founded around 1390 in what is now northern Angola and the lower Congo region, eventually reaching Mbanza Kongo as its capital. Further south and inland, in the Ndongo highlands, no comparably centralized state yet exists \u2014 shown honestly as unorganized local rule rather than inventing a false early Ndongo state." },
+    { year:"c. 1500", name:"Ndongo asserts its own kingship", t:{ kongo:IC.kongo_early, ndongo:IC.ndongo }, flagKeys:{ kongo:"kongo_early", ndongo:"ndongo" },
+      story:"By around 1500, the Ndonga (ngola) rulers of the Ndongo kingdom, once a Kongo tributary, assert full independent kingship in their own right \u2014 the ngola's title later gives Angola itself its name. Kongo continues in the north, now a genuinely separate neighboring kingdom rather than an overlord." },
+    { year:"1575", name:"Luanda founded, Ndongo resists", t:{ kongo:IC.portuguese, ndongo:IC.ndongo }, flagKeys:{ kongo:"portuguese", ndongo:"ndongo" },
+      story:"Portugal founds Luanda in 1575 on the coast within Kongo's sphere, beginning the colony later called Portuguese Angola. Inland, Ndongo \u2014 and after its 1620s\u201330s collapse, the kingdom Queen Nzinga Mbande rebuilds at Matamba \u2014 fights on as a genuinely separate, unconquered power for nearly a century more." },
+    { year:"1671", name:"Ndongo/Matamba falls", t:{ kongo:IC.portuguese, ndongo:IC.portuguese }, flagKeys:{ kongo:"portuguese", ndongo:"portuguese" },
+      story:"Queen Nzinga dies in 1663 still unconquered; Portuguese forces finally crush the kingdom's remaining resistance with the 1671 fall of Pungo Andongo. Kongo itself, already fragmented by civil war after 1665's Battle of Mbwila, is not formally annexed but is no longer a serious counterweight \u2014 both halves of this map are now effectively under Portuguese colonial control." },
+    { year:"1975\u2013present", name:"Modern Angola", t:{ kongo:IC.modern, ndongo:IC.modern }, flagKeys:{ kongo:"modern", ndongo:"modern" },
+      story:"Angola wins independence from Portugal on 11 November 1975. Modern Angola governs the whole territory shown here as one unified, sovereign republic \u2014 the Kongo/Ndongo split of 1390\u20131671 remains the one era in this atlas' own Angola page where this internal line was ever real." }
+  ];
+
+  var IREGIONS = ["kongo","ndongo"];
+  var IREGION_NAMES = { kongo:"Kongo (north)", ndongo:"Ndongo & Matamba (south)" };
+  var IADJ = [["kongo","ndongo"]];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = ISNAP.length - 1 - sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
