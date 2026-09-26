@@ -173,6 +173,43 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -185,6 +222,36 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the Andorran valleys under the co-principality, 1278&ndash;present, three political phases. The core governing structure &mdash; joint headship by the Bishop of Urgell and a French co-prince &mdash; has never actually broken since 1278; what changes is who holds the French half of the title and how democratic the internal government becomes. No internal partition map applies. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+    <div class="imap-section">
+    <h2>One border, one co-principality</h2>
+    <p class="imap-sub">Andorra's own real border, traced whole &mdash; a single mountain co-principality with no internal region to carve out honestly. Press play, or drag the slider, to move through all three eras.</p>
+    <div class="rule-box">
+      <b>Andorra has never split into separate internal territories.</b> It has been one small Pyrenean co-principality, jointly ruled by its two co-princes, since the 1278 Paréages &mdash; so this page shows one border and one government throughout, with only the flag itself changing.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">1278</span>
+        <input type="range" id="iSlider" min="0" max="2" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+        <path id="ireg-ad0" class="ireg-fill" d="M116.52,41.90 L105.49,45.71 L99.67,49.44 L92.58,49.03 L87.62,50.19 L81.29,42.45 L72.23,45.28 L70.79,55.14 L66.04,59.60 L65.21,62.18 L70.69,76.71 L69.68,81.68 L67.43,83.98 L61.98,84.92 L58.35,87.48 L49.12,87.65 L49.12,93.12 L47.32,97.46 L39.21,101.65 L40.62,107.88 L49.29,113.33 L51.77,116.70 L48.96,120.07 L38.35,124.95 L36.24,127.22 L33.55,137.44 L30.00,143.64 L30.60,145.96 L36.37,142.14 L41.77,142.06 L45.07,139.14 L50.32,140.34 L54.97,143.56 L55.87,151.21 L63.46,160.11 L65.84,167.79 L54.73,174.16 L52.39,179.73 L50.03,181.61 L38.87,182.19 L34.14,186.83 L32.83,191.11 L41.76,192.12 L46.22,195.50 L48.05,199.42 L47.54,207.47 L51.15,211.03 L49.59,218.77 L52.25,221.60 L50.87,226.82 L52.31,229.03 L59.82,233.62 L71.75,232.39 L84.59,234.38 L94.32,238.10 L104.32,235.81 L120.26,236.38 L122.76,232.90 L123.02,226.54 L126.23,223.78 L125.09,217.36 L127.63,212.56 L129.32,212.47 L130.61,214.45 L133.62,215.68 L134.89,220.18 L138.79,222.13 L139.54,217.46 L142.24,212.74 L148.59,207.94 L151.89,207.91 L154.17,210.28 L161.73,208.76 L170.39,210.03 L172.71,206.31 L177.31,206.90 L180.41,205.74 L186.69,206.91 L188.53,203.55 L192.12,201.98 L190.57,196.74 L190.09,184.93 L195.49,174.17 L197.79,174.97 L199.84,181.93 L201.88,184.02 L207.35,183.32 L216.26,186.53 L221.57,185.44 L227.92,175.00 L231.36,173.70 L229.39,159.97 L234.92,151.40 L235.44,135.24 L240.24,127.72 L245.00,122.71 L247.59,121.63 L256.12,122.51 L267.17,116.60 L270.00,113.54 L269.11,110.22 L266.12,108.08 L251.80,105.26 L243.80,101.79 L233.07,99.37 L231.26,97.74 L231.23,91.49 L238.61,79.78 L238.16,74.76 L233.77,76.17 L221.51,75.87 L214.07,70.84 L201.19,67.93 L198.41,71.37 L187.82,72.37 L183.06,66.80 L177.74,63.91 L174.02,63.94 L168.05,66.66 L161.15,66.84 L155.01,65.48 L152.12,67.72 L150.29,67.69 L145.71,61.33 L139.42,59.25 L134.32,50.38 L134.20,47.58 L131.06,46.88 L126.88,42.45 L116.52,41.90 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-ad0" x="150" y="145">ANDORRA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Co-Principality of Andorra (founding co-principality)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition &mdash; Andorra has been one co-principality throughout its history.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -325,6 +392,98 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = { founding:"#a9762f", restored:"#204b5c", modern:"#2f6b4a" };
+  var INAMES = { founding:"Co-Principality of Andorra (founding co-principality)", restored:"Co-Principality of Andorra (restored, plain tricolor)", modern:"Co-Principality of Andorra (modern, with coat of arms)" };
+  var IFLAGS = {
+    founding: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#a9762f\" stroke-width=\"6\"/>\n              <rect x=\"30\" width=\"120\" height=\"200\" fill=\"#a4302a\" opacity=\".55\"/>\n              <rect x=\"150\" width=\"120\" height=\"200\" fill=\"#002b7f\" opacity=\".55\"/>",
+    restored: "<rect width=\"100\" height=\"200\" fill=\"#002b7f\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#fcd116\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#e30000\"/>",
+    modern: "<rect width=\"100\" height=\"200\" fill=\"#002b7f\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#fcd116\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#e30000\"/>\n              <g transform=\"translate(150,100) scale(0.9)\">\n                <rect x=\"-16\" y=\"-22\" width=\"32\" height=\"44\" fill=\"#f4efe1\" stroke=\"#a9762f\" stroke-width=\"1.5\"/>\n                <rect x=\"-16\" y=\"-22\" width=\"16\" height=\"22\" fill=\"#a4302a\"/>\n                <rect x=\"0\" y=\"-22\" width=\"16\" height=\"22\" fill=\"#fcd116\"/>\n                <rect x=\"-16\" y=\"0\" width=\"32\" height=\"22\" fill=\"#f4efe1\"/>\n              </g>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"1278", name:"Co-Principality of Andorra (founding co-principality)", t:{ ad:IC.founding }, flagKeys:{ ad:"founding" },
+      story:"The 1278 and 1288 Par\u00e9ages settle a feudal dispute between the Count of Foix and the Bishop of Urgell by making them joint co-princes over Andorra &mdash; a shared sovereignty arrangement unique in Europe, still legally in force today (the French presidency inherited the Foix title)." },
+    { year:"1806", name:"Co-Principality of Andorra (restored, plain tricolor)", t:{ ad:IC.restored }, flagKeys:{ ad:"restored" },
+      story:"The plain blue-yellow-red tricolor, echoing both French and Catalan/Spanish heraldic colors, is formally adopted after upheavals tied to the French Revolution and Napoleonic era disrupt the old feudal arrangement briefly before it's restored in 1806." },
+    { year:"1866", name:"Co-Principality of Andorra (modern, with coat of arms)", t:{ ad:IC.modern }, flagKeys:{ ad:"modern" },
+      story:"The Andorran coat of arms &mdash; combining the arms of the Bishop of Urgell, the Count of Foix, Catalonia, and B\u00e9arn &mdash; is added to the tricolor's center in 1866, the flag largely unchanged since, even as Andorra modernizes into a parliamentary co-principality (1993 constitution) while keeping its two co-princes." }
+  ];
+
+  var IREGIONS = ["ad0"];
+  var IREGION_NAMES = { ad0:"Andorra" };
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      var baseId = "ad";
+      var el = document.getElementById("ireg-" + id);
+      if (el) el.setAttribute("fill", era.t["ad"]);
+      var tcol = iTextColorFor(era.t["ad"]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      for (var i = 0; i < 4; i++) {
+        var lbl = document.getElementById("ilbl-" + id + (i === 0 ? "" : (i+1)));
+        if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t["ad"]; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory shown";
+
+    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKeys["ad"]) + '<div class="ic-label">Andorra</div></div>';
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
