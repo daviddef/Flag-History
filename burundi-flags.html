@@ -173,6 +173,47 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .isea-bg { fill: #8fb9cc; opacity: .28; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .isea-bg { fill: #2c4a58; opacity: .35; } }
+  :root[data-theme="dark"] .isea-bg { fill: #2c4a58; opacity: .35; }
 </style>
 
 <div class="wrap">
@@ -185,6 +226,40 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Burundi, c. 1600&ndash;present, five political entities. Burundi shared colonial administration with neighboring Rwanda as the joint territory of Ruanda-Urundi from 1916-1962, but the two were, and remain, distinct kingdoms and countries with their own separate histories &mdash; this page is scoped to Burundi alone. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One small kingdom, its own court</h2>
+    <p class="imap-sub">Burundi's own real border, traced whole &mdash; a compact highland kingdom that shared colonial administration with Rwanda but kept its own separate Mwami and court throughout, with no internal region of its own to carve out.</p>
+    <div class="rule-box">
+      <b>No internal partition exists here to show.</b> Burundi's own kingdom, and later republic, governed this whole territory as one unit under one court or government at every point in the record &mdash; there is no genuinely separate second Burundian region, distinct from Rwanda's own separate history, to map internally. What changes here is only who held sovereignty over the whole kingdom at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1600 – c. 1897</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+        <rect class="isea-bg" x="0" y="0" width="280" height="200"/>
+        <g class="context-label" pointer-events="none">
+          <text x="140" y="15">RWANDA</text>
+          <text x="20" y="110">LAKE TANGANYIKA</text>
+          <text x="245" y="150">TANZANIA</text>
+        </g>
+        <path id="ireg-cc" class="ireg-fill" d="M36.3,190.0 L31.0,89.1 L10.0,51.1 L60.7,57.6 L86.3,10.0 L130.7,15.5 L135.5,48.4 L153.5,67.4 L154.3,94.6 L133.7,112.1 L101.1,155.7 L70.8,186.0 L36.3,190.0 Z"/>
+        <text class="ireg-label" id="ilbl-cc" x="140" y="100"></text>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border; no internal partition shown &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -408,6 +483,145 @@
 </div>
 
 <script>
+
+(function () {
+  var IC = {
+    "era-1600": "#a9762f",
+    "era-1897": "#7a4a1f",
+    "era-1916": "#7a4a1f",
+    "era-1962": "#a9762f",
+    "era-1967": "#1e7a4a"
+  };
+  var INAMES = {
+    "era-1600": "Kingdom of Burundi (precolonial)",
+    "era-1897": "Kingdom of Burundi under German suzerainty",
+    "era-1916": "Ruanda-Urundi (Belgian mandate / UN trust territory)",
+    "era-1962": "Kingdom of Burundi (independent monarchy)",
+    "era-1967": "Republic of Burundi"
+  };
+  var IFLAGS = {
+    "era-1600": "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
+    "era-1897": "<rect width=\"300\" height=\"200\" fill=\"#050505\"/>\n              <rect width=\"120\" height=\"80\" fill=\"#a4302a\"/>\n              <path d=\"M0,0 L120,80 M120,0 L0,80\" stroke=\"#f4efe1\" stroke-width=\"10\"/>\n              <path d=\"M0,0 L120,80 M120,0 L0,80\" stroke=\"#000000\" stroke-width=\"4\"/>",
+    "era-1916": "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/>\n              <rect width=\"100\" height=\"200\" fill=\"#1a1a1a\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#f4efe1\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#a4302a\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"26\" fill=\"#a9762f\" stroke=\"#7a4a1f\" stroke-width=\"2\"/>",
+    "era-1962": "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"46\" fill=\"#a9762f\"/>\n              <path d=\"M150,66 l9,24 26,3 -19,18 5,26 -21,-13 -21,13 5,-26 -19,-18 26,-3 Z\" fill=\"#f4efe1\"/>\n              <text x=\"150\" y=\"180\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"12\" font-weight=\"700\" fill=\"#7a4a1f\">KINGDOM OF BURUNDI</text>",
+    "era-1967": "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/>\n              <polygon points=\"0,0 300,200\" stroke=\"#f4efe1\" stroke-width=\"0\"/>\n              <polygon points=\"150,0 300,100 150,200 0,100\" fill=\"none\"/>\n              <path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#f4efe1\" stroke-width=\"6\"/>\n              <polygon points=\"150,0 0,100 150,200\" fill=\"#a4302a\"/>\n              <polygon points=\"150,0 300,100 150,200\" fill=\"#a4302a\"/>\n              <polygon points=\"0,0 150,0 0,100\" fill=\"#1e7a4a\"/>\n              <polygon points=\"300,0 150,0 300,100\" fill=\"#1e7a4a\"/>\n              <polygon points=\"0,200 150,200 0,100\" fill=\"#1e7a4a\"/>\n              <polygon points=\"300,200 150,200 300,100\" fill=\"#1e7a4a\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"42\" fill=\"#f4efe1\" stroke=\"#1e7a4a\" stroke-width=\"3\"/>\n              <g fill=\"#a4302a\">\n                <path d=\"M150,72 l5,13 14,1 -11,10 3,14 -11,-8 -11,8 3,-14 -11,-10 14,-1 Z\"/>\n                <path d=\"M124,116 l5,13 14,1 -11,10 3,14 -11,-8 -11,8 3,-14 -11,-10 14,-1 Z\"/>\n                <path d=\"M176,116 l5,13 14,1 -11,10 3,14 -11,-8 -11,8 3,-14 -11,-10 14,-1 Z\"/>\n              </g>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1600 \u2013 c. 1897", name:"Kingdom of Burundi (precolonial)", t:{ cc: IC["era-1600"] }, flagKeys:{ cc: "era-1600" },
+      story:"a centralized Kingdom of Burundi, ruled by a Mwami through a court structure distinct from \u2014 though comparable to \u2014 neighboring Rwanda's monarchy, consolidates in the highlands south of Lake Kivu from roughly the 17th century onward. The royal drum (karyenda) serves as the central symbol of the Mwami's sacred authority throughout this period, a tradition strong enough that it is later revived as the flag emblem\u2026" },
+    { year:"c. 1897 \u2013 1916", name:"Kingdom of Burundi under German suzerainty", t:{ cc: IC["era-1897"] }, flagKeys:{ cc: "era-1897" },
+      story:"Germany extends its claim over Burundi as part of German East Africa from the late 1890s, ruling indirectly through the existing Mwami and court rather than dismantling the kingdom, much as it does in neighboring Rwanda. German administration is thin and largely limited to a few outposts before the First World War, when Belgian forces occupy the territory from 1916, ending direct German control. the imperial\u2026" },
+    { year:"1916 \u2013 1962", name:"Ruanda-Urundi (Belgian mandate / UN trust territory)", t:{ cc: IC["era-1916"] }, flagKeys:{ cc: "era-1916" },
+      story:"Belgian forces occupy Rwanda and Burundi during the First World War, taking them from German East Africa; the League of Nations formally awards Belgium the joint mandate of Ruanda-Urundi in 1916/1922, continued as a UN trust territory after 1946. Burundi's own Mwami and court remain in place under Belgian indirect rule throughout, kept administratively distinct from Rwanda's kingdom even though the two share one\u2026" },
+    { year:"1 July 1962 \u2013 1966", name:"Kingdom of Burundi (independent monarchy)", t:{ cc: IC["era-1962"] }, flagKeys:{ cc: "era-1962" },
+      story:"Burundi becomes independent on 1 July 1962 \u2014 the same day as Rwanda, the two territories splitting formally from the joint Ruanda-Urundi administration \u2014 but unlike Rwanda, Burundi keeps its monarchy, with Mwami Mwambutsa IV as head of state. The brief independent kingdom is marked by growing political instability and ethnic tension, including a failed 1965 coup attempt, before the monarchy is abolished outright\u2026" },
+    { year:"1967 \u2013 present (flag); 1966 \u2013 present (republic)", name:"Republic of Burundi", t:{ cc: IC["era-1967"] }, flagKeys:{ cc: "era-1967" },
+      story:"Prime Minister Michel Micombero deposes the young Mwami Ntare V in a 1966 coup, ending the monarchy and declaring a republic; a new flag follows in 1967. Burundi's own postcolonial history includes a distinct, separate cycle of Hutu-Tutsi violence from Rwanda's: most seriously, the 1972 mass killings of Hutus by the Tutsi-dominated army and government, a well-documented atrocity following a Hutu-led uprising,\u2026" }
+  ];
+
+  var IREGIONS = ["cc"];
+  var IREGION_NAMES = { cc: "Burundi" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+        lbl.textContent = IREGION_NAMES[id];
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      if (line) {
+        line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+        line.setAttribute("stroke-width", same ? "1" : "2.4");
+      }
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");

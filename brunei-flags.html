@@ -173,6 +173,47 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .isea-bg { fill: #8fb9cc; opacity: .28; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .isea-bg { fill: #2c4a58; opacity: .35; } }
+  :root[data-theme="dark"] .isea-bg { fill: #2c4a58; opacity: .35; }
 </style>
 
 <div class="wrap">
@@ -185,6 +226,39 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the lands of present-day Brunei, 15th century&ndash;present, six political entries. Japanese wartime occupation (1942&ndash;45) interrupts the British protectorate era and is shown as its own separate entry, splitting that protectorate into two dated spans. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One small coast on Borneo</h2>
+    <p class="imap-sub">Brunei's own real coastline, traced whole &mdash; a small, split territory on the north coast of Borneo that has never had a genuinely separate internal jurisdiction to map.</p>
+    <div class="rule-box">
+      <b>Brunei carries no internal partition in this atlas.</b> Even split today into two unconnected parts by Malaysia's Limbang district, the sultanate has always been governed as a single court under one sultan &mdash; there is no second, separately ruled Bruneian territory to carve out honestly. What changes here is only who held sovereignty over the whole coastline at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">15th century – 1888</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+        <rect class="isea-bg" x="0" y="0" width="280" height="200"/>
+        <g class="context-label" pointer-events="none">
+          <text x="140" y="15">SOUTH CHINA SEA</text>
+          <text x="140" y="185">SARAWAK (MALAYSIA)</text>
+        </g>
+        <path id="ireg-cc" class="ireg-fill" d="M10.0,125.2 L59.3,78.5 L165.3,10.0 L159.7,71.6 L152.4,151.4 L92.9,147.4 L66.7,190.0 L10.0,125.2 Z"/>
+        <text class="ireg-label" id="ilbl-cc" x="140" y="100"></text>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline (simplified); no internal partition shown &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -417,6 +491,150 @@
 </div>
 
 <script>
+
+(function () {
+  var IC = {
+    "era-15": "#a9762f",
+    "era-1888": "#204b5c",
+    "era-1942": "#5c2a24",
+    "era-1945": "#204b5c",
+    "era-1959": "#204b5c",
+    "era-1984": "#a9762f"
+  };
+  var INAMES = {
+    "era-15": "Bruneian Empire and its decline",
+    "era-1888": "British protectorate (established)",
+    "era-1942": "Japanese occupation",
+    "era-1945": "British protectorate (post-war)",
+    "era-1959": "British protectorate (self-governing)",
+    "era-1984": "Sultanate of Brunei (full independence)"
+  };
+  var IFLAGS = {
+    "era-15": "<rect width=\"300\" height=\"200\" fill=\"#fecb00\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#a4302a\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#a4302a\">EMPIRE &amp;</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#a4302a\">DECLINE</text>",
+    "era-1888": "<rect width=\"300\" height=\"200\" fill=\"#fecb00\"/>",
+    "era-1942": "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/>\n              <circle cx=\"150\" cy=\"100\" r=\"55\" fill=\"#a4302a\"/>",
+    "era-1945": "<rect width=\"300\" height=\"200\" fill=\"#fecb00\"/>\n              <polygon points=\"0,0 300,0 300,60 0,140\" fill=\"#f4efe1\"/>\n              <polygon points=\"0,60 300,140 300,200 0,200\" fill=\"#000000\"/>",
+    "era-1959": "<rect width=\"300\" height=\"200\" fill=\"#fecb00\"/>\n              <polygon points=\"0,0 300,0 300,60 0,140\" fill=\"#f4efe1\"/>\n              <polygon points=\"0,60 300,140 300,200 0,200\" fill=\"#000000\"/>\n              <ellipse cx=\"150\" cy=\"100\" rx=\"30\" ry=\"24\" fill=\"#c8102e\"/>",
+    "era-1984": "<rect width=\"300\" height=\"200\" fill=\"#fecb00\"/>\n              <polygon points=\"0,0 300,0 300,60 0,140\" fill=\"#f4efe1\"/>\n              <polygon points=\"0,60 300,140 300,200 0,200\" fill=\"#000000\"/>\n              <ellipse cx=\"150\" cy=\"100\" rx=\"30\" ry=\"24\" fill=\"#c8102e\"/>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"15th century \u2013 1888", name:"Bruneian Empire and its decline", t:{ cc: IC["era-15"] }, flagKeys:{ cc: "era-15" },
+      story:"the Bruneian Empire reaches its peak in the fifteenth and sixteenth centuries under sultans such as Bolkiah, controlling much of Borneo's coastline and extending influence into the southern Philippines, including Manila before Spanish conquest. A long decline follows from internal succession disputes, piracy, and growing European pressure; the empire cedes Sarawak to the Brooke family (self-styled \"White Rajahs\")\u2026" },
+    { year:"1888 \u2013 1942", name:"British protectorate (established)", t:{ cc: IC["era-1888"] }, flagKeys:{ cc: "era-1888" },
+      story:"facing continued territorial losses to the neighboring Brooke family's Sarawak and to British North Borneo, Sultan Hashim Jalilul Alam Aqamaddin accepts British protection in 1888 to halt the sultanate's decline; a British Resident is installed from 1906, advising the sultan on all matters except local custom and Islamic religious affairs, a system that endures for over half a century. plain yellow, the color\u2026" },
+    { year:"1942 \u2013 1945", name:"Japanese occupation", t:{ cc: IC["era-1942"] }, flagKeys:{ cc: "era-1942" },
+      story:"Japan invades Borneo in December 1941 and occupies Brunei through the rest of the war, valuing its oil fields; the sultanate's own administration is left largely in place as a local instrument of Japanese rule until Australian forces liberate the territory in mid-1945. the Japanese naval and military ensign, flown over the occupied sultanate; no distinct Bruneian flag flew during this period." },
+    { year:"1945 \u2013 1959", name:"British protectorate (post-war)", t:{ cc: IC["era-1945"] }, flagKeys:{ cc: "era-1945" },
+      story:"British administration resumes after Japan's surrender, and the sultanate continues under the residential system, its sultan retaining internal authority under British supervision, while post-war reconstruction and growing oil revenues (from fields discovered in the 1920s) begin reshaping the small territory's economy. the plain yellow field with diagonal white and black bands, without the later crest \u2014 yellow\u2026" },
+    { year:"1959 \u2013 1984", name:"British protectorate (self-governing)", t:{ cc: IC["era-1959"] }, flagKeys:{ cc: "era-1959" },
+      story:"a 1959 constitution grants Brunei internal self-government while Britain retains control of defense and foreign affairs; Sultan Omar Ali Saifuddien III declines to join the new Federation of Malaysia in 1963, in part over precedence and revenue-sharing disputes, keeping Brunei on a separate path toward eventual full independence. the 1959 flag adds the national crest \u2014 a crescent, wings, umbrella, and hands \u2014 in\u2026" },
+    { year:"1984 \u2013 present", name:"Sultanate of Brunei (full independence)", t:{ cc: IC["era-1984"] }, flagKeys:{ cc: "era-1984" },
+      story:"Brunei gains full independence from Britain on 1 January 1984, the last of Britain's Southeast Asian territories to do so, under Sultan Hassanal Bolkiah, who has now reigned since 1967. Substantial oil and gas reserves fund one of the highest per-capita incomes in the region, and the sultan retains full executive power as one of the world's last true absolute monarchs, having formally implemented sharia-based\u2026" }
+  ];
+
+  var IREGIONS = ["cc"];
+  var IREGION_NAMES = { cc: "Brunei" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+        lbl.textContent = IREGION_NAMES[id];
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      if (line) {
+        line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+        line.setAttribute("stroke-width", same ? "1" : "2.4");
+      }
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");

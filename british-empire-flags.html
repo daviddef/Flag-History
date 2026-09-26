@@ -164,6 +164,47 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .isea-bg { fill: #8fb9cc; opacity: .28; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .isea-bg { fill: #2c4a58; opacity: .35; } }
+  :root[data-theme="dark"] .isea-bg { fill: #2c4a58; opacity: .35; }
 </style>
 
 <div class="wrap">
@@ -176,6 +217,40 @@
 
   <div class="scope-note">
     <b>Scope of this page:</b> the British Empire as a whole transnational entity, late 16th century&ndash;present (via the Commonwealth), six phases. Rather than attempting to cross-link every one of this atlas's country pages with a British colonial past, this page links a representative handful and states plainly that most of the rest carry the same lineage on their own pages. See <a href="south-asia-hub.html">South Asia hub</a>, <a href="ireland-flags.html">Ireland</a>, and <a href="australia-flags.html">Australia</a> as starting points. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>The home islands, c. 1583&ndash;present</h2>
+    <p class="imap-sub">A deliberately simple stand-in: rather than attempting to map a transnational empire that once covered a quarter of the globe, this traces the real coastline of the British Isles themselves &mdash; the constant home base underneath every phase of expansion and retreat described below.</p>
+    <div class="rule-box">
+      <b>This map shows the home islands, not the empire's overseas extent.</b> Charting the empire's actual worldwide territory era-by-era would require tracing dozens of separate countries' own borders &mdash; each of which already has its own page in this atlas. What changes here is only the political status of Britain itself and its relationship to the wider empire and Commonwealth, not the shape shown.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">before c. 1583</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+        <rect class="isea-bg" x="0" y="0" width="280" height="200"/>
+        <g class="context-label" pointer-events="none">
+          <text x="45" y="20">IRELAND</text>
+          <text x="245" y="90">NORTH SEA</text>
+          <text x="140" y="185">ENGLISH CHANNEL</text>
+        </g>
+        <path id="ireg-cc" class="ireg-fill" d="M65.3,10.0 L52.4,32.5 L64.7,29.6 L78.0,29.7 L74.8,46.6 L63.9,65.2 L76.4,66.5 L77.4,68.7 L88.2,93.2 L96.5,96.5 L103.9,120.2 L107.4,128.4 L122.1,132.3 L120.6,145.6 L114.4,151.7 L119.2,162.4 L108.4,173.3 L92.2,173.1 L71.5,178.8 L65.9,174.7 L57.9,184.4 L46.7,182.1 L38.2,190.0 L31.7,185.9 L49.5,164.1 L60.3,159.6 L41.3,156.1 L37.9,147.8 L50.6,141.4 L43.9,130.2 L46.2,116.7 L64.2,118.5 L66.0,106.5 L57.9,93.7 L57.7,93.4 L43.0,89.8 L40.1,84.1 L44.5,74.9 L40.6,69.2 L34.0,79.0 L33.3,59.0 L27.2,48.4 L31.6,26.9 L41.0,10.1 L50.7,11.7 L65.3,10.0 Z M33.1,94.7 L26.6,108.9 L17.5,104.6 L10.0,104.9 L12.5,93.8 L10.0,82.7 L20.2,81.8 L33.1,94.7 Z"/>
+        <text class="ireg-label" id="ilbl-cc" x="140" y="100"></text>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName"></div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline of Great Britain and Ireland; the empire's actual overseas territories are not shown &mdash; see this atlas's own regional pages for those.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -436,6 +511,150 @@
 </div>
 
 <script>
+
+(function () {
+  var IC = {
+    "era-1583-1": "#6b5c4a",
+    "era-1583": "#a9762f",
+    "era-1783": "#a9762f",
+    "era-1919": "#a9762f",
+    "era-1947": "#9c3b28",
+    "era-1949": "#204b5c"
+  };
+  var INAMES = {
+    "era-1583-1": "Pre-imperial England",
+    "era-1583": "\"First\" British Empire (early exploration and Atlantic colonies)",
+    "era-1783": "\"Second\" British Empire (19th-century expansion)",
+    "era-1919": "Territorial peak (post-WWI mandates)",
+    "era-1947": "Post-WWII decolonization wave",
+    "era-1949": "Commonwealth of Nations (loose successor)"
+  };
+  var IFLAGS = {
+    "era-1583-1": "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">PRE-IMPERIAL</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">ENGLAND</text>",
+    "era-1583": "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/>\n              <path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#cf142b\" stroke-width=\"18\"/>\n              <rect x=\"130\" width=\"40\" height=\"200\" fill=\"#cf142b\"/>\n              <rect y=\"80\" width=\"300\" height=\"40\" fill=\"#cf142b\"/>",
+    "era-1783": "<rect width=\"300\" height=\"200\" fill=\"#00247d\"/>\n              <rect x=\"0\" y=\"0\" width=\"130\" height=\"90\" fill=\"#00247d\"/>\n              <path d=\"M0,0 L130,90 M130,0 L0,90\" stroke=\"#f4efe1\" stroke-width=\"14\"/>\n              <path d=\"M0,0 L130,90 M130,0 L0,90\" stroke=\"#cf142b\" stroke-width=\"6\"/>\n              <rect x=\"54\" width=\"22\" height=\"90\" fill=\"#f4efe1\"/>\n              <rect y=\"33\" width=\"130\" height=\"22\" fill=\"#f4efe1\"/>\n              <rect x=\"60\" width=\"10\" height=\"90\" fill=\"#cf142b\"/>\n              <rect y=\"39\" width=\"130\" height=\"10\" fill=\"#cf142b\"/>",
+    "era-1919": "<rect width=\"300\" height=\"200\" fill=\"#cf142b\"/>\n              <rect x=\"0\" y=\"0\" width=\"130\" height=\"90\" fill=\"#00247d\"/>\n              <path d=\"M0,0 L130,90 M130,0 L0,90\" stroke=\"#f4efe1\" stroke-width=\"14\"/>\n              <path d=\"M0,0 L130,90 M130,0 L0,90\" stroke=\"#cf142b\" stroke-width=\"6\"/>\n              <rect x=\"54\" width=\"22\" height=\"90\" fill=\"#f4efe1\"/>\n              <rect y=\"33\" width=\"130\" height=\"22\" fill=\"#f4efe1\"/>\n              <rect x=\"60\" width=\"10\" height=\"90\" fill=\"#cf142b\"/>\n              <rect y=\"39\" width=\"130\" height=\"10\" fill=\"#cf142b\"/>",
+    "era-1947": "<rect width=\"300\" height=\"200\" fill=\"#00247d\"/>\n              <path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#f4efe1\" stroke-width=\"34\"/>\n              <path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#cf142b\" stroke-width=\"14\"/>\n              <rect x=\"125\" width=\"50\" height=\"200\" fill=\"#f4efe1\"/>\n              <rect y=\"75\" width=\"300\" height=\"50\" fill=\"#f4efe1\"/>\n              <rect x=\"137\" width=\"26\" height=\"200\" fill=\"#cf142b\"/>\n              <rect y=\"87\" width=\"300\" height=\"26\" fill=\"#cf142b\"/>\n              <rect x=\"0\" y=\"0\" width=\"130\" height=\"90\" fill=\"#00247d\"/>\n              <circle cx=\"65\" cy=\"45\" r=\"26\" fill=\"#f4efe1\"/>",
+    "era-1949": "<rect width=\"300\" height=\"200\" fill=\"#00247d\"/>\n              <path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#f4efe1\" stroke-width=\"34\"/>\n              <path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#cf142b\" stroke-width=\"14\"/>\n              <rect x=\"125\" width=\"50\" height=\"200\" fill=\"#f4efe1\"/>\n              <rect y=\"75\" width=\"300\" height=\"50\" fill=\"#f4efe1\"/>\n              <rect x=\"137\" width=\"26\" height=\"200\" fill=\"#cf142b\"/>\n              <rect y=\"87\" width=\"300\" height=\"26\" fill=\"#cf142b\"/>"
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"before c. 1583", name:"Pre-imperial England", t:{ cc: IC["era-1583-1"] }, flagKeys:{ cc: "era-1583-1" },
+      story:"before Elizabethan-era exploration begins in earnest, England (and, separately, Scotland) exists as an ordinary medieval and early-modern kingdom with no overseas colonial holdings of consequence. This entry marks the baseline against which the empire's subsequent, extraordinarily rapid global expansion is measured. England's own flag of this era (St George's cross) is well documented but is covered in detail on\u2026" },
+    { year:"c. 1583 \u2013 1783", name:"\"First\" British Empire (early exploration and Atlantic colonies)", t:{ cc: IC["era-1583"] }, flagKeys:{ cc: "era-1583" },
+      story:"Elizabethan-era exploration and privateering (Drake, Raleigh) opens the Atlantic to English ambition, and the East India Company's founding by royal charter in 1600 begins a commercial foothold in Asia that will later become the core of colonial India. The 17th and 18th centuries build a chain of North American and Caribbean colonies and a lucrative, morally catastrophic plantation and slave-trade economy in the\u2026" },
+    { year:"1783 \u2013 1919", name:"\"Second\" British Empire (19th-century expansion)", t:{ cc: IC["era-1783"] }, flagKeys:{ cc: "era-1783" },
+      story:"the shock of losing the Thirteen Colonies redirects British imperial ambition eastward and southward. The East India Company's growing territorial control over India (formalized as Crown rule, the British Raj, after the 1857 rebellion), the Scramble for Africa following the 1884\u201385 Berlin Conference, and the settlement of Australia (from 1788) and New Zealand (from 1840) together build what historians call the\u2026" },
+    { year:"1919 \u2013 1947", name:"Territorial peak (post-WWI mandates)", t:{ cc: IC["era-1919"] }, flagKeys:{ cc: "era-1919" },
+      story:"the empire reaches its largest-ever extent immediately after WWI, when former German and Ottoman territories are redistributed as League of Nations mandates \u2014 among them Palestine, Iraq, and Tanganyika \u2014 adding to holdings already covering India, huge swaths of Africa from the 19th-century Scramble for Africa, Australia and New Zealand, and Caribbean and Pacific territories. By the early 1920s the empire governs\u2026" },
+    { year:"1947 \u2013 1980s", name:"Post-WWII decolonization wave", t:{ cc: IC["era-1947"] }, flagKeys:{ cc: "era-1947" },
+      story:"India's independence and simultaneous partition in August 1947, ending nearly two centuries of British rule on the subcontinent, is the pivotal turning point after which decolonization accelerates sharply. Wartime exhaustion, the moral force of the 1941 Atlantic Charter's self-determination principles, and rising nationalist movements across the colonies combine to make continued direct rule untenable.\u2026" },
+    { year:"1949/1997 \u2013 present", name:"Commonwealth of Nations (loose successor)", t:{ cc: IC["era-1949"] }, flagKeys:{ cc: "era-1949" },
+      story:"the 1949 London Declaration allows India to remain in the Commonwealth as a republic without the British monarch as head of state, transforming the organization from an empire's residue into a voluntary association of formally equal, independent states. The 1997 handover of Hong Kong to China is widely treated as the symbolic close of the empire proper. Today the Commonwealth comprises 56 member states (most,\u2026" }
+  ];
+
+  var IREGIONS = ["cc"];
+  var IREGION_NAMES = { cc: "British Isles" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(sliderVal) {
+    var idx = sliderVal;
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+        lbl.textContent = IREGION_NAMES[id];
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      if (line) {
+        line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+        line.setAttribute("stroke-width", same ? "1" : "2.4");
+      }
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
