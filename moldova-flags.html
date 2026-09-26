@@ -174,16 +174,43 @@
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
 
-  .rmap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
-  .rmap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
-  .rmap-section .rmap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
-  .rmap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
-  .rmap-section .rule-box b { color: var(--brick); }
-  .rmap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; display: flex; gap: 28px; align-items: center; flex-wrap: wrap; justify-content: center; }
-  #rmap-svg { display: block; width: 100%; max-width: 210px; height: auto; flex: none; }
-  .rmap-shape { fill: var(--brass); opacity: .8; stroke: #241f14; stroke-width: 1.4; stroke-linejoin: round; }
-  .rmap-caption { flex: 1; min-width: 220px; font-size: .92rem; color: var(--ink); }
-  .rmap-caption b { color: var(--brick); }
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 300px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -198,15 +225,41 @@
     <b>Scope of this page:</b> the lands of present-day Moldova &mdash; the eastern portion of historic Moldavia, between the Prut and Dniester rivers &mdash; c. 1359&ndash;present, six political entities. This page cross-references <a href="romania-flags.html">Romania's own flag atlas</a>, which covers the shared medieval Principality of Moldavia in full before the 1812 split. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
   </div>
 
-  <div class="rmap-section">
-    <h2>The real shape of Moldova</h2>
-    <p class="rmap-sub">Traced from actual border coordinates, not schematic &mdash; Moldova is landlocked and elongated north-south, wedged between Romania (west, across the Prut) and Ukraine (north, east, and south, across the Dniester and around the Budjak).</p>
-    <div class="rmap-frame">
-      <svg id="rmap-svg" viewBox="0 0 340 424.6" xmlns="http://www.w3.org/2000/svg">
-        <path class="rmap-shape" d="M20.0,51.8 L41.0,32.8 L99.6,20.0 L164.5,60.2 L200.7,65.1 L240.5,99.8 L234.2,143.6 L266.3,164.7 L279.0,218.7 L309.8,251.5 L303.6,270.7 L320.0,283.8 L296.7,293.4 L244.8,289.6 L236.1,271.7 L217.7,282.0 L223.9,305.1 L199.8,346.3 L184.4,390.6 L162.2,404.6 L146.4,345.7 L155.7,290.6 L152.9,233.9 L102.1,157.1 L74.1,102.7 L46.9,64.4 L20.0,51.8 Z"/>
+  <div class="imap-section">
+    <h2>Moldova and Transnistria, 1991&ndash;present</h2>
+    <p class="imap-sub">Moldova's own real border, traced whole, with a schematic internal line marking the one genuine split this page's history supports: the breakaway strip on the Dniester's eastern bank. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>For every era before 1991, the whole territory shown here moved as one piece.</b> Transnistria's separate claim traces back to real administrative history &mdash; it was part of the Soviet Ukraine-nested Moldavian ASSR from 1924, two decades before the rest of Bessarabia joined it in 1940 &mdash; but no documented separate government actually ran the east bank on its own until the breakaway of 1990&ndash;92. The line below only solidifies for that final era.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1359</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 340 424.6" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="60" y="90">ROMANIA</text>
+          <text x="290" y="120">UKRAINE</text>
+          <text x="130" y="370">UKRAINE</text>
+        </g>
+        <path id="ireg-core" class="ireg-fill" d="M20.0,51.8 L41.0,32.8 L99.6,20.0 L164.5,60.2 L200.7,65.1 L240.5,99.8 L234.2,143.6 L220,150 L210,175 L206,210 L208,250 L217.7,282.0 L223.9,305.1 L199.8,346.3 L184.4,390.6 L162.2,404.6 L146.4,345.7 L155.7,290.6 L152.9,233.9 L102.1,157.1 L74.1,102.7 L46.9,64.4 Z"/>
+        <path id="ireg-transnistria" class="ireg-fill" d="M234.2,143.6 L266.3,164.7 L279.0,218.7 L309.8,251.5 L303.6,270.7 L320.0,283.8 L296.7,293.4 L244.8,289.6 L236.1,271.7 L217.7,282.0 L208,250 L206,210 L210,175 L220,150 Z"/>
+        <path class="iborder-line" id="ib-core-transnistria" d="M234.2,143.6 L220,150 L210,175 L206,210 L208,250 L217.7,282.0"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-core" x="120" y="220">MOLDOVA</text>
+          <text class="ireg-label" id="ilbl-transnistria" x="266" y="225" style="font-size:8.5px">TRANSNISTRIA</text>
+        </g>
       </svg>
-      <p class="rmap-caption">The Dniester runs along Moldova's northeastern and eastern edge before curving back inside the country's own borders in the south. That curve matters: it's the reason a strip of Moldovan territory sits on the Dniester's <i>eastern</i> bank at all &mdash; the narrow region known as <b>Transnistria</b>, discussed in the final timeline entry below. No internal line is drawn on this map; it shows only Moldova's real, internationally recognized frontier.</p>
-      <p class="map-note">Border traced from public domain GeoJSON country-outline data. Schematic projection, not a surveyed map.</p>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Principality of Moldavia (founding era)</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border of modern Moldova; the internal Transnistria line is a schematic approximation of the Dniester, not a surveyed administrative boundary, and only solidifies for the 1991&ndash;present era &mdash; see the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
 
@@ -468,6 +521,139 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    founding: "#5c2a24", moldavia: "#a4302a", russia: "#204b5c", romania: "#a9762f",
+    soviet: "#8c2f2f", moldova: "#2f6b4a", transnistria: "#6b5c4a"
+  };
+  var INAMES = {
+    founding: "Principality of Moldavia (founding era)", moldavia: "Principality of Moldavia (Ottoman vassal)",
+    russia: "Bessarabia, within the Russian Empire", romania: "Bessarabia, within the Kingdom of Romania",
+    soviet: "Moldavian Soviet Socialist Republic", moldova: "Republic of Moldova",
+    transnistria: "Transnistria (unrecognized breakaway)"
+  };
+  var IFLAGS = {
+    founding: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    moldavia: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100)" fill="#241f14"><path d="M0,-30 L-6,-6 L-30,-8 L-10,8 L-20,30 L0,14 L20,30 L10,8 L30,-8 L6,-6 Z"/></g><circle cx="150" cy="60" r="6" fill="#f4efe1"/>',
+    russia: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#1e2f96"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
+    romania: '<rect width="100" height="200" fill="#1e3d6b"/><rect x="100" width="100" height="200" fill="#d9a63c"/><rect x="200" width="100" height="200" fill="#a4302a"/><g transform="translate(150,100)"><rect x="-16" y="-14" width="32" height="30" rx="2" fill="#f4efe1" stroke="#241f14" stroke-width="2"/></g>',
+    soviet: '<rect width="300" height="200" fill="#b8262a"/><rect y="168" width="300" height="13" fill="#3f8f52"/><g transform="translate(58,52)"><path d="M4,-30 l3,9 10,0 -8,6 3,9 -8,-6 -8,6 3,-9 -8,-6 10,0 Z" fill="#f2c94c"/></g>',
+    moldova: '<rect width="100" height="200" fill="#003da5"/><rect x="100" width="100" height="200" fill="#ffd200"/><rect x="200" width="100" height="200" fill="#ce1126"/><g transform="translate(150,100)"><rect x="-17" y="-16" width="34" height="34" rx="3" fill="#a4302a" stroke="#c9a13c" stroke-width="2"/></g>',
+    transnistria: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#3f8f52"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/><g transform="translate(150,33)"><path d="M-12,7 l8,0 0,-4 -13,0 0,-4 18,0 0,12 -13,0 Z" fill="#f2c94c"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1359", name:"Principality of Moldavia (founding era)", t:{ core:IC.founding, transnistria:IC.founding }, flagKeys:{ core:"founding", transnistria:"founding" },
+      story:"Bogdan I breaks from Hungary around 1359 to found Moldavia as an independent principality; no flag is securely documented this early. The whole future Moldova, both banks of the Dniester alike, is unified territory throughout this era." },
+    { year:"1600", name:"Principality of Moldavia (Ottoman vassal)", t:{ core:IC.moldavia, transnistria:IC.moldavia }, flagKeys:{ core:"moldavia", transnistria:"moldavia" },
+      story:"Moldavia keeps its own princes under Ottoman suzerainty, flying the black aurochs' head on red &mdash; the direct ancestor of modern Moldova's own arms. The 1812 Treaty of Bucharest, still two centuries off, is what eventually cuts this single principality in two." },
+    { year:"1812", name:"Bessarabia, within the Russian Empire", t:{ core:IC.russia, transnistria:IC.russia }, flagKeys:{ core:"russia", transnistria:"russia" },
+      story:"The 1812 Treaty of Bucharest cedes the land between the Prut and Dniester to Russia as the province of Bessarabia, flying the empire's own white-blue-red tricolor. The whole province, both banks of the future internal line, is one Russian administrative unit." },
+    { year:"1918", name:"Bessarabia, within the Kingdom of Romania", t:{ core:IC.romania, transnistria:IC.romania }, flagKeys:{ core:"romania", transnistria:"romania" },
+      story:"The Sfatul Țării votes to unite Bessarabia with the Kingdom of Romania on 27 March 1918, flying Romania's own royal tricolor across the whole reunited province &mdash; the USSR never recognizes the union as legitimate." },
+    { year:"1940", name:"Moldavian Soviet Socialist Republic", t:{ core:IC.soviet, transnistria:IC.soviet }, flagKeys:{ core:"soviet", transnistria:"soviet" },
+      story:"Moscow creates the Moldavian SSR in 1940 by joining most of Bessarabia to a strip of the existing, Ukraine-nested Moldavian ASSR (itself dating to 1924) &mdash; the older, separate Soviet administrative history of that east-bank strip is part of why Transnistria later saw itself as having a distinct claim, though the whole SSR still flies one flag throughout this period." },
+    { year:"1991–present", name:"Republic of Moldova & Transnistria", t:{ core:IC.moldova, transnistria:IC.transnistria }, flagKeys:{ core:"moldova", transnistria:"transnistria" },
+      story:"Moldova declares independence on 27 August 1991; within months a breakaway government on the Dniester's east bank fights a short 1992 war and, after a Russian-brokered ceasefire, has run its own government, currency, and security apparatus from Tiraspol ever since &mdash; recognized by no UN member state, but a frozen, unresolved status quo for over three decades." }
+  ];
+
+  var IREGIONS = ["core","transnistria"];
+  var IREGION_NAMES = { core:"Moldova (rest of the country)", transnistria:"Transnistria" };
+  var IADJ = [["core","transnistria"]];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.4");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
