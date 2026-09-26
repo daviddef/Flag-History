@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,51 @@
   <p class="lede">Independence arrives on 1 October 1978 as Tuvalu, a name the islands had already chosen for themselves at separation three years earlier &mdash; and the light-blue ensign adopted then, its nine stars set out in the geographic pattern of the nine home islands, is the one still flown today.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the islands of present-day Tuvalu, pre-1892 to present, four entries. No interactive map on this page &mdash; see the Pacific hub for the region-wide overview. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the islands of present-day Tuvalu, pre-1892 to present, four entries. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Nine atolls, one government</h2>
+    <p class="imap-sub">Tuvalu's own nine real atolls, traced at their true positions and spacing &mdash; scattered across roughly 676,000 km&sup2; of open Pacific, each shown as a legible dot rather than the sub-pixel speck its true land area would otherwise be. Press play, or drag the slider, to watch who governed all nine at once.</p>
+    <div class="rule-box">
+      <b>This is one of the countries in the atlas that doesn't split internally.</b> Whatever authority existed at a given time &mdash; pre-contact atoll chiefs aside, who never shared one government at all &mdash; governed all nine islands as a single unit; there was never a genuinely separate administration for part of the group. What changes here is only who held that single unit.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">pre-1892</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="255" y="20">KIRIBATI &rarr;</text>
+          <text x="55" y="300">FIJI &rarr;</text>
+        </g>
+        <g id="ireg-tv">
+          <circle class="ireg-fill" cx="250.4" cy="233.8" r="6.5"/>
+          <circle class="ireg-fill" cx="187.8" cy="198.9" r="6.5"/>
+          <circle class="ireg-fill" cx="94.2" cy="133.0" r="6.5"/>
+          <circle class="ireg-fill" cx="30.8" cy="63.7" r="6.5"/>
+          <circle class="ireg-fill" cx="108.9" cy="49.8" r="6.5"/>
+          <circle class="ireg-fill" cx="16.8" cy="17.3" r="6.5"/>
+          <circle class="ireg-fill" cx="303.8" cy="302.4" r="6.5"/>
+          <circle class="ireg-fill" cx="301.3" cy="298.4" r="6.5"/>
+          <circle class="ireg-fill" cx="210.7" cy="154.7" r="6.5"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-tv" x="150" y="130">TUVALU</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Indigenous Polynesian Tuvaluan communities</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real relative positions traced from GeoJSON; each island is rendered as a fixed-size legible dot rather than to true (near-invisible) scale. No internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -393,6 +475,107 @@
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var IC = {
+    precontact: "#5c2a24", joint: "#00247d", separate: "#00247d", independent: "#6fa8cc"
+  };
+  var INAMES = {
+    precontact: "No single government (pre-contact atoll communities)", joint: "Gilbert and Ellice Islands Colony (joint)",
+    separate: "Ellice Islands (separate colony)", independent: "Independent Tuvalu"
+  };
+  var IFLAGS = {
+    precontact: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    joint: '<rect width="300" height="200" fill="#00247d"/><g><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#a4302a" stroke-width="7"/><rect x="62" width="26" height="100" fill="#f4efe1"/><rect y="37" width="150" height="26" fill="#f4efe1"/><rect x="68" width="14" height="100" fill="#a4302a"/><rect y="43" width="150" height="14" fill="#a4302a"/></g><circle cx="220" cy="140" r="26" fill="#f4efe1"/><circle cx="220" cy="140" r="15" fill="#a4302a"/>',
+    separate: '<rect width="300" height="200" fill="#00247d"/><g><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#a4302a" stroke-width="7"/><rect x="62" width="26" height="100" fill="#f4efe1"/><rect y="37" width="150" height="26" fill="#f4efe1"/><rect x="68" width="14" height="100" fill="#a4302a"/><rect y="43" width="150" height="14" fill="#a4302a"/></g><circle cx="220" cy="140" r="26" fill="#f4efe1"/><circle cx="220" cy="140" r="15" fill="#204b5c"/>',
+    independent: '<rect width="300" height="200" fill="#6fa8cc"/><g><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="17"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#a4302a" stroke-width="7"/><rect x="62" width="26" height="100" fill="#f4efe1"/><rect y="37" width="150" height="26" fill="#f4efe1"/><rect x="68" width="14" height="100" fill="#a4302a"/><rect y="43" width="150" height="14" fill="#a4302a"/></g><g fill="#f0c419"><path d="M180,14 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/><path d="M215,9 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/><path d="M250,24 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/><path d="M280,49 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/><path d="M270,89 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/><path d="M200,104 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/><path d="M160,139 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/><path d="M200,164 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/><path d="M245,144 l5,11 12,1.5 -8.5,8.5 2,12 -10.5,-5.5 -10.5,5.5 2,-12 -8.5,-8.5 12,-1.5 Z"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"pre-1892", name:"Indigenous Polynesian Tuvaluan communities", t:{ tv:IC.precontact }, flagKeys:{ tv:"precontact" },
+      story:"For centuries before British contact, the nine atolls are home to distinct Polynesian communities bound by seafaring tradition and atoll-by-atoll custom rather than any single overarching authority. No securely documented flag survives, and none is invented to stand in for one." },
+    { year:"1892", name:"Ellice Islands within the Gilbert and Ellice Islands colony", t:{ tv:IC.joint }, flagKeys:{ tv:"joint" },
+      story:"Britain declares a protectorate over the Ellice Islands in 1892, formally merged with the Gilbert Islands into one colony in 1916. For over sixty years the Polynesian Ellice Islanders and Micronesian Gilbertese are administered as one, flying the same joint colony's Blue Ensign." },
+    { year:"1975", name:"Ellice Islands (separate British colony)", t:{ tv:IC.separate }, flagKeys:{ tv:"separate" },
+      story:"A 1974 referendum sees the Polynesian Ellice Islanders vote decisively to separate from the Gilbert Islands; Britain grants the split in 1975. The new colony takes the name Tuvalu, flying its own Blue Ensign with a distinct badge disc for the first time." },
+    { year:"1978–present", name:"Independent Tuvalu", t:{ tv:IC.independent }, flagKeys:{ tv:"independent" },
+      story:"Full independence arrives 1 October 1978, within the Commonwealth. The new flag keeps the Union Jack in the canton, while nine yellow stars scattered across the fly are set out in the actual geographic layout of the nine home islands &mdash; a literal map worked into the flag itself." }
+  ];
+
+  var IREGIONS = ["tv"];
+  var IREGION_NAMES = { tv:"Tuvalu (all nine islands)" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.querySelectorAll("#ireg-" + id + " .ireg-fill").forEach(function (el) {
+        el.setAttribute("fill", era.t[id]);
+      });
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.tv; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: all nine islands";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
