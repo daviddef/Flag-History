@@ -18,21 +18,21 @@
   :root {
     --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
     --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
-    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c; --sea: #b9d3da;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
       --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
-      --muted: #9a9280; --hair: #33393f;
+      --muted: #9a9280; --hair: #33393f; --sea: #17303a;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
     --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
-    --muted: #9a9280; --hair: #33393f;
+    --muted: #9a9280; --hair: #33393f; --sea: #17303a;
     color-scheme: dark;
   }
   * { box-sizing: border-box; }
@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,36 @@
   <p class="lede">Caracas is also, not incidentally, Simón Bolívar's own birthplace. Venezuela's independence, its brief union with Colombia and Ecuador in Gran Colombia, and its final split into a separate republic in 1830 all trace back to the same man and the same decade.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the territory of present-day Venezuela, c. 1500&ndash;present, five political entities. No internal governing partition exists within Venezuela's own modern borders after independence, so this page carries no partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the territory of present-day Venezuela, c. 1500&ndash;present, five political entities. No internal governing partition exists within Venezuela's own modern borders after independence &mdash; the map below traces the whole country's real coastline instead. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One coastline, five flags</h2>
+    <p class="imap-sub">Venezuela's own real traced border &mdash; no internal partition to show, since the Captaincy General, the war years, Gran Colombia, and the modern republic were all governed as one piece of territory. Press play, or drag the slider, to watch the flag change over the same coastline.</p>
+    <div class="rule-box">
+      <b>This is a single-region page.</b> Unlike Hungary's Ottoman/Habsburg split or Vietnam's 17th-parallel line, Venezuela has no genuinely separate internal region in its own history &mdash; even the independence-war years were fought over control of the same whole territory, not a partition of it. What changes here is only which flag flew over all of it at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1500</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="380" height="300" fill="var(--sea)"/>
+        <path id="ireg-ve" class="ireg-fill" d="M94.92,43.69 L94.36,48.41 L82.73,50.73 L89.19,59.78 L88.95,70.20 L80.21,81.78 L87.71,97.60 L96.25,96.30 L100.70,81.89 L94.56,74.88 L93.56,59.79 L118.22,51.68 L115.48,42.29 L122.42,36.00 L129.53,50.01 L143.42,50.33 L156.29,61.45 L157.07,68.05 L174.85,68.22 L196.02,66.17 L207.36,75.10 L222.51,77.56 L233.62,71.34 L233.85,66.32 L258.38,65.11 L282.12,64.84 L265.30,70.73 L272.07,80.14 L287.91,81.63 L302.93,91.44 L306.08,107.41 L316.40,106.96 L324.17,111.65 L308.47,123.36 L306.74,130.63 L313.52,138.03 L308.60,141.76 L296.41,144.96 L296.81,154.17 L291.44,159.65 L304.85,174.78 L307.47,180.40 L300.23,188.01 L278.07,195.47 L263.83,198.57 L258.11,203.28 L242.36,198.30 L227.69,195.75 L223.98,197.58 L232.85,202.75 L232.05,216.11 L234.80,228.67 L251.58,230.38 L252.65,234.57 L238.50,240.24 L236.20,248.68 L228.04,251.95 L213.31,256.61 L209.48,262.71 L194.08,264.00 L183.17,253.46 L177.13,233.58 L171.87,226.61 L164.68,222.21 L174.72,212.29 L174.04,207.83 L168.41,201.91 L164.42,188.66 L165.97,174.36 L170.39,167.67 L173.96,156.94 L166.95,153.51 L155.66,155.78 L141.40,154.72 L133.39,156.85 L119.45,139.69 L107.94,137.15 L82.47,139.07 L77.75,132.12 L72.88,130.46 L72.18,126.30 L74.53,118.92 L72.97,110.89 L68.60,106.51 L66.06,97.34 L55.83,96.01 L61.33,84.35 L63.75,70.13 L69.51,62.72 L77.18,57.00 L82.20,47.04 L94.92,43.69 Z"/>
+        <text class="ireg-label" id="ilbl-ve" x="190" y="148">VENEZUELA</text>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Indigenous coastal peoples</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced coastline (simplified from GeoJSON survey data) &mdash; no internal partition, per the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -395,6 +462,105 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    none:"#5c2a24", colonial:"#a4302a", warflag:"#fcd116", grancolombia:"#fcd116", modern:"#fcd116"
+  };
+  var INAMES = {
+    none:"No flag documented", colonial:"Captaincy General of Venezuela (Spain)", warflag:"First/Second Republics (independence war)",
+    grancolombia:"Gran Colombia", modern:"Republic of Venezuela (modern)"
+  };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    colonial: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#a9762f" stroke-width="10"/><path d="M0,0 L300,0 L300,50 L0,50 Z" fill="#a4302a"/><circle cx="150" cy="120" r="40" fill="#c9a13c"/>',
+    warflag: '<rect width="300" height="66.7" fill="#fcd116"/><rect y="66.7" width="300" height="66.6" fill="#003893"/><rect y="133.3" width="300" height="66.7" fill="#ce1126"/>',
+    grancolombia: '<rect width="300" height="66.7" fill="#fcd116"/><rect y="66.7" width="300" height="66.6" fill="#003893"/><rect y="133.3" width="300" height="66.7" fill="#ce1126"/><path d="M150,80 l7,20 21,2 -17,14 6,20 -17,-13 -17,13 6,-20 -17,-14 21,-2 Z" fill="#f4efe1"/>',
+    modern: '<rect width="300" height="66.7" fill="#fcd116"/><rect y="66.7" width="300" height="66.6" fill="#003893"/><rect y="133.3" width="300" height="66.7" fill="#ce1126"/><g fill="#f4efe1"><circle cx="120" cy="100" r="8"/><circle cx="140" cy="90" r="8"/><circle cx="160" cy="88" r="8"/><circle cx="180" cy="90" r="8"/><circle cx="200" cy="98" r="8"/></g>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1500–1777", name:"Indigenous coastal peoples & early Spanish provinces", t:{ ve:IC.none }, flagKeys:{ ve:"none" },
+      story:"Scattered indigenous groups &mdash; Caquetío, Cumanagoto, and others &mdash; and loosely connected early Spanish settlements from the 1520s, administered as separate provinces rather than one coherent colony. No securely documented territorial flag survives from this fragmented era." },
+    { year:"1777–1810", name:"Captaincy General of Venezuela", t:{ ve:IC.colonial }, flagKeys:{ ve:"colonial" },
+      story:"Spain consolidates its scattered Venezuelan provinces into a single Captaincy General seated at Caracas in 1777, giving the territory its own coherent administrative identity for the first time. Spain flew no single fixed colonial flag; shown here schematically with the cross of Burgundy and the captaincy seal's gold sun." },
+    { year:"1810–1819", name:"First & Second Republics (independence war)", t:{ ve:IC.warflag }, flagKeys:{ ve:"warflag" },
+      story:"Caracas deposes its Spanish governor on 19 April 1810 and declares full independence on 5 July 1811 &mdash; the first in Spanish America. Years of brutal war follow until Bolívar's decisive 1821 victory at Carabobo, flying Francisco de Miranda's yellow-blue-red tricolor throughout." },
+    { year:"1819–1830", name:"Gran Colombia", t:{ ve:IC.grancolombia }, flagKeys:{ ve:"grancolombia" },
+      story:"Bolívar's 1819 Congress of Angostura proclaims Gran Colombia, uniting Venezuela, New Granada, and Ecuador into a single republic under the same tricolor with a central white star. Regional rivalry pulls the union apart within the decade." },
+    { year:"1830–present", name:"Republic of Venezuela (modern, separate state)", t:{ ve:IC.modern }, flagKeys:{ ve:"modern" },
+      story:"General José Antonio Páez leads Venezuela out of Gran Colombia in 1830, the same year Bolívar dies, re-forming it as its own separate republic. The same tricolor carries on, with a star added for each founding province &mdash; seven originally, eight since 2006." }
+  ];
+
+  var IREGIONS = ["ve"];
+  var IREGION_NAMES = { ve:"Venezuela" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.ve; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
