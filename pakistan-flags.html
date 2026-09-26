@@ -174,6 +174,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 560px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease, opacity 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease, opacity .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -185,7 +223,45 @@
   <p class="lede">Pakistan shares its deep pre-1947 history with India: the Indus Valley Civilization, the long sweep of regional sultanates, the Mughal Empire, and the British Raj all cover ground that this atlas's India page also tells from its own side. This page compresses that shared span to keep the focus on the regions &mdash; Sindh, Punjab, Balochistan, the North-West Frontier, and East Bengal &mdash; that became Pakistan, and on the state's own flag from 1947 onward.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands that became the Dominion and then Islamic Republic of Pakistan, c. 3300 BCE&ndash;present, seven political entities. Pre-1947 history (Indus Valley Civilization, the long span of regional kingdoms and Islamic sultanates, and Mughal rule) is compressed here since it is shared with India and, for the Mughal period specifically, covered in full on this atlas's dedicated <a href="mughal-empire-flags.html">Mughal Empire page</a> rather than duplicated. From 1947 onward the page follows Pakistan's own flag and state continuity, including the 1971 separation of East Pakistan as Bangladesh. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands that became the Dominion and then Islamic Republic of Pakistan, c. 3300 BCE&ndash;present, seven political entities. Pre-1947 history (Indus Valley Civilization, the long span of regional kingdoms and Islamic sultanates, and Mughal rule) is compressed here since it is shared with India and, for the Mughal period specifically, covered in full on this atlas's dedicated <a href="mughal-empire-flags.html">Mughal Empire page</a> rather than duplicated. From 1947 onward the page follows Pakistan's own flag and state continuity, including the 1971 separation of East Pakistan as Bangladesh. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>Two wings, one government, 1947&ndash;1971</h2>
+    <p class="imap-sub">Pakistan's own real border, plus East Pakistan's (today Bangladesh, traced on its own real coastline) &mdash; the two pieces one government actually held a thousand miles apart, joined by nothing but shared rule, for the whole life of the 1947 dominion and the 1956 republic. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>This is the only country in the atlas whose "internal split" was never adjacent.</b> West and East Pakistan shared one flag, one government, and no common border at all &mdash; separated the entire time by Indian territory. The 1971 war ends the arrangement for good: East Pakistan becomes Bangladesh, and this page's own territory continues as the western piece alone.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 3300 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 652 397" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="380" y="180">INDIA</text>
+          <text x="150" y="30">AFGHANISTAN</text>
+          <text x="70" y="330">ARABIAN SEA</text>
+          <text x="630" y="240">BAY OF BENGAL</text>
+        </g>
+        <path id="ireg-west" class="ireg-fill" d="M311.7,51.7 L324.2,59.7 L329.3,72.7 L357.2,79.6 L340.8,93.9 L321.9,96.4 L296.1,92.3 L287.7,99.6 L293.8,114.5 L299.7,126.0 L313.4,134.4 L298.9,144.2 L299.2,156.3 L282.7,173.4 L272.0,190.7 L254.2,208.5 L234.5,207.2 L215.7,225.0 L226.9,232.6 L228.8,245.7 L238.4,254.3 L241.7,268.9 L204.3,268.9 L193.0,280.2 L180.5,275.9 L175.5,263.7 L162.3,250.8 L131.0,254.0 L103.4,254.3 L79.5,256.7 L85.9,236.9 L110.4,228.1 L109.0,220.3 L100.8,217.6 L100.4,202.6 L84.1,195.1 L77.3,184.8 L68.9,175.9 L97.3,184.6 L114.4,182.0 L124.5,184.2 L128.0,180.5 L139.8,182.0 L161.9,174.9 L162.5,160.4 L172.0,150.8 L184.6,150.8 L186.5,146.1 L199.5,143.9 L205.8,145.5 L212.4,140.7 L211.5,130.5 L218.7,120.2 L229.5,115.9 L222.8,104.7 L239.0,105.2 L243.7,99.1 L243.0,92.5 L251.4,85.4 L249.5,76.9 L245.5,69.7 L255.4,62.3 L273.6,58.8 L293.1,56.8 L301.8,53.6 L311.7,51.7 Z"/>
+        <path id="ireg-east" class="ireg-fill" opacity="0" d="M609.4,308.3 L609.1,320.5 L603.2,317.9 L604.3,331.6 L599.4,322.7 L598.4,314.1 L595.2,305.9 L588.1,296.0 L572.4,295.3 L574.0,302.3 L568.6,311.8 L561.4,308.3 L558.9,311.4 L554.1,309.6 L547.5,308.1 L544.9,294.1 L539.0,281.3 L541.9,271.0 L531.4,266.5 L535.2,260.3 L545.8,253.9 L533.6,244.9 L539.6,233.4 L553.0,240.8 L561.2,241.6 L562.7,253.4 L578.8,255.7 L594.6,255.5 L604.4,258.4 L596.6,272.8 L589.0,273.8 L583.7,283.4 L593.0,292.3 L595.8,281.4 L600.5,281.3 L609.4,308.3 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-west" x="214" y="159">WEST / PAKISTAN</text>
+          <text class="ireg-label" id="ilbl-east" x="574" y="285" opacity="0">EAST PAKISTAN</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Indus Valley Civilization</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Both shapes traced from real public coastal-vertex data. The eastern shape fades in only for the 1947&ndash;1971 united era and turns hatched (independent Bangladesh, off this page's scope) from 1971 onward.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -473,6 +549,121 @@
 </div>
 
 <script>
+(function () {
+  var IC = { indus:"#6b5c4a", regional:"#8a5a2e", mughal:"#a9762f", colony:"#204b5c", dominion:"#5c7a8a", republic:"#9c3b28", modern:"#9c3b28", seceded:"#6b6b6b" };
+  var INAMES = {
+    indus:"Indus Valley Civilization", regional:"Successive regional kingdoms and Islamic sultanates",
+    mughal:"Mughal Empire", colony:"British Colonial Rule (British Raj)", dominion:"Dominion of Pakistan",
+    republic:"Islamic Republic of Pakistan (First Republic)", modern:"Islamic Republic of Pakistan (modern)",
+    seceded:"Independent as Bangladesh (off this page's scope)"
+  };
+  var IFLAGS = {
+    noflag: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    nosingle: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO SINGLE</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">FLAG</text>',
+    mughal: '<rect width="300" height="200" fill="#2f6b3a"/><path d="M150,66 l8,18 20,2 -14,14 3,20 -17,-9 -17,9 3,-20 -14,-14 20,-2 Z" fill="#e8d9a0"/>',
+    raj: '<rect width="300" height="200" fill="#a4302a"/><rect width="120" height="80" fill="#1e2f96"/><line x1="0" y1="0" x2="120" y2="80" stroke="#ffffff" stroke-width="10"/><line x1="120" y1="0" x2="0" y2="80" stroke="#ffffff" stroke-width="10"/><line x1="0" y1="0" x2="120" y2="80" stroke="#a4302a" stroke-width="4"/><line x1="120" y1="0" x2="0" y2="80" stroke="#a4302a" stroke-width="4"/><rect x="52" width="16" height="80" fill="#ffffff"/><rect y="32" width="120" height="16" fill="#ffffff"/><rect x="56" width="8" height="80" fill="#a4302a"/><rect y="36" width="120" height="8" fill="#a4302a"/><path d="M215,86 l6,13 14,2 -10,10 2,14 -13,-7 -13,7 2,-14 -10,-10 14,-2 Z" fill="#f4efe1"/>',
+    pakflag: '<rect width="300" height="200" fill="#01411c"/><rect width="75" height="200" fill="#ffffff"/><circle cx="150" cy="100" r="42" fill="#ffffff"/><circle cx="161" cy="94" r="33" fill="#01411c"/><path d="M172,86 l6,13 14,2 -10,10 2,14 -13,-7 -13,7 2,-14 -10,-10 14,-2 Z" fill="#ffffff"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 3300 – 1300 BCE", west:"indus", east:null, flagWest:"noflag", flagEast:null,
+      story:"The Indus Valley Civilization flourishes along the Indus, with major urban centers at Mohenjo-daro and Harappa in present-day Sindh and Punjab. No flag or comparable state symbol survives; the region that later becomes East Pakistan/Bangladesh is not part of this same civilization's core and is left unshaded." },
+    { year:"1300 BCE – 1526 CE", west:"regional", east:null, flagWest:"nosingle", flagEast:null,
+      story:"A long, genuinely fragmented span of Vedic-era kingdoms, Persian and Greek influence, the Maurya and Kushan empires, and, from the 8th century, a succession of local and regional Islamic dynasties. No single flag unites this span; shown honestly blank over the western lands alone." },
+    { year:"1526 – 1857", west:"mughal", east:"mughal", flagWest:"mughal", flagEast:"mughal",
+      story:"Babur's 1526 victory at Panipat establishes Mughal rule across northern India, eventually including both the Sindh/Punjab lands and, from later conquests, Bengal — the first era on this map where both West and East pieces answer to the same government, though not yet organized as \"Pakistan\" in any sense." },
+    { year:"1857 – 1947", west:"colony", east:"colony", flagWest:"raj", flagEast:"raj",
+      story:"After the 1857 rebellion, the British Crown assumes direct rule under the Government of India Act 1858. The Star of India ensign represents British India as a whole, including both the Sindh/Punjab region and Bengal, administered together as one colonial territory." },
+    { year:"14 Aug 1947 – 1956", west:"dominion", east:"dominion", flagWest:"pakflag", flagEast:"pakflag",
+      story:"Partition creates Pakistan as a Dominion on 14 August 1947, in an unusual geographic form: West Pakistan and East Pakistan (East Bengal), separated by roughly a thousand miles of Indian territory, joined only by a shared government and the same new flag." },
+    { year:"1956 – 1971", west:"republic", east:"republic", flagWest:"pakflag", flagEast:"pakflag",
+      story:"Pakistan becomes the Islamic Republic on 23 March 1956, still governing both wings as one state under the same flag, even as Bengali grievances over political representation and economic disparity grow steadily toward the crisis that follows the 1970 election." },
+    { year:"1971–present", west:"modern", east:"seceded", flagWest:"pakflag", flagEast:null,
+      story:"A nine-month war ends with East Pakistan's independence as Bangladesh in December 1971. Pakistan continues from this point as a single, geographically contiguous country on its own western territory alone — the eastern piece shown here hatched out, now entirely outside this page's scope." }
+  ];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+  var westEl = document.getElementById("ireg-west"), eastEl = document.getElementById("ireg-east");
+  var westLbl = document.getElementById("ilbl-west"), eastLbl = document.getElementById("ilbl-east");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = INAMES[era.west];
+    iEraStory.innerHTML = era.story;
+
+    var wcol = IC[era.west];
+    westEl.setAttribute("fill", wcol);
+    westEl.setAttribute("opacity", "1");
+    var wtcol = iTextColorFor(wcol);
+    westLbl.setAttribute("fill", wtcol);
+    westLbl.setAttribute("stroke", wtcol === "#201a12" ? "#f7f1e3" : "#201a12");
+    westLbl.setAttribute("opacity", "1");
+
+    if (era.east) {
+      var ecol = IC[era.east];
+      eastEl.setAttribute("fill", ecol);
+      eastEl.setAttribute("opacity", "1");
+      var etcol = iTextColorFor(ecol);
+      eastLbl.setAttribute("fill", etcol);
+      eastLbl.setAttribute("stroke", etcol === "#201a12" ? "#f7f1e3" : "#201a12");
+      eastLbl.setAttribute("opacity", "1");
+    } else {
+      eastEl.setAttribute("opacity", "0");
+      eastLbl.setAttribute("opacity", "0");
+    }
+
+    var owners = "<b>" + INAMES[era.west] + "</b>: West Pakistan / Pakistan";
+    if (era.east) { owners += (era.east === era.west ? ", East Pakistan (same government)" : " &middot; <b>" + INAMES[era.east] + "</b>: East Pakistan"); }
+    iEraOwners.innerHTML = owners;
+
+    var chips = '<div class="iflag-chip">' + iFlagSvg(era.flagWest) + '<div class="ic-label">West / Pakistan</div></div>';
+    if (era.flagEast) { chips += '<div class="iflag-chip">' + iFlagSvg(era.flagEast) + '<div class="ic-label">East Pakistan</div></div>'; }
+    iFlagsRow.innerHTML = chips;
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
