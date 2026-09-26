@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,42 @@
   <p class="lede">The country's flag itself has stayed remarkably constant since independence: green-white-red horizontal bands with a blue hoist triangle and the national coat of arms, tweaked only in its shield's details as governments changed, never wholesale.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the territory of present-day Equatorial Guinea (Bioko island, Annob&oacute;n, and the Rio Muni mainland), precolonial societies to present, four political-flag eras. Spain's own colonial-era national flag varied in its coat of arms as Spanish governments changed (constitutional monarchy, Second Republic, Francoist dictatorship) but kept the same red-yellow-red field throughout the colonial period, so it is shown here as one entry rather than several. No interactive map ships with this page; see the hub for the region-wide placeholder.
+    <b>Scope of this page:</b> the territory of present-day Equatorial Guinea (Bioko island, Annob&oacute;n, and the Rio Muni mainland), precolonial societies to present, four political-flag eras. Spain's own colonial-era national flag varied in its coat of arms as Spanish governments changed (constitutional monarchy, Second Republic, Francoist dictatorship) but kept the same red-yellow-red field throughout the colonial period, so it is shown here as one entry rather than several.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, four eras</h2>
+    <p class="imap-sub">Equatorial Guinea's own real border, traced whole &mdash; every era here governed island and mainland together as one territory. Press play, or drag the slider.</p>
+    <div class="rule-box">
+      <b>Equatorial Guinea has no genuine internal governing split to show, but this map has an honest limitation of its own.</b> The source boundary dataset used across this atlas traces only the Rio Muni mainland &mdash; it omits Bioko island, where the capital Malabo actually sits, and Annob&oacute;n. Both are a real and integral part of the country throughout every era shown; they are simply outside what this particular traced polygon covers.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">before 1471</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="170" y="20">CAMEROON</text>
+          <text x="60" y="150">GULF OF GUINEA</text>
+          <text x="230" y="280">GABON</text>
+        </g>
+        <path id="ireg-gq" class="ireg-fill" d="M59.73,237.55 L34.00,216.82 L81.21,62.45 L304.81,65.59 L306.00,231.01 L106.10,229.61 L59.73,237.55 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-gq" x="185" y="155">RIO MUNI</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Bubi and Fang precolonial societies</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (johan/world.geo.json, GNQ; Rio Muni mainland only &mdash; Bioko and Annob&oacute;n are not covered by this source polygon), no internal partition.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -357,6 +430,102 @@
 
 </div>
 
+<script>
+(function () {
+  var IC = { fragmented: "#6b5c4a", colonial: "#7c2e1f", republic: "#a9762f" };
+  var INAMES = {
+    fragmented: "Bubi &amp; Fang precolonial societies", colonial: "Colonial territory (Portugal, then Spain)",
+    republic: "Republic of Equatorial Guinea"
+  };
+  var IFLAGS = {
+    noflag: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    portugal: '<rect width="120" height="200" fill="#046a38"/><rect x="120" width="180" height="200" fill="#ff0000"/><circle cx="120" cy="100" r="30" fill="#fcd116" stroke="#fff" stroke-width="3"/>',
+    spain: '<rect width="300" height="66.7" fill="#c60b1e"/><rect y="66.7" width="300" height="66.6" fill="#ffc400"/><rect y="133.3" width="300" height="66.7" fill="#c60b1e"/>',
+    modern: '<rect width="300" height="66.7" fill="#3e9a00"/><rect y="66.7" width="300" height="66.6" fill="#fff"/><rect y="133.3" width="300" height="66.7" fill="#e32118"/><path d="M0,0 L100,100 L0,200 Z" fill="#003876"/><circle cx="150" cy="100" r="22" fill="#fff" stroke="#a9762f" stroke-width="2"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"before 1471", name:"Bubi &amp; Fang precolonial societies", t:{ gq:IC.fragmented }, flagKeys:{ gq:"noflag" },
+      story:"Before European contact, Bioko is home to the Bubi people in independent clan chiefdoms, while the Rio Muni mainland is home to Fang and other Bantu-speaking peoples in decentralized lineage-based societies. No unified flag existed." },
+    { year:"1471", name:"Portuguese claim (Bioko &amp; Annobón)", t:{ gq:IC.colonial }, flagKeys:{ gq:"portugal" },
+      story:"Portuguese navigators reach Bioko around 1471 and Annobón slightly later, claiming both under the Treaty of Tordesillas; effective Portuguese governance of the interior remains minimal, and the Rio Muni mainland goes unclaimed by either Iberian crown." },
+    { year:"1778", name:"Spanish Guinea", t:{ gq:IC.colonial }, flagKeys:{ gq:"spain" },
+      story:"The 1778 Treaty of El Pardo transfers the territory to Spain, though effective control isn't established for over a century. Spain formally organizes Spanish Guinea in the early 20th century, run as a cocoa and timber economy under forced labor." },
+    { year:"1968–present", name:"Republic of Equatorial Guinea", t:{ gq:IC.republic }, flagKeys:{ gq:"modern" },
+      story:"Independence arrives 12 October 1968 under Francisco Macías Nguema, whose rule becomes one of postcolonial Africa's most extreme dictatorships. His nephew Teodoro Obiang overthrows him in 1979 and has ruled ever since; the flag has survived both regimes essentially unchanged." }
+  ];
+
+  var IREGIONS = ["gq"];
+  var IREGION_NAMES = { gq:"Equatorial Guinea" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.innerHTML = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.gq; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
+</script>
 <script>
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
