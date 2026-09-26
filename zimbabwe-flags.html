@@ -18,21 +18,21 @@
   :root {
     --ink: #201a12; --paper: #ede2c8; --card: #f8f1de; --card-border: #d9c9a0;
     --brick: #9c3b28; --brick-2: #7c2e1f; --brass: #a9762f; --adriatic: #204b5c; --adriatic-2: #163846;
-    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c;
+    --muted: #6e6047; --hair: #cbb98d; --focus: #204b5c; --sea: #b9d3da;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
       --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
-      --muted: #9a9280; --hair: #33393f;
+      --muted: #9a9280; --hair: #33393f; --sea: #17303a;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --ink: #ece1c4; --paper: #14171b; --card: #1c2027; --card-border: #33393f;
     --brick: #d3644a; --brick-2: #e07a5f; --brass: #d1a154; --adriatic: #6fa3b8; --adriatic-2: #8fbccf;
-    --muted: #9a9280; --hair: #33393f;
+    --muted: #9a9280; --hair: #33393f; --sea: #17303a;
     color-scheme: dark;
   }
   * { box-sizing: border-box; }
@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: 64ch; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 360px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -183,7 +221,36 @@
   <p class="lede">Zimbabwe takes its name from Great Zimbabwe, the largest stone-walled complex in pre-colonial sub-Saharan Africa, capital of a real and monumental African kingdom centuries before any European set foot in the region. Its path since then runs through the Ndebele Kingdom that resettled here during the Mfecane, Cecil Rhodes's chartered company conquest, decades as the self-governing colony of Southern Rhodesia, a white-minority regime's unilateral break from Britain, and a hard-fought transition to majority rule in 1980.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Zimbabwe, from the Kingdom of Zimbabwe and the Ndebele Kingdom through British and settler rule to the modern republic. No interactive map on this page &mdash; deferred to a future phase of the atlas. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Zimbabwe, from the Kingdom of Zimbabwe and the Ndebele Kingdom through British and settler rule to the modern republic. The Kingdom of Zimbabwe/Mutapa/Rozvi succession and the later Ndebele Kingdom were sequential, not simultaneous, so there's no genuine internal partition to draw &mdash; the map below traces the whole country's own real border instead. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, seven flags</h2>
+    <p class="imap-sub">Zimbabwe's own real traced border &mdash; no internal partition to show, since the Shona and Ndebele kingdoms ruled the territory one after another rather than side by side. Press play, or drag the slider, to watch the flag change over the same shape.</p>
+    <div class="rule-box">
+      <b>This is a single-region page.</b> Great Zimbabwe's Shona-speaking successor states declined before the Ndebele Kingdom rose in the southwest, and BSAC rule, the self-governing colony, Rhodesia's UDI, and independent Zimbabwe each governed the whole territory as one piece. What changes here is only which flag flew over all of it at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">c. 1220</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="360" height="320" fill="var(--sea)"/>
+        <path id="ireg-zw" class="ireg-fill" d="M260.25,293.60 L240.27,289.63 L227.60,294.40 L209.40,287.67 L194.11,287.23 L170.13,269.28 L141.06,263.18 L130.00,237.98 L129.90,223.96 L113.80,219.68 L71.25,176.03 L59.43,153.03 L51.86,145.94 L37.39,114.17 L79.41,118.52 L91.63,123.10 L104.32,122.18 L125.15,96.46 L157.85,63.78 L171.31,60.65 L175.88,46.87 L197.29,31.04 L225.77,25.60 L228.20,40.43 L259.56,39.63 L276.99,48.02 L285.09,57.85 L303.00,60.74 L322.53,73.51 L322.61,123.81 L315.28,151.35 L313.67,181.05 L319.71,192.82 L315.46,216.22 L309.78,219.83 L299.87,248.49 L260.25,293.60 Z"/>
+        <text class="ireg-label" id="ilbl-zw" x="185" y="160">ZIMBABWE</text>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Kingdom of Zimbabwe, Mutapa, and Rozvi Empire</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (simplified from GeoJSON survey data) &mdash; no internal partition, per the rule box above.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -471,6 +538,108 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    none:"#5c2a24", bsac:"#00247d", colony:"#00247d", rhodesia:"#00a651", transition:"#e5e0c8", modern:"#006400"
+  };
+  var INAMES = {
+    none:"No flag documented", bsac:"British South Africa Company rule", colony:"Southern Rhodesia (self-governing colony)",
+    rhodesia:"Rhodesia (Unilateral Declaration of Independence)", transition:"Transition to majority rule", modern:"Republic of Zimbabwe (majority rule)"
+  };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    bsac: '<rect width="300" height="200" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="30" fill="#fbde4a"/>',
+    colony: '<rect width="300" height="200" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="32" fill="#fff" stroke="#6e6047" stroke-width="2"/>',
+    rhodesia: '<rect width="300" height="66.6" fill="#e0e0e0"/><rect y="66.6" width="300" height="66.6" fill="#00a651"/><rect y="133.2" width="300" height="66.8" fill="#e0e0e0"/><path d="M150,80 q-30,20 0,40 q30,-20 0,-40 Z" fill="#000"/>',
+    transition: '<rect width="300" height="200" fill="#e5e0c8"/><rect width="300" height="200" fill="none" stroke="#a9762f" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#7c2e1f">CEASEFIRE</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#7c2e1f">TRANSITION</text>',
+    modern: '<rect width="300" height="28.6" fill="#006400"/><rect y="28.6" width="300" height="28.6" fill="#fcd116"/><rect y="57.2" width="300" height="28.6" fill="#d40000"/><rect y="85.8" width="300" height="28.4" fill="#000"/><rect y="114.2" width="300" height="28.6" fill="#d40000"/><rect y="142.8" width="300" height="28.6" fill="#fcd116"/><rect y="171.4" width="300" height="28.6" fill="#006400"/><polygon points="0,0 110,100 0,200" fill="#fff"/><path d="M55,72 l9,22 24,2 -18,16 6,23 -21,-13 -21,13 6,-23 -18,-16 24,-2 Z" fill="#d40000"/><path d="M55,90 q0,25 30,10 q-15,20 -30,20 q-15,0 -20,-15" fill="#fbde4a"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"c. 1220–1840", name:"Kingdom of Zimbabwe, Mutapa, and Rozvi Empire", t:{ zw:IC.none }, flagKeys:{ zw:"none" },
+      story:"The Kingdom of Zimbabwe, centered on the monumental stone city of Great Zimbabwe, controls a Shona-speaking trading state at its 13th–15th century height. Its Mutapa and Rozvi successor states carry Shona statehood forward. No securely documented flag survives from any of these states." },
+    { year:"c. 1840–1890", name:"Ndebele Kingdom (Matabeleland)", t:{ zw:IC.none }, flagKeys:{ zw:"none" },
+      story:"Mzilikazi, a former Zulu general who broke from Shaka during the Mfecane, leads his Ndebele people to southwestern Zimbabwe by the late 1830s–40s, founding a kingdom that coexists and often clashes with the region's Shona-speaking states. No flag survives; royal authority was expressed through regalia and military regiments." },
+    { year:"1890–1923", name:"British South Africa Company rule (Rhodesia)", t:{ zw:IC.bsac }, flagKeys:{ zw:"bsac" },
+      story:"Cecil Rhodes's British South Africa Company occupies Mashonaland in 1890 and conquers Matabeleland in 1893–94, naming the combined territory Rhodesia after Rhodes himself." },
+    { year:"1923–1965", name:"Southern Rhodesia (self-governing colony)", t:{ zw:IC.colony }, flagKeys:{ zw:"colony" },
+      story:"White settlers vote against joining the Union of South Africa, and Southern Rhodesia becomes a self-governing British colony in 1923, political power concentrated almost entirely in the small white settler minority throughout." },
+    { year:"1965–1979", name:"Rhodesia (Unilateral Declaration of Independence)", t:{ zw:IC.rhodesia }, flagKeys:{ zw:"rhodesia" },
+      story:"On 11 November 1965, Ian Smith's white-minority government unilaterally declares independence from Britain rather than accept a path to majority rule &mdash; a breakaway regime no country ever formally recognizes, met with UN sanctions and the escalating Rhodesian Bush War." },
+    { year:"1979–1980", name:"Transition to majority rule", t:{ zw:IC.transition }, flagKeys:{ zw:"transition" },
+      story:"A genuinely messy few months: a 1979 internal settlement fails to win recognition, and the December 1979 Lancaster House Agreement brings the territory briefly back under direct British colonial authority to supervise a Bush War ceasefire and the February 1980 elections." },
+    { year:"1980–present", name:"Republic of Zimbabwe (majority rule)", t:{ zw:IC.modern }, flagKeys:{ zw:"modern" },
+      story:"Internationally supervised elections bring Robert Mugabe's ZANU-PF to power, and Zimbabwe becomes internationally recognized independent on 18 April 1980 under majority rule, ending nearly 90 years of settler-minority governance." }
+  ];
+
+  var IREGIONS = ["zw"];
+  var IREGION_NAMES = { zw:"Zimbabwe" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    document.getElementById("ireg-zw").setAttribute("fill", era.t.zw);
+    var tcol = iTextColorFor(era.t.zw);
+    var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+    var lbl = document.getElementById("ilbl-zw");
+    lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo);
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.zw; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
