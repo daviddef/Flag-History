@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 340px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,45 @@
   <p class="lede">Six flags across a vast span of steppe history, ending with the region's mineral-wealthiest, most multi-vector-diplomatic state &mdash; balancing relationships with Russia, China, and the West since 1991.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Kazakhstan, antiquity&ndash;present, six political entities. No interactive map or internal-region view is included here &mdash; that layer is deferred project-wide to a later phase. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Kazakhstan, antiquity&ndash;present, six political entities. Part of a larger atlas &mdash; see the map and linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, six rulers</h2>
+    <p class="imap-sub">Kazakhstan's own real border, traced whole &mdash; this page has no internal split to show honestly. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a whole-country page, not a split one.</b> The Kazakh Khanate's three zhuzes (Senior, Middle, Junior) each had their own territory and leadership, but all three answered to the same khanate and later fell under Russian and then Soviet rule together &mdash; there's no genuinely separate internal region that was ever ruled apart from the rest for a documented stretch of time. What changes here is only who ruled all of it at once.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">antiquity</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 300 163.2" xmlns="http://www.w3.org/2000/svg">
+        <g style="pointer-events:none">
+          <g class="context-label">
+            <text x="150" y="10">RUSSIA</text>
+            <text x="288" y="80" text-anchor="end">CHINA</text>
+            <text x="150" y="158">KYRGYZSTAN / UZBEKISTAN</text>
+            <text x="12" y="80" text-anchor="start">CASPIAN SEA</text>
+          </g>
+        </g>
+        <path id="ireg-kz" class="ireg-fill" d="M173.5,132.9 L162.9,140.2 L158.5,147.4 L156.3,145.7 L155.6,142.3 L148.3,142.4 L147.1,135.2 L144.2,135.1 L144.7,126.3 L142.9,127.3 L137.6,119.8 L120.2,121.8 L114.4,113.8 L99.8,103.4 L84.5,108.4 L84.5,141.2 L81.2,141.4 L77.8,135.4 L73.4,132.1 L67.1,133.8 L63.7,137.1 L64.3,128.3 L56.6,124.7 L53.8,115.6 L50.4,113.2 L51.3,111.7 L58.1,112.6 L54.9,109.1 L57.3,105.2 L67.9,105.4 L65.4,103.3 L67.6,97.8 L67.2,91.8 L63.7,90.6 L61.6,92.1 L55.9,89.6 L44.3,96.5 L40.6,94.4 L40.1,92.9 L42.7,92.6 L38.0,84.2 L32.8,84.0 L31.4,79.6 L29.0,78.0 L31.2,71.4 L30.0,68.3 L34.0,60.2 L39.0,65.1 L41.5,64.5 L40.7,58.4 L53.6,48.4 L56.9,50.7 L62.1,48.6 L64.2,50.6 L68.8,50.6 L76.0,59.0 L76.5,54.8 L82.7,58.6 L87.5,54.7 L93.2,55.9 L95.5,54.1 L105.6,59.4 L108.7,56.2 L114.0,57.6 L116.7,56.1 L117.6,52.0 L108.6,46.6 L114.3,43.0 L113.0,40.0 L114.6,37.3 L120.8,37.0 L115.5,34.5 L117.5,32.4 L114.2,31.5 L115.7,28.0 L138.7,25.1 L141.0,22.6 L156.9,19.5 L161.8,15.8 L169.0,17.8 L172.3,16.5 L175.0,22.8 L174.4,26.3 L180.9,25.3 L182.5,28.7 L183.5,27.0 L189.7,27.6 L187.6,30.8 L188.2,33.1 L190.9,31.6 L193.8,32.7 L200.2,27.4 L208.6,24.2 L206.5,28.0 L214.7,34.7 L227.3,56.9 L231.8,52.3 L234.1,53.2 L233.8,55.2 L236.1,57.2 L247.4,55.0 L250.9,56.9 L253.1,61.7 L257.1,63.3 L258.5,67.2 L264.2,68.3 L267.1,65.8 L266.8,67.7 L271.0,72.0 L267.9,72.3 L266.4,76.9 L261.6,78.2 L260.0,90.0 L255.9,92.1 L245.4,88.9 L241.2,103.1 L242.9,104.6 L242.4,107.3 L237.5,105.3 L226.6,109.4 L230.3,110.9 L229.5,116.4 L232.1,124.8 L228.6,128.6 L228.6,133.4 L222.2,128.2 L209.5,126.4 L199.8,127.7 L192.9,124.1 L189.1,126.2 L188.7,131.5 L178.4,127.8 L175.4,128.6 L173.5,132.9 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-kz" x="150" y="83">KAZAKHSTAN</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Nomadic Turkic tribal confederations</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border (Natural Earth 50m via ADM0_A3=KAZ), no internal partition &mdash; see the rule box above for why. Neighbor labels are approximate.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -436,6 +512,110 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    ancient: "#5c2a24", khanate: "#5c4a2e", russian: "#0039a6", assr: "#7a5a2e",
+    ssr: "#a4302a", republic: "#00afca"
+  };
+  var INAMES = {
+    ancient: "Nomadic Turkic tribal confederations (no flag documented)", khanate: "Kazakh Khanate",
+    russian: "Russian imperial conquest and rule", assr: "Kirghiz ASSR / Kazak ASSR",
+    ssr: "Kazakh SSR", republic: "Republic of Kazakhstan"
+  };
+  var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    khanate: '<rect width="300" height="200" fill="#201d18"/><path d="M150,60 L170,90 L150,120 L130,90 Z" fill="none" stroke="#c9a13c" stroke-width="4"/>',
+    russian: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#0039a6"/><rect y="133.3" width="300" height="66.7" fill="#d52b1e"/>',
+    assr: '<rect width="300" height="200" fill="#a4302a"/><g fill="#ffce00"><rect x="30" y="20" width="34" height="8"/><rect x="30" y="20" width="8" height="34"/></g>',
+    ssr: '<rect width="300" height="200" fill="#a4302a"/><rect y="170" width="300" height="12" fill="#00afca"/><g fill="#ffce00"><rect x="30" y="20" width="34" height="8"/><rect x="30" y="20" width="8" height="34"/><circle cx="34" cy="24" r="10" fill="none" stroke="#ffce00" stroke-width="3"/></g>',
+    republic: '<rect width="300" height="200" fill="#00afca"/><circle cx="150" cy="80" r="26" fill="#ffce00"/><g stroke="#ffce00" stroke-width="4"><line x1="150" y1="30" x2="150" y2="10"/><line x1="150" y1="130" x2="150" y2="150"/><line x1="100" y1="80" x2="80" y2="80"/><line x1="200" y1="80" x2="220" y2="80"/><line x1="115" y1="45" x2="100" y2="30"/><line x1="185" y1="45" x2="200" y2="30"/><line x1="115" y1="115" x2="100" y2="130"/><line x1="185" y1="115" x2="200" y2="130"/></g><path d="M150,105 q-20,15 -18,45 q10,-10 18,-6 q8,-4 18,6 q2,-30 -18,-45 Z" fill="#ffce00"/><rect x="0" y="0" width="16" height="200" fill="#ffce00"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"antiquity", name:"Nomadic Turkic tribal confederations", t:{ kz:IC.ancient }, flagKeys:{ kz:"ancient" },
+      story:"Long before the Kazakh Khanate's founding, this steppe was home to successive Turkic powers &mdash; early khaganates, the Kimek and Kipchak confederations, and, after the 13th-century Mongol conquest, successor khanates of the fragmenting Golden Horde. No single unified state governed the whole territory through most of this span, and no flag survives from it." },
+    { year:"1465", name:"Kazakh Khanate", t:{ kz:IC.khanate }, flagKeys:{ kz:"khanate" },
+      story:"Kerei Khan and Janibek Khan broke away from the Uzbek Khanate around 1465, founding the Kazakh Khanate and consolidating the steppe's nomadic Turkic tribes into three great zhuzes &mdash; Senior, Middle, and Junior. No fixed national flag is documented for a khanate organized around tribal zhuzes; the tamga clan-emblem motif shown is an informed reconstruction." },
+    { year:"1731", name:"Russian imperial conquest and rule", t:{ kz:IC.russian }, flagKeys:{ kz:"russian" },
+      story:"The Junior Zhuz accepted Russian protection in 1731, seeking help against Zhungar incursions; conquest and absorption of the Middle and Senior Zhuzes proceeded in stages over the following century and a half, with the steppe fully incorporated by the 1860s&ndash;80s. The Russian imperial tricolor flew across all territory under this administration." },
+    { year:"1920", name:"Kirghiz ASSR / Kazak ASSR", t:{ kz:IC.assr }, flagKeys:{ kz:"assr" },
+      story:"An autonomous republic within the Russian SFSR was established in 1920, initially misnamed the \"Kirghiz ASSR\" before being corrected to Kazak ASSR in 1925. It flew the RSFSR's own red flag with a gold hammer-and-sickle canton before gaining its own distinct Kazakh SSR flag in 1936." },
+    { year:"1936", name:"Kazakh SSR", t:{ kz:IC.ssr }, flagKeys:{ kz:"ssr" },
+      story:"Kazakhstan was elevated to a full Union Republic of the USSR in 1936, separated out from the Russian SFSR. Its flag was the standard Soviet red field with a gold hammer, sickle, and star, distinguished by a light-blue stripe near the bottom edge &mdash; a pattern shared with other Central Asian SSR flags." },
+    { year:"1991–present", name:"Republic of Kazakhstan", t:{ kz:IC.republic }, flagKeys:{ kz:"republic" },
+      story:"Kazakhstan declared independence on 16 December 1991, the last Soviet republic to do so before the USSR's formal dissolution. It has since become the region's mineral-wealthiest state, flying a sky-blue flag with a golden sun and steppe eagle, and a traditional ornamental strip at the hoist, adopted in June 1992." }
+  ];
+
+  var IREGIONS = ["kz"];
+  var IREGION_NAMES = { kz:"Kazakhstan" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.kz; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole country";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+})();
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
