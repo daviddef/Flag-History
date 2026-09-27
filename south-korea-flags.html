@@ -243,7 +243,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>Nine rulers, one real border</h2>
+    <h2>Ten rulers, one real border</h2>
     <p class="imap-sub">South Korea's own present-day border, traced whole &mdash; this page's own scope is the line that becomes the Republic of Korea, so the map does not split into a north and a south (North Korea carries the same shared ancient history on its own page). Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This page doesn't split internally.</b> Before 1945, "Korea" on this map means the whole shared peninsula; from 1945 the scope narrows to the territory that became South Korea, shown at its own present-day extent throughout &mdash; the same retrospective convention used elsewhere in this atlas for borders that didn't exist yet in the form shown. North Korea's parallel line lives on its own page.
@@ -251,8 +251,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">57 BCE&ndash;668 CE</span>
-        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 7th c. BCE&ndash;108 BCE</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -266,7 +266,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Three Kingdoms of Korea</div>
+        <div class="imap-name" id="iEraName">Gojoseon ("Old Joseon")</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -643,6 +643,7 @@
 (function () {
   var IC = { fragmented:"#6b5c4a", kingdom:"#a9762f", sovereign:"#2f6b4a" };
   var IFLAGS = {
+    gojoseon: '<rect width="300" height="200" fill="#4a3f2a"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     threekingdoms: '<rect width="300" height="200" fill="#3f5c3a"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     silla: '<rect width="300" height="200" fill="#5c1f2e"/><rect width="300" height="200" fill="none" stroke="#f4efe1" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#f4efe1">NO NATIONAL</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#f4efe1">FLAG YET</text>',
     goryeo: '<rect width="300" height="200" fill="#7c2e1f"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO NATIONAL</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">FLAG YET</text>',
@@ -658,6 +659,8 @@
   iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.fragmented + '"></span>Fragmented / colonial / occupied</span><span><span class="sw" style="background:' + IC.kingdom + '"></span>Kingdom / empire</span><span><span class="sw" style="background:' + IC.sovereign + '"></span>Sovereign republic</span>';
 
   var ISNAP = [
+    { year:"trad. 2nd mill. BCE; hist. c. 7th c. BCE&ndash;108 BCE", name:"Gojoseon (\"Old Joseon\")", fill:IC.kingdom, flagKey:"gojoseon",
+      story:"Gojoseon is the earliest state Korean tradition and Chinese written sources agree existed on the peninsula and in southern Manchuria, though its exact founding date, extent, and institutions before its final centuries remain genuinely uncertain. Han China conquers its final, best-documented phase (Wiman Joseon) in 108 BCE; the power vacuum and Chinese commanderies that follow set the stage for the Three Kingdoms era. No flag survives or is plausibly attested for Gojoseon in any modern sense." },
     { year:"c. 57 BCE&ndash;668 CE", name:"Three Kingdoms of Korea", fill:IC.fragmented, flagKey:"threekingdoms",
       story:"Goguryeo, Baekje, and Silla compete for the peninsula for over six centuries &mdash; no single Korean government exists yet, so this map shows the whole later-unified extent as contested rather than held by one crown." },
     { year:"676&ndash;935", name:"Unified Silla", fill:IC.kingdom, flagKey:"silla",
