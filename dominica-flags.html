@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One coastline, four eras</h2>
+    <h2>One coastline, five eras</h2>
     <p class="imap-sub">Dominica's own real coastline, traced whole &mdash; the island never split into rival internally-governed zones at any point in its recorded history. Press play, or drag the slider, to watch who held the whole island, era to era.</p>
     <div class="rule-box">
       <b>Dominica has no genuine internal governing split to show.</b> Even through nearly three centuries of contested European claims, the island moved as one unit &mdash; Kalinago-controlled, then British (with one brief French interruption noted in the timeline rather than broken into its own zone), then independent. What changes here is only who held the whole island at once.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1493</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 3100 BCE &ndash; c. 1493 CE</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -517,9 +517,10 @@
 
 <script>
 (function () {
-  var IC = { kalinago: "#4f7f6a", british: "#2c5f8a", independent: "#006b3d" };
-  var INAMES = { kalinago: "Kalinago Dominica / neutral island", british: "British Dominica", independent: "Commonwealth of Dominica" };
+  var IC = { prekalinago: "#4f7f6a", kalinago: "#4f7f6a", british: "#2c5f8a", independent: "#006b3d" };
+  var INAMES = { prekalinago: "Pre-Kalinago Dominica: Ortoiroid &amp; Arawak (Igneri) settlement", kalinago: "Kalinago Dominica / neutral island", british: "British Dominica", independent: "Commonwealth of Dominica" };
   var IFLAGS = {
+    prekalinago: '<rect width="300" height="200" fill="#4f7f6a"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#f4efe1">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#f4efe1">DOCUMENTED</text>',
     kalinago: '<rect width="300" height="200" fill="#4f7f6a"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#f4efe1">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#f4efe1">DOCUMENTED</text>',
     unionjack: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="24"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c8102e" stroke-width="10"/><rect y="80" width="300" height="40" fill="#f4efe1"/><rect x="130" width="40" height="200" fill="#f4efe1"/><rect y="88" width="300" height="24" fill="#c8102e"/><rect x="138" width="24" height="200" fill="#c8102e"/>',
     ensign: '<rect width="300" height="200" fill="#00247d"/><g><rect width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="18"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c8102e" stroke-width="7"/><rect y="40" width="150" height="20" fill="#f4efe1"/><rect x="65" width="20" height="100" fill="#f4efe1"/><rect y="44" width="150" height="12" fill="#c8102e"/><rect x="69" width="12" height="100" fill="#c8102e"/></g><circle cx="225" cy="130" r="34" fill="#f4efe1" stroke="#7a5a2f" stroke-width="2"/><path d="M205,140 q20,-30 40,0 q-20,15 -40,0 Z" fill="#2e8b57"/><circle cx="225" cy="130" r="10" fill="#c8102e"/>',
@@ -534,6 +535,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 3100 BCE &ndash; c. 1493 CE", name:"Pre-Kalinago Dominica: Ortoiroid &amp; Arawak (Igneri) settlement", t:{ dm:IC.prekalinago }, flagKeys:{ dm:"prekalinago" },
+      story:"Dominica's documented human history stretches back roughly forty-six centuries before Columbus. Archaic, pre-ceramic Ortoiroid peoples reach the Lesser Antilles from the South American mainland by canoe by around 3100 BCE. Arawakan-speaking Saladoid and then Igneri communities follow from around 400 CE, bringing pottery, agriculture, and permanent villages. Kalinago (Island Carib) peoples migrate up the island chain in turn, arriving in Dominica by roughly the 1400s and displacing or absorbing the resident Igneri population &mdash; the same Kalinago society already in firm control of the island when Columbus sights it in 1493. No securely documented flag or banner survives from any part of this span; shown honestly blank." },
     { year:"c. 1493", name:"Kalinago Dominica (“neutral island”)", t:{ dm:IC.kalinago }, flagKeys:{ dm:"kalinago" },
       story:"Columbus sights Dominica in 1493, but the island's rugged terrain and sustained Kalinago resistance keep both France and Britain from a lasting foothold for nearly two and a half centuries. From 1660 both powers formally recognize it as neutral Kalinago territory. No securely documented flag survives &mdash; shown honestly blank." },
     { year:"1763", name:"Early British Dominica", t:{ dm:IC.british }, flagKeys:{ dm:"unionjack" },
