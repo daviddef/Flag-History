@@ -241,7 +241,7 @@
 
 
   <div class="imap-section">
-    <h2>One island, five eras</h2>
+    <h2>One island, six eras</h2>
     <p class="imap-sub">Cuba&rsquo;s own real coastline, traced whole &mdash; the island has never itself been split between rival governments. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This is a single-region page, not a partition map.</b> Cuba's own flag story runs through indigenous societies, Spanish colonial rule, three decades of rebel insurgency, brief US military occupation, and the sovereign republic &mdash; but the island itself was never internally divided between competing governments, so the map traces the whole country.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1492 &amp;ndash; 1515</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 4000 BCE &amp;ndash; 1492 CE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 310.0 116.4" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -538,9 +538,10 @@
 
 <script>
 (function () {
-  var IC = { indigenous:"#6e6551", colonial:"#d9662f", insurgency:"#c14f1d", occupation:"#6e6551", republic:"#1f7a7a" };
-  var INAMES = { indigenous:"Ta&iacute;no and Ciboney Cuba / early Spanish contact", colonial:"Spanish colonial Cuba", insurgency:"Flag of Cuban independence (Lone Star)", occupation:"US military occupation of Cuba", republic:"Republic of Cuba" };
+  var IC = { precolumbian:"#8a7f63", indigenous:"#6e6551", colonial:"#d9662f", insurgency:"#c14f1d", occupation:"#6e6551", republic:"#1f7a7a" };
+  var INAMES = { precolumbian:"Pre-Columbian Cuba: Earliest Settlement to the Ta&iacute;no", indigenous:"Ta&iacute;no and Ciboney Cuba / early Spanish contact", colonial:"Spanish colonial Cuba", insurgency:"Flag of Cuban independence (Lone Star)", occupation:"US military occupation of Cuba", republic:"Republic of Cuba" };
   var IFLAGS = {
+    precolumbian: "<rect width=\"300\" height=\"200\" fill=\"#8a7f63\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9962c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#f4efe1\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#f4efe1\">DOCUMENTED</text>",
     indigenous: "<rect width=\"300\" height=\"200\" fill=\"#8a7f63\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9962c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#f4efe1\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#f4efe1\">DOCUMENTED</text>",
     colonial: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#cb1515\" stroke-width=\"26\"/>",
     insurgency: "<rect width=\"300\" height=\"200\" fill=\"#002a8f\"/><rect y=\"40\" width=\"300\" height=\"40\" fill=\"#fff\"/><rect y=\"120\" width=\"300\" height=\"40\" fill=\"#fff\"/><path d=\"M0,0 L150,100 L0,200 Z\" fill=\"#cb1515\"/><path d=\"M45,72 l7.6,23.4 24.6,0 -19.9,14.5 7.6,23.4 -19.9,-14.5 -19.9,14.5 7.6,-23.4 -19.9,-14.5 24.6,0 Z\" fill=\"#fff\"/>",
@@ -556,6 +557,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 4000 BCE &ndash; 1492 CE", name:"Pre-Columbian Cuba: Earliest Settlement to the Ta&iacute;no", t:{ cu:IC.precolumbian }, flagKeys:{ cu:"precolumbian" },
+      story:"Cuba's human history begins many centuries before Columbus. Archaic, pre-ceramic peoples &mdash; recorded by later Spanish chroniclers under the name Guanahatabey, concentrated in western Cuba &mdash; arrive by canoe from other Caribbean islands as early as 4000 BCE, subsisting on fishing, shellfish gathering, and foraging. Ciboney communities follow, and finally Arawakan-speaking Ta&iacute;no peoples migrate up the island chain from South America, arriving in Cuba by around 800&ndash;1000 CE and establishing the cacicazgos (chiefdoms) that Spanish accounts describe on contact in 1492. No securely documented flag or banner survives from any part of this six-thousand-year span; shown honestly blank." },
     { year:"1492 &ndash; 1515", name:"Ta&iacute;no and Ciboney Cuba / early Spanish contact", t:{ cu:IC.indigenous }, flagKeys:{ cu:"indigenous" },
       story:"Columbus sights Cuba in October 1492, encountering an island organized into Ta&iacute;no cacicazgos (chiefdoms) in the more populous east and center, with Ciboney communities in the west. Spanish conquest is gradual, only completed when Diego Vel&aacute;zquez brings the island fully under control by 1515. No securely documented flag survives from Cuba&rsquo;s indigenous societies; shown honestly blank." },
     { year:"1515 &ndash; 1868", name:"Spanish colonial Cuba", t:{ cu:IC.colonial }, flagKeys:{ cu:"colonial" },
