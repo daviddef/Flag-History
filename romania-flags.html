@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>Two principalities and a borrowed province: 1541&ndash;1918</h2>
+    <h2>Two principalities and a borrowed province: c. 82 BCE&ndash;1918</h2>
     <p class="imap-sub">Modern Romania's own real border, split into the three lands that took nearly four centuries to become one country: Wallachia in the south, Moldavia in the east, and Transylvania &mdash; inside the Carpathian arc, ruled from Budapest and Vienna for the whole of this window &mdash; joining only in 1918. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>Wallachia and Moldavia united in 1859 without a single shot fired; Transylvania waited another fifty-nine years and a world war.</b> Alexandru Ioan Cuza was elected ruler of both principalities within nineteen days of each other in January 1859 &mdash; a legal loophole in the same double election nobody had explicitly forbidden. Transylvania, ruled from outside the whole time, only joined by a vote of its own assembly at Alba Iulia in December 1918. The lines below solidify only where the pieces were genuinely ruled apart, and they dissolve for good, one at a time, exactly when each union became real.
@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1541</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 82 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 415 300" xmlns="http://www.w3.org/2000/svg">
         <g pointer-events="none">
@@ -284,7 +284,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Three lands, three rulers</div>
+        <div class="imap-name" id="iEraName">Dacian Kingdom &amp; Roman Dacia</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -793,13 +793,15 @@
 <script>
 (function () {
   var IC = {
-    wallachia: "#7c2e1f", moldavia: "#204b5c", transylvania: "#7a5a9a", michael: "#a9762f", romania: "#9c3b28"
+    dacia: "#8c6a2f", wallachia: "#7c2e1f", moldavia: "#204b5c", transylvania: "#7a5a9a", michael: "#a9762f", romania: "#9c3b28"
   };
   var INAMES = {
+    dacia: "Dacian Kingdom & Roman Dacia",
     wallachia: "Wallachia (separate)", moldavia: "Moldavia (separate)", transylvania: "Transylvania (Hungary / Habsburg)",
     michael: "Michael the Brave's union", romania: "United / Romania"
   };
   var IFLAGS = {
+    dacia: '<rect width="300" height="200" fill="#7c2e1f"/><path d="M55,55 Q35,78 55,112 L92,112 Q114,88 102,58 Q80,36 55,55 Z" fill="#c9a13c"/><circle cx="72" cy="72" r="5" fill="#241f14"/><path d="M65,60 L58,50 M85,58 L90,46" stroke="#241f14" stroke-width="4" stroke-linecap="round"/><path d="M98,80 Q170,95 235,132 Q205,146 165,140 Q120,132 98,102 Z" fill="#c9a13c" opacity=".82"/>',
     wallachia: '<rect width="300" height="200" fill="#d9a63c"/><g transform="translate(150,100)" fill="#241f14"><path d="M0,-32 C8,-26 6,-16 11,-13 C19,-16 27,-10 26,-2 C19,-3 14,2 16,8 C22,8 27,16 22,22 C16,19 11,21 10,27 L-10,27 C-11,21 -16,19 -22,22 C-27,16 -22,8 -16,8 C-14,2 -19,-3 -26,-2 C-27,-10 -19,-16 -11,-13 C-6,-16 -8,-26 0,-32 Z"/></g>',
     moldavia: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100)" fill="#241f14"><path d="M0,-24 L-5,-5 L-24,-6 L-8,6 L-16,24 L0,11 L16,24 L8,6 L24,-6 L5,-5 Z"/></g><circle cx="150" cy="72" r="5" fill="#f4efe1"/>',
     transylvania: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/><g transform="translate(150,100)"><path d="M-20,-24 h40 v34 q0,20 -20,26 q-20,-6 -20,-26 Z" fill="#241f14"/><path d="M0,-16 l4,4 h10 l-8,7 3,10 -9,-6 -9,6 3,-10 -8,-7 h10 Z" fill="#f4efe1"/></g>',
@@ -815,6 +817,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 82 BCE – 271 CE", name:"Dacian Kingdom & Roman Dacia", t:{ wallachia:IC.dacia, moldavia:IC.dacia, transylvania:IC.dacia }, flagKeys:{ wallachia:"dacia", moldavia:"dacia", transylvania:"dacia" },
+      story:"The Dacians, a Thracian-related Indo-European people of the Carpathian and lower Danube region, are first unified into one kingdom by Burebista around 82 BCE, briefly strong enough to trouble the fringes of the late Roman Republic. His successor Decebalus resists two Roman invasions under Trajan before his 106 CE defeat and death ends Dacian independence; Rome organizes the conquered core as the province of Dacia until Aurelian withdraws Roman administration south of the Danube in 271 CE. No civil flag survives, but the Dacians are well attested carrying the draco, a wolf-headed dragon windsock standard shown here as an informed reconstruction &mdash; a single unified people and then province across what will one day be all three lands on this map." },
     { year:"1541", name:"Three lands, three rulers", t:{ wallachia:IC.wallachia, moldavia:IC.moldavia, transylvania:IC.transylvania }, flagKeys:{ wallachia:"wallachia", moldavia:"moldavia", transylvania:"transylvania" },
       story:"By the mid-16th century all three lands that will one day be Romania are ruled separately: Wallachia and Moldavia as tribute-paying Ottoman vassal principalities with their own native princes, and Transylvania &mdash; the mountainous interior, inside the Carpathian arc &mdash; as a separate autonomous principality after central Hungary's own collapse to the Ottomans in 1541 (see the Hungary page). No single ruler holds all three." },
     { year:"1600", name:"Michael the Brave's union", t:{ wallachia:IC.michael, moldavia:IC.michael, transylvania:IC.michael }, flagKeys:{ wallachia:"michael", moldavia:"michael", transylvania:"michael" },
