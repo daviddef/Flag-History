@@ -253,7 +253,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">1962&ndash;present</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -507,15 +507,17 @@
 <script>
 (function () {
   var IC = {
-    spanish: "#c9432c", contested: "#8a6a4a", british_t: "#2c5f8a", british_o: "#3a7db0",
+    indigenous: "#6e6047", spanish: "#c9432c", contested: "#8a6a4a", british_t: "#2c5f8a", british_o: "#3a7db0",
     united: "#1b3a76", independent: "#c1272d"
   };
   var INAMES = {
+    indigenous: "Indigenous Amerindian Trinidad and Tobago",
     spanish: "Spanish Trinidad", contested: "Contested among European powers (Tobago)",
     british_t: "British colony of Trinidad (separate)", british_o: "British colony of Tobago (separate)",
     united: "United Crown Colony of Trinidad and Tobago", independent: "Independent Trinidad and Tobago"
   };
   var IFLAGS = {
+    indigenous: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     spanish: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c1272d" stroke-width="26"/>',
     contested: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     british_t: '<rect width="300" height="200" fill="#1b3a76"/><rect width="150" height="100" fill="#1b3a76"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="12"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c1272d" stroke-width="5"/><rect y="42" width="150" height="16" fill="#f4efe1"/><rect x="67" width="16" height="100" fill="#f4efe1"/><rect y="46" width="150" height="8" fill="#c1272d"/><rect x="71" width="8" height="100" fill="#c1272d"/>',
@@ -532,6 +534,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 5000 BCE–1498 CE", name:"Indigenous Amerindian Trinidad and Tobago", t:{ trinidad:IC.indigenous, tobago:IC.indigenous }, flagKeys:{ trinidad:"indigenous", tobago:"indigenous" },
+      story:"Millennia before Columbus's 1498 sighting, both islands are already home to Amerindian communities: Trinidad's Banwari Trace site, radiocarbon-dated to roughly 5000 BCE, is among the oldest known human settlement sites anywhere in the Caribbean. Saladoid migrants from South America arrive from around 250 BCE bringing ceramics and agriculture, and by European contact Trinidad is home to Arawakan- and Cariban-speaking communities while Tobago's population likewise includes Cariban-speaking groups. None of these societies formed a centralized state on either island, and no flag or comparable territorial symbol is documented; shown here honestly blank rather than invented." },
     { year:"1498–1797", name:"Spanish Trinidad / contested Tobago", t:{ trinidad:IC.spanish, tobago:IC.contested }, flagKeys:{ trinidad:"spanish", tobago:"contested" },
       story:"Columbus sights Trinidad in 1498; Spain claims it but leaves it a chronically neglected, thinly populated colonial backwater for three centuries. Tobago, meanwhile, is claimed and fought over by Dutch, French, Courlander, and other powers from as early as the 1620s, with no settled single ruler for most of this same period." },
     { year:"1797–1814", name:"Trinidad turns British; Tobago still contested", t:{ trinidad:IC.british_t, tobago:IC.contested }, flagKeys:{ trinidad:"british_t", tobago:"contested" },
