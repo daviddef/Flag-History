@@ -248,8 +248,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 900</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 202 BCE</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-dz0" class="ireg-fill" d="M263.16,197.25 L225.67,220.89 L193.99,245.26 L178.56,250.79 L166.42,252.00 L166.29,244.11 L161.23,242.09 L154.41,238.55 L151.81,232.73 L114.90,205.67 L77.99,178.61 L36.84,148.58 L37.05,146.18 L37.05,145.35 L36.95,130.66 L54.62,121.50 L65.55,119.61 L74.51,116.28 L78.69,110.07 L91.48,105.16 L91.95,95.98 L98.28,94.90 L103.23,90.31 L117.55,88.22 L119.56,83.40 L116.68,80.76 L112.90,67.67 L112.25,60.13 L108.12,52.18 L118.64,45.41 L130.47,43.25 L137.38,38.13 L147.91,34.36 L166.46,32.15 L184.56,31.14 L190.07,32.98 L200.38,28.10 L212.07,28.00 L216.52,30.89 L224.00,30.13 L221.78,36.50 L223.52,48.32 L220.94,58.55 L214.19,65.47 L215.16,74.81 L224.11,82.20 L224.20,85.20 L230.95,90.21 L235.61,112.47 L239.15,123.42 L239.75,129.18 L237.82,139.30 L238.61,144.96 L237.22,151.74 L238.18,159.54 L233.83,164.72 L240.30,173.76 L240.71,179.08 L244.61,186.00 L249.72,183.72 L258.36,189.49 L263.16,197.25 Z"/>
@@ -258,7 +258,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Berber and Arab dynasties of the central Maghreb</div>
+        <div class="imap-name" id="iEraName">Numidia, Rome &amp; the Arab Conquest</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -482,9 +482,10 @@
 
 <script>
 (function () {
-  var IC = { berber:"#5c2a24", ottoman:"#a4302a", french:"#204b5c", modern:"#2f6b4a" };
-  var INAMES = { berber:"Berber and Arab dynasties of the central Maghreb", ottoman:"Regency of Algiers (Ottoman)", french:"French Algeria", modern:"People&#x27;s Democratic Republic of Algeria" };
+  var IC = { antiquity:"#7a4a3a", berber:"#5c2a24", ottoman:"#a4302a", french:"#204b5c", modern:"#2f6b4a" };
+  var INAMES = { antiquity:"Numidia, Rome &amp; the Arab Conquest", berber:"Berber and Arab dynasties of the central Maghreb", ottoman:"Regency of Algiers (Ottoman)", french:"French Algeria", modern:"People&#x27;s Democratic Republic of Algeria" };
   var IFLAGS = {
+    antiquity: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO SINGLE FLAG</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     berber: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO SINGLE FLAG</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     ottoman: "<rect width=\"300\" height=\"200\" fill=\"#a4302a\"/>\n              <g fill=\"#f4efe1\">\n                <path d=\"M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z\"/>\n                <path d=\"M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z\"/>\n              </g>",
     french: "<rect width=\"100\" height=\"200\" fill=\"#002395\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#f4efe1\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#ed2939\"/>",
@@ -499,6 +500,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 202 BCE", name:"Numidia, Rome &amp; the Arab Conquest", t:{ dz:IC.antiquity }, flagKeys:{ dz:"antiquity" },
+      story:"Massinissa unifies the Berber kingdom of Numidia in 202 BCE as a Roman ally after Zama; Julius Caesar annexes it as a Roman province after Thapsus in 46 BCE, and Roman rule gives way in turn to the Vandal Kingdom (429), Byzantine reconquest (534), and finally the Umayyad Arab conquest of the early 8th century, which brings Islam to the region over sustained Berber resistance. No flag survives from Numidian, Roman, Vandal, or Byzantine rule, nor from Kahina's Berber resistance &mdash; shown here honestly blank." },
     { year:"c. 900", name:"Berber and Arab dynasties of the central Maghreb", t:{ dz:IC.berber }, flagKeys:{ dz:"berber" },
       story:"Successive Berber and Arab Muslim dynasties &mdash; Rustamids, Zirids, Almoravids, Almohads, Hafsids, and Zayyanids among them &mdash; rule the central Maghreb after the 7th&ndash;8th century Islamic conquest, with no single continuous state or flag covering the whole territory before Ottoman rule." },
     { year:"1516", name:"Regency of Algiers (Ottoman)", t:{ dz:IC.ottoman }, flagKeys:{ dz:"ottoman" },
