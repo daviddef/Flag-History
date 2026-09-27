@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1493</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 800</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -269,7 +269,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Kalinago Saint Kitts and Nevis</div>
+        <div class="imap-name" id="iEraName">Igneri (Arawak) Saint Kitts and Nevis</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -546,14 +546,16 @@
 <script>
 (function () {
   var IC = {
-    kalinago:"#6e6551", divided:"#a9601f", british:"#c9962c", associated:"#1f7a7a", independent:"#009e49"
+    igneri:"#5c5240", kalinago:"#6e6551", divided:"#a9601f", british:"#c9962c", associated:"#1f7a7a", independent:"#009e49"
   };
   var INAMES = {
+    igneri:"Igneri (Arawak) Saint Kitts and Nevis",
     kalinago:"Kalinago Saint Kitts and Nevis", divided:"Divided Anglo-French Saint Kitts / English Nevis",
     british:"British Saint Kitts and Nevis (united)", associated:"Associated statehood / late colony",
     independent:"Independent Federation of Saint Kitts and Nevis"
   };
   var IFLAGS = {
+    igneri: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
     kalinago: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
     divided: '<rect width="300" height="200" fill="#f4efe1"/><rect y="86" width="300" height="28" fill="#c8102e"/><rect x="136" width="28" height="200" fill="#c8102e"/>',
     british: '<rect width="300" height="200" fill="#1b3a76"/><rect width="150" height="100" fill="#1b3a76"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="16"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c8102e" stroke-width="7"/><rect y="42" width="150" height="16" fill="#f4efe1"/><rect x="67" width="16" height="100" fill="#f4efe1"/><rect y="46" width="150" height="8" fill="#c8102e"/><rect x="71" width="8" height="100" fill="#c8102e"/>',
@@ -569,6 +571,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 800 – c. 1300", name:"Igneri (Arawak) Saint Kitts and Nevis", t:{ kitts:IC.igneri, nevis:IC.igneri }, flagKeys:{ kitts:"igneri", nevis:"igneri" },
+      story:"Centuries before Columbus's 1493 sighting, both islands are already settled by the Igneri, an Arawak-speaking farming and pottery-making people whose ancestors, carrying the Saladoid ceramic tradition, migrated up the Lesser Antilles from the Orinoco basin starting around 500 BCE and reached the Leeward Islands by roughly the 8th century CE. Igneri society was organized around village-level chiefs (caciques) rather than a unified authority, with no individual leader from this period securely recorded by name. Around 1300, Kalinago peoples moving up the same island chain displace or absorb the Igneri population on both islands." },
     { year:"c. 1493", name:"Kalinago Saint Kitts and Nevis", t:{ kitts:IC.kalinago, nevis:IC.kalinago }, flagKeys:{ kitts:"kalinago", nevis:"kalinago" },
       story:"Columbus sights both islands in 1493. Neither name brings settlement: both islands remain under Kalinago control for well over a century, serving as a significant Kalinago population center in the Lesser Antilles before the first English and French colonists arrive in 1623&ndash;25." },
     { year:"1623/1625", name:"Divided Anglo-French Saint Kitts, with English Nevis", t:{ kitts:IC.divided, nevis:IC.british }, flagKeys:{ kitts:"divided", nevis:"divided" },
