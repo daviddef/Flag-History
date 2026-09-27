@@ -250,8 +250,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">before 1841</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 6th &amp;ndash; 10th century CE</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 250.0 199.2" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -504,9 +504,10 @@
 
 <script>
 (function () {
-  var IC = { sultanates:"#6b5c4a", french:"#7c2e1f", independence:"#c9a13c", union:"#a9762f" };
-  var INAMES = { sultanates:"Island sultanates", french:"French colonial rule", independence:"Independence, Federal Islamic Republic, and repeated coups", union:"Union of the Comoros" };
+  var IC = { settlement:"#5c2a24", sultanates:"#6b5c4a", french:"#7c2e1f", independence:"#c9a13c", union:"#a9762f" };
+  var INAMES = { settlement:"Earliest settlement (pre-Islamic)", sultanates:"Island sultanates", french:"French colonial rule", independence:"Independence, Federal Islamic Republic, and repeated coups", union:"Union of the Comoros" };
   var IFLAGS = {
+    settlement: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     sultanates: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     french: "<rect width=\"100\" height=\"200\" fill=\"#002395\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#fff\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#ed2939\"/>",
     independence: "<rect width=\"300\" height=\"200\" fill=\"#3a7728\"/><path d=\"M170,100 a34,34 0 1,0 34,-34 a27,27 0 1,1 -34,34 Z\" fill=\"#fff\"/><g fill=\"#fff\"><path d=\"M110,50 l3,7 7.6,.6 -5.8,5 1.8,7.4 -6.6,-4 -6.6,4 1.8,-7.4 -5.8,-5 7.6,-.6 Z\"/><path d=\"M80,90 l3,7 7.6,.6 -5.8,5 1.8,7.4 -6.6,-4 -6.6,4 1.8,-7.4 -5.8,-5 7.6,-.6 Z\"/><path d=\"M95,140 l3,7 7.6,.6 -5.8,5 1.8,7.4 -6.6,-4 -6.6,4 1.8,-7.4 -5.8,-5 7.6,-.6 Z\"/><path d=\"M140,160 l3,7 7.6,.6 -5.8,5 1.8,7.4 -6.6,-4 -6.6,4 1.8,-7.4 -5.8,-5 7.6,-.6 Z\"/></g>",
@@ -521,6 +522,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 6th &ndash; 10th century CE", name:"Earliest settlement (pre-Islamic)", t:{ km:IC.settlement }, flagKeys:{ km:"settlement" },
+      story:"Centuries before any sultanate, the islands' earliest known inhabitants are documented only through archaeology. Excavations at Dembeni on Mayotte &mdash; the type-site for this earliest identified settlement phase &mdash; show small farming and fishing communities, plausibly linked to Bantu-speaking migration from the nearby East African coast, established by roughly the 6th to 8th century CE and importing pottery that attests to early Indian Ocean trade contact. The widespread Arab, Swahili, and Shirazi Persian migration and Islamization that define the later sultanate era arrive only from around the 9th&ndash;10th century onward. No flag or comparable symbol survives; shown honestly blank." },
     { year:"before 1841", name:"Island sultanates", t:{ km:IC.sultanates }, flagKeys:{ km:"sultanates" },
       story:"For centuries before French rule, Bantu African, Arab, Swahili, and Shirazi Persian migration and trade shape a distinctively Islamic, Swahili-inflected culture. Each main island typically hosts its own sultanate or rival sultanates &mdash; Ngazidja alone was often divided among several competing sultans &mdash; with no single ruler ever unifying the archipelago before colonization. No flag is securely reconstructable; shown honestly blank." },
     { year:"1841 &ndash; 1975", name:"French colonial rule", t:{ km:IC.french }, flagKeys:{ km:"french" },
