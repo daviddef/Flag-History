@@ -219,7 +219,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, twelve rulers</h2>
+    <h2>One border, thirteen rulers</h2>
     <p class="imap-sub">Albania's own real border, traced whole. Unlike Hungary's Royal/Ottoman split or Germany's east-west divide, Albania has no genuinely separate internal region that was governed apart from the rest at the same time &mdash; so this map, like North Macedonia's, shows only who held the whole country, era to era. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>The 1939&ndash;44 occupation is not an internal split.</b> Italy annexed the whole country in 1939, and Germany occupied the whole country in 1943 &mdash; one power replaced another across all of Albania at once, not two powers ruling different halves simultaneously the way Habsburg and Ottoman Hungary did. The chaotic 1914&ndash;25 decade came closest to a real division, with different zones briefly under different foreign garrisons, but no line held long enough or cleanly enough to trace honestly as a lasting internal border.
@@ -227,8 +227,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1190</span>
-        <input type="range" id="iSlider" min="0" max="11" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 400 BCE</span>
+        <input type="range" id="iSlider" min="0" max="12" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="-115 -145 575 705" xmlns="http://www.w3.org/2000/svg">
         <g pointer-events="none">
@@ -248,7 +248,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Medieval principalities</div>
+        <div class="imap-name" id="iEraName">Illyrian Kingdoms &amp; Roman/Byzantine Illyricum</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -804,11 +804,13 @@
 <script>
 (function () {
   var IC = {
+    ancient: "#6b5c4a",
     medieval: "#5c2a24", skanderbeg: "#7c2e1f", ottoman: "#a4302a", principality: "#a9762f",
     contested: "#8a6a3f", republic25: "#4a7a52", kingdom: "#c9922f", italian: "#3c6a7c",
     german: "#3f3f3f", provisional: "#6e6047", comm: "#8c2f2f", modern: "#2f6b4a"
   };
   var INAMES = {
+    ancient: "Illyrian Kingdoms & Roman/Byzantine Illyricum",
     medieval: "Medieval Albanian Principalities", skanderbeg: "League of Lezhë (Skanderbeg)", ottoman: "Ottoman Empire",
     principality: "Principality of Albania", contested: "Contested Sovereignty (1914–25)", republic25: "Albanian Republic (Zogu)",
     kingdom: "Kingdom of Albania (Zog I)", italian: "Kingdom of Italy (personal union)", german: "German occupation",
@@ -824,6 +826,7 @@
   var CONTESTED_ICON = '<rect width="300" height="200" fill="#a4302a"/>' + EAGLE + '<rect width="300" height="200" fill="none" stroke="#5c2a24" stroke-width="4" stroke-dasharray="10 7"/>';
 
   var IFLAGS = {
+    ancient: NOFLAG,
     medieval: NOFLAG,
     skanderbeg: '<rect width="300" height="200" fill="#a4302a"/>' + EAGLE + HELMET,
     ottoman: OTTOMAN_ICON,
@@ -846,6 +849,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 400 BCE", name:"Illyrian Kingdoms & Roman/Byzantine Illyricum", t:{ alb:IC.ancient }, flagKeys:{ alb:"ancient" },
+      story:"For roughly sixteen centuries before any Albanian polity exists, independent Illyrian tribal kingdoms &mdash; the Ardiaei under Bardyllis, Agron, and his widow Teuta &mdash; contest the Adriatic coast until Rome, alarmed by Illyrian piracy, fights three Illyrian Wars (229&ndash;168 BCE) and annexes the coast, folding it into the province of Illyricum and later Byzantine rule. No unified flag survives for any of this; Illyrian tribal standards are only mentioned in passing by Greek and Roman writers. Byzantine central authority only weakens enough for local lords to assert themselves around 1190, when the Principality of Arbanon emerges." },
     { year:"c. 1190", name:"Medieval Albanian principalities", t:{ alb:IC.medieval }, flagKeys:{ alb:"medieval" },
       story:"The Principality of Arbanon, the first attested medieval Albanian polity, emerges around 1190 under the Progoni family. Power fragments over the following centuries among rival noble houses &mdash; Balshaj, Topia, Muzaka, Dukagjini, Kastrioti &mdash; under shifting Byzantine, Serbian, Angevin, or Venetian overlordship. No unified flag survives; each house used its own dynastic seal, so this era is shown honestly blank." },
     { year:"1444", name:"League of Lezhë (Skanderbeg)", t:{ alb:IC.skanderbeg }, flagKeys:{ alb:"skanderbeg" },
