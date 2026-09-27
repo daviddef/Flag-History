@@ -234,15 +234,15 @@
 
   <div class="imap-section">
     <h2>From Punjab foothold to subcontinental empire, and back</h2>
-    <p class="imap-sub">A simplified extent-snapshot map, not a surveyed border &mdash; four moments that trace the empire's real territorial arc: Babur's small founding foothold, Akbar's consolidated north, Aurangzeb's near-subcontinental peak, and the tiny Company-controlled rump left after 1803. Press play, or drag the slider.</p>
+    <p class="imap-sub">A simplified extent-snapshot map, not a surveyed border &mdash; five moments that trace the dynasty's real territorial arc: Timur's Central Asian conquest empire before any Indian foothold existed, Babur's small founding foothold, Akbar's consolidated north, Aurangzeb's near-subcontinental peak, and the tiny Company-controlled rump left after 1803. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>Like the Mongol Empire page, this map is deliberately a rough sketch, not a traced border.</b> The Mughal Empire's real frontier shifted constantly across three centuries of campaigns, sieges, and vassal arrangements; the shapes below are simplified extent zones sized and positioned for legibility, not a surveyed territorial record.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1526</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1370</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
         <path class="context-shape" d="M60,20 L200,15 L260,60 L270,110 L230,140 L240,180 L200,250 L160,320 L130,300 L110,240 L70,200 L40,140 L30,80 Z"/>
@@ -250,6 +250,7 @@
           <text x="230" y="30">CENTRAL ASIA</text>
           <text x="150" y="330">DECCAN / SOUTH INDIA</text>
         </g>
+        <path id="ireg-timurid" class="ireg-extent" fill="#9c3b28" d="M195,8 L270,6 L288,32 L262,55 L212,50 L192,28 Z"/>
         <path id="ireg-founding" class="ireg-extent" fill="#0b6e3f" d="M90,40 L180,35 L210,70 L190,110 L140,130 L100,110 L80,70 Z"/>
         <path id="ireg-akbar" class="ireg-extent" fill="#0b6e3f" d="M75,28 L195,22 L235,62 L245,105 L210,135 L215,165 L175,195 L120,190 L90,160 L60,110 L55,60 Z"/>
         <path id="ireg-peak" class="ireg-extent" fill="#a9762f" d="M62,22 L198,17 L258,62 L268,108 L228,138 L238,178 L198,245 L162,300 L135,270 L112,230 L72,195 L42,138 L32,80 Z"/>
@@ -259,13 +260,13 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Babur and Humayun</div>
+        <div class="imap-name" id="iEraName">Timurid Dynasty: Timur to Babur's Central Asian Rule</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Simplified extent-snapshot map (founding foothold vs. Akbar's consolidated north vs. Aurangzeb's near-subcontinental peak vs. the 1803 Delhi rump), not a surveyed border &mdash; see the rule box above.</p>
+      <p class="map-note">Simplified extent-snapshot map (Timur's pre-Indian Central Asian empire vs. founding foothold vs. Akbar's consolidated north vs. Aurangzeb's near-subcontinental peak vs. the 1803 Delhi rump), not a surveyed border &mdash; see the rule box above.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -541,13 +542,15 @@
 <script>
 (function () {
   var IC = {
-    founding: "#0b6e3f", akbar: "#0b6e3f", peak: "#a9762f", rump: "#6b5c4a"
+    timurid: "#9c3b28", founding: "#0b6e3f", akbar: "#0b6e3f", peak: "#a9762f", rump: "#6b5c4a"
   };
   var INAMES = {
+    timurid: "Timurid Dynasty: Timur to Babur's Central Asian Rule",
     founding: "Babur & Humayun (founding foothold)", akbar: "Akbar & Jahangir (consolidated north)",
     peak: "Shah Jahan & Aurangzeb (near-subcontinental peak)", rump: "Delhi rump under East India Company influence"
   };
   var IFLAGS = {
+    timurid: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     founding: '<rect width="300" height="200" fill="#0b6e3f"/><path d="M150,64 l8,18 20,2 -14,14 4,20 -18,-9 -18,9 4,-20 -14,-14 20,-2 Z" fill="#f9d616"/>',
     akbar: '<rect width="300" height="200" fill="#0b6e3f"/><path d="M150,60 l10,22 24,3 -17,17 4,24 -21,-11 -21,11 4,-24 -17,-17 24,-3 Z" fill="#f9d616"/>',
     peak: '<rect width="300" height="200" fill="#0b6e3f"/><path d="M150,50 l12,26 28,4 -20,20 5,28 -25,-13 -25,13 5,-28 -20,-20 28,-4 Z" fill="#f9d616"/><circle cx="150" cy="150" r="14" fill="none" stroke="#f9d616" stroke-width="3"/>',
@@ -562,6 +565,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1370", name:"Timurid Dynasty: Timur to Babur's Central Asian Rule", region:"timurid", label:"TIMURID CENTRAL ASIA", labelPos:{x:150,y:100},
+      story:"Timur builds a vast conquest empire from Samarkand across Central Asia and Persia from 1370, sacking Delhi itself in 1398, but never founding a lasting Indian state; his empire fragments after his 1405 death into shrinking rival principalities, one of which the young Babur inherits in Ferghana before losing it and seizing Kabul in 1504. No Timurid national flag is documented, and the empire this map traces doesn't yet exist &mdash; Babur's 1526 victory at Panipat is still over a century and a half away." },
     { year:"1526", name:"Babur & Humayun (founding foothold)", region:"founding", label:"FOUNDING FOOTHOLD", labelPos:{x:150,y:100},
       story:"Babur's 1526 victory at Panipat founds the empire on a modest base around Delhi and Agra; his son Humayun briefly loses even this to the Afghan noble Sher Shah Suri before reconquering it in 1555." },
     { year:"1556", name:"Akbar & Jahangir (consolidated north)", region:"akbar", label:"CONSOLIDATED NORTH", labelPos:{x:150,y:150},
@@ -579,7 +584,7 @@
   var iFlagsRow = document.getElementById("iFlagsRow");
   var iSlider = document.getElementById("iSlider");
   var iCaption = document.getElementById("ireg-caption");
-  var ALL_REGIONS = ["founding","akbar","peak","rump"];
+  var ALL_REGIONS = ["timurid","founding","akbar","peak","rump"];
 
   function iRender(idx) {
     var era = ISNAP[idx];
