@@ -173,6 +173,44 @@
 
   footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: .82rem; color: var(--muted); }
   footer a { color: var(--adriatic); }
+
+  .imap-section { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+  .imap-section h2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+  .imap-section .imap-sub { font-size: .92rem; color: var(--muted); max-width: none; margin: 0 0 18px; }
+  .imap-section .rule-box { margin-bottom: 20px; padding: 14px 16px; border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; font-size: .9rem; }
+  .imap-section .rule-box b { color: var(--brick); }
+  .imap-frame { border: 1px solid var(--card-border); background: var(--card); border-radius: 4px; padding: 20px; }
+  .imap-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .imap-play {
+    flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--card-border);
+    background: var(--paper); color: var(--brick); font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .imap-play:hover { border-color: var(--brick); }
+  .imap-frame input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--hair); outline: none; }
+  .imap-frame input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-frame input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--brick); border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--brick); cursor: pointer; }
+  .imap-year { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--brass); white-space: nowrap; min-width: 40px; }
+  .imap-head { text-align: center; margin-bottom: 12px; }
+  .imap-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; transition: opacity .3s ease; }
+  .imap-owners { font-size: .84rem; color: var(--muted); max-width: 60ch; margin: 5px auto 0; transition: opacity .3s ease; }
+  .imap-owners b { color: var(--ink); }
+  .iflags-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px auto; max-width: 480px; }
+  .iflag-chip { text-align: center; width: 88px; }
+  .iflag-chip svg { width: 100%; height: auto; display: block; border: 1px solid var(--card-border); box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+  .iflag-chip .ic-label { font-family: "IBM Plex Mono", monospace; font-size: 8.5px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .imap-story {
+    margin: 0 auto 20px; font-size: .95rem; line-height: 1.6; color: var(--ink);
+    text-align: left; transition: opacity .3s ease; padding: 13px 16px; background: var(--paper);
+    border: 1px solid var(--card-border); border-radius: 3px;
+  }
+  #imap-svg { display: block; margin: 0 auto; width: 100%; max-width: 380px; height: auto; }
+  .ireg-fill { transition: fill 0.6s ease; }
+  .iborder-line { transition: stroke-opacity 0.6s ease, stroke-width 0.6s ease; fill: none; stroke: #241f14; stroke-linecap: round; }
+  .ireg-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 700; text-anchor: middle; transition: fill .4s ease, stroke .4s ease; paint-order: stroke fill; stroke-linejoin: round; stroke-width: 2px; }
+  .imap-key { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--muted); justify-content: center; }
+  .imap-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .imap-key .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .context-label { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; font-weight: 700; fill: var(--muted); text-anchor: middle; opacity: .85; paint-order: stroke fill; stroke: var(--paper); stroke-width: 2.5px; stroke-linejoin: round; }
 </style>
 
 <div class="wrap">
@@ -184,7 +222,43 @@
   <p class="lede">That British chapter left Guyana with a legacy no other country on this continent shares: an English-speaking nation whose population was permanently reshaped by indentured labor. After Britain abolished slavery across its empire in 1834, plantation owners brought large numbers of indentured laborers to replace enslaved workers &mdash; primarily from India, with smaller numbers from China and Portugal's Madeira &mdash; and that migration is why Guyana today is defined by its roughly even Indo-Guyanese and Afro-Guyanese population split. Independence from Britain followed in 1966.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Guyana, c. 1500s (indigenous and early Dutch settlement) &ndash; present, four political entries. Guyana's history runs as a single continuous line &mdash; indigenous territory, Dutch colonization, British cession and consolidation, independence &mdash; with no genuine internal governing split within its own modern borders at any point, so like several other single-line pages in this atlas, this one carries no internal-partition map. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Guyana, c. 1500s (indigenous and early Dutch settlement) &ndash; present, four political entries. Part of a larger atlas &mdash; see the linked pages at the bottom.
+  </div>
+
+  <div class="imap-section">
+    <h2>One border, four rulers</h2>
+    <p class="imap-sub">Guyana's own real border, traced whole &mdash; no internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <div class="rule-box">
+      <b>This is a single-region page, honestly.</b> Essequibo, Demerara, and Berbice were administered as three separate Dutch holdings for nearly two centuries, but the same Dutch West India Company stood behind all three &mdash; unlike Hungary's Habsburg/Ottoman split elsewhere in this atlas, this was never rule divided between two different powers, so there is no genuine internal line to draw.
+    </div>
+    <div class="imap-frame">
+      <div class="imap-controls">
+        <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
+        <span class="imap-year" id="iYearTag">to c. 1616</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+      </div>
+      <svg id="imap-svg" viewBox="0 0 350 489" xmlns="http://www.w3.org/2000/svg">
+        <g class="context-label" pointer-events="none">
+          <text x="175" y="14">VENEZUELA</text>
+          <text x="60" y="200">VENEZUELA</text>
+          <text x="290" y="150">SURINAME</text>
+          <text x="150" y="475">BRAZIL</text>
+        </g>
+        <path id="ireg-gy" class="ireg-fill" d="M126.7,25.0 L167.2,47.7 L205.3,88.0 L207.0,119.8 L230.2,121.3 L263.2,151.4 L287.6,173.0 L277.7,228.6 L240.3,244.7 L243.7,259.3 L232.3,291.2 L259.6,336.0 L279.3,336.1 L287.4,371.0 L325.0,424.7 L310.0,427.0 L275.9,421.7 L255.9,438.2 L228.1,449.0 L208.6,451.7 L201.8,463.8 L171.5,460.7 L133.7,431.7 L129.2,403.1 L113.4,371.9 L123.2,319.2 L140.3,297.5 L126.2,268.7 L105.0,259.4 L113.0,232.2 L98.7,218.0 L66.7,220.7 L25.0,173.8 L41.7,156.8 L40.5,128.3 L78.4,118.4 L93.7,106.8 L72.6,83.8 L77.9,61.3 L126.7,25.0 Z"/>
+        <g font-family="IBM Plex Mono, monospace">
+          <text class="ireg-label" id="ilbl-gy" x="175" y="250">GUYANA</text>
+        </g>
+      </svg>
+      <div class="imap-head">
+        <div class="imap-name" id="iEraName">Indigenous peoples before Dutch settlement</div>
+        <div class="imap-owners" id="iEraOwners"></div>
+      </div>
+      <div class="iflags-row" id="iFlagsRow"></div>
+      <p class="imap-story" id="iEraStory"></p>
+
+      <p class="map-note">Real traced border, no internal partition &mdash; see the rule box above for why.</p>
+      <div class="imap-key" id="iLegend"></div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -372,6 +446,102 @@
 </div>
 
 <script>
+(function () {
+  var IC = {
+    none:"#6b5c4a", dutch:"#21468b", british:"#7c2e1f", modern:"#a9762f"
+  };
+  var INAMES = {
+    none:"Indigenous peoples before Dutch settlement", dutch:"Dutch Guiana colonies (Essequibo, Demerara, Berbice)",
+    british:"British Guiana (Crown colony)", modern:"Co-operative Republic of Guyana"
+  };
+  var IFLAGS = {
+    none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    dutch: '<rect width="300" height="66.6" fill="#ae1c28"/><rect y="66.6" width="300" height="66.6" fill="#f4efe1"/><rect y="133.2" width="300" height="66.8" fill="#21468b"/>',
+    british: '<rect width="300" height="200" fill="#00247d"/><rect x="0" y="0" width="150" height="100" fill="#00247d"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="18"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#a4302a" stroke-width="8"/><rect x="60" y="0" width="30" height="100" fill="#f4efe1"/><rect x="0" y="35" width="150" height="30" fill="#f4efe1"/><rect x="68" y="0" width="14" height="100" fill="#a4302a"/><rect x="0" y="43" width="150" height="14" fill="#a4302a"/><circle cx="205" cy="130" r="42" fill="#f4efe1" stroke="#a9762f" stroke-width="3"/>',
+    modern: '<rect width="300" height="200" fill="#009e49"/><polygon points="0,0 0,200 220,100" fill="#f4efe1"/><polygon points="10,9 10,191 208,100" fill="#fcd116"/><polygon points="0,0 0,200 125,100" fill="#000000"/><polygon points="10,9 10,191 112,100" fill="#ce1126"/>'
+  };
+  function iFlagSvg(key) {
+    return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
+  }
+  var iLegendEl = document.getElementById("iLegend");
+  iLegendEl.innerHTML = Object.keys(IC).map(function (k) {
+    return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
+  }).join("");
+
+  var ISNAP = [
+    { year:"to c. 1616", name:"Indigenous peoples before Dutch settlement", t:{ gy:IC.none }, flagKeys:{ gy:"none" },
+      story:"Arawak, Carib, and other indigenous peoples inhabit the coastal and interior regions of present-day Guyana for centuries before Dutch colonization begins in the early 1600s, living in distinct communities rather than under any single unified polity. No securely documented flag survives." },
+    { year:"c. 1616", name:"Dutch Guiana colonies (Essequibo, Demerara, Berbice)", t:{ gy:IC.dutch }, flagKeys:{ gy:"dutch" },
+      story:"The Dutch West India Company establishes the Essequibo colony around 1616, followed by Berbice and Demerara, run on plantation agriculture worked by enslaved Africans. The three colonies are administered separately but all answer to the same Dutch authority for nearly two centuries." },
+    { year:"1814", name:"British Guiana (Crown colony)", t:{ gy:IC.british }, flagKeys:{ gy:"british" },
+      story:"Britain formally acquires Essequibo, Demerara, and Berbice under the 1814 Anglo-Dutch treaty and consolidates all three into a single Crown colony in 1831. Indentured laborers, overwhelmingly from India, permanently reshape the colony's population after the 1834 abolition of slavery." },
+    { year:"1966–present", name:"Co-operative Republic of Guyana", t:{ gy:IC.modern }, flagKeys:{ gy:"modern" },
+      story:"Guyana becomes independent from Britain on 26 May 1966 and declares itself a co-operative republic in 1970. The \"Golden Arrowhead,\" designed by vexillologist Whitney Smith, has flown over the whole of this same territory, unaltered, ever since." }
+  ];
+
+  var IREGIONS = ["gy"];
+  var IREGION_NAMES = { gy:"Guyana" };
+  var IADJ = [];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  var iYearTag = document.getElementById("iYearTag");
+  var iEraName = document.getElementById("iEraName");
+  var iEraOwners = document.getElementById("iEraOwners");
+  var iEraStory = document.getElementById("iEraStory");
+  var iFlagsRow = document.getElementById("iFlagsRow");
+  var iSlider = document.getElementById("iSlider");
+
+  function iRender(idx) {
+    var era = ISNAP[idx];
+    iYearTag.textContent = era.year;
+    iEraName.textContent = era.name;
+    iEraStory.innerHTML = era.story;
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
+      var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+    });
+
+    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t.gy; })[0];
+    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory";
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
+  }
+
+  iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
+  iRender(0);
+
+  var iPlaying = false, iPlayTimer = null;
+  var iPlayBtn = document.getElementById("iPlayBtn");
+  function iStepPlay() {
+    var next = parseInt(iSlider.value, 10) + 1;
+    if (next > ISNAP.length - 1) { iStopPlay(); return; }
+    iSlider.value = next;
+    iRender(next);
+  }
+  function iStartPlay() {
+    iPlaying = true;
+    iPlayBtn.innerHTML = "&#10074;&#10074;";
+    if (parseInt(iSlider.value, 10) >= ISNAP.length - 1) { iSlider.value = 0; iRender(0); }
+    iPlayTimer = setInterval(iStepPlay, 1700);
+  }
+  function iStopPlay() {
+    iPlaying = false;
+    iPlayBtn.innerHTML = "&#9654;";
+    clearInterval(iPlayTimer);
+  }
+  iPlayBtn.addEventListener("click", function () { iPlaying ? iStopPlay() : iStartPlay(); });
+
   document.querySelectorAll(".tag[data-tip]").forEach(function (tag) {
     tag.addEventListener("click", function (e) {
       var wasOpen = tag.classList.contains("tip-open");
@@ -383,5 +553,6 @@
   document.addEventListener("click", function () {
     document.querySelectorAll(".tag.tip-open").forEach(function (t) { t.classList.remove("tip-open"); });
   });
+})();
 </script>
 </body></html>
