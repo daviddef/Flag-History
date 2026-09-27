@@ -245,7 +245,7 @@
 
 
   <div class="imap-section">
-    <h2>One territory, six eras</h2>
+    <h2>One territory, seven eras</h2>
     <p class="imap-sub">Costa Rica&rsquo;s own real border, traced whole &mdash; the country&rsquo;s modern territory has never itself been split between rival governments. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This is a single-region page, not a partition map.</b> Costa Rica passed through a Spanish province, a Mexican annexation, and a Central American federation before becoming its own republic in 1848 &mdash; but its own territory was never itself divided between competing governments the way some other pages in this atlas track. What changes here is only who held the whole territory.
@@ -253,8 +253,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1200 &amp;ndash; 1564</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1000 BCE &amp;ndash; 1200 CE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 290.0 259.2" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -569,9 +569,10 @@
 
 <script>
 (function () {
-  var IC = { indigenous:"#6b5c4a", colonial:"#7c2e1f", mexico:"#9c3b28", federation:"#c9a13c", transitional:"#204b5c", republic:"#a9762f" };
-  var INAMES = { indigenous:"Indigenous chiefdoms and early resistance", colonial:"Spanish colonial rule (Captaincy General of Guatemala)", mexico:"Annexation to the First Mexican Empire", federation:"Federal Republic of Central America (member state)", transitional:"Sovereign state, transitional (pre-redesign)", republic:"Republic of Costa Rica" };
+  var IC = { guayabo:"#5c2a24", indigenous:"#6b5c4a", colonial:"#7c2e1f", mexico:"#9c3b28", federation:"#c9a13c", transitional:"#204b5c", republic:"#a9762f" };
+  var INAMES = { guayabo:"Early Costa Rica: Guayabo &amp; the Diqu&iacute;s culture", indigenous:"Indigenous chiefdoms and early resistance", colonial:"Spanish colonial rule (Captaincy General of Guatemala)", mexico:"Annexation to the First Mexican Empire", federation:"Federal Republic of Central America (member state)", transitional:"Sovereign state, transitional (pre-redesign)", republic:"Republic of Costa Rica" };
   var IFLAGS = {
+    guayabo: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     indigenous: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     colonial: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#a4302a\" stroke-width=\"26\"/>",
     mexico: "<rect width=\"100\" height=\"200\" fill=\"#006341\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#f4efe1\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#ce1126\"/><circle cx=\"150\" cy=\"100\" r=\"18\" fill=\"#a9762f\"/>",
@@ -588,6 +589,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1000 BCE &ndash; 1200 CE", name:"Early Costa Rica: Guayabo &amp; the Diqu&iacute;s culture", t:{ cr:IC.guayabo }, flagKeys:{ cr:"guayabo" },
+      story:"Settled village life and farming appear in this territory by roughly 1000 BCE, and by the early centuries CE its people are raising the earthen mounds, paved causeways, aqueducts, and tombs of Guayabo, the largest known pre-Columbian settlement in Costa Rica, occupied into the 1400s. Farther south, the Diqu&iacute;s culture of the Palmar Sur region carves and moves the famous granite stone spheres (some over 15 tons) between roughly 600 and 1000 CE. No single state ever unifies the territory in this period; it remains organized into separate chiefdoms, and no securely documented flag or banner survives from this era, many centuries before the small-chiefdoms era with which this map's earlier version began." },
     { year:"c. 1200 &ndash; 1564", name:"Indigenous chiefdoms and early resistance", t:{ cr:IC.indigenous }, flagKeys:{ cr:"indigenous" },
       story:"Small, scattered indigenous chiefdoms &mdash; Hu&eacute;tares, Bor&uacute;cas, and Chorotega groups &mdash; occupy the territory with no single unifying polity when Columbus first sights the coast in 1502. Spanish conquest attempts repeatedly fail through the early 16th century against disease, terrain, and sustained resistance; durable control waits until Cartago&rsquo;s 1564 founding, the last-pacified territory in the region. No flag survives; shown honestly blank." },
     { year:"1564 &ndash; 1821", name:"Spanish colonial rule (Captaincy General of Guatemala)", t:{ cr:IC.colonial }, flagKeys:{ cr:"colonial" },
