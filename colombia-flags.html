@@ -242,7 +242,7 @@
 
 
   <div class="imap-section">
-    <h2>One republic, five eras</h2>
+    <h2>One republic, six eras</h2>
     <p class="imap-sub">Colombia&rsquo;s own real border, traced whole &mdash; the country&rsquo;s modern territory has never been split between separately governed pieces since independence. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This is a single-region page, not a partition map.</b> Colombia&rsquo;s own borders shifted at the edges &mdash; Panama seceded in 1903, Gran Colombia itself split into three countries in 1830 &mdash; but the territory that is Colombia today was never itself divided between rival governments. What changes here is who held it, and how large the union around it was, not how Colombia&rsquo;s own core was cut up.
@@ -250,8 +250,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1450 &amp;ndash; 1550</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1st century BCE &amp;ndash; 8th century CE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 218.2 290.0" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -522,9 +522,10 @@
 
 <script>
 (function () {
-  var IC = { muisca:"#6b5c4a", viceroyalty:"#6e4a2f", grancolombia:"#c9a13c", newgranada:"#8a6a2f", modern:"#a9762f" };
-  var INAMES = { muisca:"Muisca Confederation", viceroyalty:"Viceroyalty of New Granada (Spanish colonial rule)", grancolombia:"Gran Colombia", newgranada:"Republic of New Granada", modern:"Republic of Colombia (modern)" };
+  var IC = { sanagustin:"#5c2a24", muisca:"#6b5c4a", viceroyalty:"#6e4a2f", grancolombia:"#c9a13c", newgranada:"#8a6a2f", modern:"#a9762f" };
+  var INAMES = { sanagustin:"San Agust&iacute;n culture (pre-Muisca)", muisca:"Muisca Confederation", viceroyalty:"Viceroyalty of New Granada (Spanish colonial rule)", grancolombia:"Gran Colombia", newgranada:"Republic of New Granada", modern:"Republic of Colombia (modern)" };
   var IFLAGS = {
+    sanagustin: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     muisca: "<rect width=\"300\" height=\"200\" fill=\"#c9a13c\"/><circle cx=\"150\" cy=\"100\" r=\"46\" fill=\"#8a5a2a\"/><circle cx=\"150\" cy=\"100\" r=\"30\" fill=\"#c9a13c\"/>",
     viceroyalty: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#a9762f\" stroke-width=\"10\"/><path d=\"M0,0 L300,0 L300,50 L0,50 Z\" fill=\"#a4302a\"/><circle cx=\"150\" cy=\"120\" r=\"40\" fill=\"#c9a13c\"/>",
     grancolombia: "<rect width=\"300\" height=\"66.7\" fill=\"#fcd116\"/><rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#003893\"/><rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#ce1126\"/><path d=\"M150,80 l7,20 21,2 -17,14 6,20 -17,-13 -17,13 6,-20 -17,-14 21,-2 Z\" fill=\"#f4efe1\"/>",
@@ -540,6 +541,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1st century BCE &ndash; 8th century CE", name:"San Agust&iacute;n culture (pre-Muisca)", t:{ co:IC.sanagustin }, flagKeys:{ co:"sanagustin" },
+      story:"In the highlands of what is now Huila department, in Colombia's southern Andes, the San Agust&iacute;n culture carves hundreds of monumental stone statues &mdash; anthropomorphic and animal deities, shamanic figures, and tomb guardians &mdash; over roughly nine centuries, leaving South America's largest collection of megalithic religious sculpture. No unified state or named rulers are documented; the culture's major ceremonial centers are abandoned by around the 8th century CE, for reasons the archaeological record does not establish, centuries before Spanish contact and well before the later Muisca Confederation forms to the north. No flag or comparable banner survives; the culture expressed itself through stone carving and burial architecture instead." },
     { year:"c. 1450 &ndash; 1550", name:"Muisca Confederation", t:{ co:IC.muisca }, flagKeys:{ co:"muisca" },
       story:"On the high plateau around modern Bogot&aacute; and Tunja, the Muisca organize into a loose confederation of chiefdoms (zipa and zaque) by the 15th century, renowned for goldwork whose ritual offerings at Lake Guatavita feed the later Spanish El Dorado legend. Spanish forces conquer the Muisca heartland in 1537&ndash;38. No flag in the European sense is documented; the gold disc shown is a symbolic stand-in for their metalwork, not an attested banner." },
     { year:"1550 &ndash; 1819", name:"Viceroyalty of New Granada (Spanish colonial rule)", t:{ co:IC.viceroyalty }, flagKeys:{ co:"viceroyalty" },
