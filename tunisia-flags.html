@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five eras</h2>
+    <h2>One border, six eras</h2>
     <p class="imap-sub">Tunisia's own real border, traced whole &mdash; a single continuous territory since well before this page's own timeline begins, with no genuine internal region to carve out. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>No internal split here by design.</b> Every dynasty, regency, protectorate, and republic on this page governed the same Tunisian territory as a single whole; even the Beylik's own gradual autonomy from Istanbul, and the French protectorate's real authority behind the bey's nominal rule, are changes of who governed, not changes to the shape of the country itself.
@@ -253,7 +253,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">1956&ndash;present</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 145 280" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -528,13 +528,15 @@
 <script>
 (function () {
   var IC = {
-    dynasties: "#6b5c4a", ottoman: "#c9a13c", beylik: "#c9a13c", protectorate: "#204b5c", republic: "#a9762f"
+    ancient: "#6b5c4a", dynasties: "#6b5c4a", ottoman: "#c9a13c", beylik: "#c9a13c", protectorate: "#204b5c", republic: "#a9762f"
   };
   var INAMES = {
+    ancient: "Ancient Carthage & Roman Africa",
     dynasties: "Early Islamic dynasties of Ifriqiya", ottoman: "Beylik of Tunis (early Ottoman regency)",
     beylik: "Beylik of Tunis (autonomous)", protectorate: "French Protectorate of Tunisia", republic: "Republic of Tunisia"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     dynasties: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     ottoman: '<rect width="300" height="200" fill="#a4302a"/><g fill="#f4efe1"><path d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/><path d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/></g>',
     beylik: '<rect width="300" height="200" fill="#e70013"/><circle cx="150" cy="100" r="54" fill="#f4efe1"/><path fill="#e70013" d="M150,64 a36,36 0 1,0 0,72 a29,29 0 1,1 0,-72 Z"/><path fill="#e70013" d="M150,62 l6.4,19.7 20.7,0 -16.7,12.2 6.4,19.7 -16.8,-12.2 -16.8,12.2 6.4,-19.7 -16.7,-12.2 20.7,0 Z"/>',
@@ -550,6 +552,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 814 BCE–c. 800 CE", name:"Ancient Carthage & Roman Africa", t:{ tn:IC.ancient }, flagKeys:{ tn:"ancient" },
+      story:"Phoenician settlers traditionally found Carthage around 814 BCE; it grows into the dominant trading power of the western Mediterranean until three wars with an expanding Rome &mdash; the Punic Wars (264&ndash;146 BCE) &mdash; end in the city's total destruction in 146 BCE. Rome rebuilds Carthage as the capital of the province of Africa until Vandal invaders seize it in 439 CE, and Byzantine forces under Belisarius retake it for Justinian in 533&ndash;34 CE, with Byzantine rule persisting until the Arab conquest completes in 698 CE. No flag in any modern sense existed anywhere in this era; shown here honestly blank rather than invented." },
     { year:"c. 800–1574", name:"Early Islamic dynasties of Ifriqiya", t:{ tn:IC.dynasties }, flagKeys:{ tn:"dynasties" },
       story:"The Aghlabid dynasty, ruling from Kairouan from 800, is followed by Fatimid rule, the Zirids, brief Almohad unification, and finally the Hafsid dynasty from 1229. No single flag can honestly represent nearly eight centuries and several distinct ruling dynasties; heraldic banners of this era are poorly attested." },
     { year:"1574–1831", name:"Beylik of Tunis (early Ottoman regency)", t:{ tn:IC.ottoman }, flagKeys:{ tn:"ottoman" },
