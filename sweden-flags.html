@@ -243,7 +243,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>Six eras, one real border</h2>
+    <h2>Seven eras, one real border</h2>
     <p class="imap-sub">Sweden's own real coastal border, traced whole &mdash; a single crown's lineage from fragmented chieftaincies to today's kingdom, with no genuinely separate internal region on Swedish soil itself. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>This page doesn't split internally.</b> Sweden's real internal split &mdash; Finland, held from the Middle Ages until 1809 &mdash; is a separate country today with its own flag lineage, not a sub-region of modern Sweden, so it isn't carved out here. The Kalmar Union and the Sweden&ndash;Norway union were unions of separate crowns, not partitions within Sweden.
@@ -251,8 +251,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 900&ndash;995</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 98&ndash;900 CE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -266,7 +266,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Fragmented Svear and G&ouml;tar chieftaincies</div>
+        <div class="imap-name" id="iEraName">Suiones &amp; the Vendel-era chieftaincies</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -587,6 +587,8 @@
   iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.fragmented + '"></span>Fragmented chieftaincies</span><span><span class="sw" style="background:' + IC.kingdom + '"></span>Kingdom, independent</span><span><span class="sw" style="background:' + IC.union + '"></span>Union</span>';
 
   var ISNAP = [
+    { year:"c. 98&ndash;900 CE", name:"Suiones &amp; the Vendel-era chieftaincies", fill:IC.fragmented, flagKey:"frag",
+      story:"Tacitus's Germania (98 CE) names the Suiones as a powerful, seafaring people east of the Baltic — the earliest surviving written reference to a people ancestral to the Svear and the Swedes. The Vendel period (c. 550–790) leaves elite boat-grave cemeteries near Old Uppsala furnished with Roman-influenced helmets and weapons, evidence of a wealthy, stratified chieftaincy, though no securely documented king's name survives independently of much later, partly legendary sagas. No flag survives or is plausibly attested from this era in any modern sense." },
     { year:"c. 900&ndash;995", name:"Fragmented Svear and G&ouml;tar chieftaincies", fill:IC.fragmented, flagKey:"frag",
       story:"Svear (around Lake Mälaren) and Götar (further south) exist as separate Norse chieftaincies with no unified crown and no documented flag of any kind." },
     { year:"995&ndash;1397", name:"Kingdom of Sweden (medieval, pre-Kalmar)", fill:IC.kingdom, flagKey:"premed",
