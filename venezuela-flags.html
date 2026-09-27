@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1500</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 2000 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="380" height="300" fill="var(--sea)"/>
@@ -261,7 +261,7 @@
         <text class="ireg-label" id="ilbl-ve" x="190" y="148">VENEZUELA</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Indigenous coastal peoples</div>
+        <div class="imap-name" id="iEraName">Pre-Columbian Orinoco &amp; Andean peoples</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -542,6 +542,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 2000 BCE–1498 CE", name:"Pre-Columbian Orinoco & Andean peoples", t:{ ve:IC.none }, flagKeys:{ ve:"none" },
+      story:"For roughly three and a half millennia before Columbus's ships reached its shores, the territory now called Venezuela was home to distinct, archaeologically documented cultures rather than any single state: Saladoid and later Barrancoid potters along the Orinoco from around 2000 BCE, the Timoto-Cuica of the Andean highlands, and Caquetío and Cumanagoto chiefdoms along the Caribbean coast. Arawakan- and Carib-speaking peoples moved through and settled the region in overlapping waves, but no unifying kingdom or empire ever arose to bind them into one polity. No flag or comparable state symbol survives from any of these cultures; shown here honestly blank rather than invented." },
     { year:"c. 1500–1777", name:"Indigenous coastal peoples & early Spanish provinces", t:{ ve:IC.none }, flagKeys:{ ve:"none" },
       story:"Scattered indigenous groups &mdash; Caquetío, Cumanagoto, and others &mdash; and loosely connected early Spanish settlements from the 1520s, administered as separate provinces rather than one coherent colony. No securely documented territorial flag survives from this fragmented era." },
     { year:"1777–1810", name:"Captaincy General of Venezuela", t:{ ve:IC.colonial }, flagKeys:{ ve:"colonial" },
