@@ -226,8 +226,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1448</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 9 CE–1154</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 170 155" xmlns="http://www.w3.org/2000/svg">
         <path fill="var(--tile-sea)" pointer-events="none" d="M173.9,221.0 L175.2,226.1 L165.5,228.1 L168.1,219.4 Z" transform="translate(-90,-95)"/>
@@ -248,7 +248,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Kosača's Duchy</div>
+        <div class="imap-name" id="iEraName">Illyrian Dalmatia &amp; early Slavic Bosona</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -710,9 +710,10 @@
 
 <script>
 (function () {
-  var IC = { kingdom:"#1e2f96", herzdukedom:"#7c2e1f", ottoman:"#0b7a3d", ahbos:"#a4302a", ahherz:"#c9a13c", yugo:"#2447c4", ndh:"#6b3f4a", sfry:"#8c2f2f", modern:"#0018a8" };
-  var INAMES = { kingdom:"Kingdom of Bosnia", herzdukedom:"Duchy of Saint Sava", ottoman:"Ottoman Empire", ahbos:"Austro-Hungarian Bosnia", ahherz:"Austro-Hungarian Herzegovina", yugo:"Kingdom of Yugoslavia", ndh:"NDH (Croatian puppet state)", sfry:"SFR Yugoslavia", modern:"Republic today" };
+  var IC = { ancient:"#204b5c", kingdom:"#1e2f96", herzdukedom:"#7c2e1f", ottoman:"#0b7a3d", ahbos:"#a4302a", ahherz:"#c9a13c", yugo:"#2447c4", ndh:"#6b3f4a", sfry:"#8c2f2f", modern:"#0018a8" };
+  var INAMES = { ancient:"Illyrian Dalmatia &amp; early Slavic Bosona", kingdom:"Kingdom of Bosnia", herzdukedom:"Duchy of Saint Sava", ottoman:"Ottoman Empire", ahbos:"Austro-Hungarian Bosnia", ahherz:"Austro-Hungarian Herzegovina", yugo:"Kingdom of Yugoslavia", ndh:"NDH (Croatian puppet state)", sfry:"SFR Yugoslavia", modern:"Republic today" };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     kotromanic: '<rect width="300" height="200" fill="#f4efe1"/><rect x="105" y="50" width="90" height="90" fill="#1e2f96" stroke="#241f14" stroke-width="2"/><path d="M105,50 L195,140" stroke="#f4efe1" stroke-width="16"/><g fill="#c9a13c"><circle cx="128" cy="72" r="7"/><circle cx="150" cy="95" r="7"/><circle cx="172" cy="117" r="7"/><circle cx="172" cy="72" r="7"/><circle cx="128" cy="117" r="7"/></g>',
     herzeg: '<rect width="300" height="200" fill="#7c2e1f"/><path d="M150,60 l10,25 27,2 -20,18 6,27 -23,-15 -23,15 6,-27 -20,-18 27,-2 Z" fill="#c9a13c" stroke="#8a6a1f" stroke-width="1.5"/>',
     ottoman: '<rect width="300" height="200" fill="#a4302a"/><path d="M120,70 A38,38 0 1 0 172,102 A28,28 0 1 1 120,70 Z" fill="#f4efe1"/><path d="M200,84 l5,15 16,0 -13,10 5,15 -13,-9 -13,9 5,-15 -13,-10 16,0 Z" fill="#f4efe1"/>',
@@ -732,6 +733,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 9 CE–1154", name:"Illyrian Dalmatia &amp; early Slavic Bosona", t:{ bos:IC.ancient, herz:IC.ancient }, flagKeys:{ bos:"ancient", herz:"ancient" },
+      story:"Rome subdues the Illyrian tribes of the western Balkans by 9 CE, folding this land into the province of Dalmatia. South Slavic peoples migrate in from the 6th&ndash;7th centuries, gradually absorbing the Romanized Illyrian population; the name \"Bosona\" first survives in writing only around 950 CE, in Byzantine emperor Constantine VII's De Administrando Imperio. For two more centuries it remains a contested borderland among Byzantium, Hungary, Croatia, and Serbia's regional lords, with no independently named ruler and no distinct Bosnian or Herzegovinian territory yet &mdash; and no flag documented for either." },
     { year:"1448", name:"Kosača's Duchy", t:{ bos:IC.kingdom, herz:IC.herzdukedom }, flagKeys:{ bos:"kotromanic", herz:"herzeg" },
       story:"Herzegovina takes its name and its first separate ruler in 1448, when the Bosnian nobleman Stjepan Vukčić styles himself “Herceg (Duke) of Saint Sava” and rules the south from Blagaj, semi-independent of the Bosnian crown at Jajce. Bosnia proper stays under King Stephen Tomašević, the Kotromanić dynasty's last ruler, its lily arms already three generations old." },
     { year:"1482", name:"Ottoman conquest complete", t:{ bos:IC.ottoman, herz:IC.ottoman }, flagKeys:{ bos:"ottoman", herz:"ottoman" },
