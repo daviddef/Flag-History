@@ -239,7 +239,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, nine rulers</h2>
+    <h2>One border, ten rulers</h2>
     <p class="imap-sub">Lithuania's own real border, traced whole &mdash; the modern territory shown here never had an internal governance split worth mapping; its real dramatic story is external, not internal. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>The grand duchy shown solidifying here in 1253 once stretched to the Black Sea.</b> At its 14th-century height under Gediminas and his successors, the Grand Duchy of Lithuania was one of the largest states in Europe, reaching deep into modern Belarus, Ukraine, and western Russia &mdash; many times the area of the modern republic traced on this map. The border below is deliberately kept to Lithuania's own real, current territory throughout, so the map never invents a historical shape; the vast medieval extent is described in the text instead.
@@ -248,7 +248,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">1200</span>
-        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="10" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
         <path fill="var(--tile-sea)" d="M79.2,131.6 L30.0,117.2 L20.0,48.1 L20.0,0 L0,0 L0,131.6 Z"/>
@@ -676,15 +676,16 @@
 <script>
 (function () {
   var IC = {
-    pagan: "#7a4a2e", gdl: "#a4302a", russia: "#1e5288",
+    tribal: "#a9762f", pagan: "#7a4a2e", gdl: "#a4302a", russia: "#1e5288",
     ind: "#1c7a3d", soviet: "#a4272a", nazi: "#2b2e33"
   };
   var INAMES = {
-    pagan: "Pagan Lithuanian tribes", gdl: "Grand Duchy of Lithuania",
+    tribal: "The Balts (Aesti) &ndash; Amber Road tribes", pagan: "Pagan Lithuanian tribes", gdl: "Grand Duchy of Lithuania",
     russia: "Russian Empire", ind: "Republic of Lithuania",
     soviet: "USSR", nazi: "Nazi Germany (Reichskommissariat Ostland)"
   };
   var IFLAGS = {
+    tribal: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     pagan: '<rect width="300" height="200" fill="#7a4a2e"/><g fill="#e8d9a8"><circle cx="150" cy="100" r="34"/></g><path d="M150,66 L150,134 M116,100 L184,100 M126,76 L174,124 M174,76 L126,124" stroke="#7a4a2e" stroke-width="6"/>',
     gdl: '<rect width="300" height="200" fill="#a4302a"/><ellipse cx="150" cy="95" rx="46" ry="52" fill="#f4efe1"/><path d="M150,60 q-26,10 -22,42 q2,20 22,30 q20,-10 22,-30 q4,-32 -22,-42 Z" fill="#a4302a"/><rect x="140" y="95" width="20" height="34" fill="#f4efe1"/><path d="M120,150 h60 l-8,14 h-44 Z" fill="#f4efe1"/>',
     russia: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#1e5288"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
@@ -702,6 +703,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 100", name:"The Balts (Aesti) &amp; the Amber Road", t:{ lt:IC.tribal }, flagKeys:{ lt:"tribal" },
+      story:"Roman writers know the ancestors of the Lithuanians only as the Aestii, Baltic-speaking tribes gathering amber along the shore and trading it south along the Amber Road; Tacitus describes them around 98 CE, and Pliny the Elder records a Roman knight sent by Nero specifically to procure amber from this coast. No unified state exists &mdash; scattered, fortified hilltop settlements sit under local chieftains, with no ruler's name recorded and no flag or banner attested, only the indigenous Baltic paganism that would later make Lithuania Europe's last openly pagan state." },
     { year:"1200", name:"Pagan tribal lands", t:{ lt:IC.pagan }, flagKeys:{ lt:"pagan" },
       story:"On the eve of the Northern Crusades, Lithuanian-speaking tribes hold the forested south of the eastern Baltic coast, organized around local dukes with no central authority yet. To the north, crusading orders are already conquering Latvia and Estonia; Lithuania is about to become the exception." },
     { year:"1253", name:"Mindaugas crowned", t:{ lt:IC.gdl }, flagKeys:{ lt:"gdl" },
