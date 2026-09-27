@@ -251,8 +251,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1220</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 200</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="360" height="320" fill="var(--sea)"/>
@@ -260,7 +260,7 @@
         <text class="ireg-label" id="ilbl-zw" x="185" y="160">ZIMBABWE</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Kingdom of Zimbabwe, Mutapa, and Rozvi Empire</div>
+        <div class="imap-name" id="iEraName">Early Iron Age farming states &amp; the Leopard's Kopje culture</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -621,6 +621,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 200–c. 1220", name:"Early Iron Age farming states & the Leopard's Kopje culture", t:{ zw:IC.none }, flagKeys:{ zw:"none" },
+      story:"Bantu-speaking farmers and ironworkers of the Gokomere/Ziwa culture settle the Zimbabwe plateau from around 200 CE, part of the wider Bantu expansion across sub-Saharan Africa. From roughly 900 CE the cattle-wealthy Leopard's Kopje culture develops, its Mapungubwe center just south of the modern border becoming a major gold- and ivory-trading kingdom by the 11th&ndash;12th centuries and Great Zimbabwe's direct forerunner in wealth and trade. No flag or comparable state banner survives from any of these Iron Age societies." },
     { year:"c. 1220–1840", name:"Kingdom of Zimbabwe, Mutapa, and Rozvi Empire", t:{ zw:IC.none }, flagKeys:{ zw:"none" },
       story:"The Kingdom of Zimbabwe, centered on the monumental stone city of Great Zimbabwe, controls a Shona-speaking trading state at its 13th–15th century height. Its Mutapa and Rozvi successor states carry Shona statehood forward. No securely documented flag survives from any of these states." },
     { year:"c. 1840–1890", name:"Ndebele Kingdom (Matabeleland)", t:{ zw:IC.none }, flagKeys:{ zw:"none" },
