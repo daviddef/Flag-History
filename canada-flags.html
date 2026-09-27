@@ -244,16 +244,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>One northern border, six flags</h2>
-    <p class="imap-sub">Canada's own real coastline, traced whole (the mainland and its largest Arctic islands) &mdash; its own existing timeline names no separate Upper/Lower Canada or French/English entity as its own flag era, so this page follows that same six-era structure rather than inventing a split the flag record doesn't carry.</p>
+    <h2>One northern border, six flags &mdash; and one flagless Norse outpost</h2>
+    <p class="imap-sub">Canada's own real coastline, traced whole (the mainland and its largest Arctic islands) &mdash; its own existing timeline names no separate Upper/Lower Canada or French/English entity as its own flag era, so this page follows that same six-flag structure (plus the brief, flagless Norse Vinland outpost that opens the timeline) rather than inventing a split the flag record doesn't carry.</p>
     <div class="rule-box">
       <b>No internal partition is shown here.</b> Quebec's French-civil-law distinctiveness and the historic Upper/Lower Canada division are real and important, but neither ever flew a flag separate from the rest of British North America or the later Dominion &mdash; the flag record this atlas tracks changed for the whole territory at once, not region by region. What changes here is only who held sovereignty over the whole territory shown.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1534 – 1763</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1000 – 1021 CE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
         <rect class="isea-bg" x="0" y="0" width="280" height="200"/>
@@ -597,6 +597,7 @@
 
 (function () {
   var IC = {
+    "era-1000": "#6b5c4a",
     "era-1534": "#204b5c",
     "era-1763": "#204b5c",
     "era-1867": "#a9762f",
@@ -605,6 +606,7 @@
     "era-1965": "#a9762f"
   };
   var INAMES = {
+    "era-1000": "Norse Vinland (L'Anse aux Meadows)",
     "era-1534": "New France",
     "era-1763": "British North America",
     "era-1867": "Dominion of Canada",
@@ -613,6 +615,7 @@
     "era-1965": "Canada (Maple Leaf flag)"
   };
   var IFLAGS = {
+    "era-1000": "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     "era-1534": "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/>\n              <g fill=\"#c9a13c\">\n                <path d=\"M60,60 l60,80 h-120 Z\"/><path d=\"M60,60 l60,80 M60,60 l-60,80\"/>\n              </g>",
     "era-1763": "<rect width=\"150\" height=\"200\" fill=\"#00247d\"/>\n              <path d=\"M0,0 L150,100 M150,0 L0,100\" stroke=\"#f4efe1\" stroke-width=\"14\"/>\n              <path d=\"M0,0 L150,100 M150,0 L0,100\" stroke=\"#a4302a\" stroke-width=\"6\"/>\n              <path d=\"M75,0 V100 M0,50 H150\" stroke=\"#f4efe1\" stroke-width=\"18\"/>\n              <path d=\"M75,0 V100 M0,50 H150\" stroke=\"#a4302a\" stroke-width=\"10\"/>\n              <rect x=\"150\" width=\"150\" height=\"200\" fill=\"#00247d\"/>\n              <path d=\"M150,0 L300,100 M300,0 L150,100\" stroke=\"#f4efe1\" stroke-width=\"14\"/>\n              <path d=\"M150,0 L300,100 M300,0 L150,100\" stroke=\"#a4302a\" stroke-width=\"6\"/>\n              <path d=\"M225,0 V100 M150,50 H300\" stroke=\"#f4efe1\" stroke-width=\"18\"/>\n              <path d=\"M225,0 V100 M150,50 H300\" stroke=\"#a4302a\" stroke-width=\"10\"/>",
     "era-1867": "<rect width=\"150\" height=\"200\" fill=\"#00247d\"/>\n              <path d=\"M0,0 L150,100 M150,0 L0,100\" stroke=\"#f4efe1\" stroke-width=\"14\"/>\n              <path d=\"M0,0 L150,100 M150,0 L0,100\" stroke=\"#a4302a\" stroke-width=\"6\"/>\n              <path d=\"M75,0 V100 M0,50 H150\" stroke=\"#f4efe1\" stroke-width=\"18\"/>\n              <path d=\"M75,0 V100 M0,50 H150\" stroke=\"#a4302a\" stroke-width=\"10\"/>\n              <rect x=\"150\" width=\"150\" height=\"200\" fill=\"#00247d\"/>\n              <path d=\"M150,0 L300,100 M300,0 L150,100\" stroke=\"#f4efe1\" stroke-width=\"14\"/>\n              <path d=\"M150,0 L300,100 M300,0 L150,100\" stroke=\"#a4302a\" stroke-width=\"6\"/>\n              <path d=\"M225,0 V100 M150,50 H300\" stroke=\"#f4efe1\" stroke-width=\"18\"/>\n              <path d=\"M225,0 V100 M150,50 H300\" stroke=\"#a4302a\" stroke-width=\"10\"/>",
@@ -629,6 +632,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1000 \u2013 1021 CE", name:"Norse Vinland (L'Anse aux Meadows)", t:{ cc: IC["era-1000"] }, flagKeys:{ cc: "era-1000" },
+      story:"Five centuries before Cartier, Norse voyagers from Greenland and Iceland &mdash; per the Icelandic sagas, led by Leif Erikson &mdash; establish a small seasonal base at the northern tip of Newfoundland around 1000 CE. L'Anse aux Meadows is the only confirmed Norse, and pre-Columbian European, site in North America outside Greenland. The outpost is abandoned within roughly two decades, after saga accounts of conflict with local Indigenous peoples and the difficulty of sustaining it from Greenland. No flag or banner is recorded for Vinland or any Norse expedition of this era." },
     { year:"c. 1534 \u2013 1763", name:"New France", t:{ cc: IC["era-1534"] }, flagKeys:{ cc: "era-1534" },
       story:"Jacques Cartier claims the Gulf of St. Lawrence for France in 1534, and permanent French settlement follows from Samuel de Champlain's 1608 founding of Quebec City, expanding along the St. Lawrence and Great Lakes over the following century and a half, before defeat in the Seven Years' War cedes the territory to Britain in 1763. Indigenous peoples, including the Haudenosaunee Confederacy, the Huron-Wendat, and\u2026" },
     { year:"1763 \u2013 1867", name:"British North America", t:{ cc: IC["era-1763"] }, flagKeys:{ cc: "era-1763" },
