@@ -1324,6 +1324,18 @@
   // already counted elsewhere, not new territory). Update when a hub's roster changes.
   var HUB_COUNTRIES_COVERED = 201;
 
+  function matchScore(c, q) {
+    var name = c.name.toLowerCase();
+    var alts = (c.alts || []).map(function (a) { return a.toLowerCase(); });
+    if (name === q) return 0;
+    if (alts.indexOf(q) !== -1) return 1;
+    if (name.indexOf(q) === 0) return 2;
+    if (name.indexOf(q) !== -1) return 3;
+    if (alts.some(function (a) { return a.indexOf(q) === 0; })) return 4;
+    if (alts.some(function (a) { return a.indexOf(q) !== -1; })) return 5;
+    return 6; // matched only via region/hub/crowns
+  }
+
   function renderGrid() {
     var q = searchBox.value.trim().toLowerCase();
     var matched = COUNTRIES.filter(function (c) {
@@ -1331,6 +1343,11 @@
       var hay = (c.name + " " + c.region + " " + c.hub + " " + c.crowns.join(" ") + " " + (c.alts || []).join(" ")).toLowerCase();
       return hay.indexOf(q) !== -1;
     });
+    if (q) {
+      matched = matched.map(function (c, i) { return { c: c, i: i, s: matchScore(c, q) }; })
+        .sort(function (a, b) { return a.s - b.s || a.i - b.i; })
+        .map(function (x) { return x.c; });
+    }
 
     resultCountEl.textContent = matched.length + " of " + COUNTRIES.length + " countries";
     emptyStateEl.style.display = matched.length ? "none" : "block";
