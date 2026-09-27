@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1177</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 450</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 220 165" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -266,7 +266,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Gaelic and Plantation Ulster</div>
+        <div class="imap-name" id="iEraName">Early Christian &amp; Gaelic Ulster</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -555,8 +555,9 @@
 
 <script>
 (function () {
-  var IC = { lordship:"#1e3f6b", union1:"#00247d", union2:"#00247d", stormont:"#9c3b28", union3:"#00247d" };
+  var IC = { gaelic:"#6b5c4a", lordship:"#1e3f6b", union1:"#00247d", union2:"#00247d", stormont:"#9c3b28", union3:"#00247d" };
   var INAMES = {
+    gaelic:"Early Christian & Gaelic Ulster (Uláid, Airгíalla, Cénél nEógain)",
     lordship:"Gaelic and Plantation Ulster (Lordship / Kingdom of Ireland)",
     union1:"Ulster (United Kingdom of Great Britain and Ireland)",
     union2:"Northern Ireland (created by partition)",
@@ -564,11 +565,12 @@
     union3:"Northern Ireland (direct rule to devolution)"
   };
   var IFLAGS = {
+    gaelic: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     lordship: '<rect width="300" height="200" fill="#1e3f6b"/><path d="M118,152 Q106,58 170,48 Q224,42 217,90 Q212,58 176,64 Q138,71 144,152 Z" fill="#c9a13c"/><path d="M151,72 L151,140 M163,66 L163,142 M175,64 L175,144 M187,63 L187,146" stroke="#1e3f6b" stroke-width="2.5"/><path d="M95,140 l6,12 13,1 -10,9 3,13 -12,-6 -12,6 3,-13 -10,-9 13,-1 Z" fill="#9c3b28"/>',
     union: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/>',
     stormont: '<rect width="300" height="200" fill="#f4efe1"/><rect x="125" width="50" height="200" fill="#9c3b28"/><rect y="75" width="300" height="50" fill="#9c3b28"/><polygon points="150,60 168,96 208,100 178,126 188,166 150,144 112,166 122,126 92,100 132,96" fill="#f4efe1" stroke="#9c3b28" stroke-width="3"/><path d="M138,88 h24 l-6,10 h6 l-12,26 -12,-26 h6 Z" fill="#9c3b28"/><path d="M110,55 c22,-14 58,-14 80,0 l-8,10 c-18,-10 -46,-10 -64,0 Z" fill="#f9d616" stroke="#9c3b28" stroke-width="2"/>'
   };
-  var IFLAGKEY = { lordship:"lordship", union1:"union", union2:"union", stormont:"stormont", union3:"union" };
+  var IFLAGKEY = { gaelic:"gaelic", lordship:"lordship", union1:"union", union2:"union", stormont:"stormont", union3:"union" };
   function iFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
   }
@@ -578,6 +580,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 450 – 1177", name:INAMES.gaelic, t:{ ni:IC.gaelic }, flagKeys:{ ni:IFLAGKEY.gaelic },
+      story:"For over seven centuries before John de Courcy's 1177 invasion, Ulster is governed by rival Gaelic over-kingdoms rather than any single crown: the Uláid along the eastern coast, the Airгíalla client-kingdoms in the south, and the Cénél nEógain, who expand steadily to become the region's dominant power by the eve of the Anglo-Norman invasion. No heraldic flag survives or is credibly attested for any Gaelic Ulster over-kingdom in this era — there is no single territory or banner to draw yet." },
     { year:"c. 1177 – 1801", name:INAMES.lordship, t:{ ni:IC.lordship }, flagKeys:{ ni:IFLAGKEY.lordship },
       story:"John de Courcy's 1177 invasion begins Anglo-Norman inroads, but Ulster stays the most thoroughly Gaelic part of Ireland under the O'Neill and O'Donnell dynasties until the Nine Years' War ends in 1603 and the 1606–10 Ulster Plantation resettles the land with Protestant tenants from Britain — the demographic root of everything that follows. Throughout, Ulster is simply part of the Lordship (from 1177), then Kingdom (from 1541), of Ireland; no separate Ulster flag existed under the crown." },
     { year:"1801", name:INAMES.union1, t:{ ni:IC.union1 }, flagKeys:{ ni:IFLAGKEY.union1 },
