@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, four flags over it</h2>
+    <h2>One border, five flags over it</h2>
     <p class="imap-sub">Rwanda's own real border, traced whole &mdash; the highlands around Lake Kivu answered to a single government in every era below, so there's no genuinely separate internal region to carve out honestly. Press play, or drag the slider, to watch who held it all at once.</p>
     <div class="rule-box">
       <b>This is a single-region page.</b> The precolonial kingdom's Hutu/Tutsi/Twa distinction, and the violence that followed its colonial hardening, was a social and ethnic division, not a territorial one &mdash; there was never a separately governed Hutu region and Tutsi region to map. Rwanda shared colonial administration with Burundi as Ruanda-Urundi, but the two kept separate courts and separate kingdoms underneath that joint mandate, and this page is scoped to Rwanda's own territory alone.
@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1600</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 3000 BCE</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -268,7 +268,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Kingdom of Rwanda (precolonial)</div>
+        <div class="imap-name" id="iEraName">Twa Hunter-Gatherers &amp; Bantu Settlement</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -499,13 +499,15 @@
 <script>
 (function () {
   var IC = {
-    precolonial:"#a9762f", colonial:"#7a4a1f", independence:"#1e7a4a", postgenocide:"#1e7a4a"
+    twa:"#8a7355", precolonial:"#a9762f", colonial:"#7a4a1f", independence:"#1e7a4a", postgenocide:"#1e7a4a"
   };
   var INAMES = {
+    twa:"Twa Hunter-Gatherers & Bantu Settlement of the Great Lakes",
     precolonial:"Kingdom of Rwanda (precolonial)", colonial:"Ruanda-Urundi (Belgian mandate / UN trust territory)",
     independence:"Republic of Rwanda (independence era)", postgenocide:"Republic of Rwanda (post-genocide)"
   };
   var IFLAGS = {
+    twa: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     precolonial: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     colonial: '<rect width="300" height="200" fill="#f4efe1"/><rect width="100" height="200" fill="#1a1a1a"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#a4302a"/><circle cx="150" cy="100" r="26" fill="#a9762f" stroke="#7a4a1f" stroke-width="2"/>',
     independence: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f9d616"/><rect y="133.3" width="300" height="66.7" fill="#1e7a4a"/><text x="150" y="112" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="34" font-weight="700" fill="#050505">R</text>',
@@ -520,6 +522,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 3000 BCE – c. 1600 CE", name:"Twa Hunter-Gatherers & Bantu Settlement", t:{ rw:IC.twa }, flagKeys:{ rw:"twa" },
+      story:"For roughly four and a half millennia before the Kingdom of Rwanda's own consolidation around 1600, the highlands around Lake Kivu are home first to Twa hunter-gatherers, attested archaeologically from at least the Neolithic, and then to successive waves of Bantu-speaking farmers, ironworkers, and cattle-keepers arriving as part of the broader Bantu Expansion. Iron-smelting furnaces and the Urewe pottery tradition document a functioning Iron Age society here centuries before any documented kingship, but no single ruler, capital, or unified polity can be attributed to this span with confidence, and no flag or comparable banner is attested for any Great Lakes society in this era." },
     { year:"c. 1600", name:"Kingdom of Rwanda (precolonial)", t:{ rw:IC.precolonial }, flagKeys:{ rw:"precolonial" },
       story:"A centralized Kingdom of Rwanda, ruled by a Mwami through a Tutsi-dominated court and a cattle-based clientship system binding Hutu, Tutsi, and Twa subjects together, consolidates and expands across the highlands around Lake Kivu, reaching its greatest extent under Kigeli IV Rwabugiri in the late 19th century. German explorers make first sustained contact in the 1890s, and Germany claims the kingdom as part of German East Africa from 1897, ruling indirectly through the existing court. No national flag is documented from this era." },
     { year:"1916", name:"Ruanda-Urundi (Belgian mandate / UN trust territory)", t:{ rw:IC.colonial }, flagKeys:{ rw:"colonial" },
