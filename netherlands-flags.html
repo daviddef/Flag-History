@@ -240,7 +240,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One country, nine changes of flag</h2>
+    <h2>One country, ten changes of flag</h2>
     <p class="imap-sub">Modern Netherlands' own territory, unlike Belgium next door, was never durably split along an internal line after 1581 &mdash; the Union of Utrecht's seven founding provinces and the later "Generality Lands" are a real distinction, but a fiddly and largely administrative one that never produced a solidified internal border worth drawing on a map. So this map is honest about it: one region, the country's real traced outline, changing color only when the government actually ruling it changed. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>No invented internal split.</b> A separate flags-of-the-provinces map would be its own project. What's shown here is the real outline of the Netherlands from public geographic data, recolored at each of the nine moments the ruling authority over the whole territory actually changed &mdash; including three changes of government inside a single twenty-year stretch, 1795&ndash;1815.
@@ -248,8 +248,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1433</span>
-        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 50 BCE</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg">
         <path fill="var(--tile-sea)" pointer-events="none" d="M20.0,243.4 L52.7,215.0 L108.4,63.2 L195.3,20.0 L195.3,0 L0,0 L0,243.4 Z"/>
@@ -265,7 +265,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Philip the Good unifies Holland-Zeeland-Hainaut</div>
+        <div class="imap-name" id="iEraName">Batavi &amp; Frisii Tribes of the Rhine Delta</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -718,11 +718,12 @@
 <script>
 (function () {
   var C = {
-    burgundian: "#8a6a35", dutchrep: "#2f6b4a", batavian: "#4a8f5c",
+    tribal: "#6b5c4a", burgundian: "#8a6a35", dutchrep: "#2f6b4a", batavian: "#4a8f5c",
     hollandkingdom: "#a35a1e", frenchempire: "#1f4d78", ukn: "#c9973a",
     kingdomnl: "#c9973a", occupation: "#3f3f3f", modernnl: "#c9973a"
   };
   var INAMES = {
+    tribal: "Batavi & Frisii Tribes of the Rhine Delta",
     burgundian: "Burgundian / Habsburg Netherlands", dutchrep: "Dutch Republic",
     batavian: "Batavian Republic", hollandkingdom: "Kingdom of Holland",
     frenchempire: "French Empire (direct rule)", ukn: "United Kingdom of the Netherlands",
@@ -730,6 +731,7 @@
     modernnl: "Kingdom of the Netherlands (modern)"
   };
   var IFLAGS = {
+    tribal: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     burgundian: '<rect width="300" height="200" fill="#f4efe1"/><g stroke="#a3272a" stroke-width="34" stroke-linecap="round"><line x1="20" y1="20" x2="280" y2="180"/><line x1="280" y1="20" x2="20" y2="180"/></g>',
     dutchrep: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/>',
     batavian: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/><rect width="70" height="66.7" fill="#ae1c28"/>',
@@ -745,12 +747,14 @@
   }
   var iLegendEl = document.getElementById("iLegend");
   var seenLegend = {};
-  var legendOrder = ["burgundian","dutchrep","batavian","hollandkingdom","frenchempire","ukn","occupation"];
+  var legendOrder = ["tribal","burgundian","dutchrep","batavian","hollandkingdom","frenchempire","ukn","occupation"];
   iLegendEl.innerHTML = legendOrder.map(function (k) {
     return '<span><span class="sw" style="background:' + C[k] + '"></span>' + INAMES[k] + "</span>";
   }).join("");
 
   var ISNAP = [
+    { year:"c. 50 BCE", name:"Batavi & Frisii Tribes of the Rhine Delta", key:"tribal",
+      story:"For roughly eight centuries before Burgundian unification, this delta is home to distinct Germanic tribal peoples on the edge of, and beyond, the Roman world: the Batavi, settled on the Rhine's 'island,' favored by Rome as auxiliary-supplying allies until Julius Civilis's 69&ndash;70 CE revolt, and the Frisii along the North Sea coast, never durably annexed and only absorbed into the Frankish realm and Christianized by the late 8th century. No flag survives from either people, and the whole territory has no single government at all, let alone the unified hand Philip the Good brings in 1433." },
     { year:"1433", name:"Philip the Good unifies Holland-Zeeland-Hainaut", key:"burgundian",
       story:"Philip the Good, Duke of Burgundy, secures Holland, Zeeland, and Hainaut in 1433 after a long struggle with his cousin Jacqueline of Bavaria, joining them to the wider Burgundian bloc that already held Flanders and Brabant. The whole territory shown here comes under one dynastic hand for the first time." },
     { year:"1581", name:"Act of Abjuration — the Dutch Republic begins", key:"dutchrep",
