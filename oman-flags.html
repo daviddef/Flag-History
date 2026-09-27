@@ -241,16 +241,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>Coast and interior, 1507&ndash;1624</h2>
-    <p class="imap-sub">Oman's own real border, split into the one span where it genuinely was two separately-governed pieces: Portuguese-held coastal forts and trading ports (Muscat, Sohar, Sur, and others along the Gulf of Oman and Arabian Sea coast) against the older Ibadi Imamate's interior. Press play, or drag the slider.</p>
+    <h2>Coast and interior, 1507&ndash;1624 &amp; 1856&ndash;1959</h2>
+    <p class="imap-sub">Oman's own real border, split into the two spans where it genuinely was two separately-governed pieces: Portuguese-held coastal forts and trading ports (Muscat, Sohar, Sur, and others along the Gulf of Oman and Arabian Sea coast) against the older Ibadi Imamate's interior in 1507&ndash;1624; and again in 1856&ndash;1959, when the interior Imamate periodically reasserted its own separate rule against the coastal Sultanate of Muscat before full reabsorption. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>This is the one span where the border below actually solidifies.</b> Before 1507 and after 1624, one authority held the whole territory (however loosely) &mdash; the line only hardens for the 117 years the Portuguese Estado da &Iacute;ndia held the ports while a separate Ibadi imam ruled the interior, and it dissolves again the moment the Ya'ariba imams retake Muscat in 1650 (folded into this one bridging era for simplicity) and never resurfaces.
+      <b>This border below solidifies twice, not once.</b> Before 1507 and after 1624 (with one later exception), one authority held the whole territory (however loosely) &mdash; the line hardens for the 117 years the Portuguese Estado da &Iacute;ndia held the ports while a separate Ibadi imam ruled the interior, and dissolves again the moment the Ya'ariba imams retake Muscat in 1650 (folded into this one bridging era for simplicity). It resurfaces once more from 1856 to 1959: the interior Ibadi Imamate periodically reasserts its own separate rule against the coastal Sultanate of Muscat and Oman, only fully re-merging by 1959.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">c. 3000 BCE</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 410 433" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -274,7 +274,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Schematic internal partition on a real traced border (simplified from public coastal-vertex data) &mdash; the coast/interior dividing line is approximate, not a surveyed frontier; it dissolves outside the 1507&ndash;1624 span.</p>
+      <p class="map-note">Schematic internal partition on a real traced border (simplified from public coastal-vertex data) &mdash; the coast/interior dividing line is approximate, not a surveyed frontier; it dissolves outside the 1507&ndash;1624 and 1856&ndash;1959 spans.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -548,13 +548,14 @@
 (function () {
   var IC = {
     magan:"#6b5c4a", imamate_early:"#5c2a24", contested:"#6b5c4a", yariba:"#a4302a", alsaid:"#a4302a",
-    muscat_oman:"#a4302a", modern:"#a9762f"
+    muscat_oman:"#a4302a", imamate_reassert:"#5c2a24", modern:"#a9762f"
   };
   var INAMES = {
     magan:"Magan (Bronze Age copper-trading land)",
     imamate_early:"Ibadi Imamate of Oman (founding era)", contested:"Portuguese ports / interior Imamate (contested)",
     yariba:"Ya'ariba Imamate", alsaid:"Al Said Dynasty & the Omani (maritime) Empire",
-    muscat_oman:"Sultanate of Muscat and Oman", modern:"Sultanate of Oman (modern)"
+    muscat_oman:"Sultanate of Muscat and Oman", imamate_reassert:"Ibadi Imamate (reasserted in the interior, 1856–1959)",
+    modern:"Sultanate of Oman (modern)"
   };
   var IFLAGS = {
     noflag: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
@@ -582,8 +583,11 @@
       story:"The Ya'ariba dynasty unifies the Ibadi Imamate under Nasir bin Murshid in 1624 and drives the Portuguese entirely out of Muscat by 1650, building the naval strength behind Oman's later maritime empire — coast and interior now one territory again. No single banner is well attested; plain red, already tied to Omani shipping, is shown as an informed reconstruction." },
     { year:"1744 – 1856", name:INAMES.alsaid, t:{ coast:IC.alsaid, interior:IC.alsaid }, flagKeys:{ coast:"red", interior:"red" },
       story:"Ahmad bin Said al-Busaidi founds the Al Said dynasty in 1744 after expelling a Persian occupying force — the same family that still rules Oman today. Under Said bin Sultan, Omani power peaks as a real maritime empire controlling Zanzibar and stretches of the East African coast. The plain red flag flies over the whole homeland and the African holdings alike." },
-    { year:"1856 – 1970", name:INAMES.muscat_oman, t:{ coast:IC.muscat_oman, interior:IC.muscat_oman }, flagKeys:{ coast:"red", interior:"red" },
-      story:"Said bin Sultan's death in 1856 splits the empire between two sons — one keeps Zanzibar, the other Muscat and the Omani homeland. The much-reduced sultanate leans on British treaties while the interior Ibadi Imamate periodically reasserts itself, fully reabsorbed only by 1959; the plain red flag continues throughout, without a national emblem." },
+    { year:"1856 – 1959", name:"Interior Imamate reasserted", t:{ coast:IC.muscat_oman, interior:IC.imamate_reassert }, flagKeys:{ coast:"red", interior:"noflag" },
+      names:{ coast:INAMES.muscat_oman, interior:INAMES.imamate_reassert },
+      story:"Said bin Sultan's death in 1856 splits the empire between two sons — one keeps Zanzibar, the other Muscat and the Omani homeland. The much-reduced coastal sultanate leans increasingly on British treaties and subsidies, while the interior Ibadi Imamate periodically reasserts itself as a genuinely separate authority through this span rather than staying folded into Muscat's rule. No specific flag is documented for this reasserted interior imamate, shown honestly blank rather than invented; the coastal sultanate continues flying its plain red field." },
+    { year:"1959 – 1970", name:"Interior fully reabsorbed", t:{ coast:IC.muscat_oman, interior:IC.muscat_oman }, flagKeys:{ coast:"red", interior:"red" },
+      story:"By 1959 the interior Ibadi Imamate's separate rule is fully reabsorbed into the Sultanate of Muscat and Oman, ending the recurring split traced above. The plain red flag flies, without interruption or a national emblem, across the whole reunited territory until the 1970 palace coup and the tricolor that follows." },
     { year:"1970–present", name:INAMES.modern, t:{ coast:IC.modern, interior:IC.modern }, flagKeys:{ coast:"modern", interior:"modern" },
       story:"Sultan Qaboos bin Said deposes his own father in a 1970 palace coup and launches rapid modernization; the country is renamed simply \"Oman.\" A new flag places the khanjar and crossed swords in a white canton over a white-red-green tricolor, layered onto the older plain red field — flown, as ever, over one unified territory." }
   ];
@@ -642,7 +646,7 @@
     var groups = iGroupsFor(era.t);
     var seen = {}; var parts = [];
     groups.forEach(function (g) {
-      var label = era.name;
+      var label = (era.names && era.names[g[0]]) || era.name;
       if (!seen[label]) { seen[label] = []; parts.push(label); }
       g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
     });
