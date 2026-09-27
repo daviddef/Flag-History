@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1500</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 200</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -266,7 +266,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Kalinago Saint Lucia</div>
+        <div class="imap-name" id="iEraName">Arawakan (Igneri) Saint Lucia</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -496,13 +496,15 @@
 <script>
 (function () {
   var IC = {
-    kalinago:"#6e6551", contested:"#c14f1d", british:"#1f7a7a", independent:"#c9962c"
+    arawakan:"#4a3f2e", kalinago:"#6e6551", contested:"#c14f1d", british:"#1f7a7a", independent:"#c9962c"
   };
   var INAMES = {
+    arawakan:"Arawakan (Igneri) Saint Lucia",
     kalinago:"Kalinago Saint Lucia", contested:"Britain and France's fourteen changes of hands",
     british:"British Saint Lucia (final rule)", independent:"Independent Saint Lucia"
   };
   var IFLAGS = {
+    arawakan: '<rect width="300" height="200" fill="#6e6551"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#fdf8ec">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#fdf8ec">DOCUMENTED</text>',
     kalinago: '<rect width="300" height="200" fill="#6e6551"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#fdf8ec">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#fdf8ec">DOCUMENTED</text>',
     contested: '<rect width="300" height="200" fill="#fdf8ec"/><rect width="300" height="200" fill="none" stroke="#ddd2b0" stroke-width="2"/><text x="150" y="128" font-size="76" text-anchor="middle" fill="#c9962c" font-family="serif">&#9818;</text>',
     british: '<rect width="300" height="200" fill="#0d2a5c"/><rect width="150" height="100" fill="#0d2a5c"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#fdf8ec" stroke-width="14"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c14f1d" stroke-width="6"/><rect y="42" width="150" height="16" fill="#fdf8ec"/><rect x="67" width="16" height="100" fill="#fdf8ec"/><rect y="46" width="150" height="8" fill="#c14f1d"/><rect x="71" width="8" height="100" fill="#c14f1d"/><polygon points="230,120 208,168 252,168" fill="#f6c645" stroke="#fdf8ec" stroke-width="3"/>',
@@ -517,6 +519,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 200 – c. 800", name:"Arawakan (Igneri) Saint Lucia", t:{ lc:IC.arawakan }, flagKeys:{ lc:"arawakan" },
+      story:"Centuries before the Kalinago resistance that makes Saint Lucia famous as a Caribbean “sole survivor,” the island is already settled by Arawak-speaking farmers, part of the Saladoid cultural tradition that spread up the Lesser Antilles from the Orinoco basin starting around 500 BCE and reached Saint Lucia by roughly 200–400 CE. Organized around village-level chiefs (caciques) rather than a unified authority, no individual leader from this period is securely recorded by name. Around 800 CE, Kalinago peoples migrating up the same island chain displace this Arawakan (Igneri) population." },
     { year:"c. 1500", name:"Kalinago Saint Lucia", t:{ lc:IC.kalinago }, flagKeys:{ lc:"kalinago" },
       story:"Saint Lucia's indigenous Kalinago population resisted European settlement especially fiercely and successfully. Spanish, English, and Dutch attempts in the late 1500s and early 1600s were repeatedly destroyed or abandoned, leaving the island under effective Kalinago control for over a century and a half after first contact." },
     { year:"1660", name:"Britain and France's fourteen changes of hands", t:{ lc:IC.contested }, flagKeys:{ lc:"contested" },
