@@ -241,16 +241,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, twelve rulers</h2>
-    <p class="imap-sub">Iraq's own real border, traced whole &mdash; the one page in this atlas region without a genuine internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <h2>One border, then two: Kurdistan's own government</h2>
+    <p class="imap-sub">Iraq's own real border, traced whole, now split to show the one long-running internal division the record does support cleanly: the autonomous Kurdistan Region in the northeast, which has run its own government since the 1970s. Press play, or drag the slider, to watch who held the whole country, then how Kurdistan's own administration diverges.</p>
     <div class="rule-box">
-      <b>This is the honest single-region variant.</b> Iraq's history does include real regional distinctions &mdash; the Ottoman-era vilayets of Baghdad, Basra, and Mosul each answered to Istanbul as separate provinces for parts of this span, and the modern Kurdistan Region has held its own formal autonomous status since the 1970s, expanded under the 2005 constitution &mdash; but neither one reduces cleanly to the kind of traceable two-way partition line this map's simple two-territory adjacency model can honestly show, the way Hungary's Habsburg/Ottoman split can. Given the data available in this session, this map shows only who held the whole country, era to era, rather than inventing an internal division the record doesn't cleanly support.
+      <b>Iraq's history has two real regional distinctions of note.</b> The Ottoman-era vilayets of Baghdad, Basra, and Mosul each answered to Istanbul as separate provinces for parts of this span, but that three-way split doesn't reduce to this map's simple two-territory adjacency model and isn't shown here. The modern Kurdistan Region is different: it has held its own formal autonomous government since a 1970 agreement with Baghdad, strengthened by the post-Gulf War no-fly zone from 1991, and constitutionally entrenched as a federal region &mdash; with its own parliament, presidency, and Peshmerga security forces &mdash; under the 2005 constitution. That is shown below from 1970 onward. Its boundary here is a schematic approximation, not a surveyed governorate line: no single, universally agreed administrative border exists along its edge, where a set of disputed territories (Kirkuk chief among them) are claimed by both Baghdad and Erbil, so the line drawn is illustrative only.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iqPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iqYearTag">c. 3100 BCE</span>
-        <input type="range" id="iqSlider" min="0" max="11" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iqSlider" min="0" max="13" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 215" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" style="pointer-events:none">
@@ -258,9 +258,13 @@
           <text x="35" y="20">SYRIA</text>
           <text x="175" y="205">PERSIAN GULF</text>
         </g>
-        <path id="ireg-iq" class="ireg-fill" d="M131.1,39.3 L143.3,45.9 L144.7,58.9 L135.3,66.6 L131.0,83.9 L143.9,105.0 L166.6,117.2 L176.2,134.0 L173.2,150.1 L179.1,150.1 L179.3,161.9 L189.6,173.6 L166.1,170.7 L152.4,192.0 L117.9,190.2 L65.5,145.6 L37.9,130.0 L15.5,124.0 L8.0,97.0 L49.1,73.9 L56.1,47.0 L54.4,30.8 L64.5,25.3 L74.1,11.5 L82.0,8.0 L103.6,10.9 L110.2,16.5 L119.1,12.8 L131.1,39.3 Z"/>
+        <path id="ireg-iq" class="ireg-fill" d="M110.2,16.5 L108,70 L140,95 L166.6,117.2 L176.2,134.0 L173.2,150.1 L179.1,150.1 L179.3,161.9 L189.6,173.6 L166.1,170.7 L152.4,192.0 L117.9,190.2 L65.5,145.6 L37.9,130.0 L15.5,124.0 L8.0,97.0 L49.1,73.9 L56.1,47.0 L54.4,30.8 L64.5,25.3 L74.1,11.5 L82.0,8.0 L103.6,10.9 L110.2,16.5 Z"/>
+        <path id="ireg-krg" class="ireg-fill" d="M110.2,16.5 L119.1,12.8 L131.1,39.3 L143.3,45.9 L144.7,58.9 L135.3,66.6 L131.0,83.9 L143.9,105.0 L166.6,117.2 L140,95 L108,70 L110.2,16.5 Z"/>
+        <path class="iborder-line" id="ib-iq-krg" d="M110.2,16.5 L108,70 L140,95 L166.6,117.2"/>
         <g font-family="IBM Plex Mono, monospace">
-          <text class="ireg-label" id="ilbl-iq" x="100" y="98">IRAQ</text>
+          <text class="ireg-label" id="ilbl-iq" x="80" y="132">IRAQ</text>
+          <text class="ireg-label" id="ilbl-krg" x="128" y="52">KURDISTAN</text>
+          <text class="ireg-label" id="ilbl-krg2" x="128" y="63">REGION</text>
         </g>
       </svg>
       <div class="imap-head">
@@ -270,7 +274,7 @@
       <div class="iflags-row" id="iqFlagsRow"></div>
       <p class="imap-story" id="iqEraStory"></p>
 
-      <p class="map-note">Real traced border, no internal partition &mdash; see the rule box above for why.</p>
+      <p class="map-note">Real traced outer border; the Kurdistan Region's internal boundary is a schematic approximation, not a surveyed governorate line &mdash; see the rule box above for why.</p>
       <div class="imap-key" id="iqLegend"></div>
     </div>
   </div>
@@ -753,7 +757,7 @@
   var IQ_C = {
     sumer:"#5c2a24", persian:"#5c2a24", ummayad:"#f4efe1", abbasid:"#1a1712", mongol:"#5c2a24",
     ottoman:"#e30a17", mandate:"#0b7a3d", kingdom:"#0b7a3d", republic1958:"#f9d616",
-    baath1963:"#ce1126", baath1991:"#ce1126", modern2008:"#ce1126"
+    baath1963:"#ce1126", baath1991:"#ce1126", modern2008:"#ce1126", krg_auto:"#b8860b"
   };
   var IQNAMES = {
     sumer:"Sumer, Akkad, Babylon &amp; Assyria", persian:"Persian &amp; Hellenistic Rule",
@@ -761,7 +765,8 @@
     mongol:"Mongol Sack Aftermath / Contested Rule", ottoman:"Ottoman Iraq",
     mandate:"British Mandate of Iraq", kingdom:"Kingdom of Iraq (independent)",
     republic1958:"Iraqi Republic (post-monarchy)", baath1963:"Ba&#x27;athist Iraq",
-    baath1991:"Ba&#x27;athist Iraq (Allahu Akbar added)", modern2008:"Republic of Iraq (modern flag)"
+    baath1991:"Ba&#x27;athist Iraq (Allahu Akbar added)", modern2008:"Republic of Iraq (modern flag)",
+    krg_auto:"Kurdistan Region (KRG autonomous administration)"
   };
   var IQFLAGS = {
     sumer: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
@@ -775,7 +780,8 @@
     republic1958: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><circle cx="150" cy="100" r="24" fill="#f9d616"/><rect x="146" y="86" width="8" height="28" fill="#1a1712" transform="rotate(20 150 100)"/>',
     baath1963: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><g fill="#0b7a3d"><path d="M105,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/><path d="M150,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/><path d="M195,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/></g>',
     baath1991: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><text x="150" y="108" text-anchor="middle" font-family="\'IBM Plex Mono\', monospace" font-size="16" font-weight="700" fill="#0b7a3d" letter-spacing="1">ALLAHU AKBAR</text><g fill="#0b7a3d"><path d="M62,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/><path d="M238,84 l3,8 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1 Z"/></g>',
-    modern2008: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><text x="150" y="108" text-anchor="middle" font-family="\'IBM Plex Mono\', monospace" font-size="17" font-weight="700" fill="#0b7a3d" letter-spacing="1">ALLAHU AKBAR</text>'
+    modern2008: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#1a1712"/><text x="150" y="108" text-anchor="middle" font-family="\'IBM Plex Mono\', monospace" font-size="17" font-weight="700" fill="#0b7a3d" letter-spacing="1">ALLAHU AKBAR</text>',
+    krg_flag: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#007a3d"/><circle cx="150" cy="100" r="28" fill="#f9d616"/>'
   };
   function iqFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IQFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -786,40 +792,55 @@
   }).join("");
 
   var IQSNAP = [
-    { year:"c. 3100 BCE", name:"Sumer, Akkad, Babylon &amp; Assyria", t:{ iq:IQ_C.sumer }, flagKeys:{ iq:"sumer" },
+    { year:"c. 3100 BCE", name:"Sumer, Akkad, Babylon &amp; Assyria", t:{ iq:IQ_C.sumer, krg:IQ_C.sumer }, flagKeys:{ iq:"sumer", krg:"sumer" },
       story:"Sumerian city-states develop the world's earliest writing by roughly 3100 BCE; Sargon of Akkad forges the first known multi-ethnic empire around 2334 BCE; Babylon rises under Hammurabi; Assyria, centered on Nineveh, builds one of the ancient world's most formidable military states before collapsing around 609 BCE. No flag, in the vexillological sense, exists anywhere in this era &mdash; shown honestly blank rather than invented." },
-    { year:"539 BCE", name:"Persian &amp; Hellenistic Imperial Rule", t:{ iq:IQ_C.persian }, flagKeys:{ iq:"persian" },
+    { year:"539 BCE", name:"Persian &amp; Hellenistic Imperial Rule", t:{ iq:IQ_C.persian, krg:IQ_C.persian }, flagKeys:{ iq:"persian", krg:"persian" },
       story:"Cyrus the Great's Achaemenid army takes Babylon in 539 BCE, ending nearly three millennia of native Mesopotamian rule. Mesopotamia then passes to Alexander's conquest, the Seleucids, the Parthians, and finally Sasanian Persia. Across four successive foreign empires and nearly twelve centuries, no flag can be honestly attributed to Mesopotamia as a political unit &mdash; shown blank rather than invented." },
-    { year:"637", name:"Arab-Islamic Conquest (Rashidun/Umayyad)", t:{ iq:IQ_C.ummayad }, flagKeys:{ iq:"ummayad" },
+    { year:"637", name:"Arab-Islamic Conquest (Rashidun/Umayyad)", t:{ iq:IQ_C.ummayad, krg:IQ_C.ummayad }, flagKeys:{ iq:"ummayad", krg:"ummayad" },
       story:"Arab Muslim forces defeat the Sasanian army at al-Qadisiyyah around 636 and take Ctesiphon in 637, ending Persian rule over Mesopotamia. The territory remains under the Rashidun Caliphate and then the Damascus-based Umayyad dynasty until the 750 Abbasid Revolution. The plain white banner most associated with the Umayyads, who govern the bulk of this span, represents it here." },
-    { year:"762", name:"Abbasid Caliphate (Baghdad)", t:{ iq:IQ_C.abbasid }, flagKeys:{ iq:"abbasid" },
+    { year:"762", name:"Abbasid Caliphate (Baghdad)", t:{ iq:IQ_C.abbasid, krg:IQ_C.abbasid }, flagKeys:{ iq:"abbasid", krg:"abbasid" },
       story:"Caliph al-Mansur founds Baghdad as the Abbasid capital in 762, and the city grows into the intellectual and commercial capital of the Islamic world &mdash; the House of Wisdom's translation movement and real advances in mathematics, astronomy, medicine, and philosophy &mdash; even as real political power fragments after the 9th century. The plain black Abbasid banner remains the recognized state color throughout, ending with the Mongols' 1258 sack of the city." },
-    { year:"1258", name:"Mongol Sack Aftermath / Contested Rule", t:{ iq:IQ_C.mongol }, flagKeys:{ iq:"mongol" },
+    { year:"1258", name:"Mongol Sack Aftermath / Contested Rule", t:{ iq:IQ_C.mongol, krg:IQ_C.mongol }, flagKeys:{ iq:"mongol", krg:"mongol" },
       story:"Hulagu Khan's Mongol army sacks Baghdad in February 1258, executes the last Abbasid caliph, and devastates the city on a scale from which it never fully recovers. Iraq passes through Mongol Ilkhanate rule, the Jalayirid dynasty, Timur's 1401 sack of Baghdad, and nearly three centuries as a contested borderland between rising powers. No single flag can honestly represent Iraq across this fragmented span &mdash; shown blank rather than invented." },
-    { year:"1534", name:"Ottoman Iraq", t:{ iq:IQ_C.ottoman }, flagKeys:{ iq:"ottoman" },
-      story:"Ottoman forces under Suleiman the Magnificent capture Baghdad in 1534; the border with Safavid Persia settles by the 1639 Treaty of Zuhab. Iraq remains organized as the Ottoman vilayets of Mosul, Baghdad, and Basra until the empire's defeat in World War I, flying the Ottoman red flag with white crescent and star, formally standardized in 1844." },
-    { year:"1920", name:"British Mandate of Iraq", t:{ iq:IQ_C.mandate }, flagKeys:{ iq:"mandate" },
-      story:"After the Ottoman defeat, Britain administers Mosul, Baghdad, and Basra under a League of Nations mandate from 1920, installing Faisal, a Hashemite prince and Arab Revolt leader, as king in 1921. Faisal brings the black-white-green tricolor with a red hoist triangle and white seven-pointed star used by the Arab Revolt, flying unchanged through full independence." },
-    { year:"1932", name:"Kingdom of Iraq (independent)", t:{ iq:IQ_C.kingdom }, flagKeys:{ iq:"kingdom" },
-      story:"The League of Nations mandate ends on 3 October 1932 and Iraq gains full independence under King Faisal I, while remaining tied to Britain by treaty. The same black-white-green flag with its red hoist triangle and star, flown since 1921, continues unchanged &mdash; a deliberate echo of the wartime Arab Revolt the Hashemites had led against Ottoman rule." },
-    { year:"1958", name:"Iraqi Republic (post-monarchy)", t:{ iq:IQ_C.republic1958 }, flagKeys:{ iq:"republic1958" },
-      story:"Brigadier Abd al-Karim Qasim leads the 14 July 1958 coup that kills King Faisal II and the royal family, ending the monarchy and declaring a republic. The new flag, adopted the following year, bears a yellow eight-pointed sun with a Kurdish dagger at its center, chosen to represent unity between Iraq's Arab and Kurdish populations." },
-    { year:"1963", name:"Ba&#x27;athist Iraq", t:{ iq:IQ_C.baath1963 }, flagKeys:{ iq:"baath1963" },
-      story:"The Ba'ath Party seizes power in the February 1963 Ramadan Revolution and adopts a red-white-black tricolor with three green stars that July, matching the pan-Arab color scheme Egypt and Syria had already adopted. The party consolidates lasting control after a second 1968 coup; Saddam Hussein becomes president in 1979." },
-    { year:"1991", name:"Ba&#x27;athist Iraq (Allahu Akbar added)", t:{ iq:IQ_C.baath1991 }, flagKeys:{ iq:"baath1991" },
-      story:"Amid the buildup to the Gulf War, Saddam Hussein orders Allahu Akbar added to the flag in his own handwriting in January 1991. The Ba'athist government falls in the 2003 invasion, but interim and early post-invasion Iraqi authorities keep this same flag in official use for years, until parliament finally legislates a redesign in 2008." },
-    { year:"2008", name:"Republic of Iraq (modern flag)", t:{ iq:IQ_C.modern2008 }, flagKeys:{ iq:"modern2008" },
-      story:"Iraq's parliament passes Law No. 9 of 2008, keeping the familiar red-white-black tricolor but standardizing Allahu Akbar in green Kufic calligraphy rather than Saddam Hussein's own handwriting, and dropping the three green stars associated with the former ruling party." }
+    { year:"1534", name:"Ottoman Iraq", t:{ iq:IQ_C.ottoman, krg:IQ_C.ottoman }, flagKeys:{ iq:"ottoman", krg:"ottoman" },
+      story:"Ottoman forces under Suleiman the Magnificent capture Baghdad in 1534; the border with Safavid Persia settles by the 1639 Treaty of Zuhab. Iraq remains organized as the Ottoman vilayets of Mosul, Baghdad, and Basra until the empire's defeat in World War I, flying the Ottoman red flag with white crescent and star, formally standardized in 1844. Mosul vilayet, which covered most of what is now the Kurdistan Region, answered to Istanbul on the same terms as the rest of the empire &mdash; no separate Kurdish administration existed yet." },
+    { year:"1920", name:"British Mandate of Iraq", t:{ iq:IQ_C.mandate, krg:IQ_C.mandate }, flagKeys:{ iq:"mandate", krg:"mandate" },
+      story:"After the Ottoman defeat, Britain administers Mosul, Baghdad, and Basra under a League of Nations mandate from 1920, installing Faisal, a Hashemite prince and Arab Revolt leader, as king in 1921. Faisal brings the black-white-green tricolor with a red hoist triangle and white seven-pointed star used by the Arab Revolt, flying unchanged through full independence. The mandate's Kurdish-majority districts around Mosul and Sulaymaniyah are folded into the same unitary state, over the objection of Kurdish leaders who had hoped for their own state under Woodrow Wilson's postwar principles." },
+    { year:"1932", name:"Kingdom of Iraq (independent)", t:{ iq:IQ_C.kingdom, krg:IQ_C.kingdom }, flagKeys:{ iq:"kingdom", krg:"kingdom" },
+      story:"The League of Nations mandate ends on 3 October 1932 and Iraq gains full independence under King Faisal I, while remaining tied to Britain by treaty. The same black-white-green flag with its red hoist triangle and star, flown since 1921, continues unchanged &mdash; a deliberate echo of the wartime Arab Revolt the Hashemites had led against Ottoman rule. The Kurdish north remains governed as ordinary Iraqi provinces, with periodic Kurdish revolts against Baghdad's authority through the 1930s and 1940s." },
+    { year:"1958", name:"Iraqi Republic (post-monarchy)", t:{ iq:IQ_C.republic1958, krg:IQ_C.republic1958 }, flagKeys:{ iq:"republic1958", krg:"republic1958" },
+      story:"Brigadier Abd al-Karim Qasim leads the 14 July 1958 coup that kills King Faisal II and the royal family, ending the monarchy and declaring a republic. The new flag, adopted the following year, bears a yellow eight-pointed sun with a Kurdish dagger at its center, chosen to represent unity between Iraq's Arab and Kurdish populations &mdash; a symbolic gesture, but the Kurdish north is still governed as ordinary Iraqi territory, with no autonomous administration of its own." },
+    { year:"1963", name:"Ba&#x27;athist Iraq", t:{ iq:IQ_C.baath1963, krg:IQ_C.baath1963 }, flagKeys:{ iq:"baath1963", krg:"baath1963" },
+      story:"The Ba'ath Party seizes power in the February 1963 Ramadan Revolution and adopts a red-white-black tricolor with three green stars that July, matching the pan-Arab color scheme Egypt and Syria had already adopted. The party consolidates lasting control after a second 1968 coup; Saddam Hussein becomes president in 1979. Fighting between Baghdad and Kurdish peshmerga forces under Mustafa Barzani, simmering since the 1940s, continues through the 1960s with no settlement yet in place." },
+    { year:"1970", name:"Kurdish Autonomy Agreement", t:{ iq:IQ_C.baath1963, krg:IQ_C.krg_auto }, flagKeys:{ iq:"baath1963", krg:"krg_flag" },
+      story:"The March 1970 Iraqi-Kurdish Autonomy Agreement between Baghdad and Kurdish leader Mustafa Barzani promises a Kurdish autonomous region within four years, the first formal recognition of a distinct Kurdish administrative status. Implementation stalls over the boundaries of the region (Kirkuk's oil-rich territory chief among the disputes) and by 1974 the agreement collapses into renewed fighting &mdash; but the precedent it sets, of a Kurdish government answering for its own territory rather than Baghdad, is the seed of what becomes, decades later, the constitutionally entrenched Kurdistan Region shown here from this point on." },
+    { year:"1991", name:"Ba&#x27;athist Iraq (Allahu Akbar added)", t:{ iq:IQ_C.baath1991, krg:IQ_C.krg_auto }, flagKeys:{ iq:"baath1991", krg:"krg_flag" },
+      story:"Amid the buildup to the Gulf War, Saddam Hussein orders Allahu Akbar added to the flag in his own handwriting in January 1991. The Ba'athist government falls in the 2003 invasion, but interim and early post-invasion Iraqi authorities keep this same flag in official use for years, until parliament finally legislates a redesign in 2008. That same year, the failed post-Gulf War Kurdish uprising and Baghdad's crackdown drive roughly 1.5&ndash;2 million Kurds toward the Turkish and Iranian borders; the United States, United Kingdom, and France respond by enforcing a no-fly zone over the north, and Kurdish parties fill the resulting vacuum with their own administration &mdash; a de facto, externally protected autonomy that Baghdad no longer effectively governs, even though no outside government recognizes a formal partition." },
+    { year:"2005", name:"Constitutional recognition of the Kurdistan Region", t:{ iq:IQ_C.baath1991, krg:IQ_C.krg_auto }, flagKeys:{ iq:"baath1991", krg:"krg_flag" },
+      story:"Iraq's permanent constitution, approved by referendum in October 2005, formally entrenches the Kurdistan Region as a federal entity within Iraq, with its own government (the KRG), parliament, presidency, and security forces (the Peshmerga), while leaving the exact status of Kirkuk and other disputed territories along its edge to a promised future process that, as of this map, has still never been completed. The rest of the country continues under the same post-2003 transitional flag, unchanged since 1991 pending the 2008 redesign." },
+    { year:"2008", name:"Republic of Iraq (modern flag)", t:{ iq:IQ_C.modern2008, krg:IQ_C.krg_auto }, flagKeys:{ iq:"modern2008", krg:"krg_flag" },
+      story:"Iraq's parliament passes Law No. 9 of 2008, keeping the familiar red-white-black tricolor but standardizing Allahu Akbar in green Kufic calligraphy rather than Saddam Hussein's own handwriting, and dropping the three green stars associated with the former ruling party. The Kurdistan Region continues under its own constitutionally-recognized government and flag, unaffected by Baghdad's redesign." }
   ];
 
-  var IQREGIONS = ["iq"];
-  var IQREGION_NAMES = { iq:"Iraq" };
-  var IQADJ = [];
+  var IQREGIONS = ["iq","krg"];
+  var IQREGION_NAMES = { iq:"Iraq (rest of the country)", krg:"Kurdistan Region" };
+  var IQADJ = [["iq","krg"]];
 
   function iqTextColorFor(hex) {
     var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
     var lum = (0.299*r + 0.587*g + 0.114*b)/255;
     return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iqGroupsFor(t) {
+    var parent = {};
+    IQREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IQADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IQREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
   }
 
   var iqYearTag = document.getElementById("iqYearTag");
@@ -841,10 +862,24 @@
       var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
       var lbl = document.getElementById("ilbl-" + id);
       if (lbl) { lbl.setAttribute("fill", tcol); lbl.setAttribute("stroke", tcolHalo); }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) { lbl2.setAttribute("fill", tcol); lbl2.setAttribute("stroke", tcolHalo); }
     });
 
-    var label = Object.keys(IQ_C).filter(function (k) { return IQ_C[k] === era.t.iq; })[0];
-    iqEraOwners.innerHTML = "<b>" + IQNAMES[label] + "</b>: whole country";
+    IQADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      if (line) { line.setAttribute("stroke-opacity", same ? "0.06" : "0.85"); line.setAttribute("stroke-width", same ? "1" : "2.4"); }
+    });
+
+    var groups = iqGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = IQNAMES[Object.keys(IQ_C).filter(function (k) { return IQ_C[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IQREGION_NAMES[id]); });
+    });
+    iqEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
 
     iqFlagsRow.innerHTML = IQREGIONS.map(function (id) {
       return '<div class="iflag-chip">' + iqFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IQREGION_NAMES[id] + '</div></div>';
