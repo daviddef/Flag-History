@@ -240,7 +240,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, ten rulers</h2>
+    <h2>One border, eleven rulers</h2>
     <p class="imap-sub">Luxembourg's own real border, traced whole &mdash; like North Macedonia and Slovakia elsewhere in this atlas, this is a page without a genuine internal split to show honestly. Luxembourg has no historic region that was ever governed apart from the rest of it the way Royal Hungary and Ottoman Hungary once were, or the way the 1839 partition split the old Duchy from the outside. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>The border shown here is the small, modern one.</b> Before 1839 the historic Duchy of Luxembourg was roughly twice this size, reaching west to include Arlon, Bastogne, and Thionville-adjacent country that is Belgian or French today. Rather than redraw the geometry for each era, this map keeps the modern outline throughout and explains the territorial loss in the story text &mdash; the same approach the Low Countries hub map takes with this same country.
@@ -248,8 +248,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">963</span>
-        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">53 BCE&ndash;963</span>
+        <input type="range" id="iSlider" min="0" max="10" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg">
         <g pointer-events="none">
@@ -268,7 +268,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Siegfried acquires the Lucilinburhuc</div>
+        <div class="imap-name" id="iEraName">Treveri, Roman Belgica &amp; Frankish Lotharingia</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -719,14 +719,16 @@
 <script>
 (function () {
   var IC = {
-    indep: "#a9762f", bh: "#7c5a2e", aus: "#5b3f7a", fr: "#2c5f8a", ukn: "#b8862f", lu_indep: "#00a1de", occ: "#2b2e33"
+    roman_frank: "#6b5c4a", indep: "#a9762f", bh: "#7c5a2e", aus: "#5b3f7a", fr: "#2c5f8a", ukn: "#b8862f", lu_indep: "#00a1de", occ: "#2b2e33"
   };
   var INAMES = {
+    roman_frank: "Treveri / Roman Belgica / Frankish Lotharingia (no independent state)",
     indep: "County / Duchy of Luxembourg (independent)", bh: "Burgundian / Habsburg Netherlands",
     aus: "Austrian Netherlands", fr: "French Republic / Empire", ukn: "Personal union with the Dutch crown",
     lu_indep: "Grand Duchy of Luxembourg (independent)", occ: "German occupation (Gau Moselland)"
   };
   var IFLAGS = {
+    roman_frank: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     indep: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     bh: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200" stroke="#a4302a" stroke-width="24" stroke-linecap="round"/><path d="M300,0 L0,200" stroke="#a4302a" stroke-width="24" stroke-linecap="round"/><g fill="#7c2e1f"><circle cx="75" cy="50" r="7"/><circle cx="150" cy="100" r="7"/><circle cx="225" cy="150" r="7"/><circle cx="225" cy="50" r="7"/><circle cx="75" cy="150" r="7"/></g>',
     aus: '<rect width="300" height="200" fill="#f4c430"/><g fill="#241f14"><ellipse cx="150" cy="100" rx="28" ry="20"/><path d="M150,82 L108,42 L128,78 Z"/><path d="M150,82 L192,42 L172,78 Z"/><path d="M150,118 L118,163 L138,128 Z"/><path d="M150,118 L182,163 L162,128 Z"/><path d="M150,80 l0,-14 -6,6 6,-6 6,6 Z"/></g>',
@@ -744,6 +746,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"53 BCE–963", name:"Treveri, Roman Belgica & Frankish Lotharingia", t:{ lu:IC.roman_frank }, flagKeys:{ lu:"roman_frank" },
+      story:"Julius Caesar's Gallic Wars bring the Treveri, the Celtic tribe native to the Moselle valley, under Roman rule by 53 BCE; the region becomes part of Gallia Belgica, with nearby Augusta Treverorum (Trier) growing into a major Western Roman capital. As Roman authority collapses, Frankish tribes settle the area from the 5th century, and it passes through the Merovingian and Carolingian kingdoms; the 843 Treaty of Verdun places it in the middle kingdom of Lotharingia. No independent Luxembourgish polity exists at any point in this millennium, and no flag is documented for any of it." },
     { year:"963", name:"Siegfried acquires the Lucilinburhuc", t:{ lu:IC.indep }, flagKeys:{ lu:"indep" },
       story:"Siegfried I, Count of Ardennes, acquires a small rocky fortress on the Alzette river from the Abbey of St. Maximin in Trier in 963 &mdash; traditionally reckoned the founding of Luxembourg. No securely documented flag survives from this pre-heraldic era." },
     { year:"1443", name:"Burgundian acquisition", t:{ lu:IC.bh }, flagKeys:{ lu:"bh" },
