@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1500 – 1904</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 100 – 1500</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
         <rect class="isea-bg" x="0" y="0" width="280" height="200"/>
@@ -556,6 +556,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 100 \u2013 1500", name:"Early Iron Age farming communities (Kirikongo and related sites)", t:{ cc: IC["era-1500"] }, flagKeys:{ cc: "era-1500" },
+      story:"Centuries before the Mossi kingdoms took shape, archaeological excavations at Kirikongo, in the Mouhoun River bend, document a farming and iron-working community occupied continuously from around 100 CE to roughly 1500 CE. Over more than a millennium the settlement's social organization shifts between hierarchical and more egalitarian arrangements, with distinct occupational groups including specialist blacksmiths. No political unification beyond the individual settlement is attested, and no flag or comparable banner survives from this era." },
     { year:"c. 1500 \u2013 1904", name:"Mossi Kingdoms (Ouagadougou & Yatenga)", t:{ cc: IC["era-1500"] }, flagKeys:{ cc: "era-1500" },
       story:"oral tradition and early chronicles place the founding of the Mossi kingdom of Ouagadougou (Wogodogo) around the late 15th century under Naaba Oubri, with the northern kingdom of Yatenga splitting off and consolidating separately by the mid-16th century. Alongside smaller Mossi states such as Tenkodogo and Fada N'Gourma, these became some of the most durable pre-colonial polities in this part of West Africa,\u2026" },
     { year:"1904 \u2013 1958", name:"French Upper Volta (colonial)", t:{ cc: IC["era-1904"] }, flagKeys:{ cc: "era-1904" },
