@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1235</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 300 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 330 122" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -264,7 +264,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Mali Empire's western reach</div>
+        <div class="imap-name" id="iEraName">The Senegambian Stone Circle Builders</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -581,14 +581,16 @@
 <script>
 (function () {
   var IC = {
-    mali:"#8a6d3b", fragmented:"#6b5c4a", bathurst:"#204b5c", colony:"#204b5c", independent:"#a9762f", republic:"#3a7728"
+    megaliths:"#5c4a3a", mali:"#8a6d3b", fragmented:"#6b5c4a", bathurst:"#204b5c", colony:"#204b5c", independent:"#a9762f", republic:"#3a7728"
   };
   var INAMES = {
+    megaliths:"The Senegambian Stone Circle Builders",
     mali:"Mali Empire's western reach along the Gambia River", fragmented:"Fragmented Mandinka and Wolof river kingdoms",
     bathurst:"British settlement of Bathurst (administered from Sierra Leone)", colony:"Gambia Colony and Protectorate",
     independent:"Independent Gambia (Commonwealth realm)", republic:"Republic of The Gambia"
   };
   var IFLAGS = {
+    megaliths: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     mali: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     fragmented: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     bathurst: '<rect width="300" height="200" fill="#00247d"/><clipPath id="c2"><rect x="0" y="0" width="150" height="100"/></clipPath><g clip-path="url(#c2)"><rect width="150" height="100" fill="#00247d"/><line x1="0" y1="0" x2="150" y2="100" stroke="#fff" stroke-width="20"/><line x1="150" y1="0" x2="0" y2="100" stroke="#fff" stroke-width="20"/><line x1="0" y1="0" x2="150" y2="100" stroke="#cf142b" stroke-width="9"/><line x1="150" y1="0" x2="0" y2="100" stroke="#cf142b" stroke-width="9"/><rect x="60" width="30" height="100" fill="#fff"/><rect y="38" width="150" height="24" fill="#fff"/><rect x="67" width="16" height="100" fill="#cf142b"/><rect y="45" width="150" height="10" fill="#cf142b"/></g>',
@@ -605,6 +607,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 300 BCE", name:"The Senegambian Stone Circle Builders", t:{ gm:IC.megaliths }, flagKeys:{ gm:"megaliths" },
+      story:"Along the middle Gambia River valley, and continuing across the border into Senegal, communities raise more than a thousand laterite stone circles over roughly eighteen centuries &mdash; a funerary tradition marking the graves of presumed local elites, preserved today at Wassu and Kerbatch as a UNESCO World Heritage Site. The builders left no written record of their own political organization or name for themselves, and the tradition continues right through Mali's own rise, only fading in the 16th century. No flag or banner survives or is documented for this culture." },
     { year:"c. 1235", name:"Mali Empire's western reach along the Gambia River", t:{ gm:IC.mali }, flagKeys:{ gm:"mali" },
       story:"Sundiata Keita founds the Mali Empire around 1235; over the following century its authority extends west to the Gambia River valley as a tributary periphery, with local Mandinka rulers acknowledging overlordship while keeping local autonomy. No flag is documented for Mali's own court, let alone this distant periphery." },
     { year:"c. 1600", name:"Fragmented Mandinka and Wolof river kingdoms", t:{ gm:IC.fragmented }, flagKeys:{ gm:"fragmented" },
