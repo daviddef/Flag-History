@@ -89,6 +89,8 @@
   .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
   .migro-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 12px; }
   .migro-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-right: 2px; }
+  .migro-flag { width: 20px; height: 14px; flex: none; display: inline-block; vertical-align: middle; border: 1px solid rgba(0,0,0,.2); margin-right: 1px; }
+  .migro-flags { display: inline-flex; gap: 2px; margin-right: 2px; }
   .tag {
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
     padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
@@ -648,6 +650,87 @@
       <div class="legend-item"><span class="legend-dot" style="background:#2b2e33"></span><b>Occupied / annexed territory</b> &mdash; Nazi administration</div>
       <div class="legend-item"><span class="legend-dot" style="background:#4a3b78"></span><b>Leader</b> &mdash; the named ruler most associated with the era's start</div>
       <div class="legend-item"><span class="legend-dot" style="background:#8e3b62"></span><b>State religion</b> &mdash; the official/established faith, not the population's</div>
+    </div>
+  </div>
+
+  <div class="noble-section">
+    <h2>Noble &amp; ruling houses</h2>
+    <p class="noble-sub">The dynasties that held the County, Duchy and Grand Duchy of Luxembourg &mdash; real, documented heraldry, not invented.</p>
+    <div class="noble-grid">
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <defs><clipPath id="luxClip1"><path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z"/></clipPath></defs>
+          <g clip-path="url(#luxClip1)">
+            <rect x="0" y="0" width="100" height="120" fill="#f4efe1"/>
+            <g fill="#2a5ca8">
+              <rect x="0" y="4" width="100" height="10"/>
+              <rect x="0" y="24" width="100" height="10"/>
+              <rect x="0" y="44" width="100" height="10"/>
+              <rect x="0" y="64" width="100" height="10"/>
+              <rect x="0" y="84" width="100" height="10"/>
+              <rect x="0" y="104" width="100" height="10"/>
+            </g>
+            <path d="M50,34 q13,-5 13,13 q0,10 -7,16 l6,12 l-7,4 l-5,-11 l-5,11 l-7,-4 l6,-12 q-7,-6 -7,-16 q0,-18 13,-13 Z" fill="#a4302a"/>
+          </g>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Luxembourg (Ardennes-Luxembourg)</div>
+          <div class="noble-dates">963&ndash;1443</div>
+          <p class="noble-desc">Counts, then Dukes, of Luxembourg from Siegfried's fortress on the Bock, and four times Holy Roman Emperors (Henry VII, Charles IV, Wenceslaus, Sigismund). Arms: barry argent and azure, a lion rampant gules &mdash; the "Luxembourg Lion" still on the national arms today.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <defs><clipPath id="luxClip2"><path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z"/></clipPath></defs>
+          <g clip-path="url(#luxClip2)">
+            <rect x="0" y="0" width="100" height="120" fill="#f2b705"/>
+            <g fill="#1e3a8c">
+              <path d="M-20,-10 L0,-10 L100,110 L100,130 Z"/>
+              <path d="M20,-10 L40,-10 L100,70 L100,90 Z"/>
+              <path d="M60,-10 L80,-10 L100,30 L100,50 Z"/>
+              <path d="M-20,30 L-20,10 L60,130 L40,130 Z"/>
+              <path d="M-20,70 L-20,50 L20,130 L0,130 Z"/>
+            </g>
+          </g>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#a4302a" stroke-width="6"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Valois-Burgundy</div>
+          <div class="noble-dates">1443&ndash;1477</div>
+          <p class="noble-desc">Philip the Good seized Luxembourg in 1443, folding it into the Burgundian State alongside Flanders and Brabant. Arms: the ancient Burgundy bend, or bendy azure and or within a bordure gules.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#a4302a"/>
+          <rect x="4" y="46" width="92" height="24" fill="#f4efe1"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Habsburg</div>
+          <div class="noble-dates">1477&ndash;1794</div>
+          <p class="noble-desc">Inherited via Mary of Burgundy's marriage to Maximilian I; ruled Luxembourg as part of the Spanish, then Austrian, Habsburg Netherlands until French Revolutionary armies overran it. Arms: gules, a fess argent (the "Bindenschild").</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#1e3a8c"/>
+          <g fill="#f2b705">
+            <rect x="14" y="16" width="8" height="14"/><rect x="34" y="16" width="8" height="14"/><rect x="54" y="16" width="8" height="14"/><rect x="74" y="16" width="8" height="14"/>
+            <rect x="24" y="36" width="8" height="14"/><rect x="44" y="36" width="8" height="14"/><rect x="64" y="36" width="8" height="14"/>
+            <rect x="14" y="56" width="8" height="14"/><rect x="34" y="56" width="8" height="14"/><rect x="54" y="56" width="8" height="14"/><rect x="74" y="56" width="8" height="14"/>
+          </g>
+          <path d="M50,58 q15,-6 15,15 q0,13 -9,19 l7,13 l-8,4 l-5,-11 l-5,11 l-8,-4 l7,-13 q-9,-6 -9,-19 q0,-21 15,-15 Z" fill="#f2b705"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Nassau-Weilburg</div>
+          <div class="noble-dates">1890&ndash;present</div>
+          <p class="noble-desc">Succeeded to the Grand Duchy in 1890 when the Dutch-Luxembourg union ended under Salic law; the reigning line since 1912 descends from it through Grand Duchess Marie-Ad&eacute;la&iuml;de. Arms: azure billeted or, a lion rampant or.</p>
+        </div>
+      </div>
     </div>
   </div>
 

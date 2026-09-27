@@ -89,6 +89,8 @@
   .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
   .migro-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 12px; }
   .migro-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-right: 2px; }
+  .migro-flag { width: 20px; height: 14px; flex: none; display: inline-block; vertical-align: middle; border: 1px solid rgba(0,0,0,.2); margin-right: 1px; }
+  .migro-flags { display: inline-flex; gap: 2px; margin-right: 2px; }
   .tag {
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
     padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
@@ -424,6 +426,42 @@
       <div class="legend-item"><span class="legend-dot" style="background:#1e7a4a"></span><b>Republic, independent</b> &mdash; modern sovereign republic</div>
       <div class="legend-item"><span class="legend-dot" style="background:#4a3b78"></span><b>Leader</b> &mdash; the named ruler most associated with the era's start</div>
       <div class="legend-item"><span class="legend-dot" style="background:#8e3b62"></span><b>State religion</b> &mdash; the official/established faith, not the population's</div>
+    </div>
+  </div>
+
+  <div class="noble-section">
+    <h2>Noble &amp; ruling houses</h2>
+    <p class="noble-sub">Madagascar's monarchies did not use Western-style blazons; these are the documented royal banners of its two best-recorded dynasties.</p>
+    <div class="noble-grid">
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <defs><clipPath id="mgClip1"><path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z"/></clipPath></defs>
+          <g clip-path="url(#mgClip1)">
+            <rect x="0" y="0" width="100" height="60" fill="#f4efe1"/>
+            <rect x="0" y="60" width="100" height="60" fill="#a4302a"/>
+          </g>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Andriana (Kingdom of Imerina)</div>
+          <div class="noble-dates">1540&ndash;1897</div>
+          <p class="noble-desc">The Merina royal line, unified under Andrianampoinimerina in the 1790s and ending with Queen Ranavalona III's exile after French annexation. Banner: white over red, the documented royal colors that carried directly into today's Malagasy flag.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#a4302a"/>
+          <path d="M50,20 L58,40 L50,52 L42,40 Z" fill="#f4efe1"/>
+          <path d="M50,52 L50,100" stroke="#f4efe1" stroke-width="5"/>
+          <path d="M32,64 Q50,54 68,64" stroke="#f4efe1" stroke-width="5" fill="none"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">Maroseraña dynasty (Sakalava kingdoms)</div>
+          <div class="noble-dates">c.1684&ndash;1897</div>
+          <p class="noble-desc">Ruled the western Sakalava kingdoms of Menabe and Boina, legitimized through the doany shrines holding the dady (royal relics) of past kings. Banner: red, the documented color of Sakalava royal authority, with a spear marking the sovereign's power.</p>
+        </div>
+      </div>
     </div>
   </div>
 

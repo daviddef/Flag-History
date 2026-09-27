@@ -80,6 +80,8 @@
   .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
   .migro-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 12px; }
   .migro-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-right: 2px; }
+  .migro-flag { width: 20px; height: 14px; flex: none; display: inline-block; vertical-align: middle; border: 1px solid rgba(0,0,0,.2); margin-right: 1px; }
+  .migro-flags { display: inline-flex; gap: 2px; margin-right: 2px; }
   .tag { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted); display: inline-flex; align-items: center; gap: 5px; position: relative; cursor: help; }
   .tag:hover, .tag:focus-visible { border-color: var(--brick); color: var(--ink); }
   .tag:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
@@ -683,6 +685,56 @@
       <div class="legend-item"><span class="legend-dot" style="background:#2f6b4a"></span><b>Sovereign state</b> &mdash; internationally recognized nation</div>
       <div class="legend-item"><span class="legend-dot" style="background:#4a3b78"></span><b>Leader</b> &mdash; the named ruler most associated with the era's start</div>
       <div class="legend-item"><span class="legend-dot" style="background:#8e3b62"></span><b>State religion</b> &mdash; the official/established faith, not the population's</div>
+    </div>
+  </div>
+
+  <div class="noble-section">
+    <h2>Noble &amp; ruling houses</h2>
+    <p class="noble-sub">Three dynasties whose rule shaped the history of Macedonia &mdash; real, documented emblems and heraldry, not invented.</p>
+    <div class="noble-grid">
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#a4302a"/>
+          <g fill="#f2b705"><path id="mkRay" d="M50,44 L44,16 L56,16 Z"/><use href="#mkRay" transform="rotate(22.5 50 60)"/><use href="#mkRay" transform="rotate(45.0 50 60)"/><use href="#mkRay" transform="rotate(67.5 50 60)"/><use href="#mkRay" transform="rotate(90.0 50 60)"/><use href="#mkRay" transform="rotate(112.5 50 60)"/><use href="#mkRay" transform="rotate(135.0 50 60)"/><use href="#mkRay" transform="rotate(157.5 50 60)"/><use href="#mkRay" transform="rotate(180.0 50 60)"/><use href="#mkRay" transform="rotate(202.5 50 60)"/><use href="#mkRay" transform="rotate(225.0 50 60)"/><use href="#mkRay" transform="rotate(247.5 50 60)"/><use href="#mkRay" transform="rotate(270.0 50 60)"/><use href="#mkRay" transform="rotate(292.5 50 60)"/><use href="#mkRay" transform="rotate(315.0 50 60)"/><use href="#mkRay" transform="rotate(337.5 50 60)"/></g>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">Argead dynasty</div>
+          <div class="noble-dates">c.700&ndash;310 BC</div>
+          <p class="noble-desc">The royal house of ancient Macedon, reaching its height under Philip II and Alexander the Great. Emblem: the sixteen-ray Vergina Sun, excavated on the gold larnax of the royal tombs at Vergina and now the best-documented Argead royal symbol.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#a4302a"/>
+          <g fill="#f4efe1">
+            <ellipse cx="50" cy="46" rx="15" ry="11"/>
+            <ellipse cx="34" cy="46" rx="9" ry="7"/>
+            <ellipse cx="66" cy="46" rx="9" ry="7"/>
+            <path d="M50,52 L50,80 M50,80 L38,96 M50,80 L62,96" stroke="#f4efe1" stroke-width="4" fill="none"/>
+            <path d="M34,46 l-13,-13 M34,46 l-16,2 M66,46 l13,-13 M66,46 l16,2" stroke="#f4efe1" stroke-width="3" fill="none"/>
+          </g>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">Nemanji&#263; dynasty</div>
+          <div class="noble-dates">1282&ndash;1371</div>
+          <p class="noble-desc">Serbian kings and emperors, from Milutin to the empire of Du&#353;an, who annexed most of Macedonia and made Skopje an imperial capital. Emblem: the white double-headed eagle on red, the heraldic device long associated with the Nemanji&#263; crown.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#1e3a8c"/>
+          <path d="M50,26 q20,-6 20,20 q0,20 -20,34 q-20,-14 -20,-34 q0,-26 20,-20 Z" fill="#f4efe1"/>
+          <circle cx="50" cy="44" r="7" fill="#1e3a8c"/>
+          <path d="M50,51 q10,4 8,18 q-2,10 -8,13 q-6,-3 -8,-13 q-2,-14 8,-18 Z" fill="#1e3a8c"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">Mrnjavčević dynasty</div>
+          <div class="noble-dates">1365&ndash;1395</div>
+          <p class="noble-desc">King Vuka&#353;in and his son Marko ruled from Prilep as the last independent medieval lords of Macedonia before Ottoman vassalage; Marko Kraljevi&#263; endures as Macedonia's foremost folk hero. Arms: a silver lion rampant on blue, drawn from the family's documented seals and coinage.</p>
+        </div>
+      </div>
     </div>
   </div>
 

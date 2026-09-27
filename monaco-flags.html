@@ -89,6 +89,8 @@
   .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
   .migro-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 12px; }
   .migro-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-right: 2px; }
+  .migro-flag { width: 20px; height: 14px; flex: none; display: inline-block; vertical-align: middle; border: 1px solid rgba(0,0,0,.2); margin-right: 1px; }
+  .migro-flags { display: inline-flex; gap: 2px; margin-right: 2px; }
   .tag {
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
     padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
@@ -449,6 +451,51 @@
       <div class="legend-item"><span class="legend-dot" style="background:#204b5c"></span><b>Sovereign principality, French-protected</b> &mdash; constitutional monarchy, own recognized flag</div>
       <div class="legend-item"><span class="legend-dot" style="background:#4a3b78"></span><b>Leader</b> &mdash; the named ruler most associated with the era's start</div>
       <div class="legend-item"><span class="legend-dot" style="background:#8e3b62"></span><b>State religion</b> &mdash; the official/established faith, not the population's</div>
+    </div>
+  </div>
+
+  <div class="noble-section">
+    <h2>Noble &amp; ruling houses</h2>
+    <p class="noble-sub">Monaco has had exactly one ruling house since its founding &mdash; the Grimaldis, still reigning today, the only house this small principality has ever needed.</p>
+    <div class="noble-grid">
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="grimaldiClip"><path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z"/></clipPath>
+          </defs>
+          <g clip-path="url(#grimaldiClip)">
+            <rect x="0" y="0" width="100" height="120" fill="#f4efe1"/>
+            <g fill="#a4302a">
+              <path d="M0,0 L20,0 L0,20 Z"/><path d="M20,0 L40,0 L20,20 L0,20 Z M20,0 L40,0 L40,20 L20,20 Z"/>
+              <path d="M40,0 L60,0 L40,20 L20,20 Z" fill="#f4efe1"/><path d="M40,0 L60,0 L60,20 L40,20 Z"/>
+              <path d="M60,0 L80,0 L60,20 L40,20 Z" fill="#f4efe1"/><path d="M60,0 L80,0 L80,20 L60,20 Z"/>
+              <path d="M80,0 L100,0 L80,20 L60,20 Z" fill="#f4efe1"/><path d="M80,0 L100,0 L100,20 L80,20 Z"/>
+              <path d="M0,20 L20,20 L0,40 Z" fill="#f4efe1"/><path d="M20,20 L40,20 L20,40 L0,40 Z"/><path d="M20,20 L40,20 L40,40 L20,40 Z" fill="#f4efe1"/>
+              <path d="M40,20 L60,20 L40,40 L20,40 Z"/><path d="M40,20 L60,20 L60,40 L40,40 Z" fill="#f4efe1"/>
+              <path d="M60,20 L80,20 L60,40 L40,40 Z"/><path d="M60,20 L80,20 L80,40 L60,40 Z" fill="#f4efe1"/>
+              <path d="M80,20 L100,20 L80,40 L60,40 Z"/><path d="M80,20 L100,20 L100,40 L80,40 Z" fill="#f4efe1"/>
+              <path d="M0,40 L20,40 L0,60 Z"/><path d="M20,40 L40,40 L20,60 L0,60 Z" fill="#f4efe1"/><path d="M20,40 L40,40 L40,60 L20,60 Z"/>
+              <path d="M40,40 L60,40 L40,60 L20,60 Z" fill="#f4efe1"/><path d="M40,40 L60,40 L60,60 L40,60 Z"/>
+              <path d="M60,40 L80,40 L60,60 L40,60 Z" fill="#f4efe1"/><path d="M60,40 L80,40 L80,60 L60,60 Z"/>
+              <path d="M80,40 L100,40 L80,60 L60,60 Z" fill="#f4efe1"/><path d="M80,40 L100,40 L100,60 L80,60 Z"/>
+              <path d="M0,60 L20,60 L0,80 Z" fill="#f4efe1"/><path d="M20,60 L40,60 L20,80 L0,80 Z"/><path d="M20,60 L40,60 L40,80 L20,80 Z" fill="#f4efe1"/>
+              <path d="M40,60 L60,60 L40,80 L20,80 Z"/><path d="M40,60 L60,60 L60,80 L40,80 Z" fill="#f4efe1"/>
+              <path d="M60,60 L80,60 L60,80 L40,80 Z"/><path d="M60,60 L80,60 L80,80 L60,80 Z" fill="#f4efe1"/>
+              <path d="M80,60 L100,60 L80,80 L60,80 Z"/><path d="M80,60 L100,60 L100,80 L80,80 Z" fill="#f4efe1"/>
+              <path d="M0,80 L20,80 L0,100 Z"/><path d="M20,80 L40,80 L20,100 L0,100 Z" fill="#f4efe1"/><path d="M20,80 L40,80 L40,100 L20,100 Z"/>
+              <path d="M40,80 L60,80 L40,100 L20,100 Z" fill="#f4efe1"/><path d="M40,80 L60,80 L60,100 L40,100 Z"/>
+              <path d="M60,80 L80,80 L60,100 L40,100 Z" fill="#f4efe1"/><path d="M60,80 L80,80 L80,100 L60,100 Z"/>
+              <path d="M80,80 L100,80 L80,100 L60,100 Z" fill="#f4efe1"/><path d="M80,80 L100,80 L100,100 L80,100 Z"/>
+            </g>
+          </g>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Grimaldi</div>
+          <div class="noble-dates">1297&ndash;present</div>
+          <p class="noble-desc">François Grimaldi seized the fortress of Monaco in 1297, reputedly disguised as a Franciscan monk, founding the family's rule that continues under Prince Albert II today &mdash; Europe's oldest reigning house. Arms: fusilly (lozengy) argent and gules, the red-and-white diamond pattern still on Monaco's own state arms, flanked in the full achievement by two hooded friars bearing swords in reference to the 1297 ruse.</p>
+        </div>
+      </div>
     </div>
   </div>
 

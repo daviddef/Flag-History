@@ -89,6 +89,8 @@
   .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
   .migro-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 12px; }
   .migro-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-right: 2px; }
+  .migro-flag { width: 20px; height: 14px; flex: none; display: inline-block; vertical-align: middle; border: 1px solid rgba(0,0,0,.2); margin-right: 1px; }
+  .migro-flags { display: inline-flex; gap: 2px; margin-right: 2px; }
   .tag {
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
     padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
@@ -509,6 +511,65 @@
       <div class="legend-item"><span class="legend-dot" style="background:#5c2a24"></span><b>Occupation (Japan)</b> &mdash; wartime military rule</div>
       <div class="legend-item"><span class="legend-dot" style="background:#4a3b78"></span><b>Leader</b> &mdash; the named ruler most associated with the era's start</div>
       <div class="legend-item"><span class="legend-dot" style="background:#8e3b62"></span><b>State religion</b> &mdash; the official/established faith, not the population's</div>
+    </div>
+  </div>
+
+  <div class="noble-section">
+    <h2>Noble &amp; ruling houses</h2>
+    <p class="noble-sub">Four Malay royal houses tracing to the Malacca sultanate, each still holding a documented jata (state coat of arms).</p>
+    <div class="noble-grid">
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#f2b705"/>
+          <path d="M62,36 a18,18 0 1,0 0,32 a14,14 0 1,1 0,-32 Z" fill="#a4302a"/>
+          <path d="M40,72 L34,96 L46,96 L50,84 L54,96 L66,96 L60,72 Z" fill="#a4302a"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Melaka</div>
+          <div class="noble-dates">1400&ndash;1511</div>
+          <p class="noble-desc">Founded by Parameswara, the Malacca sultanate is the source dynasty of the wider Malay sultanate tradition, ended by Portuguese conquest. Royal colors: yellow, reserved for Malay royalty, with the kris dagger marking sovereign authority.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#1e3a8c"/>
+          <path d="M64,34 a18,18 0 1,0 0,32 a14,14 0 1,1 0,-32 Z" fill="#f4efe1"/>
+          <path d="M34,70 L66,70 L60,100 L40,100 Z" fill="#a4302a"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Johor</div>
+          <div class="noble-dates">1528&ndash;present</div>
+          <p class="noble-desc">Founded by a fleeing Malacca prince as its direct successor state, and the oldest continuously reigning line among Malaysia's sultanates. Arms bear the crescent and star on blue with a red keris field, per the state's documented jata.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#f4efe1"/>
+          <path d="M60,34 a16,16 0 1,0 0,30 a13,13 0 1,1 0,-30 Z" fill="#f2b705"/>
+          <path d="M28,66 Q50,50 72,66 L72,100 Q50,112 28,100 Z" fill="#f2b705" opacity="0.35"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Perak</div>
+          <div class="noble-dates">1528&ndash;present</div>
+          <p class="noble-desc">Also descended from the Malacca line, Perak's sultans preside over a state whose documented jata famously bears a white elephant beneath the crescent and star. Colors: white and yellow, the state's royal colors.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#f2b705"/>
+          <path d="M50,24 L58,44 L50,56 L42,44 Z" fill="#1a1a1a"/>
+          <path d="M30,70 Q50,58 70,70 L70,104 Q50,116 30,104 Z" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Kedah</div>
+          <div class="noble-dates">1136&ndash;present</div>
+          <p class="noble-desc">The oldest continuously reigning Malay royal house, tracing its Islamic-era founding to 1136 and predating the Malacca sultanate itself. Royal color: yellow, the traditional Kedah color reserved for the sultan.</p>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -89,6 +89,8 @@
   .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
   .migro-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 12px; }
   .migro-label { font-family: "IBM Plex Mono", monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-right: 2px; }
+  .migro-flag { width: 20px; height: 14px; flex: none; display: inline-block; vertical-align: middle; border: 1px solid rgba(0,0,0,.2); margin-right: 1px; }
+  .migro-flags { display: inline-flex; gap: 2px; margin-right: 2px; }
   .tag {
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
     padding: 3px 8px; border-radius: 2px; border: 1px solid var(--card-border); color: var(--muted);
@@ -579,6 +581,73 @@
       <div class="legend-item"><span class="legend-dot" style="background:#2f6b4a"></span><b>Republic</b> &mdash; sovereign republic</div>
       <div class="legend-item"><span class="legend-dot" style="background:#4a3b78"></span><b>Leader</b> &mdash; the named ruler most associated with the era's start</div>
       <div class="legend-item"><span class="legend-dot" style="background:#8e3b62"></span><b>State religion</b> &mdash; the official/established faith, not the population's</div>
+    </div>
+  </div>
+
+  <div class="noble-section">
+    <h2>Noble &amp; ruling houses</h2>
+    <p class="noble-sub">Malta had no native royal line of its own; these are the outside dynasties, and the sovereign order, that ruled it &mdash; real, documented heraldry.</p>
+    <div class="noble-grid">
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#f2b705"/>
+          <path d="M50,26 Q66,26 66,46 Q66,60 58,64 L64,70 L58,74 L50,66 L42,74 L36,70 L42,64 Q34,60 34,46 Q34,26 50,26 Z" fill="#1a1a1a"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Hohenstaufen</div>
+          <div class="noble-dates">1194&ndash;1266</div>
+          <p class="noble-desc">Ruled the Kingdom of Sicily, including Malta, at its height under Frederick II, "Stupor Mundi." Arms: or, an eagle displayed sable, the imperial eagle the Hohenstaufen carried into their Sicilian and Maltese lands.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <defs><clipPath id="mtClip2"><path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z"/></clipPath></defs>
+          <g clip-path="url(#mtClip2)">
+            <rect x="0" y="0" width="100" height="120" fill="#1e3a8c"/>
+            <g fill="#f2b705">
+              <path d="M30,20 l4,-6 l4,6 l-4,4 Z"/><path d="M50,16 l4,-6 l4,6 l-4,4 Z"/><path d="M70,20 l4,-6 l4,6 l-4,4 Z"/>
+              <path d="M30,44 l4,-6 l4,6 l-4,4 Z"/><path d="M50,40 l4,-6 l4,6 l-4,4 Z"/><path d="M70,44 l4,-6 l4,6 l-4,4 Z"/>
+              <path d="M30,68 l4,-6 l4,6 l-4,4 Z"/><path d="M50,64 l4,-6 l4,6 l-4,4 Z"/><path d="M70,68 l4,-6 l4,6 l-4,4 Z"/>
+            </g>
+          </g>
+          <rect x="30" y="86" width="40" height="16" fill="#a4302a"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Anjou-Sicily</div>
+          <div class="noble-dates">1266&ndash;1282</div>
+          <p class="noble-desc">Charles of Anjou took Sicily and Malta by papal grant after defeating the last Hohenstaufen heirs, ruling until the islanders' revolt during the War of the Sicilian Vespers. Arms: azure sem&eacute; of fleurs-de-lis or, a label gules.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#f2b705"/>
+          <g fill="#a4302a">
+            <rect x="14" y="4" width="14" height="112"/>
+            <rect x="43" y="4" width="14" height="112"/>
+            <rect x="72" y="4" width="14" height="60"/>
+          </g>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">House of Aragon</div>
+          <div class="noble-dates">1282&ndash;1530</div>
+          <p class="noble-desc">The Sicilian Vespers brought Peter III of Aragon to the throne, and Malta remained an Aragonese, then Spanish, possession until Charles V granted it to the Knights Hospitaller. Arms: or, four pallets gules &mdash; the Aragonese stripes.</p>
+        </div>
+      </div>
+      <div class="noble-card">
+        <svg class="coa" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="#a4302a"/>
+          <path d="M50,26 L58,42 L50,50 L42,42 Z M50,70 L58,86 L50,94 L42,86 Z M28,48 L44,56 L36,64 L28,56 Z M72,48 L56,56 L64,64 L72,56 Z M50,50 L64,56 L50,72 L36,56 Z" fill="#f4efe1"/>
+          <path d="M4,4 H96 V64 Q96,100 50,116 Q4,100 4,64 Z" fill="none" stroke="#8a7a5c" stroke-width="3"/>
+        </svg>
+        <div class="noble-body">
+          <div class="noble-name">Knights Hospitaller (Order of St John)</div>
+          <div class="noble-dates">1530&ndash;1798</div>
+          <p class="noble-desc">The sovereign military order, expelled from Rhodes by the Ottomans, ruled Malta as an independent state and famously withstood the Great Siege of 1565. Arms: gules, a cross argent &mdash; the eight-pointed Maltese cross still Malta's own emblem.</p>
+        </div>
+      </div>
     </div>
   </div>
 
