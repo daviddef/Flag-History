@@ -245,16 +245,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>Castile and Granada, 1238&ndash;1492</h2>
-    <p class="imap-sub">Spain's own real border (mainland only, per this atlas's practice), split into the two pieces that defined the last two and a half centuries of the Reconquista: the Christian Crown of Castile across the center and north, and the Emirate of Granada &mdash; the last Muslim state on the peninsula &mdash; holding the south as a tribute-paying vassal. Press play, or drag the slider.</p>
+    <h2>Two splits, seven centuries apart</h2>
+    <p class="imap-sub">Spain's own real border (mainland only, per this atlas's practice), showing two different internal splits from two different centuries: the Reconquista-era line between the Christian Crown of Castile and the Emirate of Granada (1238&ndash;1492), and &mdash; after over four centuries as one kingdom &mdash; the rough Nationalist/Republican front of the 1936&ndash;39 Civil War. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>Granada outlasted every other Muslim kingdom in Iberia by two and a half centuries, and it did it by paying rent.</b> Founded in 1238 by Muhammad I ibn al-Ahmar, the Nasrid emirate survived as a tribute-paying vassal of Castile for most of its existence &mdash; a pragmatic arrangement, not a stalemate. The border line below only solidifies where the two were actually governed apart; it dissolves for good in January 1492, when Boabdil surrendered the Alhambra and completed a Reconquista that had been underway since the 8th century.
+      <b>Two different internal splits, from two very different centuries, on the same map.</b> Granada outlasted every other Muslim kingdom in Iberia by two and a half centuries, and it did it by paying rent: founded in 1238 by Muhammad I ibn al-Ahmar, the Nasrid emirate survived as a tribute-paying vassal of Castile until Boabdil surrendered the Alhambra in January 1492. For nearly four and a half centuries afterward &mdash; through the Habsburgs, the Bourbons, and this page's own First and Second Republics &mdash; Spain was governed as one country, until the July 1936 military rising split it apart again, this time into Francisco Franco's Nationalist zone and the Republic still fighting to hold Madrid, Catalonia, and the eastern coast. Unlike the Castile/Granada line, which follows a real documented frontier, the actual 1936&ndash;39 civil-war front shifted constantly over three years of fighting and is drawn here only as a single representative approximation &mdash; schematic, not surveyed, in the same spirit as this atlas's other internal splits. Both border lines below only solidify where the country was genuinely governed apart; they dissolve the moment one government held all of it again &mdash; in 1492, and again in 1939.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">1238</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg">
         <path fill="var(--tile-sea, #b9d3da)" d="M-5.0,389.4 L58.2,371.3 L90.0,382.4 L94.4,378.6 L118.1,406.7 L187.4,422.0 L217.4,383.4 L218.0,382.9 L233.7,383.3 L307.2,382.2 L337.9,338.8 L375.6,325.8 L386.8,282.0 L424.9,243.7 L403.8,203.4 L405.6,198.4 L423.9,176.9 L453.0,170.7 L465.0,123.0 L465.0,10.8 L387.3,22.1 L332.4,-6.7 L314.6,7.1 L293.8,0.4 L274.3,-24.4 L188.9,-26.7 L164.8,-24.7 L139.6,-30.0 L2.6,-30.0 L-5.0,4.9 L-5.0,63.1 L-5.0,175.4 L-5.0,266.8 L9.6,297.0 L-5.0,389.4 Z"/>
@@ -267,9 +267,14 @@
         <path id="ireg-castile" class="ireg-fill" d="M19.0,57.7 L4.7,37.9 L54.2,5.0 L97.1,13.2 L144.1,12.9 L181.3,20.7 L210.4,18.3 L267.0,19.8 L281.0,37.6 L345.4,58.3 L358.1,48.4 L397.5,69.1 L438.1,63.2 L440.0,89.7 L406.8,120.0 L362.0,129.7 L358.8,145.0 L337.3,170.3 L323.8,207.4 L337.5,233.5 L317.2,253.8 L309.6,283.5 L283.2,292.6 L267.9,314.2 L265.3,305.9 L209.3,287.7 L113.0,296.8 L113.0,335.8 L105.3,315.4 L72.6,308.3 L69.7,293.2 L82.6,276.1 L87.4,263.7 L75.4,250.2 L85.0,220.2 L71.0,192.8 L86.1,189.1 L87.5,167.5 L93.2,160.9 L93.7,125.3 L109.9,112.9 L100.1,90.1 L79.7,88.5 L73.7,94.2 L53.0,94.3 L44.2,71.9 L29.9,78.6 L19.0,57.7 Z"/>
         <path id="ireg-granada" class="ireg-fill" d="M258.4,327.6 L214.0,328.3 L180.6,327.5 L158.7,343.6 L145.3,360.8 L128.2,357.0 L115.2,341.6 L113.0,335.8 L113.0,296.8 L209.3,287.7 L265.3,305.9 L267.9,314.2 L258.4,327.6 Z"/>
         <path class="iborder-line" id="ib-castile-granada" d="M267.9,314.2 L265.3,305.9 L209.3,287.7 L113.0,296.8 L113.0,335.8"/>
+        <path id="ireg-nat" class="ireg-fill" fill-opacity="0" d="M4.7,37.9 L54.2,5.0 L97.1,13.2 L144.1,12.9 L181.3,20.7 L210.4,18.3 L200,40 L188,90 L185,150 L190,230 L209.3,287.7 L265.3,305.9 L267.9,314.2 L258.4,327.6 L214.0,328.3 L180.6,327.5 L158.7,343.6 L145.3,360.8 L128.2,357.0 L115.2,341.6 L113.0,335.8 L113.0,296.8 L105.3,315.4 L72.6,308.3 L69.7,293.2 L82.6,276.1 L87.4,263.7 L75.4,250.2 L85.0,220.2 L71.0,192.8 L86.1,189.1 L87.5,167.5 L93.2,160.9 L93.7,125.3 L109.9,112.9 L100.1,90.1 L79.7,88.5 L73.7,94.2 L53.0,94.3 L44.2,71.9 L29.9,78.6 L19.0,57.7 Z"/>
+        <path id="ireg-rep" class="ireg-fill" fill-opacity="0" d="M210.4,18.3 L267.0,19.8 L281.0,37.6 L345.4,58.3 L358.1,48.4 L397.5,69.1 L438.1,63.2 L440.0,89.7 L406.8,120.0 L362.0,129.7 L358.8,145.0 L337.3,170.3 L323.8,207.4 L337.5,233.5 L317.2,253.8 L309.6,283.5 L283.2,292.6 L267.9,314.2 L265.3,305.9 L209.3,287.7 L190,230 L185,150 L188,90 L200,40 Z"/>
+        <path class="iborder-line" id="ib-nat-rep" stroke-opacity="0" d="M210.4,18.3 L200,40 L188,90 L185,150 L190,230 L209.3,287.7"/>
         <g font-family="IBM Plex Mono, monospace">
           <text class="ireg-label" id="ilbl-castile" x="220" y="150">CROWN OF CASTILE</text>
           <text class="ireg-label" id="ilbl-granada" x="188" y="322">EMIRATE OF GRANADA</text>
+          <text class="ireg-label" id="ilbl-nat" x="75" y="190" font-size="8" opacity="0">NATIONALIST</text>
+          <text class="ireg-label" id="ilbl-rep" x="300" y="150" font-size="8" opacity="0">REPUBLICAN</text>
         </g>
       </svg>
       <div class="imap-head">
@@ -279,7 +284,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Schematic internal partition on a real traced border (mainland Spain, Canaries/Balearics omitted) &mdash; the Castile/Granada dividing line is approximate, not a surveyed frontier. Geometry adapted from the same traced coastline used in the Iberia hub's own Reconquista map.</p>
+      <p class="map-note">Schematic internal partitions on a real traced border (mainland Spain, Canaries/Balearics omitted): the Castile/Granada line (1238&ndash;1492) and the Nationalist/Republican Civil War front (1936&ndash;39) are both approximate, not surveyed frontiers. Geometry adapted from the same traced coastline used in the Iberia hub's own Reconquista map.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -860,14 +865,17 @@
 <script>
 (function () {
   var IC = {
-    castile: "#a4302a", granada: "#c9a13c"
+    castile: "#a4302a", granada: "#c9a13c", nationalist: "#7a2530", republican: "#5b3a86"
   };
   var INAMES = {
-    castile: "Crown of Castile", granada: "Emirate of Granada (Nasrid)"
+    castile: "Crown of Castile", granada: "Emirate of Granada (Nasrid)",
+    nationalist: "Civil War: Nationalist Spain", republican: "Civil War: Republican Spain"
   };
   var IFLAGS = {
     castile: '<rect width="150" height="100" fill="#a4302a"/><rect x="150" width="150" height="100" fill="#f4efe1"/><rect y="100" width="150" height="100" fill="#f4efe1"/><rect x="150" y="100" width="150" height="100" fill="#a4302a"/><g fill="#c9a13c" stroke="#7a5a1f" stroke-width="1.5"><rect x="55" y="28" width="40" height="44"/><rect x="60" y="18" width="8" height="12"/><rect x="78" y="18" width="8" height="12"/><rect x="68" y="40" width="14" height="24" fill="#a4302a"/></g><ellipse cx="225" cy="150" rx="26" ry="18" fill="#7a4fb5"/>',
-    granada: '<rect width="300" height="200" fill="#7a1f1f"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="14"/><circle cx="150" cy="100" r="26" fill="#c9a13c" stroke="#f4efe1" stroke-width="2"/>'
+    granada: '<rect width="300" height="200" fill="#7a1f1f"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="14"/><circle cx="150" cy="100" r="26" fill="#c9a13c" stroke="#f4efe1" stroke-width="2"/>',
+    nationalist_cw: '<rect width="300" height="50" fill="#a4302a"/><rect y="50" width="300" height="100" fill="#f9d616"/><rect y="150" width="300" height="50" fill="#a4302a"/><path d="M150,75 q-14,2 -18,16 q8,-4 14,-2 q-6,6 -4,14 q6,-6 10,-6 q4,0 10,6 q2,-8 -4,-14 q6,-2 14,2 q-4,-14 -18,-16 Z" fill="#1a1a1a"/>',
+    republican_cw: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f9d616"/><rect y="133.3" width="300" height="66.7" fill="#5b3a86"/>'
   };
   function iFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -887,7 +895,14 @@
     { year:"1482", name:"The Granada War begins", t:{ castile:IC.castile, granada:IC.granada }, flagKeys:{ castile:"castile", granada:"granada" },
       story:"Isabella and Ferdinand, having secured their own joint succession by 1479, turn their combined resources on Granada in 1482 &mdash; a ten-year war of sieges rather than open battles, waged methodically against a Nasrid emirate weakened by its own internal succession struggles between rival claimants Boabdil and his uncle." },
     { year:"1492", name:"Fall of Granada", t:{ castile:IC.castile, granada:IC.castile }, flagKeys:{ castile:"castile", granada:"castile" },
-      story:"On 2 January 1492, Boabdil surrenders the Alhambra to Isabella and Ferdinand, ending 781 years of Muslim rule in Iberia and completing the Reconquista. The border that had separated Granada from Castile for two and a half centuries simply dissolves &mdash; the joint Catholic Monarchs' crown now controls the entire peninsula except Portugal, in the same year Columbus sails west under their patronage." }
+      story:"On 2 January 1492, Boabdil surrenders the Alhambra to Isabella and Ferdinand, ending 781 years of Muslim rule in Iberia and completing the Reconquista. The border that had separated Granada from Castile for two and a half centuries simply dissolves &mdash; the joint Catholic Monarchs' crown now controls the entire peninsula except Portugal, in the same year Columbus sails west under their patronage." },
+    { year:"1492–1936", name:"Four centuries as one kingdom", t:{ castile:IC.castile, granada:IC.castile }, flagKeys:{ castile:"castile", granada:"castile" }, civilWar:null,
+      story:"For nearly four and a half centuries after 1492, Castile and Granada are governed as one kingdom &mdash; through the Habsburg and Bourbon monarchies, the Napoleonic occupation, and the First and Second Spanish Republics this page's own full timeline covers in far greater depth below &mdash; until the July 1936 military rising splits the country apart again for the first time since Boabdil's surrender." },
+    { year:"1936–1939", name:"Civil War: Nationalist vs. Republican Spain", t:{ castile:IC.castile, granada:IC.castile }, flagKeys:{ castile:"castile", granada:"castile" },
+      civilWar:{ nat:IC.nationalist, rep:IC.republican, natFlag:"nationalist_cw", repFlag:"republican_cw" },
+      story:"A military uprising led by Franco and other generals begins on 17&ndash;18 July 1936 against the elected Popular Front government, splitting the country into Nationalist and Republican zones for nearly three years of brutal conflict. The Nationalists restore the pre-Republican red-yellow-red bicolor immediately, formally adding the black eagle in 1938; the Republic keeps flying its own purple-yellow-red flag in the territory it still holds. The line shown here is a single representative snapshot of a front that shifted constantly for three years &mdash; by the war's later stages the Nationalists hold the north, west, and south shown here, while the Republic holds only Madrid, Catalonia, and a strip of the eastern coast, until Franco's victory on 1 April 1939." },
+    { year:"1939–present", name:"Franco's Spain (reunified)", t:{ castile:IC.castile, granada:IC.castile }, flagKeys:{ castile:"castile", granada:"castile" }, civilWar:null,
+      story:"Franco's victory on 1 April 1939 ends the Civil War and reunifies the country under a single government for the first time in nearly three years &mdash; the same reunification this atlas's own timeline covers in far greater depth, through the Francoist dictatorship and the 1975 restoration of the monarchy that follows it." }
   ];
 
   var IREGIONS = ["castile","granada"];
@@ -941,6 +956,29 @@
       line.setAttribute("stroke-width", same ? "1" : "2.4");
     });
 
+    var natEl = document.getElementById("ireg-nat");
+    var repEl = document.getElementById("ireg-rep");
+    var natRepLine = document.getElementById("ib-nat-rep");
+    var natLbl = document.getElementById("ilbl-nat");
+    var repLbl = document.getElementById("ilbl-rep");
+    if (era.civilWar) {
+      natEl.setAttribute("fill", era.civilWar.nat);
+      natEl.setAttribute("fill-opacity", "1");
+      repEl.setAttribute("fill", era.civilWar.rep);
+      repEl.setAttribute("fill-opacity", "1");
+      natRepLine.setAttribute("stroke-opacity", "0.85");
+      natRepLine.setAttribute("stroke-width", "2.4");
+      var natCol = iTextColorFor(era.civilWar.nat), repCol = iTextColorFor(era.civilWar.rep);
+      natLbl.setAttribute("fill", natCol); natLbl.setAttribute("stroke", natCol === "#201a12" ? "#f7f1e3" : "#201a12"); natLbl.setAttribute("opacity", "1");
+      repLbl.setAttribute("fill", repCol); repLbl.setAttribute("stroke", repCol === "#201a12" ? "#f7f1e3" : "#201a12"); repLbl.setAttribute("opacity", "1");
+    } else {
+      natEl.setAttribute("fill-opacity", "0");
+      repEl.setAttribute("fill-opacity", "0");
+      natRepLine.setAttribute("stroke-opacity", "0");
+      natLbl.setAttribute("opacity", "0");
+      repLbl.setAttribute("opacity", "0");
+    }
+
     var groups = iGroupsFor(era.t);
     var seen = {}; var parts = [];
     groups.forEach(function (g) {
@@ -948,11 +986,17 @@
       if (!seen[label]) { seen[label] = []; parts.push(label); }
       g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
     });
+    if (era.civilWar) { parts.push("Civil War split"); seen["Civil War split"] = ["Nationalist zone (north, west &amp; south, schematic)", "Republican zone (Madrid, Catalonia &amp; the east coast, schematic)"]; }
     iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
 
-    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+    var baseChips = IREGIONS.map(function (id) {
       return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
     }).join("");
+    var cwChips = era.civilWar ? (
+      '<div class="iflag-chip">' + iFlagSvg(era.civilWar.natFlag) + '<div class="ic-label">Nationalist zone</div></div>' +
+      '<div class="iflag-chip">' + iFlagSvg(era.civilWar.repFlag) + '<div class="ic-label">Republican zone</div></div>'
+    ) : "";
+    iFlagsRow.innerHTML = baseChips + cwChips;
   }
 
   iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
