@@ -241,16 +241,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>One island, five flags</h2>
+    <h2>One island, six flags</h2>
     <p class="imap-sub">Grenada's own real coastline &mdash; the main island, Carriacou, and Petite Martinique &mdash; with no internal split to show. Press play, or drag the slider, to watch who held the whole territory, era to era.</p>
     <div class="rule-box">
-      <b>This is a single-region page, honestly.</b> Every government on this map, Kalinago, French, British-contested, British, and independent, held the whole island group at once; nothing in Grenada's history supports carving out a genuinely separate internal region.
+      <b>This is a single-region page, honestly.</b> Every government on this map, Saladoid/Igneri, Kalinago, French, British-contested, British, and independent, held the whole island group at once; nothing in Grenada's history supports carving out a genuinely separate internal region.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1498</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 300 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 250 343" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -264,7 +264,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Kalinago Grenada</div>
+        <div class="imap-name" id="iEraName">Saladoid & Igneri settlement</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -549,14 +549,15 @@
 <script>
 (function () {
   var IC = {
-    none:"#4f7f6a", france:"#7a5aa5", contested:"#6e6068", britain:"#2c5f8a", modern:"#a9762f"
+    saladoid:"#8a6d3b", none:"#4f7f6a", france:"#7a5aa5", contested:"#6e6068", britain:"#2c5f8a", modern:"#a9762f"
   };
   var INAMES = {
-    none:"Kalinago Grenada", france:"French Grenada",
+    saladoid:"Saladoid & Igneri settlement", none:"Kalinago Grenada", france:"French Grenada",
     contested:"Britain's first possession, and the French recapture", britain:"British Grenada (final and lasting British rule)",
     modern:"Independent Grenada"
   };
   var IFLAGS = {
+    saladoid: '<rect width="300" height="200" fill="#5c4a2a"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
     none: '<rect width="300" height="200" fill="#5c4a2a"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
     france: '<rect width="300" height="200" fill="#f4efe1"/><path d="M150,80 Q166,96 150,120 Q134,96 150,80 Z M150,120 Q158,134 150,150 M150,120 Q142,134 150,150 M126,104 Q138,96 150,104 M174,104 Q162,96 150,104" fill="none" stroke="#c9962c" stroke-width="5"/>',
     contested: '<rect width="300" height="200" fill="#c9432c"/><rect width="150" height="100" fill="#1a3d7c"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="14"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c9432c" stroke-width="6"/><rect y="40" width="150" height="20" fill="#f4efe1"/><rect x="65" width="20" height="100" fill="#f4efe1"/><rect y="44" width="150" height="12" fill="#c9432c"/><rect x="69" width="12" height="100" fill="#c9432c"/>',
@@ -572,6 +573,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 300 BCE", name:"Saladoid & Igneri settlement", t:{ gd:IC.saladoid }, flagKeys:{ gd:"saladoid" },
+      story:"Saladoid-culture peoples migrate up the Lesser Antilles from the Orinoco Delta region of South America beginning around the 3rd century BCE, reaching Grenada and settling the island for well over a thousand years; their Igneri (Arawakan-speaking) descendants remain until Kalinago (Island Carib) peoples arrive from the south and establish the dominance that Columbus's ships find in 1498. No flag or comparable political symbol survives from this era." },
     { year:"c. 1498", name:"Kalinago Grenada", t:{ gd:IC.none }, flagKeys:{ gd:"none" },
       story:"Columbus sights the island in 1498 but does not land. Grenada, which the Kalinago called \"Camerhogne,\" remains under Kalinago control, resisting repeated European settlement attempts, until the French finally establish a permanent, violently imposed foothold in 1650. No securely documented flag survives from this era." },
     { year:"1650", name:"French Grenada", t:{ gd:IC.france }, flagKeys:{ gd:"france" },
