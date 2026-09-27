@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1498</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 400</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -267,7 +267,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Kalinago Saint Vincent, pre-Garifuna</div>
+        <div class="imap-name" id="iEraName">Arawakan (Igneri) Saint Vincent</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -539,14 +539,16 @@
 <script>
 (function () {
   var IC = {
-    kalinago:"#6e6551", neutral:"#d9662f", caribwars:"#145c5c", british:"#1f7a7a", independent:"#c9962c"
+    arawakan:"#4a3f2e", kalinago:"#6e6551", neutral:"#d9662f", caribwars:"#145c5c", british:"#1f7a7a", independent:"#c9962c"
   };
   var INAMES = {
+    arawakan:"Arawakan (Igneri) Saint Vincent, before the Kalinago",
     kalinago:"Kalinago Saint Vincent, pre-Garifuna", neutral:"Anglo-French neutral island and Garifuna consolidation",
     caribwars:"British Saint Vincent and the Carib Wars", british:"British Saint Vincent (colonial period)",
     independent:"Independent Saint Vincent and the Grenadines"
   };
   var IFLAGS = {
+    arawakan: '<rect width="300" height="200" fill="#6e6551"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">RECORDED</text>',
     kalinago: '<rect width="300" height="200" fill="#6e6551"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">RECORDED</text>',
     neutral: '<rect width="300" height="200" fill="#6e6551"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
     caribwars: '<rect width="300" height="200" fill="#1b3a76"/><rect x="0" y="0" width="140" height="100" fill="#1b3a76"/><path d="M0,0 L140,100 M140,0 L0,100" stroke="#f4efe1" stroke-width="13"/><path d="M0,0 L140,100 M140,0 L0,100" stroke="#c14f1d" stroke-width="5"/><rect x="0" y="42" width="140" height="16" fill="#f4efe1"/><rect x="62" y="0" width="16" height="100" fill="#f4efe1"/><rect x="0" y="46" width="140" height="8" fill="#c14f1d"/><rect x="66" y="0" width="8" height="100" fill="#c14f1d"/>',
@@ -562,6 +564,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 400 – c. 1200", name:"Arawakan (Igneri) Saint Vincent, before the Kalinago", t:{ vc:IC.arawakan }, flagKeys:{ vc:"arawakan" },
+      story:"Centuries before Columbus's 1498 sighting and the later Garifuna formation, Saint Vincent is already settled by Arawak-speaking farmers, part of the Saladoid cultural tradition that spread up the Lesser Antilles from the Orinoco basin starting around 500 BCE and reached the Windward Islands by roughly the 5th century CE. Organized around village-level chiefs (caciques) rather than a unified authority, no individual leader from this period is securely recorded by name. Kalinago peoples migrating up the same island chain from around the 12th–13th century displace this Arawakan (Igneri) population." },
     { year:"c. 1498", name:"Kalinago Saint Vincent, pre-Garifuna", t:{ vc:IC.kalinago }, flagKeys:{ vc:"kalinago" },
       story:"Columbus sights the island in 1498, but it remains firmly under Kalinago control for over two centuries after contact, with no lasting European settlement. The specific Afro-indigenous Garifuna identity gradually forms over the 17th century through intermixture with shipwrecked and escaped enslaved Africans." },
     { year:"1719/1748", name:"Anglo-French neutral island and Garifuna consolidation", t:{ vc:IC.neutral }, flagKeys:{ vc:"neutral" },
