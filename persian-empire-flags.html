@@ -234,16 +234,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>Eleven centuries of extent, snapshotted</h2>
+    <h2>Elam through the Sasanians, extent snapshotted</h2>
     <p class="imap-sub">Not an internal political split &mdash; each of these was one government &mdash; but the real territorial reach of successive Persian imperial states, from the Achaemenids' Aegean-to-Indus peak down to the Sasanian core Alexander's, the Seleucids', the Parthians', and the Sasanians' own empires actually held, shown as simplified extent snapshots. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>These are approximate extent snapshots, not surveyed borders.</b> Eleven centuries of shifting frontiers compressed into the same six eras already used in the timeline below, anchored on modern Iran's own real traced coastline as the one constant core.
+      <b>These are approximate extent snapshots, not surveyed borders.</b> Over three millennia of shifting frontiers &mdash; starting with Elam, the Iranian plateau's own oldest civilization, well before any Persian empire existed &mdash; compressed into the same seven eras already used in the timeline below, anchored on modern Iran's own real traced coastline as the one constant core.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">550 BCE</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 2700 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 703 329" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -264,7 +264,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Achaemenid Empire</div>
+        <div class="imap-name" id="iEraName">Elam</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -556,12 +556,14 @@
 
 <script>
 (function () {
-  var IC = { achaemenid:"#a9762f", alexander:"#6b5c4a", seleucid:"#c9a13c", parthian:"#c9a13c", sasanian:"#a9762f", conquest:"#6b5c4a" };
+  var IC = { elam:"#6b5c4a", achaemenid:"#a9762f", alexander:"#6b5c4a", seleucid:"#c9a13c", parthian:"#c9a13c", sasanian:"#a9762f", conquest:"#6b5c4a" };
   var INAMES = {
+    elam:"Elam (Susa & the Iranian plateau's oldest civilization)",
     achaemenid:"Achaemenid Empire", alexander:"Alexander's conquest", seleucid:"Seleucid Empire (Persian territories)",
     parthian:"Parthian Empire", sasanian:"Sasanian Empire", conquest:"Arab-Islamic conquest of Persia"
   };
   var IFLAGS = {
+    noflag: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     transition_alex: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">ALEXANDER\'S</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">CONQUEST</text>',
     transition_arab: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">ARAB-ISLAMIC</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">CONQUEST</text>',
     faravahar: '<rect width="300" height="200" fill="#1a3a6b"/><ellipse cx="150" cy="100" rx="46" ry="14" fill="#e8c766"/><path d="M104,100 q-18,-20 -30,-14 q4,18 26,22 Z" fill="#e8c766"/><path d="M196,100 q18,-20 30,-14 q-4,18 -26,22 Z" fill="#e8c766"/><circle cx="150" cy="82" r="12" fill="#e8c766"/><path d="M136,60 l0,14 M164,60 l0,14 M150,54 l0,16" stroke="#e8c766" stroke-width="4"/>',
@@ -580,6 +582,8 @@
   // Each era activates a subset of three schematic extent shapes:
   // core (real Iran coastline), moderate (Mesopotamia/Central Asia), greater (Aegean-to-Indus peak).
   var ISNAP = [
+    { year:"c. 2700 – 539 BCE", key:"elam", shapes:{ core:1, moderate:0, greater:0 }, flagKey:"noflag",
+      story:"Centered on the city of Susa in what is now southwestern Iran, Elam is among the oldest civilizations in the world, with a documented history running from roughly 2700 BCE through Old, Middle, and Neo-Elamite periods of alternating conquest, rivalry, and cultural exchange with Sumer, Akkad, Babylon, and Assyria. The Assyrian king Ashurbanipal's sack of Susa in 646 BCE breaks Elam as an independent power; its territory, administrative traditions, and language are absorbed into the rising Achaemenid Persian state. No flag, standard, or banner in any modern sense survives from this era." },
     { year:"550 – 334 BCE", key:"achaemenid", shapes:{ core:1, moderate:0, greater:1 }, flagKey:"faravahar",
       story:"Cyrus the Great unites the Persians and Medes and, from 550 BCE, builds the first great multi-continental empire in history, stretching at its height from the Aegean and Egypt to the Indus Valley, organized into satrapies and linked by the Royal Road." },
     { year:"334 – 330 BCE", key:"alexander", shapes:{ core:1, moderate:0, greater:1 }, flagKey:"transition_alex",
