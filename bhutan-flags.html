@@ -249,7 +249,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 348.0 210.2" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-bt" class="ireg-fill" d="M286.9,78.0 L324.0,110.8 L317.6,173.9 L243.2,177.0 L166.2,170.1 L108.8,186.2 L26.0,147.1 L24.0,126.5 L84.3,50.1 L133.6,24.0 L198.8,47.8 L246.9,50.3 L286.9,78.0 Z"/>
@@ -537,6 +537,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 650–c. 900", name:"Monyul and the arrival of Buddhism", t:{ bt:IC.e0 }, flagKeys:{ bt:"e0" },
+      story:"Before any unified valley lordship, Bhutan's earliest attested episode is Tibetan-Buddhist tradition's account of Songtsen Gampo's temple-building mission &mdash; Kyichu Lhakhang in the Paro valley and Jambay Lhakhang in Bumthang, both traditionally dated to around 659 CE. The region, then known as Monyul, was a borderland of scattered valley communities practicing indigenous Bon shamanism, with no unified government and no flag or comparable symbol surviving from the era." },
     { year:"c. 900–1616", name:"Fragmented valley lords &amp; monastic principalities", t:{ bt:IC.e0 }, flagKeys:{ bt:"e0" },
       story:"Before unification, Bhutan's valleys are held by local lords and clan chiefs, with Buddhist monastic schools arriving in waves from Tibet from roughly the 8th century, intensifying with Drukpa Kagyu presence from the 12th–13th. No single ruler unites the region until Ngawang Namgyal's 1616 arrival. No securely documented flag survives &mdash; shown honestly blank." },
     { year:"1616–1907", name:"Unified Bhutan &mdash; the Druk Desi theocracy", t:{ bt:IC.e1 }, flagKeys:{ bt:"e1" },
