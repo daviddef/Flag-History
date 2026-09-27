@@ -240,7 +240,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One country, on a real map, 1384&ndash;present</h2>
+    <h2>One country, on a real map, 57 BCE&ndash;present</h2>
     <p class="imap-sub">Belgium doesn't get this atlas's usual split-border treatment. Its historic north/south linguistic divide &mdash; Dutch-speaking Flanders and French-speaking Wallonia, formalized through federal reforms between 1970 and 1993 &mdash; is genuine, but it's an internal, negotiated devolution of a single existing state, not two territories separately conquered or ruled by rival foreign powers at the same time the way Hungary's Royal/Ottoman split was. Inventing a military-style partition line here would misrepresent what actually happened, so this map instead traces a single Belgian outline &mdash; a real shape, lifted from the same boundary data as the hub map above &mdash; and simply recolors it as control changes hands, including the two 20th-century interruptions when it briefly wasn't self-governed at all.</p>
     <div class="rule-box">
       <b>The Belgian tricolor is younger than it looks, and the country under it was occupied twice.</b> The flag itself dates only to 1830. But it has now flown continuously since 1944 &mdash; longer than any single flag flew over these provinces before it &mdash; broken only by two German occupations, four years in the First World War and four in the Second, both of which get their own frame below rather than being folded silently into the Kingdom's story.
@@ -248,8 +248,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1384</span>
-        <input type="range" id="iSlider" min="0" max="10" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">57 BCE</span>
+        <input type="range" id="iSlider" min="0" max="11" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="15 265 315 270" xmlns="http://www.w3.org/2000/svg">
         <rect x="15" y="265" width="315" height="270" fill="var(--card)"/>
@@ -268,7 +268,7 @@
         <text class="ireg-label" id="ilbl-be" x="181" y="389">BELGIUM</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Philip the Bold takes Flanders</div>
+        <div class="imap-name" id="iEraName">Roman Gallia Belgica and the Frankish/feudal principalities</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -727,13 +727,14 @@
 <script>
 (function () {
   var IC = {
-    bh:"#5b3f7a", kingdom:"#a9762f", occ:"#204b5c", fr:"#2c5f8a", union:"#b8862f"
+    ancient:"#6b5c4a", bh:"#5b3f7a", kingdom:"#a9762f", occ:"#204b5c", fr:"#2c5f8a", union:"#b8862f"
   };
   var INAMES = {
-    bh:"Burgundian / Habsburg rule", kingdom:"Kingdom of Belgium", occ:"German occupation",
+    ancient:"Roman Gallia Belgica and the Frankish/feudal principalities", bh:"Burgundian / Habsburg rule", kingdom:"Kingdom of Belgium", occ:"German occupation",
     fr:"French Republic / Empire", union:"United Kingdom of the Netherlands"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     burgundy: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200" stroke="#a4302a" stroke-width="24" stroke-linecap="round"/><path d="M300,0 L0,200" stroke="#a4302a" stroke-width="24" stroke-linecap="round"/><g fill="#7c2e1f"><circle cx="75" cy="50" r="7"/><circle cx="150" cy="100" r="7"/><circle cx="225" cy="150" r="7"/><circle cx="225" cy="50" r="7"/><circle cx="75" cy="150" r="7"/></g>',
     habsburg_austria: '<rect width="300" height="200" fill="#f4c430"/><g fill="#241f14"><ellipse cx="150" cy="100" rx="28" ry="20"/><path d="M150,82 L108,42 L128,78 Z"/><path d="M150,82 L192,42 L172,78 Z"/><path d="M150,118 L118,163 L138,128 Z"/><path d="M150,118 L182,163 L162,128 Z"/></g>',
     french: '<rect width="100" height="200" fill="#002395"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#ed2939"/>',
@@ -751,6 +752,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"57 BCE", name:"Roman Gallia Belgica and the Frankish/feudal principalities", fill:IC.ancient, flagKey:"ancient",
+      story:"Julius Caesar's Gallic Wars (58&ndash;51 BCE) conquer the Belgae, incorporating the region into the Roman province of Gallia Belgica &mdash; the direct source of the modern country's name. Roman rule lasts nearly five centuries until the Western Empire's collapse, after which Frankish and then feudal rule fragments the region into separate counties, a duchy, and a prince-bishopric with no shared government, until Philip the Bold's 1384 marriage begins consolidating them under one Burgundian court. No flag survives from Roman Gallia Belgica or the early feudal principalities &mdash; shown here honestly blank." },
     { year:"1384", name:"Philip the Bold takes Flanders", fill:IC.bh, flagKey:"burgundy",
       story:"Philip the Bold, Duke of Burgundy, becomes Count of Flanders in 1384 by marriage &mdash; the founding acquisition of the core Belgian territory. His successors add Namur, Brabant, Limburg, and Hainaut over the following decades, until nearly the whole area answers to one Burgundian court at Brussels." },
     { year:"1549", name:"Pragmatic Sanction", fill:IC.bh, flagKey:"burgundy",
