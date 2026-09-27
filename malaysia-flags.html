@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>Two Malaysias, pre-1826&ndash;1963</h2>
+    <h2>Two Malaysias, c. 100&ndash;1963</h2>
     <p class="imap-sub">Peninsular Malaysia and East Malaysia (Sabah &amp; Sarawak, on Borneo) are separated by more than 600&nbsp;km of the South China Sea &mdash; and for most of their history, by entirely different governments too. Press play, or drag the slider, to watch the two halves converge only once, in 1963.</p>
     <div class="rule-box">
       <b>This is the one page in this batch with a genuine, documented internal split.</b> The peninsula and Borneo were never part of the same polity before 1963: different sultanates, then a crown colony (Straits Settlements) on one side against the private Brooke Raj and the British North Borneo Chartered Company on the other, then separate Crown Colonies even after both were nominally British. They are shown here as two disconnected regions, colored independently, because that is what they were &mdash; not one country with an internal border, but two countries that later merged.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">pre-1826</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 100&ndash;1136</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -271,7 +271,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Divided: sultanates and Brunei suzerainty</div>
+        <div class="imap-name" id="iEraName">Kedah Tua, Langkasuka &amp; early Hindu-Buddhist kingdoms</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -577,16 +577,20 @@
 <script>
 (function () {
   var IC = {
+    kedah_tua:"#6b5c4a", bor_indigenous:"#6e6047",
     sultanate:"#a4302a", brunei_suz:"#6e6047", straits:"#00247d", brooke:"#7c2e1f",
     japan:"#f4efe1", crowncolony:"#163846", malaya1957:"#cc0001", malaysia1963:"#cc0001"
   };
   var INAMES = {
+    kedah_tua:"Kedah Tua, Langkasuka &amp; early Hindu-Buddhist kingdoms", bor_indigenous:"Indigenous self-governing communities (pre-Brunei era)",
     sultanate:"Malacca Sultanate &amp; successor sultanates", brunei_suz:"Brunei suzerainty &amp; local polities",
     straits:"Straits Settlements / British Malaya", brooke:"Brooke Raj (Sarawak) &amp; North Borneo Chartered Company",
     japan:"Japanese occupation", crowncolony:"Crown Colonies of Sarawak &amp; North Borneo",
     malaya1957:"Federation of Malaya (independent)", malaysia1963:"Malaysia (federation)"
   };
   var IFLAGS = {
+    kedah_tua: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    bor_indigenous: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     sultanate: '<rect width="300" height="200" fill="#a4302a"/>',
     brunei_suz: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     straits: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/>',
@@ -605,6 +609,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 100–1136", name:"Kedah Tua, Langkasuka & early Hindu-Buddhist kingdoms", t:{ pen:IC.kedah_tua, bor:IC.bor_indigenous }, flagKeys:{ pen:"kedah_tua", bor:"bor_indigenous" },
+      story:"On the peninsula, small Hindu-Buddhist port kingdoms &mdash; above all Kedah Tua, centered on the Bujang Valley, and Langkasuka on the east coast &mdash; take shape from around the 2nd century CE through Indian Ocean trade contact, falling within the tributary orbit of Srivijaya from the 7th century before Kedah's court legendarily converts to Islam in 1136. No flag or banner survives from any of them. On Borneo, indigenous Dayak, Kadazan-Dusun, and Murut communities remain self-governing throughout this span, centuries before Brunei's own sultanate takes shape &mdash; the two territories share no political connection at all." },
     { year:"pre-1826", name:"Divided: sultanates and Brunei suzerainty", t:{ pen:IC.sultanate, bor:IC.brunei_suz }, flagKeys:{ pen:"sultanate", bor:"brunei_suz" },
       story:"On the peninsula, the Malacca Sultanate and its successor states (notably Johor) hold the strait's trade; no single flag unifies them, and plain red, Malacca's traditional royal color, stands in as a schematic reconstruction. On Borneo, the coast lies under the loose suzerainty of the Sultanate of Brunei, with Dayak, Kadazan-Dusun, and Murut communities largely self-governing inland &mdash; no flag survives for either side, and the two territories share no political connection at all." },
     { year:"1826", name:"Straits Settlements formed; Borneo unchanged", t:{ pen:IC.straits, bor:IC.brunei_suz }, flagKeys:{ pen:"straits", bor:"brunei_suz" },
