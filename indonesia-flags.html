@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, eight rulers</h2>
+    <h2>One border, nine rulers</h2>
     <p class="imap-sub">Indonesia's own real archipelago, traced whole &mdash; the world's largest archipelagic nation shown as a single territory rather than an invented internal split. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This page shows Indonesia as one region, not split.</b> Indonesia is a vast archipelago of thousands of islands, but there is no single clean, genuinely internal partition that this page's own timeline supports showing as a split &mdash; Dutch commercial and colonial rule, Japanese occupation, and the revolution all applied to the archipelago as a whole, island by island, rather than dividing it into two lasting halves. What changes here is only who ruled all of it at once.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="idnPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="idnYearTag">c. 650</span>
-        <input type="range" id="idnSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="idnYearTag">c. 350</span>
+        <input type="range" id="idnSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="idn-imap-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label">
@@ -264,7 +264,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="idnEraName">Srivijaya</div>
+        <div class="imap-name" id="idnEraName">Kutai &amp; Tarumanagara (Early Hindu Kingdoms)</div>
         <div class="imap-owners" id="idnEraOwners"></div>
       </div>
       <div class="iflags-row" id="idnFlagsRow"></div>
@@ -641,15 +641,16 @@
 <script>
 (function () {
   var IC = {
-    srivijaya:"#a9762f", majapahit:"#a9762f", fragmented:"#6b5c4a", voc:"#a9762f",
+    kutai:"#6b5c4a", srivijaya:"#a9762f", majapahit:"#a9762f", fragmented:"#6b5c4a", voc:"#a9762f",
     dutch:"#21468b", japan:"#5c2a24", proclaimed:"#7c2e1f", republic:"#a9762f"
   };
   var INAMES = {
-    srivijaya:"Srivijaya", majapahit:"Majapahit Empire", fragmented:"Fragmented Sultanates (post-Majapahit)",
+    kutai:"Kutai & Tarumanagara (Early Hindu Kingdoms)", srivijaya:"Srivijaya", majapahit:"Majapahit Empire", fragmented:"Fragmented Sultanates (post-Majapahit)",
     voc:"Dutch East India Company (VOC) rule", dutch:"Dutch East Indies", japan:"Japanese military occupation",
     proclaimed:"Proclaimed Republic of Indonesia (National Revolution)", republic:"Republic of Indonesia"
   };
   var IFLAGS = {
+    kutai: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     srivijaya: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     majapahit: '<rect width="300" height="22.2" fill="#ce1126"/><rect y="22.2" width="300" height="22.2" fill="#f4efe1"/><rect y="44.4" width="300" height="22.2" fill="#ce1126"/><rect y="66.6" width="300" height="22.2" fill="#f4efe1"/><rect y="88.8" width="300" height="22.2" fill="#ce1126"/><rect y="111" width="300" height="22.2" fill="#f4efe1"/><rect y="133.2" width="300" height="22.2" fill="#ce1126"/><rect y="155.4" width="300" height="22.2" fill="#f4efe1"/><rect y="177.6" width="300" height="22.4" fill="#ce1126"/>',
     fragmented: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO SINGLE</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">FLAG</text>',
@@ -668,6 +669,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 350", name:"Kutai & Tarumanagara (Early Hindu Kingdoms)", owner:"Kutai & Tarumanagara", t:{ id:IC.kutai }, flagKeys:{ id:"kutai" },
+      story:"The archipelago's earliest kingdoms to leave their own written record are Kutai, on the Mahakam River in East Kalimantan, and Tarumanagara, in West Java, both taking shape as Indian Hindu-Buddhist religious and political culture spreads through maritime trade networks rather than conquest. Kutai's ruler Mulawarman is named on Yupa inscriptions dated to roughly 400 CE; Tarumanagara's King Purnawarman is separately attested a few decades later. Neither kingdom is politically connected to the other or to Srivijaya, which rises on Sumatra by the mid-600s. No flag or comparable state banner is attested for either." },
     { year:"c. 650", name:"Srivijaya", owner:"Srivijaya", t:{ id:IC.srivijaya }, flagKeys:{ id:"srivijaya" },
       story:"Centered on Sumatra near modern Palembang, Srivijaya rises in the mid-600s as a Buddhist maritime and trading empire, controlling the Strait of Malacca and much of the surrounding archipelago's sea trade for over six centuries. Its influence fades from the eleventh century, and its remaining territory is absorbed into the ascendant Majapahit sphere by the late 1200s. No securely documented flag survives &mdash; shown honestly blank rather than invented." },
     { year:"c. 1293", name:"Majapahit Empire", owner:"Majapahit Empire", t:{ id:IC.majapahit }, flagKeys:{ id:"majapahit" },
