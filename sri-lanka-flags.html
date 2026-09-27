@@ -243,16 +243,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>Coast and Kandy, 1592&ndash;1815</h2>
-    <p class="imap-sub">Sri Lanka's own real coastal outline, split into the two pieces that were, for over two centuries, ruled by entirely different powers: successive European colonial administrations on the coast, and the independent interior Kingdom of Kandy in the central highlands. Press play, or drag the slider.</p>
+    <h2>Two divides, four centuries apart</h2>
+    <p class="imap-sub">Sri Lanka's own real coastal outline, split into the pieces that were, at different points, ruled by entirely different powers: successive European colonial administrations on the coast against the independent interior Kingdom of Kandy in the central highlands (1592&ndash;1815) &mdash; and, over a century and a half later, the government in Colombo against the Liberation Tigers of Tamil Eelam's de facto administration of the Tamil-majority north and east during the 1983&ndash;2009 civil war. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>Kandy was never conquered by any of the three earlier European powers.</b> The Portuguese and Dutch both controlled only the coastal lowlands; Kandy held out as a fully independent kingdom until the British finally took it in 1815 &mdash; the first time in over two centuries that one power ruled the whole island. The border below only solidifies for the span the two pieces were genuinely governed apart.
+      <b>Kandy was never conquered by any of the three earlier European powers.</b> The Portuguese and Dutch both controlled only the coastal lowlands; Kandy held out as a fully independent kingdom until the British finally took it in 1815 &mdash; the first time in over two centuries that one power ruled the whole island. That single-government status held for over a century and a half, until the LTTE's insurgency carved out its own de facto state across the Jaffna peninsula and the eastern coast from the mid-1980s until its military defeat in 2009. The borders below only solidify for the spans the pieces were genuinely governed apart.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 377 BCE&ndash;993 CE</span>
-        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">2009&ndash;present</span>
+        <input type="range" id="iSlider" min="0" max="11" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -261,11 +261,16 @@
           <text x="190" y="290">INDIAN OCEAN</text>
         </g>
         <path id="ireg-coast" class="ireg-fill" d="M257.74,174.39 L247.99,242.45 L220.84,261.05 L164.54,276.00 L133.74,224.03 L122.26,130.09 L151.56,24.00 L196.30,60.32 L226.43,106.34 L257.74,174.39 Z"/>
+        <path id="ireg-north" class="ireg-fill" d="M122.26,130.09 L151.56,24.00 L196.30,60.32 L226.43,106.34 L257.74,174.39 L253.84,201.61 L215,175 L210,130 L175,110 L135,135 Z"/>
         <path id="ireg-kandy" class="ireg-fill" d="M175,110 L210,130 L215,175 L195,210 L155,215 L130,180 L135,135 Z"/>
-        <path class="iborder-line" id="ib-coast-kandy" d="M175,110 L210,130 L215,175 L195,210 L155,215 L130,180 L135,135"/>
+        <path class="iborder-line" id="ib-coast-kandy" d="M215,175 L195,210 L155,215 L130,180 L135,135"/>
+        <path class="iborder-line" id="ib-coast-north" d="M122.26,130.09 L135,135 M257.74,174.39 L253.84,201.61"/>
+        <path class="iborder-line" id="ib-north-kandy" d="M135,135 L175,110 L210,130 L215,175"/>
         <g font-family="IBM Plex Mono, monospace">
           <text class="ireg-label" id="ilbl-coast" x="200" y="240">COAST</text>
           <text class="ireg-label" id="ilbl-kandy" x="172" y="168">KANDY</text>
+          <text class="ireg-label" id="ilbl-north" x="197" y="68">NORTH</text>
+          <text class="ireg-label" id="ilbl-north2" x="197" y="79">&amp; EAST</text>
         </g>
       </svg>
       <div class="imap-head">
@@ -275,7 +280,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Schematic internal partition on a real traced coastal border &mdash; the coast/Kandy dividing line approximates the historical highland frontier, not a surveyed boundary.</p>
+      <p class="map-note">Schematic internal partition on a real traced coastal border &mdash; the coast/Kandy dividing line approximates the historical highland frontier, and the north/east line approximates the LTTE's Vanni-Jaffna-Batticaloa control area during the civil war; neither is a surveyed boundary.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -767,8 +772,8 @@
 
 <script>
 (function () {
-  var IC = { kingdom:"#a9762f", foreign:"#6b5c4a", colony:"#204b5c", dominion:"#4a7c3f", republic:"#9c3b28" };
-  var INAMES = { kingdom:"Sinhalese kingdom", foreign:"Foreign conquest", colony:"Colony", dominion:"Dominion", republic:"Republic" };
+  var IC = { kingdom:"#a9762f", foreign:"#6b5c4a", colony:"#204b5c", dominion:"#4a7c3f", republic:"#9c3b28", ltte:"#c1440e" };
+  var INAMES = { kingdom:"Sinhalese kingdom", foreign:"Foreign conquest", colony:"Colony", dominion:"Dominion", republic:"Republic", ltte:"LTTE (Tamil Eelam, de facto)" };
   var IFLAGS = {
     anuradhapura: '<rect width="300" height="200" fill="#7c2331"/><g fill="#eab308"><ellipse cx="160" cy="120" rx="46" ry="26"/><circle cx="100" cy="100" r="24"/><path d="M84,80 L70,62 L92,70 Z"/><path d="M104,78 L112,58 L124,72 Z"/><path d="M198,104 Q222,96 230,116 Q212,120 200,112 Z"/><rect x="118" y="140" width="12" height="30" rx="3"/><rect x="145" y="142" width="12" height="32" rx="3"/><rect x="172" y="140" width="12" height="30" rx="3"/><rect x="192" y="136" width="12" height="28" rx="3"/></g>',
     chola: '<rect width="300" height="200" fill="#c9a13c"/><g fill="#8a2a1e"><ellipse cx="150" cy="115" rx="55" ry="28"/><circle cx="95" cy="95" r="22"/><path d="M85,76 L75,58 L95,68 Z"/><path d="M108,74 L114,54 L128,68 Z"/><path d="M190,100 Q212,92 220,110 Q204,114 194,108 Z"/></g><g stroke="#2a1a12" stroke-width="4"><line x1="120" y1="96" x2="126" y2="120"/><line x1="140" y1="92" x2="146" y2="118"/><line x1="160" y1="94" x2="166" y2="120"/></g>',
@@ -779,38 +784,43 @@
     british: '<rect width="300" height="200" fill="#1e2f96"/><rect x="0" y="0" width="140" height="100" fill="#1e2f96"/><path d="M0,0 L140,100 M140,0 L0,100" stroke="#f4efe1" stroke-width="14"/><path d="M0,0 L140,100 M140,0 L0,100" stroke="#a4302a" stroke-width="6"/><path d="M70,0 V100 M0,50 H140" stroke="#f4efe1" stroke-width="20"/><path d="M70,0 V100 M0,50 H140" stroke="#a4302a" stroke-width="8"/><circle cx="215" cy="130" r="34" fill="#f4efe1" stroke="#a9762f" stroke-width="3"/><text x="215" y="136" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="700" font-size="11" fill="#204b5c">CEYLON</text>',
     kandy: '<rect width="300" height="200" fill="#7c2331"/><rect x="6" y="6" width="288" height="188" fill="none" stroke="#eab308" stroke-width="6"/><g fill="#eab308"><ellipse cx="185" cy="118" rx="42" ry="23"/><circle cx="130" cy="99" r="21"/><path d="M115,80 L102,63 L123,72 Z"/><path d="M136,78 L143,59 L156,72 Z"/><path d="M223,102 Q244,95 251,112 Q236,116 225,110 Z"/><rect x="143" y="135" width="10" height="27" rx="2"/><rect x="168" y="137" width="10" height="29" rx="2"/><rect x="192" y="135" width="10" height="27" rx="2"/><rect x="209" y="131" width="10" height="25" rx="2"/></g>',
     dominion: '<rect width="300" height="200" fill="#eab308"/><rect x="6" y="6" width="18" height="188" fill="#007749"/><rect x="30" y="6" width="18" height="188" fill="#ff7900"/><rect x="54" y="6" width="240" height="188" fill="#7c2331"/><g fill="#eab308"><ellipse cx="192" cy="118" rx="40" ry="22"/><circle cx="140" cy="100" r="20"/><path d="M126,82 L114,66 L134,74 Z"/><path d="M146,80 L152,62 L164,74 Z"/><path d="M228,102 Q248,96 254,112 Q240,116 230,110 Z"/><rect x="152" y="136" width="10" height="26" rx="2"/><rect x="176" y="138" width="10" height="28" rx="2"/><rect x="200" y="136" width="10" height="26" rx="2"/><rect x="216" y="132" width="10" height="24" rx="2"/><rect x="102" y="76" width="9" height="46" rx="2" transform="rotate(-30 106 99)"/></g>',
-    modern: '<rect width="300" height="200" fill="#eab308"/><rect x="6" y="6" width="18" height="188" fill="#007749"/><rect x="30" y="6" width="18" height="188" fill="#ff7900"/><rect x="54" y="6" width="240" height="188" fill="#7c2331"/><g fill="#eab308"><ellipse cx="192" cy="118" rx="40" ry="22"/><circle cx="140" cy="100" r="20"/><path d="M126,82 L114,66 L134,74 Z"/><path d="M146,80 L152,62 L164,74 Z"/><path d="M228,102 Q248,96 254,112 Q240,116 230,110 Z"/><rect x="152" y="136" width="10" height="26" rx="2"/><rect x="176" y="138" width="10" height="28" rx="2"/><rect x="200" y="136" width="10" height="26" rx="2"/><rect x="216" y="132" width="10" height="24" rx="2"/><rect x="102" y="76" width="9" height="46" rx="2" transform="rotate(-30 106 99)"/></g><g fill="#eab308"><path d="M70,20 C76,26 76,34 70,40 C64,34 64,26 70,20 Z"/><path d="M278,20 C284,26 284,34 278,40 C272,34 272,26 278,20 Z"/><path d="M70,160 C76,166 76,174 70,180 C64,174 64,166 70,160 Z"/><path d="M278,160 C284,166 284,174 278,180 C272,174 272,166 278,160 Z"/></g>'
+    modern: '<rect width="300" height="200" fill="#eab308"/><rect x="6" y="6" width="18" height="188" fill="#007749"/><rect x="30" y="6" width="18" height="188" fill="#ff7900"/><rect x="54" y="6" width="240" height="188" fill="#7c2331"/><g fill="#eab308"><ellipse cx="192" cy="118" rx="40" ry="22"/><circle cx="140" cy="100" r="20"/><path d="M126,82 L114,66 L134,74 Z"/><path d="M146,80 L152,62 L164,74 Z"/><path d="M228,102 Q248,96 254,112 Q240,116 230,110 Z"/><rect x="152" y="136" width="10" height="26" rx="2"/><rect x="176" y="138" width="10" height="28" rx="2"/><rect x="200" y="136" width="10" height="26" rx="2"/><rect x="216" y="132" width="10" height="24" rx="2"/><rect x="102" y="76" width="9" height="46" rx="2" transform="rotate(-30 106 99)"/></g><g fill="#eab308"><path d="M70,20 C76,26 76,34 70,40 C64,34 64,26 70,20 Z"/><path d="M278,20 C284,26 284,34 278,40 C272,34 272,26 278,20 Z"/><path d="M70,160 C76,166 76,174 70,180 C64,174 64,166 70,160 Z"/><path d="M278,160 C284,166 284,174 278,180 C272,174 272,166 278,160 Z"/></g>',
+    ltte: '<rect width="300" height="200" fill="#c1440e"/><g fill="#f4c430"><ellipse cx="150" cy="115" rx="55" ry="28"/><circle cx="95" cy="95" r="22"/><path d="M85,76 L75,58 L95,68 Z"/><path d="M108,74 L114,54 L128,68 Z"/><path d="M190,100 Q212,92 220,110 Q204,114 194,108 Z"/></g><g stroke="#3a1a0a" stroke-width="5"><line x1="118" y1="152" x2="182" y2="172"/><line x1="182" y1="152" x2="118" y2="172"/></g>'
   };
   function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
   var iLegendEl = document.getElementById("iLegend");
-  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.kingdom + '"></span>Kingdom, independent</span><span><span class="sw" style="background:' + IC.foreign + '"></span>Foreign conquest</span><span><span class="sw" style="background:' + IC.colony + '"></span>Colony</span><span><span class="sw" style="background:' + IC.dominion + '"></span>Dominion</span><span><span class="sw" style="background:' + IC.republic + '"></span>Republic</span>';
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.kingdom + '"></span>Kingdom, independent</span><span><span class="sw" style="background:' + IC.foreign + '"></span>Foreign conquest</span><span><span class="sw" style="background:' + IC.colony + '"></span>Colony</span><span><span class="sw" style="background:' + IC.dominion + '"></span>Dominion</span><span><span class="sw" style="background:' + IC.republic + '"></span>Republic</span><span><span class="sw" style="background:' + IC.ltte + '"></span>LTTE (Tamil Eelam, de facto)</span>';
 
   var ISNAP = [
-    { year:"c. 377 BCE&ndash;993 CE", name:"Kingdom of Anuradhapura", t:{ coast:IC.kingdom, kandy:IC.kingdom }, flagKeys:{ coast:"anuradhapura", kandy:"anuradhapura" },
+    { year:"c. 377 BCE&ndash;993 CE", name:"Kingdom of Anuradhapura", t:{ coast:IC.kingdom, kandy:IC.kingdom, north:IC.kingdom }, flagKeys:{ coast:"anuradhapura", kandy:"anuradhapura", north:"anuradhapura" },
       story:"The Anuradhapura kingdom unites the island under one Sinhalese crown for over thirteen centuries, flying the legendary golden lion banner &mdash; an informed reconstruction, since no surviving artifact from this era exists." },
-    { year:"993&ndash;1070", name:"Chola conquest", t:{ coast:IC.foreign, kandy:IC.foreign }, flagKeys:{ coast:"chola", kandy:"chola" },
+    { year:"993&ndash;1070", name:"Chola conquest", t:{ coast:IC.foreign, kandy:IC.foreign, north:IC.foreign }, flagKeys:{ coast:"chola", kandy:"chola", north:"chola" },
       story:"The South Indian Chola dynasty conquers Anuradhapura in 993, ruling the island under its own tiger emblem for over seventy years before Sinhalese resistance restores native rule." },
-    { year:"1070&ndash;1236", name:"Kingdom of Polonnaruwa", t:{ coast:IC.kingdom, kandy:IC.kingdom }, flagKeys:{ coast:"polonnaruwa", kandy:"polonnaruwa" },
+    { year:"1070&ndash;1236", name:"Kingdom of Polonnaruwa", t:{ coast:IC.kingdom, kandy:IC.kingdom, north:IC.kingdom }, flagKeys:{ coast:"polonnaruwa", kandy:"polonnaruwa", north:"polonnaruwa" },
       story:"Vijayabahu I expels the Cholas in 1070 and restores Sinhalese rule from a new capital at Polonnaruwa, again flying the reconstructed gold-lion banner over the whole island." },
-    { year:"1236&ndash;1592", name:"Later Sinhalese kingdoms (Dambadeniya, Gampola, Kotte)", t:{ coast:IC.kingdom, kandy:IC.kingdom }, flagKeys:{ coast:"latersinhalese", kandy:"latersinhalese" },
+    { year:"1236&ndash;1592", name:"Later Sinhalese kingdoms (Dambadeniya, Gampola, Kotte)", t:{ coast:IC.kingdom, kandy:IC.kingdom, north:IC.kingdom }, flagKeys:{ coast:"latersinhalese", kandy:"latersinhalese", north:"latersinhalese" },
       story:"The capital shifts repeatedly &mdash; Dambadeniya, Gampola, then Kotte &mdash; as Sinhalese kingdoms hold the whole island through the medieval period, still under the same lion device." },
-    { year:"1505&ndash;1658", name:"Portuguese Ceylon", t:{ coast:IC.foreign, kandy:IC.kingdom }, flagKeys:{ coast:"portuguese", kandy:"kandy" },
+    { year:"1505&ndash;1658", name:"Portuguese Ceylon", t:{ coast:IC.foreign, kandy:IC.kingdom, north:IC.foreign }, flagKeys:{ coast:"portuguese", kandy:"kandy", north:"portuguese" },
       story:"Portuguese traders arrive in 1505 and gradually seize the coastal lowlands, flying the Order of Christ's red cross over their forts &mdash; but never reach the interior, where the independent Kingdom of Kandy is founded in 1592 and holds out completely." },
-    { year:"1658&ndash;1796", name:"Dutch Ceylon", t:{ coast:IC.colony, kandy:IC.kingdom }, flagKeys:{ coast:"dutch", kandy:"kandy" },
+    { year:"1658&ndash;1796", name:"Dutch Ceylon", t:{ coast:IC.colony, kandy:IC.kingdom, north:IC.colony }, flagKeys:{ coast:"dutch", kandy:"kandy", north:"dutch" },
       story:"The Dutch East India Company expels the Portuguese from the coast by 1658, ruling the lowlands under the VOC monogram for over a century &mdash; while Kandy, in the central highlands, remains just as independent as before, never conquered by either European power." },
-    { year:"1796&ndash;1815", name:"British Ceylon (coast) &amp; independent Kandy", t:{ coast:IC.colony, kandy:IC.kingdom }, flagKeys:{ coast:"british", kandy:"kandy" },
+    { year:"1796&ndash;1815", name:"British Ceylon (coast) &amp; independent Kandy", t:{ coast:IC.colony, kandy:IC.kingdom, north:IC.colony }, flagKeys:{ coast:"british", kandy:"kandy", north:"british" },
       story:"Britain takes the coast from the Dutch in 1796, but Kandy still holds out &mdash; the last independent Sinhalese kingdom on the island, finally conquered only in 1815 after a series of Kandyan Wars." },
-    { year:"1815&ndash;1948", name:"British Ceylon (whole island)", t:{ coast:IC.colony, kandy:IC.colony }, flagKeys:{ coast:"british", kandy:"british" },
+    { year:"1815&ndash;1948", name:"British Ceylon (whole island)", t:{ coast:IC.colony, kandy:IC.colony, north:IC.colony }, flagKeys:{ coast:"british", kandy:"british", north:"british" },
       story:"The 1815 Kandyan Convention formally cedes the kingdom to Britain &mdash; the first time in recorded history that one power governs the entire island as a single unit, ending centuries of a genuinely divided Sri Lanka." },
-    { year:"1948&ndash;1972", name:"Dominion of Ceylon", t:{ coast:IC.dominion, kandy:IC.dominion }, flagKeys:{ coast:"dominion", kandy:"dominion" },
+    { year:"1948&ndash;1972", name:"Dominion of Ceylon", t:{ coast:IC.dominion, kandy:IC.dominion, north:IC.dominion }, flagKeys:{ coast:"dominion", kandy:"dominion", north:"dominion" },
       story:"Ceylon gains independence as a self-governing Dominion within the Commonwealth on 4 February 1948, adopting the lion flag with green and orange hoist stripes representing the island's minority communities." },
-    { year:"1972&ndash;present", name:"Republic of Sri Lanka", t:{ coast:IC.republic, kandy:IC.republic }, flagKeys:{ coast:"modern", kandy:"modern" },
-      story:"A new constitution in 1972 makes the country a republic and renames it Sri Lanka; four bo leaves are added to the flag's corners, completing the design flown today." }
+    { year:"1972&ndash;1983", name:"Republic of Sri Lanka (pre-war)", t:{ coast:IC.republic, kandy:IC.republic, north:IC.republic }, flagKeys:{ coast:"modern", kandy:"modern", north:"modern" },
+      story:"A new constitution in 1972 makes the country a republic and renames it Sri Lanka; four bo leaves are added to the flag's corners, completing the design flown today. For its first decade the republic governs the whole island, including the Tamil-majority north and east, as one administration &mdash; a status that ends in 1983." },
+    { year:"1983&ndash;2009", name:"Civil war: LTTE de facto state in the north &amp; east", t:{ coast:IC.republic, kandy:IC.republic, north:IC.ltte }, flagKeys:{ coast:"modern", kandy:"modern", north:"ltte" },
+      story:"The 1983&ndash;2009 civil war pits the government against the Liberation Tigers of Tamil Eelam (LTTE), who fight for an independent Tamil state in the north and east. Beyond fighting for that goal, the LTTE spends much of this period actually administering the Jaffna peninsula and large stretches of the Vanni and the eastern coast as a de facto separate territory &mdash; running its own courts, police force, and taxation, and governing from a de facto capital at Kilinochchi &mdash; while the government's flag and administration continue over the rest of the island. Control of the north and east fluctuates over the war's course rather than staying fixed; the LTTE's grip is at its height through the 1990s and early 2000s before the government's final offensive." },
+    { year:"2009&ndash;present", name:"Republic of Sri Lanka (reunified)", t:{ coast:IC.republic, kandy:IC.republic, north:IC.republic }, flagKeys:{ coast:"modern", kandy:"modern", north:"modern" },
+      story:"The war ends with the LTTE's military defeat in May 2009, and the north and east return to ordinary central-government administration for the first time since the mid-1980s. The flag itself is untouched by any of this &mdash; unchanged since 1978, when a second constitution renamed the country the Democratic Socialist Republic of Sri Lanka without altering the banner." }
   ];
 
-  var IREGIONS = ["coast","kandy"];
-  var IREGION_NAMES = { coast:"Coastal lowlands", kandy:"Kingdom of Kandy (interior)" };
-  var IADJ = [["coast","kandy"]];
+  var IREGIONS = ["coast","kandy","north"];
+  var IREGION_NAMES = { coast:"Coastal lowlands", kandy:"Kingdom of Kandy (interior)", north:"North & East (LTTE-held, 1983–09)" };
+  var IADJ = [["coast","kandy"],["coast","north"],["north","kandy"]];
 
   function iGroupsFor(t) {
     var parent = {};
