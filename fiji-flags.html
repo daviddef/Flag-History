@@ -244,13 +244,13 @@
     <h2>One archipelago, four flags</h2>
     <p class="imap-sub">Fiji's own real coastline &mdash; Viti Levu, Vanua Levu, and Taveuni among the traced islands &mdash; with no internal split to show. Press play, or drag the slider, to watch who held the whole archipelago, era to era.</p>
     <div class="rule-box">
-      <b>This is a single-region page, honestly.</b> Pre-1871 Fiji was never one polity &mdash; Bau, Rewa, and Cakaudrove and other chiefdoms held shifting, overlapping spheres of influence with no stable, mappable internal boundary between them, which is exactly why the timeline itself leaves that era's flag blank. Everything after 1871 was governed as one unit, so there is nothing genuine to carve apart on the map either.
+      <b>This is a single-region page, honestly.</b> Fiji was never one polity before 1871 &mdash; from the earliest Lapita settlers through Bau, Rewa, Cakaudrove and other chiefdoms, shifting, overlapping spheres of influence left no stable, mappable internal boundary to draw, which is exactly why the timeline itself leaves those eras' flags blank. Everything after 1871 was governed as one unit, so there is nothing genuine to carve apart on the map either.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">pre-1871</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1500 BCE</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 251" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -263,7 +263,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Indigenous Fijian chiefdoms</div>
+        <div class="imap-name" id="iEraName">Lapita Settlement of Fiji</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -546,9 +546,10 @@
 <script>
 (function () {
   var IC = {
-    none:"#6b5c4a", cakobau:"#9c3b28", colony:"#204b5c", modern:"#a9762f"
+    lapita:"#5c4a3a", none:"#6b5c4a", cakobau:"#9c3b28", colony:"#204b5c", modern:"#a9762f"
   };
   var INAMES = {
+    lapita:"Lapita Settlement of Fiji",
     none:"Indigenous Fijian chiefdoms", cakobau:"Kingdom of Fiji (Cakobau)",
     colony:"British Crown Colony of Fiji", modern:"Independent Fiji"
   };
@@ -567,6 +568,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1500 BCE", name:"Lapita Settlement of Fiji", t:{ fj:IC.lapita }, flagKeys:{ fj:"none" },
+      story:"Fiji's earliest known inhabitants are Austronesian-speaking Lapita voyagers, identified archaeologically by their distinctive dentate-stamped pottery, part of a broader expansion out of island Southeast Asia that reaches Fiji, Tonga, and Samoa within a few centuries of one another. Over the following two millennia this founding population mixes with later Melanesian and Polynesian arrivals, gradually developing the culture that gives rise to the named confederacies &mdash; Bau, Rewa, Cakaudrove &mdash; recorded just before European contact. No political leadership or flag of any kind is documented from this pre-literate founding era." },
     { year:"pre-1871", name:"Indigenous Fijian chiefdoms", t:{ fj:IC.none }, flagKeys:{ fj:"none" },
       story:"For centuries before European contact, competing confederacies and chiefdoms &mdash; Bau, Rewa, and Cakaudrove among them &mdash; hold shifting, overlapping spheres of influence across the islands, with no single ruler or stable internal boundary that could honestly be drawn on a map. No flag, in the European sense, is part of this political culture, and none is invented here to stand in for one." },
     { year:"1871", name:"Kingdom of Fiji (Cakobau)", t:{ fj:IC.cakobau }, flagKeys:{ fj:"cakobau" },
