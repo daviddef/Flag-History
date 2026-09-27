@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1359</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 100 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 340 424.6" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -267,7 +267,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Principality of Moldavia (founding era)</div>
+        <div class="imap-name" id="iEraName">Dacia, the Roman Frontier, and the Age of Migrations</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -575,16 +575,18 @@
 <script>
 (function () {
   var IC = {
-    founding: "#5c2a24", moldavia: "#a4302a", russia: "#204b5c", romania: "#a9762f",
+    ancient: "#a9762f", founding: "#5c2a24", moldavia: "#a4302a", russia: "#204b5c", romania: "#a9762f",
     soviet: "#8c2f2f", moldova: "#2f6b4a", transnistria: "#6b5c4a"
   };
   var INAMES = {
+    ancient: "Dacia, the Roman Frontier, and the Age of Migrations",
     founding: "Principality of Moldavia (founding era)", moldavia: "Principality of Moldavia (Ottoman vassal)",
     russia: "Bessarabia, within the Russian Empire", romania: "Bessarabia, within the Kingdom of Romania",
     soviet: "Moldavian Soviet Socialist Republic", moldova: "Republic of Moldova",
     transnistria: "Transnistria (unrecognized breakaway)"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     founding: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     moldavia: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100)" fill="#241f14"><path d="M0,-30 L-6,-6 L-30,-8 L-10,8 L-20,30 L0,14 L20,30 L10,8 L30,-8 L6,-6 Z"/></g><circle cx="150" cy="60" r="6" fill="#f4efe1"/>',
     russia: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#1e2f96"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
@@ -602,6 +604,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 100 BCE", name:"Dacia, the Roman Frontier, and the Age of Migrations", t:{ core:IC.ancient, transnistria:IC.ancient }, flagKeys:{ core:"ancient", transnistria:"ancient" },
+      story:"For roughly fourteen centuries before Bogdan I's 1359 founding of Moldavia, this territory has no unified local state at all: a free Dacian kingdom falls to Trajan's Rome in 106 CE, Rome abandons the frontier province in 271 CE, and a succession of migrating peoples &mdash; Goths, Huns, Avars, Slavs, Bulgars, Pechenegs, Cumans, and finally the Mongol Golden Horde &mdash; pass through or briefly dominate the region. No internal line to draw yet &mdash; there is no state on either bank of the future Dniester divide to draw it between." },
     { year:"c. 1359", name:"Principality of Moldavia (founding era)", t:{ core:IC.founding, transnistria:IC.founding }, flagKeys:{ core:"founding", transnistria:"founding" },
       story:"Bogdan I breaks from Hungary around 1359 to found Moldavia as an independent principality; no flag is securely documented this early. The whole future Moldova, both banks of the Dniester alike, is unified territory throughout this era." },
     { year:"1600", name:"Principality of Moldavia (Ottoman vassal)", t:{ core:IC.moldavia, transnistria:IC.moldavia }, flagKeys:{ core:"moldavia", transnistria:"moldavia" },
