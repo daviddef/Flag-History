@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 788</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 800 BCE</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -267,7 +267,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Early Islamic dynasties</div>
+        <div class="imap-name" id="iEraName">Phoenician &amp; Carthaginian Posts, and the Berber Kingdom of Mauretania</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -483,13 +483,15 @@
 <script>
 (function () {
   var IC = {
-    dynasties: "#6b5c4a", alaouite: "#a9762f", french: "#1a2f6b", spanish: "#c1272d", modern: "#006233"
+    ancient: "#6b5c4a", dynasties: "#6b5c4a", alaouite: "#a9762f", french: "#1a2f6b", spanish: "#c1272d", modern: "#006233"
   };
   var INAMES = {
+    ancient: "Phoenician & Carthaginian Posts, and the Berber Kingdom of Mauretania",
     dynasties: "Early Islamic dynasties (no single flag)", alaouite: "Alaouite Sultanate (independent)",
     french: "French Protectorate zone", spanish: "Spanish Protectorate zone", modern: "Kingdom of Morocco (independent)"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     dynasties: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO SINGLE</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">FLAG</text>',
     alaouite: '<rect width="300" height="200" fill="#c1272d"/>',
     french: '<rect width="100" height="200" fill="#0055a4"/><rect x="100" width="100" height="200" fill="#ffffff"/><rect x="200" width="100" height="200" fill="#ef4135"/>',
@@ -505,6 +507,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 800 BCE", name:"Phoenician & Carthaginian Posts, and the Berber Kingdom of Mauretania", t:{ spanish:IC.ancient, french:IC.ancient }, flagKeys:{ spanish:"ancient", french:"ancient" },
+      story:"Phoenician traders establish coastal posts from around the 8th century BCE, later extended by Carthage; the independent Berber Kingdom of Mauretania follows, reaching a cultured peak under Juba II before Rome annexes it directly in 40 CE, followed in turn by Vandal and Byzantine coastal enclaves until the Umayyad conquest completes around 709 CE. No flag survives from any of these powers, and the north/south protectorate line drawn by the 1912 Treaty of Fez is over seventeen centuries away &mdash; no internal division to draw yet." },
     { year:"c. 788", name:"Early Islamic dynasties", t:{ spanish:IC.dynasties, french:IC.dynasties }, flagKeys:{ spanish:"dynasties", french:"dynasties" },
       story:"The Idrisid dynasty founds the first independent Islamic state in the far Maghreb around 788, followed by the Almoravids, Almohads, Marinids, and Saadis &mdash; nine centuries of successive independent dynasties, never incorporated into the Ottoman Empire." },
     { year:"1666", name:"Alaouite Sultanate (independent)", t:{ spanish:IC.alaouite, french:IC.alaouite }, flagKeys:{ spanish:"alaouite", french:"alaouite" },
