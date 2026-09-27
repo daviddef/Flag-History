@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One nation, six eras, no internal split</h2>
+    <h2>One nation, seven eras, no internal split</h2>
     <p class="imap-sub">Scotland's own real outline, traced whole &mdash; mainland, Hebrides, Orkney, and Shetland together. There is no genuinely separate internal region to carve out honestly within Scotland's own modern borders; what changes here is only Scotland's constitutional status. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>The Saltire was never replaced.</b> Unlike most pages in this atlas, Scotland's own flag stays the same blue-and-white cross across four of these six eras &mdash; what actually changes is Scotland's constitutional status: fragmented peoples, an independent kingdom, a shared crown, a merged parliament, and finally devolution.
@@ -253,7 +253,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 260 340" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -578,7 +578,7 @@
     devolved:"#004a8f"
   };
   var INAMES = {
-    fragmented:"Fragmented Picts, Scots, Britons & Angles",
+    fragmented:"Fragmented tribal Britain (Caledonians, Picts, Scots, Britons & Angles)",
     alba:"Kingdom of Alba / early Scotland",
     medieval:"Kingdom of Scotland (medieval & early modern)",
     crowns_union:"Kingdom of Scotland (Union of the Crowns)",
@@ -604,6 +604,7 @@
   document.getElementById("ilbl-sco").setAttribute("x","189.6"); document.getElementById("ilbl-sco").setAttribute("y","189.5");
 
   var ISNAP = [
+    { year:"c. 83 \u2013 500 CE", name:"Caledonian Tribes and the Roman Frontier", t:{sco:IC.fragmented}, flagKeys:{sco:"fragmented"}, story:"For roughly four centuries before the traditional 5th\u20136th century arrival of the Gaelic Scots, what is now Scotland is home to Caledonian and other Iron Age tribal confederations, first named in Roman sources after Agricola's campaigns culminate in the Battle of Mons Graupius (84 CE). Rome never subdues the far north outright, fortifying a shifting frontier at Hadrian's Wall and briefly the Antonine Wall. No securely documented flag survives from this pre-heraldic era, so it is shown honestly blank." },
     { year:"c. 500 \u2013 843", name:"Fragmented Picts, Scots, Britons, and Angles", t:{sco:IC.fragmented}, flagKeys:{sco:"fragmented"}, story:"Before Kenneth MacAlpin's unification, what is now Scotland is divided among the Picts, the Gaelic Scots of D\u00e1l Riata, Britons in Strathclyde, and Angles in the southeast. No single crown rules all of them. No securely documented flag survives from this pre-heraldic era, so it is shown honestly blank." },
     { year:"843 \u2013 1249", name:"Kingdom of Alba / early Kingdom of Scotland", t:{sco:IC.alba}, flagKeys:{sco:"alba"}, story:"Kenneth MacAlpin unites the Picts and Scots into the Kingdom of Alba around 843. Scottish tradition traces the Saltire to a legendary 832 battle near Athelstaneford, where King \u00d3engus II is said to have seen a cross of white clouds against the blue sky. No contemporary record confirms the story, so this is shown as the legend, not a documented 9th-century banner." },
     { year:"1249 \u2013 1603", name:"Kingdom of Scotland (independent medieval & early modern kingdom)", t:{sco:IC.medieval}, flagKeys:{sco:"medieval"}, story:"The Lion Rampant is first securely attested as the royal arms under Alexander II and Alexander III. This span covers the Wars of Independence under Wallace and Robert the Bruce and the long Stewart/Stuart dynasty. A 1385 ordinance requiring Scottish soldiers to wear a white St Andrew's cross is the earliest solid documentary evidence of the Saltire as a national badge." },
