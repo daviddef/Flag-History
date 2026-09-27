@@ -238,7 +238,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five rulers</h2>
+    <h2>One border, six rulers</h2>
     <p class="imap-sub">Kuwait's own real border, including Bubiyan and the other Gulf islands, traced whole &mdash; this page has no internal split to show honestly. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This is a whole-country page, not a split one.</b> Even the 1990&ndash;91 Iraqi occupation never produced a second, internationally recognized Kuwaiti flag or government &mdash; Iraq's annexation was never recognized, and Kuwait's own government-in-exile kept flying the same flag throughout. There is no documented stretch where two pieces of Kuwait were governed differently at once. What changes here is only who held all of it.
@@ -246,8 +246,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 700</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 2000 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 281.9" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none">
@@ -514,9 +514,10 @@
 <script>
 (function () {
   var IC = {
-    ancient: "#5c2a24", settlement: "#6b5c4a", sheikhdom: "#a9762f", protectorate: "#4a5c6b", independent: "#0f5c33"
+    failaka: "#8a7355", ancient: "#5c2a24", settlement: "#6b5c4a", sheikhdom: "#a9762f", protectorate: "#4a5c6b", independent: "#0f5c33"
   };
   var INAMES = {
+    failaka: "Failaka Island: Dilmun outpost & Hellenistic Ikaros (no flag documented)",
     ancient: "Fragmented tribal coast (no flag documented)",
     settlement: "Early Bani Utbah settlement, pre-Al Sabah",
     sheikhdom: "Sheikhdom of Kuwait (Al Sabah dynasty founded)",
@@ -524,6 +525,7 @@
     independent: "State of Kuwait (independent)"
   };
   var IFLAGS = {
+    failaka: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     settlement: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     sheikhdom: '<rect width="300" height="200" fill="#a4302a"/>',
@@ -539,6 +541,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 2000 BCE", name:"Failaka Island: Dilmun outpost & Hellenistic Ikaros", t:{ kw:IC.failaka }, flagKeys:{ kw:"failaka" },
+      story:"Long before any settlement on the Kuwaiti mainland, Failaka Island at the mouth of Kuwait Bay hosts a Bronze Age trading outpost tied to Dilmun, the Sumerian-oriented Gulf network linking Mesopotamia and the Indus Valley, attested by excavated pottery, seals, and cuneiform tablets from around 2000 BCE. Centuries later, in the wake of Alexander the Great's 324 BCE naval reconnaissance of the Gulf, Greek settlers found a fortified colony there they call Ikaros, complete with a Greek temple, inscriptions, and coins, before the settlement fades from the record by roughly the turn of the millennium. No flag or fixed banner survives from either phase, and no unified polity of any size holds the wider mainland yet." },
     { year:"c. 700", name:"Fragmented tribal coast", t:{ kw:IC.ancient }, flagKeys:{ kw:"ancient" },
       story:"For most of this long span, the northern Gulf coast that becomes Kuwait is home to scattered small fishing communities and passing tribal groups, without a settled town or unified rule of any real size. Islam arrives in the 7th century; no flag in the modern territorial sense survives from this era." },
     { year:"c. 1613", name:"Early Bani Utbah settlement, pre-Al Sabah", t:{ kw:IC.settlement }, flagKeys:{ kw:"settlement" },
