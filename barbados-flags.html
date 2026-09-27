@@ -236,7 +236,7 @@
   <p class="lede">The story doesn't end at independence, either. On 30 November 2021, Barbados's 55th anniversary of independence, the country became a republic &mdash; removing the British monarch as head of state and swearing in a Barbadian president in her place. The flag itself did not change that day; this page treats 2021 as a change in the form of government, not a fourth flag.</p>
 
   <div class="imap-section">
-    <h2>One island, three flags</h2>
+    <h2>One island, four flags</h2>
     <p class="imap-sub">Barbados's own coastline, traced whole &mdash; the only territory in this hub that never changed colonial hands, so there is no internal split to show. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>Why no internal split.</b> Barbados stayed continuously English, then British, for over three centuries without a single interruption by another European power, then became independent in one piece in 1966 &mdash; there is no genuinely separate internal region to carve out honestly.
@@ -245,7 +245,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="2" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 348.0 445.7" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-bb" class="ireg-fill" d="M324.0,273.7 L319.9,320.4 L286.0,355.5 L259.5,373.8 L244.0,384.6 L215.8,413.4 L205.5,414.7 L197.0,414.6 L188.9,416.0 L179.9,421.7 L166.9,399.3 L142.5,385.3 L112.8,378.3 L95.2,377.0 L84.8,376.3 L67.1,363.7 L51.8,334.0 L34.7,273.7 L24.0,91.0 L26.6,70.0 L36.0,52.2 L54.7,32.9 L78.6,24.0 L102.8,37.2 L121.0,64.7 L127.3,78.4 L136.5,98.4 L161.8,153.3 L179.2,177.4 L203.7,196.2 L238.3,222.8 L258.3,234.3 L284.2,242.8 L308.5,254.0 L324.0,273.7 Z"/>
@@ -456,12 +456,13 @@
 <script>
 (function () {
   var IC = {
-    e0:"#6e6551", e1:"#c14f1d", e2:"#145c5c"
+    saladoid:"#5c2a24", e0:"#6e6551", e1:"#c14f1d", e2:"#145c5c"
   };
   var INAMES = {
-    e0:"Pre-colonial &amp; uninhabited-at-contact Barbados", e1:"British Barbados (continuous, unbroken)", e2:"Independent Barbados"
+    saladoid:"Saladoid and early Arawakan settlement", e0:"Pre-colonial &amp; uninhabited-at-contact Barbados", e1:"British Barbados (continuous, unbroken)", e2:"Independent Barbados"
   };
   var IFLAGS = {
+    saladoid: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
     e0: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9962c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9962c">DOCUMENTED</text>',
     e1: '<rect width="300" height="200" fill="#1b3a76"/><rect width="150" height="100" fill="#1b3a76"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#f4efe1" stroke-width="14"/><path d="M0,0 L150,100 M150,0 L0,100" stroke="#c1272d" stroke-width="6"/><rect y="42" width="150" height="16" fill="#f4efe1"/><rect x="67" width="16" height="100" fill="#f4efe1"/><rect y="46" width="150" height="8" fill="#c1272d"/><rect x="71" width="8" height="100" fill="#c1272d"/><g stroke="#f4efe1" stroke-width="4" fill="none" stroke-linecap="round"><path d="M225,90 L225,140"/><path d="M225,90 L215,100"/><path d="M225,90 L235,100"/></g><circle cx="225" cy="120" r="26" fill="none" stroke="#f4efe1" stroke-width="3"/>',
     e2: '<rect width="100" height="200" fill="#00267f"/><rect x="100" width="100" height="200" fill="#ffc726"/><rect x="200" width="100" height="200" fill="#00267f"/><g stroke="#111111" stroke-width="7" fill="none" stroke-linecap="round"><path d="M150,60 L150,150"/><path d="M150,60 L134,78"/><path d="M150,60 L166,78"/><path d="M150,72 L124,96"/><path d="M150,72 L176,96"/></g>'
@@ -475,6 +476,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 350–1200s", name:"Saladoid and early Arawakan settlement", t:{ bb:IC.saladoid }, flagKeys:{ bb:"saladoid" },
+      story:"Saladoid horticulturalists from South America's Orinoco basin, part of the same broad Arawakan-speaking migration that settled much of the Lesser Antilles, establish the earliest known settlements on Barbados by around the 4th century CE. Successive Arawakan communities occupy the island for roughly eight centuries, developing pottery traditions and small farming settlements, before continuous occupation ends by around the 1200s. No securely documented flag survives from this era &mdash; shown here honestly blank." },
     { year:"c. 1200s–1627", name:"Pre-colonial &amp; uninhabited-at-contact Barbados", t:{ bb:IC.e0 }, flagKeys:{ bb:"e0" },
       story:"Barbados was inhabited by Kalinago and other Arawakan-speaking peoples at various points, but for reasons still debated &mdash; possibly Spanish slave raiding, possibly voluntary withdrawal, possibly disease &mdash; the island appears to have been largely uninhabited by the time English settlers arrived in the 1620s. No securely documented flag survives; shown honestly blank." },
     { year:"1627–1966", name:"British Barbados (continuous, unbroken)", t:{ bb:IC.e1 }, flagKeys:{ bb:"e1" },
