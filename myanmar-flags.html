@@ -242,7 +242,7 @@
 
 
   <div class="imap-section">
-    <h2>Myanmar's own border, seven rulers</h2>
+    <h2>Myanmar's own border, eight rulers</h2>
     <p class="imap-sub">Myanmar's own real border, traced whole &mdash; one continuous territory whose government changed hands repeatedly without ever splitting into separately governed halves. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This is a single-region page &mdash; Myanmar's borders were never genuinely partitioned between two rival administrations.</b> The country changed rulers violently and often, but each transition (dynastic collapse, British annexation, Japanese occupation, independence, military coups) passed control of the whole territory at once, not a divided piece of it.
@@ -251,7 +251,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">2021–present</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none">
@@ -597,15 +597,16 @@
 
 <script>
 (function () {
-  var IC = { m2010: "#5c2a24", m1974: "#5c2a24", m1948: "#a9762f", mpeacock1943: "#5c2a24", mbritish: "#204b5c", mpeacockold: "#a9762f" };
-  var INAMES = { m2010: "Military rule (State Administration Council)", m1974: "Military-dominated rule (Ne Win era through SPDC)", m1948: "Union of Burma (independent)", mpeacock1943: "Japanese occupation (State of Burma)", mbritish: "British Burma", mpeacockold: "Bagan, Toungoo, and Konbaung dynasties" };
+  var IC = { m2010: "#5c2a24", m1974: "#5c2a24", m1948: "#a9762f", mpeacock1943: "#5c2a24", mbritish: "#204b5c", mpeacockold: "#a9762f", mpyu: "#a9762f" };
+  var INAMES = { m2010: "Military rule (State Administration Council)", m1974: "Military-dominated rule (Ne Win era through SPDC)", m1948: "Union of Burma (independent)", mpeacock1943: "Japanese occupation (State of Burma)", mbritish: "British Burma", mpeacockold: "Bagan, Toungoo, and Konbaung dynasties", mpyu: "Pyu City-States (Irrawaddy Valley)" };
   var IFLAGS = {
     m2010: '<rect width="300" height="66.7" fill="#fecb00"/> <rect y="66.7" width="300" height="66.6" fill="#34b233"/> <rect y="133.3" width="300" height="66.7" fill="#ea2839"/> <path d="M150,80 l10,22 24,3 -17,17 4,24 -21,-11 -21,11 4,-24 -17,-17 24,-3 Z" fill="#f4efe1"/>',
     m1974: '<rect width="300" height="200" fill="#a4302a"/> <rect width="130" height="86.7" fill="#21468b"/> <g fill="#f4efe1"><circle cx="30" cy="20" r="6"/><circle cx="65" cy="15" r="6"/><circle cx="100" cy="20" r="6"/><circle cx="20" cy="45" r="6"/><circle cx="65" cy="55" r="14"/><path d="M65,58 h10 M60,63 a10,4 0 0 0 10,0" stroke="#a4302a" stroke-width="3" fill="none"/></g>',
     m1948: '<rect width="300" height="66.7" fill="#f4efe1"/> <rect y="66.7" width="300" height="66.6" fill="#a4302a"/> <rect y="133.3" width="300" height="66.7" fill="#21468b"/> <rect width="130" height="86.7" fill="#21468b"/> <path d="M65,20 l7,20 21,1 -17,14 6,20 -17,-12 -17,12 6,-20 -17,-14 21,-1 Z" fill="#f4efe1"/> <circle cx="30" cy="48" r="5" fill="#f4efe1"/><circle cx="100" cy="48" r="5" fill="#f4efe1"/>',
     mpeacock1943: '<rect width="300" height="200" fill="#fecb00"/> <path d="M150,60 q40,10 32,58 q-6,32 -32,52 q-26,-20 -32,-52 q-8,-48 32,-58 Z" fill="#34b233"/> <path d="M150,60 q40,10 32,58 q-30,-10 -32,-58 Z" fill="#1a7a2e"/>',
     mbritish: '<rect width="300" height="200" fill="#00247d"/> <path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/> <path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/> <rect x="125" width="50" height="200" fill="#f4efe1"/> <rect y="75" width="300" height="50" fill="#f4efe1"/> <rect x="137" width="26" height="200" fill="#cf142b"/> <rect y="87" width="300" height="26" fill="#cf142b"/>',
-    mpeacockold: '<rect width="300" height="200" fill="#fecb00"/> <path d="M150,55 q42,10 34,62 q-6,34 -34,54 q-28,-20 -34,-54 q-8,-52 34,-62 Z" fill="#34b233"/> <path d="M150,55 q42,10 34,62 q-32,-10 -34,-62 Z" fill="#1a7a2e"/>'
+    mpeacockold: '<rect width="300" height="200" fill="#fecb00"/> <path d="M150,55 q42,10 34,62 q-6,34 -34,54 q-28,-20 -34,-54 q-8,-52 34,-62 Z" fill="#34b233"/> <path d="M150,55 q42,10 34,62 q-32,-10 -34,-62 Z" fill="#1a7a2e"/>',
+    mpyu: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>'
   };
   function iFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -622,7 +623,8 @@
     { year:"1948\u20131974", name:"Union of Burma (independent)", t:{ mm: IC.m1948 }, flagKeys:{ mm: "m1948" }, story:"Burma gains independence from Britain on 4 January 1948, months after independence hero Aung San's assassination. Ethnic insurgencies and political instability follow through the 1950s, until Ne Win's 1962 coup ends civilian parliamentary government for decades." },
     { year:"1942\u20131945", name:"Japanese occupation (State of Burma)", t:{ mm: IC.mpeacock1943 }, flagKeys:{ mm: "mpeacock1943" }, story:"Japanese forces drive out British administration by mid-1942 and install a nominally independent State of Burma under Ba Maw in August 1943. Aung San, an initial collaborator, switches to the Allied side in 1945 as British and Commonwealth forces retake the country." },
     { year:"1886\u20131942", name:"British Burma", t:{ mm: IC.mbritish }, flagKeys:{ mm: "mbritish" }, story:"The Third Anglo-Burmese War in 1885 ends the Konbaung dynasty; Britain formally annexes what remains of the kingdom on 1 January 1886, ruling it first as a province of British India, then as its own colony from 1937, until the 1942 Japanese invasion." },
-    { year:"c. 1044\u20131886", name:"Bagan, Toungoo, and Konbaung dynasties", t:{ mm: IC.mpeacockold }, flagKeys:{ mm: "mpeacockold" }, story:"King Anawrahta founds the Bagan Empire around 1044, the first major unification of the Irrawaddy basin. The Toungoo dynasty reunifies the region in the 1500s, and the Konbaung dynasty, founded in 1752, is the last independent Burmese kingdom &mdash; ended by three 19th-century Anglo-Burmese wars that culminate in Britain's 1886 annexation." }
+    { year:"c. 1044\u20131886", name:"Bagan, Toungoo, and Konbaung dynasties", t:{ mm: IC.mpeacockold }, flagKeys:{ mm: "mpeacockold" }, story:"King Anawrahta founds the Bagan Empire around 1044, the first major unification of the Irrawaddy basin. The Toungoo dynasty reunifies the region in the 1500s, and the Konbaung dynasty, founded in 1752, is the last independent Burmese kingdom &mdash; ended by three 19th-century Anglo-Burmese wars that culminate in Britain's 1886 annexation." },
+    { year:"c. 200 BCE\u20139th c. CE", name:"Pyu City-States (Irrawaddy Valley)", t:{ mm: IC.mpyu }, flagKeys:{ mm: "mpyu" }, story:"Tibeto-Burman-speaking Pyu peoples move into the Irrawaddy valley by around the 2nd century BCE, building a network of walled brick city-states &mdash; Sri Ksetra, Beikthano, and Halin foremost &mdash; that never unify under one crown and form Myanmar's first well-documented urban civilization. The Yunnan-based Nanzhao kingdom's campaigns of 832\u2013835 CE fatally weaken the network, opening the valley to the Bamar migrants who found Bagan around 1044. No flag or banner survives from any Pyu city-state, and with only one region on this map there is no internal line to draw." }
   ];
 
   var IREGIONS = ["mm"];
