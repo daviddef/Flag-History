@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One peninsula, six flags over it</h2>
+    <h2>One peninsula, seven flags over it</h2>
     <p class="imap-sub">Qatar's own real border, traced whole &mdash; the peninsula's coastal towns answered to a single power (however loosely) in every era below, so there's no genuinely separate internal region to carve out honestly. Press play, or drag the slider, to watch who held it all at once.</p>
     <div class="rule-box">
       <b>This is a single-region page.</b> Even the 1871&ndash;1916 Ottoman garrison era, when a Turkish garrison sat at Doha alongside continuing Al Thani local rule, was overlapping authority over the same territory rather than a genuine partition into two separately governed pieces &mdash; so it's shown here as one bridging color, not carved in two.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 700</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1st c. CE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -265,7 +265,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Fragmented tribal coast</div>
+        <div class="imap-name" id="iEraName">Pre-Islamic Qatar (Beth Qatraye)</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -542,9 +542,10 @@
 <script>
 (function () {
   var IC = {
-    fragmented:"#6b5c4a", bahrain:"#6b5c4a", sheikhdom:"#a9762f", ottoman:"#6b5c4a", protectorate:"#6b5c4a", independent:"#a9762f"
+    preislamic:"#5c4a3a", fragmented:"#6b5c4a", bahrain:"#6b5c4a", sheikhdom:"#a9762f", ottoman:"#6b5c4a", protectorate:"#6b5c4a", independent:"#a9762f"
   };
   var INAMES = {
+    preislamic:"Pre-Islamic Qatar (Beth Qatraye)",
     fragmented:"Fragmented tribal coast", bahrain:"Qatar within Bahrain's Al Khalifa orbit",
     sheikhdom:"Separate Al Thani sheikhdom", ottoman:"Ottoman garrison era & Al Thani local rule",
     protectorate:"British protectorate, Al Thani emirate", independent:"State of Qatar (independent)"
@@ -566,6 +567,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1st – 7th century CE", name:"Pre-Islamic Qatar (Beth Qatraye)", t:{ qa:IC.preislamic }, flagKeys:{ qa:"fragmented" },
+      story:"Recorded by the Roman geographer Pliny the Elder in the 1st century CE as home to the “Catharrei,” the peninsula sits within the outer trading and political orbit of Mesopotamian and Persian powers, culminating in the Sasanian Empire's control of the Gulf's Arab coast from the 3rd century CE onward. Together with neighboring Bahrain it forms Beth Qatraye (“region of the Qataris”), a Church of the East ecclesiastical province with several attested bishops in 5th–7th century synodal records, alongside a majority population that otherwise practiced pre-Islamic Arabian paganism. Islam arrives in the 7th century, ending Beth Qatraye's Christian institutional presence." },
     { year:"c. 700", name:"Fragmented tribal coast", t:{ qa:IC.fragmented }, flagKeys:{ qa:"fragmented" },
       story:"Small fishing and pearling settlements under scattered local tribal leadership hold the peninsula, without a unified ruling family of its own. Islam arrives in the 7th century; no flag in the modern territorial sense survives from this long span." },
     { year:"1783", name:"Qatar within Bahrain's Al Khalifa orbit", t:{ qa:IC.bahrain }, flagKeys:{ qa:"bahrain" },
