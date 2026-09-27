@@ -243,16 +243,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>Twelve eras, one real border</h2>
-    <p class="imap-sub">Syria's own present-day border, traced whole and used retrospectively across every earlier era &mdash; imperial Damascus's own extent, from antiquity to the 2024 transition. Press play, or drag the slider.</p>
+    <h2>Twelve eras, one real border &mdash; with one internal split</h2>
+    <p class="imap-sub">Syria's own present-day border, traced whole and used retrospectively across every earlier era &mdash; imperial Damascus's own extent, from antiquity to the 2024 transition. For one span, 1920&ndash;1930, the border below is itself split into the pieces France actually governed separately: the Alawite coast around Latakia, Jabal Druze around As-Suwayda, and the Damascus/Aleppo interior. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>This page doesn't split internally.</b> The French Mandate did carve Syria into several separately-administered states (Damascus, Aleppo, the Alawite territory, Jabal Druze) for part of 1920&ndash;36, but this page's own timeline treats the Mandate as one entry &mdash; so the internal detail is noted here in prose rather than drawn as a formal partition the rest of the timeline doesn't otherwise track.
+      <b>This map splits internally exactly once.</b> The French Mandate genuinely fragmented Syria for part of 1920&ndash;1930: separate French-administered states for the Alawite coast and for Jabal Druze, alongside Damascus and Aleppo further inland &mdash; a real internal split, traced below for that span rather than only described in prose. Recentralization folds all of it back into one unified Mandate administration by 1930 (the same institutions that become the Syrian Republic in 1946); every other era on this map, before or after, is one unified territory.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">antiquity&ndash;636</span>
-        <input type="range" id="iSlider" min="0" max="11" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="12" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -261,9 +261,16 @@
           <text x="80" y="270">JORDAN</text>
           <text x="60" y="200">LEBANON</text>
         </g>
-        <path id="ireg-syr" class="ireg-fill" d="M180.20,221.38 L97.75,276.00 L50.85,255.69 L50.04,255.34 L55.75,247.55 L55.11,226.57 L65.44,198.51 L88.39,179.19 L81.51,159.10 L62.57,156.48 L58.64,117.27 L68.95,96.18 L80.22,84.95 L91.49,73.72 L93.77,45.13 L107.55,55.10 L153.90,40.84 L176.30,50.49 L210.94,50.33 L259.38,31.10 L282.07,31.97 L329.96,24.00 L308.38,55.98 L285.34,68.64 L289.30,106.08 L273.40,168.04 L180.20,221.38 Z"/>
+        <path id="ireg-interior" class="ireg-fill" d="M91.49,73.72 L115,80 L108,155 L62.57,156.48 L81.51,159.10 L88.39,179.19 L65.44,198.51 L55.11,226.57 L55.75,247.55 L50.04,255.34 L50.85,255.69 L97.75,276.00 L150,210 L180.20,221.38 L273.40,168.04 L289.30,106.08 L285.34,68.64 L308.38,55.98 L329.96,24.00 L282.07,31.97 L259.38,31.10 L210.94,50.33 L176.30,50.49 L153.90,40.84 L107.55,55.10 L93.77,45.13 Z"/>
+        <path id="ireg-coast" class="ireg-fill" d="M62.57,156.48 L58.64,117.27 L68.95,96.18 L80.22,84.95 L91.49,73.72 L115,80 L108,155 Z"/>
+        <path id="ireg-druze" class="ireg-fill" d="M180.20,221.38 L97.75,276.00 L150,210 Z"/>
+        <path class="iborder-line" id="ib-coast-interior" d="M91.49,73.72 L115,80 L108,155 L62.57,156.48"/>
+        <path class="iborder-line" id="ib-druze-interior" d="M180.20,221.38 L150,210 L97.75,276.00"/>
         <g font-family="IBM Plex Mono, monospace">
-          <text class="ireg-label" id="ilbl-syr" x="190" y="150">SYRIA</text>
+          <text class="ireg-label" id="ilbl-interior" x="205" y="130">DAMASCUS &amp;</text>
+          <text class="ireg-label" id="ilbl-interior2" x="205" y="141">ALEPPO</text>
+          <text class="ireg-label" id="ilbl-coast" x="82" y="118">ALAWITE</text>
+          <text class="ireg-label" id="ilbl-druze" x="132" y="248">JABAL DRUZE</text>
         </g>
       </svg>
       <div class="imap-head">
@@ -273,7 +280,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Real traced border (Syria's present-day extent, used retrospectively) &mdash; no internal partition; see the rule box above.</p>
+      <p class="map-note">Real traced border (Syria's present-day extent, used retrospectively). Schematic internal partition on this real border &mdash; the Alawite/Jabal Druze/interior dividing lines are approximate, not surveyed state borders; the split shown only applies to the French Mandate's 1920&ndash;1930 fragmentation and dissolves for every other era.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -753,7 +760,8 @@
 <script>
 (function () {
   var IC = { none:"#6e6047", caliphate:"#7c6a2e", sultanate1:"#5c4a2e", sultanate2:"#a9762f", ottoman:"#a4302a",
-             mandate:"#2c5f8a", republic:"#007a3d", union:"#c9a13c", baathist:"#7a2a2a", transitional:"#9c8a4a" };
+             mandate:"#2c5f8a", republic:"#007a3d", union:"#c9a13c", baathist:"#7a2a2a", transitional:"#9c8a4a",
+             alawite:"#5a8a3d", jaldruze:"#8a5a2c" };
   var IFLAGS = {
     ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     umayyad: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#c9b98a" stroke-width="3"/>',
@@ -770,34 +778,65 @@
   };
   function iFlagSvg(key) { return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>'; }
   var iLegendEl = document.getElementById("iLegend");
-  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.none + '"></span>No flag documented</span><span><span class="sw" style="background:' + IC.caliphate + '"></span>Caliphate</span><span><span class="sw" style="background:' + IC.sultanate1 + '"></span>Zengid/Ayyubid</span><span><span class="sw" style="background:' + IC.sultanate2 + '"></span>Mamluk</span><span><span class="sw" style="background:' + IC.ottoman + '"></span>Ottoman</span><span><span class="sw" style="background:' + IC.mandate + '"></span>French Mandate</span><span><span class="sw" style="background:' + IC.republic + '"></span>Republic</span><span><span class="sw" style="background:' + IC.union + '"></span>Union with Egypt</span><span><span class="sw" style="background:' + IC.baathist + '"></span>Ba&#x27;athist republic</span><span><span class="sw" style="background:' + IC.transitional + '"></span>Transitional government</span>';
+  iLegendEl.innerHTML = '<span><span class="sw" style="background:' + IC.none + '"></span>No flag documented</span><span><span class="sw" style="background:' + IC.caliphate + '"></span>Caliphate</span><span><span class="sw" style="background:' + IC.sultanate1 + '"></span>Zengid/Ayyubid</span><span><span class="sw" style="background:' + IC.sultanate2 + '"></span>Mamluk</span><span><span class="sw" style="background:' + IC.ottoman + '"></span>Ottoman</span><span><span class="sw" style="background:' + IC.mandate + '"></span>French Mandate</span><span><span class="sw" style="background:' + IC.alawite + '"></span>Alawite State (Mandate substate)</span><span><span class="sw" style="background:' + IC.jaldruze + '"></span>Jabal Druze State (Mandate substate)</span><span><span class="sw" style="background:' + IC.republic + '"></span>Republic</span><span><span class="sw" style="background:' + IC.union + '"></span>Union with Egypt</span><span><span class="sw" style="background:' + IC.baathist + '"></span>Ba&#x27;athist republic</span><span><span class="sw" style="background:' + IC.transitional + '"></span>Transitional government</span>';
+
+  var IREGIONS = ["coast","druze","interior"];
+  var IREGION_NAMES = { coast:"Alawite coast (Latakia)", druze:"Jabal Druze (As-Suwayda)", interior:"Damascus & Aleppo (interior)" };
+  var IADJ = [["coast","interior"],["druze","interior"]];
+
+  function iUniform(fill, flagKey) {
+    return { t:{ coast:fill, druze:fill, interior:fill }, flagKeys:{ coast:flagKey, druze:flagKey, interior:flagKey } };
+  }
 
   var ISNAP = [
-    { year:"antiquity&ndash;636", name:"Ancient &amp; Byzantine Syria", fill:IC.none, flagKey:"ancient",
-      story:"Damascus and Aleppo pass through Aramean, Assyrian, Persian, Seleucid, Roman, and Byzantine hands over millennia &mdash; no single flag survives from any pre-Islamic era on this territory." },
-    { year:"636&ndash;750", name:"Umayyad Caliphate (Damascus as imperial capital)", fill:IC.caliphate, flagKey:"umayyad",
-      story:"Muslim armies take Damascus in 634&ndash;36; the Umayyad dynasty makes it the capital of an empire stretching from Iberia to Central Asia, flying a plain white banner as its dynastic color." },
-    { year:"750&ndash;1174", name:"Abbasid suzerainty and local dynasties", fill:IC.caliphate, flagKey:"abbasid",
-      story:"The Abbasid revolution moves the caliphate's capital to Baghdad in 750; Syria becomes a contested province under shifting local dynasties, nominally loyal to a black-bannered Abbasid caliph." },
-    { year:"1174&ndash;1260", name:"Zengid &amp; Ayyubid Damascus", fill:IC.sultanate1, flagKey:"zengidayyubid",
-      story:"Saladin unites Damascus under Ayyubid rule in 1174, launching the campaigns that retake Jerusalem from the Crusaders in 1187; the dynasty rules Syria and Egypt together until the Mongol invasion and Mamluk takeover." },
-    { year:"1260&ndash;1517", name:"Mamluk Sultanate", fill:IC.sultanate2, flagKey:"mamluk",
-      story:"Mamluk sultans ruling from Cairo halt the Mongol advance at Ain Jalut in 1260 and govern Syria as a frontier province for over two and a half centuries, until Ottoman conquest." },
-    { year:"1517&ndash;1918", name:"Ottoman Empire (Damascus and Aleppo eyalets)", fill:IC.ottoman, flagKey:"ottoman",
-      story:"Sultan Selim I conquers Syria in 1516&ndash;17; the region is governed as Ottoman provinces for exactly four centuries, under the standard red Ottoman banner with crescent and star, until the empire's WWI collapse." },
-    { year:"1920&ndash;1946", name:"French Mandate", fill:IC.mandate, flagKey:"frenchmandate",
-      story:"The League of Nations grants France a Mandate over Syria in 1920; for part of this period France divides the territory into separate states for Damascus, Aleppo, the Alawite coast, and Jabal Druze before recentralizing, a real internal fragmentation this map doesn't separately trace." },
-    { year:"1946&ndash;1958", name:"Syrian Republic (independence)", fill:IC.republic, flagKey:"indep",
-      story:"French troops withdraw in April 1946, completing full independence; the new republic adopts a green-white-black tricolor with three red stars, tracing its lineage to the wider Arab Revolt flag." },
-    { year:"1958&ndash;1961", name:"United Arab Republic (union with Egypt)", fill:IC.union, flagKey:"uar",
-      story:"Syria and Egypt merge into the United Arab Republic in 1958 under Gamal Abdel Nasser, adopting a shared red-white-black flag with two green stars; the union collapses in 1961 amid Syrian dissatisfaction with Egyptian dominance." },
-    { year:"1961&ndash;1980", name:"Syrian Arab Republic (post-union)", fill:IC.republic, flagKey:"postunion",
-      story:"Syria restores independent statehood in 1961 and readopts the pre-union green-white-black flag with three red stars, a design that alternates with the UAR-era flag depending on the government of the day through the 1960s and 70s." },
-    { year:"1980&ndash;2024", name:"Ba&#x27;athist Syrian Arab Republic", fill:IC.baathist, flagKey:"baathist",
-      story:"Hafez al-Assad's government readopts the red-white-black, two-green-star flag in 1980, a design his son Bashar al-Assad's government keeps until the regime's fall in December 2024, ending over four decades of Assad-family rule." },
-    { year:"2024&ndash;present", name:"Transitional government", fill:IC.transitional, flagKey:"transitional",
-      story:"Rebel forces topple the Assad government in December 2024; the transitional administration restores the green-white-black, three-red-star independence-era flag as the country's new/old national symbol." }
+    Object.assign({ year:"antiquity&ndash;636", name:"Ancient &amp; Byzantine Syria",
+      story:"Damascus and Aleppo pass through Aramean, Assyrian, Persian, Seleucid, Roman, and Byzantine hands over millennia &mdash; no single flag survives from any pre-Islamic era on this territory." }, iUniform(IC.none, "ancient")),
+    Object.assign({ year:"636&ndash;750", name:"Umayyad Caliphate (Damascus as imperial capital)",
+      story:"Muslim armies take Damascus in 634&ndash;36; the Umayyad dynasty makes it the capital of an empire stretching from Iberia to Central Asia, flying a plain white banner as its dynastic color." }, iUniform(IC.caliphate, "umayyad")),
+    Object.assign({ year:"750&ndash;1174", name:"Abbasid suzerainty and local dynasties",
+      story:"The Abbasid revolution moves the caliphate's capital to Baghdad in 750; Syria becomes a contested province under shifting local dynasties, nominally loyal to a black-bannered Abbasid caliph." }, iUniform(IC.caliphate, "abbasid")),
+    Object.assign({ year:"1174&ndash;1260", name:"Zengid &amp; Ayyubid Damascus",
+      story:"Saladin unites Damascus under Ayyubid rule in 1174, launching the campaigns that retake Jerusalem from the Crusaders in 1187; the dynasty rules Syria and Egypt together until the Mongol invasion and Mamluk takeover." }, iUniform(IC.sultanate1, "zengidayyubid")),
+    Object.assign({ year:"1260&ndash;1517", name:"Mamluk Sultanate",
+      story:"Mamluk sultans ruling from Cairo halt the Mongol advance at Ain Jalut in 1260 and govern Syria as a frontier province for over two and a half centuries, until Ottoman conquest." }, iUniform(IC.sultanate2, "mamluk")),
+    Object.assign({ year:"1517&ndash;1918", name:"Ottoman Empire (Damascus and Aleppo eyalets)",
+      story:"Sultan Selim I conquers Syria in 1516&ndash;17; the region is governed as Ottoman provinces for exactly four centuries, under the standard red Ottoman banner with crescent and star, until the empire's WWI collapse." }, iUniform(IC.ottoman, "ottoman")),
+    { year:"1920&ndash;1930", name:"French Mandate &mdash; fragmented into separate states",
+      t:{ coast:IC.alawite, druze:IC.jaldruze, interior:IC.mandate },
+      flagKeys:{ coast:"ancient", druze:"ancient", interior:"frenchmandate" },
+      names:{ coast:"Alawite State (Mandate substate)", druze:"Jabal Druze State (Mandate substate)", interior:"French Mandate (Damascus &amp; Aleppo)" },
+      story:"The League of Nations grants France a Mandate over Syria in 1920. True to this map's own rule box, France genuinely fragments the territory for part of this period: Damascus and Aleppo run together as the interior administration, while the Alawite coast around Latakia and Jabal Druze around As-Suwayda are governed as their own separate French-administered statelets &mdash; a real internal split, now traced rather than only narrated in prose. No specific substate flag is documented on this page, so both are shown honestly blank rather than invented." },
+    { year:"1930&ndash;1946", name:"French Mandate &mdash; recentralized",
+      t:{ coast:IC.mandate, druze:IC.mandate, interior:IC.mandate }, flagKeys:{ coast:"frenchmandate", druze:"frenchmandate", interior:"frenchmandate" },
+      story:"The Mandate's institutions recentralize by 1930, folding the Alawite and Jabal Druze statelets and the Damascus/Aleppo interior back into one unified administration &mdash; the same institutions that become the fully sovereign Syrian Republic once French troops complete their withdrawal in 1946." },
+    Object.assign({ year:"1946&ndash;1958", name:"Syrian Republic (independence)",
+      story:"French troops withdraw in April 1946, completing full independence; the new republic adopts a green-white-black tricolor with three red stars, tracing its lineage to the wider Arab Revolt flag." }, iUniform(IC.republic, "indep")),
+    Object.assign({ year:"1958&ndash;1961", name:"United Arab Republic (union with Egypt)",
+      story:"Syria and Egypt merge into the United Arab Republic in 1958 under Gamal Abdel Nasser, adopting a shared red-white-black flag with two green stars; the union collapses in 1961 amid Syrian dissatisfaction with Egyptian dominance." }, iUniform(IC.union, "uar")),
+    Object.assign({ year:"1961&ndash;1980", name:"Syrian Arab Republic (post-union)",
+      story:"Syria restores independent statehood in 1961 and readopts the pre-union green-white-black flag with three red stars, a design that alternates with the UAR-era flag depending on the government of the day through the 1960s and 70s." }, iUniform(IC.republic, "postunion")),
+    Object.assign({ year:"1980&ndash;2024", name:"Ba&#x27;athist Syrian Arab Republic",
+      story:"Hafez al-Assad's government readopts the red-white-black, two-green-star flag in 1980, a design his son Bashar al-Assad's government keeps until the regime's fall in December 2024, ending over four decades of Assad-family rule." }, iUniform(IC.baathist, "baathist")),
+    Object.assign({ year:"2024&ndash;present", name:"Transitional government",
+      story:"Rebel forces topple the Assad government in December 2024; the transitional administration restores the green-white-black, three-red-star independence-era flag as the country's new/old national symbol." }, iUniform(IC.transitional, "transitional"))
   ];
+
+  function iTextColorFor(hex) {
+    var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    var lum = (0.299*r + 0.587*g + 0.114*b)/255;
+    return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
 
   var iYearTag = document.getElementById("iYearTag");
   var iEraName = document.getElementById("iEraName");
@@ -812,9 +851,42 @@
     iYearTag.innerHTML = era.year;
     iEraName.innerHTML = era.name;
     iEraStory.innerHTML = era.story;
-    document.getElementById("ireg-syr").setAttribute("fill", era.fill);
-    iEraOwners.innerHTML = "<b>" + era.name + "</b>";
-    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKey) + '<div class="ic-label">Syria</div></div>';
+
+    IREGIONS.forEach(function (id) {
+      document.getElementById("ireg-" + id).setAttribute("fill", era.t[id]);
+      var lbl = document.getElementById("ilbl-" + id);
+      if (lbl) {
+        var lblColor = iTextColorFor(era.t[id]);
+        lbl.setAttribute("fill", lblColor);
+        lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) {
+        var lbl2Color = iTextColorFor(era.t[id]);
+        lbl2.setAttribute("fill", lbl2Color);
+        lbl2.setAttribute("stroke", lbl2Color === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+    });
+
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+      line.setAttribute("stroke-width", same ? "1" : "2.4");
+    });
+
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = (era.names && era.names[g[0]]) || era.name;
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
   }
 
   iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
