@@ -246,7 +246,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, nine rulers</h2>
+    <h2>One border, ten rulers</h2>
     <p class="imap-sub">Slovakia's own real border, traced whole &mdash; like North Macedonia, this is a page without a genuine internal split to show honestly. The historic regions (Spiš, Šariš, the Váh valley) were geographic and ethnographic, not separately governed the way Royal Hungary and Ottoman Hungary once were. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This is the one Habsburg-lands page in the atlas that never splits internally.</b> Unlike Hungary next door &mdash; whose 1541&ndash;1699 partition line runs a few dozen kilometers south of the modern Slovak border &mdash; the territory shown here stayed under a single administration in every era. What changes is only who ruled all of it at once.
@@ -254,8 +254,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 833</span>
-        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 400 BCE</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 320 165" xmlns="http://www.w3.org/2000/svg">
         <g id="ictx-neighbors" pointer-events="none">
@@ -276,7 +276,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Great Moravia (Nitra united in)</div>
+        <div class="imap-name" id="iEraName">Celtic &amp; Roman-Frontier Tribes, Slavic Migration &amp; Samo's Empire</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -810,16 +810,19 @@
 <script>
 (function () {
   var IC = {
+    ancient:"#5a4a38",
     moravia:"#6e6047", tribal:"#8a6a3f", hungary:"#a9762f", habsburg:"#7a5a9a",
     czechoslovak:"#1e2f96", tiso:"#3f3f3f", restored:"#2f6b4a", communist:"#8c2f2f", modern:"#d4924a"
   };
   var INAMES = {
+    ancient:"Celtic & Roman-frontier tribes, Slavic migration & Samo's Empire",
     moravia:"Principality of Nitra / Great Moravia", tribal:"Hungarian Tribal Conquest", hungary:"Kingdom of Hungary",
     habsburg:"Kingdom of Hungary (Habsburg crown)", czechoslovak:"Czechoslovakia (First Republic)",
     tiso:"Slovak Republic (1939–45, Nazi client)", restored:"Czechoslovakia (restored)",
     communist:"Czechoslovak Socialist Republic", modern:"Slovak Republic"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     moravia: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     tribal: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     hungary: '<rect width="300" height="200" fill="#f4efe1"/><g fill="#a4302a"><rect y="0" width="300" height="25"/><rect y="50" width="300" height="25"/><rect y="100" width="300" height="25"/><rect y="150" width="300" height="25"/></g>',
@@ -839,6 +842,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 400 BCE – 825 CE", name:"Celtic & Roman-Frontier Tribes, Slavic Migration & Samo's Empire", t:{ sk:IC.ancient }, flagKeys:{ sk:"ancient" },
+      story:"For well over a millennium before Pribina's Nitra, this territory passes through several distinct peoples: the Celtic Boii settle around Bratislava from roughly the 2nd century BCE, minting their own silver coinage, before Germanic Quadi displace them; Rome fights the Marcomannic Wars against the Quadi along its edge in the 160s–180s CE without ever annexing the region. Slavic peoples migrate into the middle Danube basin from the 5th–6th centuries, initially subject to the Avar Khaganate, until Samo leads a successful Slavic revolt around 623, forging the first documented political union of Slavic tribes; his realm dissolves at his death in 658, after which Avar overlordship resumes until Pribina's Nitra emerges around 825. No flag survives, or was ever plausibly created, for any of these peoples, so this entry is shown honestly blank." },
     { year:"c. 833", name:"Great Moravia (Nitra united in)", t:{ sk:IC.moravia }, flagKeys:{ sk:"moravia" },
       story:"Pribina rules the semi-independent Principality of Nitra from the 820s; Mojmír I of Moravia conquers it and expels Pribina in 833, uniting Nitra with Moravia to form Great Moravia. Under Rastislav and Svatopluk I it becomes the first major Slavic state in the region, hosting Cyril and Methodius from 863. No securely documented flag survives from this pre-heraldic era." },
     { year:"907", name:"Hungarian tribal conquest", t:{ sk:IC.tribal }, flagKeys:{ sk:"tribal" },
