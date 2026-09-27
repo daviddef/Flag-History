@@ -253,7 +253,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">2002&ndash;present</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -490,13 +490,15 @@
 <script>
 (function () {
   var IC = {
-    portugal: "#21468b", indonesia: "#5c2a24", un: "#204b5c", independent: "#a9762f"
+    liurai: "#6e6047", portugal: "#21468b", indonesia: "#5c2a24", un: "#204b5c", independent: "#a9762f"
   };
   var INAMES = {
+    liurai: "Wehale and the liurai kingdoms",
     portugal: "Portuguese Timor", indonesia: "Indonesian occupation (unrecognized)",
     un: "UN Transitional Administration (UNTAET)", independent: "Democratic Republic of Timor-Leste"
   };
   var IFLAGS = {
+    liurai: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     portugal: '<rect width="150" height="200" fill="#046a38"/><rect x="150" width="150" height="200" fill="#ff0000"/><path d="M75,60 l35,30 -35,30 -35,-30 Z" fill="#ffc726"/><circle cx="75" cy="90" r="18" fill="#0f1c4d"/>',
     indonesia: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#003893"/><path d="M150,84 l7,20 21,1 -17,14 6,20 -17,-12 -17,12 6,-20 -17,-14 21,-1 Z" fill="#fcd116"/>',
     un: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#00247d" stroke-width="8"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="40" font-weight="700" fill="#00247d">UN</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" font-weight="600" fill="#00247d">UNTAET</text>',
@@ -511,6 +513,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"14th c.–c. 1702", name:"Wehale and the liurai kingdoms", t:{ tl:IC.liurai }, flagKeys:{ tl:"liurai" },
+      story:"Centuries before organized Portuguese colonial administration formalizes around 1702, Timor is documented as a source of sandalwood traded across a wider Indian Ocean and maritime Southeast Asian network &mdash; Chinese records note the trade as early as 1349. The island has no single government: numerous local liurai chieftaincies rule their own domains, while the inland Wehale kingdom holds a wide-reaching ritual paramountcy recognized by many of them. No flag or comparable unifying territorial symbol is documented for Wehale, the liurai kingdoms, or the island's pre-colonial trade network; shown here honestly blank rather than invented." },
     { year:"c. 1702–1975", name:"Portuguese Timor", t:{ tl:IC.portugal }, flagKeys:{ tl:"portugal" },
       story:"Portuguese traders and missionaries establish influence from the early 1500s; organized colonial administration formalizes with the first resident governor around 1702. An 1859 treaty with the Dutch fixes Portugal's territory to the eastern half of the island plus the separate Oecussi enclave to the west, which remains part of the same colony throughout." },
     { year:"1975–1999", name:"Proclaimed independence and Indonesian occupation", t:{ tl:IC.indonesia }, flagKeys:{ tl:"indonesia" },
