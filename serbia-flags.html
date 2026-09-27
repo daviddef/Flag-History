@@ -226,13 +226,13 @@
     <h2>Empire to rump state to empire again &mdash; a real changing shape</h2>
     <p class="imap-sub">This map's outline actually changes at each step, not just its internal color &mdash; from Dušan's short-lived empire reaching the Aegean, down to a Belgrade-sized rump in the 1830s, back up through the 1913 Balkan Wars and the 1918 union with Vojvodina, to today's republic. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>How this shape data was built.</b> Two steps use real traced borders from a historical-boundaries dataset (<code>aourednik/historical-basemaps</code>): 1878, just after the Congress of Berlin, and 1913, just after the Balkan Wars almost doubled the kingdom. The modern outline is the same real coastline/frontier used across this atlas. No usable dataset year exists for Dušan's 14th-century empire, the shrunken 15th-century Despotate, or the tiny 1830s Principality &mdash; those three are honest hand approximations from documented historical descriptions, not surveyed lines. The Ottoman-era step is not a government shape at all: no sovereign Serbian state existed for over three centuries, so it's drawn as a faint dashed reference outline only, the same treatment this atlas gives Poland's 1795&ndash;1918 partition gap.
+      <b>How this shape data was built.</b> Two steps use real traced borders from a historical-boundaries dataset (<code>aourednik/historical-basemaps</code>): 1878, just after the Congress of Berlin, and 1913, just after the Balkan Wars almost doubled the kingdom. The modern outline is the same real coastline/frontier used across this atlas. No usable dataset year exists for Dušan's 14th-century empire, the shrunken 15th-century Despotate, or the tiny 1830s Principality &mdash; those three are honest hand approximations from documented historical descriptions, not surveyed lines. The Ottoman-era step, and the still-earlier 279 BCE&ndash;1166 CE span of Illyrian, Roman, and early medieval rule that opens the map, are not government shapes at all: no sovereign Serbian state existed for either stretch, so both are drawn as a faint dashed reference outline only, the same treatment this atlas gives Poland's 1795&ndash;1918 partition gap.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1350</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 279 BCE&ndash;1166 CE</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="-70 -105 385 475" xmlns="http://www.w3.org/2000/svg">
         <g pointer-events="none">
@@ -256,7 +256,7 @@
         <path id="ireg-whole" class="ireg-fill" d=""/>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Dušan's Serbian Empire</div>
+        <div class="imap-name" id="iEraName">Illyrian Tribes, Roman Moesia &amp; the Early Medieval Serbian Principality</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -849,6 +849,7 @@
     serbia_modern:"Republic of Serbia, modern (real traced border)"
   };
   var IFLAGS = {
+    ancient_ref: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     nemanjic: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100) scale(0.078)"><path d="M0,-520 C-260,-470 -430,-330 -430,-130 C-430,120 -230,340 0,470 C230,340 430,120 430,-130 C430,-330 260,-470 0,-520 Z" fill="#f4efe1" stroke="#8a6a1f" stroke-width="14"/><path d="M-160,-40 q-60,-140 40,-220 q60,50 20,90 q80,-30 120,10 q60,-20 90,40 q60,10 30,80 q40,60 -30,100 q-80,70 -270,-100 Z" fill="#f4efe1"/><path d="M160,-40 q60,-140 -40,-220 q-60,50 -20,90 q-80,-30 -120,10 q-60,-20 -90,40 q-60,10 -30,80 q-40,60 30,100 q80,70 270,-100 Z" fill="#f4efe1"/><circle cx="0" cy="80" r="60" fill="#c9a13c"/></g>',
     dusan_empire: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,95) scale(0.075)"><path d="M0,-520 C-260,-470 -430,-330 -430,-130 C-430,120 -230,340 0,470 C230,340 430,120 430,-130 C430,-330 260,-470 0,-520 Z" fill="#f4efe1" stroke="#8a6a1f" stroke-width="14"/><path d="M-160,-40 q-60,-140 40,-220 q60,50 20,90 q80,-30 120,10 q60,-20 90,40 q60,10 30,80 q40,60 -30,100 q-80,70 -270,-100 Z" fill="#f4efe1"/><path d="M160,-40 q60,-140 -40,-220 q-60,50 -20,90 q-80,-30 -120,10 q-60,-20 -90,40 q-60,10 -30,80 q-40,60 30,100 q80,70 270,-100 Z" fill="#f4efe1"/></g><rect x="132" y="120" width="36" height="36" rx="2" fill="#a4302a" stroke="#c9a13c" stroke-width="2.5"/><text x="150" y="145" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#c9a13c">&#1057;</text>',
     ottoman: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100)"><path d="M-30,0 A38,38 0 1 0 22,-32 A28,28 0 1 1 -30,0 Z" fill="#f4efe1"/><path d="M40,-6 l5,15 16,0 -13,10 5,15 -13,-9 -13,9 5,-15 -13,-10 16,0 Z" fill="#f4efe1"/></g>',
@@ -882,6 +883,9 @@
   };
 
   var ISNAP = [
+    { year:"c. 279 BCE – 1166 CE", name:"Illyrian Tribes, Roman Moesia & the Early Medieval Serbian Principality", shape:"ottoman_ref", colorKey:"ottoman_gap", flagKey:"ancient_ref", real:false, reference:true,
+      owners:"No single continuous state &mdash; Illyrian tribes (Dardani, Triballi) and the Celtic Scordisci, then the Roman province of Moesia, then the early medieval Serbian principality under Byzantine/Bulgarian overlordship.",
+      story:"For roughly fourteen centuries before Stefan Nemanja's dynasty, the lands that become Serbia pass through several unrelated peoples rather than one continuous state: Illyrian tribes and the Celtic Scordisci in antiquity, then the Roman province of Moesia (birthplace of Constantine the Great at Naissus, modern Niš), then Slavic settlement from the 6th–7th centuries and the first Byzantine-documented Serbian principality by the early 9th century, oscillating between Byzantine and Bulgarian overlordship until Nemanja's 1166 independence. No flag survives, or was ever plausibly created, for any polity in this span, so it is drawn as a faint dashed reference outline only, with no real government shape to trace." },
     { year:"c. 1350", name:"Dušan's Serbian Empire", shape:"dusan", colorKey:"dusan", flagKey:"dusan_empire", real:false,
       owners:"<b>Serbian Empire</b>: Danube/Sava in the north to the Aegean-adjacent lands around Serres in the southeast, Adriatic coast near Kotor to Epirus and Thessaly in the south.",
       story:"Stefan Dušan crowns himself Emperor of the Serbs and Greeks at Skopje in 1346, briefly ruling the strongest state in southeastern Europe &mdash; a realm many times the size of modern Serbia, stretching to the Adriatic in the west and past Macedonia toward the Aegean in the southeast. No usable dataset year exists for this exact 1350s peak (the nearest real snapshots, 1300 and 1400, sit just before Dušan's southern conquests and just after the empire's collapse), so this outline is a hand-built approximation from the standard historical description of the empire's extent, not a surveyed line." },
