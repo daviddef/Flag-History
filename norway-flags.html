@@ -242,7 +242,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One country, four crowns, 872&ndash;present</h2>
+    <h2>One country, four crowns, c. 500 BCE&ndash;present</h2>
     <p class="imap-sub">Norway's real traced coastline, colored by whichever crown actually governed it at each snapshot. There is no internal line to draw here &mdash; when Norway's sovereignty changes, the whole country changes color and label at once. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>Norway has spent almost exactly half of the last eleven centuries under someone else's crown.</b> Roughly 420 of the ~910 years since unification (c. 995) were spent in a union where Norway did not control its own foreign policy &mdash; 1397&ndash;1814 under Denmark (with a Kalmar interlude shared with Sweden too), then 1814&ndash;1905 under Sweden. The 1940&ndash;45 occupation is shorter but harsher: the only stretch since the Viking Age when Norway was ruled by neither its own crown nor a fellow Scandinavian one.
@@ -250,8 +250,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 995</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 500 BCE</span>
+        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 420 485" xmlns="http://www.w3.org/2000/svg">
         <path class="sea-fill" fill="var(--sea)" pointer-events="none" d="M88.9,386.3 L80.1,367.6 L54.3,402.8 L36.9,410.0 L18.8,394.5 L14.1,361.6 L10.0,291.2 L22.0,271.6 L56.6,246.0 L82.4,214.5 L106.3,171.9 L137.7,113.0 L159.6,90.0 L195.6,51.8 L224.3,38.4 L245.8,40.0 L265.7,14.7 L289.5,16.1 L313.0,10.0 L313.0,0 L0,0 L0,485 Z"/>
@@ -264,7 +264,7 @@
         <path id="ireg-no" class="ireg-fill" d="M313.0,10.0 L353.9,32.3 L337.1,40.5 L351.4,59.7 L329.1,71.9 L318.6,74.7 L324.1,53.3 L307.3,41.2 L287.0,51.5 L280.6,73.9 L268.2,87.4 L254.1,80.0 L237.0,81.5 L222.5,65.4 L214.7,73.5 L206.6,74.7 L204.6,94.8 L180.0,89.9 L176.5,106.9 L164.0,106.8 L155.4,128.5 L142.3,162.3 L122.0,205.3 L126.7,215.7 L122.2,227.8 L109.2,227.3 L100.7,255.9 L101.5,296.4 L109.9,311.9 L105.6,347.8 L94.7,368.7 L88.9,386.3 L80.1,367.6 L54.3,402.8 L36.9,410.0 L18.8,394.5 L14.1,361.6 L10.0,291.2 L22.0,271.6 L56.6,246.0 L82.4,214.5 L106.3,171.9 L137.7,113.0 L159.6,90.0 L195.6,51.8 L224.3,38.4 L245.8,40.0 L265.7,14.7 L289.5,16.1 L313.0,10.0 Z" stroke="#241f14" stroke-width="1.5" stroke-opacity=".35"/>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Unification</div>
+        <div class="imap-name" id="iEraName">Nordic Iron Age Scandinavia</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -691,6 +691,10 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 500 BCE–793 CE", name:"Nordic Iron Age Scandinavia", owner:"frag",
+      story:"For well over a millennium before Harald Fairhair's traditional 872 unification, Norway's coast is home only to scattered farming and fishing communities under local chieftains, with no political unit resembling a kingdom anywhere on the coast. The earliest known runic inscription anywhere, carved into an iron spearhead found at Øvre Stabu, dates to around 180 CE. No flag or comparable territorial banner is attested from this era, and the 793 raid on Lindisfarne — which conventionally opens the Viking Age — marks this entry's own end point." },
+    { year:"c. 872–995", name:"Fragmented petty-kingdoms & chieftaincies", owner:"frag",
+      story:"The traditional Battle of Hafrsfjord (c. 872), where Harald Fairhair is said to have first claimed authority over a fragmented coastline, is likely more legend than settled fact this early — real, durable unification is still over a century away. Regional petty-kings and jarls contest the western fjords and southern lowlands throughout this period even as Norse raiding and settlement fan out across the North Atlantic. No securely documented flag survives from this pre-heraldic, pre-Christian era, shown here honestly blank rather than invented." },
     { year:"c. 995", name:"Unification", owner:"norway_med",
       story:"Olav Tryggvason and Olaf II complete the unification of Norway's coast by the early 11th century, building on Harald Fairhair's contested legacy. Olaf II's death at the 1030 Battle of Stiklestad gives the new kingdom a unifying royal saint cult that will outlast him by centuries." },
     { year:"1397", name:"The Kalmar Union", owner:"kalmar",
