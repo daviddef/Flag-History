@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, six rulers</h2>
+    <h2>One border, seven rulers</h2>
     <p class="imap-sub">Kazakhstan's own real border, traced whole &mdash; this page has no internal split to show honestly. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This is a whole-country page, not a split one.</b> The Kazakh Khanate's three zhuzes (Senior, Middle, Junior) each had their own territory and leadership, but all three answered to the same khanate and later fell under Russian and then Soviet rule together &mdash; there's no genuinely separate internal region that was ever ruled apart from the rest for a documented stretch of time. What changes here is only who ruled all of it at once.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">antiquity</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 800 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 163.2" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none">
@@ -267,7 +267,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Nomadic Turkic tribal confederations</div>
+        <div class="imap-name" id="iEraName">Saka (Scythian) nomads</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -569,15 +569,17 @@
 <script>
 (function () {
   var IC = {
-    ancient: "#5c2a24", khanate: "#5c4a2e", russian: "#0039a6", assr: "#7a5a2e",
+    saka: "#4a2b1c", ancient: "#5c2a24", khanate: "#5c4a2e", russian: "#0039a6", assr: "#7a5a2e",
     ssr: "#a4302a", republic: "#00afca"
   };
   var INAMES = {
+    saka: "Saka (Scythian) nomads (no flag documented)",
     ancient: "Nomadic Turkic tribal confederations (no flag documented)", khanate: "Kazakh Khanate",
     russian: "Russian imperial conquest and rule", assr: "Kirghiz ASSR / Kazak ASSR",
     ssr: "Kazakh SSR", republic: "Republic of Kazakhstan"
   };
   var IFLAGS = {
+    saka: '<rect width="300" height="200" fill="#4a2b1c"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     khanate: '<rect width="300" height="200" fill="#201d18"/><path d="M150,60 L170,90 L150,120 L130,90 Z" fill="none" stroke="#c9a13c" stroke-width="4"/>',
     russian: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#0039a6"/><rect y="133.3" width="300" height="66.7" fill="#d52b1e"/>',
@@ -594,6 +596,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 800 BCE", name:"Saka (Scythian) nomads", t:{ kz:IC.saka }, flagKeys:{ kz:"saka" },
+      story:"Iron Age Iranian-speaking nomads known as the Saka, closely related to the Scythians of the Pontic steppe further west, inhabited the territory of present-day Kazakhstan from around the 8th century BCE, leaving behind elaborately furnished kurgan burials such as the \"Golden Man of Issyk.\" No single ruler of this eastern steppe region is named in any surviving source, and no flag survives &mdash; identity and status were expressed through gold ornamentation and grave goods, not woven banners. From around the 2nd century BCE the Saka were displaced or absorbed as the Yuezhi and then Wusun peoples migrated west, one link in the chain of steppe migrations that eventually brought Turkic-speaking peoples to dominance here by the 6th century CE." },
     { year:"antiquity", name:"Nomadic Turkic tribal confederations", t:{ kz:IC.ancient }, flagKeys:{ kz:"ancient" },
       story:"Long before the Kazakh Khanate's founding, this steppe was home to successive Turkic powers &mdash; early khaganates, the Kimek and Kipchak confederations, and, after the 13th-century Mongol conquest, successor khanates of the fragmenting Golden Horde. No single unified state governed the whole territory through most of this span, and no flag survives from it." },
     { year:"1465", name:"Kazakh Khanate", t:{ kz:IC.khanate }, flagKeys:{ kz:"khanate" },
