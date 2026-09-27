@@ -241,16 +241,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five eras</h2>
+    <h2>One border, six eras</h2>
     <p class="imap-sub">Eritrea's own real border, drawn by Italy in 1890 and traced whole here &mdash; that colonial boundary outlived Italian rule itself and still holds today. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>Eritrea has no genuine internal governing split to show.</b> Every era here &mdash; fragmented pre-colonial rule, the Italian colony, the British military administration, the Ethiopian federation and annexation, and the independent state &mdash; governed the whole of Italy's 1890 boundary as one unit. What changes is only who held it.
+      <b>Eritrea has no genuine internal governing split to show.</b> Every era here &mdash; the ancient Kingdom of Aksum, fragmented pre-colonial rule, the Italian colony, the British military administration, the Ethiopian federation and annexation, and the independent state &mdash; governed the whole of Italy's 1890 boundary as one unit. What changes is only who held it.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">before 1890</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 3rd c. BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -265,7 +265,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Red Sea coastal sultanates &amp; highland peoples</div>
+        <div class="imap-name" id="iEraName">Kingdom of Aksum &amp; the Port of Adulis</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -535,8 +535,9 @@
 
 <script>
 (function () {
-  var IC = { fragmented: "#6b5c4a", colonial: "#7a4a1f", union: "#204b5c", republic: "#1e7a4a" };
+  var IC = { aksum: "#5c4a3a", fragmented: "#6b5c4a", colonial: "#7a4a1f", union: "#204b5c", republic: "#1e7a4a" };
   var INAMES = {
+    aksum: "Kingdom of Aksum &amp; the Port of Adulis",
     fragmented: "Red Sea coastal sultanates &amp; highland peoples", colonial: "Colonial rule (Italy, then Britain)",
     union: "Federation with / annexation by Ethiopia", republic: "State of Eritrea"
   };
@@ -556,6 +557,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 3rd c. BCE", name:"Kingdom of Aksum &amp; the Port of Adulis", t:{ er:IC.aksum }, flagKeys:{ er:"noflag" },
+      story:"Centuries before any Ottoman, Egyptian, or Italian presence on the coast, the port of Adulis anchors the Kingdom of Aksum's trade with Rome, Egypt, Arabia, and India, making Aksum one of the major powers of late antiquity &mdash; a 3rd-century Persian text ranks it alongside Rome, Persia, and China. King Ezana's 4th-century conversion to Christianity and Aksumite coinage are both securely attested, but no state flag survives; Aksum's decline from the 7th&ndash;8th centuries leaves the fragmented, multi-power era that follows." },
     { year:"before 1890", name:"Red Sea coastal sultanates &amp; highland peoples", t:{ er:IC.fragmented }, flagKeys:{ er:"noflag" },
       story:"The coast passes through Ottoman and later Egyptian nominal control at ports like Massawa, while the highlands remain tied to the Ethiopian state and lowland peoples live under local sultanates. No unified Eritrean polity exists before the Italian boundary is drawn." },
     { year:"1890", name:"Italian Eritrea", t:{ er:IC.colonial }, flagKeys:{ er:"italy" },
