@@ -244,16 +244,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, nine rulers</h2>
-    <p class="imap-sub">Tajikistan's own real border, traced whole &mdash; the same shape across the same nine periods as the timeline below. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <h2>One border, ten rulers</h2>
+    <p class="imap-sub">Tajikistan's own real border, traced whole &mdash; the same shape across the same ten periods as the timeline below. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This is a single-region map, not a split one.</b> Tajikistan's own 1992&ndash;97 civil war was a real, multi-sided conflict, but this atlas found no well-documented, sustained territorial partition between named regional authorities &mdash; the kind of clean, mapped-out division drawn for Hungary's Royal/Ottoman split above &mdash; to justify a real internal line here; the war's front lines shifted too often and too locally for an honest static boundary. This map instead traces today's Tajikistan whole and colors it by whichever wider power held all of it, era by era, the same approach used for North Macedonia's page elsewhere in this atlas.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">antiquity</span>
-        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 2300&ndash;1700 BCE</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none">
@@ -273,7 +273,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Ancient Sogdiana and Bactria</div>
+        <div class="imap-name" id="iEraName">Bronze Age Oxus Civilization (Bactria&ndash;Margiana)</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -673,16 +673,18 @@
 <script>
 (function () {
   var IC = {
-    antiquity:"#6e6047", earlyislamic:"#b8a878", samanid:"#7c6a2e", mongol:"#5c4a2e", timurid:"#1a3a6b",
+    bmac:"#6e6047", antiquity:"#6e6047", earlyislamic:"#b8a878", samanid:"#7c6a2e", mongol:"#5c4a2e", timurid:"#1a3a6b",
     bukhara:"#0b6e3f", transition:"#7a5a2e", sovietrepublic:"#a4302a", modern:"#006600"
   };
   var INAMES = {
+    bmac:"Bronze Age Oxus Civilization (Bactria&ndash;Margiana)",
     antiquity:"Ancient Sogdiana and Bactria", earlyislamic:"Early Islamic conquest of Transoxiana",
     samanid:"The Samanid golden age and its successors", mongol:"Mongol conquest / Chagatai Khanate",
     timurid:"Timurid Empire", bukhara:"Khanate, then Emirate, of Bukhara",
     transition:"Bukharan PSR / Tajik ASSR transition", sovietrepublic:"Tajik SSR", modern:"Republic of Tajikistan"
   };
   var IFLAGS = {
+    bmac: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     antiquity: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     earlyislamic: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#c9b98a" stroke-width="3"/>',
     samanid: '<rect width="300" height="200" fill="#000000"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="3"/><text x="150" y="108" text-anchor="middle" font-family="Fraunces, serif" font-size="30" font-weight="600" fill="#c9a13c">&#1587;</text>',
@@ -702,6 +704,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 2300–1700 BCE", name:"Bronze Age Oxus Civilization (Bactria&ndash;Margiana)", t:{ tj:IC.bmac }, flagKeys:{ tj:"bmac" },
+      story:"More than a thousand years before the Achaemenid Persian rule that opens the next era, the Oxus (Amu Darya) river basin supported the Bronze Age Bactria&ndash;Margiana Archaeological Complex, often called the Oxus civilization: walled towns with monumental mudbrick architecture, most famously excavated at Gonur Tepe, flourished roughly 2300&ndash;1700 BCE and traded tin, lapis lazuli, and other goods along routes reaching Mesopotamia and the Indus Valley. No king list or named ruler survives, and no flag or comparable territorial symbol is documented, or plausible, from this pre-literate Bronze Age culture." },
     { year:"antiquity", name:"Ancient Sogdiana and Bactria", t:{ tj:IC.antiquity }, flagKeys:{ tj:"antiquity" },
       story:"Tajikistan's Persian and Iranian language and culture trace to this ancient span: Achaemenid Persian rule, Alexander the Great's conquest and the Greco-Bactrian successor states, the Kushan Empire, and Sasanian-era Persian influence, all across the Sogdian and Bactrian lands before the early Islamic conquest. No securely documented flag survives from this span &mdash; shown honestly blank rather than invented." },
     { year:"8th c.", name:"Early Islamic conquest of Transoxiana", t:{ tj:IC.earlyislamic }, flagKeys:{ tj:"earlyislamic" },
