@@ -237,7 +237,7 @@
   <p class="lede">Four flags across five centuries: the Cross of Burgundy over Santiago de la Vega, two centuries of the plain Union Jack, a defaced Blue Ensign carrying the colony's own badge, and the gold-black-green saltire flown since the eve of independence.</p>
 
   <div class="imap-section">
-    <h2>One island, four flags</h2>
+    <h2>One island, five flags</h2>
     <p class="imap-sub">Jamaica's own real coastline, traced whole &mdash; press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This page has no internal split to show.</b> Jamaica was governed as a single colony under Spain, then as a single colony under Britain, then as a single independent state &mdash; no rival authority ever held a separate, mappable part of the island at the same time. What changes here is only who ruled all of it at once.
@@ -245,8 +245,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1509</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 650</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label">
@@ -256,7 +256,7 @@
         <text class="ireg-label" id="ilbl-jm" x="150" y="68">JAMAICA</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Spanish Jamaica</div>
+        <div class="imap-name" id="iEraName">Ta&iacute;no Jamaica (Xaymaca)</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -502,12 +502,13 @@
 
 <script>
 (function () {
-  var IC = { spanish:"#c9432c", ujack:"#1b3a76", ensign:"#1b3a76", modern:"#009b3a" };
+  var IC = { taino:"#6b5c4a", spanish:"#c9432c", ujack:"#1b3a76", ensign:"#1b3a76", modern:"#009b3a" };
   var INAMES = {
-    spanish:"Spanish Jamaica", ujack:"British Jamaica (plain Union Jack)",
+    taino:"Taíno Jamaica (Xaymaca)", spanish:"Spanish Jamaica", ujack:"British Jamaica (plain Union Jack)",
     ensign:"British Crown Colony of Jamaica (colonial ensign era)", modern:"Independent Jamaica"
   };
   var IFLAGS = {
+    taino: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     spanish: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="26"/>',
     ujack: '<rect width="300" height="200" fill="#1b3a76"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="24"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="10"/><rect y="80" width="300" height="40" fill="#f4efe1"/><rect x="130" width="40" height="200" fill="#f4efe1"/><rect y="88" width="300" height="24" fill="#c9432c"/><rect x="138" width="24" height="200" fill="#c9432c"/>',
     ensign: '<rect width="300" height="200" fill="#1b3a76"/><g transform="scale(0.5)"><rect width="300" height="200" fill="#1b3a76"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="24"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="10"/><rect y="80" width="300" height="40" fill="#f4efe1"/><rect x="130" width="40" height="200" fill="#f4efe1"/><rect y="88" width="300" height="24" fill="#c9432c"/><rect x="138" width="24" height="200" fill="#c9432c"/></g><g transform="translate(210,88)"><path d="M0,0 L60,0 L60,68 L30,88 L0,68 Z" fill="#fdf8ec" stroke="#c9962c" stroke-width="2"/><path d="M9,13 L51,13 L51,54 L30,66 L9,54 Z" fill="#009b3a"/><circle cx="30" cy="34" r="9" fill="#fed100"/></g>',
@@ -522,6 +523,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 650", name:"Taíno Jamaica (Xaymaca)", t:{ jm:IC.taino }, flagKeys:{ jm:"taino" },
+      story:"Arawakan-speaking Taíno peoples, migrating up the Antilles from South America, settle Jamaica by around the 7th century CE, organizing the island into several cacicazgos (chiefdoms) under local caciques and naming it Xaymaca, “land of wood and water” &mdash; the direct root of “Jamaica.” Columbus sights the island in 1494, but no permanent Spanish settlement follows until 1509. No flag, in the fixed rectangular sense this atlas otherwise tracks, exists among the pre-contact Taíno." },
     { year:"1509", name:"Spanish Jamaica", t:{ jm:IC.spanish }, flagKeys:{ jm:"spanish" },
       story:"Juan de Esquivel establishes the first Spanish settlement, Sevilla la Nueva, around 1509&ndash;10; the colony's capital shifts inland to Santiago de la Vega around 1534. Always a minor, thinly populated backwater next to Cuba or Hispaniola, held mainly for provisioning passing fleets, until Cromwell's expeditionary force captures the island in 1655." },
     { year:"1655", name:"British Jamaica (plain Union Jack)", t:{ jm:IC.ujack }, flagKeys:{ jm:"ujack" },
