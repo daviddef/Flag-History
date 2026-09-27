@@ -244,7 +244,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">1944&ndash;present</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 210" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -472,13 +472,14 @@
 <script>
 (function () {
   var IC = {
-    vassal: "#6b5c4a", tar: "#c9a13c", soviet: "#8c2f6b", russia: "#7a5a9a"
+    steppe: "#5a4a38", vassal: "#6b5c4a", tar: "#c9a13c", soviet: "#8c2f6b", russia: "#7a5a9a"
   };
   var INAMES = {
-    vassal: "Qing / Russian suzerainty (no distinct flag)", tar: "Tuvan People's Republic",
+    steppe: "Successive steppe polities (no unified banner)", vassal: "Qing / Russian suzerainty (no distinct flag)", tar: "Tuvan People's Republic",
     soviet: "Tuvan People's Republic (Sovietized)", russia: "USSR / Russian Federation"
   };
   var IFLAGS = {
+    steppe: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     vassal: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     tar: '<rect width="300" height="200" fill="#1a3a6b"/><rect x="0" y="0" width="110" height="80" fill="#f9d616"/><text x="55" y="50" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="700" fill="#1a3a6b">TAR</text>',
     soviet: '<rect width="300" height="200" fill="#c8102e"/><rect x="0" y="0" width="130" height="90" fill="#1a3a6b"/><path d="M40,45 h50 M65,20 v50" stroke="#f9d616" stroke-width="7"/><path d="M50,58 l15,-20 15,20 Z" fill="#f9d616"/><circle cx="65" cy="30" r="7" fill="#f9d616"/>',
@@ -493,6 +494,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 200 BCE – 1758", name:"Xiongnu, Turkic, and Yenisei Kirghiz-era steppe rule", t:{ tuva:IC.steppe }, flagKeys:{ tuva:"steppe" },
+      story:"For roughly two thousand years before the Qing Empire's mid-18th-century conquest, the upper Yenisei river basin that includes present-day Tuva passes through the orbit of successive Inner Asian steppe powers with no single lasting government of its own: the Xiongnu confederation's sphere of influence, the First and Second Turkic Khaganates, the Uyghur Khaganate, and the Yenisei Kirghiz Khaganate, whose own runic stone inscriptions survive within Tuva itself. The Mongol Empire absorbs the region in the 1210s–20s, and it passes afterward through Mongol successor states, including the Oirat/Zunghar Khanate, until the Qing dynasty's defeat of the Zunghars brings the region under Qing suzerainty by 1758. No flag or comparable territorial banner survives from any of these successive steppe polities." },
     { year:"Before 1921", name:"Under Qing and Russian suzerainty", t:{ tuva:IC.vassal }, flagKeys:{ tuva:"vassal" },
       story:"The Uryankhai region is a loosely governed dependency &mdash; part of Qing China's Outer Mongolian administration for over two centuries, then a Tsarist Russian protectorate (the Uryankhaisky Krai) from 1914. No distinct Tuvan territorial flag survives from this period." },
     { year:"1921", name:"Tuvan People's Republic founded", t:{ tuva:IC.tar }, flagKeys:{ tuva:"tar" },
