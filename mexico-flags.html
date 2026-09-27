@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, seven eras</h2>
+    <h2>One border, eight eras</h2>
     <p class="imap-sub">Mexico's own real border, traced whole &mdash; the territorial loss to the United States in 1848 and Texas's earlier secession happened to land outside today's border, not inside it, so there's no genuinely separate internal region of modern Mexico to carve out honestly. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This page's real drama is a border that moved, not one that split.</b> Every era shown here governed the whole of what is now Mexico at once; the 1846&ndash;48 war changed where the line around the country ran (cutting away roughly half its territory to the US), not who ruled the parts still inside it. The map below shows today's Mexico throughout, for comparison across eras &mdash; not each era's actual, larger or smaller, extent.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1325</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">1500 BCE&ndash;1325</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -263,7 +263,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Aztec (Mexica) Empire</div>
+        <div class="imap-name" id="iEraName">Olmec and Pre-Aztec Mesoamerican Civilizations</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -620,15 +620,17 @@
 <script>
 (function () {
   var IC = {
-    aztec: "#1a6b4a", newspain: "#204b5c", empire1: "#7c2e1f", republic1: "#a9762f",
+    premesoamerican: "#a9762f", aztec: "#1a6b4a", newspain: "#204b5c", empire1: "#7c2e1f", republic1: "#a9762f",
     empire2: "#7c2e1f", restored: "#2f6b4a", modern: "#9c3b28"
   };
   var INAMES = {
+    premesoamerican: "Olmec and Pre-Aztec Mesoamerican Civilizations",
     aztec: "Aztec (Mexica) Empire", newspain: "Viceroyalty of New Spain", empire1: "First Mexican Empire",
     republic1: "First Federal & Centralist Republics", empire2: "Second Mexican Empire",
     restored: "Restored Republic / Porfiriato / Revolution", modern: "United Mexican States (modern)"
   };
   var IFLAGS = {
+    premesoamerican: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     aztec: '<rect width="300" height="200" fill="#1a6b4a"/><g transform="translate(150,100) scale(1.1)"><path fill="#8a6d3b" d="M-10,25 h20 v10 h-20 Z"/><path fill="#f4efe1" d="M0,-15 a13,13 0 1,1 0,26 a13,13 0 1,1 0,-26 Z"/><path fill="#c9a13c" d="M-3,-10 l6,0 0,25 -6,0 Z"/></g>',
     newspain: '<rect width="300" height="200" fill="#f4efe1"/><g stroke="#ce1126" stroke-width="16" fill="none"><path d="M0,0 L300,200 M300,0 L0,200"/></g><circle cx="150" cy="100" r="26" fill="#f4efe1" stroke="#c9a13c" stroke-width="3"/>',
     empire1: '<rect width="100" height="200" fill="#006341"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#ce1126"/><g transform="translate(150,95) scale(0.85)"><path fill="#4a7c3f" d="M0,-15 a13,13 0 1,1 0,26 a13,13 0 1,1 0,-26 Z"/><path fill="#c9a13c" d="M-3,-10 l6,0 0,25 -6,0 Z"/></g><path fill="#c9a13c" d="M138,58 h24 l-4,-14 h-16 Z"/>',
@@ -646,6 +648,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"1500 BCE–1325", name:"Olmec and Pre-Aztec Mesoamerican Civilizations", t:{ mx:IC.premesoamerican }, flagKeys:{ mx:"premesoamerican" },
+      story:"The Olmec, rising at San Lorenzo around 1500 BCE and later at La Venta, are Mesoamerica's foundational \"mother culture.\" After Olmec decline by around 400 BCE, the torch passes in turn to Teotihuacan (1st&ndash;2nd century CE onward), the Classic Maya city-states of the southern lowlands (flourishing especially 250&ndash;900 CE), and the Toltec at Tula (c. 900&ndash;1150 CE), whom the Mexica themselves later claimed as their civilizational model. No single state ever governs the whole of Mesoamerica across this span, and no flag or banner survives from any of these civilizations." },
     { year:"1325", name:"Aztec (Mexica) Empire", t:{ mx:IC.aztec }, flagKeys:{ mx:"aztec" },
       story:"The Mexica found Tenochtitlan in 1325, guided by the eagle-and-cactus-and-serpent sign that still anchors the flag today, building an empire across much of central Mexico by the early 1500s." },
     { year:"1521", name:"Viceroyalty of New Spain", t:{ mx:IC.newspain }, flagKeys:{ mx:"newspain" },
