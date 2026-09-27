@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1200</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 2500 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -274,7 +274,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Cueva and neighboring chiefdoms</div>
+        <div class="imap-name" id="iEraName">Monagrillo, Barriles &amp; Gran Cocl&eacute; cultures</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -572,8 +572,9 @@
 
 <script>
 (function () {
-  var IC = { precontact:"#6b5c4a", spain:"#7c2e1f", grancolombia:"#c9a13c", colombiadept:"#204b5c", panama:"#a9762f", uszone:"#1e2f96" };
+  var IC = { ancient:"#5c2a24", precontact:"#6b5c4a", spain:"#7c2e1f", grancolombia:"#c9a13c", colombiadept:"#204b5c", panama:"#a9762f", uszone:"#1e2f96" };
   var INAMES = {
+    ancient:"Monagrillo, Barriles & Gran Coclé cultures",
     precontact:"Cueva and neighboring chiefdoms", spain:"Spanish colonial Panama (Peru, then New Granada)",
     grancolombia:"Gran Colombia (Republic of Colombia, 1819–1830)", colombiadept:"Department/State of Panama, Republic of Colombia",
     panama:"Republic of Panama", uszone:"U.S.-administered Canal Zone"
@@ -595,6 +596,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 2500 BCE – 1200 CE", t:{ west:IC.ancient, zone:IC.ancient, east:IC.ancient }, flagKeys:{ west:"noflag", zone:"noflag", east:"noflag" },
+      story:"Long before the Cueva chiefdoms Spanish conquistadors encountered, the isthmus was home to a long sequence of pre-Columbian cultures: Monagrillo, whose pottery ranks among the oldest ceramic traditions identified anywhere in the Americas; Barriles, known for monumental stone statues; and Gran Coclé, whose elite burials contained elaborately worked gold ornaments. No political unification exists across the isthmus at any point in this span, and no flag or comparable banner survives &mdash; shown here honestly blank across the whole, undivided territory." },
     { year:"c. 1200 – 1519", t:{ west:IC.precontact, zone:IC.precontact, east:IC.precontact }, flagKeys:{ west:"noflag", zone:"noflag", east:"noflag" },
       story:"The Cueva people dominate much of central and eastern Panama under a network of chiefdoms, while Guná (Kuna) and other groups hold the Caribbean coast and interior. No single unified state governs the isthmus, and no securely documented flag survives." },
     { year:"1519 – 1821", t:{ west:IC.spain, zone:IC.spain, east:IC.spain }, flagKeys:{ west:"burgundy", zone:"burgundy", east:"burgundy" },
