@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, six sovereigns</h2>
+    <h2>One border, seven sovereigns</h2>
     <p class="imap-sub">The Dominican Republic's own real border &mdash; the eastern two-thirds of Hispaniola, traced whole. There's no genuine internal split within this territory at any point; what changes, era to era, is only which government held all of it, from Spain's first colony to the modern republic. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>This lineage's real division always ran along the island's shared border with Haiti, not within Dominican territory itself.</b> Twenty-two years of Haitian rule (1822&ndash;44) governed the whole island as one unit from Port-au-Prince; every other era here is the eastern two-thirds alone, under one government at a time. See the Caribbean hub page for the island-wide, two-country map.
@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1492</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 600 &ndash; 1492</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -571,15 +571,16 @@
 <script>
 (function () {
   var IC = {
-    spain1: "#d9662f", transitional: "#6e6551", haiti: "#1f7a7a",
+    taino: "#5c2a24", spain1: "#d9662f", transitional: "#6e6551", haiti: "#1f7a7a",
     republic: "#c9962c", spain2: "#c14f1d"
   };
   var INAMES = {
-    spain1: "Spanish Santo Domingo", transitional: "Contested / transitional (France/Spain)",
+    taino: "Ta&iacute;no Chiefdoms (Cacicazgos)", spain1: "Spanish Santo Domingo", transitional: "Contested / transitional (France/Spain)",
     haiti: "Haitian unification of Hispaniola", republic: "Dominican Republic",
     spain2: "Spanish re-annexation"
   };
   var IFLAGS = {
+    taino: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     burgundy: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="26"/>',
     french: '<rect x="0" y="0" width="100" height="200" fill="#002395"/><rect x="100" y="0" width="100" height="200" fill="#ffffff"/><rect x="200" y="0" width="100" height="200" fill="#ed2939"/>',
     haiti: '<rect width="300" height="100" fill="#1b3a76"/><rect x="0" y="100" width="300" height="100" fill="#b6303c"/><rect x="120" y="80" width="60" height="40" fill="#f4efe1" stroke="#8a6a1f" stroke-width="2"/>',
@@ -595,6 +596,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 600 &ndash; 1492", name:"Ta&iacute;no Chiefdoms (Cacicazgos)", t:{ do_:IC.taino }, flagKeys:{ do_:"taino" },
+      story:"For roughly nine centuries before Columbus, Hispaniola is home not to one nation but to several Ta&iacute;no cacicazgos &mdash; hierarchical chiefdoms descended from Arawak-speaking migrants who settled the Greater Antilles in the centuries after leaving South America. Each cacicazgo (Marién, Maguá, Maguana, Jaragua, and Higüey among them) answered to its own cacique and paid no tribute to any wider Ta&iacute;no state; the island's political map at contact was already a patchwork the Spanish conquest would erase within a generation. No flag or comparable woven banner from this era survives or was ever recorded; shown here honestly blank." },
     { year:"1492", name:"Spanish Santo Domingo", t:{ do_:IC.spain1 }, flagKeys:{ do_:"burgundy" },
       story:"Columbus's 1492 landfall and the 1496–98 founding of Santo Domingo make it the first permanent European settlement in the Americas, seat of Spain's first New World colonial administration until interest drifts toward richer mainland viceroyalties." },
     { year:"1795", name:"French cession and Spanish restoration", t:{ do_:IC.transitional }, flagKeys:{ do_:"french" },
