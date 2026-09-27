@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One river valley, five flags</h2>
+    <h2>One river valley, six flags</h2>
     <p class="imap-sub">Senegal's own real border, traced whole &mdash; there is no internal split to draw. The Gambia forms a thin enclave along the Gambia River inside Senegal's own borders but was never part of Senegal's own political lineage, so it's marked only as a neighboring label, not carved out as an internal region. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>The Gambia is a neighbor, not a missing piece.</b> The narrow strip of the Gambia running through Senegal's south is a separate, distinct former British colony with its own flag history &mdash; not a region ever governed as part of Senegal's own state, so it isn't shown as an internal split here.
@@ -250,7 +250,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -525,6 +525,7 @@
 <script>
 (function () {
   var IC = {
+    takrur:"#7a5a3a",
     jolof:"#a9762f",
     fragmented:"#6b5c4a",
     french:"#204b5c",
@@ -532,6 +533,7 @@
     independent:"#7c2e1f"
   };
   var INAMES = {
+    takrur:"Kingdom of Takrur (Tekrur)",
     jolof:"Jolof Empire",
     fragmented:"Fragmented Wolof & Serer kingdoms",
     french:"French colonial Senegal",
@@ -539,6 +541,7 @@
     independent:"Republic of Senegal (independent)"
   };
   var IFLAGS = {
+    takrur: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     jolof: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     fragmented: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     french: "<rect width=\"300\" height=\"200\" fill=\"#0055A4\"/><rect x=\"100\" width=\"100\" height=\"200\" fill=\"#FFFFFF\"/><rect x=\"200\" width=\"100\" height=\"200\" fill=\"#EF4135\"/>",
@@ -556,6 +559,7 @@
   document.getElementById("ilbl-sn").setAttribute("x","150.5"); document.getElementById("ilbl-sn").setAttribute("y","140.5");
 
   var ISNAP = [
+    { year:"c. 850 \u2013 c. 1350", name:"Kingdom of Takrur (Tekrur)", t:{sn:IC.takrur}, flagKeys:{sn:"takrur"}, story:"Takrur is the earliest polity in the Senegal River valley documented by name in outside sources, appearing in the 11th-century writings of the Arab geographer al-Bakri as an established kingdom engaged in trans-Saharan trade. Its king, War Jabi ibn Rabis, converts to Islam around the 1030s\u201340s, among the earliest royal conversions anywhere in sub-Saharan West Africa. Takrur persists in the Futa Toro region for roughly five centuries before being eclipsed by the rise of the Jolof Empire around 1350. No flag or banner survives or was likely recorded for Takrur, so it is shown honestly blank." },
     { year:"c. 1350 \u2013 1549", name:"Jolof Empire", t:{sn:IC.jolof}, flagKeys:{sn:"jolof"}, story:"According to Wolof oral tradition, Ndiadiane Ndiaye unites the Wolof-speaking peoples of the Senegal River valley into the Jolof Empire around the mid-14th century, a loose overlordship over the later kingdoms of Cayor, Baol, and Waalo. No securely documented flag survives from this pre-colonial era, so it is shown honestly blank." },
     { year:"1549 \u2013 1659", name:"Fragmented Wolof and Serer kingdoms", t:{sn:IC.fragmented}, flagKeys:{sn:"fragmented"}, story:"Jolof's overlordship collapses after its army's defeat at the Battle of Danki around 1549. Cayor, Waalo, Baol, and a reduced rump Jolof become fully independent; the Serer kingdoms of Sine and Saloum continue their own separate royal lines. No single power reunifies the region, and no flag survives for any of these successor kingdoms." },
     { year:"1659 \u2013 1959", name:"French colonial Senegal (Saint-Louis, then French West Africa)", t:{sn:IC.french}, flagKeys:{sn:"french"}, story:"France establishes a permanent trading post at Saint-Louis in 1659. Senegal becomes the administrative and commercial center of French West Africa when that federation forms in 1895, with Dakar named its federal capital in 1902. The French tricolor flies over the whole territory throughout \u2014 Senegal has no distinct flag of its own under French rule." },
