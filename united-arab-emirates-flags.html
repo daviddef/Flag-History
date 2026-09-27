@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 700</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 3000 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -289,7 +289,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Fragmented tribal coast</div>
+        <div class="imap-name" id="iEraName">Bronze Age Magan &amp; the pre-Islamic coast</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -566,6 +566,9 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 3000 BCE–c. 700 CE", name:"Bronze Age Magan & the pre-Islamic coast", t:{ abudhabi:IC.undocumented, dubai:IC.undocumented, sharjah:IC.undocumented, ajman:IC.undocumented, uaq:IC.undocumented, rak:IC.undocumented, fujairah:IC.undocumented },
+      flagKeys:{ abudhabi:"undocumented", dubai:"undocumented", sharjah:"undocumented", ajman:"undocumented", uaq:"undocumented", rak:"undocumented", fujairah:"undocumented" },
+      story:"Archaeological sites at Hili and along this coast document the Umm an-Nar Bronze Age culture (c. 2600&ndash;2000 BCE), the civilization Sumerian and later Akkadian cuneiform records call &quot;Magan,&quot; prized as a source of copper shipped to Mesopotamia. Iron Age settlement follows, sustained by early falaj irrigation, and by late antiquity the coast sits within the pre-Islamic Arabian tribal order, with a small Nestorian Christian monastery documented on Sir Bani Yas island as late as the 6th&ndash;7th centuries. Islam arrives in the 630s CE. No flag in any modern sense existed across this span, and no fixed internal borders separate this coast into named territories yet." },
     { year:"c. 700", name:"Fragmented tribal coast", t:{ abudhabi:IC.undocumented, dubai:IC.undocumented, sharjah:IC.undocumented, ajman:IC.undocumented, uaq:IC.undocumented, rak:IC.undocumented, fujairah:IC.undocumented },
       flagKeys:{ abudhabi:"undocumented", dubai:"undocumented", sharjah:"undocumented", ajman:"undocumented", uaq:"undocumented", rak:"undocumented", fujairah:"undocumented" },
       story:"Scattered pearling, fishing, and trading settlements under local tribal leadership share this coast, with no unified polity of any real size and no internal borders of any kind. No flag in the modern territorial sense survives from this millennium-long span." },
