@@ -241,16 +241,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>Two protectorates, one sultanate, 1912&ndash;1956</h2>
-    <p class="imap-sub">Morocco's own real border, split into the two zones the 1912 Treaty of Fez actually created: France's much larger zone across most of the country, and Spain's smaller zone along the northern Mediterranean coast and Tangier hinterland. Press play, or drag the slider.</p>
+    <h2>Two protectorates, three zones, 1912&ndash;1969</h2>
+    <p class="imap-sub">Morocco's own real border, split into three zones: France's much larger zone across most of the country, Spain's smaller zone along the northern Mediterranean coast and Tangier hinterland, and Spain's separate, much smaller Ifni &amp; Tarfaya zone in the far south. Press play, or drag the slider. (The international zone of Tangier is a fourth real case, called out in the text below but not drawn separately &mdash; see the rule box.)</p>
     <div class="rule-box">
-      <b>The sultan's own sovereignty, nominally, never split &mdash; only who actually administered each zone did.</b> Simplified to the two main zones for legibility: Spain's separate, much smaller Ifni and Tarfaya zones in the far south, and the international administration of Tangier itself, aren't drawn as their own regions here. The border line below only solidifies for 1912&ndash;1956; before and after, the whole country is governed as one.
+      <b>The sultan's own sovereignty, nominally, never split &mdash; only who actually administered each zone did.</b> Spain's far south, Ifni and Tarfaya, was administered separately from both the French protectorate and Spain's own northern zone, and is now drawn as its own zone below. Tarfaya returned to Moroccan sovereignty in 1958, but Ifni itself stayed a Spanish possession until 1969, well over a decade after the main protectorates ended in 1956 &mdash; the border line for that southern zone stays solid that much longer. The international administration of Tangier (1923&ndash;1956) is a separate, genuine case that still isn't drawn as its own region here: at this map's scale, the city and its small hinterland don't reduce to a legible polygon, so its story is told in the text below instead. The border lines below solidify only where a zone was actually run apart from its neighbor; each dissolves once a single government reunifies the territory.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">c. 800 BCE</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -259,11 +259,15 @@
           <text x="60" y="12">SPAIN</text>
         </g>
         <path id="ireg-spanish" class="ireg-fill" d="M97.4,57.6 L104.8,48.7 L116.4,42.7 L125.0,37.2 L132.7,23.6 L136.4,15.5 L144.9,15.5 L151.9,21.1 L162.9,20.2 L174.9,23.1 L179.9,23.3 L184.3,31.7 L185.0,39.7 L188.9,53.7 L192.0,56.5 L189.9,61.6 L174.7,63.8 L169.5,68.7 L150,66 L125,62 L108,58 Z"/>
-        <path id="ireg-french" class="ireg-fill" d="M97.4,57.6 L108,58 L125,62 L150,66 L169.5,68.7 L162.8,69.8 L162.3,79.6 L148.8,84.8 L144.3,91.4 L134.9,95.0 L123.3,97.0 L104.6,106.7 L104.7,122.3 L102.9,122.3 L103.2,129.4 L96.1,129.8 L92.3,132.8 L87.1,132.8 L82.9,131.1 L73.1,132.5 L69.4,142.8 L65.8,143.7 L60.3,160.4 L44.2,174.6 L40.4,192.8 L35.7,198.7 L34.3,203.5 L8.2,204.5 L8.0,204.5 L8.5,198.4 L13.0,194.8 L16.8,187.9 L16.0,183.5 L20.0,174.2 L26.5,165.8 L30.4,163.7 L33.4,156.0 L33.7,148.9 L37.9,140.8 L45.6,136.0 L52.9,122.5 L53.1,122.3 L58.9,117.3 L69.7,115.8 L78.8,106.8 L84.6,103.3 L94.3,92.3 L91.4,75.9 L95.8,64.5 L97.4,57.6 Z"/>
+        <path id="ireg-french" class="ireg-fill" d="M97.4,57.6 L108,58 L125,62 L150,66 L169.5,68.7 L162.8,69.8 L162.3,79.6 L148.8,84.8 L144.3,91.4 L134.9,95.0 L123.3,97.0 L104.6,106.7 L104.7,122.3 L102.9,122.3 L103.2,129.4 L96.1,129.8 L92.3,132.8 L87.1,132.8 L82.9,131.1 L73.1,132.5 L53.0,122.4 L58.9,117.3 L69.7,115.8 L78.8,106.8 L84.6,103.3 L94.3,92.3 L91.4,75.9 L95.8,64.5 L97.4,57.6 Z"/>
+        <path id="ireg-ifni" class="ireg-fill" d="M73.1,132.5 L69.4,142.8 L65.8,143.7 L60.3,160.4 L44.2,174.6 L40.4,192.8 L35.7,198.7 L34.3,203.5 L8.2,204.5 L8.0,204.5 L8.5,198.4 L13.0,194.8 L16.8,187.9 L16.0,183.5 L20.0,174.2 L26.5,165.8 L30.4,163.7 L33.4,156.0 L33.7,148.9 L37.9,140.8 L45.6,136.0 L52.9,122.5 L53.0,122.4 L73.1,132.5 Z"/>
         <path class="iborder-line" id="ib-spanish-french" d="M169.5,68.7 L150,66 L125,62 L108,58 L97.4,57.6"/>
+        <path class="iborder-line" id="ib-french-ifni" d="M73.1,132.5 L53.0,122.4"/>
         <g font-family="IBM Plex Mono, monospace">
           <text class="ireg-label" id="ilbl-spanish" x="150" y="42">SPANISH ZONE</text>
           <text class="ireg-label" id="ilbl-french" x="90" y="120">FRENCH ZONE</text>
+          <text class="ireg-label" id="ilbl-ifni" x="30" y="167">IFNI &amp;</text>
+          <text class="ireg-label" id="ilbl-ifni2" x="30" y="178">TARFAYA</text>
         </g>
       </svg>
       <div class="imap-head">
@@ -273,7 +277,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Schematic internal partition on a real traced border &mdash; the French/Spanish dividing line is approximate, not a surveyed frontier, and Ifni, Tarfaya, and Tangier are simplified into the nearer of the two zones. See the rule box above.</p>
+      <p class="map-note">Schematic internal partition on a real traced border &mdash; the French/Spanish and French/Ifni dividing lines are approximate, not surveyed frontiers, and the international zone of Tangier is simplified into the nearer of the drawn zones rather than shown separately. See the rule box above.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -507,21 +511,23 @@
   }).join("");
 
   var ISNAP = [
-    { year:"c. 800 BCE", name:"Phoenician & Carthaginian Posts, and the Berber Kingdom of Mauretania", t:{ spanish:IC.ancient, french:IC.ancient }, flagKeys:{ spanish:"ancient", french:"ancient" },
-      story:"Phoenician traders establish coastal posts from around the 8th century BCE, later extended by Carthage; the independent Berber Kingdom of Mauretania follows, reaching a cultured peak under Juba II before Rome annexes it directly in 40 CE, followed in turn by Vandal and Byzantine coastal enclaves until the Umayyad conquest completes around 709 CE. No flag survives from any of these powers, and the north/south protectorate line drawn by the 1912 Treaty of Fez is over seventeen centuries away &mdash; no internal division to draw yet." },
-    { year:"c. 788", name:"Early Islamic dynasties", t:{ spanish:IC.dynasties, french:IC.dynasties }, flagKeys:{ spanish:"dynasties", french:"dynasties" },
+    { year:"c. 800 BCE", name:"Phoenician & Carthaginian Posts, and the Berber Kingdom of Mauretania", t:{ spanish:IC.ancient, french:IC.ancient, ifni:IC.ancient }, flagKeys:{ spanish:"ancient", french:"ancient", ifni:"ancient" },
+      story:"Phoenician traders establish coastal posts from around the 8th century BCE, later extended by Carthage; the independent Berber Kingdom of Mauretania follows, reaching a cultured peak under Juba II before Rome annexes it directly in 40 CE, followed in turn by Vandal and Byzantine coastal enclaves until the Umayyad conquest completes around 709 CE. No flag survives from any of these powers, and the internal protectorate lines drawn by the 1912 Treaty of Fez are over seventeen centuries away &mdash; no internal division to draw yet." },
+    { year:"c. 788", name:"Early Islamic dynasties", t:{ spanish:IC.dynasties, french:IC.dynasties, ifni:IC.dynasties }, flagKeys:{ spanish:"dynasties", french:"dynasties", ifni:"dynasties" },
       story:"The Idrisid dynasty founds the first independent Islamic state in the far Maghreb around 788, followed by the Almoravids, Almohads, Marinids, and Saadis &mdash; nine centuries of successive independent dynasties, never incorporated into the Ottoman Empire." },
-    { year:"1666", name:"Alaouite Sultanate (independent)", t:{ spanish:IC.alaouite, french:IC.alaouite }, flagKeys:{ spanish:"alaouite", french:"alaouite" },
+    { year:"1666", name:"Alaouite Sultanate (independent)", t:{ spanish:IC.alaouite, french:IC.alaouite, ifni:IC.alaouite }, flagKeys:{ spanish:"alaouite", french:"alaouite", ifni:"alaouite" },
       story:"The Alaouite dynasty formally takes the Moroccan throne under Sultan Moulay Rashid in 1666, ruling the whole country as one fully independent sultanate for the next two and a half centuries." },
-    { year:"1912", name:"French & Spanish Protectorates", t:{ spanish:IC.spanish, french:IC.french }, flagKeys:{ spanish:"spanish", french:"french" },
-      story:"The March 1912 Treaty of Fez cedes control over most of the country to France, while Spain administers a northern strip and the southern Ifni/Tarfaya zones. The sultan remains nominal sovereign throughout, with French and Spanish residents-general holding real power." },
-    { year:"1956–present", name:"Kingdom of Morocco (independent)", t:{ spanish:IC.modern, french:IC.modern }, flagKeys:{ spanish:"modern", french:"modern" },
-      story:"France and Spain end their protectorates in March and April 1956, restoring full sovereignty to Sultan Mohammed V and reuniting the whole country under the Alaouite crown once more." }
+    { year:"1912", name:"French & Spanish Protectorates", t:{ spanish:IC.spanish, french:IC.french, ifni:IC.spanish }, flagKeys:{ spanish:"spanish", french:"french", ifni:"spanish" },
+      story:"The March 1912 Treaty of Fez cedes control over most of the country to France, while Spain administers a northern strip around Tetouan and, separately, the small southern Ifni and Tarfaya zones near the border with what is now Western Sahara &mdash; run from Madrid on their own terms rather than as part of the northern zone. Tangier, a few miles from the northern zone's own coast, becomes a distinct internationally administered city in 1923, a third kind of separate status this map doesn't draw as its own polygon. The sultan remains nominal sovereign throughout, with French and Spanish residents-general holding real power." },
+    { year:"1956", name:"Kingdom of Morocco (independent) — Ifni still Spanish", t:{ spanish:IC.modern, french:IC.modern, ifni:IC.spanish }, flagKeys:{ spanish:"modern", french:"modern", ifni:"spanish" },
+      story:"France and Spain end their main protectorates in March and April 1956, restoring full sovereignty over the bulk of the country to Sultan Mohammed V; the international zone of Tangier is reintegrated the same year. But Spain's smaller southern possessions are handled separately from the main protectorate: Tarfaya returns to Morocco under the April 1958 Cintra Agreement, while Ifni itself remains a Spanish overseas province for over another decade, run from Madrid exactly as it had been since 1912 even as the rest of the country is fully independent." },
+    { year:"1969", name:"Ifni returned; full reunification", t:{ spanish:IC.modern, french:IC.modern, ifni:IC.modern }, flagKeys:{ spanish:"modern", french:"modern", ifni:"modern" },
+      story:"Spain finally cedes Ifni to Morocco in January 1969, ending 57 years of separate Spanish administration over the territory and completing the reunification of every zone this map draws. Western Sahara, the far larger former Spanish possession just south of Ifni and Tarfaya, remains a separate and still-unresolved dispute that this map does not attempt to show." }
   ];
 
-  var IREGIONS = ["spanish","french"];
-  var IREGION_NAMES = { spanish:"Spanish zone (north)", french:"French zone (rest of country)" };
-  var IADJ = [["spanish","french"]];
+  var IREGIONS = ["spanish","french","ifni"];
+  var IREGION_NAMES = { spanish:"Spanish zone (north)", french:"French zone (rest of country)", ifni:"Spanish Ifni & Tarfaya (south)" };
+  var IADJ = [["spanish","french"],["french","ifni"]];
 
   function iTextColorFor(hex) {
     var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
@@ -560,6 +566,12 @@
         var lblColor = iTextColorFor(era.t[id]);
         lbl.setAttribute("fill", lblColor);
         lbl.setAttribute("stroke", lblColor === "#201a12" ? "#f7f1e3" : "#201a12");
+      }
+      var lbl2 = document.getElementById("ilbl-" + id + "2");
+      if (lbl2) {
+        var lbl2Color = iTextColorFor(era.t[id]);
+        lbl2.setAttribute("fill", lbl2Color);
+        lbl2.setAttribute("stroke", lbl2Color === "#201a12" ? "#f7f1e3" : "#201a12");
       }
     });
 
