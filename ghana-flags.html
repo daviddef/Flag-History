@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1670</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1295</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 330 470" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -268,7 +268,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Ashanti Empire and Akan states</div>
+        <div class="imap-name" id="iEraName">Bonoman and the Earliest Akan States</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -544,12 +544,14 @@
 <script>
 (function () {
   var IC = {
-    independent:"#6b5c4a", colony:"#204b5c", modern:"#a9762f"
+    bonoman:"#5c4a3a", independent:"#6b5c4a", colony:"#204b5c", modern:"#a9762f"
   };
   var INAMES = {
+    bonoman:"Bonoman and the Earliest Akan States",
     independent:"Ashanti Empire (independent)", colony:"Gold Coast (British colony/protectorate)", modern:"Ghana (independent)"
   };
   var IFLAGS = {
+    bonoman: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     ashanti_banner: '<rect width="300" height="200" fill="#5c2a24"/><rect x="40" y="30" width="220" height="140" fill="none" stroke="#c9a13c" stroke-width="4"/><circle cx="150" cy="100" r="28" fill="#c9a13c"/><path fill="#5c2a24" d="M150,80 l9,25 26,0 -21,17 8,25 -22,-16 -22,16 8,-25 -21,-17 26,0 Z" transform="scale(0.55) translate(120,80)"/>',
     goldcoast_ensign: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/>',
     ghana_flag: '<rect width="300" height="66.7" fill="#ce1126"/><rect y="66.7" width="300" height="66.6" fill="#fcd116"/><rect y="133.3" width="300" height="66.7" fill="#006b3f"/><path fill="#141413" d="M150,80 l9,25 26,0 -21,17 8,25 -22,-16 -22,16 8,-25 -21,-17 26,0 Z"/>'
@@ -563,6 +565,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1295", name:"Bonoman and the Earliest Akan States", t:{ coast:IC.bonoman, ashanti:IC.bonoman }, flagKeys:{ coast:"bonoman", ashanti:"bonoman" },
+      story:"Bonoman, centered on Bono Manso, emerges as the earliest known Akan state around the late 13th century, growing wealthy on the trans-Saharan gold trade and traditionally remembered as the point of origin from which other Akan groups &mdash; ancestors of the Ashanti, Akyem, Akwamu, Fante, and others &mdash; gradually disperse to found their own states. No flag or war banner is attested; authority was expressed through regalia, drums, and oral praise-titles instead. Ashanti's own political rise, centered further south, is already underway by the 1670s, when the next entry begins &mdash; no British colony yet exists anywhere on this map." },
     { year:"c. 1670", name:"Ashanti Empire and Akan states", t:{ coast:IC.independent, ashanti:IC.independent }, flagKeys:{ coast:"ashanti_banner", ashanti:"ashanti_banner" },
       story:"The Ashanti Empire consolidates from the 1670s under Osei Tutu, centered on the sacred Golden Stool at Kumasi, becoming the dominant power of the whole forest interior and coast alike &mdash; no British colony yet exists anywhere on this map." },
     { year:"1821", name:"Gold Coast colony established; Ashanti remains independent", t:{ coast:IC.colony, ashanti:IC.independent }, flagKeys:{ coast:"goldcoast_ensign", ashanti:"ashanti_banner" },
