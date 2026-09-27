@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five rulers</h2>
+    <h2>One border, six rulers</h2>
     <p class="imap-sub">Laos's own real border, traced whole &mdash; this page has no internal split to show honestly. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>Three kingdoms did once fragment this territory &mdash; but not on flags anyone can honestly draw.</b> After Lan Xang split around 1707&ndash;13, Luang Prabang, Vientiane, and Champasak each had their own crown for nearly two centuries. But only Luang Prabang's own elephant banner is well documented; Vientiane and Champasak's individual flags are not, so drawing three separately-colored regions here would mean inventing two of them. The map instead shows who held all of Laos's present-day territory at once, era to era &mdash; consistent with how the timeline below treats that same span as one honest bridging entry.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1353</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 500 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 250.4 300" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none">
@@ -268,7 +268,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Lan Xang Kingdom</div>
+        <div class="imap-name" id="iEraName">Plain of Jars culture &amp; Muang Sua (pre-Lan Xang)</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -523,9 +523,10 @@
 <script>
 (function () {
   var IC = {
-    lanxang: "#5c2a24", fragmented: "#6b5c4a", french: "#21468b", kingdom: "#204b5c", pdr: "#c8102e"
+    prelanxang: "#a9762f", lanxang: "#5c2a24", fragmented: "#6b5c4a", french: "#21468b", kingdom: "#204b5c", pdr: "#c8102e"
   };
   var INAMES = {
+    prelanxang: "Plain of Jars culture &amp; Muang Sua (pre-Lan Xang)",
     lanxang: "Lan Xang Kingdom (no flag documented)",
     fragmented: "Fragmented Lao kingdoms (Luang Prabang, Vientiane, Champasak)",
     french: "French Protectorate of Laos",
@@ -533,6 +534,7 @@
     pdr: "Lao People's Democratic Republic"
   };
   var IFLAGS = {
+    prelanxang: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     lanxang: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     fragmented: '<rect width="300" height="200" fill="#c8102e"/><ellipse cx="150" cy="110" rx="42" ry="34" fill="#f4efe1"/><ellipse cx="150" cy="108" rx="28" ry="22" fill="#c8102e"/>',
     french: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/>',
@@ -548,6 +550,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 500 BCE", name:"Plain of Jars culture &amp; Muang Sua (pre-Lan Xang)", t:{ la:IC.prelanxang }, flagKeys:{ la:"prelanxang" },
+      story:"Long before Lan Xang, the Plain of Jars culture scattered thousands of massive carved stone jars across Xiangkhouang province, likely for mortuary use, but left no written record of itself. By the early medieval period the Mekong valley near modern Luang Prabang held Muang Sua, a Mon-Khmer and later Tai-Lao principality under intermittent Nanzhao and Khmer overlordship, until Fa Ngum, raised at the Khmer court, conquered it in 1353 to found Lan Xang. No flag survives from either." },
     { year:"1353", name:"Lan Xang Kingdom", t:{ la:IC.lanxang }, flagKeys:{ la:"lanxang" },
       story:"Fa Ngum founds Lan Xang (\"Land of a Million Elephants\") in 1353, unifying Lao-speaking principalities along the middle Mekong with Khmer military backing and establishing Theravada Buddhism as the state religion. No securely documented flag survives from Lan Xang itself." },
     { year:"c. 1707", name:"Fragmented Lao kingdoms (Luang Prabang, Vientiane, Champasak)", t:{ la:IC.fragmented }, flagKeys:{ la:"fragmented" },
