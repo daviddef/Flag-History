@@ -98,7 +98,7 @@
     position: relative; cursor: help;
   }
   .tag .dot { width: 6px; height: 6px; border-radius: 50%; }
-  .tag:hover, .tag:focus-visible { border-color: var(--brick); color: var(--ink); }
+  .tag:hover, .tag:focus-visible, .tag.tip-open { border-color: var(--brick); color: var(--ink); z-index: 30; }
   .tag:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
   /* Custom hover/tap tooltip for tags */
