@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five eras</h2>
+    <h2>One border, six eras</h2>
     <p class="imap-sub">Ecuador's own real border, traced whole &mdash; mainland Ecuador, the territory covered by this page's own timeline. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>Ecuador has no genuine internal governing split to show.</b> From the late Inca conquest through the Audiencia of Quito, the independence juntas, Gran Colombia, and the modern republic, the whole territory moved together under a single authority at a time. What changes here is only who held it.
@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">to 1563</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 3500 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -267,7 +267,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Indigenous highland kingdoms &amp; Inca conquest</div>
+        <div class="imap-name" id="iEraName">Valdivia &amp; the Formative-Period Coastal Cultures</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -530,8 +530,9 @@
 
 <script>
 (function () {
-  var IC = { precolonial: "#6b5c4a", colonial: "#a4302a", junta: "#7c2e1f", republic: "#034ea2" };
+  var IC = { formative: "#8a7550", precolonial: "#6b5c4a", colonial: "#a4302a", junta: "#7c2e1f", republic: "#034ea2" };
   var INAMES = {
+    formative: "Valdivia &amp; the Formative-Period Coastal Cultures",
     precolonial: "Indigenous kingdoms &amp; Inca conquest", colonial: "Real Audiencia de Quito (Spanish colonial)",
     junta: "War of independence / Gran Colombia", republic: "Republic of Ecuador"
   };
@@ -551,6 +552,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 3500 BCE", name:"Valdivia &amp; the Formative-Period Coastal Cultures", t:{ ec:IC.formative }, flagKeys:{ ec:"noflag" },
+      story:"Long before the Cara and Quitu kingdoms or any Inca presence, Ecuador's coast is home to some of the earliest known farming and pottery-making societies in South America. The Valdivia culture (c. 3500&ndash;1800 BCE) produces ceramics among the oldest documented in the Americas; successor Machalilla and Chorrera traditions (through roughly 500 CE) spread related techniques and iconography across the coast and into the Andean highlands. No unified polity governs the region &mdash; only village-level societies known through archaeology &mdash; and no flag or comparable emblem survives from any of them." },
     { year:"to 1563", name:"Indigenous highland kingdoms &amp; Inca conquest", t:{ ec:IC.precolonial }, flagKeys:{ ec:"noflag" },
       story:"Before the late 1400s the northern highlands are home to the Quitu, Cara, and other indigenous kingdoms, with no single ruling authority. The Inca Empire conquers this region only late, under Huayna Capac, shortly before Spanish arrival. No securely documented flag survives." },
     { year:"1563", name:"Real Audiencia de Quito (Spanish colonial)", t:{ ec:IC.colonial }, flagKeys:{ ec:"colonial" },
