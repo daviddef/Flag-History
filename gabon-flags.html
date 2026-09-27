@@ -243,13 +243,13 @@
     <h2>One coastline, four flags</h2>
     <p class="imap-sub">Gabon's own real border &mdash; estuary, coastal strip, and dense interior forest &mdash; with no internal split to show. Press play, or drag the slider, to watch who held the whole territory, era to era.</p>
     <div class="rule-box">
-      <b>This is a single-region page, honestly.</b> The Myene coastal polities and Fang, Punu, and other interior peoples never formed one mappable state with a stable internal boundary &mdash; the timeline itself leaves that era's flag blank for the same reason. From the 1839 treaties onward, French Gabon, the autonomous republic, and the independent republic were each governed as a single unified territory, so there's no genuine internal line to draw for those eras either.
+      <b>This is a single-region page, honestly.</b> From the earliest Pygmy and Bantu-migration peoples through the Myene coastal polities and Fang, Punu, and other interior peoples, no era before European contact formed one mappable state with a stable internal boundary &mdash; the timeline itself leaves those eras' flags blank for the same reason. From the 1839 treaties onward, French Gabon, the autonomous republic, and the independent republic were each governed as a single unified territory, so there's no genuine internal line to draw for those eras either.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">pre-1839</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">Prehistory</span>
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 332" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -265,7 +265,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Myene coastal polities</div>
+        <div class="imap-name" id="iEraName">Pygmy Peoples and the Bantu Migration into Gabon</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -490,9 +490,10 @@
 <script>
 (function () {
   var IC = {
-    none:"#6b5c4a", colony:"#6e6047", autonomous:"#a9762f", modern:"#204b5c"
+    prehistory:"#5c4a3a", none:"#6b5c4a", colony:"#6e6047", autonomous:"#a9762f", modern:"#204b5c"
   };
   var INAMES = {
+    prehistory:"Pygmy Peoples and the Bantu Migration into Gabon",
     none:"Myene coastal polities and interior peoples", colony:"French Gabon",
     autonomous:"Gabon (autonomous republic within the French Community)", modern:"Gabonese Republic (independent)"
   };
@@ -511,6 +512,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"Prehistory", name:"Pygmy Peoples and the Bantu Migration into Gabon", t:{ ga:IC.prehistory }, flagKeys:{ ga:"none" },
+      story:"Long before the Myene, Fang, and other peoples recorded at European contact, Gabon's equatorial forest is home to Pygmy hunter-gatherer communities &mdash; ancestors of today's Babongo, Baka, and Bakoya. Beginning roughly three millennia ago, Bantu-speaking farming and iron-working peoples migrate south in successive waves as part of the broader Bantu expansion, gradually absorbing or displacing the earlier population and laying the foundation for the peoples who inhabit Gabon today. No flag or state survives from this immense span, because none existed in the modern sense." },
     { year:"pre-1839", name:"Myene coastal polities and interior peoples", t:{ ga:IC.none }, flagKeys:{ ga:"none" },
       story:"The Gabon estuary and coast are home to Myene-speaking peoples, including the Mpongwe under King Denis, while Fang and other peoples populate the dense interior forest &mdash; no single unifying kingdom governs the territory, and no securely documented flag survives from this era for any of the region's polities." },
     { year:"1839", name:"French Gabon", t:{ ga:IC.colony }, flagKeys:{ ga:"colony" },
