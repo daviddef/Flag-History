@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One island city, five flags</h2>
+    <h2>One island city, six flags</h2>
     <p class="imap-sub">Singapore's own real coastline, traced whole &mdash; there is no internal split to draw. Press play, or drag the slider, to watch who flew a flag over the island, era to era.</p>
     <div class="rule-box">
       <b>The 1959 flag outlasted the union it was made for.</b> Singapore adopted its crescent-and-five-stars flag for internal self-government in 1959, kept it as a constituent state's flag inside Malaysia from 1963, and kept it again after full independence in 1965 &mdash; the same design flying through every constitutional change since.
@@ -253,7 +253,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -538,6 +538,7 @@
 <script>
 (function () {
   var IC = {
+    singapura:"#6b5c4a",
     straits:"#204b5c",
     occupation:"#5c2a24",
     crown_colony:"#204b5c",
@@ -545,6 +546,7 @@
     independent:"#a9762f"
   };
   var INAMES = {
+    singapura:"Singapura, then Malacca/Johor Sultanate rule",
     straits:"British trading post & Straits Settlements",
     occupation:"Japanese occupation (Syonan-to)",
     crown_colony:"British Crown Colony of Singapore",
@@ -552,6 +554,7 @@
     independent:"Republic of Singapore"
   };
   var IFLAGS = {
+    singapura: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     straits: "<rect width=\"300\" height=\"200\" fill=\"#00247d\"/><path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#f4efe1\" stroke-width=\"34\"/><path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#cf142b\" stroke-width=\"14\"/><rect x=\"125\" width=\"50\" height=\"200\" fill=\"#f4efe1\"/><rect y=\"75\" width=\"300\" height=\"50\" fill=\"#f4efe1\"/><rect x=\"137\" width=\"26\" height=\"200\" fill=\"#cf142b\"/><rect y=\"87\" width=\"300\" height=\"26\" fill=\"#cf142b\"/>",
     occupation: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/><circle cx=\"150\" cy=\"100\" r=\"55\" fill=\"#a4302a\"/>",
     crown_colony: "<rect width=\"300\" height=\"200\" fill=\"#00247d\"/><path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#f4efe1\" stroke-width=\"34\"/><path d=\"M0,0 L300,200 M300,0 L0,200\" stroke=\"#cf142b\" stroke-width=\"14\"/><rect x=\"125\" width=\"50\" height=\"200\" fill=\"#f4efe1\"/><rect y=\"75\" width=\"300\" height=\"50\" fill=\"#f4efe1\"/><rect x=\"137\" width=\"26\" height=\"200\" fill=\"#cf142b\"/><rect y=\"87\" width=\"300\" height=\"26\" fill=\"#cf142b\"/>",
@@ -569,6 +572,7 @@
   document.getElementById("ilbl-sg").setAttribute("x","145.7"); document.getElementById("ilbl-sg").setAttribute("y","94.7");
 
   var ISNAP = [
+    { year:"c. 1299 \u2013 1819", name:"Kingdom of Singapura & Malacca/Johor Sultanate rule", t:{sg:IC.singapura}, flagKeys:{sg:"singapura"}, story:"The Malay Annals credit Sang Nila Utama with founding Singapura around 1299, and 1330s Chinese trade accounts independently confirm a real port-city on the island. Majapahit and Siamese-aligned attacks weaken the kingdom across the 14th century; its last king flees around 1396\u201398 to found the Sultanate of Malacca, which absorbs Singapura's territory. After Portugal conquers Malacca in 1511, the deposed royal line re-establishes itself as the Johor Sultanate, whose loose, largely nominal authority over the island lasts until Raffles's 1819 treaty. No flag survives, or was ever plausibly created, for any of these polities, so this entry is shown honestly blank." },
     { year:"1819 \u2013 1942", name:"British trading post and Straits Settlements", t:{sg:IC.straits}, flagKeys:{sg:"straits"}, story:"Stamford Raffles, acting for the British East India Company, signs a treaty with local Johor-aligned rulers in January 1819 to establish a trading post, quickly attracting merchants and migrants from across the region. Singapore joins Penang and Malacca as the Straits Settlements in 1826, becomes a British crown colony directly in 1867, and grows into one of the world's busiest ports." },
     { year:"1942 \u2013 1945", name:"Japanese occupation (Syonan-to)", t:{sg:IC.occupation}, flagKeys:{sg:"occupation"}, story:"Japan takes Singapore on 15 February 1942, one of Britain's most significant wartime defeats, and renames it Syonan-to (\"Light of the South\"). Occupation is marked by harsh treatment of the population, including the Sook Ching massacre targeting the ethnic Chinese community, before British forces retake the island after Japan's August 1945 surrender." },
     { year:"1946 \u2013 1963", name:"British Crown Colony of Singapore", t:{sg:IC.crown_colony}, flagKeys:{sg:"crown_colony"}, story:"Britain separates Singapore from the Straits Settlements to govern it as its own crown colony after reoccupation in 1946, gradually extending self-government: a fully elected legislature by 1955, full internal self-rule under Lee Kuan Yew's People's Action Party from 1959. Singapore's own crescent-and-stars flag is adopted that year, though Britain retains defense and foreign affairs until 1963." },
