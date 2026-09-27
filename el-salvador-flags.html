@@ -244,16 +244,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, six eras</h2>
+    <h2>One border, seven eras</h2>
     <p class="imap-sub">El Salvador's own real border, traced whole &mdash; the smallest and most densely settled state in this corner of the isthmus, shown as one territory throughout. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>El Salvador has no genuine internal governing split to show.</b> From Pipil Cuzcatl&aacute;n through Spanish colonial rule, Mexican annexation, the Central American federation, and full independence, this small, dense territory moved as one unit at every stage. What changes here is only who held it.
+      <b>El Salvador has no genuine internal governing split to show.</b> From the Maya settlements at Chalchuapa and Tazumal, through Pipil Cuzcatl&aacute;n, Spanish colonial rule, Mexican annexation, the Central American federation, and full independence, this small, dense territory moved as one unit at every stage. What changes here is only who held it.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1200</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1200 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -267,7 +267,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Pipil Cuzcatl&aacute;n and neighboring polities</div>
+        <div class="imap-name" id="iEraName">Maya Chalchuapa, Tazumal &amp; the Ilopango Eruption</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -574,8 +574,9 @@
 
 <script>
 (function () {
-  var IC = { indigenous: "#6b5c4a", colony: "#7c2e1f", mexico: "#9c3b28", federation: "#c9a13c", early_rep: "#204b5c", modern: "#a9762f" };
+  var IC = { maya: "#5c4a3a", indigenous: "#6b5c4a", colony: "#7c2e1f", mexico: "#9c3b28", federation: "#c9a13c", early_rep: "#204b5c", modern: "#a9762f" };
   var INAMES = {
+    maya: "Maya Chalchuapa, Tazumal &amp; the Ilopango Eruption",
     indigenous: "Pipil Cuzcatlán &amp; neighboring polities", colony: "Spanish colonial rule (Captaincy General of Guatemala)",
     mexico: "First Mexican Empire (annexed)", federation: "Federal Republic of Central America",
     early_rep: "Republic of El Salvador (early)", modern: "Republic of El Salvador (modern)"
@@ -596,6 +597,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1200 BCE", name:"Maya Chalchuapa, Tazumal &amp; the Ilopango Eruption", t:{ sv:IC.maya }, flagKeys:{ sv:"noflag" },
+      story:"Centuries before Pipil migrants founded Cuzcatlán, Maya-speaking peoples settle the Chalchuapa area from around 1200 BCE, building the ceremonial center of Tazumal into continuous use from the Preclassic into the Postclassic. The catastrophic Ilopango volcanic eruption (c. 5th&ndash;6th century CE) buries much of central El Salvador in ash &mdash; including, on a later occasion, the farming village of Joya de Cerén &mdash; forcing large-scale depopulation for generations before eventual Pipil resettlement. No polity-level flag survives from any Maya settlement in this territory." },
     { year:"c. 1200", name:"Pipil Cuzcatlán &amp; neighboring polities", t:{ sv:IC.indigenous }, flagKeys:{ sv:"noflag" },
       story:"Nahua-speaking Pipil migrants establish the kingdom of Cuzcatlán by around the 12th–13th century. It mounts unusually stiff resistance to Spanish invasion in 1524, defeating Pedro de Alvarado's first expedition outright. No documented flag survives." },
     { year:"1525", name:"Spanish colonial rule", t:{ sv:IC.colony }, flagKeys:{ sv:"burgundy" },
