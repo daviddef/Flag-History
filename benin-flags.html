@@ -240,16 +240,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>One coast, six flags</h2>
-    <p class="imap-sub">Benin's own real border, traced whole &mdash; from the Abomey kingdom to the modern republic, with no internal governing split to show. Press play, or drag the slider.</p>
+    <h2>One coast, seven flags</h2>
+    <p class="imap-sub">Benin's own real border, traced whole &mdash; from the Kingdom of Allada to the modern republic, with no internal governing split to show. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>Why no internal split.</b> From the Kingdom of Dahomey through French colonial rule, independence, the Marxist-Leninist republic, and the return to multiparty rule, every era covers this same strip of coast as one piece &mdash; there is no genuinely separate internal region of Benin to carve out honestly.
+      <b>Why no internal split.</b> From the Kingdom of Allada through the Kingdom of Dahomey, French colonial rule, independence, the Marxist-Leninist republic, and the return to multiparty rule, every era covers this same strip of coast as one piece &mdash; there is no genuinely separate internal region of Benin to carve out honestly.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 348.0 660.2" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-bj" class="ireg-fill" d="M214.4,624.5 L132.4,636.2 L108.0,566.9 L112.5,336.2 L92.5,315.5 L88.7,266.2 L54.3,231.0 L24.0,201.3 L36.6,148.4 L70.7,137.0 L90.9,93.1 L139.4,83.7 L161.1,53.7 L194.4,24.3 L229.9,24.0 L305.6,81.8 L301.7,115.2 L324.0,174.8 L304.5,215.2 L314.9,242.3 L266.8,304.5 L236.2,335.3 L217.5,398.6 L220.1,462.5 L214.4,624.5 Z"/>
@@ -554,12 +554,13 @@
 <script>
 (function () {
   var IC = {
-    e0:"#a9762f", e1:"#6b5c4a", e2:"#5c7a8c", e3:"#a9762f", e4:"#8a1f1f", e5:"#a9762f"
+    allada:"#a9762f", e0:"#a9762f", e1:"#6b5c4a", e2:"#5c7a8c", e3:"#a9762f", e4:"#8a1f1f", e5:"#a9762f"
   };
   var INAMES = {
-    e0:"Kingdom of Dahomey", e1:"French Dahomey (protectorate, then colony)", e2:"Autonomous Republic of Dahomey", e3:"Republic of Dahomey (independent)", e4:"People's Republic of Benin", e5:"Republic of Benin (multiparty)"
+    allada:"Kingdom of Allada (Aja)", e0:"Kingdom of Dahomey", e1:"French Dahomey (protectorate, then colony)", e2:"Autonomous Republic of Dahomey", e3:"Republic of Dahomey (independent)", e4:"People's Republic of Benin", e5:"Republic of Benin (multiparty)"
   };
   var IFLAGS = {
+    allada: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     e0: '<rect width="300" height="200" fill="#7c1d1d"/><circle cx="150" cy="100" r="55" fill="#c9a13c"/><path d="M120,80 L150,58 L180,80 L170,132 L150,148 L130,132 Z" fill="#1a1a1a"/>',
     e1: '<rect width="300" height="200" fill="#0055a4"/><rect x="100" width="100" height="200" fill="#ffffff"/><rect x="200" width="100" height="200" fill="#ef4135"/>',
     e2: '<rect width="300" height="200" fill="#008751"/><rect x="120" y="0" width="180" height="100" fill="#fcd116"/><rect x="120" y="100" width="180" height="100" fill="#e8112d"/>',
