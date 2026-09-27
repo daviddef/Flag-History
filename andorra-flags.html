@@ -244,13 +244,13 @@
     <h2>One border, one co-principality</h2>
     <p class="imap-sub">Andorra's own real border, traced whole &mdash; a single mountain co-principality with no internal region to carve out honestly. Press play, or drag the slider, to move through all three eras.</p>
     <div class="rule-box">
-      <b>Andorra has never split into separate internal territories.</b> It has been one small Pyrenean co-principality, jointly ruled by its two co-princes, since the 1278 Paréages &mdash; so this page shows one border and one government throughout, with only the flag itself changing.
+      <b>Andorra has never split into separate internal territories.</b> Before the 1278 Paréages settled joint rule between the Bishop of Urgell and the Count of Foix, the valleys were a disputed feudal and ecclesiastical dependency rather than a state of their own, and since 1278 Andorra has been one small Pyrenean co-principality &mdash; so this page shows one border throughout, with only the ruling arrangement and flag changing.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1278</span>
-        <input type="range" id="iSlider" min="0" max="2" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 843</span>
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-ad0" class="ireg-fill" d="M116.52,41.90 L105.49,45.71 L99.67,49.44 L92.58,49.03 L87.62,50.19 L81.29,42.45 L72.23,45.28 L70.79,55.14 L66.04,59.60 L65.21,62.18 L70.69,76.71 L69.68,81.68 L67.43,83.98 L61.98,84.92 L58.35,87.48 L49.12,87.65 L49.12,93.12 L47.32,97.46 L39.21,101.65 L40.62,107.88 L49.29,113.33 L51.77,116.70 L48.96,120.07 L38.35,124.95 L36.24,127.22 L33.55,137.44 L30.00,143.64 L30.60,145.96 L36.37,142.14 L41.77,142.06 L45.07,139.14 L50.32,140.34 L54.97,143.56 L55.87,151.21 L63.46,160.11 L65.84,167.79 L54.73,174.16 L52.39,179.73 L50.03,181.61 L38.87,182.19 L34.14,186.83 L32.83,191.11 L41.76,192.12 L46.22,195.50 L48.05,199.42 L47.54,207.47 L51.15,211.03 L49.59,218.77 L52.25,221.60 L50.87,226.82 L52.31,229.03 L59.82,233.62 L71.75,232.39 L84.59,234.38 L94.32,238.10 L104.32,235.81 L120.26,236.38 L122.76,232.90 L123.02,226.54 L126.23,223.78 L125.09,217.36 L127.63,212.56 L129.32,212.47 L130.61,214.45 L133.62,215.68 L134.89,220.18 L138.79,222.13 L139.54,217.46 L142.24,212.74 L148.59,207.94 L151.89,207.91 L154.17,210.28 L161.73,208.76 L170.39,210.03 L172.71,206.31 L177.31,206.90 L180.41,205.74 L186.69,206.91 L188.53,203.55 L192.12,201.98 L190.57,196.74 L190.09,184.93 L195.49,174.17 L197.79,174.97 L199.84,181.93 L201.88,184.02 L207.35,183.32 L216.26,186.53 L221.57,185.44 L227.92,175.00 L231.36,173.70 L229.39,159.97 L234.92,151.40 L235.44,135.24 L240.24,127.72 L245.00,122.71 L247.59,121.63 L256.12,122.51 L267.17,116.60 L270.00,113.54 L269.11,110.22 L266.12,108.08 L251.80,105.26 L243.80,101.79 L233.07,99.37 L231.26,97.74 L231.23,91.49 L238.61,79.78 L238.16,74.76 L233.77,76.17 L221.51,75.87 L214.07,70.84 L201.19,67.93 L198.41,71.37 L187.82,72.37 L183.06,66.80 L177.74,63.91 L174.02,63.94 L168.05,66.66 L161.15,66.84 L155.01,65.48 L152.12,67.72 L150.29,67.69 L145.71,61.33 L139.42,59.25 L134.32,50.38 L134.20,47.58 L131.06,46.88 L126.88,42.45 L116.52,41.90 Z"/>
@@ -259,7 +259,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Co-Principality of Andorra (founding co-principality)</div>
+        <div class="imap-name" id="iEraName">Carolingian Grant &amp; Feudal Andorra</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -446,9 +446,10 @@
 
 <script>
 (function () {
-  var IC = { founding:"#a9762f", restored:"#204b5c", modern:"#2f6b4a" };
-  var INAMES = { founding:"Co-Principality of Andorra (founding co-principality)", restored:"Co-Principality of Andorra (restored, plain tricolor)", modern:"Co-Principality of Andorra (modern, with coat of arms)" };
+  var IC = { feudal:"#5c2a24", founding:"#a9762f", restored:"#204b5c", modern:"#2f6b4a" };
+  var INAMES = { feudal:"Carolingian Grant &amp; Feudal Andorra", founding:"Co-Principality of Andorra (founding co-principality)", restored:"Co-Principality of Andorra (restored, plain tricolor)", modern:"Co-Principality of Andorra (modern, with coat of arms)" };
   var IFLAGS = {
+    feudal: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     founding: "<rect width=\"300\" height=\"200\" fill=\"#f4efe1\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#a9762f\" stroke-width=\"6\"/>\n              <rect x=\"30\" width=\"120\" height=\"200\" fill=\"#a4302a\" opacity=\".55\"/>\n              <rect x=\"150\" width=\"120\" height=\"200\" fill=\"#002b7f\" opacity=\".55\"/>",
     restored: "<rect width=\"100\" height=\"200\" fill=\"#002b7f\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#fcd116\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#e30000\"/>",
     modern: "<rect width=\"100\" height=\"200\" fill=\"#002b7f\"/>\n              <rect x=\"100\" width=\"100\" height=\"200\" fill=\"#fcd116\"/>\n              <rect x=\"200\" width=\"100\" height=\"200\" fill=\"#e30000\"/>\n              <g transform=\"translate(150,100) scale(0.9)\">\n                <rect x=\"-16\" y=\"-22\" width=\"32\" height=\"44\" fill=\"#f4efe1\" stroke=\"#a9762f\" stroke-width=\"1.5\"/>\n                <rect x=\"-16\" y=\"-22\" width=\"16\" height=\"22\" fill=\"#a4302a\"/>\n                <rect x=\"0\" y=\"-22\" width=\"16\" height=\"22\" fill=\"#fcd116\"/>\n                <rect x=\"-16\" y=\"0\" width=\"32\" height=\"22\" fill=\"#f4efe1\"/>\n              </g>"
@@ -462,6 +463,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 843", name:"Carolingian Grant &amp; Feudal Andorra", t:{ ad:IC.feudal }, flagKeys:{ ad:"feudal" },
+      story:"Andorran tradition holds Charlemagne granted the valley's inhabitants privileges around 805 CE for helping fight the Moors, but the earliest surviving document is a charter of his grandson Charles the Bald in 843, confirming the Diocese of Urgell's rights over the parishes. For four centuries Andorra is a disputed feudal and ecclesiastical dependency &mdash; the bishop's spiritual authority overlapping with rival temporal claims from the Counts of Urgell and the viscounts of Caboet and Castellò &mdash; until the Bishop of Urgell and the Count of Foix settle the tangle with the 1278 Paréage. No flag or fixed heraldic device is documented for this era; shown here honestly blank." },
     { year:"1278", name:"Co-Principality of Andorra (founding co-principality)", t:{ ad:IC.founding }, flagKeys:{ ad:"founding" },
       story:"The 1278 and 1288 Par\u00e9ages settle a feudal dispute between the Count of Foix and the Bishop of Urgell by making them joint co-princes over Andorra &mdash; a shared sovereignty arrangement unique in Europe, still legally in force today (the French presidency inherited the Foix title)." },
     { year:"1806", name:"Co-Principality of Andorra (restored, plain tricolor)", t:{ ad:IC.restored }, flagKeys:{ ad:"restored" },
