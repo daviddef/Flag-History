@@ -239,15 +239,15 @@
 
   <div class="imap-section">
     <h2>Greece's changing shape, 1832&ndash;present</h2>
-    <p class="imap-sub">Instead of reusing one modern outline throughout, this map's border shape actually grows at four real turning points &mdash; 1832 (the original small kingdom), 1881 (Thessaly and Arta annexed), 1913 (post&ndash;Balkan Wars, nearly doubling the country), and 1923/present (post&ndash;Lausanne, essentially modern). The 1916&ndash;17 National Schism &mdash; Eleftherios Venizelos's pro-Allied "Provisional Government of National Defence" in Thessaloniki against King Constantine I's officially neutral royal government in Athens &mdash; is layered on top of the 1913-era border, since that's the shape actually in effect during the split. Press play, or drag the slider.</p>
+    <p class="imap-sub">Instead of reusing one modern outline throughout, this map's border shape actually grows at four real turning points &mdash; 1832 (the original small kingdom), 1881 (Thessaly and Arta annexed), 1913 (post&ndash;Balkan Wars, nearly doubling the country), and 1923/present (post&ndash;Lausanne, essentially modern). Two internal splits are layered on top of that growing outline where a single government stopped actually being true: the 1916&ndash;17 National Schism &mdash; Eleftherios Venizelos's pro-Allied "Provisional Government of National Defence" in Thessaloniki against King Constantine I's officially neutral royal government in Athens, on the 1913-era border &mdash; and the 1941&ndash;44 Axis occupation, when Germany, Italy, and Bulgaria carved up the (by then modern-bordered) country, with Bulgaria formally annexing Macedonia and Thrace outright rather than merely occupying them. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>Both governments flew the same flag.</b> There was no rival banner &mdash; the National Schism was entirely political, a fight over who actually spoke for Greece, not over its symbols. The internal line traces roughly the old 1881&ndash;1912 Greek-Ottoman border, the boundary between "Old Greece" and the Macedonian territory won in the Balkan Wars, which is almost exactly where the two governments' real control diverged. It solidifies only for the two years the split was physically real, and dissolves the moment Venizelos reunites the country in June 1917.
+      <b>Both 1916 governments flew the same flag; the 1941 occupiers didn't.</b> During the National Schism there was no rival banner &mdash; that split was entirely political, a fight over who actually spoke for Greece. During the 1941&ndash;44 occupation, by contrast, the map below distinguishes Bulgaria's outright annexation of Macedonia and Thrace (shown in its own color, since that territory left Greek sovereignty in law, not just in fact) from the combined German/Italian occupation of the rest of the country (shown as one zone here; the map doesn't further separate German-run Athens and Crete from the Italian-run remainder). Both internal lines trace roughly the old 1881&ndash;1912 Greek-Ottoman border, the boundary between "Old Greece" and the Macedonian territory won in the Balkan Wars &mdash; close to where both the 1916&ndash;17 and 1941&ndash;44 splits actually ran. Each line solidifies only for the years its split was physically real, and dissolves the moment the country is reunified: June 1917 for the Schism, October 1944 for liberation.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">1832</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg">
         <path id="imap-sea" fill="var(--sea)" pointer-events="none" d="M247.3,95.8 L225.3,90.7 L174.2,104.8 L203.4,135.3 L182.0,144.2 L158.6,144.2 L136.3,116.3 L128.4,128.2 L137.8,160.6 L158.9,186.1 L143.0,198.0 L166.4,223.1 L187.3,238.8 L187.9,269.5 L149.0,255.1 L161.4,282.8 L134.6,288.5 L150.6,336.4 L122.6,337.1 L88.1,313.5 L72.3,270.0 L64.9,233.9 L26.9,178.0 L-30,178.0 L-30,400 L340,400 L340,150 L247.3,150 Z"/>
@@ -447,7 +447,7 @@
           <summary>Paint guide</summary>
           <div class="paint-body">
             <div class="spec-row"><span class="k">Proportions</span><span class="v">2:3, nine equal horizontal stripes with a canton cross.</span></div>
-            <div class="spec-row"><span class="k">Layout</span><span class="v">Unchanged national flag; occupation zones flew German, Italian, and Bulgarian flags in practice, not shown here.</span></div>
+            <div class="spec-row"><span class="k">Layout</span><span class="v">Unchanged national flag; occupation zones flew German, Italian, and Bulgarian flags in practice &mdash; shown schematically on the internal map above (Bulgaria's outright annexation kept distinct from the combined German/Italian zone), though not painted here on the flag itself.</span></div>
             <div class="swatches">
               <div class="swatch"><span class="chip" style="background:#0d5eaf"></span><span class="meta"><span class="name">Blue</span><span class="hex">#0D5EAF</span></span></div>
               <div class="swatch"><span class="chip" style="background:#f4efe1"></span><span class="meta"><span class="name">White</span><span class="hex">#F4EFE1</span></span></div>
@@ -848,11 +848,21 @@
     p1913: "M215.7,67.2 L208.1,94.7 L207.5,88.7 L201.2,89.4 L187.3,101.6 L170.9,100.1 L177.2,116.2 L198.7,132.5 L176.8,120.8 L170.5,123.4 L182.3,142.3 L156.4,126.5 L171.0,144.3 L155.1,143.7 L150.1,127.7 L133.5,115.9 L137.9,106.7 L122.7,115.0 L127.3,120.5 L121.7,135.7 L154.1,185.4 L146.3,190.8 L146.0,181.7 L137.8,176.5 L132.3,180.8 L138.7,195.1 L122.6,203.1 L151.3,214.5 L167.5,231.6 L178.0,231.9 L184.6,239.4 L181.2,244.5 L185.7,263.6 L179.3,267.9 L165.0,247.1 L139.8,256.2 L145.8,258.5 L146.2,270.2 L157.7,270.5 L161.7,279.6 L148.7,286.2 L142.9,284.1 L145.2,279.0 L129.0,273.3 L143.4,326.0 L130.4,318.4 L118.4,330.9 L101.3,304.0 L92.7,314.7 L82.2,298.8 L85.7,282.5 L69.1,260.1 L78.4,241.0 L89.9,243.4 L98.0,236.1 L133.5,253.3 L149.0,242.2 L116.0,227.6 L67.1,231.9 L50.2,204.5 L66.5,196.2 L60.1,190.3 L46.2,192.1 L22.8,166.5 L59.4,103.3 L88.0,97.2 L102.4,82.8 L121.0,85.2 L192.8,63.4 Z",
     pmodern: "M296.0,57.3 L283.0,91.3 L272.9,97.3 L247.3,95.8 L225.3,90.7 L174.2,104.8 L203.4,135.3 L182.0,144.2 L158.6,144.2 L136.3,116.3 L128.4,128.2 L137.8,160.6 L158.9,186.1 L143.0,198.0 L166.4,223.1 L187.3,238.8 L187.9,269.5 L149.0,255.1 L161.4,282.8 L134.6,288.5 L150.6,336.4 L122.6,337.1 L88.1,313.5 L72.3,270.0 L64.9,233.9 L26.9,178.0 L24.0,162.5 L43.6,136.1 L46.1,118.5 L59.8,110.6 L60.7,96.3 L88.2,91.5 L104.3,79.7 L127.1,80.7 L134.1,71.2 L142.1,69.4 L173.3,71.0 L207.0,56.1 L236.7,75.1 L275.0,69.9 L275.5,42.9 Z",
     regSouth1916: "M121.7,135.7 L154.1,185.4 L146.3,190.8 L146.0,181.7 L137.8,176.5 L132.3,180.8 L138.7,195.1 L122.6,203.1 L151.3,214.5 L167.5,231.6 L178.0,231.9 L184.6,239.4 L181.2,244.5 L185.7,263.6 L179.3,267.9 L165.0,247.1 L139.8,256.2 L145.8,258.5 L146.2,270.2 L157.7,270.5 L161.7,279.6 L148.7,286.2 L142.9,284.1 L145.2,279.0 L129.0,273.3 L143.4,326.0 L130.4,318.4 L118.4,330.9 L101.3,304.0 L92.7,314.7 L82.2,298.8 L85.7,282.5 L69.1,260.1 L78.4,241.0 L89.9,243.4 L98.0,236.1 L133.5,253.3 L149.0,242.2 L116.0,227.6 L67.1,231.9 L50.2,204.5 L66.5,196.2 L60.1,190.3 L46.2,192.1 L22.8,166.5 L40.9,155.7 L59.8,147.5 L80.9,143.2 L102.0,141.0 L116.7,138.9 Z",
-    regNorth1916: "M22.8,166.5 L59.4,103.3 L88.0,97.2 L102.4,82.8 L121.0,85.2 L192.8,63.4 L215.7,67.2 L208.1,94.7 L207.5,88.7 L201.2,89.4 L187.3,101.6 L170.9,100.1 L177.2,116.2 L198.7,132.5 L176.8,120.8 L170.5,123.4 L182.3,142.3 L156.4,126.5 L171.0,144.3 L155.1,143.7 L150.1,127.7 L133.5,115.9 L137.9,106.7 L122.7,115.0 L127.3,120.5 L121.7,135.7 L116.7,138.9 L102.0,141.0 L80.9,143.2 L59.8,147.5 L40.9,155.7 Z"
+    regNorth1916: "M22.8,166.5 L59.4,103.3 L88.0,97.2 L102.4,82.8 L121.0,85.2 L192.8,63.4 L215.7,67.2 L208.1,94.7 L207.5,88.7 L201.2,89.4 L187.3,101.6 L170.9,100.1 L177.2,116.2 L198.7,132.5 L176.8,120.8 L170.5,123.4 L182.3,142.3 L156.4,126.5 L171.0,144.3 L155.1,143.7 L150.1,127.7 L133.5,115.9 L137.9,106.7 L122.7,115.0 L127.3,120.5 L121.7,135.7 L116.7,138.9 L102.0,141.0 L80.9,143.2 L59.8,147.5 L40.9,155.7 Z",
+    // 1941-44 split, traced against the modern (pmodern) outline rather than the 1913 one, since by
+    // 1941 Greece already held Western Thrace (annexed 1923). Split at the same two boundary vertices
+    // pmodern shares with the older 1881-1912 line (128.4,128.2 and 26.9,178.0), so south+north exactly
+    // recombine into pmodern's own outline with no gaps or overlaps.
+    regSouth1941: "M128.4,128.2 L137.8,160.6 L158.9,186.1 L143.0,198.0 L166.4,223.1 L187.3,238.8 L187.9,269.5 L149.0,255.1 L161.4,282.8 L134.6,288.5 L150.6,336.4 L122.6,337.1 L88.1,313.5 L72.3,270.0 L64.9,233.9 L26.9,178.0 L40.9,155.7 L59.8,147.5 L80.9,143.2 L102.0,141.0 L116.7,138.9 Z",
+    regNorth1941: "M26.9,178.0 L24.0,162.5 L43.6,136.1 L46.1,118.5 L59.8,110.6 L60.7,96.3 L88.2,91.5 L104.3,79.7 L127.1,80.7 L134.1,71.2 L142.1,69.4 L173.3,71.0 L207.0,56.1 L236.7,75.1 L275.0,69.9 L275.5,42.9 L296.0,57.3 L283.0,91.3 L272.9,97.3 L247.3,95.8 L225.3,90.7 L174.2,104.8 L203.4,135.3 L182.0,144.2 L158.6,144.2 L136.3,116.3 L128.4,128.2 L116.7,138.9 L102.0,141.0 L80.9,143.2 L59.8,147.5 L40.9,155.7 Z"
+  };
+  var BORDER_LINES = {
+    line1916: "M127.3,136.7 L116.7,138.9 L102.0,141.0 L80.9,143.2 L59.8,147.5 L40.9,155.7 L26.9,178.0",
+    line1941: "M128.4,128.2 L116.7,138.9 L102.0,141.0 L80.9,143.2 L59.8,147.5 L40.9,155.7 L26.9,178.0"
   };
 
-  var IC = { kingdom: "#a9762f", royalist: "#a9762f", venizelist: "#204b5c" };
-  var INAMES = { kingdom: "Kingdom of Greece", royalist: "Royal government (Athens)", venizelist: "Provisional Government of National Defence (Thessaloniki)" };
+  var IC = { kingdom: "#a9762f", royalist: "#a9762f", venizelist: "#204b5c", axis: "#5c4a2e", bulgaria: "#6b2c2c" };
+  var INAMES = { kingdom: "Kingdom of Greece", royalist: "Royal government (Athens)", venizelist: "Provisional Government of National Defence (Thessaloniki)", axis: "German / Italian occupation zones", bulgaria: "Bulgarian annexation (Macedonia & Thrace)" };
 
   // mode: "whole" = single fill (ireg-whole), "split" = two fills (ireg-south/ireg-north)
   var ISNAP = [
@@ -862,15 +872,20 @@
     { year:"1881", mode:"whole", shape:"p1881", color:IC.kingdom, name:"Thessaly and Arta added",
       owners:"<b>Kingdom of Greece</b>: the 1832 kingdom plus Thessaly and the Arta district of Epirus.",
       story:"The 1881 Convention of Constantinople, negotiated after the Congress of Berlin, cedes Thessaly and a slice of southern Epirus around Arta to Greece &mdash; the kingdom's first major territorial gain in half a century, pushing the northern frontier up to near Mt&nbsp;Olympus. The rest of Epirus (including Ioannina) and all of Macedonia remain Ottoman." },
-    { year:"1913", mode:"split", shape:"p1913", t:{ north:IC.royalist, south:IC.royalist }, name:"One Greece, a neutral king",
+    { year:"1913", mode:"split", shape:"p1913", regionShapes:{south:"regSouth1916", north:"regNorth1916"}, borderLine:"line1916", t:{ north:IC.royalist, south:IC.royalist }, name:"One Greece, a neutral king",
       owners:"", story:"The Balkan Wars of 1912&ndash;13 nearly double Greece's territory, adding Macedonia, Epirus, Crete, and the northern Aegean islands, just before King George I's assassination in Thessaloniki hands the throne to Constantine I. This is the border in effect for the rest of this map's steps &mdash; Western Thrace and the modern eastern border are still a decade away. Constantine insists on strict neutrality as World War I begins, straining his relationship with his own prime minister, Eleftherios Venizelos, who wants Greece in the war on the Allied side." },
-    { year:"1916", mode:"split", shape:"p1913", t:{ north:IC.venizelist, south:IC.royalist }, name:"Venizelos breaks with Athens",
+    { year:"1916", mode:"split", shape:"p1913", regionShapes:{south:"regSouth1916", north:"regNorth1916"}, borderLine:"line1916", t:{ north:IC.venizelist, south:IC.royalist }, name:"Venizelos breaks with Athens",
       owners:"", story:"In September 1916, Venizelos sets up a rival \"Provisional Government of National Defence\" in Thessaloniki, backed by the Allied powers already using northern Greece as a base against Bulgaria; his government controls Macedonia, the northern islands, and Crete, while Constantine's officially neutral royal government keeps Athens and \"Old Greece\" to the south. Both sides fly the same flag &mdash; the split is political, not symbolic &mdash; and both operate inside the same 1913 external border." },
-    { year:"1917", mode:"split", shape:"p1913", t:{ north:IC.venizelist, south:IC.venizelist }, name:"Reunited under Venizelos",
-      owners:"", story:"Allied pressure forces Constantine to abdicate in June 1917 in favor of his younger son Alexander; Venizelos returns to Athens and brings the whole country into WWI on the Allied side. The internal line dissolves here &mdash; this is the only time in Greece's modern history this specific internal division was ever real, and the border itself doesn't change again until Lausanne." },
-    { year:"1923–present", mode:"whole", shape:"pmodern", color:IC.kingdom, name:"Modern borders",
+    { year:"1917", mode:"split", shape:"p1913", regionShapes:{south:"regSouth1916", north:"regNorth1916"}, borderLine:"line1916", t:{ north:IC.venizelist, south:IC.venizelist }, name:"Reunited under Venizelos",
+      owners:"", story:"Allied pressure forces Constantine to abdicate in June 1917 in favor of his younger son Alexander; Venizelos returns to Athens and brings the whole country into WWI on the Allied side. The internal line dissolves here &mdash; the border itself doesn't change again until Lausanne, though a very different internal division will reappear a generation later, under foreign occupation rather than domestic politics." },
+    { year:"1923", mode:"whole", shape:"pmodern", color:IC.kingdom, name:"Modern borders",
       owners:"<b>Greece</b>: the 1913 kingdom plus Western Thrace, finalized by the 1923 Treaty of Lausanne after the catastrophic Greco-Turkish War.",
-      story:"The 1919 Smyrna landing collapses into defeat by 1922; the 1923 Treaty of Lausanne finalizes Greece's border essentially where it stands today, adding Western Thrace but permanently losing the Asia Minor ambitions of the previous decade. A century-old process, from a kingdom a third this size, ends here." }
+      story:"The 1919 Smyrna landing collapses into defeat by 1922; the 1923 Treaty of Lausanne finalizes Greece's border essentially where it stands today, adding Western Thrace but permanently losing the Asia Minor ambitions of the previous decade. The external outline set here holds for the rest of this map &mdash; through republic, restored monarchy, and the occupation to come." },
+    { year:"1941", mode:"split", shape:"pmodern", regionShapes:{south:"regSouth1941", north:"regNorth1941"}, borderLine:"line1941", t:{ north:IC.bulgaria, south:IC.axis }, name:"Axis occupation & Bulgarian annexation",
+      owners:"", story:"After repelling Mussolini's October 1940 invasion, Greece falls to a German intervention in April 1941; the Battle of Crete ends organized resistance by early June. Germany, Italy, and Bulgaria carve occupied Greece into three zones &mdash; but Bulgaria's piece, Macedonia and Thrace, is different in kind from the other two: Sofia formally annexes it outright rather than merely occupying it, so the map shows it in its own color, distinct from the combined German/Italian zone covering the rest of the country (Athens and the German zone included, the Italian zone not separated further here). The legitimate government flees first to Crete, then Egypt and London; mass famine kills tens of thousands over the winter of 1941&ndash;42." },
+    { year:"1944–present", mode:"whole", shape:"pmodern", color:IC.kingdom, name:"Liberation",
+      owners:"<b>Greece</b>: reunified under the government of national unity.",
+      story:"Athens is liberated in October 1944 and the government-in-exile returns; Bulgaria's annexation is undone along with the German and Italian occupation zones, restoring the single 1923 outline. The bitter Dekemvriana clashes and then the 1946&ndash;49 civil war follow, and a military dictatorship after that, but the country's external shape and this internal north/south line are never split again &mdash; every regime since, monarchy, junta, or republic, has governed the same one Greece shown here." }
   ];
 
   var IREGIONS = ["north","south"];
@@ -897,7 +912,9 @@
 
   var iLegendEl = document.getElementById("iLegend");
   iLegendEl.innerHTML = ['<span><span class="sw" style="background:' + IC.kingdom + '"></span>Kingdom of Greece</span>',
-                          '<span><span class="sw" style="background:' + IC.venizelist + '"></span>Provisional Govt (Thessaloniki)</span>'].join("");
+                          '<span><span class="sw" style="background:' + IC.venizelist + '"></span>Provisional Govt (Thessaloniki)</span>',
+                          '<span><span class="sw" style="background:' + IC.axis + '"></span>German / Italian occupation</span>',
+                          '<span><span class="sw" style="background:' + IC.bulgaria + '"></span>Bulgarian annexation</span>'].join("");
 
   var currentShapeKey = null;
 
@@ -925,12 +942,13 @@
         elWhole.style.display = "none";
         elSouth.style.display = "";
         elNorth.style.display = "";
-        setPath(elSouth, "regSouth1916");
-        setPath(elNorth, "regNorth1916");
+        var shapes = era.regionShapes || {south:"regSouth1916", north:"regNorth1916"};
+        setPath(elSouth, shapes.south);
+        setPath(elNorth, shapes.north);
         elSouth.setAttribute("fill", era.t.south);
         elNorth.setAttribute("fill", era.t.north);
         var same = era.t.north === era.t.south;
-        elBorderLine.setAttribute("d", "M127.3,136.7 L116.7,138.9 L102.0,141.0 L80.9,143.2 L59.8,147.5 L40.9,155.7 L26.9,178.0");
+        elBorderLine.setAttribute("d", BORDER_LINES[era.borderLine || "line1916"]);
         elBorderLine.style.strokeOpacity = same ? 0.06 : 0.85;
         elBorderLine.style.strokeWidth = same ? 1 : 2.4;
         lblWhole.style.opacity = 0; lblNorth.style.opacity = 1; lblSouth.style.opacity = 1;
