@@ -238,21 +238,25 @@
   </div>
 
     <div class="imap-section">
-    <h2>One border, no lasting internal split</h2>
-    <p class="imap-sub">Azerbaijan's own real border, traced whole &mdash; a territory that fragmented into roughly twenty local khanates under weakening Persian suzerainty in the 18th century, but never a clean two- or three-way partition this atlas can responsibly map. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <h2>One border, and one lasting internal split: Nagorno-Karabakh</h2>
+    <p class="imap-sub">Azerbaijan's own real border, traced whole, with one schematic internal region carved out: Nagorno-Karabakh, administered separately from Baku for roughly three decades. The 18th-century fragmentation into some twenty local khanates under weakening Persian suzerainty was real too, but never a clean two- or three-way partition this atlas can responsibly map, so that period is still shown as a single region. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
-      <b>The 18th-century khanate period was a real fragmentation, but into roughly twenty small polities, not the kind of clean two- or three-way split this atlas maps elsewhere.</b> Baku, Ganja, Shirvan, Karabakh, Quba, and over a dozen other khanates each ruled their own small territory under nominal Persian suzerainty \u2014 too many, and too irregularly bounded, to responsibly reconstruct as a small handful of honest regions, so this page shows one border and one dominant power at a time instead.
+      <b>The 18th-century khanate period was a real fragmentation, but into roughly twenty small polities, not the kind of clean two- or three-way split this atlas maps elsewhere.</b> Baku, Ganja, Shirvan, Karabakh, Quba, and over a dozen other khanates each ruled their own small territory under nominal Persian suzerainty &mdash; too many, and too irregularly bounded, to responsibly reconstruct as a small handful of honest regions, so this page shows one border and one dominant power at a time for that era. The 1988&ndash;2023 Nagorno-Karabakh period is different: for most of that span, a self-declared, Armenian-backed authority administered the territory separately from the government in Baku, a real and mappable administrative split shown here as its own traced region. This map describes who controlled the territory when, not who was right to.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">c. 4th c. BCE</span>
-        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
-        <path id="ireg-az0" class="ireg-fill" d="M140.57,75.35 L159.53,79.18 L166.88,64.93 L192.48,42.35 L215.02,71.85 L236.83,111.58 L256.80,114.20 L270.00,129.30 L234.69,133.81 L227.24,177.31 L219.86,196.92 L204.15,210.02 L205.29,237.76 L194.62,240.55 L167.89,211.22 L182.67,183.51 L170.01,167.07 L153.93,171.21 L103.38,212.53 L102.42,173.68 L83.18,164.51 L64.98,149.27 L77.06,131.43 L54.23,112.22 L62.85,98.17 L46.53,88.48 L37.65,73.76 L48.15,64.61 L80.09,80.72 L103.20,84.05 L109.04,77.48 L87.93,47.17 L99.06,39.45 L111.11,41.33 L140.57,75.35 Z M38.92,158.23 L51.61,173.26 L70.55,173.13 L70.35,181.77 L87.85,214.18 L58.45,206.73 L36.80,180.88 L30.00,159.75 L38.92,158.23 Z"/>
+        <path id="ireg-az0" class="ireg-fill" d="M140.57,75.35 L159.53,79.18 L166.88,64.93 L192.48,42.35 L215.02,71.85 L236.83,111.58 L256.80,114.20 L270.00,129.30 L234.69,133.81 L227.24,177.31 L219.86,196.92 L204.15,210.02 L205.29,237.76 L194.62,240.55 L167.89,211.22 L182.67,183.51 L145,155 L95,130 L54.23,112.22 L62.85,98.17 L46.53,88.48 L37.65,73.76 L48.15,64.61 L80.09,80.72 L103.20,84.05 L109.04,77.48 L87.93,47.17 L99.06,39.45 L111.11,41.33 Z M38.92,158.23 L51.61,173.26 L70.55,173.13 L70.35,181.77 L87.85,214.18 L58.45,206.73 L36.80,180.88 L30.00,159.75 L38.92,158.23 Z"/>
+        <path id="ireg-nk" class="ireg-fill" d="M182.67,183.51 L170.01,167.07 L153.93,171.21 L103.38,212.53 L102.42,173.68 L83.18,164.51 L64.98,149.27 L77.06,131.43 L54.23,112.22 L95,130 L145,155 Z"/>
+        <path class="iborder-line" id="ib-az0-nk" d="M182.67,183.51 L145,155 L95,130 L54.23,112.22"/>
         <g font-family="IBM Plex Mono, monospace">
-          <text class="ireg-label" id="ilbl-az0" x="150" y="140">AZERBAIJAN</text>
+          <text class="ireg-label" id="ilbl-az0" x="180" y="90">AZERBAIJAN</text>
+          <text class="ireg-label" id="ilbl-nk" x="118" y="160">NAGORNO-</text>
+          <text class="ireg-label" id="ilbl-nk2" x="118" y="171">KARABAKH</text>
         </g>
       </svg>
       <div class="imap-head">
@@ -262,7 +266,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Real traced border (modern frontier), no internal partition shown &mdash; see the rule box above for the fragmented khanate period this simplifies.</p>
+      <p class="map-note">Real traced border (modern frontier); the Nagorno-Karabakh dividing line is a schematic approximation of the region's rough location and extent, not a surveyed border. See the rule box above for the fragmented khanate period this map still simplifies to a single region.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -594,8 +598,8 @@
 
 <script>
 (function () {
-  var IC = { antiquity:"#5c2a24", shirvan:"#0b7a3d", safavid:"#1f6f6f", khanates:"#2a8a8a", russian:"#241f14", adr:"#3f9fd1", soviet:"#a4302a", modern:"#3f9fd1" };
-  var INAMES = { antiquity:"Caucasian Albania and the Sassanid/Arab conquest", shirvan:"Shirvanshahs and local emirates", safavid:"Safavid Persia", khanates:"Vassal khanates under Persian suzerainty", russian:"Russian imperial rule", adr:"Azerbaijan Democratic Republic", soviet:"Soviet Azerbaijan", modern:"Republic of Azerbaijan (modern)" };
+  var IC = { antiquity:"#5c2a24", shirvan:"#0b7a3d", safavid:"#1f6f6f", khanates:"#2a8a8a", russian:"#241f14", adr:"#3f9fd1", soviet:"#a4302a", modern:"#3f9fd1", karabakh:"#b3552b" };
+  var INAMES = { antiquity:"Caucasian Albania and the Sassanid/Arab conquest", shirvan:"Shirvanshahs and local emirates", safavid:"Safavid Persia", khanates:"Vassal khanates under Persian suzerainty", russian:"Russian imperial rule", adr:"Azerbaijan Democratic Republic", soviet:"Soviet Azerbaijan", modern:"Republic of Azerbaijan (modern)", karabakh:"Self-declared Republic of Nagorno-Karabakh / Artsakh (de facto, Armenian-backed, not internationally recognized)" };
   var IFLAGS = {
     antiquity: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/>\n              <rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/>\n              <text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text>\n              <text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     shirvan: "<rect width=\"300\" height=\"200\" fill=\"#0b7a3d\"/>\n              <path d=\"M120,70 A38,38 0 1 0 172,102 A28,28 0 1 1 120,70 Z\" fill=\"#f4efe1\"/>",
@@ -604,7 +608,8 @@
     russian: "<rect width=\"300\" height=\"66.7\" fill=\"#241f14\"/>\n              <rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#d4af37\"/>\n              <rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#f4efe1\"/>",
     adr: "<rect width=\"300\" height=\"66.7\" fill=\"#3f9fd1\"/>\n              <rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#c9372c\"/>\n              <rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#3f9f5f\"/>\n              <path d=\"M160,80 A20,20 0 1 0 178,116 A15,15 0 1 1 160,80 Z\" fill=\"#f4efe1\"/>\n              <path d=\"M195,90 l3,8 8.5,0.3 -6.5,5.5 2,8.3 -7,-4.8 -7,4.8 2,-8.3 -6.5,-5.5 8.5,-0.3 Z\" fill=\"#f4efe1\"/>",
     soviet: "<rect width=\"300\" height=\"200\" fill=\"#a4302a\"/>\n              <rect x=\"0\" y=\"172\" width=\"300\" height=\"14\" fill=\"#3f9fd1\"/>\n              <g fill=\"#d4af37\" transform=\"translate(30,25)\"><rect x=\"0\" y=\"13\" width=\"30\" height=\"6\"/><rect x=\"12\" y=\"0\" width=\"6\" height=\"30\"/></g>",
-    modern: "<rect width=\"300\" height=\"66.7\" fill=\"#3f9fd1\"/>\n              <rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#c9372c\"/>\n              <rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#3f9f5f\"/>\n              <path d=\"M160,80 A20,20 0 1 0 178,116 A15,15 0 1 1 160,80 Z\" fill=\"#f4efe1\"/>\n              <path d=\"M195,90 l3,8 8.5,0.3 -6.5,5.5 2,8.3 -7,-4.8 -7,4.8 2,-8.3 -6.5,-5.5 8.5,-0.3 Z\" fill=\"#f4efe1\"/>"
+    modern: "<rect width=\"300\" height=\"66.7\" fill=\"#3f9fd1\"/>\n              <rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#c9372c\"/>\n              <rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#3f9f5f\"/>\n              <path d=\"M160,80 A20,20 0 1 0 178,116 A15,15 0 1 1 160,80 Z\" fill=\"#f4efe1\"/>\n              <path d=\"M195,90 l3,8 8.5,0.3 -6.5,5.5 2,8.3 -7,-4.8 -7,4.8 2,-8.3 -6.5,-5.5 8.5,-0.3 Z\" fill=\"#f4efe1\"/>",
+    karabakh: "<rect width=\"300\" height=\"66.7\" fill=\"#c9372c\"/>\n              <rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#3f9fd1\"/>\n              <rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#f2a800\"/>\n              <path d=\"M0,66.7 L40,66.7 L40,133.3 L0,133.3 Z\" fill=\"#f4efe1\"/>\n              <path d=\"M0,72 h40 M6,78 h28 M0,84 h40 M6,90 h28 M0,96 h40 M6,102 h28 M0,108 h40 M6,114 h28 M0,120 h40 M6,126 h28\" stroke=\"#c9372c\" stroke-width=\"1.6\"/>"
   };
   function iFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -615,31 +620,47 @@
   }).join("");
 
   var ISNAP = [
-    { year:"c. 4th c. BCE", name:"Caucasian Albania and the Sassanid/Arab conquest", t:{ az:IC.antiquity }, flagKeys:{ az:"antiquity" },
+    { year:"c. 4th c. BCE", name:"Caucasian Albania and the Sassanid/Arab conquest", t:{ az0:IC.antiquity, nk:IC.antiquity }, flagKeys:{ az0:"antiquity", nk:"antiquity" },
       story:"Caucasian Albania, a kingdom in the eastern Caucasus roughly overlapping modern Azerbaijan, is attested from the 4th century BCE and survives for the better part of a millennium as a shifting client of Rome, Parthia, and above all Sassanid Persia. King Urnayr's conversion to Christianity around 370 CE opens centuries of semi-autonomous Christian rule by the Arranshahik dynasty under Sassanid suzerainty, ended for good by the Umayyad Caliphate's conquest of the Caucasus, completed by 705 CE. No flag survives from Caucasian Albania; shown here honestly blank until the Shirvanshahs emerge as a distinct local dynasty by 861." },
-    { year:"c. 861", name:"Shirvanshahs and local emirates", t:{ az:IC.shirvan }, flagKeys:{ az:"shirvan" },
+    { year:"c. 861", name:"Shirvanshahs and local emirates", t:{ az0:IC.shirvan, nk:IC.shirvan }, flagKeys:{ az0:"shirvan", nk:"shirvan" },
       story:"The Shirvanshahs, a local Persianate dynasty centered on Shamakhi and later Baku, rule much of what is now Azerbaijan from the 9th century, alongside various other local emirates, through Seljuk, Mongol, and Timurid overlordship that never fully extinguishes their own local rule." },
-    { year:"1538", name:"Safavid Persia", t:{ az:IC.safavid }, flagKeys:{ az:"safavid" },
+    { year:"1538", name:"Safavid Persia", t:{ az0:IC.safavid, nk:IC.safavid }, flagKeys:{ az0:"safavid", nk:"safavid" },
       story:"Shah Ismail I, founder of the Safavid dynasty, conquers Shirvan and incorporates it fully into Safavid Persia by 1538, ending the Shirvanshahs' centuries of local rule and folding the territory into an empire that also establishes Twelver Shi'a Islam across the region." },
-    { year:"1747", name:"Vassal khanates under Persian suzerainty", t:{ az:IC.khanates }, flagKeys:{ az:"khanates" },
-      story:"As Safavid central authority weakens through the 18th century, the territory fragments into some twenty semi-independent khanates (Baku, Ganja, Shirvan, Karabakh, Quba, and others) &mdash; each locally ruled but still nominally owing allegiance to Persia, now under the Afsharid and then Qajar dynasties." },
-    { year:"1813", name:"Russian imperial rule", t:{ az:IC.russian }, flagKeys:{ az:"russian" },
-      story:"Russia annexes the northern khanates through the 1813 Treaty of Gulistan and the 1828 Treaty of Turkmenchay, ending Persian suzerainty for good and incorporating the territory into the Russian Empire, where the Baku oil boom later makes it one of the world's most important oil-producing regions." },
-    { year:"1918", name:"Azerbaijan Democratic Republic", t:{ az:IC.adr }, flagKeys:{ az:"adr" },
-      story:"The Azerbaijan Democratic Republic declares independence on 28 May 1918 amid the Russian Empire's collapse, becoming the first secular democratic republic in the Muslim world and extending suffrage to women before Britain or the United States &mdash; a fragile 23-month experiment." },
-    { year:"1920", name:"Soviet Azerbaijan", t:{ az:IC.soviet }, flagKeys:{ az:"soviet" },
-      story:"The Red Army invades in April 1920, ending the Democratic Republic; Soviet Azerbaijan is established, later formalized as a full union republic within the USSR in 1936, governed from Moscow for seven decades." },
-    { year:"1991", name:"Republic of Azerbaijan (modern)", t:{ az:IC.modern }, flagKeys:{ az:"modern" },
-      story:"Azerbaijan declares independence on 30 August 1991 as the USSR collapses; the Democratic Republic's own 1918 tricolor (blue for Turkic heritage, red for progress and modernity, green for Islam, with a white crescent and star) is restored as the new republic's flag." }
+    { year:"1747", name:"Vassal khanates under Persian suzerainty", t:{ az0:IC.khanates, nk:IC.khanates }, flagKeys:{ az0:"khanates", nk:"khanates" },
+      story:"As Safavid central authority weakens through the 18th century, the territory fragments into some twenty semi-independent khanates (Baku, Ganja, Shirvan, Karabakh, Quba, and others) &mdash; each locally ruled but still nominally owing allegiance to Persia, now under the Afsharid and then Qajar dynasties. The Karabakh khanate, centered on Shusha, is one of these &mdash; a local polity in its own right, but not yet the separately administered enclave the same ground becomes in the 20th century." },
+    { year:"1813", name:"Russian imperial rule", t:{ az0:IC.russian, nk:IC.russian }, flagKeys:{ az0:"russian", nk:"russian" },
+      story:"Russia annexes the northern khanates through the 1813 Treaty of Gulistan and the 1828 Treaty of Turkmenchay, ending Persian suzerainty for good and incorporating the territory, including the former Karabakh khanate, into the Russian Empire, where the Baku oil boom later makes it one of the world's most important oil-producing regions." },
+    { year:"1918", name:"Azerbaijan Democratic Republic", t:{ az0:IC.adr, nk:IC.adr }, flagKeys:{ az0:"adr", nk:"adr" },
+      story:"The Azerbaijan Democratic Republic declares independence on 28 May 1918 amid the Russian Empire's collapse, becoming the first secular democratic republic in the Muslim world and extending suffrage to women before Britain or the United States &mdash; a fragile 23-month experiment that claims Karabakh as part of its own territory throughout, alongside the rest of the republic." },
+    { year:"1920", name:"Soviet Azerbaijan", t:{ az0:IC.soviet, nk:IC.soviet }, flagKeys:{ az0:"soviet", nk:"soviet" },
+      story:"The Red Army invades in April 1920, ending the Democratic Republic; Soviet Azerbaijan is established, later formalized as a full union republic within the USSR in 1936, governed from Moscow for seven decades. Nagorno-Karabakh is established as an autonomous oblast inside the republic's borders in 1923, a decision whose consequences outlast the Soviet Union itself &mdash; but for now it remains an internal Soviet administrative unit, not a separately governed territory." },
+    { year:"1991", name:"Independence, and war over Nagorno-Karabakh", t:{ az0:IC.modern, nk:IC.karabakh }, flagKeys:{ az0:"modern", nk:"karabakh" },
+      story:"Azerbaijan declares independence on 30 August 1991 as the USSR collapses, restoring the Democratic Republic's own 1918 tricolor. Nagorno-Karabakh's own local authorities had already declared a separate republic days earlier, and Azerbaijan fights a war with Armenia over the territory, a mostly Armenian-populated enclave inside its Soviet-era borders, losing effective control of it after a 1994 ceasefire. From this point, the self-declared Republic of Nagorno-Karabakh (Artsakh), backed by Armenia but not recognized by any UN member state including Armenia itself, administers the enclave separately from the government in Baku." },
+    { year:"2020", name:"Second Nagorno-Karabakh War", t:{ az0:IC.modern, nk:IC.karabakh }, flagKeys:{ az0:"modern", nk:"karabakh" },
+      story:"A six-week war in the autumn of 2020 lets Azerbaijan retake much of the territory it lost in the 1990s, including large parts of Nagorno-Karabakh itself and all of the surrounding districts, under a Russian-brokered ceasefire. A shrunken self-declared Republic of Nagorno-Karabakh (Artsakh) continues administering the remaining, Armenian-populated core of the enclave for three more years, still separately from Baku." },
+    { year:"2023", name:"Reincorporation", t:{ az0:IC.modern, nk:IC.modern }, flagKeys:{ az0:"modern", nk:"modern" },
+      story:"Azerbaijan's September 2023 military operation dissolves the breakaway Nagorno-Karabakh authorities outright, ending nearly three decades of de facto Armenian-backed separation; nearly the entire ethnic Armenian population of the region, more than 100,000 people, departs for Armenia within days. Nagorno-Karabakh is administered directly from Baku for the first time since the Soviet Union's collapse." }
   ];
 
-  var IREGIONS = ["az0"];
-  var IREGION_NAMES = { az0:"Azerbaijan" };
+  var IREGIONS = ["az0","nk"];
+  var IREGION_NAMES = { az0:"Rest of Azerbaijan (Baku-governed)", nk:"Nagorno-Karabakh" };
+  var IADJ = [["az0","nk"]];
 
   function iTextColorFor(hex) {
     var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
     var lum = (0.299*r + 0.587*g + 0.114*b)/255;
     return lum > 0.5 ? "#201a12" : "#f7f1e3";
+  }
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
   }
 
   var iYearTag = document.getElementById("iYearTag");
@@ -657,8 +678,8 @@
 
     IREGIONS.forEach(function (id) {
       var el = document.getElementById("ireg-" + id);
-      if (el) el.setAttribute("fill", era.t["az"]);
-      var tcol = iTextColorFor(era.t["az"]);
+      if (el) el.setAttribute("fill", era.t[id]);
+      var tcol = iTextColorFor(era.t[id]);
       var tcolHalo = tcol === "#201a12" ? "#f7f1e3" : "#201a12";
       for (var i = 0; i < 4; i++) {
         var lbl = document.getElementById("ilbl-" + id + (i === 0 ? "" : (i+1)));
@@ -666,10 +687,27 @@
       }
     });
 
-    var label = Object.keys(IC).filter(function (k) { return IC[k] === era.t["az"]; })[0];
-    iEraOwners.innerHTML = "<b>" + INAMES[label] + "</b>: whole territory shown";
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      if (line) {
+        line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+        line.setAttribute("stroke-width", same ? "1" : "2.4");
+      }
+    });
 
-    iFlagsRow.innerHTML = '<div class="iflag-chip">' + iFlagSvg(era.flagKeys["az"]) + '<div class="ic-label">Azerbaijan</div></div>';
+    var groups = iGroupsFor(era.t);
+    var seen = {}; var parts = [];
+    groups.forEach(function (g) {
+      var label = INAMES[Object.keys(IC).filter(function (k) { return IC[k] === era.t[g[0]]; })[0]] || era.t[g[0]];
+      if (!seen[label]) { seen[label] = []; parts.push(label); }
+      g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+    });
+    iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+
+    iFlagsRow.innerHTML = IREGIONS.map(function (id) {
+      return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
+    }).join("");
   }
 
   iSlider.addEventListener("input", function () { iRender(parseInt(iSlider.value, 10)); });
