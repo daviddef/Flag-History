@@ -115,15 +115,15 @@
     width: max-content; max-width: 260px; text-align: left;
     font-family: "Source Sans 3", system-ui, sans-serif; font-size: 12.5px; font-weight: 400; line-height: 1.45;
     text-transform: none; letter-spacing: normal; color: var(--ink);
-    background: var(--card); border: 1px solid var(--card-border); border-radius: 4px;
-    padding: 9px 11px; box-shadow: 0 4px 14px rgba(0,0,0,.14);
+    background: var(--card); border: 1.5px solid var(--ink); border-radius: 4px;
+    padding: 9px 11px; box-shadow: 0 8px 24px rgba(0,0,0,.32), 0 2px 8px rgba(0,0,0,.2);
     opacity: 0; visibility: hidden; pointer-events: none;
     transition: opacity .14s ease, transform .14s ease;
     z-index: 20;
   }
   .tag::before {
     content: ""; position: absolute; left: 50%; bottom: calc(100% + 4px); transform: translateX(-50%);
-    border: 6px solid transparent; border-top-color: var(--card-border);
+    border: 6px solid transparent; border-top-color: var(--ink);
     opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .14s ease; z-index: 21;
   }
   .tag:hover::after, .tag:hover::before,
@@ -139,7 +139,7 @@
   .entry:first-child .tag::before,
   .entry:nth-child(2) .tag::before {
     bottom: auto; top: calc(100% + 4px);
-    border-top-color: transparent; border-bottom-color: var(--card-border);
+    border-top-color: transparent; border-bottom-color: var(--ink);
   }
   /* Keep tooltips from overflowing the left/right edges on narrow screens */
   .tag:first-of-type::after { left: 0; transform: translateX(0) translateY(4px); }
@@ -248,16 +248,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>West and East Germany, 1815&ndash;present</h2>
-    <p class="imap-sub">The same real, traced west/east split that lives on the German Lands hub map, ported here and driven by Germany's own timeline. The line dissolves whenever one government ruled both halves, and solidifies hard exactly once &mdash; 1949 to 1990, the sharpest and most important division on this whole page. Press play, or drag the slider.</p>
+    <h2>West and East Germany, c. 100 BCE&ndash;present</h2>
+    <p class="imap-sub">The same real, traced west/east split that lives on the German Lands hub map, ported here and driven by Germany's own timeline. The line dissolves whenever one government ruled both halves (including the two-thousand-year stretch before either half was a state at all), and solidifies hard exactly once &mdash; 1949 to 1990, the sharpest and most important division on this whole page. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>Forty-one years is the only time this specific line was ever real.</b> From Charlemagne's successors to 1945, "west" and "east" Germany were never separately governed &mdash; the border below stays dissolved through the Confederation, the Empire, Weimar, and the Third Reich. It solidifies the instant the Federal Republic and the German Democratic Republic are founded in 1949, and dissolves again &mdash; permanently &mdash; the moment reunification takes effect on 3 October 1990.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1815</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">100 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 600 495" xmlns="http://www.w3.org/2000/svg">
         <path fill="var(--tile-sea)" d="M25.2,225.3 L20.0,173.8 L38.7,173.8 L46.6,155.3 L54.3,110.3 L48.5,93.7 L54.6,83.3 L80.6,80.6 L86.3,91.5 L107.5,67.3 L25.2,225.3 Z"/>
@@ -282,7 +282,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">German Confederation</div>
+        <div class="imap-name" id="iEraName">Germanic tribal confederations</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -750,15 +750,17 @@
 <script>
 (function () {
   var IC = {
-    confed: "#7a5a9a", empire: "#3a5a8c", weimar: "#4a6b8c", nazi: "#3f3f3f",
+    tribal: "#a9762f", confed: "#7a5a9a", empire: "#3a5a8c", weimar: "#4a6b8c", nazi: "#3f3f3f",
     frg: "#2c6f9a", gdr: "#a4302a", modern: "#2f6b4a"
   };
   var INAMES = {
+    tribal: "Germanic tribal confederations (Roman era)",
     confed: "German Confederation", empire: "German Empire", weimar: "Weimar Republic",
     nazi: "Nazi Germany", frg: "Federal Republic of Germany (West)",
     gdr: "German Democratic Republic (East)", modern: "Federal Republic of Germany (reunified)"
   };
   var IFLAGS = {
+    tribal: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     confed: '<rect width="300" height="66.7" fill="#241f14"/><rect y="66.7" width="300" height="66.6" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#f9d616"/>',
     empire: '<rect width="300" height="66.7" fill="#241f14"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
     weimar: '<rect width="300" height="66.7" fill="#241f14"/><rect y="66.7" width="300" height="66.6" fill="#a4302a"/><rect y="133.3" width="300" height="66.7" fill="#f9d616"/>',
@@ -771,12 +773,14 @@
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
   }
   var iLegendEl = document.getElementById("iLegend");
-  var iLegendKeys = ["confed", "empire", "weimar", "nazi", "frg", "gdr", "modern"];
+  var iLegendKeys = ["tribal", "confed", "empire", "weimar", "nazi", "frg", "gdr", "modern"];
   iLegendEl.innerHTML = iLegendKeys.map(function (k) {
     return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
   }).join("");
 
   var ISNAP = [
+    { year:"100 BCE", name:"Germanic tribal confederations", t:{ de_w:IC.tribal, de_e:IC.tribal }, flagKeys:{ de_w:"tribal", de_e:"tribal" },
+      story:"For roughly nine centuries before the Confederation, this territory has no unified government at all &mdash; dozens of independent Germanic tribal confederations (Cherusci, Suebi, Franks, Saxons, Alemanni, and others) hold shifting ground on both sides of what would become the west/east line, with Rome contesting but never annexing the east bank of the Rhine after 9 CE. No internal line to draw yet &mdash; there is no state on either side to draw it between." },
     { year:"1815", name:"German Confederation", t:{ de_w:IC.confed, de_e:IC.confed }, flagKeys:{ de_w:"confed", de_e:"confed" },
       story:"The 1815 Congress of Vienna organizes the German lands into a loose 39-state confederation under Austrian presidency. West and east are never governed apart under it &mdash; the border on this map stays fully dissolved from 1815 all the way through the Empire, Weimar, and the Third Reich, not solidifying until 1949." },
     { year:"1871", name:"German Empire", t:{ de_w:IC.empire, de_e:IC.empire }, flagKeys:{ de_w:"empire", de_e:"empire" },

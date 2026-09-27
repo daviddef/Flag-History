@@ -141,15 +141,15 @@
     width: max-content; max-width: 260px; text-align: left;
     font-family: "Source Sans 3", system-ui, sans-serif; font-size: 12.5px; font-weight: 400; line-height: 1.45;
     text-transform: none; letter-spacing: normal; color: var(--ink);
-    background: var(--card); border: 1px solid var(--card-border); border-radius: 4px;
-    padding: 9px 11px; box-shadow: 0 4px 14px rgba(0,0,0,.14);
+    background: var(--card); border: 1.5px solid var(--ink); border-radius: 4px;
+    padding: 9px 11px; box-shadow: 0 8px 24px rgba(0,0,0,.32), 0 2px 8px rgba(0,0,0,.2);
     opacity: 0; visibility: hidden; pointer-events: none;
     transition: opacity .14s ease, transform .14s ease;
     z-index: 20;
   }
   .tag::before {
     content: ""; position: absolute; left: 50%; bottom: calc(100% + 4px); transform: translateX(-50%);
-    border: 6px solid transparent; border-top-color: var(--card-border);
+    border: 6px solid transparent; border-top-color: var(--ink);
     opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .14s ease; z-index: 21;
   }
   .tag:hover::after, .tag:hover::before,
@@ -164,7 +164,7 @@
   .entry:first-child .tag::before,
   .entry:nth-child(2) .tag::before {
     bottom: auto; top: calc(100% + 4px);
-    border-top-color: transparent; border-bottom-color: var(--card-border);
+    border-top-color: transparent; border-bottom-color: var(--ink);
   }
   .tag:first-of-type::after { left: 0; transform: translateX(0) translateY(4px); }
   .tag:first-of-type:hover::after, .tag:first-of-type:focus-visible::after, .tag:first-of-type.tip-open::after { transform: translateX(0) translateY(0); }
