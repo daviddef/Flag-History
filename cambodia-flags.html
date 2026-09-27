@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 802 – 1863</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1st c. – 802 CE</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
         <rect class="isea-bg" x="0" y="0" width="280" height="200"/>
@@ -622,6 +622,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1st c. \u2013 802 CE", name:"Funan and Chenla (pre-Angkor kingdoms)", t:{ cc: IC["era-802"] }, flagKeys:{ cc: "era-802" },
+      story:"The earliest known state in what is now Cambodia, Funan, centered on the lower Mekong delta and its port of Oc Eo, appears in Chinese chronicles from the 3rd century CE, with a founding legend crediting the Indian Brahmin Kaundinya. From the mid-6th century Funan is gradually superseded by a successor polity Chinese sources call Chenla, later split into rival 'land' and 'water' factions, until Jayavarman II's unification of these territories around 802 marks the start of the Khmer Empire proper. No flag or banner survives from either kingdom." },
     { year:"c. 802 \u2013 1863", name:"Khmer Empire (Angkor) and later decline", t:{ cc: IC["era-802"] }, flagKeys:{ cc: "era-802" },
       story:"Jayavarman II's self-proclamation as a universal monarch around 802 traditionally marks the founding of the Khmer Empire, which by the 12th and 13th centuries, under rulers like Suryavarman II and Jayavarman VII, builds Angkor Wat and the wider Angkor complex \u2014 then the largest pre-industrial urban settlement on Earth. Repeated wars with neighboring Ayutthaya from the 1400s onward, and the abandonment of Angkor\u2026" },
     { year:"1863 \u2013 1953", name:"French Protectorate of Cambodia", t:{ cc: IC["era-1863"] }, flagKeys:{ cc: "era-1863" },
