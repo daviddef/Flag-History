@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 400</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 800 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="300" height="340" fill="var(--sea)"/>
@@ -262,7 +262,7 @@
         <text class="ireg-label" id="ilbl-wa" x="150" y="180">WALES</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Sub-Roman &amp; early medieval kingdoms</div>
+        <div class="imap-name" id="iEraName">Iron Age Britons &amp; Roman Wales</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -560,6 +560,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 800 BCE–c. 400 CE", name:"Iron Age Britons & Roman Wales", t:{ wa:IC.none }, flagKeys:{ wa:"none" },
+      story:"Centuries before any Welsh kingdom existed, Iron Age Celtic Britons &mdash; the Ordovices, Silures, Demetae, and Deceangli &mdash; hold separate hillfort territories until Rome completes its conquest around 77&ndash;78 CE under the governor Agricola, following the destruction of the druids' sanctuary on Anglesey in 60/61 CE. No securely documented flag survives from either the tribal or Roman-provincial period." },
     { year:"c. 400–850", name:"Sub-Roman & early medieval Welsh kingdoms", t:{ wa:IC.none }, flagKeys:{ wa:"none" },
       story:"After Roman withdrawal, Brittonic peoples organize into small, competing kingdoms &mdash; Gwynedd, Powys, Dyfed, and others. No securely documented flag survives from this pre-heraldic era." },
     { year:"c. 850–1283", name:"Independent Welsh kingdoms (Gwynedd, Powys, Deheubarth)", t:{ wa:IC.native }, flagKeys:{ wa:"native" },
