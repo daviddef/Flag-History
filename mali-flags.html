@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five eras</h2>
+    <h2>One border, six eras</h2>
     <p class="imap-sub">Mali's own real border, traced whole. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This page doesn't split internally, and the timeline itself has a gap.</b> The Mali and Songhai empires never divided this territory into lasting, separately-governed pieces &mdash; only their reach expanded and contracted. And between Songhai's collapse at Tondibi in 1591 and French conquest completed in 1892, this territory fragmented among the Bambara kingdoms of Ségou and Kaarta, the Tuareg-dominated Niger Bend, and later the Toucouleur Empire and Samory Touré's resistance state &mdash; a genuinely unsettled three centuries the page's own timeline doesn't carry a dedicated card for. The map below is honest about that: its slider jumps straight from Songhai to French Sudan, the same gap the timeline leaves.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1235</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 300&ndash;1235</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -268,7 +268,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Mali Empire</div>
+        <div class="imap-name" id="iEraName">Ghana Empire (Wagadou)</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -539,13 +539,15 @@
 <script>
 (function () {
   var IC = {
-    maliempire:"#c9a13c", songhai:"#7a5a2e", frenchsudan:"#00247d", federation:"#14b53a", modern:"#14b53a"
+    ghana:"#6b5c4a", maliempire:"#c9a13c", songhai:"#7a5a2e", frenchsudan:"#00247d", federation:"#14b53a", modern:"#14b53a"
   };
   var INAMES = {
+    ghana:"Ghana Empire (Wagadou)",
     maliempire:"Mali Empire", songhai:"Songhai Empire", frenchsudan:"French Sudan (colonial territory)",
     federation:"Mali Federation", modern:"Republic of Mali (modern)"
   };
   var IFLAGS = {
+    ghana: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     maliempire: '<rect width="300" height="200" fill="#c9a13c"/><circle cx="150" cy="100" r="50" fill="#5c2a24"/><path fill="#c9a13c" d="M150,60 l12,32 34,3 -26,23 8,33 -28,-18 -28,18 8,-33 -26,-23 34,-3 Z"/>',
     songhai: '<rect width="300" height="200" fill="#7a5a2e"/><circle cx="150" cy="100" r="55" fill="#c9a13c"/><path fill="#5c2a24" d="M150,60 l40,80 -80,0 Z"/>',
     frenchsudan: '<rect width="300" height="200" fill="#00247d"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#f4efe1" stroke-width="34"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#cf142b" stroke-width="14"/><rect x="125" width="50" height="200" fill="#f4efe1"/><rect y="75" width="300" height="50" fill="#f4efe1"/><rect x="137" width="26" height="200" fill="#cf142b"/><rect y="87" width="300" height="26" fill="#cf142b"/>',
@@ -561,6 +563,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 300–1235", name:"Ghana Empire (Wagadou)", t:{ ml:IC.ghana }, flagKeys:{ ml:"ghana" },
+      story:"Centered on the Soninke people of the western Sahel, the Ghana Empire (called Wagadou by its own people) is the first sub-Saharan West African state described in detail by outside writers, above all the Andalusian geographer al-Bakri in 1068, who records a capital at Koumbi Saleh split between a royal town and a separate Muslim merchants' quarter. Built on control of the trans-Saharan gold-salt trade, Ghana's power fragments gradually from the 11th century under Almoravid pressure and rival Soninke and Malink&eacute; polities; Sundiata Keita's Mali Empire absorbs its remaining territory after 1235. No flag or banner survives from Ghana; medieval Sahelian states are not known to have used fixed territorial flags." },
     { year:"c. 1235", name:"Mali Empire", t:{ ml:IC.maliempire }, flagKeys:{ ml:"maliempire" },
       story:"Sundiata Keita founds the Mali Empire around 1235 after defeating the Sosso kingdom, building a state that controls the West African gold trade at its source. Under Mansa Musa (c. 1312&ndash;37), Mali reaches its peak &mdash; his 1324&ndash;25 pilgrimage to Mecca remains one of the best-documented displays of wealth in medieval history. No flag survives; shown here as an honest reconstruction of the empire's legendary gold wealth." },
     { year:"c. 1464", name:"Songhai Empire", t:{ ml:IC.songhai }, flagKeys:{ ml:"songhai" },
