@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, four flags</h2>
+    <h2>One border, five flags</h2>
     <p class="imap-sub">Liechtenstein's own real border &mdash; a sliver between the Rhine and the mountains, wedged between Switzerland and Austria. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>No internal split ever occurs here.</b> Vaduz and Schellenberg were united into one principality in 1719 and have never since been governed as separate pieces &mdash; one of only a handful of European states whose own borders have not moved at all since their founding.
@@ -250,7 +250,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">1719</span>
-        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -485,13 +485,15 @@
 <script>
 (function () {
   var IC = {
-    empire:"#5c2a24", confed:"#c9a13c", sovereign:"#002b7f", modern:"#002b7f"
+    raetia:"#a9762f", empire:"#5c2a24", confed:"#c9a13c", sovereign:"#002b7f", modern:"#002b7f"
   };
   var INAMES = {
+    raetia:"Roman Raetia, then medieval lordships of Vaduz and Schellenberg",
     empire:"Holy Roman Empire, then Confederation of the Rhine", confed:"German Confederation member",
     sovereign:"Fully sovereign, plain bicolor", modern:"Modern Liechtenstein, with princely crown"
   };
   var IFLAGS = {
+    raetia: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     empire: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     confed: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#a9762f" stroke-width="6"/><circle cx="150" cy="100" r="34" fill="#e30000"/><rect x="140" y="0" width="20" height="200" fill="#241f14" opacity=".55"/>',
     sovereign: '<rect width="300" height="100" fill="#002b7f"/><rect y="100" width="300" height="100" fill="#e30000"/>',
@@ -506,6 +508,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"15 BCE", name:"Roman Raetia, then medieval lordships", t:{ li:IC.raetia }, flagKeys:{ li:"raetia" },
+      story:"Emperor Augustus's stepsons Drusus and Tiberius lead Rome's conquest of the Alpine upper Rhine valley in 15 BCE, folding it into the province of Raetia. Alemannic settlers move in as Roman authority recedes in the 5th century, and the valley passes under Frankish and then Carolingian rule before splitting into the separate medieval lordships of Vaduz and Schellenberg, each held by a succession of noble families until the Liechtenstein family buys Schellenberg in 1699 and Vaduz in 1712, setting up their 1719 unification. No territorial flag is documented across any of this &mdash; shown honestly blank." },
     { year:"1719", name:"Holy Roman Empire, then Confederation of the Rhine", t:{ li:IC.empire }, flagKeys:{ li:"empire" },
       story:"Emperor Charles VI unites the purchased lordships of Vaduz and Schellenberg into the Principality of Liechtenstein on 23 January 1719, held directly of the Empire. No distinct territorial flag is documented from this founding era &mdash; shown honestly blank until Napoleon dissolves the Empire in 1806 and folds it into his Confederation of the Rhine instead." },
     { year:"1815", name:"German Confederation member", t:{ li:IC.confed }, flagKeys:{ li:"confed" },

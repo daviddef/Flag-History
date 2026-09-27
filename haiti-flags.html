@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One coastline, six rulers</h2>
+    <h2>One coastline, seven rulers</h2>
     <p class="imap-sub">Haiti's own real coastal border, traced whole &mdash; the one entry in this atlas without a lasting internal partition to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This is the one country in the atlas whose internal split is already handled honestly inside a single card, not carved into a lasting map partition.</b> Henri Christophe's northern Kingdom of Haiti and Alexandre Pétion's southern Republic did split the country between 1806 and 1820 &mdash; but that civil split is genuinely short-lived and bridged in the timeline's own "Revolution, Empire, and civil split" entry rather than invented as a permanent internal region here. Every era before 1806 and after 1820 is one government over the whole western third of Hispaniola. What changes on this map is only who ruled all of it at once.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1492</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1200</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label">
@@ -262,7 +262,7 @@
         <text class="ireg-label" id="ilbl-ht" x="150" y="98" style="font-size:11px">HAITI</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Spanish Hispaniola (western part)</div>
+        <div class="imap-name" id="iEraName">Ta&iacute;no Cacicazgo of Xaragua</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -561,14 +561,15 @@
 <script>
 (function () {
   var IC = {
-    spain:"#145c5c", france:"#1f7a7a", revolution:"#d9662f", republic1:"#c9962c", duvalier:"#c14f1d", modern:"#00209f"
+    taino:"#6b5c4a", spain:"#145c5c", france:"#1f7a7a", revolution:"#d9662f", republic1:"#c9962c", duvalier:"#c14f1d", modern:"#00209f"
   };
   var INAMES = {
-    spain:"Spanish Hispaniola (western part)", france:"French Saint-Domingue",
+    taino:"Taíno Cacicazgo of Xaragua", spain:"Spanish Hispaniola (western part)", france:"French Saint-Domingue",
     revolution:"Revolution, Empire, and Civil Split", republic1:"Reunified Republic of Haiti",
     duvalier:"Duvalier Dictatorship (black-and-red flag)", modern:"Restored Republic of Haiti"
   };
   var IFLAGS = {
+    taino: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     spain: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L300,200 M300,0 L0,200" stroke="#c9432c" stroke-width="26"/>',
     france: '<rect width="300" height="200" fill="#f4efe1"/><text x="150" y="132" font-size="92" text-anchor="middle" fill="#c9962c" font-family="serif">&#9770;</text>',
     revolution: '<rect width="300" height="100" fill="#00209f"/><rect y="100" width="300" height="100" fill="#d21034"/>',
@@ -585,6 +586,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1200", name:"Taíno Cacicazgo of Xaragua", t:{ ht:IC.taino }, flagKeys:{ ht:"taino" },
+      story:"By the time of European contact, Hispaniola is divided among five cacicazgos (paramount chiefdoms). Xaragua, covering roughly the southwestern peninsula and plains that become western Haiti, is the largest and, by most Spanish chroniclers' accounts, the most culturally refined. Cacique Bohechío rules it at the moment of Columbus's 1492 landfall; his sister Anacaona succeeds him around 1500 and is executed by the Spanish in 1503. No woven or painted banner is attested; status was displayed through carved duhos, cotton belts, and guanín ornaments instead." },
     { year:"1492", name:"Spanish Hispaniola (western part)", t:{ ht:IC.spain }, flagKeys:{ ht:"spain" },
       story:"Columbus's first permanent settlement in the Americas is founded on this island in 1492&ndash;93, and Spain claims the whole of Hispaniola. Its grip on the thinly-populated western third weakens steadily over the 17th century as French buccaneers and planters, based on Tortuga, move in from the 1620s&ndash;40s onward, a presence formally ceded to France in 1697. The flag flown is the Cross of Burgundy, the standard Spanish colonial banner, the same one flown at the same time over the eastern (future Dominican) side of the island." },
     { year:"1697", name:"French Saint-Domingue", t:{ ht:IC.france }, flagKeys:{ ht:"france" },
