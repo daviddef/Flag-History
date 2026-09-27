@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>Portugal through seven eras, on its own real border</h2>
+    <h2>Portugal through eight eras, on its own real border</h2>
     <p class="imap-sub">Portugal doesn't have a clean internal governance split the way Spain's Reconquista frontier or Castile/Granada does &mdash; there is no honest internal line to draw within Portugal itself for most of its history. So this map does the honest thing instead: the whole country, on its own real traced coastline, changing color as a single unit each time the government running it changes &mdash; including the one truly dramatic moment, 1580, when Portugal's color has to match a foreign crown's, because for sixty years it effectively did.</p>
     <div class="rule-box">
       <b>No internal border is invented here.</b> Unlike the Hungary or Spain pages in this atlas, Portugal's own map never splits into two simultaneously-governed pieces &mdash; even the Iberian Union wasn't a partition of Portugal, it was the whole country changing hands at once while Madrid ruled it through its own separate Portuguese institutions. The map below shows that as a whole-country color change, not a fabricated internal boundary.
@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1096</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 868</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="-40 -60 380 560" xmlns="http://www.w3.org/2000/svg">
         <path fill="var(--tile-sea)" d="M-40,50.9 L49.3,50.9 L51.9,76.9 L63.8,104.6 L65.1,137.3 L52.7,183.7 L48.5,214.9 L24.7,242.9 L20.0,293.4 L34.2,322.7 L60.9,329.8 L66.4,377.3 L57.3,437.6 L-40,437.6 Z"/>
@@ -268,7 +268,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">County of Portugal, granted</div>
+        <div class="imap-name" id="iEraName">First County of Portugal (Portucale)</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -619,16 +619,18 @@
 <script>
 (function () {
   var IC = {
-    county: "#6e6047", kingdom1: "#1c4c7c", union: "#204b5c", restored: "#a9762f",
+    county0: "#6e6047", county: "#6e6047", kingdom1: "#1c4c7c", union: "#204b5c", restored: "#a9762f",
     republic1: "#2f6b4a", estadonovo: "#3f3f3f", republic3: "#0b6e3f"
   };
   var INAMES = {
+    county0: "First County of Portugal (Portucale, vassal of Asturias/León)",
     county: "County of Portugal (vassal of León)", kingdom1: "Kingdom of Portugal (independent)",
     union: "Iberian Union (Spanish Habsburg crown)", restored: "Kingdom of Portugal (Braganza, restored)",
     republic1: "First Portuguese Republic", estadonovo: "Estado Novo (dictatorship)",
     republic3: "Portuguese Republic (today)"
   };
   var IFLAGS = {
+    county0: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     county: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     kingdom1: '<rect width="300" height="200" fill="#f4efe1"/><g transform="translate(150,100)"><path d="M-50,-55 h100 v70 q0,45 -50,55 q-50,-10 -50,-55 Z" fill="#a4302a"/><path d="M-40,-46 h80 v58 q0,36 -40,45 q-40,-9 -40,-45 Z" fill="#1c4c7c"/><g fill="#f4efe1"><circle cx="-20" cy="-25" r="4"/><circle cx="0" cy="-25" r="4"/><circle cx="20" cy="-25" r="4"/><circle cx="-20" cy="-5" r="4"/><circle cx="20" cy="-5" r="4"/></g></g>',
     union: '<rect width="300" height="200" fill="#f4efe1"/><path d="M0,0 L120,86 M0,200 L120,114 M300,0 L180,86 M300,200 L180,114" stroke="#a4302a" stroke-width="26" stroke-linecap="round"/>',
@@ -646,6 +648,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 868", name:"First County of Portugal (Portucale)", key:"county0",
+      story:"In 868, Vímara Peres, a nobleman serving King Alfonso III of Asturias, leads the reconquest and resettlement of the depopulated frontier region between the Minho and Douro rivers, centered on the old Roman port of Portus Cale &mdash; the direct namesake of “Portugal” itself. Alfonso rewards him with the title of Count, founding what historians call the First County of Portugal, two and a quarter centuries before the more famous county granted to Henry of Burgundy. Vímara's line rules with interruptions until Count Nuno Mendes dies in battle in 1071, after which the countship passes to direct royal administration until re-granted, as a fresh fief, to Henry of Burgundy in 1096. No securely documented flag survives from this pre-heraldic period." },
     { year:"1096", name:"County of Portugal, granted", key:"county",
       story:"Alfonso VI of León grants the County of Portugal to his son-in-law, the Burgundian knight Henry, around 1096 &mdash; a frontier fief on the edge of Al-Andalus, subject to León, with no securely documented flag of its own from this pre-heraldic period." },
     { year:"1139", name:"Independence declared", key:"kingdom1",
