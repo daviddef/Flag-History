@@ -243,7 +243,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five flags</h2>
+    <h2>One border, six flags</h2>
     <p class="imap-sub">Peru's own real coastal-and-Andean border, traced whole &mdash; there is no genuinely separate internal region to carve out here, even through the War of the Pacific's territorial losses to Chile. What changes, era to era, is only who ruled all of it at once. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>This page carries no internal-partition map by design.</b> Peru has never been divided into two separately-governed pieces within its own modern borders; every change shown here is a change of ruling power over the same territory, not a change of internal boundary.
@@ -251,8 +251,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1200s</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 3000 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 95 117" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -265,7 +265,7 @@
         <text class="ireg-label" id="ilbl-peru" x="47" y="55">PERU</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Inca Empire (Tawantinsuyu)</div>
+        <div class="imap-name" id="iEraName">Caral-Supe (Norte Chico) civilization</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -536,9 +536,9 @@
 
 <script>
 (function () {
-  var IC = { inca:"#6b5c4a", conquest:"#7c2e1f", viceroyalty:"#204b5c", independence:"#a9762f", modern:"#d91023" };
+  var IC = { caral:"#8a7355", inca:"#6b5c4a", conquest:"#7c2e1f", viceroyalty:"#204b5c", independence:"#a9762f", modern:"#d91023" };
   var INAMES = {
-    inca:"Inca Empire (Tawantinsuyu)", conquest:"Spanish conquest period", viceroyalty:"Viceroyalty of Peru (Spanish colonial)",
+    caral:"Caral-Supe (Norte Chico) civilization", inca:"Inca Empire (Tawantinsuyu)", conquest:"Spanish conquest period", viceroyalty:"Viceroyalty of Peru (Spanish colonial)",
     independence:"War of independence", modern:"Republic of Peru (modern)"
   };
   var IFLAGS = {
@@ -556,6 +556,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 3000 – 1800 BCE", key:"caral", flagKey:"noflag",
+      story:"Centered on Caral in the Supe Valley on Peru's arid north-central coast, this is the oldest known complex society in the Americas — monumental pyramid-and-plaza construction beginning around 3000 BCE, built without pottery or a conventional writing system, and apparently without contact with any other early civilization elsewhere in the world. No ruler's name, symbol, or flag survives. Roughly twenty-five centuries separate Caral's decline (c. 1800 BCE) from the Inca Empire's rise, a span in which Chavín, Moche, Nazca, Wari, Tiwanaku, and other Andean cultures each rise and fall in turn." },
     { year:"c. 1200s – 1532", key:"inca", flagKey:"noflag",
       story:"The largest pre-Columbian state in the Americas, centered on Cusco, expands across the Andes from the 1200s–1400s to its greatest extent under Huayna Capac in the early 1500s. No securely documented flag survives; the popular 20th-century 'rainbow flag' associated with Cusco is not a genuine Inca-era banner and is not shown here." },
     { year:"1532 – 1542", key:"conquest", flagKey:"spanish",
