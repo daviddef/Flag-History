@@ -245,15 +245,15 @@
 
   <div class="imap-section">
     <h2>One mainland, one archipelago, one union</h2>
-    <p class="imap-sub">Tanzania's own real border, split into the two territories that governed separately for most of the last three centuries: mainland Tanganyika, and the island Sultanate of Zanzibar (Unguja and Pemba, off the coast). Press play, or drag the slider.</p>
+    <p class="imap-sub">Tanzania's own real border, split into the two territories that governed separately for most of the last three centuries: mainland Tanganyika, and the island Sultanate of Zanzibar (Unguja and Pemba, off the coast) &mdash; which keeps a shade of its own even after the 1964 union, reflecting the semi-autonomous status it still holds today. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>Zanzibar had its own flag while the mainland had none.</b> The Sultanate of Zanzibar flew a plain red banner from roughly 1700 onward; the mainland interior had no unified flag of its own until German colonization in 1885. The two territories only share a government from the moment of the April 1964 union &mdash; the map dissolves the split there and never restores it, though Zanzibar keeps its own president and legislature within the union today.
+      <b>Zanzibar had its own flag while the mainland had none &mdash; and it never fully disappeared into the union.</b> The Sultanate of Zanzibar flew a plain red banner from roughly 1700 onward; the mainland interior had no unified flag of its own until German colonization in 1885. The two territories share one flag and one sovereignty from the moment of the April 1964 union &mdash; but the map keeps Zanzibar in a shade of its own within that same union palette, because Zanzibar keeps its own president, legislature, and constitution as a semi-autonomous part of the union to this day, a genuinely distinctive federal-style arrangement the mainland's own territory doesn't share.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">1964–present</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -498,11 +498,13 @@
 <script>
 (function () {
   var IC = {
-    none: "#6b5c4a", sultanate: "#a4302a", german: "#7a4a1f", tanganyika: "#1e7a4a", union: "#00a3dd"
+    none: "#6b5c4a", sultanate: "#a4302a", german: "#7a4a1f", tanganyika: "#1e7a4a", union: "#00a3dd",
+    union_mainland: "#1c9d5c", union_auto: "#5fc3e8"
   };
   var INAMES = {
     none: "No unified flag documented", sultanate: "Sultanate of Zanzibar", german: "German East Africa",
-    tanganyika: "Tanganyika (British mandate/trust, then independent)", union: "United Republic of Tanzania"
+    tanganyika: "Tanganyika (British mandate/trust, then independent)", union: "United Republic of Tanzania",
+    union_mainland: "United Republic of Tanzania (mainland)", union_auto: "United Republic of Tanzania (Zanzibar, semi-autonomous)"
   };
   var IFLAGS = {
     none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
@@ -528,8 +530,10 @@
       story:"Carl Peters's treaties give way to formal German colonization of the mainland from 1885 as German East Africa. Zanzibar becomes a British protectorate in 1890 but keeps flying its own Sultanate flag &mdash; the two territories are now ruled by two different European powers, one directly colonized, one only a protectorate." },
     { year:"1919/1920 – 1964", name:"Tanganyika (British) vs. Zanzibar Sultanate", t:{ mainland:IC.tanganyika, zanzibar:IC.sultanate }, flagKeys:{ mainland:"tanganyika", zanzibar:"sultanate" },
       story:"Germany's WWI defeat hands the mainland to Britain as the Tanganyika mandate, later a UN trust territory; Tanganyika becomes independent under Julius Nyerere in 1961, still flying the same green-black-gold flag. Zanzibar remains a separate British protectorate the whole time, independent as a constitutional sultanate for a few weeks in December 1963 before the January 1964 revolution topples the Sultan." },
-    { year:"1964–present", name:"United Republic of Tanzania", t:{ mainland:IC.union, zanzibar:IC.union }, flagKeys:{ mainland:"union", zanzibar:"union" },
-      story:"Tanganyika and revolutionary Zanzibar formally unite on 26 April 1964 under President Julius Nyerere &mdash; a genuine union, not an annexation. The new flag merges both predecessors' colors across one diagonal band. Zanzibar keeps its own president, legislature, and constitution within the union to this day." }
+    { year:"26 Apr 1964", name:"Union Day: Tanganyika and Zanzibar unite", t:{ mainland:IC.union, zanzibar:IC.union }, flagKeys:{ mainland:"union", zanzibar:"union" },
+      story:"Tanganyika and revolutionary Zanzibar formally unite on 26 April 1964 under President Julius Nyerere &mdash; a genuine union, not an annexation. The new flag merges both predecessors' colors across one diagonal band, and for this one frame the map marks the moment of union itself with a single undivided color across both territories." },
+    { year:"1964–present", name:"Zanzibar's continuing semi-autonomy", t:{ mainland:IC.union_mainland, zanzibar:IC.union_auto }, flagKeys:{ mainland:"union", zanzibar:"union" },
+      story:"Both territories fly the same union flag and answer to the same sovereign state, so the map keeps them a matched pair of shades drawn from that flag's own two colors rather than two rival colors. But the two are not administratively identical: Zanzibar keeps its own president, legislature, and constitution as a semi-autonomous part of the union to this day &mdash; a genuinely distinctive federal-style arrangement within a single sovereign state that the mainland's own territory doesn't share." }
   ];
 
   var IREGIONS = ["mainland","zanzibar"];
