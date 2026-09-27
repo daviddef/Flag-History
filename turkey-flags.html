@@ -247,13 +247,13 @@
     <h2>One government, one flag lineage</h2>
     <p class="imap-sub">Constantinople and Anatolia's own real border, traced whole &mdash; the one page in this atlas without an internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
-      <b>This is the one country in the atlas that never splits internally.</b> Whoever held Constantinople held the whole of Anatolia's governing authority in each of these five eras &mdash; there is no genuinely separate internal region to carve out honestly. What changes here is only who ruled all of it at once, and which version of essentially one continuous flag design they flew.
+      <b>This is the one country in the atlas that never splits internally.</b> Whoever held Constantinople (or, before it existed, all of Anatolia) held the whole of the territory's governing authority in each of these six eras &mdash; there is no genuinely separate internal region to carve out honestly. What changes here is only who ruled all of it at once, and which version of essentially one continuous flag design they flew.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">330</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 7500 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 320 145" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -269,7 +269,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Byzantine Empire</div>
+        <div class="imap-name" id="iEraName">Ancient Anatolia: Çatalhöyük to Roman rule</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -532,13 +532,15 @@
 <script>
 (function () {
   var IC = {
-    byzantium: "#6b1f2a", crescent: "#b5432f", ottoman_decline: "#a4302a", occupation: "#c9752f", republic: "#e30a17"
+    ancient: "#6b5c4a", byzantium: "#6b1f2a", crescent: "#b5432f", ottoman_decline: "#a4302a", occupation: "#c9752f", republic: "#e30a17"
   };
   var INAMES = {
+    ancient: "Ancient Anatolia: Çatalhöyük to Roman rule",
     byzantium: "Byzantine Empire", crescent: "Ottoman Empire (rise and height)", ottoman_decline: "Ottoman Empire (decline)",
     occupation: "Occupied Constantinople / nationalist Ankara", republic: "Republic of Turkey"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     byzantium: '<rect width="300" height="200" fill="#6b1f2a"/><g stroke="#c9a13c" stroke-width="8"><line x1="150" y1="30" x2="150" y2="170"/><line x1="80" y1="100" x2="220" y2="100"/></g><g fill="#c9a13c"><rect x="60" y="42" width="20" height="20"/><rect x="220" y="42" width="20" height="20"/><rect x="60" y="138" width="20" height="20"/><rect x="220" y="138" width="20" height="20"/></g>',
     crescent: '<rect width="300" height="200" fill="#e30a17"/><circle cx="130" cy="100" r="40" fill="#f4efe1"/><circle cx="144" cy="100" r="32" fill="#e30a17"/>',
     ottoman_decline: '<rect width="300" height="200" fill="#e30a17"/><circle cx="120" cy="100" r="40" fill="#f4efe1"/><circle cx="134" cy="100" r="32" fill="#e30a17"/><path d="M172,100 l14,-9.5 -5,11 12,4 -12,4 5,11 Z" fill="#f4efe1"/>',
@@ -554,6 +556,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 7500 BCE–330 CE", name:"Ancient Anatolia: Çatalhöyük to Roman rule", t:{ tr:IC.ancient }, flagKeys:{ tr:"ancient" },
+      story:"Çatalhöyük, a densely packed Neolithic settlement in central Anatolia occupied from roughly 7500 BCE, is among the oldest known large human settlements anywhere in the world. Millennia later the Hittite Empire (c. 1650&ndash;1180 BCE) rules much of Anatolia from Hattusa, followed by Phrygian and Lydian kingdoms, Persian Achaemenid rule from 546 BCE, Alexander's conquest in 334 BCE, a patchwork of Hellenistic successor kingdoms, and finally full Roman annexation &mdash; no single continuous polity across the span. No flag in any modern sense existed anywhere in this era; shown here honestly blank rather than invented." },
     { year:"330", name:"Byzantine Empire", t:{ tr:IC.byzantium }, flagKeys:{ tr:"byzantium" },
       story:"Constantine refounds the Greek city of Byzantium as Constantinople in 330 CE, the new capital of the Roman Empire's eastern half. It outlasts Rome itself by a thousand years, ending only when Mehmed II's Ottoman army breaches its walls on 29 May 1453." },
     { year:"1453", name:"Ottoman Empire (rise and height)", t:{ tr:IC.crescent }, flagKeys:{ tr:"crescent" },
