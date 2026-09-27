@@ -237,8 +237,8 @@
   </div>
 
   <div class="imap-section">
-    <h2>One island, seven rulers</h2>
-    <p class="imap-sub">Bahrain's own coastline, traced whole &mdash; a small island with no internal governing split to show. Press play, or drag the slider, across seven eras from early Islamic rule to today's kingdom.</p>
+    <h2>One island, eight rulers</h2>
+    <p class="imap-sub">Bahrain's own coastline, traced whole &mdash; a small island with no internal governing split to show. Press play, or drag the slider, across eight eras from ancient Dilmun to today's kingdom.</p>
     <div class="rule-box">
       <b>Why no internal split.</b> Every ruler covered here &mdash; caliph, dynasty, occupier, or king &mdash; held the whole island at once; there is no genuinely separate internal region on Bahrain to carve out honestly. A region-wide Arabian Peninsula map, showing Bahrain alongside its neighbors, is planned for a future phase.
     </div>
@@ -246,7 +246,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 348.0 585.2" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-bh" class="ireg-fill" d="M140.8,94.8 L170.3,120.5 L177.2,109.6 L187.4,101.4 L191.8,112.8 L196.2,130.8 L205.0,131.6 L198.1,140.2 L197.7,154.4 L183.9,157.9 L187.9,202.0 L186.4,269.0 L176.3,352.7 L170.1,369.3 L150.3,401.9 L150.2,402.1 L145.6,379.1 L137.8,353.9 L127.0,329.4 L113.4,308.3 L83.6,274.5 L78.6,253.4 L91.9,227.9 L95.6,216.9 L99.4,205.8 L95.5,177.2 L85.1,149.1 L73.5,128.7 L70.7,119.5 L71.1,107.1 L79.1,71.2 L84.1,62.4 L92.9,58.1 L93.0,58.1 L93.7,58.1 L108.3,58.5 L116.8,60.3 L127.7,65.3 L136.6,69.3 L136.6,69.3 L164.8,58.1 L169.3,61.1 L172.1,71.0 L177.1,77.9 L178.6,81.0 L180.1,84.1 L176.3,92.2 L169.8,94.0 L150.4,91.2 L140.8,94.8 Z M292.9,453.6 L298.5,454.6 L304.1,450.2 L311.0,446.4 L311.0,451.2 L309.3,457.9 L304.1,465.6 L298.9,472.3 L302.4,475.7 L307.6,481.5 L305.0,485.3 L296.8,483.4 L292.9,486.3 L287.3,491.6 L284.7,494.4 L287.7,504.5 L292.9,511.7 L294.2,516.6 L289.4,518.5 L286.8,523.3 L286.0,529.5 L289.9,532.4 L292.9,536.7 L288.6,541.1 L284.7,547.8 L281.2,554.5 L282.9,559.3 L280.8,561.2 L273.0,557.4 L267.8,549.2 L270.4,542.0 L275.6,530.0 L275.2,522.8 L275.2,512.2 L269.1,505.5 L269.6,498.8 L270.4,489.6 L273.0,479.6 L279.9,468.5 L289.0,457.4 L292.9,453.6 Z M175.0,30.5 L196.2,24.0 L211.6,32.2 L212.4,43.6 L212.4,55.0 L222.6,69.6 L231.4,73.7 L227.8,84.3 L224.1,88.4 L213.1,81.9 L210.2,71.3 L206.5,60.7 L197.0,58.2 L188.2,56.6 L182.3,59.0 L173.5,42.7 L175.0,30.5 Z M35.7,109.6 L43.1,112.0 L50.4,116.1 L50.4,129.1 L51.9,139.7 L53.3,151.1 L40.9,147.9 L27.7,148.7 L24.0,136.5 L25.5,121.0 L35.7,109.6 Z M305.9,506.5 L310.2,506.9 L318.4,508.4 L321.8,512.2 L321.0,518.0 L318.4,521.8 L315.8,520.9 L312.3,519.9 L307.6,520.9 L304.1,522.8 L301.1,516.6 L302.4,512.7 L300.2,509.3 L301.5,506.0 L305.9,506.5 Z M313.6,485.8 L324.0,486.3 L321.8,493.5 L316.2,497.3 L313.2,493.0 L311.9,489.2 L313.6,485.8 Z"/>
@@ -562,12 +562,13 @@
 <script>
 (function () {
   var IC = {
-    e0:"#6b5c4a", e1:"#6b5c4a", e2:"#6b5c4a", e3:"#6b5c4a", e4:"#a9762f", e5:"#a9762f", e6:"#a9762f"
+    ancient:"#5c2a24", e0:"#6b5c4a", e1:"#6b5c4a", e2:"#6b5c4a", e3:"#6b5c4a", e4:"#a9762f", e5:"#a9762f", e6:"#a9762f"
   };
   var INAMES = {
-    e0:"Early Islamic Bahrain", e1:"Medieval Arab emirate (Qarmatian &amp; successors)", e2:"Portuguese occupation", e3:"Persian (Safavid, later Afsharid) rule", e4:"Al Khalifa dynasty (British-protected)", e5:"State of Bahrain (independent, pre-kingdom)", e6:"Kingdom of Bahrain"
+    ancient:"Dilmun, Tylos &amp; Sassanid Mishmahig", e0:"Early Islamic Bahrain", e1:"Medieval Arab emirate (Qarmatian &amp; successors)", e2:"Portuguese occupation", e3:"Persian (Safavid, later Afsharid) rule", e4:"Al Khalifa dynasty (British-protected)", e5:"State of Bahrain (independent, pre-kingdom)", e6:"Kingdom of Bahrain"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     e0: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     e1: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">CONTESTED /</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#c9a13c">NO SINGLE FLAG</text>',
     e2: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
@@ -585,6 +586,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 3000 BCE–700 CE", name:"Dilmun, Tylos &amp; Sassanid Mishmahig", t:{ bh:IC.ancient }, flagKeys:{ bh:"ancient" },
+      story:"Bahrain's known history opens with Dilmun, a major Bronze Age trading civilization first attested in Sumerian cuneiform tablets by the late 3rd millennium BCE, linking Mesopotamia to the Indus Valley through Gulf maritime trade. Achaemenid Persian control from the 6th century BCE draws the island &mdash; known to Greek geographers as Tylos &mdash; into successive Achaemenid, Seleucid, and Parthian orbits, and Sassanid Persia renames and garrisons it as Mishmahig by the 3rd century CE. No flag in the modern territorial sense survives from this nearly four-thousand-year span; shown here honestly blank." },
     { year:"c. 700–899", name:"Early Islamic Bahrain", t:{ bh:IC.e0 }, flagKeys:{ bh:"e0" },
       story:"Bahrain converts to Islam during Muhammad's own lifetime, one of the faith's earliest conversions outside the Hejaz, and comes under successive caliphal authority, sitting atop the ancient Dilmun civilization's roughly four-thousand-year trading legacy. No flag in the modern territorial sense survives; caliphal and provincial insignia stood in its place." },
     { year:"899–1521", name:"Medieval Arab emirate (Qarmatian &amp; successors)", t:{ bh:IC.e1 }, flagKeys:{ bh:"e1" },
