@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">927</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 800 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="130 15 280 490" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" fill="var(--tile-sea)" d="M130,15 H410 V505 H130 Z M245.3,30.0 L212.3,86.7 L243.8,79.5 L277.6,79.8 L269.5,122.5 L241.8,169.4 L273.7,172.7 L276.2,178.2 L303.7,240.0 L324.8,248.4 L343.8,308.1 L352.6,328.8 L390.0,338.7 L386.2,372.2 L370.5,387.6 L382.8,414.7 L355.1,442.1 L313.8,441.6 L261.2,456.0 L246.8,445.7 L226.4,470.2 L197.8,464.3 L176.1,484.3 L159.7,473.8 L205.0,418.8 L232.7,407.5 L232.4,407.5 L184.2,398.7 L175.5,377.9 L207.7,361.7 L190.8,333.5 L196.7,299.2 L242.6,303.9 L242.6,303.9 L247.2,273.5 L226.5,241.3 L226.0,240.5 L188.5,231.3 L181.2,217.1 L192.4,193.7 L182.2,179.3 L165.6,204.1 L163.8,153.6 L148.2,126.9 L159.4,72.8 L183.4,30.3 L208.1,34.4 Z M163.3,243.7 L146.7,279.7 L123.4,268.9 L104.3,269.6 L110.7,241.5 L104.3,213.5 L130.2,211.3 Z M146.7,279.7 L151.8,317.1 L128.5,363.8 L73.7,394.8 L30.0,386.8 L55.1,332.2 L39.0,278.9 L81.0,237.9 L104.3,213.5 L110.7,241.5 L104.3,269.6 L123.4,268.9 Z M448.9,462.3 L470.4,487.0 L486.3,482.9 L513.3,506.8 L520.2,511.3 L529.1,510.2 L543.7,524.0 L588.1,533.6 L572.5,569.5 L568.6,606.8 L560.1,615.7 L546.1,610.9 L547.1,624.2 L524.5,653.6 L524.3,665.4 L286.5,665.4 L269.4,635.9 L246.6,609.4 L199.4,589.2 L196.3,551.1 L236.3,539.7 L288.2,553.1 L278.4,493.9 L307.5,516.3 L379.4,475.5 L388.7,432.6 L415.7,422.0 L420.2,440.4 L434.5,441.3 L448.9,462.3 Z"/>
@@ -281,7 +281,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Three kingdoms, one island</div>
+        <div class="imap-name" id="iEraName">Celtic Britain, Roman Britain &amp; the Anglo-Saxon Settlement</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -607,13 +607,15 @@
 <script>
 (function () {
   var IC = {
-    england: "#9c3b28", scotland: "#204b5c", wales: "#5c8f3f", great_britain: "#4a6f8f"
+    ancient: "#6b5c4a", england: "#9c3b28", scotland: "#204b5c", wales: "#5c8f3f", great_britain: "#4a6f8f"
   };
   var INAMES = {
+    ancient: "Celtic Britain, Roman Britain &amp; the Anglo-Saxon Settlement",
     england: "Kingdom of England", scotland: "Kingdom of Scotland", wales: "Independent Welsh kingdoms",
     great_britain: "Great Britain (unified)"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     st_george: '<rect width="300" height="200" fill="#f4efe1"/><rect x="125" width="50" height="200" fill="#9c3b28"/><rect y="75" width="300" height="50" fill="#9c3b28"/>',
     saltire: '<rect width="300" height="200" fill="#0065bd"/><polygon points="0,0 40,0 300,180 300,200 260,200 0,20" fill="#f4efe1"/><polygon points="300,0 260,0 0,180 0,200 40,200 300,20" fill="#f4efe1"/>',
     y_ddraig: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#0b7a3d"/><text x="150" y="132" font-size="86" text-anchor="middle">&#128009;</text>',
@@ -624,11 +626,13 @@
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
   }
   var iLegendEl = document.getElementById("iLegend");
-  iLegendEl.innerHTML = ["england","scotland","wales","great_britain"].map(function (k) {
+  iLegendEl.innerHTML = ["ancient","england","scotland","wales","great_britain"].map(function (k) {
     return '<span><span class="sw" style="background:' + IC[k] + '"></span>' + INAMES[k] + "</span>";
   }).join("");
 
   var ISNAP = [
+    { year:"c. 800 BCE–927 CE", name:"Celtic Britain, Roman Britain & the Anglo-Saxon Settlement", t:{ sc:IC.ancient, en:IC.ancient, wa:IC.ancient }, flagKeys:{ sc:"ancient", en:"ancient", wa:"ancient" },
+      story:"Iron Age Britain from roughly 800 BCE is home to independent Celtic tribes with their own hillforts and coinage; Emperor Claudius's invasion in 43 CE begins nearly four centuries of Roman provincial rule. Rome withdraws around 410 CE, and Angle, Saxon, and Jutish settlers migrate in, founding a shifting patchwork of small kingdoms &mdash; the &quot;Heptarchy&quot; &mdash; until Æthelstan unifies them into the Kingdom of England in 927. No single continuous polity spans this whole era, so no internal line to draw yet, and no flag in any modern sense existed anywhere in it; shown here honestly blank rather than invented." },
     { year:"927", name:"Three kingdoms, one island", t:{ sc:IC.scotland, en:IC.england, wa:IC.wales }, flagKeys:{ sc:"saltire", en:"st_george", wa:"y_ddraig" },
       story:"Æthelstan's 927 conquest of Northumbria creates a single Kingdom of England for the first time. Scotland, unified somewhat earlier under Kenneth MacAlpin's line, is fully independent. Wales has no king of its own at all &mdash; a patchwork of native princedoms, the strongest being Gwynedd, each ruling in its own right." },
     { year:"1284", name:"Wales conquered", t:{ sc:IC.scotland, en:IC.england, wa:IC.england }, flagKeys:{ sc:"saltire", en:"st_george", wa:"st_george" },
