@@ -240,7 +240,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five eras</h2>
+    <h2>One border, six eras</h2>
     <p class="imap-sub">Malawi's own real border, traced whole along the shores of Lake Malawi. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This page doesn't split internally.</b> The Maravi confederation and its successor chieftaincies never divided this territory into lasting, separately-governed pieces with borders of their own &mdash; only their political cohesion rose and fell. What changes here is only who, if anyone, held it all at once.
@@ -248,8 +248,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1480</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 200</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -263,7 +263,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Maravi Confederation</div>
+        <div class="imap-name" id="iEraName">Early Iron Age Bantu settlement &amp; Twa/Akafula foragers</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -541,14 +541,16 @@
 <script>
 (function () {
   var IC = {
-    maravi:"#5c2a24", chieftaincies:"#5c2a24", nyasaland:"#00247d", federation:"#00247d", modern:"#000000"
+    ironage:"#6b5c4a", maravi:"#5c2a24", chieftaincies:"#5c2a24", nyasaland:"#00247d", federation:"#00247d", modern:"#000000"
   };
   var INAMES = {
+    ironage:"Early Iron Age Bantu settlement & Twa/Akafula foragers",
     maravi:"Maravi Confederation", chieftaincies:"Post-Maravi chieftaincies (Yao, Ngoni, Chewa)",
     nyasaland:"Nyasaland (British Central Africa Protectorate)", federation:"Nyasaland in the Federation of Rhodesia and Nyasaland",
     modern:"Republic of Malawi (independent)"
   };
   var IFLAGS = {
+    ironage: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     maravi: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     chieftaincies: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">REGALIA,</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text>',
     nyasaland: '<rect width="300" height="200" fill="#00247d"/><g stroke="#fff" stroke-width="8"><path d="M0,0 L150,100 M150,0 L0,100"/></g><g stroke="#c8102e" stroke-width="4"><path d="M0,0 L150,100 M150,0 L0,100"/></g><rect x="65" width="20" height="100" fill="#fff"/><rect width="150" height="40" y="30" fill="#fff"/><rect x="70" width="10" height="100" fill="#c8102e"/><rect width="150" height="20" y="40" fill="#c8102e"/><circle cx="220" cy="120" r="32" fill="#fff" stroke="#6e6047" stroke-width="2"/><path d="M205,105 l30,30 M235,105 l-30,30" stroke="#c8102e" stroke-width="3"/>',
@@ -564,6 +566,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 200", name:"Early Iron Age Bantu settlement & Twa/Akafula foragers", t:{ mw:IC.ironage }, flagKeys:{ mw:"ironage" },
+      story:"Bantu-speaking farmers and ironworkers, part of the broader Bantu expansion, settle the Lake Malawi basin from around the 2nd&ndash;3rd century CE, documented archaeologically through pottery traditions such as Nkope ware. They gradually absorb or displace the region's earlier Late Stone Age foraging population, remembered in later oral tradition as the Akafula or Batwa. No overarching political authority unites the region across this millennium-plus span, and no flag or banner is documented, before the rise of the Maravi confederation around 1480." },
     { year:"c. 1480", name:"Maravi Confederation", t:{ mw:IC.maravi }, flagKeys:{ mw:"maravi" },
       story:"The Maravi (or Malawi) peoples establish a loose confederation of chieftaincies around the southern end of Lake Malawi from the late 15th century, at its height controlling trade routes to the Indian Ocean coast and giving the modern country its name. No securely documented flag or banner survives; authority was expressed through regalia and chiefly symbols instead." },
     { year:"c. 1650", name:"Post-Maravi chieftaincies (Yao, Ngoni, Chewa)", t:{ mw:IC.chieftaincies }, flagKeys:{ mw:"chieftaincies" },
