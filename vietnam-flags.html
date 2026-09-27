@@ -254,8 +254,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">before 938</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1000 BCE</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 260 420" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="260" height="420" fill="var(--sea)"/>
@@ -268,7 +268,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Chinese imperial rule</div>
+        <div class="imap-name" id="iEraName">Đông Sơn culture &amp; the Văn Lang / Âu Lạc kingdoms</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -606,15 +606,17 @@
 <script>
 (function () {
   var IC = {
-    china:"#a4302a", none:"#5c2a24", nguyen:"#fcd116", french:"#21468b",
+    dongson:"#7a5a2e", china:"#a4302a", none:"#5c2a24", nguyen:"#fcd116", french:"#21468b",
     contested:"#8a3a2a", drv:"#da251d", rvn:"#fcd116", reunified:"#da251d"
   };
   var INAMES = {
+    dongson:"Đông Sơn culture &amp; the Văn Lang / Âu Lạc kingdoms",
     china:"Chinese imperial rule", none:"Independent dynasties (no flag documented)", nguyen:"Nguyễn dynasty (independent empire)",
     french:"French Indochina", contested:"Contested independence (DRV declared / French Indochina War)",
     drv:"Democratic Republic of Vietnam (North)", rvn:"Republic of Vietnam (South)", reunified:"Socialist Republic of Vietnam (reunified)"
   };
   var IFLAGS = {
+    dongson: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     china: '<rect width="300" height="200" fill="#fcd116"/><text x="150" y="100" text-anchor="middle" dominant-baseline="middle" font-family="serif" font-size="46" fill="#a4302a">龍</text>',
     none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     nguyen: '<rect width="300" height="200" fill="#fcd116"/><rect x="120" y="40" width="60" height="120" fill="#a4302a"/>',
@@ -632,6 +634,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 1000 BCE–111 BCE", name:"Đông Sơn culture & the Văn Lang / Âu Lạc kingdoms", t:{ north:IC.dongson, south:IC.dongson }, flagKeys:{ north:"dongson", south:"dongson" },
+      story:"From around 1000 BCE, the Red River Delta's Bronze Age Đông Sơn culture, famous for its elaborately cast bronze drums, is traditionally associated with the semi-legendary kingdom of Văn Lang. Around 257 BCE the more securely documented kingdom of Âu Lạc, under An Dương Vương and centered on the citadel of Cổ Loa, absorbs Văn Lang; Âu Lạc itself falls to the Nam Việt warlord Triệu Đà around 179 BCE, and Nam Việt in turn falls to Han China in 111 BCE, opening the long Chinese imperial rule that follows. No flag or comparable state banner survives from this era, and none is invented here &mdash; shown honestly blank." },
     { year:"before 938", name:"Chinese imperial rule (Bắc thuộc)", t:{ north:IC.china, south:IC.china }, flagKeys:{ north:"china", south:"china" },
       story:"Successive Chinese dynasties administer the Red River Delta as directly ruled commanderies for over a thousand years. No distinct Vietnamese symbol exists, and the whole territory answers to the same imperial dragon standard &mdash; no internal line to draw." },
     { year:"938–1802", name:"Independent Vietnamese dynasties", t:{ north:IC.none, south:IC.none }, flagKeys:{ north:"none", south:"none" },
