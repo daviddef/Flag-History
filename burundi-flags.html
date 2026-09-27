@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1600 – c. 1897</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 700 BCE – 500 CE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
         <rect class="isea-bg" x="0" y="0" width="280" height="200"/>
@@ -568,6 +568,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 700 BCE \u2013 500 CE", name:"Urewe Iron Age culture (early Bantu ironworkers)", t:{ cc: IC["era-1600"] }, flagKeys:{ cc: "era-1600" },
+      story:"Long before the Ganwa dynasty's Kingdom of Burundi, Bantu-speaking farmers bringing sophisticated ironworking technology settle the Great Lakes highlands, including present-day Burundi, from around the 7th century BCE. Archaeologists call this the Urewe tradition, one of the earliest independently developed ironworking cultures documented in sub-Saharan Africa. No centralized state or named ruler is attested, and no flag or comparable banner survives \u2014 their material record is pottery and iron tools, not heraldry." },
     { year:"c. 1600 \u2013 c. 1897", name:"Kingdom of Burundi (precolonial)", t:{ cc: IC["era-1600"] }, flagKeys:{ cc: "era-1600" },
       story:"a centralized Kingdom of Burundi, ruled by a Mwami through a court structure distinct from \u2014 though comparable to \u2014 neighboring Rwanda's monarchy, consolidates in the highlands south of Lake Kivu from roughly the 17th century onward. The royal drum (karyenda) serves as the central symbol of the Mwami's sacred authority throughout this period, a tradition strong enough that it is later revived as the flag emblem\u2026" },
     { year:"c. 1897 \u2013 1916", name:"Kingdom of Burundi under German suzerainty", t:{ cc: IC["era-1897"] }, flagKeys:{ cc: "era-1897" },
