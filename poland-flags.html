@@ -251,13 +251,13 @@
       <b>A Pole born in Warsaw in 1795 could, without ever moving house, hold Prussian, French, Russian, and then Polish citizenship before turning thirty.</b> Warsaw fell under Prussia in 1795, was handed to Napoleon's Duchy of Warsaw in 1807, and was awarded to Russia by the Congress of Vienna in 1815 &mdash; three changes of sovereign in twenty years, all without a single Warsaw resident crossing a border. The lines below only solidify where the three zones were genuinely ruled apart, and dissolve wherever one power (or a reunited Poland) held them together.
     </div>
     <div class="rule-box">
-      <b>What's real data here and what's approximated:</b> the 1783, 1918&ndash;1921, and 1945 outlines are real historical-boundary GeoJSON (<code>aourednik/historical-basemaps</code>, verified feature-by-feature), simplified for this small map. The ~1772 Commonwealth outline reuses that dataset's nearest surviving dated snapshot (1715), since no 1772 file exists in the source &mdash; a close stand-in, not an exact treaty line; its area checks out at roughly 40% larger than the 1783 shape, consistent with the First Partition's real scale. The three-way internal partition split for 1795&ndash;1918 (and the Duchy of Warsaw's reach within it) is hand-approximated on top of the real 1783 outline &mdash; no machine-readable trace of those internal zone lines was found, so treat the dividing lines as illustrative, not surveyed.
+      <b>What's real data here and what's approximated:</b> the 1783, 1918&ndash;1921, and 1945 outlines are real historical-boundary GeoJSON (<code>aourednik/historical-basemaps</code>, verified feature-by-feature), simplified for this small map. The ~1772 Commonwealth outline reuses that dataset's nearest surviving dated snapshot (1715), since no 1772 file exists in the source &mdash; a close stand-in, not an exact treaty line; its area checks out at roughly 40% larger than the 1783 shape, consistent with the First Partition's real scale. The three-way internal partition split for 1795&ndash;1918 (and the Duchy of Warsaw's reach within it) is hand-approximated on top of the real 1783 outline &mdash; no machine-readable trace of those internal zone lines was found, so treat the dividing lines as illustrative, not surveyed. The 1939&ndash;45 German/Soviet occupation split reuses this same schematic geometry rather than a fourth, war-specific trace, since the wartime line ran roughly similarly west-east.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">c. 750&ndash;960</span>
-        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 440 460" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-ghost-modern" d="M194.1,343.7 L174.0,329.4 L160.1,334.6 L149.9,330.7 L137.3,337.8 L136.9,330.9 L131.4,325.1 L121.1,331.2 L112.1,314.1 L95.9,311.6 L95.8,304.5 L92.7,305.8 L94.4,301.6 L78.2,296.6 L80.8,303.3 L75.0,307.9 L64.4,297.5 L69.2,292.1 L67.4,289.4 L60.2,291.1 L43.3,277.6 L36.3,282.4 L40.3,272.0 L31.5,254.1 L34.6,245.1 L29.9,234.2 L31.8,228.3 L22.0,220.4 L28.1,205.6 L25.1,193.1 L30.4,195.6 L28.9,183.3 L58.1,176.1 L94.0,157.6 L106.7,156.4 L116.4,162.6 L107.9,160.4 L114.7,171.9 L136.8,165.1 L126.0,174.8 L141.3,166.3 L202.6,166.3 L209.2,170.1 L222.4,217.5 L219.8,224.1 L210.5,228.1 L206.6,237.4 L216.5,244.5 L213.7,259.5 L226.1,283.1 L222.6,285.8 L225.5,294.9 L197.3,325.5 L196.9,338.3 L200.1,344.0 L194.1,343.7 Z" fill="none" stroke="#6e6047" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
@@ -845,19 +845,23 @@
 <script>
 (function () {
   var IC = {
-    tribal: "#8a6a3a", prussia: "#204b5c", russia: "#8c2f2f", austria: "#a9762f", duchy: "#6b4c8a", poland: "#2f6b4a"
+    tribal: "#8a6a3a", prussia: "#204b5c", russia: "#8c2f2f", austria: "#a9762f", duchy: "#6b4c8a", poland: "#2f6b4a",
+    nazi: "#3a3a3a", sovietOcc: "#6b2c2c"
   };
   var INAMES = {
     tribal: "West Slavic tribal duchies (pre-Piast)",
     prussia: "Prussia / Germany", russia: "Russian Empire", austria: "Austria (Galicia)",
-    duchy: "Duchy of Warsaw (Napoleonic)", poland: "Poland (reunited, sovereign)"
+    duchy: "Duchy of Warsaw (Napoleonic)", poland: "Poland (reunited, sovereign)",
+    nazi: "Nazi Germany (annexed zone & General Government)", sovietOcc: "Soviet Union (annexed zone)"
   };
   var IFLAGS = {
     prussia: '<rect width="300" height="200" fill="#1c1c1c"/><g transform="translate(150,100)" fill="#f4efe1"><path d="M0,-34 C9,-27 12,-16 10,-6 C16,-8 27,-4 30,5 C23,3 16,7 12,10 C19,14 25,23 23,32 C16,25 9,22 4,23 L4,40 L-4,40 L-4,23 C-9,22 -16,25 -23,32 C-25,23 -19,14 -12,10 C-16,7 -23,3 -30,5 C-27,-4 -16,-8 -10,-6 C-12,-16 -9,-27 0,-34 Z"/></g>',
     russia: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#204b8c"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
     austria: '<rect width="300" height="66.7" fill="#a4302a"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#a4302a"/>',
     duchy: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/>',
-    poland: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/>'
+    poland: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/>',
+    nazi: '<rect width="300" height="200" fill="#cc0000"/><circle cx="150" cy="100" r="45" fill="#fff"/>',
+    sovietOcc: '<rect width="300" height="200" fill="#cc0000"/><path d="M150,60 L165,105 L210,105 L172,132 L187,177 L150,150 L113,177 L128,132 L90,105 L135,105 Z" fill="#ffde00"/>'
   };
   function iFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -908,11 +912,14 @@
     { year:"1918\u20131921", mode:"whole", shape:"p1920", color:IC.poland, wholeLabel:"2ND REPUBLIC",
       name:"Poland reborn \u2014 and larger than it looks today", flagKeys:null,
       owners:"<b>Second Polish Republic</b>: reunited, plus a substantial eastern reach into what is now western Belarus and Lithuania (including Vilnius), secured by the 1919\u201321 Polish\u2013Soviet War.",
-      story:"All three empires collapse within weeks of each other in late 1918, and the reborn Second Polish Republic reunites the old partition zones under one government for the first time since 1795. Its eastern border, fixed by the Peace of Riga after the 1919\u201321 war with Soviet Russia, runs well east of today's Polish\u2013Belarusian and Polish\u2013Lithuanian frontiers \u2014 this real 1920s-dataset outline visibly overshoots the dashed modern-Poland line to the east. This border holds through the 1939 invasion (Poland's government continues abroad) all the way to the war's end in 1945." },
+      story:"All three empires collapse within weeks of each other in late 1918, and the reborn Second Polish Republic reunites the old partition zones under one government for the first time since 1795. Its eastern border, fixed by the Peace of Riga after the 1919\u201321 war with Soviet Russia, runs well east of today's Polish\u2013Belarusian and Polish\u2013Lithuanian frontiers \u2014 this real 1920s-dataset outline visibly overshoots the dashed modern-Poland line to the east. This border holds, on paper, through the 1939 invasion \u2014 Poland's government continues abroad \u2014 but the country itself is immediately split again, shown next." },
+    { year:"1939\u20131945", mode:"split", shape:"p1783", t:{ prussian:IC.nazi, russian:IC.sovietOcc, galicia:IC.nazi }, flagKeys:{ prussian:"nazi", russian:"sovietOcc", galicia:"nazi" },
+      name:"German & Soviet occupation, ruled apart",
+      story:"Germany invades on 1 September 1939; the USSR invades from the east on 17 September under the secret protocol of the Molotov\u2013Ribbentrop Pact, and the two occupiers partition the country between them \u2014 not as one joint administration, but as two separate ones. Germany annexes western Poland outright and rules the rest as the General Government from Krak\u00f3w, a zone of mass deportation, the Holocaust's principal killing grounds, and the deliberate destruction of Polish elites; the USSR deports hundreds of thousands from its own zone, including the 1940 Katyn massacre of Polish officers. Germany's June 1941 invasion of the USSR brings the entire country under Nazi occupation until the Soviet advance of 1944\u201345 \u2014 the internal line shown here, approximated on the same schematic partition geometry used above, holds only for these first roughly twenty-one months." },
     { year:"1945\u2013present", mode:"whole", shape:"p1945", color:IC.poland, wholeLabel:"POLAND",
       name:"The Recovered Territories \u2014 shifted west", flagKeys:null,
       owners:"<b>People's Republic, then Republic of Poland</b>: the whole country physically shifted roughly 200km west of its interwar position.",
-      story:"At Yalta and Potsdam the Allies redraw Poland bodily westward: the USSR annexes the eastern Kresy borderlands for good (visible here as the gap between this shape and the larger 1920s outline two steps back), and Poland is compensated with the German territory east of the Oder\u2013Neisse line \u2014 Silesia, Pomerania, and southern East Prussia, officially the \u201cRecovered Territories,\u201d though most of their prewar German population is expelled. This real traced 1945-dataset outline is, within rounding, modern Poland's own border \u2014 it has not moved since." }
+      story:"At Yalta and Potsdam the Allies redraw Poland bodily westward: the USSR annexes the eastern Kresy borderlands for good (visible here as the gap between this shape and the larger 1920s outline three steps back), and Poland is compensated with the German territory east of the Oder\u2013Neisse line \u2014 Silesia, Pomerania, and southern East Prussia, officially the \u201cRecovered Territories,\u201d though most of their prewar German population is expelled. This real traced 1945-dataset outline is, within rounding, modern Poland's own border \u2014 it has not moved since." }
   ];
 
   var IREGIONS = ["prussian","russian","galicia"];
