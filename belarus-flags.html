@@ -239,7 +239,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, eight rulers</h2>
+    <h2>One border, nine rulers</h2>
     <p class="imap-sub">Belarus's own real border, traced whole &mdash; another page in this atlas without an internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>Belarus doesn't split internally the way Ukraine does.</b> Its lands were consistently held as one piece &mdash; a core, heavily-populated part of the Grand Duchy of Lithuania, then absorbed whole into the Russian Empire, then governed as a single Soviet republic. There's no genuinely separate internal region here to carve out honestly; what changes is only who ruled all of it at once.
@@ -247,8 +247,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 900</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 6th c.</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 230" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-by" class="ireg-fill" d="M22.2,110.2 L49.8,110.4 L80.9,99.6 L87.6,83.4 L111.1,74.2 L108.4,61.4 L125.8,56.6 L156.6,45.5 L186.8,52.7 L190.8,59.8 L205.9,56.4 L233.9,63.2 L236.7,76.7 L230.5,84.4 L248.5,103.2 L260.2,108.4 L258.4,113.6 L277.7,118.6 L286.0,126.3 L274.9,132.5 L251.7,131.5 L246.2,134.2 L252.9,143.7 L260.0,162.1 L235.4,163.8 L226.6,170.0 L224.7,184.5 L213.3,181.7 L187.5,183.1 L180.0,176.4 L169.2,181.4 L158.5,177.2 L135.9,176.7 L103.9,169.8 L75.0,167.5 L52.8,168.2 L37.1,175.9 L23.4,177.1 L22.8,164.3 L14.0,151.0 L31.2,145.2 L31.3,133.8 L23.4,122.9 L22.2,110.2 Z"/>
@@ -257,7 +257,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Polotsk and the Rus' world</div>
+        <div class="imap-name" id="iEraName">Early East Slavic and Baltic tribes</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -638,13 +638,14 @@
 <script>
 (function () {
   var IC = {
-    rus: "#7a5a3f", ltu: "#a4302a", rusemp: "#1e2f96", bnr: "#c8302a", bssr: "#8c2f2f", modern: "#2f6b4a"
+    tribal: "#6b5c4a", rus: "#7a5a3f", ltu: "#a4302a", rusemp: "#1e2f96", bnr: "#c8302a", bssr: "#8c2f2f", modern: "#2f6b4a"
   };
   var INAMES = {
-    rus: "Kievan Rus' / Polotsk (no flag documented)", ltu: "Grand Duchy of Lithuania", rusemp: "Russian Empire",
+    tribal: "Early East Slavic and Baltic tribes", rus: "Kievan Rus' / Polotsk (no flag documented)", ltu: "Grand Duchy of Lithuania", rusemp: "Russian Empire",
     bnr: "Belarusian People's Republic", bssr: "Byelorussian SSR (Soviet Union)", modern: "Republic of Belarus"
   };
   var IFLAGS = {
+    tribal: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     rus: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     ltu: '<rect width="300" height="200" fill="#c8302a"/><g transform="translate(150,100)"><ellipse cx="0" cy="-5" rx="46" ry="52" fill="#f4efe1"/><path d="M0,-40 q-26,10 -22,42 q2,20 22,30 q20,-10 22,-30 q4,-32 -22,-42 Z" fill="#c8302a"/></g>',
     rusemp: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#1e2f96"/><rect y="133.3" width="300" height="66.7" fill="#c8302a"/>',
@@ -661,6 +662,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 6th c.", name:"Early East Slavic and Baltic tribes", t:{ by:IC.tribal }, flagKeys:{ by:"tribal" },
+      story:"Slavic tribes &mdash; the Krivichi in the north, the Dregovichi in the center, and the Radimichi in the east &mdash; settle the forests and river valleys of present-day Belarus during the broader Slavic migrations of the 6th to 8th centuries, gradually absorbing or displacing the region's earlier Baltic-speaking inhabitants. Organized around fortified hillforts rather than a unified state, these tribal groupings form the direct demographic and linguistic ancestors of the Rus' principalities that follow; Polotsk's first chronicle mention in 862 marks the point where a named political center finally emerges. No flag survives from this pre-state era." },
     { year:"c. 900", name:"Polotsk and the Rus' world", t:{ by:IC.rus }, flagKeys:{ by:"rus" },
       story:"Polotsk, first mentioned in the chronicles in 862, is already one of Kievan Rus's oldest and most self-directed power centers, often ruled by its own line of princes even while nominally part of the same Rurikid realm as Kyiv. No securely documented flag survives from this pre-heraldic era." },
     { year:"1392", name:"Grand Duchy of Lithuania", t:{ by:IC.ltu }, flagKeys:{ by:"ltu" },
