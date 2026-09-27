@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1394 – 1884</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 6th c. BCE – 16th c. CE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
         <rect class="isea-bg" x="0" y="0" width="280" height="200"/>
@@ -616,6 +616,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 6th c. BCE \u2013 16th c. CE", name:"Sao civilization, Lake Chad basin", t:{ french: IC["era-1394"], british: IC["era-1394"] }, flagKeys:{ french:"era-1394", british:"era-1394" },
+      story:"Long before Bamum or Duala, fortified mound settlements along the Chari and Logone rivers and around Lake Chad, in what is now Cameroon's Far North region, produced a distinctive material culture known to archaeology as the Sao civilization, dated from roughly the 6th century BCE into the 16th century CE. No Sao state ever unified politically; dozens of independent fortified villages shared pottery styles, burial customs, and striking terracotta and bronze figurative art, until the Kotoko people and the expanding Kanem-Bornu Empire absorbed the last settlements by the 15th\u201316th centuries. No flag or comparable symbol survives from any Sao settlement." },
     { year:"c. 1394 \u2013 1884", name:"Bamum, Duala, and other pre-colonial kingdoms", t:{ french: IC["era-1394"], british: IC["era-1394"] }, flagKeys:{ french:"era-1394", british:"era-1394" },
       story:"the territory that becomes Cameroon holds many independent polities before European contact, most notably the Bamum Kingdom in the western grassfields (founded around 1394, and still existing today as a traditional monarchy with its own written script, invented by Sultan Njoya around 1896) and the Duala chiefdoms of the coast, who become key trading intermediaries with Portuguese, and later German, merchants from\u2026" },
     { year:"1884 \u2013 1916", name:"German Kamerun", t:{ french: IC["era-1884"], british: IC["era-1884"] }, flagKeys:{ french:"era-1884", british:"era-1884" },
