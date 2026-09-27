@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One interior, seven flags</h2>
+    <h2>One interior, eight flags</h2>
     <p class="imap-sub">Saudi Arabia's own real border, traced whole &mdash; there is no internal split to draw. The Hejaz, Najd, and Asir were absorbed one after another into a single Al Saud state rather than governed as separate pieces at the same time. Press play, or drag the slider.</p>
     <div class="rule-box">
       <b>Every era on this map is the same lineage, not a partition.</b> Unlike several other pages in this atlas, present-day Saudi Arabia was never split between two rulers at once for any sustained period covered here &mdash; the shifting flag reflects one family's rise, fall, and reconquest of the same interior, not a divided territory.
@@ -250,7 +250,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -601,6 +601,7 @@
 <script>
 (function () {
   var IC = {
+    ancient:"#7a4a3a",
     caliphal:"#6b5c4a",
     first_saudi:"#3a7350",
     fragmented:"#7a6a52",
@@ -610,6 +611,7 @@
     standardized:"#0b4527"
   };
   var INAMES = {
+    ancient:"Ancient Thamudic, Lihyanite & Nabataean Arabia",
     caliphal:"Caliphal & emirate-era Arabia",
     first_saudi:"First Saudi State (Diriyah)",
     fragmented:"Fragmented Najd (occupation, 2nd Saudi State, Rashidis)",
@@ -619,6 +621,7 @@
     standardized:"Kingdom of Saudi Arabia (standardized)"
   };
   var IFLAGS = {
+    ancient: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     caliphal: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"122\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"26\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     first_saudi: "<rect width=\"300\" height=\"200\" fill=\"#0f5c33\"/><text x=\"150\" y=\"105\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"15\" fill=\"#f4efe1\">&#1604;&#1575; &#1573;&#1604;&#1607; &#1573;&#1604;&#1575; &#1575;&#1604;&#1604;&#1607;</text>",
     fragmented: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">CONTESTED /</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">NO SINGLE FLAG</text>",
@@ -638,6 +641,7 @@
   document.getElementById("ilbl-sa").setAttribute("x","161.6"); document.getElementById("ilbl-sa").setAttribute("y","151.8");
 
   var ISNAP = [
+    { year:"c. 1000 BCE – c. 630 CE", name:"Ancient Thamudic, Lihyanite & Nabataean Arabia", t:{sa:IC.ancient}, flagKeys:{sa:"ancient"}, story:"More than a millennium before Islam, the northwestern Arabian Peninsula is home to literate, city-building societies: Thamudic tribal groups, the Lihyanite kingdom centered on Dedan (al-'Ula), and finally the Nabataean kingdom, whose traders controlled the incense and spice routes and who carved the monumental tombs of Hegra (Mada'in Salih) — Saudi Arabia's first UNESCO World Heritage Site. Rome annexes the Nabataean kingdom in 106 CE, and the wider Hejaz and Najd remain a patchwork of tribes and caravan cities until Islam's rise in the early 7th century. No flag in the modern sense survives from any of these societies, so this entry is shown honestly blank." },
     { year:"c. 630 – 1744", name:"Caliphal & emirate-era Arabia (Hejaz and Najd)", t:{sa:IC.caliphal}, flagKeys:{sa:"caliphal"}, story:"The Hejaz, home to Mecca and Medina, is the birthplace of Islam in the early 7th century and the seat of the earliest caliphates before authority shifts to Damascus and then Baghdad; the wider Arabian interior remains a patchwork of local emirates and tribal rule for most of this span. No flag in the modern sense exists across this millennium-long stretch, so this entry is shown honestly blank." },
     { year:"1744 – 1818", name:"First Saudi State (Emirate of Diriyah)", t:{sa:IC.first_saudi}, flagKeys:{sa:"first_saudi"}, story:"In 1744 the ruler of the oasis town of Diriyah, Muhammad ibn Saud, allies with religious reformer Muhammad ibn Abd al-Wahhab, founding the Al Saud dynasty's first state. It expands across most of the Arabian interior, including a 1803 capture of Mecca, before an Ottoman-Egyptian invasion crushes it in 1818. A plain green banner bearing the shahada is the earliest form of the enduring Saudi flag tradition, shown here as an informed reconstruction." },
     { year:"1818 – 1902", name:"Fragmented Najd (occupation, Second Saudi State, Rashidis)", t:{sa:IC.fragmented}, flagKeys:{sa:"fragmented"}, story:"An Ottoman-Egyptian army destroys Diriyah in 1818. The Al Saud rebuild a smaller Second Saudi State around Riyadh from 1824, but it fractures under a succession dispute and finally falls to the rival Al Rashid emirate of Ha'il in 1891. No single banner can be attributed with confidence across this fractured, contested 84-year span, so it is shown as one honest bridging entry." },
