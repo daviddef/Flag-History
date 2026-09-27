@@ -242,7 +242,7 @@
 
 
   <div class="imap-section">
-    <h2>Nepal's own border, seven rulers</h2>
+    <h2>Nepal's own border, eight rulers</h2>
     <p class="imap-sub">Nepal's own real border, traced whole &mdash; the Shah dynasty's 1768 unification created one territory that has changed political form repeatedly (kingdom, Rana oligarchy, Panchayat, constitutional monarchy, republic) without ever splitting into rival administrations. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This is a single-region page &mdash; every government since 1768 has ruled the unified kingdom's whole territory.</b> The pre-1768 hill principalities were genuinely separate, but no single flag or documented emblem survives to distinguish them individually, so that fragmented era is shown as one honest bridging entry rather than an invented split.
@@ -251,7 +251,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag">2008–present</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none">
@@ -686,12 +686,13 @@
 
 <script>
 (function () {
-  var IC = { npmod: "#3f6b3f", npold1: "#204b5c", npnone: "#6b5c4a" };
-  var INAMES = { npmod: "Federal Democratic Republic of Nepal", npold1: "Restored monarchy, early multiparty democracy", npnone: "Fragmented hill kingdoms and Kathmandu Valley principalities" };
+  var IC = { npmod: "#3f6b3f", npold1: "#204b5c", npnone: "#6b5c4a", nplicchavi: "#a9762f" };
+  var INAMES = { npmod: "Federal Democratic Republic of Nepal", npold1: "Restored monarchy, early multiparty democracy", npnone: "Fragmented hill kingdoms and Kathmandu Valley principalities", nplicchavi: "Licchavi Dynasty (Kathmandu Valley)" };
   var IFLAGS = {
     npmod: '<path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#003893"/> <path d="M76,27 L211,64 L153,100 L211,143 L76,173 Z" fill="#dc143c"/> <path d="M130,38 a14,14 0 1,0 0,28 a10,10 0 1,1 0,-28" fill="#fff"/> <g transform="translate(130,132)" fill="#fff"> <circle r="10"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(0)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(45)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(90)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(135)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(180)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(225)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(270)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(315)"/> </g>',
     npold1: '<path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#003893"/> <path d="M76,27 L211,64 L153,100 L211,143 L76,173 Z" fill="#dc143c"/> <path d="M130,38 a14,14 0 1,0 0,28 a10,10 0 1,1 0,-28" fill="#fff"/> <circle cx="126" cy="50" r="1.4" fill="#003893"/> <circle cx="133" cy="50" r="1.4" fill="#003893"/> <path d="M124,55 q6,4 12,0" stroke="#003893" stroke-width="1.4" fill="none"/> <g transform="translate(130,132)" fill="#fff"> <circle r="10"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(0)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(45)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(90)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(135)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(180)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(225)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(270)"/> <polygon points="0,-20 4,-12 -4,-12" transform="rotate(315)"/> </g> <circle cx="126" cy="128" r="1.4" fill="#003893"/> <circle cx="134" cy="128" r="1.4" fill="#003893"/> <path d="M124,134 q6,4 12,0" stroke="#003893" stroke-width="1.4" fill="none"/>',
-    npnone: '<path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#5c2a24"/> <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="96" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#c9a13c">NO FLAG</text> <text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#c9a13c">DOCUMENTED</text>'
+    npnone: '<path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#5c2a24"/> <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="96" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#c9a13c">NO FLAG</text> <text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    nplicchavi: '<path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="#5c2a24"/> <path d="M70,20 L220,63 L150,100 L220,150 L70,180 Z" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="96" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#c9a13c">NO FLAG</text> <text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" font-weight="700" fill="#c9a13c">DOCUMENTED</text>'
   };
   function iFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -708,7 +709,8 @@
     { year:"1951\u20131960", name:"Restored monarchy, early multiparty democracy", t:{ np: IC.npold1 }, flagKeys:{ np: "npold1" }, story:"King Tribhuvan returns from exile in India in 1951 to end over a century of Rana oligarchic control, restoring the Shah monarchy to actual power and opening a brief period of multiparty democracy &mdash; cut short in 1960 when Mahendra dissolves the elected government." },
     { year:"1846\u20131951", name:"Rana oligarchy", t:{ np: IC.npold1 }, flagKeys:{ np: "npold1" }, story:"Jung Bahadur Rana seizes power after the 1846 Kot Massacre and establishes a hereditary chief-minister dynasty that rules in the Shah kings' name for over a century, reducing the monarchy to a figurehead while the Rana family governs in practice until Tribhuvan's 1951 restoration." },
     { year:"1768\u20131846", name:"Kingdom of Nepal (Shah dynasty, unification)", t:{ np: IC.npold1 }, flagKeys:{ np: "npold1" }, story:"Prithvi Narayan Shah conquers the Kathmandu Valley in 1768, unifying the fragmented hill principalities into a single Nepali kingdom under the Shah dynasty &mdash; a monarchy that, in one constitutional form or another, lasts until 2008." },
-    { year:"c. 1200\u20131768", name:"Fragmented hill kingdoms and Kathmandu Valley principalities", t:{ np: IC.npnone }, flagKeys:{ np: "npnone" }, story:"Dozens of small, independent hill principalities and the Malla-ruled city-states of the Kathmandu Valley (Kathmandu, Patan, Bhaktapur) coexist without central unification for centuries, each its own polity, until Prithvi Narayan Shah's conquests forge them into one kingdom from 1768." }
+    { year:"c. 1200\u20131768", name:"Fragmented hill kingdoms and Kathmandu Valley principalities", t:{ np: IC.npnone }, flagKeys:{ np: "npnone" }, story:"Dozens of small, independent hill principalities and the Malla-ruled city-states of the Kathmandu Valley (Kathmandu, Patan, Bhaktapur) coexist without central unification for centuries, each its own polity, until Prithvi Narayan Shah's conquests forge them into one kingdom from 1768." },
+    { year:"c. 400\u2013750 CE", name:"Licchavi Dynasty (Kathmandu Valley)", t:{ np: IC.nplicchavi }, flagKeys:{ np: "nplicchavi" }, story:"The Licchavi dynasty is the earliest Kathmandu Valley polity with a hard documentary record, fixed by King Manadeva I's own 464 CE stone inscription; it reaches a golden era under Amshuverma and later Narendradeva before fading after about 750 CE into a poorly documented transitional period that precedes the Malla dynasty around 1200. No flag or comparable banner survives from this era, centuries before flags in any modern heraldic sense existed anywhere in South Asia." }
   ];
 
   var IREGIONS = ["np"];
