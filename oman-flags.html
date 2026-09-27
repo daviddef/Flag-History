@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 700</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 3000 BCE</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 410 433" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -268,7 +268,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Ibadi Imamate of Oman (founding era)</div>
+        <div class="imap-name" id="iEraName">Magan (Bronze Age copper-trading land)</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -547,10 +547,11 @@
 <script>
 (function () {
   var IC = {
-    imamate_early:"#5c2a24", contested:"#6b5c4a", yariba:"#a4302a", alsaid:"#a4302a",
+    magan:"#6b5c4a", imamate_early:"#5c2a24", contested:"#6b5c4a", yariba:"#a4302a", alsaid:"#a4302a",
     muscat_oman:"#a4302a", modern:"#a9762f"
   };
   var INAMES = {
+    magan:"Magan (Bronze Age copper-trading land)",
     imamate_early:"Ibadi Imamate of Oman (founding era)", contested:"Portuguese ports / interior Imamate (contested)",
     yariba:"Ya'ariba Imamate", alsaid:"Al Said Dynasty & the Omani (maritime) Empire",
     muscat_oman:"Sultanate of Muscat and Oman", modern:"Sultanate of Oman (modern)"
@@ -571,6 +572,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 3000 – 1300 BCE", name:INAMES.magan, t:{ coast:IC.magan, interior:IC.magan }, flagKeys:{ coast:"noflag", interior:"noflag" },
+      story:"Long before the Ibadi Imamate, the Oman peninsula is identified by most archaeologists with \"Magan,\" a land named repeatedly in Sumerian and Akkadian cuneiform texts as a source of copper and diorite that reached Mesopotamian cities via Gulf maritime trade. The archaeological Umm an-Nar culture provides the material record of fortified settlements, circular tombs, and copper smelting, even as no Magan-side text or royal name has ever been recovered. No flag survives from either side of this era, and there is no coast/interior line to draw yet across the whole, still-undivided territory." },
     { year:"c. 700 – 1507", name:INAMES.imamate_early, t:{ coast:IC.imamate_early, interior:IC.imamate_early }, flagKeys:{ coast:"noflag", interior:"noflag" },
       story:"Ibadi Islam takes root and the Imamate is formally established in 751, one of the oldest continuously significant political-religious institutions in the Arab world; the Nabhani dynasty dominates its temporal authority from around 1154. No flag in the modern territorial sense survives from this era — shown honestly blank across the whole, still-unified territory." },
     { year:"1507 – 1624", name:INAMES.contested, t:{ coast:IC.contested, interior:"#a4302a" }, flagKeys:{ coast:"portuguese", interior:"interior_imamate" },
