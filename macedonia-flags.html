@@ -223,7 +223,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, eleven rulers</h2>
+    <h2>One border, twelve rulers</h2>
     <p class="imap-sub">North Macedonia's own real border, traced whole &mdash; the one page in this atlas without an internal split to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This is the one country in the atlas that doesn't split internally.</b> The Ottoman-era Kosovo and Manastir vilayets that once covered this territory answered to the same government, and modern North Macedonia is essentially the whole of historic Vardar Macedonia &mdash; there's no genuinely separate internal region to carve out honestly. What changes here is only who ruled all of it at once.
@@ -231,8 +231,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">840s</span>
-        <input type="range" id="iSlider" min="0" max="10" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">700 BCE&ndash;840s</span>
+        <input type="range" id="iSlider" min="0" max="11" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 120 102" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none">
@@ -254,7 +254,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">First Bulgarian Empire</div>
+        <div class="imap-name" id="iEraName">Paeonians, Macedon, Rome &amp; Byzantium</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -759,16 +759,18 @@
 <script>
 (function () {
   var IC = {
-    bulgaria1:"#204b5c", byzbulg:"#3c6a7c", dusan:"#6a3f8f", fragmentation:"#8a6a3f", ottoman:"#a4302a", krusevo:"#6e6047", vardar:"#a9762f",
+    ancient:"#6b5c4a", bulgaria1:"#204b5c", byzbulg:"#3c6a7c", dusan:"#6a3f8f", fragmentation:"#8a6a3f", ottoman:"#a4302a", krusevo:"#6e6047", vardar:"#a9762f",
     bulgaria2:"#9a7a3a", titomk:"#8c2f2f", vergina:"#c9603c", modern:"#2f6b4a"
   };
   var INAMES = {
+    ancient:"Paeonians, Macedon, Rome & Byzantium",
     bulgaria1:"First Bulgarian Empire", byzbulg:"Byzantine / Bulgarian Rule (Contested)", dusan:"Serbian Empire (Dušan)",
     fragmentation:"Fragmentation Among Local Lords", ottoman:"Ottoman Empire",
     krusevo:"Kruševo Republic", vardar:"Kingdom of Serbia / Yugoslavia", bulgaria2:"Bulgaria (WWII occupation)",
     titomk:"SR Macedonia (Yugoslavia)", vergina:"Republic of Macedonia (1992–95)", modern:"Republic of North Macedonia"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     bulgaria1: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     byzbulg: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     fragmentation: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
@@ -790,6 +792,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"700 BCE–840s", name:"Paeonians, Macedon, Rome & Byzantium", t:{ mk:IC.ancient }, flagKeys:{ mk:"ancient" },
+      story:"Centuries before the Slavic migrations that gave rise to the region's later population, the Vardar valley is home to the independent kingdom of Paeonia, attested by Greek writers from at least the 7th century BCE. Philip II of Macedon subdues Paeonia from 359 BCE, and Rome defeats the last independent Macedonian king at Pydna in 168 BCE, organizing the region as the province of Macedonia in 146 BCE. It remains a Roman, then Byzantine, province for nearly a millennium, its population gradually Christianized, until South Slavic settlement from the 6th&ndash;7th centuries and Bulgarian expansion finally end Byzantine control in the 840s. No securely documented flag survives from any part of this span." },
     { year:"840s", name:"First Bulgarian Empire", t:{ mk:IC.bulgaria1 }, flagKeys:{ mk:"bulgaria1" },
       story:"Bulgarian expansion under Khan Presian and Tsar Boris I annexes the region in the 840s; under Tsar Samuil, as the empire's core contracts westward, its capital moves through Skopje, Ohrid, and Bitola before Byzantine reconquest is completed in 1018. No securely documented flag survives from this pre-heraldic era &mdash; shown honestly blank rather than invented." },
     { year:"1018", name:"Byzantine / Bulgarian rule (contested)", t:{ mk:IC.byzbulg }, flagKeys:{ mk:"byzbulg" },
