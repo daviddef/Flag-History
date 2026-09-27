@@ -241,16 +241,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, seven eras</h2>
-    <p class="imap-sub">Israel's own real border, traced whole &mdash; the same single-region treatment used elsewhere in this atlas for a territory with no genuinely separate internal region to carve out honestly. Press play, or drag the slider, to move through the same seven eras as the timeline below.</p>
+    <h2>One border, eight eras</h2>
+    <p class="imap-sub">Israel's own real border, traced whole &mdash; the same single-region treatment used elsewhere in this atlas for a territory with no genuinely separate internal region to carve out honestly. Press play, or drag the slider, to move through the same eight eras as the timeline below.</p>
     <div class="rule-box">
       <b>No internal partition is being characterized here.</b> The path traced is the outer boundary recorded for "Israel" in a standard public open geographic boundary dataset, shown for illustrative context only. It does not characterize, and should not be read as characterizing, the status of any disputed territory &mdash; see this page's own timeline text above and below for the neutral, source-based account of each era, including its more sensitive periods.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">antiquity</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c.1550 BCE</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 100 205" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none" class="context-label">
@@ -265,7 +265,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Ancient &amp; biblical Israel through Roman Judea</div>
+        <div class="imap-name" id="iEraName">Bronze Age Canaan</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -615,15 +615,16 @@
 <script>
 (function () {
   var IC = {
-    ancient:"#6e6047", early_islamic:"#7c6a2e", crusader:"#8a1f2b", mamluk:"#a9762f",
+    canaan:"#584b38", ancient:"#6e6047", early_islamic:"#7c6a2e", crusader:"#8a1f2b", mamluk:"#a9762f",
     ottoman:"#a4302a", mandate:"#5c3a8a", modern:"#0038b8"
   };
   var INAMES = {
-    ancient:"Ancient & biblical Israel through Roman Judea", early_islamic:"Early Islamic rule / Fatimid Palestine",
+    canaan:"Bronze Age Canaan", ancient:"Ancient & biblical Israel through Roman Judea", early_islamic:"Early Islamic rule / Fatimid Palestine",
     crusader:"Kingdom of Jerusalem (Crusader)", mamluk:"Mamluk Sultanate", ottoman:"Ottoman Empire",
     mandate:"British Mandate for Palestine", modern:"State of Israel"
   };
   var IFLAGS = {
+    canaan: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     early_islamic: '<rect width="300" height="200" fill="#f4efe1"/><rect width="300" height="200" fill="none" stroke="#c9b98a" stroke-width="3"/>',
     crusader: '<rect width="300" height="200" fill="#f4efe1"/><g fill="#c9a13c"><rect x="132" y="55" width="36" height="90"/><rect x="105" y="82" width="90" height="36"/><rect x="118" y="38" width="18" height="18"/><rect x="118" y="144" width="18" height="18"/><rect x="180" y="66" width="18" height="18"/><rect x="180" y="116" width="18" height="18"/></g>',
@@ -641,6 +642,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c.1550 BCE", name:"Bronze Age Canaan", t:{ is:IC.canaan }, flagKeys:{ is:"canaan" },
+      story:"Canaan in this period was a patchwork of independent city-states &mdash; Hazor, Megiddo, Gezer, Lachish, and Jerusalem (Urusalim) among them &mdash; rather than a single kingdom. Pharaoh Thutmose III's victory at Megiddo (c. 1457 BCE) brought the region under Egyptian New Kingdom suzerainty, and local vassal kings' correspondence with the Egyptian court survives in the 14th-century BCE Amarna letters. Egyptian control receded amid the wider Late Bronze Age collapse around 1200 BCE; the Merneptah Stele, an Egyptian inscription conventionally dated to about 1208 BCE, records a campaign against a people called \"Israel\" already settled in the highlands. No flag survives from Bronze Age Canaan &mdash; the concept postdates this era entirely &mdash; so it is shown honestly blank." },
     { year:"antiquity", name:"Ancient & biblical Israel through Roman Judea", t:{ is:IC.ancient }, flagKeys:{ is:"ancient" },
       story:"This span covers the Israelite and Judahite kingdoms of the biblical period, the First and Second Temple periods, Roman-era Judea, the Jewish revolts of 66&ndash;73 CE and 132&ndash;135 CE, and the centuries of Jewish diaspora that followed, alongside continued Jewish presence in the land. No securely documented flag survives from this span &mdash; national flags as a concept postdate it entirely, so it is shown honestly blank." },
     { year:"636", name:"Early Islamic rule / Fatimid Palestine", t:{ is:IC.early_islamic }, flagKeys:{ is:"early_islamic" },
