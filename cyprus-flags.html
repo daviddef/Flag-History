@@ -253,8 +253,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1974&ndash;present</span>
-        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 1200 BCE &ndash; 330 CE</span>
+        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 410.0 214.0" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -587,7 +587,8 @@
   <div class="legend">
     <h2>Reading the tags</h2>
     <div class="legend-grid">
-      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Byzantine province</b> &mdash; ruled from Constantinople, with earlier antiquity bridged in</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#5c2a24"></span><b>Fragmented city-kingdoms</b> &mdash; no single ruler, changing outside overlords</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#6b5c4a"></span><b>Byzantine province</b> &mdash; ruled from Constantinople</div>
       <div class="legend-item"><span class="legend-dot" style="background:#a9762f"></span><b>Crusader kingdom</b> &mdash; independent under a crusader dynasty</div>
       <div class="legend-item"><span class="legend-dot" style="background:#9c3b28"></span><b>City-republic (overseas rule)</b> &mdash; colonial possession of Venice</div>
       <div class="legend-item"><span class="legend-dot" style="background:#7c2e1f"></span><b>Ottoman province</b> &mdash; ordinary province of the Ottoman Empire</div>
@@ -623,15 +624,16 @@
 <script>
 (function () {
   var IC = {
-    byzantine: "#6b5c4a", lusignan: "#a9762f", venetian: "#9c3b28", ottoman: "#7c2e1f",
+    citykingdoms: "#5c2a24", byzantine: "#6b5c4a", lusignan: "#a9762f", venetian: "#9c3b28", ottoman: "#7c2e1f",
     britishadmin: "#5b7a8c", crowncolony: "#204b5c", republic: "#2f6b4a", trnc: "#c0392b"
   };
   var INAMES = {
-    byzantine: "Byzantine Cyprus (with earlier antiquity)", lusignan: "Kingdom of Cyprus (Lusignan)",
+    citykingdoms: "Mycenaean Settlement &amp; the Kingdom of Cyprus (City-Kingdoms)", byzantine: "Byzantine Cyprus", lusignan: "Kingdom of Cyprus (Lusignan)",
     venetian: "Venetian Cyprus", ottoman: "Ottoman Cyprus", britishadmin: "British administration and annexation",
     crowncolony: "Crown Colony of Cyprus", republic: "Republic of Cyprus", trnc: "Turkish Cypriot administration (self-declared Turkish Republic of Northern Cyprus, 1983)"
   };
   var IFLAGS = {
+    citykingdoms: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     byzantine: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     lusignan: '<rect width="300" height="200" fill="#f4efe1"/><g fill="#204b5c"><rect y="0" width="300" height="25"/><rect y="50" width="300" height="25"/><rect y="100" width="300" height="25"/><rect y="150" width="300" height="25"/></g><path d="M150,80 q-22,10 -22,34 q0,20 22,30 q22,-10 22,-30 q0,-24 -22,-34 Z" fill="#a4302a" stroke="#c9a13c" stroke-width="3"/>',
     venetian: '<rect width="300" height="200" fill="#a4302a"/><ellipse cx="150" cy="110" rx="60" ry="34" fill="#c9a13c"/><path d="M96,108 q-20,-6 -26,-24" stroke="#c9a13c" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M204,108 q20,-6 26,-24" stroke="#c9a13c" stroke-width="10" fill="none" stroke-linecap="round"/><circle cx="184" cy="98" r="9" fill="#a4302a"/><path d="M150,66 q10,24 -4,44" stroke="#a4302a" stroke-width="6" fill="none" stroke-linecap="round"/>',
@@ -650,8 +652,10 @@
   }).join("");
 
   var ISNAP = [
-    { year:"c. 330 &ndash; 1191", name:"Byzantine Cyprus (with earlier antiquity)", t:{ south:IC.byzantine, north:IC.byzantine }, flagKeys:{ south:"byzantine", north:"byzantine" },
-      story:"This bridging entry stands in for over a thousand years of pre-crusader history &mdash; Phoenician trading settlements, the classical Greek city-kingdoms, Ptolemaic and Roman rule &mdash; through the long Byzantine period proper. Cyprus remains a single Byzantine province, administered whole from Constantinople, until Richard the Lionheart's 1191 conquest ends Byzantine rule for good. No securely documented flag survives; shown honestly blank." },
+    { year:"c. 1200 BCE &ndash; 330 CE", name:"Mycenaean Settlement &amp; the Kingdom of Cyprus (City-Kingdoms)", t:{ south:IC.citykingdoms, north:IC.citykingdoms }, flagKeys:{ south:"citykingdoms", north:"citykingdoms" },
+      story:"Mycenaean Greek settlers arrive in Cyprus around the time of the Bronze Age collapse and the Trojan War tradition, founding city-kingdoms &mdash; Salamis, Kition, Paphos, Kourion, Marion, Soloi, Idalion, and others &mdash; that endure for roughly a millennium under changing outside overlordship (Assyria, Egypt, then Persia) while keeping their own local kings; an Assyrian inscription names ten Cypriot kings paying tribute in 673 BCE. Alexander the Great's 333 BCE conquest ends Persian rule, Ptolemy I annexes the island outright in 294 BCE ending the city-kingdoms' self-government, and Rome in turn annexes it from the Ptolemies in 58 BCE, ruling it as an ordinary province until Constantine's 330 refounding of Constantinople. No securely documented flag can be attributed to any city-kingdom or to the island as a whole; shown honestly blank." },
+    { year:"c. 330 &ndash; 1191", name:"Byzantine Cyprus", t:{ south:IC.byzantine, north:IC.byzantine }, flagKeys:{ south:"byzantine", north:"byzantine" },
+      story:"Following Constantine's 330 refounding of Constantinople, Cyprus remains a single Byzantine province, administered whole from the imperial capital, until Richard the Lionheart's 1191 conquest ends Byzantine rule for good. No securely documented flag survives; shown honestly blank." },
     { year:"1192 &ndash; 1489", name:"Kingdom of Cyprus (Lusignan)", t:{ south:IC.lusignan, north:IC.lusignan }, flagKeys:{ south:"lusignan", north:"lusignan" },
       story:"Richard the Lionheart sells the island to Guy of Lusignan, the deposed King of Jerusalem, in 1192, founding a French-descended crusader dynasty that rules the whole island as one independent kingdom for nearly three centuries from its royal court at Nicosia." },
     { year:"1489 &ndash; 1571", name:"Venetian Cyprus", t:{ south:IC.venetian, north:IC.venetian }, flagKeys:{ south:"venetian", north:"venetian" },
