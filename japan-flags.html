@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One coastline, eight eras</h2>
+    <h2>One coastline, nine eras</h2>
     <p class="imap-sub">Japan's own real coastline, traced whole &mdash; the archipelago from Hokkaido down through Honshu, Shikoku, and Kyushu to Okinawa. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This page doesn't show an internal partition for Japan.</b> Real internal fragmentation happened here &mdash; the Sengoku ("Warring States") period's rival daimyo domains, with contested han (domain) borders shifting across the 15th&ndash;16th centuries &mdash; but it isn't shown here as a traceable internal split, because no reliable traced boundary dataset for those historical han/domain borders was available in this session. That's different from Hungary's Royal Hungary vs. Ottoman Hungary split elsewhere in this atlas, which follows a real documented, traceable 16th&ndash;17th-century frontier; lacking an equivalent traced source for Sengoku-era Japan, this map shows only the modern country's real outer coastline, era by era, rather than fabricate an internal boundary from guesswork.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 250</span>
-        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 300 BCE</span>
+        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label">
@@ -261,7 +261,7 @@
         <text class="ireg-label" id="ilbl-jp" x="80" y="120" style="font-size:10px">JAPAN</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Yamato period</div>
+        <div class="imap-name" id="iEraName">Yayoi period</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -604,15 +604,16 @@
 <script>
 (function () {
   var IC = {
-    yamato:"#3f3020", heian:"#5c1f2e", kamakura:"#5c2a24", ashikaga:"#3f5c3a",
+    yayoi:"#6b5c4a", yamato:"#3f3020", heian:"#5c1f2e", kamakura:"#5c2a24", ashikaga:"#3f5c3a",
     tokugawa:"#241f14", empire:"#7c2e1f", occupation:"#204b5c", postwar:"#bc002d"
   };
   var INAMES = {
-    yamato:"Yamato Period", heian:"Heian Period (Imperial Court Rule)", kamakura:"Kamakura Shogunate",
+    yayoi:"Yayoi period", yamato:"Yamato Period", heian:"Heian Period (Imperial Court Rule)", kamakura:"Kamakura Shogunate",
     ashikaga:"Ashikaga Shogunate (Muromachi Period)", tokugawa:"Tokugawa Shogunate (Edo Period)",
     empire:"Empire of Japan", occupation:"Allied Occupation of Japan", postwar:"Japan (Postwar Constitutional Era)"
   };
   var IFLAGS = {
+    yayoi: '<rect width="300" height="200" fill="#3f3020"/><rect width="300" height="200" fill="none" stroke="#bc002d" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#bc002d">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#bc002d">DOCUMENTED</text>',
     yamato: '<rect width="300" height="200" fill="#3f3020"/><rect width="300" height="200" fill="none" stroke="#bc002d" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#bc002d">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#bc002d">DOCUMENTED</text>',
     heian: '<rect width="300" height="200" fill="#5c1f2e"/><rect width="300" height="200" fill="none" stroke="#f4efe1" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#f4efe1">NO NATIONAL</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#f4efe1">FLAG YET</text>',
     kamakura: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">NO NATIONAL</text><text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="700" fill="#c9a13c">FLAG YET</text>',
@@ -631,6 +632,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 300 BCE", name:"Yayoi period", t:{ jp:IC.yayoi }, flagKeys:{ jp:"yayoi" },
+      story:"Wet-rice paddy agriculture and bronze and iron toolmaking arrive in the Japanese islands from the Korean peninsula and mainland Asia from around the 3rd century BCE, ending the preceding Jomon hunter-gatherer culture and giving rise to dozens of small, competing farming chiefdoms across western and central Japan. Japan had no writing of its own in this era; almost everything known about named rulers, such as Himiko of Yamataikoku, comes from Chinese dynastic chronicles. No flag survives from Yayoi Japan, shown here honestly blank." },
     { year:"c. 250", name:"Yamato Period", t:{ jp:IC.yamato }, flagKeys:{ jp:"yamato" },
       story:"The Yamato court, centered around modern Nara and Osaka, gradually consolidates authority over other clan groupings across the Japanese home islands from around the 3rd century CE, through the Kofun period's tomb-building and the 6th-century arrival of Buddhism, into the Nara period's centralized law codes. No securely documented flag survives from this pre-heraldic era, shown here honestly blank." },
     { year:"794", name:"Heian Period (Imperial Court Rule)", t:{ jp:IC.heian }, flagKeys:{ jp:"heian" },
