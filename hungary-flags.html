@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1989–present</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 400</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 416 280" xmlns="http://www.w3.org/2000/svg">
         <path fill="none" stroke="var(--hair)" stroke-width="1" opacity=".55" pointer-events="none" d="M60.7,59.2 L56.5,94.8 L23.1,95.1 L34.8,113.9 L4.4,184.6 L-77.2,206.7 L-211.3,177.9 L-224.9,147.7 L-290.1,179.5 L-383.5,149.2 L-359.2,107.7 L-329.0,131.7 L-320.7,108.7 L-226.1,96.6 L-178.9,116.9 L-182.5,45.5 L-140.8,-5.7 L-96.4,22.1 L-42.5,-20.1 L54.5,29.1 Z"/>
@@ -278,7 +278,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Modern Hungary</div>
+        <div class="imap-name" id="iEraName">Hunnic &amp; Avar Khaganates</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -848,12 +848,13 @@
 <script>
 (function () {
   var IC = {
-    habsburg: "#7a5a9a", ottoman: "#a4302a"
+    khaganate: "#5c2a24", habsburg: "#7a5a9a", ottoman: "#a4302a"
   };
   var INAMES = {
-    habsburg: "Royal Hungary (Habsburg)", ottoman: "Ottoman Empire (Budin Eyalet)"
+    khaganate: "Hunnic & Avar Khaganates", habsburg: "Royal Hungary (Habsburg)", ottoman: "Ottoman Empire (Budin Eyalet)"
   };
   var IFLAGS = {
+    khaganate: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     habsburg: '<rect width="300" height="100" fill="#f4efe1"/><rect y="100" width="300" height="100" fill="#a4302a"/><g transform="translate(150,100)"><path d="M-20,-24 h40 v34 q0,20 -20,26 q-20,-6 -20,-26 Z" fill="#241f14"/><path d="M0,-16 l4,4 h10 l-8,7 3,10 -9,-6 -9,6 3,-10 -8,-7 h10 Z" fill="#f4efe1"/></g>',
     ottoman: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100)"><path d="M-30,0 A38,38 0 1 0 22,-32 A28,28 0 1 1 -30,0 Z" fill="#f4efe1"/><path d="M40,-6 l5,15 16,0 -13,10 5,15 -13,-9 -13,9 5,-15 -13,-10 16,0 Z" fill="#f4efe1"/></g>'
   };
@@ -866,6 +867,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 400", name:"Hunnic & Avar Khaganates", t:{ royal:IC.khaganate, core:IC.khaganate }, flagKeys:{ royal:"khaganate", core:"khaganate" },
+      story:"Nearly five centuries before the Magyars' own arrival, the Carpathian Basin hosts two major steppe empires in succession: Attila's Huns, ruling until his death in 453, and from 567 CE the Avars, whose khaganate endures until Charlemagne's campaigns of 791&ndash;803 break it apart. Both are mobile steppe polities organized around a khagan's court rather than a fixed territorial state &mdash; no internal line to draw yet, and no flag survives for either." },
     { year:"1541", name:"Buda falls, Hungary splits", t:{ royal:IC.habsburg, core:IC.ottoman }, flagKeys:{ royal:"habsburg", core:"ottoman" },
       story:"Sultan Suleiman the Magnificent takes Buda in August 1541, organizing central Hungary as the Ottoman Eyalet of Budin. The northwestern strip &mdash; roughly today's Győr-Moson-Sopron area, bordering Austria &mdash; stays under Habsburg control as \"Royal Hungary,\" its own separate kingdom in personal union with Vienna, never conquered." },
     { year:"1686", name:"Buda retaken", t:{ royal:IC.habsburg, core:IC.habsburg }, flagKeys:{ royal:"habsburg", core:"habsburg" },
