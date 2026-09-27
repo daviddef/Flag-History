@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, six eras</h2>
+    <h2>One border, seven eras</h2>
     <p class="imap-sub">Mauritania's own real border, traced whole. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This page doesn't split internally.</b> Even the fragmented-emirate centuries &mdash; Trarza, Brakna, Tagant, and Adrar, plus many smaller tribal confederations &mdash; never divided this territory into lasting, mapped borders of their own; rival power simply overlapped and shifted across the same desert without settled internal lines. What changes here is only who, if anyone, held it all at once.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 700</span>
-        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 4000 BCE&ndash;700</span>
+        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -265,7 +265,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Fragmented Sanhaja Berber confederations</div>
+        <div class="imap-name" id="iEraName">Green Sahara pastoralists &amp; the Tichitt Tradition</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -556,14 +556,16 @@
 <script>
 (function () {
   var IC = {
-    sanhaja:"#5c2a24", almoravid:"#f4efe1", emirates:"#5c2a24", french:"#002654", original1959:"#00a651", modern:"#00a651"
+    tichitt:"#6b5c4a", sanhaja:"#5c2a24", almoravid:"#f4efe1", emirates:"#5c2a24", french:"#002654", original1959:"#00a651", modern:"#00a651"
   };
   var INAMES = {
+    tichitt:"Green Sahara pastoralists & the Tichitt Tradition",
     sanhaja:"Fragmented Sanhaja Berber confederations", almoravid:"Almoravid dynasty (al-Murabitūn)",
     emirates:"Fragmented tribal emirates (Trarza, Brakna, Tagant, Adrar)", french:"French Mauritania",
     original1959:"Islamic Republic of Mauritania (original flag)", modern:"Islamic Republic of Mauritania (current flag)"
   };
   var IFLAGS = {
+    tichitt: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     sanhaja: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     almoravid: '<rect width="300" height="200" fill="#f4efe1"/>',
     emirates: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
@@ -580,6 +582,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 4000 BCE–700", name:"Green Sahara pastoralists & the Tichitt Tradition", t:{ mr:IC.tichitt }, flagKeys:{ mr:"tichitt" },
+      story:"During the mid-Holocene \"Green Sahara,\" when the region was savanna rather than desert, cattle-herding communities range across present-day Mauritania, leaving rock art still visible on the Tagant and Adrar plateaus. As the climate dries from around 2000 BCE, some of these communities build the stone-walled hilltop villages of the Dhar Tichitt escarpment (flourishing roughly 2200&ndash;200 BCE), among West Africa's earliest known organized settlements. Continued desiccation empties the escarpment by the early centuries CE, scattering its population toward the Sahel. No state in any political sense existed across this span, and no flag is documented." },
     { year:"c. 700", name:"Fragmented Sanhaja Berber confederations", t:{ mr:IC.sanhaja }, flagKeys:{ mr:"sanhaja" },
       story:"Before the Almoravid movement coalesces, the western Sahara is home to loosely organized Sanhaja Berber confederations &mdash; the Gudala, Lamtuna, and Messufa among them &mdash; who herd camels and control trans-Saharan trade routes. No single ruler unites them, and no flag survives from this pre-heraldic era." },
     { year:"1040", name:"Almoravid dynasty (al-Murabitūn)", t:{ mr:IC.almoravid }, flagKeys:{ mr:"almoravid" },
