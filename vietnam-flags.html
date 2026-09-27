@@ -246,10 +246,10 @@
   </div>
 
   <div class="imap-section">
-    <h2>The 17th parallel, 1954&ndash;1975/76</h2>
-    <p class="imap-sub">Vietnam's own real coastline, split along the one internal line this atlas can document with confidence &mdash; the Geneva Accords' partition at the 17th parallel, which cut the country into North and South for two decades. Press play, or drag the slider.</p>
+    <h2>Two real internal lines, a century apart</h2>
+    <p class="imap-sub">Vietnam's own real coastline, split along the two internal lines this atlas can document with confidence &mdash; the French colonial administration's direct-rule boundary carving Cochinchina off from Annam and Tonkin (1887&ndash;1945), and the Geneva Accords' partition at the 17th parallel (1954&ndash;1975/76). Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>This is the atlas's clearest case for a genuine internal split.</b> Unlike Venezuela or North Macedonia, Vietnam's 1954&ndash;1975 division was a real, internationally recognized border with its own demilitarized zone, its own two governments, its own two flags, and a war fought explicitly over reunifying it. The line below only solidifies for that one span &mdash; it dissolves before 1954 (no partition yet existed) and again after 1975&ndash;76 (the North's final offensive erased it for good).
+      <b>This is one of the atlas's clearest cases for a genuine internal split &mdash; in fact it has two.</b> From 1887 to 1945, France governed Cochinchina, the far south, as a directly ruled colony while Annam and Tonkin remained nominally separate protectorates under the Vietnamese emperor with French oversight &mdash; a real administrative line, not just a battlefield one. From 1954 to 1975/76, the Geneva Accords drew a different line entirely, the 17th parallel, with its own demilitarized zone, its own two governments, its own two flags, and a war fought explicitly over reunifying it. Both lines only solidify for their own span &mdash; the colonial cut dissolves before 1887 and after 1945, and the partition line dissolves before 1954 and again after 1975&ndash;76.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
@@ -260,11 +260,14 @@
       <svg id="imap-svg" viewBox="0 0 260 420" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="260" height="420" fill="var(--sea)"/>
         <path id="ireg-north" class="ireg-fill" d="M185.33,70.29 L153.18,91.72 L133.10,115.39 L127.81,132.78 L146.23,159.19 L163.54,184.34 L142.53,184.34 L134.16,172.18 L114.15,142.58 L85.29,127.59 L92.20,118.59 L107.59,112.02 L98.26,90.17 L68.60,89.98 L57.79,67.21 L43.71,47.43 L56.64,41.32 L75.85,41.44 L99.27,38.55 L119.80,25.20 L131.41,34.60 L153.42,39.17 L149.62,53.61 L161.08,63.79 L185.33,70.29 Z"/>
-        <path id="ireg-south" class="ireg-fill" d="M163.54,184.34 L168.76,191.92 L190.62,207.40 L205.25,227.52 L216.29,273.88 L213.03,317.96 L192.94,334.46 L165.36,350.59 L145.71,371.47 L115.68,394.80 L106.93,378.73 L113.70,361.76 L95.83,347.53 L116.68,337.44 L141.97,335.62 L131.39,320.44 L171.87,301.16 L174.84,271.14 L169.26,254.43 L173.64,229.39 L167.57,211.69 L149.34,194.26 L142.53,184.34 Z"/>
+        <path id="ireg-south" class="ireg-fill" d="M163.54,184.34 L168.76,191.92 L190.62,207.40 L205.25,227.52 L216.29,273.88 L213.03,317.96 L192.94,334.46 L141.97,335.62 L131.39,320.44 L171.87,301.16 L174.84,271.14 L169.26,254.43 L173.64,229.39 L167.57,211.69 L149.34,194.26 L142.53,184.34 Z"/>
+        <path id="ireg-cochinchina" class="ireg-fill" d="M192.94,334.46 L165.36,350.59 L145.71,371.47 L115.68,394.80 L106.93,378.73 L113.70,361.76 L95.83,347.53 L116.68,337.44 L141.97,335.62 Z"/>
         <path class="iborder-line" id="ib-north-south" d="M142.53,184.34 L163.54,184.34"/>
+        <path class="iborder-line" id="ib-south-cochinchina" d="M192.94,334.46 L141.97,335.62"/>
         <g font-family="IBM Plex Mono, monospace">
           <text class="ireg-label" id="ilbl-north" x="115" y="108">NORTH</text>
-          <text class="ireg-label" id="ilbl-south" x="155" y="292">SOUTH</text>
+          <text class="ireg-label" id="ilbl-south" x="155" y="270">SOUTH</text>
+          <text class="ireg-label" id="ilbl-cochinchina" x="130" y="358" font-size="7">COCHINCHINA</text>
         </g>
       </svg>
       <div class="imap-head">
@@ -274,7 +277,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Real traced coastline, split at 17&deg;N &mdash; the one genuinely documented internal partition in Vietnam's history; the border line dissolves outside 1954&ndash;1975/76.</p>
+      <p class="map-note">Real traced coastline with two schematic internal cuts at different points and eras: the Cochinchina/Annam&ndash;Tonkin colonial boundary (1887&ndash;1945, roughly the historical divide near modern B&igrave;nh Thu&#7853;n) and the 17th-parallel partition (1954&ndash;1975/76); neither line is a surveyed modern border.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -606,13 +609,14 @@
 <script>
 (function () {
   var IC = {
-    dongson:"#7a5a2e", china:"#a4302a", none:"#5c2a24", nguyen:"#fcd116", french:"#21468b",
+    dongson:"#7a5a2e", china:"#a4302a", none:"#5c2a24", nguyen:"#fcd116", french:"#21468b", colony:"#0b7a3d",
     contested:"#8a3a2a", drv:"#da251d", rvn:"#fcd116", reunified:"#da251d"
   };
   var INAMES = {
     dongson:"Đông Sơn culture &amp; the Văn Lang / Âu Lạc kingdoms",
     china:"Chinese imperial rule", none:"Independent dynasties (no flag documented)", nguyen:"Nguyễn dynasty (independent empire)",
-    french:"French Indochina", contested:"Contested independence (DRV declared / French Indochina War)",
+    french:"French Indochina (Annam &amp; Tonkin protectorates)", colony:"Cochinchina (direct French colony)",
+    contested:"Contested independence (DRV declared / French Indochina War)",
     drv:"Democratic Republic of Vietnam (North)", rvn:"Republic of Vietnam (South)", reunified:"Socialist Republic of Vietnam (reunified)"
   };
   var IFLAGS = {
@@ -621,6 +625,7 @@
     none: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     nguyen: '<rect width="300" height="200" fill="#fcd116"/><rect x="120" y="40" width="60" height="120" fill="#a4302a"/>',
     french: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/>',
+    colony: '<rect width="300" height="66.7" fill="#ae1c28"/><rect y="66.7" width="300" height="66.6" fill="#f4efe1"/><rect y="133.3" width="300" height="66.7" fill="#21468b"/><g transform="translate(150,100)" stroke="#0b7a3d" stroke-width="5" fill="none"><path d="M0,-18 L0,12 M-12,12 L12,12 M-16,-6 Q0,12 16,-6"/></g><circle cx="150" cy="82" r="5" fill="#0b7a3d"/>',
     drv: '<rect width="300" height="200" fill="#da251d"/><path d="M150,58 l14,42 44,0 -36,26 14,42 -36,-26 -36,26 14,-42 -36,-26 44,0 Z" fill="#ffcd00"/>',
     rvn: '<rect width="300" height="200" fill="#fcd116"/><rect y="66.7" width="300" height="22.2" fill="#da251d"/><rect y="88.9" width="300" height="22.2" fill="#da251d"/><rect y="111.1" width="300" height="22.2" fill="#da251d"/>',
     reunified: '<rect width="300" height="200" fill="#da251d"/><path d="M150,58 l14,42 44,0 -36,26 14,42 -36,-26 -36,26 14,-42 -36,-26 44,0 Z" fill="#ffcd00"/>'
@@ -634,27 +639,27 @@
   }).join("");
 
   var ISNAP = [
-    { year:"c. 1000 BCE–111 BCE", name:"Đông Sơn culture & the Văn Lang / Âu Lạc kingdoms", t:{ north:IC.dongson, south:IC.dongson }, flagKeys:{ north:"dongson", south:"dongson" },
+    { year:"c. 1000 BCE–111 BCE", name:"Đông Sơn culture & the Văn Lang / Âu Lạc kingdoms", t:{ north:IC.dongson, south:IC.dongson, cochinchina:IC.dongson }, flagKeys:{ north:"dongson", south:"dongson", cochinchina:"dongson" },
       story:"From around 1000 BCE, the Red River Delta's Bronze Age Đông Sơn culture, famous for its elaborately cast bronze drums, is traditionally associated with the semi-legendary kingdom of Văn Lang. Around 257 BCE the more securely documented kingdom of Âu Lạc, under An Dương Vương and centered on the citadel of Cổ Loa, absorbs Văn Lang; Âu Lạc itself falls to the Nam Việt warlord Triệu Đà around 179 BCE, and Nam Việt in turn falls to Han China in 111 BCE, opening the long Chinese imperial rule that follows. No flag or comparable state banner survives from this era, and none is invented here &mdash; shown honestly blank." },
-    { year:"before 938", name:"Chinese imperial rule (Bắc thuộc)", t:{ north:IC.china, south:IC.china }, flagKeys:{ north:"china", south:"china" },
+    { year:"before 938", name:"Chinese imperial rule (Bắc thuộc)", t:{ north:IC.china, south:IC.china, cochinchina:IC.china }, flagKeys:{ north:"china", south:"china", cochinchina:"china" },
       story:"Successive Chinese dynasties administer the Red River Delta as directly ruled commanderies for over a thousand years. No distinct Vietnamese symbol exists, and the whole territory answers to the same imperial dragon standard &mdash; no internal line to draw." },
-    { year:"938–1802", name:"Independent Vietnamese dynasties", t:{ north:IC.none, south:IC.none }, flagKeys:{ north:"none", south:"none" },
+    { year:"938–1802", name:"Independent Vietnamese dynasties", t:{ north:IC.none, south:IC.none, cochinchina:IC.none }, flagKeys:{ north:"none", south:"none", cochinchina:"none" },
       story:"Ngô Quyền's 938 victory opens nearly nine centuries of independent dynastic rule &mdash; the Lý, Trần, later Lê, and others. No single flag is securely documented, and the country is governed (with interruptions) as one piece." },
-    { year:"1802–1887", name:"Nguyễn dynasty (independent empire)", t:{ north:IC.nguyen, south:IC.nguyen }, flagKeys:{ north:"nguyen", south:"nguyen" },
+    { year:"1802–1887", name:"Nguyễn dynasty (independent empire)", t:{ north:IC.nguyen, south:IC.nguyen, cochinchina:IC.nguyen }, flagKeys:{ north:"nguyen", south:"nguyen", cochinchina:"nguyen" },
       story:"Nguyễn Ánh unifies the country in 1802, the first dynasty to rule the full length of Vietnam from Huế as one kingdom under imperial yellow." },
-    { year:"1887–1945", name:"French Indochina", t:{ north:IC.french, south:IC.french }, flagKeys:{ north:"french", south:"french" },
-      story:"France unites Tonkin, Annam, and Cochinchina with Cambodia (and later Laos) into the Indochinese Union in 1887, governing Vietnam's whole length as one colonial territory under the French tricolor." },
-    { year:"1945–1954", name:"Contested independence / French Indochina War", t:{ north:IC.contested, south:IC.contested }, flagKeys:{ north:"drv", south:"rvn" },
-      story:"Ho Chi Minh proclaims independence in Hanoi in September 1945; France refuses to accept the loss and fights the First Indochina War to reassert control nationwide. Fighting ranges across the whole country rather than along any fixed line, so no genuine partition exists yet &mdash; both flags shown, but no border drawn." },
-    { year:"1954–1975/76", name:"Partition at the 17th parallel", t:{ north:IC.drv, south:IC.rvn }, flagKeys:{ north:"drv", south:"rvn" },
-      story:"The 1954 Geneva Accords partition the country at the 17th parallel, pending elections that are never held. Ho Chi Minh's communist-led Democratic Republic governs the North from Hanoi; the anti-communist, US-backed Republic of Vietnam governs the South from Saigon. Escalating war ends only with the North's final 1975 offensive and Saigon's fall." },
-    { year:"1976–present", name:"Socialist Republic of Vietnam (reunified)", t:{ north:IC.reunified, south:IC.reunified }, flagKeys:{ north:"reunified", south:"reunified" },
-      story:"A National Assembly formally reunifies the country on 2 July 1976 under Communist Party rule. The North's gold-star-on-red flag now flies over the whole country &mdash; the 17th-parallel line, once real, never reappears." }
+    { year:"1887–1945", name:"French Indochina — Cochinchina split off as a direct colony", t:{ north:IC.french, south:IC.french, cochinchina:IC.colony }, flagKeys:{ north:"french", south:"french", cochinchina:"colony" },
+      story:"France unites Tonkin, Annam, and Cochinchina with Cambodia (and later Laos) into the Indochinese Union in 1887. Colonial rule spans a formal protectorate over Tonkin and Annam &mdash; nominally under the Vietnamese emperor with French oversight &mdash; and direct control of the Cochinchina colony in the south, a real administrative line rather than just a battlefield one. Japan occupies Indochina from 1940, leaving Vichy French administration nominally in place until a March 1945 coup that briefly restores Bảo Đại as a Japanese client and, with French rule itself, erases this colonial-era split." },
+    { year:"1945–1954", name:"Contested independence / French Indochina War", t:{ north:IC.contested, south:IC.contested, cochinchina:IC.contested }, flagKeys:{ north:"drv", south:"rvn", cochinchina:"rvn" },
+      story:"Ho Chi Minh proclaims independence in Hanoi in September 1945; France refuses to accept the loss and fights the First Indochina War to reassert control nationwide. Fighting ranges across the whole country rather than along any fixed line, so no genuine partition exists yet &mdash; both flags shown, but no border drawn, and the old colonial-era Cochinchina line is gone along with French administration." },
+    { year:"1954–1975/76", name:"Partition at the 17th parallel", t:{ north:IC.drv, south:IC.rvn, cochinchina:IC.rvn }, flagKeys:{ north:"drv", south:"rvn", cochinchina:"rvn" },
+      story:"The 1954 Geneva Accords partition the country at the 17th parallel, pending elections that are never held. Ho Chi Minh's communist-led Democratic Republic governs the North from Hanoi; the anti-communist, US-backed Republic of Vietnam, which now includes the former Cochinchina as an ordinary part of its own territory, governs the South from Saigon. Escalating war ends only with the North's final 1975 offensive and Saigon's fall." },
+    { year:"1976–present", name:"Socialist Republic of Vietnam (reunified)", t:{ north:IC.reunified, south:IC.reunified, cochinchina:IC.reunified }, flagKeys:{ north:"reunified", south:"reunified", cochinchina:"reunified" },
+      story:"A National Assembly formally reunifies the country on 2 July 1976 under Communist Party rule. The North's gold-star-on-red flag now flies over the whole country &mdash; neither the 17th-parallel line nor the older colonial-era Cochinchina line, both once real, ever reappears." }
   ];
 
-  var IREGIONS = ["north","south"];
-  var IREGION_NAMES = { north:"North Vietnam", south:"South Vietnam" };
-  var IADJ = [["north","south"]];
+  var IREGIONS = ["north","south","cochinchina"];
+  var IREGION_NAMES = { north:"North Vietnam / Tonkin", south:"South Vietnam / Annam", cochinchina:"Cochinchina (Nam Kỳ)" };
+  var IADJ = [["north","south"],["south","cochinchina"]];
 
   function iTextColorFor(hex) {
     var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
