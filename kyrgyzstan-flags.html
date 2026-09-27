@@ -244,7 +244,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, five rulers</h2>
+    <h2>One border, six rulers</h2>
     <p class="imap-sub">Kyrgyzstan's own real border, traced whole &mdash; this page has no internal split to show honestly. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>This is a whole-country page, not a split one.</b> The Yenisei Kyrgyz migration into the Tian Shan, and the long tribal-confederation era that followed, never produced two separately governed halves of today's Kyrgyzstan &mdash; there's no genuinely separate internal region to carve out honestly. What changes here is only who ruled all of it at once.
@@ -252,8 +252,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">antiquity</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 800 BCE</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 300 145.5" xmlns="http://www.w3.org/2000/svg">
         <g style="pointer-events:none">
@@ -270,7 +270,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Ancient Yenisei-region antecedents</div>
+        <div class="imap-name" id="iEraName">Saka (Scythian) &amp; Wusun nomads of the Tian Shan</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -526,9 +526,10 @@
 <script>
 (function () {
   var IC = {
-    ancient: "#5c2a24", tribal: "#6b5c4a", russian: "#0039a6", soviet: "#a4302a", republic: "#e8112d"
+    saka: "#9c7a3e", ancient: "#5c2a24", tribal: "#6b5c4a", russian: "#0039a6", soviet: "#a4302a", republic: "#e8112d"
   };
   var INAMES = {
+    saka: "Saka (Scythian) &amp; Wusun nomads of the Tian Shan (no flag documented)",
     ancient: "Ancient Yenisei-region antecedents (no flag documented)",
     tribal: "From the Yenisei Kyrgyz to Tian Shan tribal confederations",
     russian: "Russian Turkestan &amp; the Turkestan ASSR transition",
@@ -536,6 +537,7 @@
     republic: "Republic of Kyrgyzstan"
   };
   var IFLAGS = {
+    saka: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="24" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     tribal: '<rect width="300" height="200" fill="#201d18"/><path d="M150,60 L170,90 L150,120 L130,90 Z" fill="none" stroke="#c9a13c" stroke-width="4"/>',
     russian: '<rect width="300" height="66.7" fill="#f4efe1"/><rect y="66.7" width="300" height="66.6" fill="#0039a6"/><rect y="133.3" width="300" height="66.7" fill="#d52b1e"/>',
@@ -551,6 +553,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 800 BCE", name:"Saka (Scythian) &amp; Wusun nomads of the Tian Shan", t:{ kg:IC.saka }, flagKeys:{ kg:"saka" },
+      story:"Long before the Yenisei Kyrgyz or the Kyrgyz ethnonym existed, the Tian Shan and Issyk-Kul basin were home to the Saka, Iranian-speaking horse-nomads known for elaborate gold-adorned kurgan burials from around the 8th century BCE. From the 2nd century BCE the Wusun, a nomadic confederation pushed west by the Xiongnu and the Yuezhi migration, settled the same territory, maintaining a documented alliance with Han-dynasty China until fading from the record by the 5th century CE. Neither confederation was a settled state, and no flag or banner survives for either." },
     { year:"antiquity", name:"Ancient Yenisei-region antecedents", t:{ kg:IC.ancient }, flagKeys:{ kg:"ancient" },
       story:"The deeper origins of the Kyrgyz people trace to Turkic-speaking populations of the Yenisei River basin in southern Siberia, gradually consolidating into the Kyrgyz Khaganate that emerges into the historical record by the 9th century. Documentary evidence for this earlier span is sparse and largely archaeological; no flag survives." },
     { year:"c. 9th c.", name:"From the Yenisei Kyrgyz to Tian Shan tribal confederations", t:{ kg:IC.tribal }, flagKeys:{ kg:"tribal" },

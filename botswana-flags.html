@@ -248,7 +248,7 @@
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="2" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="3" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 348.0 359.5" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-bw" class="ireg-fill" d="M205.0,53.7 L211.3,59.8 L221.2,79.4 L256.8,116.8 L270.3,120.4 L270.4,132.4 L279.6,154.0 L303.9,159.2 L324.0,174.5 L279.5,199.6 L251.2,224.9 L240.8,247.6 L231.3,260.4 L214.2,263.1 L208.7,279.3 L205.5,289.9 L185.4,297.9 L159.8,296.2 L144.7,286.7 L131.5,282.5 L116.1,290.4 L108.4,306.7 L93.5,316.9 L77.8,332.1 L55.3,335.5 L48.3,323.6 L51.2,302.9 L32.5,270.6 L24.0,265.5 L24.0,166.3 L55.0,165.1 L55.9,44.1 L79.4,42.9 L127.9,31.0 L139.9,45.1 L160.0,31.7 L169.5,31.7 L187.2,24.0 L192.9,26.5 L205.0,53.7 Z"/>
@@ -467,6 +467,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 700–1300", name:"The Toutswe Tradition (early Iron Age cattle states)", t:{ bw:IC.e0 }, flagKeys:{ bw:"e0" },
+      story:"Long before any Tswana chiefdom took shape, Bantu-speaking farming and cattle-herding communities move into the region from around the 2nd century CE. By roughly 700&ndash;1300 CE a hierarchical society archaeologists call the Toutswe Tradition builds a settlement hierarchy on cattle wealth, importing glass beads through trade networks reaching the Indian Ocean coast. No individual ruler's name survives, and no flag or comparable banner is documented or plausible for this era &mdash; authority was expressed through cattle wealth and ritual, not heraldry." },
     { year:"pre-1885", name:"Tswana chiefdoms (Bangwato, Bakwena, Bangwaketse &amp; others)", t:{ bw:IC.e0 }, flagKeys:{ bw:"e0" },
       story:"Before British protection, the territory is organized into several distinct Tswana chiefdoms (merafe), each under its own kgosi, including the Bangwato, Bakwena, and Bangwaketse &mdash; the same structures that later negotiate directly with Britain. No securely documented unified flag survives; each chiefdom expressed authority through its own regalia." },
     { year:"1885–1966", name:"Bechuanaland Protectorate", t:{ bw:IC.e1 }, flagKeys:{ bw:"e1" },
