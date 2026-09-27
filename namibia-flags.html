@@ -236,15 +236,15 @@
   <p class="lede">Namibia's colonial history includes one of the 20th century's first documented genocides: the German colonial administration's 1904&ndash;08 campaign against the Herero and Nama peoples, in which tens of thousands died in massacres, forced marches into the desert, and concentration camps. German rule ended in 1915, but Namibia did not become independent until 1990 &mdash; three-quarters of a century later, after decades of South African administration, including direct apartheid-era rule, and a long armed liberation struggle.</p>
 
   <div class="scope-note">
-    <b>Scope of this page:</b> the lands of present-day Namibia, from Herero, Nama, and Ovambo societies through German and South African rule to the modern republic. No interactive map on this page &mdash; deferred to a future phase of the atlas. Part of a larger atlas &mdash; see the linked pages at the bottom.
+    <b>Scope of this page:</b> the lands of present-day Namibia, from Herero, Nama, and Ovambo societies through German and South African rule to the modern republic. Part of a larger atlas &mdash; see the linked pages at the bottom.
   </div>
 
 
   <div class="imap-section">
-    <h2>Namibia's own border, four rulers</h2>
-    <p class="imap-sub">Namibia's own real border, traced whole &mdash; one continuous territory that changed hands from indigenous societies to Germany to South Africa to independence without ever being split into two separately governed halves. Press play, or drag the slider, to watch who held all of it, era to era.</p>
+    <h2>Namibia's own border, four rulers &mdash; and one carve-out</h2>
+    <p class="imap-sub">Namibia's own real border, traced whole, with one internal carve-out: Ovamboland, the far-north home of the Ondonga and other Aawambo kingdoms, which stayed largely outside direct German control while the rest of the territory was administered as German South-West Africa. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
-      <b>This is a single-region page &mdash; German and South African rule both governed the whole territory as one unit.</b> Unlike Nigeria's briefly separate Northern and Southern protectorates, no internal administrative line ever divided German South-West Africa or the later South African mandate into two genuinely distinct pieces.
+      <b>German rule never actually reached the far north.</b> Unlike Nigeria's briefly separate Northern and Southern protectorates, German and South African rule mostly governed the territory as one unit &mdash; but not entirely: the Aawambo kingdoms of Ovamboland, including the long-reigning Ondonga kingdom, remained largely outside direct German administration through the whole 1884&ndash;1915 colonial period. The border below only solidifies for the span the two pieces were genuinely governed apart.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
@@ -260,8 +260,11 @@
           </g>
         </g>
         <path id="ireg-na-0" class="ireg-fill" d="M131.1,283.2 L117.1,267.9 L109.7,253.1 L105.6,233.3 L100.9,218.7 L94.6,187.4 L94.2,163.2 L91.8,152.1 L84.4,143.8 L74.7,127.0 L64.8,102.7 L60.7,89.9 L45.3,70.2 L44.2,54.6 L53.3,50.7 L64.6,47.3 L76.8,47.9 L88.0,57.1 L90.9,55.6 L167.2,54.8 L180.3,64.5 L225.9,67.3 L260.6,59.1 L276.0,54.5 L288.2,55.6 L295.7,60.2 L295.8,61.9 L285.2,66.5 L279.5,66.5 L267.4,74.5 L260.2,66.1 L231.2,73.2 L217.1,73.9 L216.6,146.1 L198.0,146.8 L198.0,206.0 L198.0,280.9 L181.2,291.2 L171.0,292.7 L159.2,288.9 L150.7,287.4 L147.6,278.7 L140.1,273.2 L131.1,283.2 Z"/>
+        <path id="ireg-ovambo-0" class="ireg-fill" d="M45.3,70.2 L44.2,54.6 L53.3,50.7 L64.6,47.3 L76.8,47.9 L88.0,57.1 L90.9,55.6 L167.2,54.8 L180.3,64.5 L170,110 L120,108 L80,95 Z"/>
+        <path class="iborder-line" id="ib-na-ovambo" d="M180.3,64.5 L170,110 L120,108 L80,95 L45.3,70.2"/>
         <g font-family="IBM Plex Mono, monospace">
-          <text class="ireg-label" id="ilbl-na-0" x="159.4" y="142.7">NAMIBIA</text>
+          <text class="ireg-label" id="ilbl-na-0" x="170" y="200">NAMIBIA</text>
+          <text class="ireg-label" id="ilbl-ovambo-0" x="112" y="78">OVAMBOLAND</text>
         </g>
       </svg>
       <div class="imap-head">
@@ -271,7 +274,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Real traced coastline and border, no internal partition &mdash; see the rule box above for why.</p>
+      <p class="map-note">Real traced coastline and border; the Ovamboland carve-out in the far north is schematic and approximate, not a surveyed boundary &mdash; see the rule box above for why it's shown.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -458,13 +461,14 @@
 
 <script>
 (function () {
-  var IC = { namod: "#204b5c", rsa1928: "#7c2e1f", degerman: "#5a1010", none: "#6b5c4a" };
-  var INAMES = { namod: "Republic of Namibia (independent)", rsa1928: "South West Africa (South African mandate, then occupation)", degerman: "German South-West Africa", none: "Herero, Nama, Ovambo, and San societies" };
+  var IC = { namod: "#204b5c", rsa1928: "#7c2e1f", degerman: "#5a1010", none: "#6b5c4a", ovambo: "#c9903a" };
+  var INAMES = { namod: "Republic of Namibia (independent)", rsa1928: "South West Africa (South African mandate, then occupation)", degerman: "German South-West Africa", none: "Herero, Nama, Ovambo, and San societies", ovambo: "Ondonga & other Aawambo kingdoms (self-rule)" };
   var IFLAGS = {
     namod: '<polygon points="0,0 300,200 0,200" fill="#003580"/> <polygon points="300,0 300,200 0,0" fill="#009543"/> <polygon points="0,155 250,10 280,25 35,170" fill="#d21034"/> <polygon points="0,155 250,10 280,25 35,170" fill="none" stroke="#fff" stroke-width="6"/> <circle cx="230" cy="60" r="24" fill="#ffce00"/>',
     rsa1928: '<rect width="300" height="66.6" fill="#ff6b00"/> <rect y="66.6" width="300" height="66.6" fill="#fff"/> <rect y="133.2" width="300" height="66.8" fill="#002395"/>',
     degerman: '<rect width="300" height="66.6" fill="#000"/> <rect y="66.6" width="300" height="66.6" fill="#fff"/> <rect y="133.2" width="300" height="66.8" fill="#c8102e"/>',
-    none: '<rect width="300" height="200" fill="#5c2a24"/> <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text> <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>'
+    none: '<rect width="300" height="200" fill="#5c2a24"/> <rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text> <text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
+    ovambo: '<rect width="300" height="200" fill="#e0a02a"/> <rect width="300" height="200" fill="none" stroke="#241f14" stroke-width="4" stroke-dasharray="8 6"/> <text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#241f14">NO FLAG</text> <text x="150" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#241f14">DOCUMENTED</text>'
   };
   function iFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -475,16 +479,28 @@
   }).join("");
 
   var ISNAP = [
-    { year:"1990\u2013present", name:"Republic of Namibia (independent)", t:{ na: IC.namod }, flagKeys:{ na: "namod" }, story:"After a UN-supervised transition and elections won by SWAPO, Namibia becomes independent on 21 March 1990 under founding president Sam Nujoma &mdash; the last African territory to gain independence from colonial and settler rule (excluding Eritrea's later 1993 separation). The new flag deliberately breaks from both the German and South African flags that preceded it." },
-    { year:"1915\u20131990", name:"South West Africa (South African mandate, then occupation)", t:{ na: IC.rsa1928 }, flagKeys:{ na: "rsa1928" }, story:"South African forces occupy German South-West Africa in 1915; South Africa is granted a League of Nations mandate in 1920 and administers it as a de facto fifth province, extending apartheid there after 1948. The UN revokes the mandate in 1966, but South Africa refuses to withdraw, holding on through the Namibian War of Independence until a UN-supervised transition finally lands in 1990. South Africa's own flag flies throughout &mdash; no distinct territorial flag is ever adopted." },
-    { year:"1884\u20131915", name:"German South-West Africa", t:{ na: IC.degerman }, flagKeys:{ na: "degerman" }, story:"Germany declares a protectorate over the territory in 1884. When the Herero and later the Nama rise up against German land seizures in 1904, colonial commander Lothar von Trotha issues an explicit extermination order &mdash; widely recognized today as the 20th century's first genocide, formally acknowledged by Germany in 2021. The black-white-red imperial tricolor flies as the colonial flag throughout." },
-    { year:"pre-1884", name:"Herero, Nama, Ovambo, and San societies", t:{ na: IC.none }, flagKeys:{ na: "none" }, story:"Before German colonization, the territory is home to the pastoralist Herero, the Nama, the agricultural Ovambo peoples of the north, and San hunter-gatherer communities, organized in clan- and chieftaincy-based structures rather than a single centralized state. No securely documented flag survives from this era for any of these peoples &mdash; shown honestly blank rather than invented." }
+    { year:"1990\u2013present", name:"Republic of Namibia (independent)", t:{ na: IC.namod, ovambo: IC.namod }, flagKeys:{ na: "namod", ovambo: "namod" }, story:"After a UN-supervised transition and elections won by SWAPO, Namibia becomes independent on 21 March 1990 under founding president Sam Nujoma &mdash; the last African territory to gain independence from colonial and settler rule (excluding Eritrea's later 1993 separation). The new flag deliberately breaks from both the German and South African flags that preceded it, and flies over the whole country, Ovamboland included, as one republic." },
+    { year:"1915\u20131990", name:"South West Africa (South African mandate, then occupation)", t:{ na: IC.rsa1928, ovambo: IC.rsa1928 }, flagKeys:{ na: "rsa1928", ovambo: "rsa1928" }, story:"South African forces occupy German South-West Africa in 1915; South Africa is granted a League of Nations mandate in 1920 and administers it as a de facto fifth province, extending apartheid there after 1948 &mdash; this time reaching Ovamboland too, ending the qualified self-rule the Aawambo kingdoms had kept under the Germans. The UN revokes the mandate in 1966, but South Africa refuses to withdraw, holding on through the Namibian War of Independence until a UN-supervised transition finally lands in 1990. South Africa's own flag flies throughout &mdash; no distinct territorial flag is ever adopted." },
+    { year:"1884\u20131915", name:"German South-West Africa (Ovamboland outside direct control)", t:{ na: IC.degerman, ovambo: IC.ovambo }, flagKeys:{ na: "degerman", ovambo: "ovambo" }, story:"Germany declares a protectorate over the territory in 1884. When the Herero and later the Nama rise up against German land seizures in 1904, colonial commander Lothar von Trotha issues an explicit extermination order &mdash; widely recognized today as the 20th century's first genocide, formally acknowledged by Germany in 2021. The black-white-red imperial tricolor flies as the colonial flag throughout the areas Germany actually administers &mdash; but Ovamboland, home to the Ondonga and other Aawambo kingdoms reigning since c.1600, stays largely outside direct German control for this entire colonial period, its own king (the Omukwaniilwa) continuing to rule in the remote north. No flag is separately documented for the Ovamboland kingdoms; the map marks the territory honestly rather than inventing one." },
+    { year:"pre-1884", name:"Herero, Nama, Ovambo, and San societies", t:{ na: IC.none, ovambo: IC.none }, flagKeys:{ na: "none", ovambo: "none" }, story:"Before German colonization, the territory is home to the pastoralist Herero, the Nama, the agricultural Ovambo peoples of the north &mdash; including the Ondonga kingdom, already reigning since c.1600 &mdash; and San hunter-gatherer communities, organized in clan- and chieftaincy-based structures rather than a single centralized state. No securely documented flag survives from this era for any of these peoples &mdash; shown honestly blank rather than invented." }
   ];
 
-  var IREGIONS = ["na"];
-  var IREGION_NAMES = { na: "Namibia" };
-  var IREGION_PATHS = { na: ["ireg-na-0"] };
-  var IREGION_LABELS = { na: ["ilbl-na-0"] };
+  var IREGIONS = ["na","ovambo"];
+  var IREGION_NAMES = { na: "Rest of the territory", ovambo: "Ovamboland" };
+  var IREGION_PATHS = { na: ["ireg-na-0"], ovambo: ["ireg-ovambo-0"] };
+  var IREGION_LABELS = { na: ["ilbl-na-0"], ovambo: ["ilbl-ovambo-0"] };
+  var IADJ = [["na","ovambo"]];
+
+  function iGroupsFor(t) {
+    var parent = {};
+    IREGIONS.forEach(function (r) { parent[r] = r; });
+    function find(x) { return parent[x] === x ? x : (parent[x] = find(parent[x])); }
+    function union(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; }
+    IADJ.forEach(function (pair) { if (t[pair[0]] === t[pair[1]]) union(pair[0], pair[1]); });
+    var groups = {};
+    IREGIONS.forEach(function (r) { var root = find(r); if (!groups[root]) groups[root] = []; groups[root].push(r); });
+    return Object.keys(groups).map(function (k) { return groups[k]; });
+  }
 
   function iTextColorFor(hex) {
     var r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
@@ -519,8 +535,29 @@
       });
     });
 
-    var fk0 = era.flagKeys[IREGIONS[0]];
-    iEraOwners.innerHTML = "<b>" + INAMES[fk0] + "</b>: whole territory";
+    IADJ.forEach(function (pair) {
+      var same = era.t[pair[0]] === era.t[pair[1]];
+      var line = document.getElementById("ib-" + pair[0] + "-" + pair[1]);
+      if (line) {
+        line.setAttribute("stroke-opacity", same ? "0.06" : "0.85");
+        line.setAttribute("stroke-width", same ? "1" : "2.4");
+      }
+    });
+
+    var groups = iGroupsFor(era.t);
+    if (groups.length === 1) {
+      var fk0 = era.flagKeys[IREGIONS[0]];
+      iEraOwners.innerHTML = "<b>" + INAMES[fk0] + "</b>: whole territory";
+    } else {
+      var seen = {}; var parts = [];
+      groups.forEach(function (g) {
+        var fk = era.flagKeys[g[0]];
+        var label = INAMES[fk] || era.t[g[0]];
+        if (!seen[label]) { seen[label] = []; parts.push(label); }
+        g.forEach(function (id) { seen[label].push(IREGION_NAMES[id]); });
+      });
+      iEraOwners.innerHTML = parts.map(function (label) { return "<b>" + label + "</b>: " + seen[label].join(", "); }).join(" &middot; ");
+    }
 
     iFlagsRow.innerHTML = IREGIONS.map(function (id) {
       return '<div class="iflag-chip">' + iFlagSvg(era.flagKeys[id]) + '<div class="ic-label">' + IREGION_NAMES[id] + '</div></div>';
