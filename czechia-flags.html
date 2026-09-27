@@ -253,8 +253,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">1349</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 400 BCE &ndash; 1349</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 420 270" xmlns="http://www.w3.org/2000/svg">
         <g pointer-events="none">
@@ -769,12 +769,13 @@
 <script>
 (function () {
   var IC = {
-    bohemia: "#a4302a", moravia: "#1e2f96"
+    ancient: "#5c2a24", bohemia: "#a4302a", moravia: "#1e2f96"
   };
   var INAMES = {
-    bohemia: "Bohemia (own crown/administration)", moravia: "Moravia (own margrave/administration)"
+    ancient: "Celtic, Germanic &amp; early Slavic era (pre-unification)", bohemia: "Bohemia (own crown/administration)", moravia: "Moravia (own margrave/administration)"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="4" stroke-dasharray="8 6"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     bohemia: '<rect width="300" height="200" fill="#a4302a"/><g transform="translate(150,100)" fill="#f4efe1"><ellipse cx="0" cy="4" rx="20" ry="27"/><circle cx="0" cy="-25" r="12"/><path d="M-16,26 q-20,20 -9,40" fill="none" stroke="#f4efe1" stroke-width="6" stroke-linecap="round"/><path d="M16,26 q20,20 9,40" fill="none" stroke="#f4efe1" stroke-width="6" stroke-linecap="round"/></g>',
     moravia: '<rect width="300" height="200" fill="#1e2f96"/><g transform="translate(150,100)"><rect x="-22" y="-22" width="44" height="44" fill="#f4efe1"/><rect x="-22" y="-22" width="11" height="11" fill="#a4302a"/><rect x="0" y="-22" width="11" height="11" fill="#a4302a"/><rect x="-11" y="-11" width="11" height="11" fill="#a4302a"/><rect x="11" y="-11" width="11" height="11" fill="#a4302a"/><rect x="-22" y="0" width="11" height="11" fill="#a4302a"/><rect x="0" y="0" width="11" height="11" fill="#a4302a"/><rect x="-11" y="11" width="11" height="11" fill="#a4302a"/><rect x="11" y="11" width="11" height="11" fill="#a4302a"/></g>'
   };
@@ -787,6 +788,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 400 BCE &ndash; 1349", name:"Celtic, Germanic &amp; early Slavic era (pre-unification)", t:{ bohemia:IC.ancient, moravia:IC.ancient }, flagKeys:{ bohemia:"ancient", moravia:"ancient" },
+      story:"No single state, and no Bohemia/Moravia administrative distinction, exists across this thirteen-century span: the Celtic Boii settle Bohemia by the 4th century BCE (giving it its name), Germanic Marcomanni displace them under King Maroboduus around 9 BCE, and Slavic tribes settle both lands from the 6th century CE, forming Samo's Empire and then Great Moravia, which receives Byzantine missionaries Cyril and Methodius in 863. Great Moravia's collapse around 895&ndash;907 leads into the Přemyslid Duchy of Bohemia, which governs both Bohemia and Moravia as one territory until John of Luxembourg carves off a separate margraviate in 1349. No securely documented flag survives from any part of this era; shown honestly blank." },
     { year:"1349", name:"Moravia gets its own margrave", t:{ bohemia:IC.bohemia, moravia:IC.moravia }, flagKeys:{ bohemia:"bohemia", moravia:"moravia" },
       story:"John of Luxembourg, King of Bohemia, installs his younger son Jan Jindřich (John Henry) as a separate Margrave of Moravia in 1349 &mdash; Moravia keeps its own margravial title, court, and administration from then on, distinct from his elder brother Charles's kingdom next door, even though both remain part of the same Bohemian Crown lands." },
     { year:"1411", name:"Jobst dies, the crown reconsolidates", t:{ bohemia:IC.bohemia, moravia:IC.bohemia }, flagKeys:{ bohemia:"bohemia", moravia:"bohemia" },
