@@ -242,16 +242,16 @@
 
 
   <div class="imap-section">
-    <h2>One realm, ten periods</h2>
-    <p class="imap-sub">China&rsquo;s own real border, traced whole &mdash; this page&rsquo;s ten mainland periods (Qin through the People&rsquo;s Republic) are dynastic and regime changes over essentially the same national territory, not a partition into separately governed pieces. Press play, or drag the slider, to watch who held it, era to era.</p>
+    <h2>One realm, eleven periods</h2>
+    <p class="imap-sub">China&rsquo;s own real border, traced whole &mdash; this page&rsquo;s eleven mainland periods (Xia/Shang/Zhou through the People&rsquo;s Republic) are dynastic and regime changes over essentially the same national territory, not a partition into separately governed pieces. Press play, or drag the slider, to watch who held it, era to era.</p>
     <div class="rule-box">
       <b>This is a single-region page, not a partition map.</b> Genuine internal fragmentations exist in Chinese history &mdash; the Warring States, the Three Kingdoms, the Northern/Southern Song split &mdash; but this page&rsquo;s own timeline doesn&rsquo;t carry those as separate tracked entities; it moves dynasty to dynasty across the same broad territory. So the map traces the whole country rather than inventing a partition the timeline itself doesn&rsquo;t use. The Yuan (Mongol) period is deliberately brief here &mdash; see the linked Mongol Empire page for that empire&rsquo;s own fuller story.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">221 &amp;ndash; 206 BCE</span>
-        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 2070 &amp;ndash; 221 BCE</span>
+        <input type="range" id="iSlider" min="0" max="10" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 290.0 170.6" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -731,9 +731,10 @@
 
 <script>
 (function () {
-  var IC = { qin:"#241f14", han:"#9c3b28", tang:"#c9a13c", song:"#7c2e1f", yuan:"#4a4238", ming:"#8a1f1f", qing:"#d9b23c", beiyang:"#1e2f96", nationalist:"#12315c", prc:"#de2910" };
-  var INAMES = { qin:"Qin Dynasty", han:"Han Dynasty", tang:"Tang Dynasty", song:"Song Dynasty", yuan:"Yuan Dynasty (Mongol rule)", ming:"Ming Dynasty", qing:"Qing Dynasty", beiyang:"Republic of China (Beiyang government)", nationalist:"Republic of China (Nationalist government, mainland)", prc:"People's Republic of China" };
+  var IC = { ancient:"#5c2a24", qin:"#241f14", han:"#9c3b28", tang:"#c9a13c", song:"#7c2e1f", yuan:"#4a4238", ming:"#8a1f1f", qing:"#d9b23c", beiyang:"#1e2f96", nationalist:"#12315c", prc:"#de2910" };
+  var INAMES = { ancient:"Xia, Shang, and Zhou dynasties (pre-imperial)", qin:"Qin Dynasty", han:"Han Dynasty", tang:"Tang Dynasty", song:"Song Dynasty", yuan:"Yuan Dynasty (Mongol rule)", ming:"Ming Dynasty", qing:"Qing Dynasty", beiyang:"Republic of China (Beiyang government)", nationalist:"Republic of China (Nationalist government, mainland)", prc:"People's Republic of China" };
   var IFLAGS = {
+    ancient: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
     qin: "<rect width=\"300\" height=\"200\" fill=\"#241f14\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#a9762f\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#a9762f\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#a9762f\">FLAG YET</text>",
     han: "<rect width=\"300\" height=\"200\" fill=\"#9c3b28\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#f4efe1\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#f4efe1\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#f4efe1\">FLAG YET</text>",
     tang: "<rect width=\"300\" height=\"200\" fill=\"#c9a13c\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#5c2a24\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#5c2a24\">NO NATIONAL</text><text x=\"150\" y=\"118\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"22\" font-weight=\"700\" fill=\"#5c2a24\">FLAG YET</text>",
@@ -754,6 +755,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 2070 &ndash; 221 BCE", name:"Xia, Shang, and Zhou dynasties (pre-imperial)", t:{ cn:IC.ancient }, flagKeys:{ cn:"ancient" },
+      story:"Chinese tradition places Yu the Great&rsquo;s founding of the Xia dynasty around 2070 BCE, though whether it was an actual centralized state or a later legendary construction remains genuinely debated; the Bronze Age Erlitou culture is the most-cited possible match, unconfirmed. The Shang dynasty from roughly 1600 BCE is the first period directly confirmed by contemporary writing, via oracle bone divination records. King Wu of Zhou topples the Shang in 1046 BCE and founds the Zhou, which rules in name for centuries before fragmenting into rival states during the Spring and Autumn and Warring States periods; that fragmentation ends only when Qin conquers the last rival state in 221 BCE. No flag or comparable banner survives from any of these three dynasties &mdash; vexillology as a concept doesn&rsquo;t yet exist &mdash; so this whole 1,800-year span is shown honestly blank rather than invented." },
     { year:"221 &ndash; 206 BCE", name:"Qin Dynasty", t:{ cn:IC.qin }, flagKeys:{ cn:"qin" },
       story:"King Zheng of Qin conquers the last Warring States and proclaims himself Qin Shi Huang, the &ldquo;First Emperor,&rdquo; in 221 BCE &mdash; China&rsquo;s first unified imperial state. No flag exists in this era; Qin ideology favored black, the water element&rsquo;s color, shown here as a reference only." },
     { year:"206 BCE &ndash; 220 CE", name:"Han Dynasty", t:{ cn:IC.han }, flagKeys:{ cn:"han" },
