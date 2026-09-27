@@ -244,16 +244,16 @@
   </div>
 
   <div class="imap-section">
-    <h2>British Somaliland &amp; Italian Somalia, 1884&ndash;1960</h2>
-    <p class="imap-sub">Somalia's own real border, split into the two pieces that were, for over seven decades, governed by entirely different colonial powers: British Somaliland in the north, and Italian-administered Somalia (later a UN Trust Territory) in the south. Press play, or drag the slider.</p>
+    <h2>Two colonial territories, briefly one country, then a de facto split again</h2>
+    <p class="imap-sub">Somalia's own real border, split into the two pieces that were, for over seven decades, governed by entirely different colonial powers: British Somaliland in the north, and Italian-administered Somalia (later a UN Trust Territory) in the south. The same line reappears after 1991, when the north's territory declares itself the unrecognized Republic of Somaliland while the south continues under Mogadishu's various governments. Press play, or drag the slider.</p>
     <div class="rule-box">
-      <b>The line below only solidifies where the two pieces were actually ruled apart.</b> Before 1884 there was no such border &mdash; no unified Somali state to split. It dissolves the moment the two territories unite, on 1 July 1960, and never resolidifies &mdash; even though the breakaway Republic of Somaliland has functioned as a de facto separate, unrecognized state within these same 1960 borders since declaring independence in 1991. That later split is a documented fact of Somalia's post-1991 collapse, but it has never been internationally recognized, so it is noted here rather than drawn as a governing line.
+      <b>The line below only solidifies where the two pieces were actually governed apart.</b> Before 1884 there was no such border &mdash; no unified Somali state to split. It dissolves the moment the two territories unite, on 1 July 1960, and only resolidifies once more in 1991: the former British Somaliland Protectorate's territory declares itself the independent Republic of Somaliland that year and has functioned as a de facto separate administration within those same 1960 borders ever since. Drawing that line here is a statement about who exercises actual control on the ground, not a statement on international recognition &mdash; Somaliland has never been recognized by any UN member state, and Somalia's own federal government continues to claim the whole country, north and south alike.
     </div>
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
         <span class="imap-year" id="iYearTag"></span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -280,7 +280,7 @@
       <div class="iflags-row" id="iFlagsRow"></div>
       <p class="imap-story" id="iEraStory"></p>
 
-      <p class="map-note">Real traced borders for both former territories (Natural Earth 10m); the internal line is schematic where it runs through unmarked desert, not a surveyed frontier.</p>
+      <p class="map-note">Real traced borders for both former territories (Natural Earth 10m); the internal line is schematic where it runs through unmarked desert, not a surveyed frontier. From 1991 onward it marks Somaliland's self-declared, unrecognized de facto boundary, not an international frontier.</p>
       <div class="imap-key" id="iLegend"></div>
     </div>
   </div>
@@ -531,7 +531,8 @@
     british_north:"#204b5c",
     italian_south:"#1e7a4a",
     union:"#6fd0ea",
-    collapse:"#5a5a55"
+    collapse:"#5a5a55",
+    somaliland:"#3f7d3f"
   };
   var INAMES = {
     precontact:"Early Somali coastal towns & clan territories",
@@ -539,7 +540,8 @@
     british_north:"British Somaliland Protectorate",
     italian_south:"Italian Somaliland",
     union:"Somali Republic (union)",
-    collapse:"Somali Democratic Republic \u2192 state collapse & federal republic"
+    collapse:"Somali Democratic Republic \u2192 state collapse & federal republic",
+    somaliland:"Republic of Somaliland (self-declared, unrecognized)"
   };
   var IFLAGS = {
     precontact: "<rect width=\"300\" height=\"200\" fill=\"#5c2a24\"/><rect width=\"300\" height=\"200\" fill=\"none\" stroke=\"#c9a13c\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"150\" y=\"92\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">NO FLAG</text><text x=\"150\" y=\"120\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"24\" font-weight=\"700\" fill=\"#c9a13c\">DOCUMENTED</text>",
@@ -547,7 +549,8 @@
     british_north: "<rect width=\"300\" height=\"200\" fill=\"#204b5c\"/><rect width=\"150\" height=\"100\" fill=\"#00247d\"/><path d=\"M0,0 L75,50 M75,0 L0,50\" stroke=\"#f4efe1\" stroke-width=\"9\"/>",
     italian_south: "<rect width=\"300\" height=\"200\" fill=\"#1e7a4a\"/><rect width=\"100\" height=\"200\" fill=\"#f4efe1\"/><rect width=\"100\" height=\"66.7\" fill=\"#a4302a\"/><rect y=\"133.3\" width=\"100\" height=\"66.7\" fill=\"#a4302a\"/>",
     union: "<rect width=\"300\" height=\"200\" fill=\"#6fd0ea\"/><path d=\"M150,72 l14,32 35,4 -26,25 8,35 -31,-19 -31,19 8,-35 -26,-25 35,-4 Z\" fill=\"#f4efe1\"/><text x=\"150\" y=\"30\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"13\" font-weight=\"700\" fill=\"#141413\">UNION, 1 JULY 1960</text>",
-    collapse: "<rect width=\"300\" height=\"200\" fill=\"#6fd0ea\"/><path d=\"M150,72 l14,32 35,4 -26,25 8,35 -31,-19 -31,19 8,-35 -26,-25 35,-4 Z\" fill=\"#f4efe1\"/>"
+    collapse: "<rect width=\"300\" height=\"200\" fill=\"#6fd0ea\"/><path d=\"M150,72 l14,32 35,4 -26,25 8,35 -31,-19 -31,19 8,-35 -26,-25 35,-4 Z\" fill=\"#f4efe1\"/>",
+    somaliland: "<rect width=\"300\" height=\"66.7\" fill=\"#3f7d3f\"/><rect y=\"66.7\" width=\"300\" height=\"66.6\" fill=\"#f4efe1\"/><rect y=\"133.3\" width=\"300\" height=\"66.7\" fill=\"#c60c30\"/><path d=\"M150,82 l7,17 19,2 -14,13 4,19 -16,-10 -16,10 4,-19 -14,-13 19,-2 Z\" fill=\"#141413\"/><text x=\"150\" y=\"60\" text-anchor=\"middle\" font-family=\"IBM Plex Mono, monospace\" font-size=\"11\" font-weight=\"700\" fill=\"#141413\">NOT INTERNATIONALLY RECOGNIZED</text>"
   };
   function iFlagSvg(key) {
     return '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">' + (IFLAGS[key] || '<rect width="300" height="200" fill="#ccc"/>') + '</svg>';
@@ -567,7 +570,8 @@
     { year:"c. 1285 \u2013 1884", name:"Sultanate of Adal, Ajuran Sultanate & successor clan sultanates", t:{north:IC.sultanates, south:IC.sultanates}, flagKeys:{north:"sultanates", south:"sultanates"}, story:"No single unified Somali state exists; the Sultanate of Adal, based around Zeila, reaches its height in the 16th century under Ahmad ibn Ibrahim al-Ghazi (\"Gurey\"), waging a prolonged war against Christian Ethiopia. The Ajuran Sultanate dominates much of south-central Somalia from roughly the 13th to 17th centuries. No flag survives for either; this entry is labeled by the era's dominant polities rather than an invented banner." },
     { year:"1884/1889 \u2013 1960", name:"British Somaliland Protectorate & Italian Somaliland", t:{north:IC.british_north, south:IC.italian_south}, flagKeys:{north:"british_north", south:"italian_south"}, story:"Britain declares a protectorate over the northern Somali coast from 1884\u201387, mainly to secure a provisioning route for its colony at Aden, while Italy establishes colonial control over the southern and central coast from the late 1880s\u201390s. Italian Somaliland becomes a UN Trust Territory under continued Italian administration from 1950, with independence promised within a decade. Two separate colonial administrations, two separate flags \u2014 the genuine division this map exists to show." },
     { year:"1960 \u2013 1969", name:"Somali Republic (union)", t:{north:IC.union, south:IC.union}, flagKeys:{north:"union", south:"union"}, story:"The British Somaliland Protectorate becomes independent on 26 June 1960, and the Italian-administered UN Trust Territory of Somalia follows just five days later on 1 July 1960 \u2014 the two unite immediately as the Somali Republic, one of the fastest unifications in this whole atlas. The border on this map dissolves here and never resolidifies as a governing line: the same sky-blue flag with its white star now flies over both." },
-    { year:"1969 \u2013 present", name:"Somali Democratic Republic \u2192 state collapse & federal republic", t:{north:IC.collapse, south:IC.collapse}, flagKeys:{north:"collapse", south:"collapse"}, story:"General Mohamed Siad Barre seizes power in a 1969 coup, ruling as a socialist dictatorship for two decades before his government collapses in January 1991 amid civil war. Somalia has had no single fully effective central government since \u2014 including the breakaway (unrecognized) Somaliland republic in the north, still not shown as a governing line here since it has never been internationally recognized. The same 1954 flag continues throughout." }
+    { year:"1969 \u2013 1991", name:"Somali Democratic Republic", t:{north:IC.collapse, south:IC.collapse}, flagKeys:{north:"collapse", south:"collapse"}, story:"General Mohamed Siad Barre seizes power in a 1969 coup and declares the Somali Democratic Republic, ruling as a socialist one-party dictatorship for two decades while pursuing (and losing, against Ethiopia in 1977-78) the pan-Somali dream the flag's own star alludes to. Barre's government collapses in January 1991 amid civil war and clan-based armed opposition, still governing the whole 1960 territory, north and south, up to that final collapse. The same 1954 flag flies throughout." },
+    { year:"1991 \u2013 present", name:"State collapse: Somaliland secedes (unrecognized), south fragments and federalizes", t:{north:IC.somaliland, south:IC.collapse}, flagKeys:{north:"somaliland", south:"collapse"}, story:"Amid Barre's January 1991 collapse, the former British Somaliland Protectorate's territory declares itself the independent Republic of Somaliland that same year and has functioned as a de facto separate, unrecognized state within its old colonial-era borders ever since, with its own government, currency, and (from 1996) its own flag \u2014 shown here, honestly, as never internationally recognized. The rest of Somalia has had no single fully effective central government since 1991 either, cycling through transitional administrations, warlordism, and clan-based conflict before today's Federal Government of Somalia, established in 2012, still working to extend real authority nationwide. The same 1954 flag continues over the recognized state throughout; the border below marks who actually governs each half, not who the world recognizes." }
   ];
 
   var IREGIONS = ["north", "south"];
