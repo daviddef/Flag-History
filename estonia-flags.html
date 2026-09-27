@@ -239,7 +239,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One coastline, seven rulers</h2>
+    <h2>One coastline, eight rulers</h2>
     <p class="imap-sub">Estonia's own real border, traced from actual coastline data &mdash; the one Baltic country in this atlas without a clean internal division to show. Press play, or drag the slider, to watch who held all of it, era to era.</p>
     <div class="rule-box">
       <b>Estonia doesn't split internally the way Latvia does.</b> Latvia's own page carves out a genuine Livonia/Courland difference because those two pieces were, for real stretches of history, governed separately. Estonia has no equivalent: whichever single outside power held the territory &mdash; Danish and German crusaders, then Sweden, then Russia &mdash; held all of it at once. (The one partial exception, Danish rule of the north from 1227 to 1346 while the Livonian Order held the south, is folded into a single "Livonian" era below and covered in prose rather than mapped as a border, since both halves answered to the same crusading order's confederation and no fixed boundary between them is reliably attested.) What changes on this map is only who ruled all of it at once.
@@ -247,8 +247,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1000</span>
-        <input type="range" id="iSlider" min="0" max="8" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 100</span>
+        <input type="range" id="iSlider" min="0" max="9" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 254 220" xmlns="http://www.w3.org/2000/svg">
         <path id="ireg-sea" fill="var(--tile-sea)" d="M237.0,22.7 L237.0,0 L0,0 L0,180.1 L57.6,180.1 L63.3,124.9 L45.3,136.7 L14.2,103.4 L10.0,49.7 L71.8,23.6 L133.4,10.0 L186.5,25.5 L237.0,22.7 Z"/>
@@ -258,7 +258,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Estonian tribal confederations</div>
+        <div class="imap-name" id="iEraName">The Aestii, Amber Trade &amp; Iron Age Estonia</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -602,15 +602,17 @@
 <script>
 (function () {
   var IC = {
-    pagan: "#3f5c6b", liv: "#44484f", swe: "#1e5288", rus: "#7a2430",
+    aestii: "#5c4a3a", pagan: "#3f5c6b", liv: "#44484f", swe: "#1e5288", rus: "#7a2430",
     ind: "#1560bd", soviet: "#a4272a", nazi: "#2b2e33"
   };
   var INAMES = {
+    aestii: "The Aestii, Amber Trade &amp; Iron Age Estonia",
     pagan: "Estonian tribal confederations", liv: "Livonian Order (Terra Mariana)", swe: "Swedish crown",
     rus: "Russian Empire", ind: "Republic of Estonia", soviet: "USSR (Estonian SSR)",
     nazi: "Nazi Germany (Reichskommissariat Ostland)"
   };
   var IFLAGS = {
+    aestii: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/><text x="150" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">NO FLAG</text><text x="150" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="700" fill="#c9a13c">DOCUMENTED</text>',
     pagan: '<rect width="300" height="200" fill="#3f5c6b"/><g fill="#e8d9a8"><path d="M150,55 L172,100 L150,145 L128,100 Z"/><path d="M150,75 L162,100 L150,125 L138,100 Z" fill="#3f5c6b"/></g>',
     liv: '<rect width="300" height="200" fill="#f4efe1"/><path d="M138,30 h24 v60 h60 v24 h-60 v60 h-24 v-60 h-60 v-24 h60 Z" fill="#201a12"/>',
     swe: '<rect width="300" height="200" fill="#1e5288"/><rect x="100" width="40" height="200" fill="#f9d616"/><rect y="80" width="300" height="40" fill="#f9d616"/>',
@@ -628,6 +630,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 100", name:"The Aestii, Amber Trade &amp; Iron Age Estonia", color:IC.aestii, flagKey:"aestii",
+      story:"The Roman historian Tacitus, writing around 98 CE, is the first to put this coast on the written record, naming its amber-gathering inhabitants the Aestii &mdash; centuries before any Estonian polity is named in its own right. Archaeology fills in the rest: Iron Age hill forts, farming settlements, and the Salme ship burials on Saaremaa (c. 750 CE), a mass grave of warriors killed in a Baltic Sea battle. No flag or comparable banner survives from this era; scattered farming and trading communities gradually consolidate into the named parishes and counties of the following era." },
     { year:"c. 1000", name:"Estonian tribal confederations", color:IC.pagan, flagKey:"pagan",
       story:"No central government exists yet &mdash; parishes and counties (Saaremaa, Harju, Sakala, and others) govern themselves, loosely allied at most. Estonia is one of the last pagan corners of Europe, having already turned back repeated Danish, Swedish, and Russian raids for generations." },
     { year:"1227", name:"Northern Crusades complete", color:IC.liv, flagKey:"liv",
