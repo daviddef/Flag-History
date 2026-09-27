@@ -241,7 +241,7 @@
   </div>
 
   <div class="imap-section">
-    <h2>One border, seven rulers</h2>
+    <h2>One border, eight rulers</h2>
     <p class="imap-sub">Libya's own real border, traced whole. Press play, or drag the slider, to watch who held all of it, era to era &mdash; and read the 1943&ndash;51 note below for the one honest exception.</p>
     <div class="rule-box">
       <b>This page doesn't split internally, even though Libya's own history would support it.</b> Tripolitania, Cyrenaica, and Fezzan were governed separately for long stretches &mdash; including the 1943&ndash;51 Allied administration, when Britain ran the first two regions and France ran Fezzan under entirely different flags. But no single Libyan flag existed for any of those separately-run pieces; the division was administrative, not symbolic, so a map split would invent borders no flag ever marked. The story below flags that exception honestly instead.
@@ -249,8 +249,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 900</span>
-        <input type="range" id="iSlider" min="0" max="6" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 630 BCE</span>
+        <input type="range" id="iSlider" min="0" max="7" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
         <g class="context-label" pointer-events="none">
@@ -267,7 +267,7 @@
         </g>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Ottoman Tripolitania, Cyrenaica &amp; Fezzan</div>
+        <div class="imap-name" id="iEraName">Greek Cyrenaica &amp; Phoenician-Carthaginian Tripolitania</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -602,10 +602,11 @@
 <script>
 (function () {
   var IC = {
-    ottoman:"#a4302a", italy:"#009246", allied:"#204b5c", kingdom:"#e70013",
+    ancient:"#c9a13c", ottoman:"#a4302a", italy:"#009246", allied:"#204b5c", kingdom:"#e70013",
     republic:"#a4302a", jamahiriya:"#239e46", modern:"#e70013"
   };
   var INAMES = {
+    ancient:"Greek Cyrenaica &amp; Phoenician-Carthaginian Tripolitania",
     ottoman:"Ottoman Tripolitania, Cyrenaica &amp; Fezzan", italy:"Italian Libya",
     allied:"Allied Military Administration", kingdom:"Kingdom of Libya",
     republic:"Libyan Arab Republic / Federation of Arab Republics",
@@ -613,6 +614,7 @@
     modern:"Libya (post-revolution)"
   };
   var IFLAGS = {
+    ancient: '<rect width="300" height="200" fill="#5c2a24"/><rect width="300" height="200" fill="none" stroke="#c9a13c" stroke-width="6" stroke-dasharray="10 8"/>',
     ottoman: '<rect width="300" height="200" fill="#a4302a"/><g fill="#f4efe1"><path d="M150,70 a34,34 0 1,0 0,60 a27,27 0 1,1 0,-60 Z"/><path d="M150,68 l6,17 18,1 -14.4,11.3 5.3,17.2 -14.9,-10.8 -14.9,10.8 5.3,-17.2 -14.4,-11.3 18,-1 Z"/></g>',
     italy: '<rect width="100" height="200" fill="#009246"/><rect x="100" width="100" height="200" fill="#f4efe1"/><rect x="200" width="100" height="200" fill="#ce2b37"/>',
     allied: '<rect width="150" height="100" fill="#00247d"/><rect y="100" width="150" height="100" fill="#f4efe1"/><rect x="150" width="150" height="100" fill="#f4efe1"/><rect x="150" y="100" width="150" height="100" fill="#002395"/><rect x="0" width="300" height="200" fill="none" stroke="#a9762f" stroke-width="3" stroke-dasharray="6 5"/>',
@@ -630,6 +632,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 630 BCE", name:"Greek Cyrenaica &amp; Phoenician-Carthaginian Tripolitania", t:{ ly:IC.ancient }, flagKeys:{ ly:"ancient" },
+      story:"Greek colonists from Thera found Cyrene around 631 BCE in the east, growing into a leading Greek city under Battus I's Battiad dynasty before passing to Ptolemaic Egypt and then Rome in 74 BCE. In the west, Phoenician traders founded Oea, Sabratha, and Leptis Magna from around the 7th century BCE, later ruled by Carthage and then Rome; Leptis Magna became the birthplace of Emperor Septimius Severus. Vandals took the coast in the 5th century CE, Byzantines reconquered it under Justinian in the 6th, and Arab armies completed its conquest by the 640s&ndash;660s CE. No flag in the modern sense existed anywhere in this world; shown here honestly blank until Ottoman rule begins." },
     { year:"c. 900", name:"Ottoman Tripolitania, Cyrenaica &amp; Fezzan", t:{ ly:IC.ottoman }, flagKeys:{ ly:"ottoman" },
       story:"Direct Ottoman conquest is completed by 1551, with the semi-autonomous local Karamanli dynasty ruling as a largely independent Ottoman vassal from 1711 to 1835. The standard Ottoman red field with white crescent and star flies across the whole territory throughout, right up to the 1911 Italian invasion." },
     { year:"1911", name:"Italian Libya", t:{ ly:IC.italy }, flagKeys:{ ly:"italy" },
