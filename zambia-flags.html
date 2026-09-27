@@ -251,8 +251,8 @@
     <div class="imap-frame">
       <div class="imap-controls">
         <button class="imap-play" id="iPlayBtn" type="button" aria-label="Play">&#9654;</button>
-        <span class="imap-year" id="iYearTag">c. 1830</span>
-        <input type="range" id="iSlider" min="0" max="4" step="1" value="0" aria-label="Select era">
+        <span class="imap-year" id="iYearTag">c. 300</span>
+        <input type="range" id="iSlider" min="0" max="5" step="1" value="0" aria-label="Select era">
       </div>
       <svg id="imap-svg" viewBox="0 0 380 320" xmlns="http://www.w3.org/2000/svg">
         <rect x="0" y="0" width="380" height="320" fill="var(--sea)"/>
@@ -260,7 +260,7 @@
         <text class="ireg-label" id="ilbl-zm" x="190" y="160">ZAMBIA</text>
       </svg>
       <div class="imap-head">
-        <div class="imap-name" id="iEraName">Lozi Kingdom of Barotseland</div>
+        <div class="imap-name" id="iEraName">Bantu Iron Age migrations &amp; precolonial kingdoms</div>
         <div class="imap-owners" id="iEraOwners"></div>
       </div>
       <div class="iflags-row" id="iFlagsRow"></div>
@@ -559,6 +559,8 @@
   }).join("");
 
   var ISNAP = [
+    { year:"c. 300–c. 1830", name:"Bantu Iron Age migrations & precolonial kingdoms", t:{ zm:IC.none }, flagKeys:{ zm:"none" },
+      story:"Bantu-speaking farmers and ironworkers spread into the territory from around 300 CE, part of the wider Bantu expansion across sub-Saharan Africa. Out of these Iron Age communities the Luyana-speaking ancestors of the Lozi settle the upper Zambezi floodplain by tradition around the 17th century, founding the Litunga tradition later known as Barotseland, while the Bemba, Chewa, and others establish their own chieftaincies elsewhere. No flag or comparable banner survives from any of these societies &mdash; royal authority was expressed through regalia and ceremony, not woven symbols." },
     { year:"c. 1830–1891", name:"Lozi Kingdom of Barotseland (and neighbors)", t:{ zm:IC.none }, flagKeys:{ zm:"none" },
       story:"The Lozi Kingdom, centered on the Zambezi floodplain, is the region's most organized pre-colonial state; the Bemba, Chewa, Ngoni, and others maintain their own chieftaincies elsewhere. No securely documented national flag survives from this era &mdash; royal authority was expressed through regalia rather than a fixed banner." },
     { year:"1891–1924", name:"British South Africa Company rule", t:{ zm:IC.bsac }, flagKeys:{ zm:"bsac" },
